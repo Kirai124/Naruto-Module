@@ -1,4 +1,4 @@
-# N5eB Class Mod Library 0.9.0
+# N5eB Class Mod Library 0.10.0
 
 Creates the world compendium **N5eB Custom Class Mods** for N5eB 3.1.0 on Foundry VTT 13/14.
 
@@ -7,6 +7,7 @@ Included Class Mods:
 - Kāma Seal
 - Tenseigan
 - Sealed Beast Redux
+- Superior Shinobi
 
 All bundled descriptions are written in English. Each Class Mod has its own colored folder tree inside the same world compendium.
 
@@ -101,3 +102,10 @@ The release workflow builds a ZIP whenever a tag beginning with `v` is created. 
 - Added automatic Vermillion Art formulas and bundled Twisted Chakra spending.
 - Added Twisted Awakening point-budget and prerequisite validation.
 - Added orange folder organization for all Sealed Beast content.
+
+
+## 0.10.0
+
+- Added Superior Shinobi as a new Class Mod pack.
+- Included core Superior Shinobi features, 15 Epithets as individual entries, grouped Superior Technique reference entries, example unique techniques, Superior Shinobi feats, and Superior Adversary reference pages.
+- Added placeholder image normalization for any items that do not define an image.

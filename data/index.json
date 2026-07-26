@@ -1,9 +1,10 @@
 {
-  "version": "0.9.0",
+  "version": "0.10.0",
   "files": [
     "flying-thunder-god.json",
     "kama.json",
     "tenseigan.json",
-    "sealed-beast-redux.json"
+    "sealed-beast-redux.json",
+    "superior-shinobi.json"
   ]
 }

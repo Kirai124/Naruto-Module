@@ -1,0 +1,4425 @@
+{
+  "version": "0.10.0",
+  "folders": [
+    {
+      "_id": "e19060a1ec4f7faa",
+      "name": "Superior Shinobi",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "sort": 0,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "root",
+          "managed": true
+        }
+      }
+    },
+    {
+      "_id": "c109fed5d7f61301",
+      "name": "Class Mod Features",
+      "type": "Item",
+      "folder": "e19060a1ec4f7faa",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "features",
+          "managed": true
+        }
+      }
+    },
+    {
+      "_id": "100b1c1028a499a8",
+      "name": "Core Features",
+      "type": "Item",
+      "folder": "c109fed5d7f61301",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "core",
+          "managed": true
+        }
+      }
+    },
+    {
+      "_id": "a88b7a9faa758678",
+      "name": "Epithets",
+      "type": "Item",
+      "folder": "c109fed5d7f61301",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "epithets",
+          "managed": true
+        }
+      }
+    },
+    {
+      "_id": "4ec015c3dbb12d6f",
+      "name": "Superior Techniques",
+      "type": "Item",
+      "folder": "e19060a1ec4f7faa",
+      "sorting": "a",
+      "sort": 200000,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "techniques",
+          "managed": true
+        }
+      }
+    },
+    {
+      "_id": "c105141a9f0dcad8",
+      "name": "Examples & Extras",
+      "type": "Item",
+      "folder": "e19060a1ec4f7faa",
+      "sorting": "a",
+      "sort": 300000,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "examples",
+          "managed": true
+        }
+      }
+    },
+    {
+      "_id": "1427a3af8c796436",
+      "name": "Feats",
+      "type": "Item",
+      "folder": "c105141a9f0dcad8",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "feats",
+          "managed": true
+        }
+      }
+    },
+    {
+      "_id": "653308fc1055bcdc",
+      "name": "Adversaries",
+      "type": "Item",
+      "folder": "c105141a9f0dcad8",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#d7a028",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "classMod": "superior-shinobi",
+          "folderKey": "adversaries",
+          "managed": true
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "_id": "90aa622f15b3bccc",
+      "name": "Superior Shinobi",
+      "type": "classmod",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "folder": "e19060a1ec4f7faa",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "classmod",
+          "classMod": "superior-shinobi",
+          "contentVersion": "0.10.0",
+          "managed": true
+        }
+      },
+      "system": {
+        "identifier": "superior-shinobi",
+        "levels": 1,
+        "color": "#d7a028",
+        "attackBonus": {
+          "formula": "floor(@details.level/2)+@classmods.superior-shinobi.levels+@prof",
+          "scaling": "",
+          "value": "floor(@details.level/2)+@classmods.superior-shinobi.levels+@prof"
+        },
+        "save": {
+          "formula": "10+floor(@details.level/2)+@prof",
+          "scaling": "",
+          "value": "10+floor(@details.level/2)+@prof"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "description": {
+          "chat": "",
+          "value": "<p><strong>Superior Shinobi</strong> is a five-level Class Mod focused on all-around excellence, reserve resources, perfect hits, epithets, and a large menu of Superior Techniques.</p><table><thead><tr><th>Level</th><th>Recommended Character Level</th><th>Reserve Die</th><th>Superior Techniques</th><th>Features</th></tr></thead><tbody><tr><td>1</td><td>11</td><td>2</td><td>2</td><td>Superior, Superior Reserves, Superior Techniques, Burdensome Skill</td></tr><tr><td>2</td><td>13</td><td>4</td><td>4</td><td>The Perfect Hit</td></tr><tr><td>3</td><td>15</td><td>6</td><td>6</td><td>Epithet</td></tr><tr><td>4</td><td>17</td><td>8</td><td>8</td><td>Unique Technique</td></tr><tr><td>5</td><td>19</td><td>10</td><td>10</td><td>Supreme</td></tr></tbody></table><p>This integration adds the core features as functional compendium entries, every Epithet as an individual entry, grouped reference entries covering the Superior Technique pages, example unique techniques, Superior Shinobi feats, and Superior Adversary reference pages. The Superior Technique list is grouped as reference pages rather than broken into over a hundred individual one-click items.</p>"
+        },
+        "advancement": {
+          "minimumLevel": {
+            "_id": "06ede521f63454de",
+            "configuration": {
+              "distance": {
+                "units": ""
+              },
+              "identifier": "minimum-character-level",
+              "scale": {
+                "1": {
+                  "value": 11
+                },
+                "2": {
+                  "value": 13
+                },
+                "3": {
+                  "value": 15
+                },
+                "4": {
+                  "value": 17
+                },
+                "5": {
+                  "value": 19
+                }
+              },
+              "type": "number"
+            },
+            "hint": "",
+            "title": "Recommended Character Level",
+            "type": "ScaleValue",
+            "value": {}
+          },
+          "reserveDie": {
+            "_id": "b427dc8d4781e33f",
+            "configuration": {
+              "distance": {
+                "units": ""
+              },
+              "identifier": "reserve-die",
+              "scale": {
+                "1": {
+                  "value": 2
+                },
+                "2": {
+                  "value": 4
+                },
+                "3": {
+                  "value": 6
+                },
+                "4": {
+                  "value": 8
+                },
+                "5": {
+                  "value": 10
+                }
+              },
+              "type": "number"
+            },
+            "hint": "",
+            "title": "Reserve Die",
+            "type": "ScaleValue",
+            "value": {}
+          },
+          "techniquesKnown": {
+            "_id": "827e824f075dd66d",
+            "configuration": {
+              "distance": {
+                "units": ""
+              },
+              "identifier": "superior-techniques-known",
+              "scale": {
+                "1": {
+                  "value": 2
+                },
+                "2": {
+                  "value": 4
+                },
+                "3": {
+                  "value": 6
+                },
+                "4": {
+                  "value": 8
+                },
+                "5": {
+                  "value": 10
+                }
+              },
+              "type": "number"
+            },
+            "hint": "",
+            "title": "Superior Techniques Known",
+            "type": "ScaleValue",
+            "value": {}
+          },
+          "grant1": {
+            "_id": "a5ee6a180acc79e8",
+            "configuration": {
+              "items": [
+                {
+                  "optional": false,
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.3da56d5fede0c0bd"
+                },
+                {
+                  "optional": false,
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.bd4584fffcd8511f"
+                },
+                {
+                  "optional": false,
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.806008e496b3781c"
+                },
+                {
+                  "optional": false,
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.f9a9b5e6f10a04d5"
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "hint": "",
+            "level": 1,
+            "title": "",
+            "type": "ItemGrant",
+            "value": {}
+          },
+          "grant2": {
+            "_id": "e11f852cbef6f770",
+            "configuration": {
+              "items": [
+                {
+                  "optional": false,
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.0646c329eaacec54"
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "hint": "",
+            "level": 2,
+            "title": "",
+            "type": "ItemGrant",
+            "value": {}
+          },
+          "epithetChoice": {
+            "_id": "8303b4c126479f6d",
+            "configuration": {
+              "allowDrops": false,
+              "choices": {
+                "3": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.b98e7908f2fc0f0c"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.050477ea66c829db"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.8068cdfb926eb469"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.741dff70613ac380"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.076bccd1c03c59e1"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.ec7aa0730ad6c94f"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.dbfd2021ab324c41"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.3faf43a798d698b0"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.c07f01d41e3253c7"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.5e212e0d17f2e940"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.1c602e94c4c9aabd"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.6c49ab3cc7451ed8"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.bfae8ad7bf18b7c4"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.3c9708da09e7837e"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.24d1e5751fc15921"
+                }
+              ],
+              "restriction": {},
+              "type": null
+            },
+            "hint": "Choose one Epithet at 3rd level.",
+            "level": 3,
+            "title": "Epithet",
+            "type": "ItemChoice",
+            "value": {
+              "added": {},
+              "replaced": {}
+            }
+          },
+          "grant4": {
+            "_id": "33ed1bb85d85e5ce",
+            "configuration": {
+              "items": [
+                {
+                  "optional": false,
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.a06285b847713de3"
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "hint": "",
+            "level": 4,
+            "title": "",
+            "type": "ItemGrant",
+            "value": {}
+          },
+          "grant5": {
+            "_id": "9a11a0aa33925653",
+            "configuration": {
+              "items": [
+                {
+                  "optional": false,
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.1c559c9d7b45ff83"
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "hint": "",
+            "level": 5,
+            "title": "",
+            "type": "ItemGrant",
+            "value": {}
+          }
+        }
+      }
+    },
+    {
+      "_id": "3da56d5fede0c0bd",
+      "name": "Superior",
+      "type": "feat",
+      "img": "icons/magic/control/buff-flight-wings-runes-gold.webp",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Gain 4 Ability Score Increases (usable up to a maximum of 22), AC +1, Speed +30 ft, one Saving Throw proficiency of your choice, +1 to all Saving Throws, proficiency in 3 Skills, 3 Masteries for Skills you are proficient in, and you cannot roll below half on a Hit Die or Chakra Die when spending them in a Rest or Superior Reserves.</p><p>At Class Mod level 3, Superior improves again: gain 4 more ASIs (up to max 24), AC +2, another +30 ft Speed, one more Saving Throw proficiency, another +1 to all Saving Throws, 3 more skill proficiencies, 3 more Masteries, +1 to all Attack Rolls and DCs, and you always roll the maximum result on Hit Die and Chakra Die when spending them in a Rest or Superior Reserves.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 1",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "bd4584fffcd8511f",
+      "name": "Superior Reserves",
+      "type": "feat",
+      "img": "icons/magic/life/crosses-trio-orange-red.webp",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>You gain Reserve Die (2 at level 1, scaling up to 10 at level 5). Up to two times per round, at any time, you may expend a Reserve Die on either Health or Chakra. Roll a Hit Die or Chakra Die respectively without modifiers and gain that result as Temporary Hit Points and Chakra Points; Temporary Hit Points gained this way are doubled and last 1 minute. If you have no Reserve Die left, you may instead expend 1 Hit Die or Chakra Die. Each Class Mod level beyond 1st grants one additional use of Superior Reserves per round. You regain half your Reserve Die on a Short Rest and all on a Long or Full Rest.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-reserves",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 1",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "806008e496b3781c",
+      "name": "Superior Techniques",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>You begin with 2 Superior Techniques and gain 2 more at each Class Mod level. These are powerful passive enhancements with active effects. Each Superior Technique has a Hit Die or Chakra Die cost, plus a limited number of free uses per Long Rest equal to your Proficiency Bonus minus 2. Each Technique may only trigger once per round as a Special Action, and you may only use up to 3 Superior Techniques per round. This pack organizes the large technique list into grouped reference entries in the Superior Techniques folder.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 1",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "f9a9b5e6f10a04d5",
+      "name": "Burdensome Skill",
+      "type": "feat",
+      "img": "icons/svg/downgrade.svg",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Every combat, track how many Reserve Die, Hit Die, and Chakra Die you expend through this Class Mod. At combat end, for every two spent, gain 1 Burden Point. Burden reduces your effectiveness and can eventually suppress major parts of the Class Mod. Burden recovery: Short Rest -2, Long Rest -8, Full Rest -14. At higher Burden thresholds you lose Reserve Die, take penalties to skills / attacks / DCs, weaken Perfect Hit, lose access to Supreme or even Superior, and can ultimately halve your maximum Hit Points and Chakra Points.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "burdensome-skill",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 1",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "0646c329eaacec54",
+      "name": "The Perfect Hit",
+      "type": "feat",
+      "img": "icons/skills/melee/strike-axe-blood-red.webp",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Once per round, before an Attack Roll or an enemy Saving Throw is rolled, you may declare it as a Perfect Hit. An Attack Roll Perfect Hit gains an expanded Critical Range and a bonus to hit. A Saving Throw Perfect Hit raises the DC and punishes low natural results with extra damage. Even on a non-critical / non-fumble, the target still takes bonus damage equal to half the relevant damage dice. At Class Mod level 4, the range and bonuses improve again. You may also use a Consistent Hit variant that gives a bonus to the attack roll or a penalty to the saving throw instead of the normal Perfect Hit critical effects.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-perfect-hit",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 2",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "e76b52f75591063a",
+      "name": "Epithet",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>At Class Mod level 3, choose an Epithet that defines your legend and grants a unique mechanical identity. At Class Mod level 5, your Epithet gains an additional feature. See the Epithets folder for the full list.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "epithet",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "a06285b847713de3",
+      "name": "Unique Technique",
+      "type": "feat",
+      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>At Class Mod level 4, when you next benefit from Down-Time, either create a unique jutsu with your DM (without paying the normal Down-Time cost) or select two jutsu you know and add new personal enhancements to them, such as lower costs, extra damage, or wholly new mechanics. The Examples & Extras folder contains example unique techniques from the source PDF.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "unique-technique",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 4",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "1c559c9d7b45ff83",
+      "name": "Supreme",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-pink.webp",
+      "folder": "100b1c1028a499a8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "feature",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>At Class Mod level 5, you have perfected what it means to be a Shinobi. You gain one additional Action, Bonus Action, and Reaction each round.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "supreme",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 5",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "b98e7908f2fc0f0c",
+      "name": "The Prodigy",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>An all-round talent-focused Epithet about excelling at nearly everything and adapting quickly.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-prodigy",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "050477ea66c829db",
+      "name": "The Tail-Less Tailed Beast",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A high-chakra, monstrous-reserve Epithet that emulates the overwhelming presence of a tailed beast without truly being one.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-tail-less-tailed-beast",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "8068cdfb926eb469",
+      "name": "The Faster Alive",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A velocity-focused Epithet centered on speed, tempo, and acting before anyone else can respond.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-faster-alive",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "741dff70613ac380",
+      "name": "The Juggernaut",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A tanky Epithet built around mass, survivability, and smashing through opposition.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-juggernaut",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "076bccd1c03c59e1",
+      "name": "The Hero",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A protector / morale Epithet built around safeguarding allies and rallying others.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-hero",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "ec7aa0730ad6c94f",
+      "name": "The Genius",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A hyper-intelligent planning Epithet centered on tactics, mastery, and outthinking opponents.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-genius",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "dbfd2021ab324c41",
+      "name": "The Beast",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A martial powerhouse Epithet that channels physical excellence and ferocious taijutsu presence.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-beast",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "3faf43a798d698b0",
+      "name": "The Ghost",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A stealth and assassination Epithet focused on evasion, obscurity, and striking from nowhere.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-ghost",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "c07f01d41e3253c7",
+      "name": "The Ripper",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A brutal close-quarters Epithet about inflicting crippling damage and tearing through enemies.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-ripper",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "5e212e0d17f2e940",
+      "name": "The Master",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A versatile mastery Epithet built around command over many disciplines and refined execution.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-master",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "1c602e94c4c9aabd",
+      "name": "The Specialist",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A focused Epithet that doubles down on a chosen specialty and pushes it past normal limits.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-specialist",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "6c49ab3cc7451ed8",
+      "name": "The Calamity",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A destructive force Epithet that turns your presence into a battlefield-scale disaster.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-calamity",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "bfae8ad7bf18b7c4",
+      "name": "The Terror",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A fear-inducing Epithet centered on pressure, dread, and oppressive presence.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-terror",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "3c9708da09e7837e",
+      "name": "The Berserker",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>An all-out offense Epithet built on escalating fury, heavy damage, and dangerous loss of control.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-berserker",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "24d1e5751fc15921",
+      "name": "The Prophesised",
+      "type": "feat",
+      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "folder": "a88b7a9faa758678",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "epithet",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>A fate-and-destiny Epithet centered on inevitability, perfect moments, and rewriting outcomes.</p><p><em>Open the original Superior Shinobi PDF for the full rules text and burden table for this Epithet.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "the-prophesised",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod 3",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "3465393a568b0fbc",
+      "name": "Superior Techniques — Specialist Paths",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering the page of specialist-path Superior Techniques: Taijutsu Specialist Supreme, Weapon Specialist Supreme, Hunter-Nin Supreme, Genjutsu Specialist Supreme, Intelligence Operative Supreme, Medical-Nin Supreme, Ninjutsu-Specialist Supreme, Cooking-Nin Supreme, Scout-Nin Supreme, Sci-Nin Supreme, and the Puppet Master variants.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-specialist-paths",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "9e0a36cc18188461",
+      "name": "Superior Techniques — Supreme Attributes",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering Supreme Strength, Supreme Dexterity, Supreme Constitution, Supreme Intelligence, Supreme Wisdom, Supreme Charisma, Supreme Limits, Supreme Concentration, and Supreme Constructs.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-supreme-attributes",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "fb9524eeb4ce1905",
+      "name": "Superior Techniques — Clones, Tools & Skill Paths",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering Superior Clones, Superior Summon, Superior Explosive Tools, Superior Traps, Supreme Initiative, Supreme Fūinjutsu, Supreme Medicine, Supreme Skills, Supreme Bukijutsu, and Supreme Clash.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-clones-tools-skill-paths",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "4ce246dc8025a111",
+      "name": "Superior Techniques — Arsenal & Combat Styles",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering Supreme Genjutsu, Supreme Speed, Superior Arsenal, Superior Release, Supreme Kunai, Supreme Scores, Superior Pills, Supreme Reduction, Supreme Taijutsu, and Supreme Ninjutsu.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-arsenal-combat-styles",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "40591d41df83e572",
+      "name": "Superior Techniques — Kits, Efficiency & Persona",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering Superior Toolkits, Supreme Efficiency, Supreme Evasion, Supreme Weapons, Supreme Reinforcement, Supreme Heightening, Supreme Creation, Supreme Combination, Supreme Persona, and Supreme Dragon Fist.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-kits-efficiency-persona",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "93ab73e8c97ae71f",
+      "name": "Superior Techniques — Fists & Stances I",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering Supreme Drunken Fist, Frog Fist, Iron Fist, Lion Fist, Rabbit Fist, Serpent Fist, Silent Fist, Wolf Fist, Blade Stance, Power Stance, Dueling Stance, Great Weapon Stance, Polearm Stance, Silent Killing, and Sharpshooter Stance.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-fists-stances-i",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "ff59e5e1503e324c",
+      "name": "Superior Techniques — Stances II & Clan Techniques I",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering Shield Guardian Stance, Spider Web Stance, Throwing Stance, Trickster Stance, Two-Weapon Stance, and clan techniques for Aburame, Akimichi, Bakuton, Chinoke, Fūma, Fūshin, Futton, Genwa, Hanami, and Hoshigaki.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-stances-ii-clan-techniques-i",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "7fef86b152b4fe77",
+      "name": "Superior Techniques — Clan Techniques II",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering clan techniques for Hebi, Hoshi, Hatake, Hozuki, Hyūga, Iburi, Inuzuka, Jiton, Jūgo, Kaguya, Kashu, Keton, Konjiki, Kurama, Kuru, and Namikaze.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-clan-techniques-ii",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "d3143a6c5deb805a",
+      "name": "Superior Techniques — Clan Techniques III",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering clan techniques for Nara, Non-Clan, Ranton, Ryu, Sarutobi, Senju, Shakuton, Shí Hóu, Shikigami, Shoton, Synthetic Human, Tsuchigumo, Uchiha, and Uzumaki.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-clan-techniques-iii",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "9ca8df66af8d2914",
+      "name": "Superior Techniques — Clan Techniques IV",
+      "type": "feat",
+      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "folder": "4ec015c3dbb12d6f",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Grouped reference entry covering clan techniques for Vesper, Yamada, Yamanaka, Yoton, and Yuki.</p><p><em>Use the Superior Shinobi PDF for the exact rules text of each individual technique on this page.</em></p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-techniques-clan-techniques-iv",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "Superior Shinobi Class Mod",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "5f165dbb12cd976b",
+      "name": "Unique Technique Examples — Purple Lightning & Mastered Shadow Clone Technique",
+      "type": "feat",
+      "img": "icons/magic/symbols/runes-triangular-yellow.webp",
+      "folder": "c105141a9f0dcad8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Example unique techniques from the source PDF: Purple Lightning and Mastered Shadow Clone Technique. Use these as templates when creating your own Unique Technique at Class Mod level 4.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "unique-technique-examples-purple-lightning-mastered-shadow-clone-technique",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "9c224a1eb6221c43",
+      "name": "Unique Technique Example — Mastered Flying Thunder God",
+      "type": "feat",
+      "img": "icons/magic/symbols/runes-triangular-yellow.webp",
+      "folder": "c105141a9f0dcad8",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Example unique technique from the source PDF: Mastered Flying Thunder God. Use this as a template for how far a high-level Unique Technique can push an existing jutsu.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "unique-technique-example-mastered-flying-thunder-god",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "b2640f20e9c8b295",
+      "name": "Superior Shinobi Feats",
+      "type": "feat",
+      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "folder": "1427a3af8c796436",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Reference entry for the optional feat chain: Beginner Superiority, Adept Superiority, Expert Superiority, Master Superiority, and Perfect Superiority.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-shinobi-feats",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "7267882ccdc528d2",
+      "name": "Superior Adversaries",
+      "type": "feat",
+      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "folder": "653308fc1055bcdc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Reference entry describing how Superior Shinobi can be applied to adversaries, including Lesser, Greater, and Legendary Superiority and special epithet interactions.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-adversaries",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    },
+    {
+      "_id": "78246b3abe82187d",
+      "name": "Superior Adversary Traits",
+      "type": "feat",
+      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "folder": "653308fc1055bcdc",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "effects": [],
+      "flags": {
+        "n5eb-classmod-library": {
+          "category": "reference",
+          "classMod": "superior-shinobi",
+          "managed": true
+        }
+      },
+      "system": {
+        "ability": null,
+        "actionType": "",
+        "activation": {
+          "condition": "",
+          "cost": null,
+          "type": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "chatFlavor": "",
+        "consume": {
+          "amount": null,
+          "scale": false,
+          "target": null,
+          "type": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "critical": {
+          "damage": "",
+          "threshold": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "description": {
+          "chat": "",
+          "value": "<p>Reference entry for Superior Adversary traits such as Supreme Precision, Supreme Awareness, Supreme Response, Supreme Execution, Supreme Difficulty, Supreme Efficiency, and Supreme Epithet.</p>"
+        },
+        "duration": {
+          "units": "",
+          "value": ""
+        },
+        "enchantment": null,
+        "formula": "",
+        "identifier": "superior-adversary-traits",
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "range": {
+          "long": null,
+          "units": "",
+          "value": null
+        },
+        "recharge": {
+          "charged": false,
+          "formula": "1d8",
+          "value": null
+        },
+        "requirements": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "source": {
+          "book": "Homebrew",
+          "custom": "Superior Shinobi Class Mod v1.2",
+          "rules": "n5eb"
+        },
+        "summons": null,
+        "target": {
+          "prompt": true,
+          "type": "",
+          "units": "",
+          "value": "",
+          "width": null
+        },
+        "type": {
+          "nestedsubtype": "",
+          "subtype": "",
+          "value": "classmod"
+        },
+        "uses": {
+          "max": "",
+          "per": null,
+          "prompt": true,
+          "recovery": "",
+          "value": null
+        }
+      }
+    }
+  ]
+}
