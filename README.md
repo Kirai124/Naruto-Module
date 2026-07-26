@@ -1,4 +1,4 @@
-# N5eB Class Mod Library 0.10.1
+# N5eB Class Mod Library 0.11.0
 
 Creates the world compendium **N5eB Custom Class Mods** for N5eB 3.1.0 on Foundry VTT 13/14.
 
@@ -115,3 +115,15 @@ The release workflow builds a ZIP whenever a tag beginning with `v` is created. 
 
 - Fixed the bundled content version so Foundry automatically synchronizes Superior Shinobi into the world compendium.
 - Added Superior Shinobi to the Class Mod choice de-duplication patch.
+
+
+## 0.11.0 - Superior Shinobi Rebuild
+
+- Rebuilt Superior Shinobi from scratch.
+- Added all 118 Superior Techniques as individual selectable entries.
+- Added all 15 Epithets with full benefits, Level 5 benefits, and Burden tables.
+- Added complete progression grants, 4-point ASI advancements at levels 1 and 3, two Technique choices at every Class Mod level, and the Epithet choice at level 3.
+- Added all five Superior Shinobi feats, three Unique Technique examples, three Adversary superiority tiers, special Epithet interactions, and fourteen Adversary Superior Traits.
+- Added Actor-based Reserve Dice, Burden, combat-spending, Technique free-use, and Prophesised-cost tracking.
+- Added automatic Superior/Burden numeric effects and rest recovery.
+- Added image fallback normalization for every current and future Class Mod entry that has no image.

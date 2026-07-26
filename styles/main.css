@@ -482,3 +482,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Superior Shinobi tracker */
+.n5eb-superior-tracker-strip{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding:.45rem .6rem;margin:.35rem 0;border:1px solid #d4af37;border-radius:6px;background:linear-gradient(90deg,rgba(212,175,55,.2),rgba(30,30,30,.15));}
+.n5eb-superior-tracker-strip .tracker-title{font-weight:700;color:#d4af37;}
+.n5eb-superior-tracker-strip .tracker-mini{display:flex;gap:.25rem;align-items:center;padding:.2rem .4rem;border-left:1px solid rgba(212,175,55,.5);}
+.n5eb-superior-tracker-dialog{display:grid;gap:.65rem;}
+.n5eb-superior-tracker-dialog .tracker-card{padding:.65rem;border:1px solid rgba(212,175,55,.6);border-radius:6px;background:rgba(20,20,20,.08);}
+.n5eb-superior-tracker-dialog .tracker-card header{display:flex;justify-content:space-between;font-weight:700;margin-bottom:.4rem;}
+.n5eb-superior-tracker-dialog .tracker-controls,.n5eb-superior-tracker-dialog footer{display:flex;gap:.4rem;align-items:center;justify-content:center;flex-wrap:wrap;}
+.n5eb-superior-tracker-dialog .tracker-progress{height:10px;border-radius:10px;background:rgba(0,0,0,.25);overflow:hidden;}
+.n5eb-superior-tracker-dialog .tracker-progress span{display:block;height:100%;background:#d4af37;}
+.n5eb-superior-tracker-dialog .technique-use-list{max-height:220px;overflow:auto;display:grid;gap:.2rem;}
+.n5eb-superior-tracker-dialog .technique-use-list>div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(127,127,127,.25);padding:.15rem 0;}

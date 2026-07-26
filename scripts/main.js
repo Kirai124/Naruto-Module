@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.10.1";
+const CONTENT_VERSION = "0.11.0";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -76,7 +76,7 @@ function patchClassModItemChoiceFlow() {
         section.items = section.items.filter(entry => {
           if (entry.checked || !priorSelections.has(entry.uuid)) return true;
           const source = poolByUuid.get(entry.uuid);
-          return Boolean(source?.system?.prerequisites?.repeatable);
+          return Boolean(source?.system?.prerequisites?.repeatable || source?.flags?.[MODULE_ID]?.repeatable);
         });
       }
       context.sections = sections;
@@ -157,10 +157,13 @@ async function loadContent() {
   const bundles = await Promise.all(index.files.map(file =>
     foundry.utils.fetchJsonWithTimeout(`modules/${MODULE_ID}/data/${file}`)
   ));
-  return {
-    folders: bundles.flatMap(bundle => bundle.folders ?? []),
-    items: bundles.flatMap(bundle => bundle.items ?? [])
-  };
+  const folders = bundles.flatMap(bundle => bundle.folders ?? []);
+  const items = bundles.flatMap(bundle => bundle.items ?? []);
+  for (const item of items) {
+    if (!item.img) item.img = item.type === "classmod" ? "icons/svg/book.svg" : "icons/svg/item-bag.svg";
+    for (const effect of item.effects ?? []) if (!effect.img) effect.img = item.img;
+  }
+  return {folders, items};
 }
 
 async function ensurePack() {
