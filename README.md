@@ -1,4 +1,4 @@
-# N5eB Class Mod Library 0.10.0
+# N5eB Class Mod Library 0.10.1
 
 Creates the world compendium **N5eB Custom Class Mods** for N5eB 3.1.0 on Foundry VTT 13/14.
 
@@ -109,3 +109,9 @@ The release workflow builds a ZIP whenever a tag beginning with `v` is created. 
 - Added Superior Shinobi as a new Class Mod pack.
 - Included core Superior Shinobi features, 15 Epithets as individual entries, grouped Superior Technique reference entries, example unique techniques, Superior Shinobi feats, and Superior Adversary reference pages.
 - Added placeholder image normalization for any items that do not define an image.
+
+
+## 0.10.1
+
+- Fixed the bundled content version so Foundry automatically synchronizes Superior Shinobi into the world compendium.
+- Added Superior Shinobi to the Class Mod choice de-duplication patch.

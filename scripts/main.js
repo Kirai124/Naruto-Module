@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.9.0";
+const CONTENT_VERSION = "0.10.1";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -33,7 +33,7 @@ const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-large-blue.webp",
   "icons/magic/light/explosion-star-blue.webp"
 ]);
-const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux"]);
+const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi"]);
 
 const SEAL_TYPE_KEYS = Object.freeze([
   "all-rounder", "absorber", "assault-type", "tank-type", "speed-type", "sensor-type", "white-kama-seal"

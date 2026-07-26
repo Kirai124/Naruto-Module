@@ -1,5 +1,5 @@
 {
-  "version": "0.10.0",
+  "version": "0.10.1",
   "folders": [
     {
       "_id": "e19060a1ec4f7faa",
@@ -154,7 +154,7 @@
         "n5eb-classmod-library": {
           "category": "classmod",
           "classMod": "superior-shinobi",
-          "contentVersion": "0.10.0",
+          "contentVersion": "0.10.1",
           "managed": true
         }
       },
