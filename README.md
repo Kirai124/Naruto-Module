@@ -1,4 +1,4 @@
-# N5eB Class Mod Library 0.8.2
+# N5eB Class Mod Library 0.9.0
 
 Creates the world compendium **N5eB Custom Class Mods** for N5eB 3.1.0 on Foundry VTT 13/14.
 
@@ -6,8 +6,42 @@ Included Class Mods:
 - Flying Thunder God
 - Kāma Seal
 - Tenseigan
+- Sealed Beast Redux
 
 All bundled descriptions are written in English. Each Class Mod has its own colored folder tree inside the same world compendium.
+
+## Sealed Beast Redux
+
+Sealed Beast Redux includes:
+- the complete five-level progression
+- all four Paths: Dominion, Wrath, Partnership, and Path of the Beast
+- Transformation Arts from Twisted Chakra Mode through Sealed Beast Mode
+- Beast Bomb and Beast Claw talent trees
+- Vermillion Abilities and Vermillion Passives
+- Beast Summoning and its summon chassis
+- an Actor-based tracker for Twisted Chakra, Twisted Hit Points, Disposition, Frenzy, Dormant Beast, transformations, and Twisted Awakening points
+- automatic Vermillion Art Attack Bonus and Save DC calculation
+- automatic bundled Art costs and transformation activation
+- prerequisite, Class Mod level, duplicate, and Twisted Awakening budget validation when talents are dragged onto an Actor
+- automatic Dormant Beast turn conversion and Transformation Active Effects
+
+The Sealed Beast folder tree uses orange (`#f28c18`).
+
+### Sealed Beast controls
+
+Open the tracker for a selected token or assigned character:
+
+```js
+N5eBClassMods.openSealedBeastTracker();
+```
+
+Toggle Dormant Beast:
+
+```js
+N5eBClassMods.toggleDormantBeast();
+```
+
+The tracker does not use item Uses. It stores its values directly on the Actor.
 
 ## Tenseigan
 
@@ -24,11 +58,11 @@ The Tenseigan Class Mod includes:
 - short, long, and full-rest recovery controls
 - automatic numerical effects for Tenseigan vision, Celestial Chakra Mode, Eternal Tenseigan, and Celestial Strain thresholds
 
-The new Tenseigan folder tree uses a celestial blue-violet color (`#7687e8`).
+The Tenseigan folder tree uses celestial blue-violet (`#7687e8`).
 
 ## Existing trackers
 
-Kāma Divine Rewrite and Resonance Disruption remain stored directly on the Actor. Flying Thunder God, Kāma, and Tenseigan Art formulas are written as current numeric values to the owned Class Mod so the sheet display and rolls use the same result.
+Kāma Divine Rewrite and Resonance Disruption, Tenseigan resources, and Sealed Beast resources are stored directly on the Actor. Flying Thunder God, Kāma, Tenseigan, and Sealed Beast Art formulas are written as current numeric values to the owned Class Mod so the sheet display and rolls use the same result.
 
 ## Manual synchronization
 
@@ -47,16 +81,23 @@ Open trackers for a selected token or assigned character:
 ```js
 N5eBClassMods.openKamaTracker();
 N5eBClassMods.openTenseiganTracker();
+N5eBClassMods.openSealedBeastTracker();
 ```
 
-## 0.8.1 fixes
+## GitHub distribution
 
-- Previously selected non-repeatable Class Mod choices are removed from later ItemChoice lists. This fixes Celestial Arts appearing again at later Tenseigan levels and also protects future bundled Class Mods from the same N5eB ItemChoice issue.
-- All Tenseigan entries use `assets/tenseigan-eye.png` as the bundled fallback image. Existing actor items using the old generic placeholder icons are migrated automatically.
+Manifest URL:
 
-## 0.8.2 distribution update
+```text
+https://github.com/Kirai124/Naruto-Module/releases/latest/download/module.json
+```
 
-- Added the GitHub repository URL.
-- Added a stable Foundry manifest URL using the latest GitHub Release.
-- Added the versioned GitHub Release download URL.
-- Future versions can be installed through Foundry's Check Update / Update All flow.
+The release workflow builds a ZIP whenever a tag beginning with `v` is created. The tag and `module.json` version must match.
+
+## 0.9.0
+
+- Added Sealed Beast Redux.
+- Added direct Actor tracking for Twisted Chakra, Twisted Hit Points, Disposition, Frenzy, Dormant Beast, and transformations.
+- Added automatic Vermillion Art formulas and bundled Twisted Chakra spending.
+- Added Twisted Awakening point-budget and prerequisite validation.
+- Added orange folder organization for all Sealed Beast content.

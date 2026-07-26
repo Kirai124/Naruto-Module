@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.8.1";
+const CONTENT_VERSION = "0.9.0";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -18,6 +18,11 @@ const TENSEIGAN_SAVE_FORMULA = "10+floor(@details.level/2)+@prof";
 const TENSEIGAN_STRAIN_MAX = 30;
 const TENSEIGAN_CHAKRA_BY_LEVEL = Object.freeze({1:75, 2:150, 3:250, 4:350, 5:500});
 const TENSEIGAN_FALLBACK_ICON = `modules/${MODULE_ID}/assets/tenseigan-eye.png`;
+const SEALED_BEAST_TRACKER_FLAG = "sealedBeastTracker";
+const SEALED_BEAST_TRACKER_VERSION = 1;
+const SEALED_BEAST_ATTACK_FORMULA = "2*@prof+@classmods.sealed-beast-redux.levels";
+const SEALED_BEAST_SAVE_FORMULA = "12+@classmods.sealed-beast-redux.levels+@prof";
+const SEALED_BEAST_AWAKENING_BY_LEVEL = Object.freeze({1:45, 2:110, 3:175, 4:220, 5:275});
 const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-small-blue.webp",
   "icons/magic/light/explosion-star-glow-blue.webp",
@@ -28,7 +33,7 @@ const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-large-blue.webp",
   "icons/magic/light/explosion-star-blue.webp"
 ]);
-const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan"]);
+const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux"]);
 
 const SEAL_TYPE_KEYS = Object.freeze([
   "all-rounder", "absorber", "assault-type", "tank-type", "speed-type", "sensor-type", "white-kama-seal"
@@ -122,7 +127,14 @@ Hooks.once("ready", async () => {
     openTenseiganTracker,
     getTenseiganTracker: readTenseiganTracker,
     setTenseiganTracker: updateTenseiganTracker,
-    syncCelestialStrain: syncCelestialStrainEffect
+    syncCelestialStrain: syncCelestialStrainEffect,
+    openSealedBeastTracker,
+    getSealedBeastTracker: readSealedBeastTracker,
+    setSealedBeastTracker: updateSealedBeastTracker,
+    toggleDormantBeast,
+    setSealedBeastFrenzy,
+    rollDesperateRage,
+    clearSealedBeastTransformation
   });
   globalThis.SyncN5eBClassMods = () => syncLibrary({force: true});
 
@@ -263,6 +275,10 @@ function getFlyingThunderGodClassMod(actor) {
 
 function getTenseiganClassMod(actor) {
   return getClassMod(actor, "tenseigan");
+}
+
+function getSealedBeastClassMod(actor) {
+  return getClassMod(actor, "sealed-beast-redux");
 }
 
 function getManagedActorItem(actor, flag) {
@@ -529,6 +545,12 @@ function getClassModArtsConfiguration(identifier) {
     attackFormula: TENSEIGAN_ATTACK_FORMULA,
     saveFormula: TENSEIGAN_SAVE_FORMULA
   };
+  if (identifier === "sealed-beast-redux") return {
+    item: getSealedBeastClassMod,
+    calculate: calculateSealedBeastArtValues,
+    attackFormula: SEALED_BEAST_ATTACK_FORMULA,
+    saveFormula: SEALED_BEAST_SAVE_FORMULA
+  };
   return null;
 }
 
@@ -568,11 +590,16 @@ async function ensureTenseiganArtsFormulas(actor) {
   return ensureClassModArtsValues(actor, "tenseigan");
 }
 
+async function ensureSealedBeastArtsFormulas(actor) {
+  return ensureClassModArtsValues(actor, "sealed-beast-redux");
+}
+
 async function syncClassModArtsForActor(actor) {
   if (!actor?.isOwner) return;
   await ensureKamaArtsFormulas(actor);
   await ensureFlyingThunderGodArtsFormulas(actor);
   await ensureTenseiganArtsFormulas(actor);
+  await ensureSealedBeastArtsFormulas(actor);
 }
 
 function calculateResonanceGain(actor, state) {
@@ -766,6 +793,7 @@ async function migrateExistingClassModActors() {
       await queueKamaTask(actor, async () => {
         if (getKamaClassMod(actor)) await migrateKamaActor(actor);
         if (getTenseiganClassMod(actor)) await migrateTenseiganActor(actor);
+        if (getSealedBeastClassMod(actor)) await migrateSealedBeastActor(actor);
         await ensureFlyingThunderGodArtsFormulas(actor);
       });
     } catch (error) {
@@ -1468,6 +1496,569 @@ function renderTenseiganTrackerStrip(app, html) {
 }
 
 /* ------------------------------------------------------------ */
+/* Sealed Beast Redux runtime                                   */
+/* ------------------------------------------------------------ */
+
+const sealedBeastTrackerDialogs = new Map();
+
+function clampSealed(value, minimum, maximum) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+function getSealedBeastLevel(actor) {
+  return Math.max(1, Number(getSealedBeastClassMod(actor)?.system?.levels ?? 1));
+}
+
+function getSealedBeastPath(actor) {
+  return asArray(actor?.items).find(item => item.getFlag?.(MODULE_ID, "sealedBeastPath")) ?? null;
+}
+
+function getSealedBeastPathKey(actor) {
+  return getSealedBeastPath(actor)?.getFlag?.(MODULE_ID, "sealedBeastPath") ?? "";
+}
+
+function getTwistedAwakeningMaximum(actor) {
+  return SEALED_BEAST_AWAKENING_BY_LEVEL[getSealedBeastLevel(actor)] ?? 45;
+}
+
+function getTwistedAwakeningSpent(actor) {
+  return asArray(actor?.items).reduce((total, item) => total + Math.max(0, Number(item.getFlag?.(MODULE_ID, "awakeningCost") ?? 0)), 0);
+}
+
+function getTwistedAwakeningBudget(actor) {
+  const maximum = getTwistedAwakeningMaximum(actor);
+  const spent = getTwistedAwakeningSpent(actor);
+  return {maximum, spent, remaining: maximum - spent};
+}
+
+function defaultSealedBeastTracker() {
+  return {
+    version: SEALED_BEAST_TRACKER_VERSION,
+    twistedChakra: 0,
+    twistedHitPoints: 0,
+    twistedHitPointsMax: 0,
+    disposition: 50,
+    dormantBeast: false,
+    frenzy: false,
+    transformation: "",
+    transformationName: "None",
+    transformationTier: 0,
+    beastConquered: false,
+    pactOfTrust: false,
+    rageTriggerUsed: false,
+    lastProcessedTurn: ""
+  };
+}
+
+function normalizeSealedBeastTracker(value) {
+  const base = {...defaultSealedBeastTracker(), ...(value ?? {})};
+  return {
+    version: SEALED_BEAST_TRACKER_VERSION,
+    twistedChakra: Math.max(0, Math.floor(Number(base.twistedChakra) || 0)),
+    twistedHitPoints: Math.max(0, Math.floor(Number(base.twistedHitPoints) || 0)),
+    twistedHitPointsMax: Math.max(0, Math.floor(Number(base.twistedHitPointsMax) || 0)),
+    disposition: clampSealed(Math.floor(Number(base.disposition) || 0), 0, 100),
+    dormantBeast: Boolean(base.dormantBeast),
+    frenzy: Boolean(base.frenzy),
+    transformation: String(base.transformation ?? ""),
+    transformationName: String(base.transformationName ?? "None"),
+    transformationTier: Math.max(0, Math.floor(Number(base.transformationTier) || 0)),
+    beastConquered: Boolean(base.beastConquered),
+    pactOfTrust: Boolean(base.pactOfTrust),
+    rageTriggerUsed: Boolean(base.rageTriggerUsed),
+    lastProcessedTurn: String(base.lastProcessedTurn ?? "")
+  };
+}
+
+function readSealedBeastTracker(actor) {
+  return normalizeSealedBeastTracker(actor?.getFlag?.(MODULE_ID, SEALED_BEAST_TRACKER_FLAG));
+}
+
+async function ensureSealedBeastTracker(actor, {fresh=false}={}) {
+  const existing = actor?.getFlag?.(MODULE_ID, SEALED_BEAST_TRACKER_FLAG);
+  const state = fresh || !existing ? defaultSealedBeastTracker() : normalizeSealedBeastTracker(existing);
+  if (fresh || !existing || JSON.stringify(existing) !== JSON.stringify(state)) {
+    await actor.update({[`flags.${MODULE_ID}.${SEALED_BEAST_TRACKER_FLAG}`]:state}, {[KAMA_INTERNAL_OPTION]:{sealedTracker:true}});
+  }
+  return state;
+}
+
+async function updateSealedBeastTracker(actor, patch={}, {sync=true, render=true, autoFrenzy=true}={}) {
+  if (!actor) return defaultSealedBeastTracker();
+  const current = readSealedBeastTracker(actor);
+  const next = normalizeSealedBeastTracker({...current, ...patch});
+  if (next.twistedHitPoints > next.twistedHitPointsMax) next.twistedHitPoints = next.twistedHitPointsMax;
+  await actor.update({[`flags.${MODULE_ID}.${SEALED_BEAST_TRACKER_FLAG}`]:next}, {[KAMA_INTERNAL_OPTION]:{sealedTracker:true}});
+  if (sync) await refreshSealedBeastEffects(actor, next);
+  if (autoFrenzy) await checkSealedBeastAutomaticFrenzy(actor, next);
+  if (render) {
+    refreshOpenSealedBeastTracker(actor);
+    actor.sheet?.render?.(false);
+  }
+  return readSealedBeastTracker(actor);
+}
+
+function calculateSealedBeastArtValues(actor) {
+  const proficiency = Math.max(0, Number(actor?.system?.attributes?.prof ?? 0));
+  const classModLevel = getSealedBeastLevel(actor);
+  return {attack:(2 * proficiency) + classModLevel, save:12 + classModLevel + proficiency};
+}
+
+function getSealedManagedEffect(actor, flag) {
+  return asArray(actor?.effects).find(effect => effect.getFlag?.(MODULE_ID, flag));
+}
+
+async function upsertSealedEffect(actor, flag, name, img, active, changes) {
+  let effect = getSealedManagedEffect(actor, flag);
+  const data = {name, img, disabled:!active, transfer:false, changes, flags:{[MODULE_ID]:{[flag]:true}}};
+  if (!effect) {
+    [effect] = await actor.createEmbeddedDocuments("ActiveEffect", [data], {[KAMA_INTERNAL_OPTION]:{sealedEffect:true}});
+  } else {
+    await effect.update({name, img, disabled:!active, changes}, {[KAMA_INTERNAL_OPTION]:{sealedEffect:true}});
+  }
+  return effect;
+}
+
+function buildDormantBeastChanges() {
+  return [
+    {key:"system.abilities.str.value",mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:"2",priority:20},
+    {key:"system.abilities.dex.value",mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:"2",priority:20}
+  ];
+}
+
+function buildFrenzyChanges(actor) {
+  const changes = [];
+  for (const ability of ["str","dex"]) {
+    const value = Number(actor?.system?.abilities?.[ability]?.value ?? 10);
+    if (value < 18) changes.push({key:`system.abilities.${ability}.value`,mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:String(18-value),priority:30});
+  }
+  changes.push({key:"system.attributes.movement.walk",mode:CONST.ACTIVE_EFFECT_MODES.MULTIPLY,value:"2",priority:30});
+  return changes;
+}
+
+function findOwnedTransformation(actor, key) {
+  return asArray(actor?.items).find(item => item.getFlag?.(MODULE_ID, "sealedTransformation")?.key === key) ?? null;
+}
+
+function buildTransformationChanges(actor, state) {
+  const item = findOwnedTransformation(actor, state.transformation);
+  const data = item?.getFlag?.(MODULE_ID, "sealedTransformation") ?? {};
+  const changes = [];
+  const speed = Number(data.speed ?? 0);
+  const ability = Number(data.ability ?? 0);
+  const save = Number(data.save ?? 0);
+  if (speed) changes.push({key:"system.attributes.movement.walk",mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:String(speed),priority:25});
+  if (ability) {
+    changes.push(
+      {key:"system.abilities.str.value",mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:String(ability),priority:25},
+      {key:"system.abilities.dex.value",mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:String(ability),priority:25}
+    );
+  }
+  if (save) changes.push({key:"system.bonuses.abilities.save",mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:String(save),priority:25});
+  if (data.attackByLevel) {
+    const bonus = 2 * getSealedBeastLevel(actor);
+    for (const key of ["mwak","rwak","msak","rsak"]) changes.push({key:`system.bonuses.${key}.attack`,mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:String(bonus),priority:25});
+    for (const type of ["ninjutsu","genjutsu","taijutsu"]) changes.push({key:`system.attributes.jutsu.${type}.bonuses.attack`,mode:CONST.ACTIVE_EFFECT_MODES.ADD,value:String(bonus),priority:25});
+  }
+  return changes;
+}
+
+async function refreshSealedBeastEffects(actor, suppliedState) {
+  if (!actor?.isOwner || !getSealedBeastClassMod(actor)) return;
+  const state = suppliedState ?? readSealedBeastTracker(actor);
+  await upsertSealedEffect(actor,"dormantBeastEffect","Dormant Beast","icons/creatures/abilities/paw-print-orange.webp",state.dormantBeast,buildDormantBeastChanges());
+  await upsertSealedEffect(actor,"sealedFrenzyEffect","Frenzy","icons/creatures/abilities/mouth-teeth-fire-orange.webp",state.frenzy,buildFrenzyChanges(actor));
+  await upsertSealedEffect(actor,"sealedTransformationEffect",state.transformationName || "Sealed Beast Transformation","icons/magic/fire/flame-burning-creature-orange.webp",Boolean(state.transformation),buildTransformationChanges(actor,state));
+}
+
+function getNormalChakra(actor) {
+  return Math.max(0, Number(actor?.system?.attributes?.chakra?.value ?? 0));
+}
+
+function getNormalChakraMaximum(actor) {
+  return Math.max(0, Number(actor?.system?.attributes?.chakra?.max ?? actor?.system?.attributes?.chakra?.value ?? 0));
+}
+
+async function setNormalChakra(actor, value) {
+  await actor.update({"system.attributes.chakra.value":clampSealed(Math.floor(value),0,getNormalChakraMaximum(actor))}, {[KAMA_INTERNAL_OPTION]:{sealedResource:true}});
+}
+
+function calculateDesperateRageDC(actor) {
+  const level = getSealedBeastLevel(actor);
+  const path = getSealedBeastPathKey(actor);
+  if (path === "path-of-dominion") {
+    if (level >= 4) return Math.max(1, 12 - level);
+    if (level >= 3) return 12;
+  }
+  if (path === "path-of-partnership" && level >= 4) return 12;
+  return 12 + level;
+}
+
+function calculateDispositionRageBonus(actor, state=readSealedBeastTracker(actor)) {
+  const level = getSealedBeastLevel(actor);
+  if (state.disposition >= 75) return level;
+  if (state.disposition <= 25) return -level;
+  return 0;
+}
+
+function transformationPreventsFrenzy(actor, state=readSealedBeastTracker(actor)) {
+  const item = findOwnedTransformation(actor,state.transformation);
+  return Boolean(item?.getFlag?.(MODULE_ID,"sealedTransformation")?.preventsFrenzy);
+}
+
+async function checkSealedBeastAutomaticFrenzy(actor, suppliedState) {
+  const state = suppliedState ?? readSealedBeastTracker(actor);
+  if (state.frenzy || transformationPreventsFrenzy(actor,state)) return;
+  if (getSealedBeastPathKey(actor) === "path-of-dominion") return;
+  if (getSealedBeastPathKey(actor) === "path-of-the-beast" && state.pactOfTrust) return;
+  if (state.twistedChakra > getNormalChakra(actor)) await setSealedBeastFrenzy(actor,true,{reason:"Twisted Chakra exceeded normal Chakra"});
+}
+
+async function toggleDormantBeast(actor) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if (!actor || !getSealedBeastClassMod(actor)) return ui.notifications.warn("No Sealed Beast Redux character is selected.");
+  const state = await ensureSealedBeastTracker(actor);
+  const active = !state.dormantBeast;
+  await updateSealedBeastTracker(actor,{dormantBeast:active},{autoFrenzy:false});
+  if (active) await processDormantBeastTurn(actor,{activation:true});
+  ui.notifications.info(`Dormant Beast ${active ? "activated" : "deactivated"}.`);
+}
+
+async function setSealedBeastFrenzy(actor, active, {reason=""}={}) {
+  const state = await ensureSealedBeastTracker(actor);
+  if (state.frenzy === active) return state;
+  if (active) {
+    const hp = actor.system?.attributes?.hp ?? {};
+    const maximum = Number(hp.max ?? 0);
+    const current = Number(hp.value ?? 0);
+    const temporary = Number(hp.temp ?? 0);
+    const healed = current + 25;
+    const overflow = Math.max(0, healed - maximum);
+    await actor.update({
+      "system.attributes.hp.value":Math.min(maximum,healed),
+      "system.attributes.hp.temp":Math.max(temporary,overflow)
+    }, {[KAMA_INTERNAL_OPTION]:{sealedFrenzy:true}});
+    await updateSealedBeastTracker(actor,{frenzy:true,dormantBeast:true},{autoFrenzy:false});
+    if (reason) ui.notifications.warn(`Frenzy: ${reason}`);
+  } else await updateSealedBeastTracker(actor,{frenzy:false},{autoFrenzy:false});
+  return readSealedBeastTracker(actor);
+}
+
+async function rollSealedBeastCheck(actor, ability, label, bonus=0) {
+  const data = actor.getRollData?.() ?? actor.system ?? {};
+  const roll = await (new Roll(`1d20 + @abilities.${ability}.mod + ${Number(bonus)||0}`,data)).evaluate();
+  await roll.toMessage({speaker:ChatMessage.getSpeaker({actor}),flavor:label});
+  return roll.total;
+}
+
+async function rollDesperateRage(actor) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if (!actor || !getSealedBeastClassMod(actor)) return ui.notifications.warn("No Sealed Beast Redux character is selected.");
+  const state = await ensureSealedBeastTracker(actor);
+  const dc = calculateDesperateRageDC(actor);
+  const bonus = calculateDispositionRageBonus(actor,state);
+  const total = await rollSealedBeastCheck(actor,"cha",`Desperate Rage Check vs DC ${dc}`,bonus);
+  if (total >= dc) return ui.notifications.info(`Desperate Rage resisted (${total} vs DC ${dc}).`);
+  const amount = Math.min(getNormalChakra(actor),2 * Math.max(0,Number(actor.system?.details?.level ?? 0)));
+  await setNormalChakra(actor,getNormalChakra(actor)-amount);
+  await updateSealedBeastTracker(actor,{twistedChakra:state.twistedChakra+amount,rageTriggerUsed:true},{autoFrenzy:false,render:false});
+  await setSealedBeastFrenzy(actor,true,{reason:`failed Desperate Rage check (${total} vs DC ${dc})`});
+}
+
+async function attemptEndSealedBeastFrenzy(actor) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if (!actor || !getSealedBeastClassMod(actor)) return;
+  const state = readSealedBeastTracker(actor);
+  if (!state.frenzy) return ui.notifications.info("This character is not Frenzied.");
+  const dc = calculateDesperateRageDC(actor);
+  const total = await rollSealedBeastCheck(actor,"cha",`End Frenzy Check vs DC ${dc}`,calculateDispositionRageBonus(actor,state));
+  if (total < dc) return ui.notifications.warn(`Frenzy continues (${total} vs DC ${dc}).`);
+  const nextTwisted = Math.floor(state.twistedChakra / 2);
+  const reduced = state.twistedChakra - nextTwisted;
+  const damage = getSealedBeastLevel(actor) >= 3 ? Math.floor(reduced/2) : reduced;
+  const hp = Number(actor.system?.attributes?.hp?.value ?? 0);
+  await actor.update({"system.attributes.hp.value":Math.max(0,hp-damage)}, {[KAMA_INTERNAL_OPTION]:{sealedFrenzy:true}});
+  await updateSealedBeastTracker(actor,{twistedChakra:nextTwisted,frenzy:nextTwisted >= getNormalChakra(actor)},{autoFrenzy:false});
+  ui.notifications.info(`Twisted Chakra reduced by ${reduced}; ${damage} unavoidable Necrotic damage applied.${nextTwisted >= getNormalChakra(actor) ? " Frenzy continues because Twisted Chakra is not below normal Chakra." : " Frenzy ends."}`);
+}
+
+function getDormantConversion(actor,state) {
+  const level = getSealedBeastLevel(actor);
+  const path = getSealedBeastPathKey(actor);
+  if (path === "path-of-dominion") return level >= 5 ? 4 : 2;
+  if (path === "path-of-wrath") return clampSealed(level,2,5);
+  if (path === "path-of-the-beast" && state.beastConquered && level >= 4) return 4;
+  return 1;
+}
+
+async function processDormantBeastTurn(actor,{activation=false}={}) {
+  const state = await ensureSealedBeastTracker(actor);
+  if (!state.dormantBeast) return;
+  const path = getSealedBeastPathKey(actor);
+  if (path === "path-of-the-beast" && state.pactOfTrust && getSealedBeastLevel(actor) >= 5) {
+    await updateSealedBeastTracker(actor,{twistedChakra:Math.max(state.twistedChakra,500)},{autoFrenzy:false});
+    return;
+  }
+  const proficiency = Math.max(1,Number(actor.system?.attributes?.prof ?? 1));
+  const loss = proficiency * (state.frenzy ? 2 : 1);
+  const available = getNormalChakra(actor);
+  const actualLoss = Math.min(available,loss);
+  const gain = actualLoss * getDormantConversion(actor,state);
+  await setNormalChakra(actor,available-actualLoss);
+  await updateSealedBeastTracker(actor,{twistedChakra:state.twistedChakra+gain},{render:false});
+  if (state.frenzy && getNormalChakra(actor) <= 0 && path !== "path-of-wrath") ui.notifications.error(`${actor.name} has reached 0 Chakra during Frenzy; the sealed beast is released unless the GM rules otherwise.`);
+  if (activation) actor.sheet?.render?.(false);
+}
+
+async function grantSealedTransformationTempHP(actor, amount) {
+  const current = Number(actor.system?.attributes?.hp?.temp ?? 0);
+  const prior = actor.getFlag(MODULE_ID,"sealedTransformationTempHP");
+  const baseline = prior?.active ? Number(prior.baseline ?? current) : current;
+  const next = Math.max(current,Math.max(0,amount));
+  await actor.update({
+    "system.attributes.hp.temp":next,
+    [`flags.${MODULE_ID}.sealedTransformationTempHP`]:{active:true,baseline,granted:Math.max(0,amount)}
+  }, {[KAMA_INTERNAL_OPTION]:{sealedTransformation:true}});
+}
+
+async function removeSealedTransformationTempHP(actor) {
+  const prior = actor.getFlag(MODULE_ID,"sealedTransformationTempHP");
+  if (!prior?.active) return;
+  const current = Number(actor.system?.attributes?.hp?.temp ?? 0);
+  await actor.update({
+    "system.attributes.hp.temp":Math.min(current,Math.max(0,Number(prior.baseline ?? 0))),
+    [`flags.${MODULE_ID}.-=sealedTransformationTempHP`]:null
+  }, {[KAMA_INTERNAL_OPTION]:{sealedTransformation:true}});
+}
+
+async function activateSealedBeastTransformation(actor,item) {
+  const data = item?.getFlag?.(MODULE_ID,"sealedTransformation");
+  if (!data) return;
+  await removeSealedTransformationTempHP(actor);
+  const resilience = asArray(actor.items).some(i => i.system?.identifier === "twisted-resilience");
+  const tier = Math.max(1,Number(data.tier ?? 1));
+  const bonus = resilience ? 5*tier : 0;
+  const maxTwistedHP = Math.max(0,Number(data.twistedHP ?? 0)+bonus);
+  const patch = {
+    transformation:data.key,
+    transformationName:item.name,
+    transformationTier:tier,
+    twistedHitPoints:maxTwistedHP,
+    twistedHitPointsMax:maxTwistedHP,
+    ...(data.preventsFrenzy ? {frenzy:false} : {})
+  };
+  await updateSealedBeastTracker(actor,patch,{autoFrenzy:false,render:false});
+  await grantSealedTransformationTempHP(actor,Number(data.temporaryHP ?? 0));
+  await refreshSealedBeastEffects(actor,readSealedBeastTracker(actor));
+  actor.sheet?.render?.(false);
+  ui.notifications.info(`${item.name} activated.`);
+}
+
+async function clearSealedBeastTransformation(actor) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if (!actor || !getSealedBeastClassMod(actor)) return;
+  await removeSealedTransformationTempHP(actor);
+  await updateSealedBeastTracker(actor,{transformation:"",transformationName:"None",transformationTier:0,twistedHitPoints:0,twistedHitPointsMax:0},{autoFrenzy:true});
+}
+
+async function processSealedBeastTurn(actor,combat) {
+  if (!actor || !getSealedBeastClassMod(actor)) return;
+  const state = await ensureSealedBeastTracker(actor);
+  const turnKey = `${combat?.id ?? "combat"}:${combat?.round ?? 0}:${combat?.turn ?? 0}`;
+  if (state.lastProcessedTurn === turnKey) return;
+  const patch = {lastProcessedTurn:turnKey};
+  if (state.transformation && state.twistedHitPointsMax > 0) patch.twistedHitPoints=state.twistedHitPointsMax;
+  await updateSealedBeastTracker(actor,patch,{autoFrenzy:false,render:false});
+  if (state.dormantBeast) await processDormantBeastTurn(actor);
+  if (state.frenzy && getSealedBeastLevel(actor) >= 2) ui.notifications.warn(`${actor.name} is Frenzied: a Wisdom check against Desperate Rage DC ${calculateDesperateRageDC(actor)} is required for Frenzied Drawbacks.`);
+}
+
+function checkSealedBeastActivityUse(activity) {
+  const item = getTenseiganActivityItem(activity);
+  const actor = activity?.actor ?? item?.actor;
+  if (!actor || !getSealedBeastClassMod(actor)) return;
+  const cost = Math.max(0,Number(item?.getFlag?.(MODULE_ID,"twistedChakraCost") ?? 0));
+  if (!cost) return;
+  const state = readSealedBeastTracker(actor);
+  if (cost > state.twistedChakra) {
+    ui.notifications.warn(`${item.name} requires ${cost} Twisted Chakra; only ${state.twistedChakra} remains.`);
+    return false;
+  }
+  const requiresTransformation = Boolean(item.getFlag?.(MODULE_ID,"requiresTransformation"));
+  const minimumTier = Number(item.getFlag?.(MODULE_ID,"minimumTransformationTier") ?? 0);
+  if (requiresTransformation && !state.frenzy && !state.transformation) {
+    ui.notifications.warn(`${item.name} requires an active Transformation Art or Frenzy.`);
+    return false;
+  }
+  if (minimumTier && !state.frenzy && state.transformationTier < minimumTier) {
+    ui.notifications.warn(`${item.name} requires a Tier ${minimumTier} Transformation Art or Frenzy.`);
+    return false;
+  }
+}
+
+async function processSealedBeastActivityUse(activity) {
+  const item = getTenseiganActivityItem(activity);
+  const actor = activity?.actor ?? item?.actor;
+  if (!actor || !getSealedBeastClassMod(actor)) return;
+  const cost = Math.max(0,Number(item?.getFlag?.(MODULE_ID,"twistedChakraCost") ?? 0));
+  if (!cost) return;
+  const state = await ensureSealedBeastTracker(actor);
+  await updateSealedBeastTracker(actor,{twistedChakra:Math.max(0,state.twistedChakra-cost)},{autoFrenzy:false,render:false});
+  if (state.frenzy) await setNormalChakra(actor,getNormalChakra(actor)-cost);
+  if (item.getFlag?.(MODULE_ID,"sealedTransformation")) await activateSealedBeastTransformation(actor,item);
+  else actor.sheet?.render?.(false);
+}
+
+function validateSealedBeastTalentCreation(item) {
+  const actor = item?.parent;
+  if (actor?.documentName !== "Actor") return;
+  const cost = Math.max(0,Number(item.getFlag?.(MODULE_ID,"awakeningCost") ?? 0));
+  if (!cost) return;
+  if (!getSealedBeastClassMod(actor)) {
+    ui.notifications.warn(`${item.name} requires the Sealed Beast Redux Class Mod.`);
+    return false;
+  }
+  const identifier = item.system?.identifier;
+  if (identifier && asArray(actor.items).some(owned => owned.system?.identifier === identifier)) {
+    ui.notifications.warn(`${item.name} is already owned.`);
+    return false;
+  }
+  const level = getSealedBeastLevel(actor);
+  const minimum = Math.max(1,Number(item.getFlag?.(MODULE_ID,"minimumClassModLevel") ?? 1));
+  if (level < minimum) {
+    ui.notifications.warn(`${item.name} requires Sealed Beast Redux level ${minimum}.`);
+    return false;
+  }
+  const ownedIdentifiers = new Set(asArray(actor.items).map(owned => owned.system?.identifier).filter(Boolean));
+  const prerequisites = asArray(item.getFlag?.(MODULE_ID,"prerequisites"));
+  const missing = prerequisites.filter(required => !ownedIdentifiers.has(required));
+  if (missing.length) {
+    ui.notifications.warn(`${item.name} is missing prerequisites: ${missing.join(", ")}.`);
+    return false;
+  }
+  const budget = getTwistedAwakeningBudget(actor);
+  if (cost > budget.remaining) {
+    ui.notifications.warn(`${item.name} costs ${cost} Twisted Awakening Points; only ${budget.remaining} remain.`);
+    return false;
+  }
+}
+
+async function migrateSealedBeastActor(actor) {
+  if (!getSealedBeastClassMod(actor)) return;
+  await ensureSealedBeastTracker(actor);
+  await ensureClassModArtsValues(actor,"sealed-beast-redux");
+  await refreshSealedBeastEffects(actor);
+}
+
+function sealedTrackerDialogKey(actor) {
+  return actor?.uuid ?? actor?.id;
+}
+
+function buildSealedBeastTrackerHtml(actor) {
+  const state = readSealedBeastTracker(actor);
+  const budget = getTwistedAwakeningBudget(actor);
+  const dc = calculateDesperateRageDC(actor);
+  return `<div class="n5eb-sealed-beast-tracker-dialog" data-sealed-beast-tracker-root>
+    <p class="tracker-intro">All values are stored directly on <strong>${foundry.utils.escapeHTML?.(actor.name) ?? actor.name}</strong>. No item Uses fields are used.</p>
+    <div class="tracker-grid">
+      <label>Twisted Chakra<input type="number" min="0" step="1" data-input="twisted" value="${state.twistedChakra}"></label>
+      <label>Twisted HP<input type="number" min="0" step="1" data-input="twisted-hp" value="${state.twistedHitPoints}"></label>
+      <label>Twisted HP Maximum<input type="number" min="0" step="1" data-input="twisted-hp-max" value="${state.twistedHitPointsMax}"></label>
+      <label>Disposition<input type="number" min="0" max="100" step="1" data-input="disposition" value="${state.disposition}"></label>
+    </div>
+    <section class="tracker-card"><header><strong>Twisted Awakening</strong><span>${budget.remaining} remaining / ${budget.maximum}</span></header><div class="tracker-progress"><span style="width:${budget.maximum ? clampSealed(budget.spent/budget.maximum*100,0,100) : 0}%"></span></div><small>${budget.spent} points spent by owned talents.</small></section>
+    <section class="tracker-card status"><header><strong>Status</strong><span>Desperate Rage DC ${dc}</span></header>
+      <div class="status-pills"><span class="${state.dormantBeast?'active':''}">Dormant Beast</span><span class="${state.frenzy?'active danger':''}">Frenzy</span><span class="${state.transformation?'active':''}">${foundry.utils.escapeHTML?.(state.transformationName) ?? state.transformationName}</span></div>
+      <label><input type="checkbox" data-input="conquered" ${state.beastConquered?'checked':''}> Beast Conquered</label>
+      <label><input type="checkbox" data-input="pact" ${state.pactOfTrust?'checked':''}> Pact of Trust</label>
+    </section>
+    <div class="tracker-actions">
+      <button type="button" data-action="save"><i class="fas fa-floppy-disk"></i> Save Values</button>
+      <button type="button" data-action="toggle-dormant"><i class="fas fa-paw"></i> Toggle Dormant Beast</button>
+      <button type="button" data-action="rage-check"><i class="fas fa-dice-d20"></i> Desperate Rage Check</button>
+      <button type="button" data-action="toggle-frenzy"><i class="fas fa-fire"></i> ${state.frenzy?'End Frenzy Check':'Enter Frenzy'}</button>
+      <button type="button" data-action="process-turn"><i class="fas fa-forward-step"></i> Process Dormant Turn</button>
+      <button type="button" data-action="clear-transformation"><i class="fas fa-person"></i> End Transformation</button>
+      ${game.user.isGM?'<button type="button" data-action="reset"><i class="fas fa-rotate-left"></i> Reset Tracker</button>':''}
+    </div>
+  </div>`;
+}
+
+function refreshOpenSealedBeastTracker(actor) {
+  const dialog = sealedBeastTrackerDialogs.get(sealedTrackerDialogKey(actor));
+  if (!dialog?.element) return;
+  const wrapper = dialog.element.querySelector("[data-sealed-beast-tracker-root]")?.parentElement;
+  if (!wrapper) return;
+  wrapper.innerHTML = buildSealedBeastTrackerHtml(actor);
+  activateSealedBeastTrackerDialog(dialog,actor);
+}
+
+function activateSealedBeastTrackerDialog(dialog,actor) {
+  const root = dialog.element.querySelector("[data-sealed-beast-tracker-root]");
+  if (!root || root.dataset.activated === "true") return;
+  root.dataset.activated="true";
+  root.addEventListener("click",async event => {
+    const button=event.target.closest("button[data-action]");
+    if (!button) return;
+    const action=button.dataset.action;
+    try {
+      if (action === "save") {
+        await updateSealedBeastTracker(actor,{
+          twistedChakra:Number(root.querySelector('[data-input="twisted"]')?.value ?? 0),
+          twistedHitPoints:Number(root.querySelector('[data-input="twisted-hp"]')?.value ?? 0),
+          twistedHitPointsMax:Number(root.querySelector('[data-input="twisted-hp-max"]')?.value ?? 0),
+          disposition:Number(root.querySelector('[data-input="disposition"]')?.value ?? 50),
+          beastConquered:Boolean(root.querySelector('[data-input="conquered"]')?.checked),
+          pactOfTrust:Boolean(root.querySelector('[data-input="pact"]')?.checked)
+        });
+      } else if (action === "toggle-dormant") await toggleDormantBeast(actor);
+      else if (action === "rage-check") await rollDesperateRage(actor);
+      else if (action === "toggle-frenzy") {
+        if (readSealedBeastTracker(actor).frenzy) await attemptEndSealedBeastFrenzy(actor);
+        else await setSealedBeastFrenzy(actor,true,{reason:"manually activated"});
+      } else if (action === "process-turn") await processDormantBeastTurn(actor);
+      else if (action === "clear-transformation") await clearSealedBeastTransformation(actor);
+      else if (action === "reset" && game.user.isGM) await updateSealedBeastTracker(actor,defaultSealedBeastTracker(),{autoFrenzy:false});
+    } catch(error) {
+      console.error(`${MODULE_ID} | Sealed Beast tracker action failed`,error);
+      ui.notifications.error(`Sealed Beast tracker failed: ${error.message}`);
+    }
+    refreshOpenSealedBeastTracker(actor);
+  });
+}
+
+async function openSealedBeastTracker(actor) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if (!actor || !getSealedBeastClassMod(actor)) return ui.notifications.warn("No Sealed Beast Redux character is selected.");
+  const key=sealedTrackerDialogKey(actor);
+  const existing=sealedBeastTrackerDialogs.get(key);
+  if (existing) return existing.bringToFront?.();
+  await ensureSealedBeastTracker(actor);
+  const content=document.createElement("div"); content.innerHTML=buildSealedBeastTrackerHtml(actor);
+  const DialogV2=foundry.applications.api.DialogV2;
+  const dialog=new DialogV2({window:{title:`Sealed Beast Tracker — ${actor.name}`,icon:"fa-solid fa-paw",resizable:true},position:{width:650,height:"auto"},classes:["n5eb-sealed-beast-tracker-window"],content,buttons:[{action:"close",label:"Close",icon:"fa-solid fa-xmark"}]});
+  sealedBeastTrackerDialogs.set(key,dialog);
+  dialog.addEventListener("render",()=>activateSealedBeastTrackerDialog(dialog,actor));
+  dialog.addEventListener("close",()=>sealedBeastTrackerDialogs.delete(key),{once:true});
+  await dialog.render({force:true}); return dialog;
+}
+
+function renderSealedBeastTrackerStrip(app,html) {
+  const actor=app.actor ?? app.document;
+  if (!getSealedBeastClassMod(actor)) return;
+  const root=getRenderRoot(app,html);
+  if (!root || root.querySelector("[data-sealed-beast-tracker-strip]")) return;
+  const target=root.querySelector(".jutsu-casting-overview") ?? root.querySelector(".sheet-body");
+  if (!target) return;
+  const state=readSealedBeastTracker(actor); const budget=getTwistedAwakeningBudget(actor);
+  const section=document.createElement("section"); section.className="n5eb-sealed-beast-tracker-strip"; section.dataset.sealedBeastTrackerStrip="true";
+  section.innerHTML=`<button type="button" class="tracker-title" data-action="open-sealed-beast-tracker"><i class="fas fa-paw"></i> Sealed Beast</button><div class="tracker-mini"><span>Twisted Chakra</span><strong>${state.twistedChakra}</strong></div><div class="tracker-mini"><span>Twisted HP</span><strong>${state.twistedHitPoints}/${state.twistedHitPointsMax}</strong></div><div class="tracker-mini"><span>Awakening</span><strong>${budget.remaining}/${budget.maximum}</strong></div><div class="tracker-mini status"><span>${state.frenzy?'Frenzy':state.dormantBeast?'Dormant Beast':state.transformationName}</span></div>`;
+  target.prepend(section);
+  section.querySelector('[data-action="open-sealed-beast-tracker"]')?.addEventListener("click",()=>openSealedBeastTracker(actor));
+}
+
+
+/* ------------------------------------------------------------ */
 /* Hooks                                                         */
 /* ------------------------------------------------------------ */
 
@@ -1485,13 +2076,19 @@ Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
     if (getTenseiganLevel(actor) >= 3) buttons.unshift({label:isCelestialModeActive(actor) ? "Celestial Mode Active" : "Celestial Mode",class:"n5eb-celestial-mode-toggle",icon:"fas fa-sun",onclick:() => toggleCelestialChakraMode(actor)});
     buttons.unshift({label:isTenseiganActive(actor) ? "Tenseigan Active" : "Tenseigan",class:"n5eb-tenseigan-toggle",icon:"fas fa-eye",onclick:() => toggleTenseigan(actor)});
   }
+  if (getSealedBeastClassMod(actor)) {
+    const tracker = readSealedBeastTracker(actor);
+    buttons.unshift({label:`TC ${tracker.twistedChakra} · THP ${tracker.twistedHitPoints}/${tracker.twistedHitPointsMax}`,class:"n5eb-sealed-beast-tracker-button",icon:"fas fa-gauge-high",onclick:() => openSealedBeastTracker(actor)});
+    buttons.unshift({label:tracker.dormantBeast ? "Dormant Beast Active" : "Dormant Beast",class:"n5eb-dormant-beast-toggle",icon:"fas fa-paw",onclick:() => toggleDormantBeast(actor)});
+  }
 });
 
 function renderClassModRuntime(app, html) {
   renderKamaTrackerStrip(app, html);
   renderTenseiganTrackerStrip(app, html);
+  renderSealedBeastTrackerStrip(app, html);
   const actor = app.actor ?? app.document;
-  if (!actor?.isOwner || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor))) return;
+  if (!actor?.isOwner || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor))) return;
   queueKamaTask(actor, () => syncClassModArtsForActor(actor)).catch(error =>
     console.error(`${MODULE_ID} | Failed to refresh Class Mod Arts values for ${actor.name}`, error)
   );
@@ -1500,18 +2097,26 @@ function renderClassModRuntime(app, html) {
 Hooks.on("renderActorSheet", renderClassModRuntime);
 Hooks.on("renderCharacterActorSheet", renderClassModRuntime);
 
+Hooks.on("preCreateItem", (item, data, options, userId) => {
+  if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id || item.parent?.documentName !== "Actor") return;
+  return validateSealedBeastTalentCreation(item);
+});
+
 Hooks.on("createItem", async (item, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id || item.parent?.documentName !== "Actor") return;
   const actor = item.parent;
   const isKamaClassMod = item.type === "classmod" && item.system?.identifier === "kama-seal";
   const isFtgClassMod = item.type === "classmod" && item.system?.identifier === "flying-thunder-god";
   const isTenseiganClassMod = item.type === "classmod" && item.system?.identifier === "tenseigan";
+  const isSealedBeastClassMod = item.type === "classmod" && item.system?.identifier === "sealed-beast-redux";
   const kamaRelevant = isKamaClassMod || getSealTypeKey(item) || getSealEvolutionKey(item) || ["divine-rewrite","resonance-disruption","kama-seal"].includes(item.system?.identifier);
   const tenseiganRelevant = isTenseiganClassMod || item.getFlag?.(MODULE_ID,"celestialArt") || item.getFlag?.(MODULE_ID,"tenseiganController") || item.getFlag?.(MODULE_ID,"celestialChakraModeController");
-  if (!kamaRelevant && !isFtgClassMod && !tenseiganRelevant && !getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor)) return;
+  const sealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
+  if (!kamaRelevant && !isFtgClassMod && !tenseiganRelevant && !sealedRelevant && !getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor)) return;
   await queueKamaTask(actor, async () => {
     if (getKamaClassMod(actor) && (kamaRelevant || isKamaClassMod)) await migrateKamaActor(actor);
     if (getTenseiganClassMod(actor) && (tenseiganRelevant || isTenseiganClassMod)) await migrateTenseiganActor(actor);
+    if (getSealedBeastClassMod(actor) && (sealedRelevant || isSealedBeastClassMod)) await migrateSealedBeastActor(actor);
     await syncClassModArtsForActor(actor);
   });
 });
@@ -1522,39 +2127,63 @@ Hooks.on("updateItem", async (item, changes, options, userId) => {
   const hasKama = Boolean(getKamaClassMod(actor));
   const hasFtg = Boolean(getFlyingThunderGodClassMod(actor));
   const hasTenseigan = Boolean(getTenseiganClassMod(actor));
-  if (!hasKama && !hasFtg && !hasTenseigan) return;
+  const hasSealedBeast = Boolean(getSealedBeastClassMod(actor));
+  if (!hasKama && !hasFtg && !hasTenseigan && !hasSealedBeast) return;
   const isKamaClassMod = item.type === "classmod" && item.system?.identifier === "kama-seal";
   const isFtgClassMod = item.type === "classmod" && item.system?.identifier === "flying-thunder-god";
   const isTenseiganClassMod = item.type === "classmod" && item.system?.identifier === "tenseigan";
+  const isSealedBeastClassMod = item.type === "classmod" && item.system?.identifier === "sealed-beast-redux";
   const isSeal = getSealTypeKey(item) || getSealEvolutionKey(item);
-  if (!isKamaClassMod && !isFtgClassMod && !isTenseiganClassMod && !isSeal) return;
+  const isSealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
+  if (!isKamaClassMod && !isFtgClassMod && !isTenseiganClassMod && !isSeal && !isSealedRelevant) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
     if (hasKama && (isKamaClassMod || isSeal)) { await syncSealEvolution(actor); await refreshKamaEffect(actor); }
     if (hasTenseigan && isTenseiganClassMod) { await ensureTenseiganTracker(actor); await refreshTenseiganEffects(actor); await syncCelestialStrainEffect(actor); }
+    if (hasSealedBeast && isSealedRelevant) await migrateSealedBeastActor(actor);
   });
 });
 
 Hooks.on("deleteItem", async (item, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id || item.parent?.documentName !== "Actor") return;
   const actor = item.parent;
-  if (!getKamaClassMod(actor)) return;
-  if (getSealTypeKey(item) || getSealEvolutionKey(item)) {
-    await queueKamaTask(actor, async () => {
-      await syncSealEvolution(actor);
-      await refreshKamaEffect(actor);
-    });
-  }
+  const kamaRelevant = getSealTypeKey(item) || getSealEvolutionKey(item);
+  const sealedRelevant = item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation") || item.system?.identifier === "sealed-beast-redux";
+  if (!kamaRelevant && !sealedRelevant) return;
+  await queueKamaTask(actor, async () => {
+    if (getKamaClassMod(actor) && kamaRelevant) { await syncSealEvolution(actor); await refreshKamaEffect(actor); }
+    if (getSealedBeastClassMod(actor)) { await ensureSealedBeastTracker(actor); await refreshSealedBeastEffects(actor); actor.sheet?.render?.(false); }
+  });
+});
+
+Hooks.on("preUpdateActor", (actor, changes, options, userId) => {
+  if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id || !getSealedBeastClassMod(actor)) return;
+  const proposed = foundry.utils.getProperty(changes,"system.attributes.hp.value");
+  if (proposed == null) return;
+  const current = Number(actor.system?.attributes?.hp?.value ?? 0);
+  const next = Number(proposed);
+  const state = readSealedBeastTracker(actor);
+  if (!state.transformation || !state.twistedHitPoints || next >= current) return;
+  const incoming = current - next;
+  const absorbed = Math.min(incoming,state.twistedHitPoints);
+  if (!absorbed) return;
+  foundry.utils.setProperty(changes,"system.attributes.hp.value",next+absorbed);
+  foundry.utils.setProperty(changes,`flags.${MODULE_ID}.${SEALED_BEAST_TRACKER_FLAG}`,normalizeSealedBeastTracker({...state,twistedHitPoints:state.twistedHitPoints-absorbed}));
+  ui.notifications.info(`${actor.name}'s Twisted Hit Points absorbed ${absorbed} damage.`);
 });
 
 Hooks.on("updateActor", async (actor, changes, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id) return;
-  if (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor)) return;
+  if (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor)) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
     if (getTenseiganClassMod(actor)) {
       const chakra = Number(actor.system?.attributes?.chakra?.value ?? 0);
       if (chakra <= 0 && isTenseiganActive(actor)) await toggleTenseigan(actor);
+    }
+    if (getSealedBeastClassMod(actor)) {
+      await checkSealedBeastAutomaticFrenzy(actor);
+      refreshOpenSealedBeastTracker(actor);
     }
   });
 });
@@ -1562,7 +2191,7 @@ Hooks.on("updateActor", async (actor, changes, options, userId) => {
 Hooks.on("createActiveEffect", async (effect, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id) return;
   const actor = getKamaActorFromEffect(effect);
-  if (!actor || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor))) return;
+  if (!actor || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor))) return;
   await queueKamaTask(actor, () => syncClassModArtsForActor(actor));
 });
 
@@ -1610,15 +2239,38 @@ Hooks.on("dnd5e.restCompleted", async (actor, result) => {
       });
     }
     if (getTenseiganClassMod(actor)) await applyTenseiganRest(actor,result?.type);
+    if (getSealedBeastClassMod(actor)) {
+      const state = readSealedBeastTracker(actor);
+      await updateSealedBeastTracker(actor,{rageTriggerUsed:false,lastProcessedTurn:""},{autoFrenzy:false});
+      if (result?.type === "full" && state.frenzy) await setSealedBeastFrenzy(actor,false);
+    }
   });
 });
 
-Hooks.on("dnd5e.preUseActivity", (activity) => checkTenseiganActivityUse(activity));
+Hooks.on("dnd5e.preUseActivity", (activity) => {
+  if (checkTenseiganActivityUse(activity) === false) return false;
+  return checkSealedBeastActivityUse(activity);
+});
 Hooks.on("dnd5e.postUseActivity", (activity) => {
   const actor = activity?.actor ?? getTenseiganActivityItem(activity)?.actor;
-  if (!actor || !getTenseiganClassMod(actor)) return;
-  queueKamaTask(actor, () => processTenseiganActivityUse(activity)).catch(error => {
-    console.error(`${MODULE_ID} | Failed to process Celestial Art use`, error);
-    ui.notifications.error(`Celestial Chakra tracking failed: ${error.message}`);
-  });
+  if (!actor) return;
+  if (getTenseiganClassMod(actor)) {
+    queueKamaTask(actor, () => processTenseiganActivityUse(activity)).catch(error => {
+      console.error(`${MODULE_ID} | Failed to process Celestial Art use`, error);
+      ui.notifications.error(`Celestial Chakra tracking failed: ${error.message}`);
+    });
+  }
+  if (getSealedBeastClassMod(actor)) {
+    queueKamaTask(actor, () => processSealedBeastActivityUse(activity)).catch(error => {
+      console.error(`${MODULE_ID} | Failed to process Vermillion Art use`, error);
+      ui.notifications.error(`Twisted Chakra tracking failed: ${error.message}`);
+    });
+  }
+});
+
+Hooks.on("updateCombat", async (combat, changes, options, userId) => {
+  if (!game.user.isGM || userId !== game.user.id || (!Object.hasOwn(changes,"turn") && !Object.hasOwn(changes,"round"))) return;
+  const actor = combat.combatant?.actor;
+  if (!actor || !getSealedBeastClassMod(actor)) return;
+  await queueKamaTask(actor, () => processSealedBeastTurn(actor,combat));
 });

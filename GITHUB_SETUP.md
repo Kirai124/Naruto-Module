@@ -1,43 +1,38 @@
-# GitHub release setup
+# GitHub update instructions — 0.9.0
 
-This repository is prepared for Foundry VTT updates.
+Repository: `https://github.com/Kirai124/Naruto-Module`
 
-## First release
+## Upload the new repository files
 
-1. Upload these files to the repository root.
-2. Commit and push them to the default branch.
-3. Create and push the tag `v0.8.2`.
+1. Extract `Naruto-Module-GitHub-0.9.0.zip` on your computer.
+2. In the GitHub repository, select **Add file → Upload files**.
+3. Upload `assets`, `data`, `scripts`, `styles`, `README.md`, `module.json`, and `GITHUB_SETUP.md` to the repository root.
+4. Commit directly to `main` with a message such as `Add Sealed Beast Redux v0.9.0`.
 
-Using GitHub Desktop:
+The hidden `.github` folder may not be visible in Windows. Verify that the repository contains `.github/workflows/release.yml`. If it does not:
 
-- Repository → Create Tag → `v0.8.2`
-- Push origin
+1. Select **Add file → Create new file**.
+2. Enter `.github/workflows/release.yml` as the file name.
+3. Copy the workflow from this package into the editor and commit it to `main`.
 
-Using Git:
+## Start the automatic release
 
-```bash
-git add .
-git commit -m "Release 0.8.2"
-git push
-git tag v0.8.2
-git push origin v0.8.2
-```
+1. Open **Releases**.
+2. Select **Draft a new release**.
+3. Choose **Create new tag** and enter `v0.9.0`.
+4. Target the `main` branch.
+5. Publish the release. Do not manually upload module assets.
 
-The GitHub Action creates a Release containing:
+The tag triggers the workflow. After it finishes, the release Assets must include:
 
 - `module.json`
-- `n5eb-classmod-library-0.8.2.zip`
+- `n5eb-classmod-library-0.9.0.zip`
+- GitHub's two automatic source-code archives
+
+## Repair or rerun the release
+
+Open **Actions → Build Foundry Release → Run workflow**, enter `v0.9.0`, and run it. This recreates or replaces the two Foundry release assets from the current `main` branch.
 
 ## Foundry manifest URL
 
-```text
-https://github.com/Kirai124/Naruto-Module/releases/latest/download/module.json
-```
-
-## Future releases
-
-1. Update `version` and `download` in `module.json`.
-2. Commit and push.
-3. Push a matching tag, for example `v0.8.3`.
-
-The tag must exactly match the version with a leading `v`.
+`https://github.com/Kirai124/Naruto-Module/releases/latest/download/module.json`
