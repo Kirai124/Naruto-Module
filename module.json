@@ -1,0 +1,38 @@
+{
+  "id": "n5eb-classmod-library",
+  "title": "N5eB Class Mod Library",
+  "description": "Creates a world compendium containing fully prepared N5eB Class Mods, including Flying Thunder God, Kāma Seal, and Tenseigan with Actor-based automation and tracking.",
+  "version": "0.8.2",
+  "authors": [
+    {
+      "name": "Kirai124",
+      "url": "https://github.com/Kirai124"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "n5eb",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.1.0",
+          "verified": "3.1.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/main.css"
+  ],
+  "url": "https://github.com/Kirai124/Naruto-Module",
+  "manifest": "https://github.com/Kirai124/Naruto-Module/releases/latest/download/module.json",
+  "download": "https://github.com/Kirai124/Naruto-Module/releases/download/v0.8.2/n5eb-classmod-library-0.8.2.zip"
+}
