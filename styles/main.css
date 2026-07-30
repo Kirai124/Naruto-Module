@@ -997,3 +997,488 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Edo Tensei 0.13.2: tier picker + clearer dedicated creators */
+.n5eb-edo-tier-picker-window .window-content,
+.n5eb-edo-creator-window .window-content {
+  background:
+    radial-gradient(circle at top right, rgba(43, 92, 148, 0.16), transparent 34%),
+    linear-gradient(180deg, #09111c 0%, #07101a 100%);
+}
+
+.n5eb-edo-tier-picker-window .dialog-buttons,
+.n5eb-edo-creator-window .dialog-buttons {
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.n5eb-edo-tier-picker-window .dialog-buttons button,
+.n5eb-edo-creator-window .dialog-buttons button {
+  min-height: 38px;
+  border-radius: 9px;
+}
+
+.n5eb-edo-creator-window .dialog-buttons button[data-action="create"] {
+  border-color: color-mix(in srgb, var(--edo-accent, #4fa0ff) 70%, #fff 10%);
+  background: color-mix(in srgb, var(--edo-accent, #4fa0ff) 26%, #0b1420);
+  font-weight: 700;
+}
+
+.n5eb-edo-tier-picker {
+  --picker-text: #f5f7fb;
+  --picker-soft: rgba(255,255,255,0.68);
+  display: grid;
+  gap: 16px;
+  color: var(--picker-text);
+}
+
+.n5eb-edo-tier-picker .tier-picker-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: start;
+  padding: 18px;
+  border: 1px solid rgba(130, 176, 235, 0.16);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(17, 31, 49, 0.98), rgba(10, 20, 32, 0.98));
+}
+
+.n5eb-edo-tier-picker .eyebrow {
+  margin: 0 0 5px;
+  color: #d9993b;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.n5eb-edo-tier-picker h1 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.n5eb-edo-tier-picker p {
+  margin: 0;
+  color: var(--picker-soft);
+}
+
+.n5eb-edo-tier-picker .tier-picker-status {
+  min-width: 150px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 6px 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(4, 10, 17, 0.62);
+}
+
+.n5eb-edo-tier-picker .tier-picker-status span {
+  color: var(--picker-soft);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.n5eb-edo-tier-picker .tier-picker-status strong {
+  text-align: right;
+  color: #fff;
+}
+
+.n5eb-edo-tier-picker .tier-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.n5eb-edo-tier-picker .edo-tier-card {
+  --tier-accent: #4fa0ff;
+  --tier-glow: rgba(79,160,255,0.2);
+  appearance: none;
+  min-height: 360px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding: 18px;
+  text-align: left;
+  border: 1px solid color-mix(in srgb, var(--tier-accent) 44%, rgba(255,255,255,0.08));
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 85% 6%, var(--tier-glow), transparent 34%),
+    linear-gradient(180deg, rgba(16, 29, 45, 0.98), rgba(8, 17, 28, 0.98));
+  color: #fff;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+.n5eb-edo-tier-picker .edo-tier-card.tier-standard {
+  --tier-accent: #5aa7ff;
+  --tier-glow: rgba(90,167,255,0.2);
+}
+
+.n5eb-edo-tier-picker .edo-tier-card.tier-elite {
+  --tier-accent: #e39a37;
+  --tier-glow: rgba(227,154,55,0.22);
+}
+
+.n5eb-edo-tier-picker .edo-tier-card.tier-solo {
+  --tier-accent: #df5d6a;
+  --tier-glow: rgba(223,93,106,0.22);
+}
+
+.n5eb-edo-tier-picker .edo-tier-card:not(:disabled):hover {
+  transform: translateY(-3px);
+  border-color: var(--tier-accent);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3), 0 0 0 1px var(--tier-glow);
+}
+
+.n5eb-edo-tier-picker .edo-tier-card:disabled {
+  cursor: not-allowed;
+  filter: grayscale(.5);
+  opacity: .5;
+}
+
+.n5eb-edo-tier-picker .tier-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  border: 1px solid color-mix(in srgb, var(--tier-accent) 55%, transparent);
+  background: color-mix(in srgb, var(--tier-accent) 17%, #0a1522);
+  color: var(--tier-accent);
+  font-size: 24px;
+}
+
+.n5eb-edo-tier-picker .tier-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.n5eb-edo-tier-picker .tier-kicker {
+  color: var(--tier-accent);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.n5eb-edo-tier-picker .tier-copy > strong {
+  font-size: 23px;
+  line-height: 1.1;
+}
+
+.n5eb-edo-tier-picker .tier-copy > em {
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.n5eb-edo-tier-picker .tier-description {
+  color: var(--picker-soft);
+  line-height: 1.45;
+}
+
+.n5eb-edo-tier-picker .tier-details {
+  display: grid;
+  gap: 7px;
+  padding-top: 4px;
+}
+
+.n5eb-edo-tier-picker .tier-details > span,
+.n5eb-edo-tier-picker .tier-lock {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+}
+
+.n5eb-edo-tier-picker .tier-details i {
+  color: var(--tier-accent);
+}
+
+.n5eb-edo-tier-picker .tier-lock {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 9px;
+  background: rgba(135, 25, 34, 0.34);
+  color: #ffd3d7;
+}
+
+.n5eb-edo-tier-picker .tier-arrow {
+  justify-self: end;
+  color: var(--tier-accent);
+  font-size: 18px;
+}
+
+.n5eb-edo-tier-picker .tier-picker-note {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  color: var(--picker-soft);
+  font-size: 12px;
+}
+
+.n5eb-edo-creator-shell.tier-standard,
+.n5eb-edo-creator-window.tier-standard {
+  --edo-accent: #5aa7ff;
+  --edo-accent-soft: rgba(90,167,255,.18);
+}
+
+.n5eb-edo-creator-shell.tier-elite,
+.n5eb-edo-creator-window.tier-elite {
+  --edo-accent: #e39a37;
+  --edo-accent-soft: rgba(227,154,55,.18);
+}
+
+.n5eb-edo-creator-shell.tier-solo,
+.n5eb-edo-creator-window.tier-solo {
+  --edo-accent: #df5d6a;
+  --edo-accent-soft: rgba(223,93,106,.18);
+}
+
+.n5eb-edo-creator-shell {
+  grid-template-columns: minmax(560px, 1.08fr) minmax(420px, .92fr);
+  align-items: start;
+}
+
+.n5eb-edo-creator-shell .creator-heading {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.n5eb-edo-creator-shell .creator-tier-icon {
+  width: 58px;
+  min-width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  border: 1px solid color-mix(in srgb, var(--edo-accent) 55%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 16%, #0a1522);
+  color: var(--edo-accent);
+  font-size: 23px;
+}
+
+.n5eb-edo-creator-shell .creator-counter {
+  border-color: color-mix(in srgb, var(--edo-accent) 45%, transparent);
+}
+
+.n5eb-edo-creator-shell .creator-counter strong,
+.n5eb-edo-creator-shell .creator-card > header > span,
+.n5eb-edo-creator-shell .preview-block > header > strong {
+  color: var(--edo-accent);
+}
+
+.n5eb-edo-creator-shell .creator-tier-banner,
+.n5eb-edo-creator-shell .preview-tier-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 8px;
+}
+
+.n5eb-edo-creator-shell .creator-tier-banner > span,
+.n5eb-edo-creator-shell .preview-tier-summary > span {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--edo-accent) 28%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 8%, rgba(8,17,28,.9));
+  color: var(--edo-soft);
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.n5eb-edo-creator-shell .creator-tier-banner strong,
+.n5eb-edo-creator-shell .preview-tier-summary strong {
+  color: #fff;
+  font-size: 17px;
+}
+
+.n5eb-edo-creator-shell .creator-card {
+  padding: 16px;
+}
+
+.n5eb-edo-creator-shell .creator-card > header {
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.n5eb-edo-creator-shell .living-modifier.is-hidden {
+  display: none;
+}
+
+.n5eb-edo-creator-shell .selection-card {
+  min-height: 0;
+}
+
+.n5eb-edo-creator-shell .creator-check-grid.saves {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 8px;
+}
+
+.n5eb-edo-creator-shell .creator-check-list {
+  display: grid;
+  gap: 7px;
+  max-height: 300px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.n5eb-edo-creator-shell .creator-check-option {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  background: rgba(4,10,17,.62);
+  cursor: pointer;
+  transition: border-color .12s ease, background .12s ease, transform .12s ease;
+}
+
+.n5eb-edo-creator-shell .creator-check-option:hover:not(.disabled) {
+  border-color: color-mix(in srgb, var(--edo-accent) 55%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 7%, rgba(4,10,17,.78));
+}
+
+.n5eb-edo-creator-shell .creator-check-option:has(input:checked) {
+  border-color: var(--edo-accent);
+  background: color-mix(in srgb, var(--edo-accent) 12%, rgba(4,10,17,.82));
+}
+
+.n5eb-edo-creator-shell .creator-check-option.disabled {
+  opacity: .42;
+  cursor: not-allowed;
+}
+
+.n5eb-edo-creator-shell .creator-check-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.n5eb-edo-creator-shell .check-box {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.04);
+  color: transparent;
+}
+
+.n5eb-edo-creator-shell .creator-check-option:has(input:checked) .check-box {
+  border-color: var(--edo-accent);
+  background: var(--edo-accent);
+  color: #07101a;
+}
+
+.n5eb-edo-creator-shell .check-copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.n5eb-edo-creator-shell .check-copy strong {
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.n5eb-edo-creator-shell .check-copy small {
+  color: var(--edo-soft);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.n5eb-edo-creator-shell .check-badge {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--edo-accent) 12%, rgba(255,255,255,.04));
+  color: var(--edo-accent);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.n5eb-edo-creator-shell .creator-right {
+  position: sticky;
+  top: 0;
+  max-height: calc(100vh - 170px);
+  overflow: auto;
+}
+
+.n5eb-edo-creator-shell .creator-preview-card {
+  min-height: auto;
+  border-color: color-mix(in srgb, var(--edo-accent) 25%, var(--edo-line));
+}
+
+.n5eb-edo-creator-shell .preview-hero {
+  border-color: color-mix(in srgb, var(--edo-accent) 28%, transparent);
+  background:
+    radial-gradient(circle at 90% 5%, var(--edo-accent-soft), transparent 42%),
+    linear-gradient(180deg, rgba(16,30,48,.98), rgba(10,20,31,.98));
+}
+
+.n5eb-edo-creator-shell .hero-badge {
+  border-color: color-mix(in srgb, var(--edo-accent) 50%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 45%, #132138);
+}
+
+.n5eb-edo-creator-shell .chip-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.n5eb-edo-creator-shell .chip {
+  border-color: color-mix(in srgb, var(--edo-accent) 26%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 8%, transparent);
+}
+
+@media (max-width: 1100px) {
+  .n5eb-edo-tier-picker .tier-card-grid {
+    grid-template-columns: 1fr;
+  }
+  .n5eb-edo-tier-picker .edo-tier-card {
+    min-height: auto;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+  }
+  .n5eb-edo-creator-shell {
+    grid-template-columns: 1fr;
+  }
+  .n5eb-edo-creator-shell .creator-right {
+    position: static;
+    max-height: none;
+    order: -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .n5eb-edo-tier-picker .tier-picker-header,
+  .n5eb-edo-creator-shell .creator-grid-main,
+  .n5eb-edo-creator-shell .creator-check-grid.saves,
+  .n5eb-edo-creator-shell .creator-tier-banner,
+  .n5eb-edo-creator-shell .preview-tier-summary {
+    grid-template-columns: 1fr;
+  }
+  .n5eb-edo-creator-shell .ability-grid.modern {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}

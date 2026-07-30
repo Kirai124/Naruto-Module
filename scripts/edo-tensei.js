@@ -21,6 +21,26 @@ const TIER_DATA = Object.freeze({
   elite: {label:"Elite", hp:2, slots:2, dc:2, dna:1, eliteActions:1, extraSkills:3, chargeCost:2},
   solo: {label:"Solo", hp:3, slots:3, dc:4, dna:2, eliteActions:2, extraSkills:5, chargeCost:3}
 });
+const TIER_UI = Object.freeze({
+  standard: {
+    label:"Normal Edo Tensei", shortLabel:"Normal", icon:"fa-solid fa-user",
+    tagline:"Der klassische wiederbelebte Shinobi.",
+    description:"Ein vollständiger Edo Tensei ohne Elite- oder Solo-Modifikatoren. Ideal für einzelne Gefolgsleute und reguläre Beschwörungen.",
+    details:["Normale HP und Jutsu Slots", "5 Creature Skills", "Keine Elite Actions"]
+  },
+  elite: {
+    label:"Elite Edo Tensei", shortLabel:"Elite", icon:"fa-solid fa-user-shield",
+    tagline:"Stärker, zäher und selbstständiger.",
+    description:"Für besonders mächtige Seelen oder Anführer. Elite Edo Tensei erhalten verdoppelte Ressourcen und eine zusätzliche Aktion.",
+    details:["Doppelte HP und Jutsu Slots", "8 Creature Skills", "1 Elite Action"]
+  },
+  solo: {
+    label:"Solo Edo Tensei", shortLabel:"Solo", icon:"fa-solid fa-crown",
+    tagline:"Eine einzelne Beschwörung als Bossgegner.",
+    description:"Die mächtigste Variante. Nur für S-Rank-Seelen und erst verfügbar, sobald dein Edo-Tensei-Class-Mod S-Rank beherrscht.",
+    details:["Dreifache HP und Jutsu Slots", "10 Creature Skills", "2 Elite Actions"]
+  }
+});
 const ROLE_LABELS = Object.freeze({caster:"Caster", controller:"Controller", defender:"Defender", lurker:"Lurker", striker:"Striker", supporter:"Supporter"});
 const dialogs = new Map();
 const sheetObservers = new WeakMap();
@@ -226,6 +246,7 @@ function selectedValues(form, name) {
   const field = form?.elements?.namedItem?.(name);
   if (!field) return [];
   if (field instanceof RadioNodeList) return Array.from(field).filter(el => el.checked).map(el => el.value);
+  if (field instanceof HTMLInputElement && ["checkbox","radio"].includes(field.type)) return field.checked ? [field.value] : [];
   if (field.selectedOptions) return Array.from(field.selectedOptions).map(option => option.value);
   return field.value ? [field.value] : [];
 }
@@ -242,9 +263,77 @@ function creatorFormData(form) {
   data.blessings = selectedValues(form, "blessings");
   return data;
 }
-function creatorChoiceChips(values, labels, fallback = "None selected") {
+function creatorChoiceChips(values, labels, fallback = "Nichts ausgewählt") {
   if (!values?.length) return `<span class="empty">${esc(fallback)}</span>`;
   return values.map(value => `<span class="chip">${esc(labels?.[value] ?? value)}</span>`).join("");
+}
+function tierAvailable(actor, tier) {
+  if (tier === "solo") return classModLevel(actor) >= 5;
+  return Boolean(TIER_DATA[tier]);
+}
+function tierChooserHtml(actor) {
+  const cmLevel = classModLevel(actor);
+  const state = readTracker(actor);
+  const cards = Object.entries(TIER_UI).map(([tier, ui]) => {
+    const data = TIER_DATA[tier];
+    const available = tierAvailable(actor, tier);
+    const lockText = tier === "solo" && !available ? `Benötigt Class-Mod-Level 5 · Aktuell ${cmLevel}` : "";
+    return `<button type="button" class="edo-tier-card tier-${tier}" data-edo-tier="${tier}" ${available ? "" : "disabled"}>
+      <span class="tier-icon"><i class="${ui.icon}"></i></span>
+      <span class="tier-copy">
+        <span class="tier-kicker">${esc(ui.shortLabel)} · ${data.chargeCost} Unholy Charge${data.chargeCost === 1 ? "" : "s"}</span>
+        <strong>${esc(ui.label)}</strong>
+        <em>${esc(ui.tagline)}</em>
+        <span class="tier-description">${esc(ui.description)}</span>
+        <span class="tier-details">${ui.details.map(detail => `<span><i class="fas fa-check"></i>${esc(detail)}</span>`).join("")}</span>
+        ${lockText ? `<span class="tier-lock"><i class="fas fa-lock"></i>${esc(lockText)}</span>` : ""}
+      </span>
+      <span class="tier-arrow"><i class="fas fa-chevron-right"></i></span>
+    </button>`;
+  }).join("");
+  return `<div class="n5eb-edo-tier-picker">
+    <header class="tier-picker-header">
+      <div>
+        <p class="eyebrow">Edo Tensei Creator</p>
+        <h1>Welche Art möchtest du erstellen?</h1>
+        <p>Wähle zuerst die Stärke der Beschwörung. Danach öffnet sich ein eigener, passend berechneter Creator.</p>
+      </div>
+      <div class="tier-picker-status">
+        <span>Class Mod</span><strong>Level ${cmLevel}</strong>
+        <span>Unholy Charges</span><strong>${state.chargesCurrent}/${state.chargesMax}</strong>
+      </div>
+    </header>
+    <section class="tier-card-grid">${cards}</section>
+    <footer class="tier-picker-note"><i class="fas fa-circle-info"></i><span>Normal, Elite und Solo verwenden unterschiedliche HP-, Jutsu-Slot-, Skill- und Action-Berechnungen.</span></footer>
+  </div>`;
+}
+async function chooseEdoTier(actor) {
+  return new Promise(resolve => {
+    let settled = false;
+    const finish = value => {
+      if (settled) return;
+      settled = true;
+      resolve(value);
+    };
+    const dialog = new foundry.applications.api.DialogV2({
+      window:{title:`Edo Tensei auswählen — ${actor.name}`,icon:"fa-solid fa-skull",resizable:true},
+      position:{width:920,height:"auto"},
+      classes:["n5eb-edo-tier-picker-window"],
+      content:tierChooserHtml(actor),
+      buttons:[{action:"cancel",label:"Abbrechen",icon:"fa-solid fa-xmark",callback:()=>finish(null)}],
+      rejectClose:false
+    });
+    dialog.addEventListener("render",()=>{
+      dialog.element?.querySelectorAll?.("[data-edo-tier]").forEach(button => button.addEventListener("click",async()=>{
+        const tier = button.dataset.edoTier;
+        if (!tierAvailable(actor,tier)) return;
+        finish(tier);
+        await dialog.close();
+      }));
+    });
+    dialog.addEventListener("close",()=>finish(null),{once:true});
+    dialog.render({force:true});
+  });
 }
 function creatorPreviewHtml(actor, formData, blessingDocs) {
   const cmLevel = classModLevel(actor);
@@ -252,82 +341,88 @@ function creatorPreviewHtml(actor, formData, blessingDocs) {
   const chosenBlessings = (formData.blessings ?? []).map(id => blessingMap.get(id)).filter(Boolean);
   const saveLabels = Object.fromEntries(optionsFromConfig(CONFIG.DND5E.abilities));
   const skillLabels = Object.fromEntries(optionsFromConfig(CONFIG.DND5E.skills));
+  const tier = String(formData.tier ?? "standard").toLowerCase();
+  const tierData = TIER_DATA[tier] ?? TIER_DATA.standard;
+  const tierUi = TIER_UI[tier] ?? TIER_UI.standard;
+  const rank = String(formData.rank ?? "d").toLowerCase();
+  const role = String(formData.role ?? "striker").toLowerCase();
+  const maxSkills = 5 + tierData.extraSkills;
+  const blessingCost = chosenBlessings.reduce((sum, doc) => sum + effectiveBlessingCost(doc, rank), 0);
 
   let calc = null;
-  let error = "";
+  const errors = [];
+  if ((formData.saves ?? []).length > 3) errors.push("Es dürfen höchstens 3 Saving Throws ausgewählt werden.");
+  if ((formData.skills ?? []).length > maxSkills) errors.push(`${tierUi.shortLabel} Edo Tensei dürfen höchstens ${maxSkills} Creature Skills besitzen.`);
+  if (blessingCost > 5) errors.push(`Die ausgewählten Unholy Blessings kosten ${blessingCost}; maximal erlaubt sind 5.`);
   try {
     calc = calculateEdoTensei({...formData, classModLevel: cmLevel}, chosenBlessings);
   } catch (err) {
-    error = err?.message ?? String(err);
+    errors.push(err?.message ?? String(err));
   }
+  const error = errors[0] ?? "";
 
-  const headerName = String(formData.name || "Edo Tensei").trim() || "Edo Tensei";
-  const rank = String(formData.rank ?? "d").toLowerCase();
-  const tier = String(formData.tier ?? "standard").toLowerCase();
-  const role = String(formData.role ?? "striker").toLowerCase();
-  const tierLabel = TIER_DATA[tier]?.label ?? tier;
+  const headerName = String(formData.name || tierUi.label).trim() || tierUi.label;
   const rankLabel = RANK_DATA[rank]?.label ?? rank;
-  const blessingCost = chosenBlessings.reduce((sum, doc) => sum + effectiveBlessingCost(doc, rank), 0);
-
   const stat = (label, value, hint = "") => `<div class="preview-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong>${hint ? `<small>${esc(hint)}</small>` : ""}</div>`;
   const abilityCard = (key, value) => `<div class="ability-card"><span>${key.toUpperCase()}</span><strong>${esc(value ?? "—")}</strong></div>`;
 
   const statsHtml = calc ? [
-    stat("HP", calc.hitPoints),
+    stat("HP", calc.hitPoints, `${tierData.hp}× Basis`),
     stat("AC", calc.armorClass),
-    stat("Speed", `${calc.speed} ft.`),
-    stat("Level", calc.level),
-    stat("Jutsu Slots", calc.jutsuSlots),
+    stat("Bewegung", `${calc.speed} ft.`),
+    stat("Stufe", calc.level, rankLabel),
+    stat("Jutsu Slots", calc.jutsuSlots, `${tierData.slots}× Basis`),
     stat("Summon DC", calc.automaticChecks ? "Auto" : calc.summoningDC)
   ].join("") : [
-    stat("HP", "—"), stat("AC", "—"), stat("Speed", "—"), stat("Level", RANK_DATA[rank]?.level ?? "—"), stat("Jutsu Slots", "—"), stat("Summon DC", "—")
+    stat("HP", "—"), stat("AC", "—"), stat("Bewegung", "—"), stat("Stufe", RANK_DATA[rank]?.level ?? "—"), stat("Jutsu Slots", "—"), stat("Summon DC", "—")
   ].join("");
 
   const abilityHtml = ["str","dex","con","int","wis","cha"].map(key => abilityCard(key, formData[key] ?? 16)).join("");
   const summaryHtml = [
-    stat("DNA DC", calc ? (calc.automaticChecks ? "Auto" : calc.dnaDC) : "—", "acquisition"),
-    stat("Blessing Cost", `${blessingCost}/5`, `${chosenBlessings.length} selected`),
-    stat("Elite Actions", calc ? calc.eliteActions : 0),
-    stat("Extra Skills", calc ? calc.extraSkills : 0),
-    stat("Role", ROLE_LABELS[role] ?? role),
-    stat("Vessel", String(formData.vessel ?? "intact").replace(/^./, c => c.toUpperCase()))
+    stat("DNA DC", calc ? (calc.automaticChecks ? "Auto" : calc.dnaDC) : "—"),
+    stat("Blessings", `${blessingCost}/5`, `${chosenBlessings.length} gewählt`),
+    stat("Elite Actions", calc ? calc.eliteActions : tierData.eliteActions),
+    stat("Skills", `${(formData.skills ?? []).length}/${maxSkills}`),
+    stat("Rolle", ROLE_LABELS[role] ?? role),
+    stat("Kosten", `${tierData.chargeCost} Charge${tierData.chargeCost === 1 ? "" : "s"}`)
   ].join("");
 
   const blessingList = chosenBlessings.length
-    ? chosenBlessings.map(doc => `<div class="preview-list-row"><strong>${esc(doc.name)}</strong><span>Cost ${effectiveBlessingCost(doc, rank)}</span></div>`).join("")
-    : `<div class="preview-list-row empty"><span>No Unholy Blessings selected.</span></div>`;
+    ? chosenBlessings.map(doc => `<div class="preview-list-row"><strong>${esc(doc.name)}</strong><span>Kosten ${effectiveBlessingCost(doc, rank)}</span></div>`).join("")
+    : `<div class="preview-list-row empty"><span>Keine Unholy Blessings ausgewählt.</span></div>`;
 
-  const infoHtml = `
-    <div class="preview-meta-chips">${creatorChoiceChips(formData.saves ?? [], saveLabels, "No saving throws")}</div>
-    <div class="preview-meta-chips">${creatorChoiceChips((formData.skills ?? []).slice(0, 10), skillLabels, "No creature skills")}</div>`;
-
-  return `
-    <div class="creator-preview-card" data-preview-valid="${error ? 0 : 1}">
-      <section class="preview-hero">
-        <div>
-          <p class="eyebrow">Preview · values are editable</p>
-          <h2>${esc(headerName)}</h2>
-          <div class="subline">${esc(String(formData.clan || "Unaligned"))} · ${esc(rankLabel)} · ${esc(tierLabel)} · ${esc(ROLE_LABELS[role] ?? role)}</div>
-        </div>
-        <div class="hero-badge"><i class="fas fa-skull"></i><span>CM ${cmLevel}</span></div>
-      </section>
-      ${error ? `<div class="preview-error"><i class="fas fa-triangle-exclamation"></i><span>${esc(error)}</span></div>` : ""}
-      <section class="preview-stat-grid">${statsHtml}</section>
-      <section class="preview-ability-grid">${abilityHtml}</section>
-      <section class="preview-summary-grid">${summaryHtml}</section>
-      <section class="preview-block">
-        <header><span>Saving Throws</span><strong>${(formData.saves ?? []).length}/3</strong></header>
-        ${creatorChoiceChips(formData.saves ?? [], saveLabels, "No saving throws selected")}
-      </section>
-      <section class="preview-block">
-        <header><span>Creature Skills</span><strong>${(formData.skills ?? []).length}</strong></header>
-        ${creatorChoiceChips(formData.skills ?? [], skillLabels, "No creature skills selected")}
-      </section>
-      <section class="preview-block preview-list-block">
-        <header><span>Unholy Blessings</span><strong>${chosenBlessings.length}</strong></header>
-        <div class="preview-list">${blessingList}</div>
-      </section>
-    </div>`;
+  return `<div class="creator-preview-card tier-${tier}" data-preview-valid="${error ? 0 : 1}">
+    <section class="preview-hero">
+      <div>
+        <p class="eyebrow">Live-Vorschau · ${esc(tierUi.shortLabel)}</p>
+        <h2>${esc(headerName)}</h2>
+        <div class="subline">${esc(String(formData.clan || "Kein Clan"))} · ${esc(rankLabel)} · ${esc(ROLE_LABELS[role] ?? role)}</div>
+      </div>
+      <div class="hero-badge"><i class="${tierUi.icon}"></i><span>${esc(tierUi.shortLabel)}</span></div>
+    </section>
+    <section class="preview-tier-summary">
+      <span><strong>${tierData.hp}×</strong> HP</span>
+      <span><strong>${tierData.slots}×</strong> Slots</span>
+      <span><strong>${tierData.eliteActions}</strong> Elite Actions</span>
+      <span><strong>${maxSkills}</strong> Skills</span>
+    </section>
+    ${error ? `<div class="preview-error"><i class="fas fa-triangle-exclamation"></i><span>${esc(error)}</span></div>` : ""}
+    <section class="preview-stat-grid">${statsHtml}</section>
+    <section class="preview-ability-grid">${abilityHtml}</section>
+    <section class="preview-summary-grid">${summaryHtml}</section>
+    <section class="preview-block">
+      <header><span>Saving Throws</span><strong>${(formData.saves ?? []).length}/3</strong></header>
+      <div class="chip-wrap">${creatorChoiceChips(formData.saves ?? [], saveLabels, "Keine Saving Throws ausgewählt")}</div>
+    </section>
+    <section class="preview-block">
+      <header><span>Creature Skills</span><strong>${(formData.skills ?? []).length}/${maxSkills}</strong></header>
+      <div class="chip-wrap">${creatorChoiceChips(formData.skills ?? [], skillLabels, "Keine Creature Skills ausgewählt")}</div>
+    </section>
+    <section class="preview-block preview-list-block">
+      <header><span>Unholy Blessings</span><strong>${blessingCost}/5</strong></header>
+      <div class="preview-list">${blessingList}</div>
+    </section>
+  </div>`;
 }
 function updateCreatorPreview(dialog, actor, blessingDocs) {
   const root = dialog.element;
@@ -337,95 +432,176 @@ function updateCreatorPreview(dialog, actor, blessingDocs) {
   if (!form || !preview) return;
   const data = creatorFormData(form);
   preview.innerHTML = creatorPreviewHtml(actor, data, blessingDocs);
+  const tier = String(data.tier ?? "standard");
+  const blessingMap = new Map(blessingDocs.map(doc => [doc.id, doc]));
+  const selectedBlessings = (data.blessings ?? []).map(id=>blessingMap.get(id)).filter(Boolean);
+  const currentRank = String(data.rank ?? "d");
+  const blessingCost = selectedBlessings.reduce((sum,doc)=>sum+effectiveBlessingCost(doc,currentRank),0);
+  root.querySelectorAll?.("[data-blessing-id]").forEach(row => {
+    const doc = blessingMap.get(row.dataset.blessingId);
+    const badge = row.querySelector(".check-badge");
+    if (doc && badge) badge.textContent = `${effectiveBlessingCost(doc,currentRank)} P`;
+  });
+  root.querySelector?.("[data-save-count]")?.replaceChildren(document.createTextNode(`${data.saves.length}/3`));
+  root.querySelector?.("[data-skill-count]")?.replaceChildren(document.createTextNode(`${data.skills.length}/${5 + (TIER_DATA[tier]?.extraSkills ?? 0)}`));
+  root.querySelector?.("[data-blessing-count]")?.replaceChildren(document.createTextNode(`${blessingCost}/5`));
   const valid = preview.querySelector('[data-preview-valid="1"]');
   if (createButton) createButton.disabled = !Boolean(valid);
+}
+function enforceCreatorChoiceLimit(form, blessingDocs, event) {
+  const target = event?.target;
+  if (!(target instanceof HTMLInputElement) || target.type !== "checkbox" || !target.checked) return;
+  const data = creatorFormData(form);
+  const tier = String(data.tier ?? "standard");
+  if (target.name === "saves" && data.saves.length > 3) {
+    target.checked = false;
+    ui.notifications.warn("Du kannst höchstens 3 Saving Throws auswählen.");
+  }
+  if (target.name === "skills") {
+    const max = 5 + (TIER_DATA[tier]?.extraSkills ?? 0);
+    if (data.skills.length > max) {
+      target.checked = false;
+      ui.notifications.warn(`${TIER_UI[tier]?.shortLabel ?? "Dieses"} Edo Tensei kann höchstens ${max} Creature Skills besitzen.`);
+    }
+  }
+  if (target.name === "blessings") {
+    const rank = String(form.elements.namedItem("rank")?.value ?? "d");
+    const map = new Map(blessingDocs.map(doc => [doc.id,doc]));
+    const selected = selectedValues(form,"blessings").map(id=>map.get(id)).filter(Boolean);
+    const cost = selected.reduce((sum,doc)=>sum+effectiveBlessingCost(doc,rank),0);
+    if (cost > 5) {
+      target.checked = false;
+      ui.notifications.warn("Unholy Blessings dürfen zusammen höchstens 5 Punkte kosten.");
+    }
+  }
 }
 function activateCreator(dialog, actor, blessingDocs) {
   const root = dialog.element;
   const form = root?.querySelector?.("[data-edo-creator-form]");
   if (!form) return;
-  const refresh = () => updateCreatorPreview(dialog, actor, blessingDocs);
+  const refresh = () => {
+    const living = form.elements.namedItem("vessel")?.value === "living";
+    form.querySelector(".living-modifier")?.classList.toggle("is-hidden", !living);
+    updateCreatorPreview(dialog, actor, blessingDocs);
+  };
   form.addEventListener("input", refresh);
-  form.addEventListener("change", refresh);
+  form.addEventListener("change",event=>{
+    enforceCreatorChoiceLimit(form,blessingDocs,event);
+    refresh();
+  });
   refresh();
 }
-function creatorHtml(actor, blessingDocs) {
+function checklistOption({name,value,label,subtext="",disabled=false,badge="",dataAttributes=""}) {
+  return `<label class="creator-check-option ${disabled ? "disabled" : ""}" ${dataAttributes}>
+    <input type="checkbox" name="${esc(name)}" value="${esc(value)}" ${disabled ? "disabled" : ""}>
+    <span class="check-box"><i class="fas fa-check"></i></span>
+    <span class="check-copy"><strong>${esc(label)}</strong>${subtext ? `<small>${esc(subtext)}</small>` : ""}</span>
+    ${badge ? `<span class="check-badge">${esc(badge)}</span>` : ""}
+  </label>`;
+}
+function creatorHtml(actor, blessingDocs, fixedTier) {
   const cmLevel = classModLevel(actor);
-  const rankOptions = RANK_ORDER.slice(0, cmLevel).map(rank => `<option value="${rank}">${RANK_DATA[rank].label} · Level ${RANK_DATA[rank].level}</option>`).join("");
+  const tier = String(fixedTier ?? "standard");
+  const tierData = TIER_DATA[tier] ?? TIER_DATA.standard;
+  const tierUi = TIER_UI[tier] ?? TIER_UI.standard;
+  const rankKeys = tier === "solo" ? ["s"] : RANK_ORDER.slice(0, cmLevel);
+  const rankOptions = rankKeys.map(rank => `<option value="${rank}">${RANK_DATA[rank].label} · Level ${RANK_DATA[rank].level}</option>`).join("");
   const abilities = optionsFromConfig(CONFIG.DND5E.abilities).map(([key,label]) => `<option value="${key}">${esc(label)}</option>`).join("");
-  const skills = optionsFromConfig(CONFIG.DND5E.skills).map(([key,label]) => `<option value="${key}">${esc(label)}</option>`).join("");
-  const saves = optionsFromConfig(CONFIG.DND5E.abilities).map(([key,label]) => `<option value="${key}">${esc(label)}</option>`).join("");
+  const saveOptions = optionsFromConfig(CONFIG.DND5E.abilities).map(([key,label]) => checklistOption({name:"saves",value:key,label,subtext:key.toUpperCase()})).join("");
+  const skillOptions = optionsFromConfig(CONFIG.DND5E.skills).map(([key,label]) => checklistOption({name:"skills",value:key,label,subtext:key.toUpperCase()})).join("");
   const blessingOptions = blessingDocs.slice().sort((a,b) => Number(moduleFlag(a,"blessingCost"))-Number(moduleFlag(b,"blessingCost")) || a.name.localeCompare(b.name)).map(doc => {
-    const cost = Number(moduleFlag(doc,"blessingCost") ?? 0);
+    const initialRank = tier === "solo" ? "s" : "d";
+    const cost = effectiveBlessingCost(doc, initialRank);
     const minimum = moduleFlag(doc,"minimumTier") ?? "standard";
-    const prereq = minimum === "standard" ? "" : ` · ${minimum}`;
-    return `<option value="${doc.id}">[${cost}] ${esc(doc.name)}${prereq}</option>`;
+    const allowed = tierMeets(tier, minimum);
+    const requirement = allowed ? `Unholy Blessing${minimum === "standard" ? "" : ` · ab ${TIER_UI[minimum]?.shortLabel ?? minimum}`}` : `Benötigt ${TIER_UI[minimum]?.shortLabel ?? minimum}`;
+    return checklistOption({name:"blessings",value:doc.id,label:doc.name,subtext:requirement,disabled:!allowed,badge:`${cost} P`,dataAttributes:`data-blessing-id="${doc.id}"`});
   }).join("");
-  const scoreInputs = ["str","dex","con","int","wis","cha"].map(a => `
-    <label class="ability-input">
-      <span>${a.toUpperCase()}</span>
-      <input type="number" name="${a}" value="16" min="1" max="26">
-    </label>`).join("");
-  return `<form class="n5eb-edo-creator-form n5eb-edo-creator-shell" data-edo-creator-form>
+  const scoreInputs = ["str","dex","con","int","wis","cha"].map(a => `<label class="ability-input"><span>${a.toUpperCase()}</span><input type="number" name="${a}" value="16" min="1" max="26"></label>`).join("");
+  const maxSkills = 5 + tierData.extraSkills;
+
+  return `<form class="n5eb-edo-creator-form n5eb-edo-creator-shell tier-${tier}" data-edo-creator-form>
+    <input type="hidden" name="tier" value="${tier}">
     <section class="creator-left">
       <div class="creator-topline">
-        <div>
-          <p class="eyebrow">N5eB · direkter Foundry-Actor</p>
-          <h1>Edo Tensei erstellen</h1>
-          <p class="creator-note">Der Creator legt direkt einen Summon-Actor an. Die Vorschau rechts aktualisiert sich live und nutzt die echten Standard-, Elite- und Solo-Berechnungen der Class Mod.</p>
+        <div class="creator-heading">
+          <span class="creator-tier-icon"><i class="${tierUi.icon}"></i></span>
+          <div>
+            <p class="eyebrow">N5eB · ${esc(tierUi.shortLabel)} Creator</p>
+            <h1>${esc(tierUi.label)} erstellen</h1>
+            <p class="creator-note">${esc(tierUi.description)}</p>
+          </div>
         </div>
-        <div class="creator-counter"><strong>${blessingDocs.length}</strong><span>Unholy Blessings</span></div>
+        <div class="creator-counter"><strong>${tierData.chargeCost}</strong><span>Unholy Charge${tierData.chargeCost === 1 ? "" : "s"}</span></div>
       </div>
+
+      <section class="creator-tier-banner">
+        <span><strong>${tierData.hp}×</strong> HP</span>
+        <span><strong>${tierData.slots}×</strong> Jutsu Slots</span>
+        <span><strong>${maxSkills}</strong> Skills</span>
+        <span><strong>${tierData.eliteActions}</strong> Elite Actions</span>
+      </section>
+
       <section class="creator-card">
-        <header><h3>Grunddaten</h3><span>Basis</span></header>
+        <header><h3>1. Grunddaten</h3><span>Identität und Berechnung</span></header>
         <div class="creator-grid creator-grid-main">
-          <label><span>Name</span><input name="name" value="Edo Tensei" required></label>
+          <label><span>Name</span><input name="name" value="${esc(tierUi.label)}" required></label>
           <label><span>Clan / Lineage</span><input name="clan" placeholder="Optional"></label>
           <label><span>Rank</span><select name="rank">${rankOptions}</select></label>
-          <label><span>Tier</span><select name="tier"><option value="standard">Standard</option><option value="elite">Elite</option>${cmLevel >= 5 ? '<option value="solo">Solo (S-Rank only)</option>' : ''}</select></label>
           <label><span>Primary Role</span><select name="role">${Object.entries(ROLE_LABELS).map(([k,v])=>`<option value="${k}" ${k==='striker'?'selected':''}>${v}</option>`).join('')}</select></label>
           <label><span>Toughness</span><input type="number" name="toughness" value="10" min="0"></label>
           <label><span>Defensive Ability</span><select name="defenseAbility">${abilities.replace('value="dex"','value="dex" selected')}</select></label>
           <label><span>Jutsu Ability</span><select name="jutsuAbility">${abilities.replace('value="int"','value="int" selected')}</select></label>
           <label><span>Vessel</span><select name="vessel"><option value="intact">Intact</option><option value="decayed">Rotting / Decayed (+3 DC)</option><option value="living">Living Host (-1 to -5 DC)</option></select></label>
-          <label><span>Living Host Modifier</span><input type="number" name="livingModifier" value="1" min="1" max="5"></label>
+          <label class="living-modifier"><span>Living Host Modifier</span><input type="number" name="livingModifier" value="1" min="1" max="5"></label>
         </div>
       </section>
+
       <section class="creator-card">
-        <header><h3>Ability Scores</h3><span>Base 16</span></header>
-        <p class="helper-text">C/B/A/S-Rank add a cumulative 6 / 12 / 18 / 24 points. Caps scale to 20 / 22 / 24 / 26.</p>
+        <header><h3>2. Ability Scores</h3><span>Base 16</span></header>
+        <p class="helper-text">C/B/A/S-Rank verteilen insgesamt 6 / 12 / 18 / 24 zusätzliche Punkte. Die Höchstwerte liegen bei 20 / 22 / 24 / 26.</p>
         <div class="ability-grid modern">${scoreInputs}</div>
       </section>
-      <div class="creator-columns modern">
-        <section class="creator-card compact">
-          <header><h3>Saving Throws</h3><span>Max 3</span></header>
-          <p class="helper-text">Choose up to three saving throw proficiencies.</p>
-          <select name="saves" multiple size="8">${saves}</select>
-        </section>
-        <section class="creator-card compact">
-          <header><h3>Creature Skills</h3><span>5 / 8 / 10</span></header>
-          <p class="helper-text">Standard: 5, Elite: 8, Solo: 10. Extra picks grant mastery.</p>
-          <select name="skills" multiple size="12">${skills}</select>
-        </section>
-        <section class="creator-card compact wide">
-          <header><h3>Unholy Blessings</h3><span>Cost max 5</span></header>
-          <p class="helper-text">Soul Fragment costs 2 at S-Rank. Some Blessings require Elite or Solo tier.</p>
-          <select name="blessings" multiple size="14">${blessingOptions}</select>
-        </section>
-      </div>
+
+      <section class="creator-card selection-card">
+        <header><h3>3. Saving Throws</h3><span data-save-count>0/3</span></header>
+        <p class="helper-text">Wähle bis zu drei Saving-Throw-Proficiencies.</p>
+        <div class="creator-check-grid saves">${saveOptions}</div>
+      </section>
+
+      <section class="creator-card selection-card">
+        <header><h3>4. Creature Skills</h3><span data-skill-count>0/${maxSkills}</span></header>
+        <p class="helper-text">${esc(tierUi.shortLabel)} Edo Tensei können bis zu ${maxSkills} Skills erhalten. Auswahlen nach dem fünften Skill erhalten automatisch Mastery.</p>
+        <div class="creator-check-list skills">${skillOptions}</div>
+      </section>
+
+      <section class="creator-card selection-card">
+        <header><h3>5. Unholy Blessings</h3><span data-blessing-count>0/5</span></header>
+        <p class="helper-text">Die Gesamtkosten dürfen 5 Punkte nicht überschreiten. Nicht verfügbare Blessings werden ausgegraut.</p>
+        <div class="creator-check-list blessings">${blessingOptions}</div>
+      </section>
     </section>
     <aside class="creator-right" data-edo-creator-preview></aside>
   </form>`;
 }
 
-async function openEdoCreator(actor) {
+async function openEdoCreator(actor, requestedTier=null) {
   actor = actorFromContext(actor);
   if (!actor || !getClassMod(actor)) return ui.notifications.warn("Select an Actor that owns the Edo Tensei Class Mod.");
   if (!actor.isOwner) return ui.notifications.warn("You do not own this Actor.");
+
+  const tier = requestedTier ?? await chooseEdoTier(actor);
+  if (!tier) return null;
+  if (!tierAvailable(actor,tier)) {
+    ui.notifications.warn("Solo Edo Tensei require Edo Tensei Class Mod level 5 and an S-Rank soul.");
+    return null;
+  }
+
   const docs = await getPackDocuments();
   const blessings = docs.filter(doc => moduleFlag(doc,"edoBlessing"));
+  const tierUi = TIER_UI[tier] ?? TIER_UI.standard;
 
-  return new Promise(resolve => {
+  const result = await new Promise(resolve => {
     let settled = false;
     const finish = value => {
       if (settled) return;
@@ -433,10 +609,13 @@ async function openEdoCreator(actor) {
       resolve(value);
     };
     const dialog = new foundry.applications.api.DialogV2({
-      window:{title:`Create Edo Tensei — ${actor.name}`,icon:"fa-solid fa-skull",resizable:true},
-      position:{width:1280,height:"auto"},classes:["n5eb-edo-creator-window"],content:creatorHtml(actor, blessings),
+      window:{title:`${tierUi.label} erstellen — ${actor.name}`,icon:tierUi.icon,resizable:true},
+      position:{width:1320,height:"auto"},
+      classes:["n5eb-edo-creator-window",`tier-${tier}`],
+      content:creatorHtml(actor, blessings, tier),
       buttons:[
-        {action:"create",label:"Create Edo Tensei",icon:"fa-solid fa-wand-magic-sparkles",default:true,callback:async(event,button)=>{
+        {action:"back",label:"Andere Art wählen",icon:"fa-solid fa-arrow-left",callback:()=>finish("back")},
+        {action:"create",label:`${tierUi.shortLabel} Edo erstellen`,icon:"fa-solid fa-wand-magic-sparkles",default:true,callback:async(event,button)=>{
           const form = button.form ?? dialog.element?.querySelector?.("[data-edo-creator-form]");
           const data = creatorFormData(form);
           try {
@@ -447,13 +626,17 @@ async function openEdoCreator(actor) {
             return false;
           }
         }},
-        {action:"cancel",label:"Cancel",icon:"fa-solid fa-xmark",callback:()=>finish(null)}
-      ], rejectClose:false
+        {action:"cancel",label:"Abbrechen",icon:"fa-solid fa-xmark",callback:()=>finish(null)}
+      ],
+      rejectClose:false
     });
     dialog.addEventListener("render",()=>activateCreator(dialog, actor, blessings));
     dialog.addEventListener("close",()=>finish(null),{once:true});
     dialog.render({force:true});
   });
+
+  if (result === "back") return openEdoCreator(actor,null);
+  return result;
 }
 
 async function ensureActorFolder() {

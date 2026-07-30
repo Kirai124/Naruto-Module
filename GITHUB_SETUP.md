@@ -40,3 +40,7 @@ Open **Actions → Build Foundry Release → Run workflow**, enter `v0.9.0`, and
 ## 0.13.0 release
 
 Tag the release as `v0.13.0` and attach `n5eb-classmod-library-0.13.0.zip`. This release fixes the ApplicationV2 Edo Tensei sheet controls and automatically repairs the Class Mod Arts Attack Bonus and Save DC on existing characters.
+
+## 0.13.2 release
+
+Tag the release as `v0.13.2` and attach `n5eb-classmod-library-0.13.2.zip`. This release adds the Normal / Elite / Solo tier picker and the redesigned dedicated Edo Tensei creators.

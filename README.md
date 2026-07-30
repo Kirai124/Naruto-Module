@@ -1,5 +1,10 @@
-# N5eB Class Mod Library 0.13.0
-## Version 0.13.0 fixes
+# N5eB Class Mod Library 0.13.2
+## Version 0.13.2 creator redesign
+
+- The Edo creator now opens with a dedicated Normal / Elite / Solo selection window.
+- Each tier opens its own locked creator with the correct HP, Jutsu Slot, Skill, Action, DC, and Unholy Charge calculations.
+- Saving Throws, Creature Skills, and Unholy Blessings now use clear checkbox cards with live counters and validation.
+- Solo creation is locked until Class Mod level 5 and automatically uses S-Rank.
 
 - Uses the Foundry ApplicationV2 render and header-control hooks, so the Edo Tensei controls now appear on the current N5eB character sheet.
 - Adds an always-visible skull-plus quick button in the sheet header and a full `Create Edo Tensei` strip above the Jutsu cards.
