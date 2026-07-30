@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.11.0";
+const CONTENT_VERSION = "0.12.0";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -33,7 +33,7 @@ const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-large-blue.webp",
   "icons/magic/light/explosion-star-blue.webp"
 ]);
-const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi"]);
+const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi", "edo-tensei"]);
 
 const SEAL_TYPE_KEYS = Object.freeze([
   "all-rounder", "absorber", "assault-type", "tank-type", "speed-type", "sensor-type", "white-kama-seal"
@@ -197,6 +197,29 @@ async function syncLibrary({force=false, notify=false}={}) {
     const FolderClass = CONFIG.Folder?.documentClass ?? foundry.documents?.Folder ?? globalThis.Folder;
     if (!FolderClass) throw new Error("Foundry Folder document class was not found.");
     const folderCollection = pack.folders;
+
+    // Remove module-managed folders which no longer exist in the bundled data.
+    // This also cleans up the obsolete first Superior Shinobi folder tree.
+    const desiredFolderIds = new Set(folders.map(folder => folder._id));
+    const staleFolders = Array.from(folderCollection?.contents ?? folderCollection ?? []).filter(folder =>
+      folder.getFlag?.(MODULE_ID, "managed") && !desiredFolderIds.has(folder.id)
+    );
+    const staleDepth = folder => {
+      let depth = 0;
+      let parent = folder.folder;
+      const visited = new Set();
+      while (parent && !visited.has(parent.id ?? parent)) {
+        visited.add(parent.id ?? parent);
+        depth += 1;
+        parent = parent.folder ?? folderCollection?.get?.(parent);
+      }
+      return depth;
+    };
+    staleFolders.sort((a, b) => staleDepth(b) - staleDepth(a));
+    for (const folder of staleFolders) {
+      await FolderClass.deleteDocuments([folder.id], {pack: pack.collection});
+    }
+
     const existingFolders = folders.filter(folder => folderCollection?.has(folder._id));
     const missingFolders = folders.filter(folder => !folderCollection?.has(folder._id));
     if (existingFolders.length) await FolderClass.updateDocuments(existingFolders, {pack: pack.collection});

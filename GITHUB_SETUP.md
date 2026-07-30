@@ -1,37 +1,31 @@
-# GitHub update instructions — 0.9.0
+# GitHub update instructions — 0.12.0
 
 Repository: `https://github.com/Kirai124/Naruto-Module`
 
 ## Upload the new repository files
 
-1. Extract `Naruto-Module-GitHub-0.9.0.zip` on your computer.
-2. In the GitHub repository, select **Add file → Upload files**.
-3. Upload `assets`, `data`, `scripts`, `styles`, `README.md`, `module.json`, and `GITHUB_SETUP.md` to the repository root.
-4. Commit directly to `main` with a message such as `Add Sealed Beast Redux v0.9.0`.
+1. Extract `Naruto-Module-GitHub-0.12.0.zip` on your computer.
+2. Open the included `Naruto-Module` folder.
+3. In the GitHub repository, select **Add file → Upload files**.
+4. Upload the contents of that folder to the repository root and replace the existing files.
+5. Commit directly to `main` with a message such as `Add Edo Tensei v0.12.0`.
 
-The hidden `.github` folder may not be visible in Windows. Verify that the repository contains `.github/workflows/release.yml`. If it does not:
-
-1. Select **Add file → Create new file**.
-2. Enter `.github/workflows/release.yml` as the file name.
-3. Copy the workflow from this package into the editor and commit it to `main`.
+Verify that `.github/workflows/release.yml` exists in the repository. The `.github` folder may be hidden on Windows.
 
 ## Start the automatic release
 
-1. Open **Releases**.
-2. Select **Draft a new release**.
-3. Choose **Create new tag** and enter `v0.9.0`.
-4. Target the `main` branch.
-5. Publish the release. Do not manually upload module assets.
+1. Open **Actions → Build Foundry Release**.
+2. Select **Run workflow**.
+3. Enter `v0.12.0` as the tag.
+4. Run the workflow on `main`.
 
-The tag triggers the workflow. After it finishes, the release Assets must include:
+Alternatively, create and push the tag `v0.12.0`; the tag push starts the same workflow.
+
+After the workflow finishes, release `v0.12.0` must contain:
 
 - `module.json`
-- `n5eb-classmod-library-0.9.0.zip`
+- `n5eb-classmod-library-0.12.0.zip`
 - GitHub's two automatic source-code archives
-
-## Repair or rerun the release
-
-Open **Actions → Build Foundry Release → Run workflow**, enter `v0.9.0`, and run it. This recreates or replaces the two Foundry release assets from the current `main` branch.
 
 ## Foundry manifest URL
 

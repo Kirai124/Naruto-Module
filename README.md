@@ -1,4 +1,4 @@
-# N5eB Class Mod Library 0.11.0
+# N5eB Class Mod Library 0.12.0
 
 Creates the world compendium **N5eB Custom Class Mods** for N5eB 3.1.0 on Foundry VTT 13/14.
 
@@ -8,6 +8,7 @@ Included Class Mods:
 - Tenseigan
 - Sealed Beast Redux
 - Superior Shinobi
+- Edo Tensei
 
 All bundled descriptions are written in English. Each Class Mod has its own colored folder tree inside the same world compendium.
 
@@ -127,3 +128,12 @@ The release workflow builds a ZIP whenever a tag beginning with `v` is created. 
 - Added Actor-based Reserve Dice, Burden, combat-spending, Technique free-use, and Prophesised-cost tracking.
 - Added automatic Superior/Burden numeric effects and rest recovery.
 - Added image fallback normalization for every current and future Class Mod entry that has no image.
+
+
+## 0.12.0
+
+- Added the complete Edo Tensei Class Mod v1.3.
+- Added Unholy Charge tracking, numeric Unholy Art Attack/Save values, rest recovery, and direct Unholy Art use from the character sheet.
+- Added a direct Edo Tensei creator that calculates Standard, Elite, and Solo summons, supports source-Actor cloning, validates DNA Blessing budgets and prerequisites, resolves Summoning Checks, and creates a finished N5eB NPC.
+- Added all Unholy Arts, all Unholy Blessings, summon roles, rank traits, ritual rules, calculation references, and recovery rules.
+- Compendium synchronization now deletes obsolete module-managed folders, removing the legacy first Superior Shinobi folder tree while keeping the current full implementation.
