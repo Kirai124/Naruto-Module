@@ -235,39 +235,186 @@ function optionsFromConfig(config) {
     return [key, labelKey ? game.i18n.localize(labelKey) : key.toUpperCase()];
   });
 }
+function creatorFormData(form) {
+  const data = new FormDataExtended(form).object;
+  data.skills = selectedValues(form, "skills");
+  data.saves = selectedValues(form, "saves");
+  data.blessings = selectedValues(form, "blessings");
+  return data;
+}
+function creatorChoiceChips(values, labels, fallback = "None selected") {
+  if (!values?.length) return `<span class="empty">${esc(fallback)}</span>`;
+  return values.map(value => `<span class="chip">${esc(labels?.[value] ?? value)}</span>`).join("");
+}
+function creatorPreviewHtml(actor, formData, blessingDocs) {
+  const cmLevel = classModLevel(actor);
+  const blessingMap = new Map(blessingDocs.map(doc => [doc.id, doc]));
+  const chosenBlessings = (formData.blessings ?? []).map(id => blessingMap.get(id)).filter(Boolean);
+  const saveLabels = Object.fromEntries(optionsFromConfig(CONFIG.DND5E.abilities));
+  const skillLabels = Object.fromEntries(optionsFromConfig(CONFIG.DND5E.skills));
+
+  let calc = null;
+  let error = "";
+  try {
+    calc = calculateEdoTensei({...formData, classModLevel: cmLevel}, chosenBlessings);
+  } catch (err) {
+    error = err?.message ?? String(err);
+  }
+
+  const headerName = String(formData.name || "Edo Tensei").trim() || "Edo Tensei";
+  const rank = String(formData.rank ?? "d").toLowerCase();
+  const tier = String(formData.tier ?? "standard").toLowerCase();
+  const role = String(formData.role ?? "striker").toLowerCase();
+  const tierLabel = TIER_DATA[tier]?.label ?? tier;
+  const rankLabel = RANK_DATA[rank]?.label ?? rank;
+  const blessingCost = chosenBlessings.reduce((sum, doc) => sum + effectiveBlessingCost(doc, rank), 0);
+
+  const stat = (label, value, hint = "") => `<div class="preview-stat"><span>${esc(label)}</span><strong>${esc(value)}</strong>${hint ? `<small>${esc(hint)}</small>` : ""}</div>`;
+  const abilityCard = (key, value) => `<div class="ability-card"><span>${key.toUpperCase()}</span><strong>${esc(value ?? "—")}</strong></div>`;
+
+  const statsHtml = calc ? [
+    stat("HP", calc.hitPoints),
+    stat("AC", calc.armorClass),
+    stat("Speed", `${calc.speed} ft.`),
+    stat("Level", calc.level),
+    stat("Jutsu Slots", calc.jutsuSlots),
+    stat("Summon DC", calc.automaticChecks ? "Auto" : calc.summoningDC)
+  ].join("") : [
+    stat("HP", "—"), stat("AC", "—"), stat("Speed", "—"), stat("Level", RANK_DATA[rank]?.level ?? "—"), stat("Jutsu Slots", "—"), stat("Summon DC", "—")
+  ].join("");
+
+  const abilityHtml = ["str","dex","con","int","wis","cha"].map(key => abilityCard(key, formData[key] ?? 16)).join("");
+  const summaryHtml = [
+    stat("DNA DC", calc ? (calc.automaticChecks ? "Auto" : calc.dnaDC) : "—", "acquisition"),
+    stat("Blessing Cost", `${blessingCost}/5`, `${chosenBlessings.length} selected`),
+    stat("Elite Actions", calc ? calc.eliteActions : 0),
+    stat("Extra Skills", calc ? calc.extraSkills : 0),
+    stat("Role", ROLE_LABELS[role] ?? role),
+    stat("Vessel", String(formData.vessel ?? "intact").replace(/^./, c => c.toUpperCase()))
+  ].join("");
+
+  const blessingList = chosenBlessings.length
+    ? chosenBlessings.map(doc => `<div class="preview-list-row"><strong>${esc(doc.name)}</strong><span>Cost ${effectiveBlessingCost(doc, rank)}</span></div>`).join("")
+    : `<div class="preview-list-row empty"><span>No Unholy Blessings selected.</span></div>`;
+
+  const infoHtml = `
+    <div class="preview-meta-chips">${creatorChoiceChips(formData.saves ?? [], saveLabels, "No saving throws")}</div>
+    <div class="preview-meta-chips">${creatorChoiceChips((formData.skills ?? []).slice(0, 10), skillLabels, "No creature skills")}</div>`;
+
+  return `
+    <div class="creator-preview-card" data-preview-valid="${error ? 0 : 1}">
+      <section class="preview-hero">
+        <div>
+          <p class="eyebrow">Preview · values are editable</p>
+          <h2>${esc(headerName)}</h2>
+          <div class="subline">${esc(String(formData.clan || "Unaligned"))} · ${esc(rankLabel)} · ${esc(tierLabel)} · ${esc(ROLE_LABELS[role] ?? role)}</div>
+        </div>
+        <div class="hero-badge"><i class="fas fa-skull"></i><span>CM ${cmLevel}</span></div>
+      </section>
+      ${error ? `<div class="preview-error"><i class="fas fa-triangle-exclamation"></i><span>${esc(error)}</span></div>` : ""}
+      <section class="preview-stat-grid">${statsHtml}</section>
+      <section class="preview-ability-grid">${abilityHtml}</section>
+      <section class="preview-summary-grid">${summaryHtml}</section>
+      <section class="preview-block">
+        <header><span>Saving Throws</span><strong>${(formData.saves ?? []).length}/3</strong></header>
+        ${creatorChoiceChips(formData.saves ?? [], saveLabels, "No saving throws selected")}
+      </section>
+      <section class="preview-block">
+        <header><span>Creature Skills</span><strong>${(formData.skills ?? []).length}</strong></header>
+        ${creatorChoiceChips(formData.skills ?? [], skillLabels, "No creature skills selected")}
+      </section>
+      <section class="preview-block preview-list-block">
+        <header><span>Unholy Blessings</span><strong>${chosenBlessings.length}</strong></header>
+        <div class="preview-list">${blessingList}</div>
+      </section>
+    </div>`;
+}
+function updateCreatorPreview(dialog, actor, blessingDocs) {
+  const root = dialog.element;
+  const form = root?.querySelector?.("[data-edo-creator-form]");
+  const preview = root?.querySelector?.("[data-edo-creator-preview]");
+  const createButton = root?.querySelector?.('button[data-action="create"]');
+  if (!form || !preview) return;
+  const data = creatorFormData(form);
+  preview.innerHTML = creatorPreviewHtml(actor, data, blessingDocs);
+  const valid = preview.querySelector('[data-preview-valid="1"]');
+  if (createButton) createButton.disabled = !Boolean(valid);
+}
+function activateCreator(dialog, actor, blessingDocs) {
+  const root = dialog.element;
+  const form = root?.querySelector?.("[data-edo-creator-form]");
+  if (!form) return;
+  const refresh = () => updateCreatorPreview(dialog, actor, blessingDocs);
+  form.addEventListener("input", refresh);
+  form.addEventListener("change", refresh);
+  refresh();
+}
 function creatorHtml(actor, blessingDocs) {
   const cmLevel = classModLevel(actor);
   const rankOptions = RANK_ORDER.slice(0, cmLevel).map(rank => `<option value="${rank}">${RANK_DATA[rank].label} · Level ${RANK_DATA[rank].level}</option>`).join("");
   const abilities = optionsFromConfig(CONFIG.DND5E.abilities).map(([key,label]) => `<option value="${key}">${esc(label)}</option>`).join("");
   const skills = optionsFromConfig(CONFIG.DND5E.skills).map(([key,label]) => `<option value="${key}">${esc(label)}</option>`).join("");
   const saves = optionsFromConfig(CONFIG.DND5E.abilities).map(([key,label]) => `<option value="${key}">${esc(label)}</option>`).join("");
-  const blessingOptions = blessingDocs.sort((a,b) => Number(moduleFlag(a,"blessingCost"))-Number(moduleFlag(b,"blessingCost")) || a.name.localeCompare(b.name)).map(doc => {
+  const blessingOptions = blessingDocs.slice().sort((a,b) => Number(moduleFlag(a,"blessingCost"))-Number(moduleFlag(b,"blessingCost")) || a.name.localeCompare(b.name)).map(doc => {
     const cost = Number(moduleFlag(doc,"blessingCost") ?? 0);
     const minimum = moduleFlag(doc,"minimumTier") ?? "standard";
     const prereq = minimum === "standard" ? "" : ` · ${minimum}`;
     return `<option value="${doc.id}">[${cost}] ${esc(doc.name)}${prereq}</option>`;
   }).join("");
-  const scoreInputs = ["str","dex","con","int","wis","cha"].map(a => `<label><span>${a.toUpperCase()}</span><input type="number" name="${a}" value="16" min="1" max="26"></label>`).join("");
-  return `<form class="n5eb-edo-creator-form">
-    <p class="creator-note">Creates a complete N5eB Summon Actor and performs the Standard, Elite, or Solo calculations from the Class Mod. You can edit the Actor afterward and use <strong>Recalculate Edo</strong>.</p>
-    <div class="creator-grid">
-      <label><span>Name</span><input name="name" value="Edo Tensei" required></label>
-      <label><span>Rank</span><select name="rank">${rankOptions}</select></label>
-      <label><span>Tier</span><select name="tier"><option value="standard">Standard</option><option value="elite">Elite</option>${cmLevel >= 5 ? '<option value="solo">Solo (S-Rank only)</option>' : ''}</select></label>
-      <label><span>Primary Role</span><select name="role">${Object.entries(ROLE_LABELS).map(([k,v])=>`<option value="${k}" ${k==='striker'?'selected':''}>${v}</option>`).join('')}</select></label>
-      <label><span>Clan / Lineage</span><input name="clan" placeholder="Optional"></label>
-      <label><span>Toughness</span><input type="number" name="toughness" value="10" min="0"></label>
-      <label><span>Defensive Ability</span><select name="defenseAbility">${abilities.replace('value="dex"','value="dex" selected')}</select></label>
-      <label><span>Jutsu Ability</span><select name="jutsuAbility">${abilities.replace('value="int"','value="int" selected')}</select></label>
-      <label><span>Vessel</span><select name="vessel"><option value="intact">Intact</option><option value="decayed">Rotting / Decayed (+3 DC)</option><option value="living">Living Host (-1 to -5 DC)</option></select></label>
-      <label><span>Living Host Modifier</span><input type="number" name="livingModifier" value="1" min="1" max="5"></label>
-    </div>
-    <fieldset><legend>Ability Scores</legend><p>Base 16. C/B/A/S-Rank add a cumulative 6/12/18/24 points, with caps 20/22/24/26.</p><div class="ability-grid">${scoreInputs}</div></fieldset>
-    <div class="creator-columns">
-      <fieldset><legend>Saving Throw Proficiencies</legend><p>Select up to 3.</p><select name="saves" multiple size="8">${saves}</select></fieldset>
-      <fieldset><legend>Creature Skills</legend><p>Select up to 5; Elite may select 8 and Solo 10. Extra selections receive 1 Mastery.</p><select name="skills" multiple size="12">${skills}</select></fieldset>
-      <fieldset><legend>Unholy Blessings</legend><p>Selected costs may total up to 5. Soul Fragment costs 2 at S-Rank.</p><select name="blessings" multiple size="14">${blessingOptions}</select></fieldset>
-    </div>
+  const scoreInputs = ["str","dex","con","int","wis","cha"].map(a => `
+    <label class="ability-input">
+      <span>${a.toUpperCase()}</span>
+      <input type="number" name="${a}" value="16" min="1" max="26">
+    </label>`).join("");
+  return `<form class="n5eb-edo-creator-form n5eb-edo-creator-shell" data-edo-creator-form>
+    <section class="creator-left">
+      <div class="creator-topline">
+        <div>
+          <p class="eyebrow">N5eB · direkter Foundry-Actor</p>
+          <h1>Edo Tensei erstellen</h1>
+          <p class="creator-note">Der Creator legt direkt einen Summon-Actor an. Die Vorschau rechts aktualisiert sich live und nutzt die echten Standard-, Elite- und Solo-Berechnungen der Class Mod.</p>
+        </div>
+        <div class="creator-counter"><strong>${blessingDocs.length}</strong><span>Unholy Blessings</span></div>
+      </div>
+      <section class="creator-card">
+        <header><h3>Grunddaten</h3><span>Basis</span></header>
+        <div class="creator-grid creator-grid-main">
+          <label><span>Name</span><input name="name" value="Edo Tensei" required></label>
+          <label><span>Clan / Lineage</span><input name="clan" placeholder="Optional"></label>
+          <label><span>Rank</span><select name="rank">${rankOptions}</select></label>
+          <label><span>Tier</span><select name="tier"><option value="standard">Standard</option><option value="elite">Elite</option>${cmLevel >= 5 ? '<option value="solo">Solo (S-Rank only)</option>' : ''}</select></label>
+          <label><span>Primary Role</span><select name="role">${Object.entries(ROLE_LABELS).map(([k,v])=>`<option value="${k}" ${k==='striker'?'selected':''}>${v}</option>`).join('')}</select></label>
+          <label><span>Toughness</span><input type="number" name="toughness" value="10" min="0"></label>
+          <label><span>Defensive Ability</span><select name="defenseAbility">${abilities.replace('value="dex"','value="dex" selected')}</select></label>
+          <label><span>Jutsu Ability</span><select name="jutsuAbility">${abilities.replace('value="int"','value="int" selected')}</select></label>
+          <label><span>Vessel</span><select name="vessel"><option value="intact">Intact</option><option value="decayed">Rotting / Decayed (+3 DC)</option><option value="living">Living Host (-1 to -5 DC)</option></select></label>
+          <label><span>Living Host Modifier</span><input type="number" name="livingModifier" value="1" min="1" max="5"></label>
+        </div>
+      </section>
+      <section class="creator-card">
+        <header><h3>Ability Scores</h3><span>Base 16</span></header>
+        <p class="helper-text">C/B/A/S-Rank add a cumulative 6 / 12 / 18 / 24 points. Caps scale to 20 / 22 / 24 / 26.</p>
+        <div class="ability-grid modern">${scoreInputs}</div>
+      </section>
+      <div class="creator-columns modern">
+        <section class="creator-card compact">
+          <header><h3>Saving Throws</h3><span>Max 3</span></header>
+          <p class="helper-text">Choose up to three saving throw proficiencies.</p>
+          <select name="saves" multiple size="8">${saves}</select>
+        </section>
+        <section class="creator-card compact">
+          <header><h3>Creature Skills</h3><span>5 / 8 / 10</span></header>
+          <p class="helper-text">Standard: 5, Elite: 8, Solo: 10. Extra picks grant mastery.</p>
+          <select name="skills" multiple size="12">${skills}</select>
+        </section>
+        <section class="creator-card compact wide">
+          <header><h3>Unholy Blessings</h3><span>Cost max 5</span></header>
+          <p class="helper-text">Soul Fragment costs 2 at S-Rank. Some Blessings require Elite or Solo tier.</p>
+          <select name="blessings" multiple size="14">${blessingOptions}</select>
+        </section>
+      </div>
+    </section>
+    <aside class="creator-right" data-edo-creator-preview></aside>
   </form>`;
 }
 
@@ -277,27 +424,36 @@ async function openEdoCreator(actor) {
   if (!actor.isOwner) return ui.notifications.warn("You do not own this Actor.");
   const docs = await getPackDocuments();
   const blessings = docs.filter(doc => moduleFlag(doc,"edoBlessing"));
-  const result = await foundry.applications.api.DialogV2.wait({
-    window:{title:`Create Edo Tensei — ${actor.name}`,icon:"fa-solid fa-skull",resizable:true},
-    position:{width:920,height:"auto"},classes:["n5eb-edo-creator-window"],content:creatorHtml(actor, blessings),
-    buttons:[
-      {action:"create",label:"Create Edo Tensei",icon:"fa-solid fa-wand-magic-sparkles",default:true,callback:(event,button)=>{
-        const data = new FormDataExtended(button.form).object;
-        data.skills = selectedValues(button.form,"skills");
-        data.saves = selectedValues(button.form,"saves");
-        data.blessings = selectedValues(button.form,"blessings");
-        return data;
-      }},
-      {action:"cancel",label:"Cancel",icon:"fa-solid fa-xmark"}
-    ], rejectClose:false
+
+  return new Promise(resolve => {
+    let settled = false;
+    const finish = value => {
+      if (settled) return;
+      settled = true;
+      resolve(value);
+    };
+    const dialog = new foundry.applications.api.DialogV2({
+      window:{title:`Create Edo Tensei — ${actor.name}`,icon:"fa-solid fa-skull",resizable:true},
+      position:{width:1280,height:"auto"},classes:["n5eb-edo-creator-window"],content:creatorHtml(actor, blessings),
+      buttons:[
+        {action:"create",label:"Create Edo Tensei",icon:"fa-solid fa-wand-magic-sparkles",default:true,callback:async(event,button)=>{
+          const form = button.form ?? dialog.element?.querySelector?.("[data-edo-creator-form]");
+          const data = creatorFormData(form);
+          try {
+            finish(await createEdoTensei(actor, data, blessings));
+          } catch (error) {
+            console.error(`${MODULE_ID} | Edo Tensei creation failed`, error);
+            ui.notifications.error(error.message);
+            return false;
+          }
+        }},
+        {action:"cancel",label:"Cancel",icon:"fa-solid fa-xmark",callback:()=>finish(null)}
+      ], rejectClose:false
+    });
+    dialog.addEventListener("render",()=>activateCreator(dialog, actor, blessings));
+    dialog.addEventListener("close",()=>finish(null),{once:true});
+    dialog.render({force:true});
   });
-  if (!result || result === "cancel") return null;
-  try { return await createEdoTensei(actor, result, blessings); }
-  catch (error) {
-    console.error(`${MODULE_ID} | Edo Tensei creation failed`, error);
-    ui.notifications.error(error.message);
-    return null;
-  }
 }
 
 async function ensureActorFolder() {
