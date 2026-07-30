@@ -1,7 +1,7 @@
 {
   "id": "n5eb-classmod-library",
   "title": "N5eB Class Mod Library",
-  "description": "Creates a synchronized world compendium with Flying Thunder God, Kāma Seal, Tenseigan, Sealed Beast Redux, Superior Shinobi, and Edo Tensei, including Actor-based trackers and direct summon/NPC creation tools.",
+  "description": "Creates a world compendium containing fully prepared N5eB Class Mods, including Flying Thunder God, Kāma Seal, Tenseigan, Sealed Beast Redux, Superior Shinobi, and Edo Tensei with Standard/Elite/Solo summon creation and Actor-based tracking.",
   "version": "0.12.0",
   "authors": [
     {

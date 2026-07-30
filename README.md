@@ -8,7 +8,6 @@ Included Class Mods:
 - Tenseigan
 - Sealed Beast Redux
 - Superior Shinobi
-- Edo Tensei
 
 All bundled descriptions are written in English. Each Class Mod has its own colored folder tree inside the same world compendium.
 
@@ -129,11 +128,15 @@ The release workflow builds a ZIP whenever a tag beginning with `v` is created. 
 - Added automatic Superior/Burden numeric effects and rest recovery.
 - Added image fallback normalization for every current and future Class Mod entry that has no image.
 
+## Edo Tensei (0.12.0)
 
-## 0.12.0
+The Edo Tensei Class Mod is included as a complete compendium tree with its five-level progression, Unholy Arts, Unholy Blessings, rank features, roles, and Standard/Elite/Solo construction rules.
 
-- Added the complete Edo Tensei Class Mod v1.3.
-- Added Unholy Charge tracking, numeric Unholy Art Attack/Save values, rest recovery, and direct Unholy Art use from the character sheet.
-- Added a direct Edo Tensei creator that calculates Standard, Elite, and Solo summons, supports source-Actor cloning, validates DNA Blessing budgets and prerequisites, resolves Summoning Checks, and creates a finished N5eB NPC.
-- Added all Unholy Arts, all Unholy Blessings, summon roles, rank traits, ritual rules, calculation references, and recovery rules.
-- Compendium synchronization now deletes obsolete module-managed folders, removing the legacy first Superior Shinobi folder tree while keeping the current full implementation.
+After adding **Edo Tensei** to a character, the character sheet gains an **Edo Tensei tracker** and **Create Edo Tensei** button. The creator builds a linked NPC summon and calculates:
+
+- Rank level, ability-score cap and increase budget
+- Armor Class, hit points, speed, Jutsu Slots, role modifiers, and Elite Actions
+- DNA DC, Summoning DC, vessel modifier, Blessing cost, and Unholy Charge cost
+- Standard, Elite, and Solo multipliers and restrictions
+
+Generated Edo Tensei Actors have **Summon / Return** and **Recalculate Edo** sheet buttons. The module also removes obsolete module-managed folder trees during synchronization, including the old duplicate Superior Shinobi tree, while retaining the current Superior Shinobi implementation.

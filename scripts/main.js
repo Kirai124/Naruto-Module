@@ -190,36 +190,58 @@ async function syncLibrary({force=false, notify=false}={}) {
     const pack = await ensurePack();
     await pack.configure({locked: false, private: false});
     const {folders, items} = await loadContent();
-    const docs = await pack.getDocuments();
-    const managedIds = docs.filter(doc => doc.getFlag(MODULE_ID, "managed")).map(doc => doc.id);
-    if (managedIds.length) await Item.implementation.deleteDocuments(managedIds, {pack: pack.collection});
-
+    const desiredItemIds = new Set(items.map(item => item._id));
+    const desiredFolderIds = new Set(folders.map(folder => folder._id));
     const FolderClass = CONFIG.Folder?.documentClass ?? foundry.documents?.Folder ?? globalThis.Folder;
     if (!FolderClass) throw new Error("Foundry Folder document class was not found.");
+
     const folderCollection = pack.folders;
+    const packFolders = folderCollection ? Array.from(folderCollection) : [];
+    const obsoleteSuperiorFolders = packFolders.filter(folder => {
+      if (desiredFolderIds.has(folder.id)) return false;
+      const classMod = folder.getFlag?.(MODULE_ID, "classMod");
+      if (classMod === "superior-shinobi") return true;
+      const name = String(folder.name ?? "").toLowerCase();
+      if (!name.includes("superior shinobi")) return false;
+      return folder.getFlag?.(MODULE_ID, "managed") || !folder.folder;
+    });
+    const obsoleteSuperiorFolderIds = new Set(obsoleteSuperiorFolders.map(folder => folder.id));
 
-    // Remove module-managed folders which no longer exist in the bundled data.
-    // This also cleans up the obsolete first Superior Shinobi folder tree.
-    const desiredFolderIds = new Set(folders.map(folder => folder._id));
-    const staleFolders = Array.from(folderCollection?.contents ?? folderCollection ?? []).filter(folder =>
-      folder.getFlag?.(MODULE_ID, "managed") && !desiredFolderIds.has(folder.id)
-    );
-    const staleDepth = folder => {
-      let depth = 0;
-      let parent = folder.folder;
-      const visited = new Set();
-      while (parent && !visited.has(parent.id ?? parent)) {
-        visited.add(parent.id ?? parent);
-        depth += 1;
-        parent = parent.folder ?? folderCollection?.get?.(parent);
+    const docs = await pack.getDocuments();
+    const removableIds = docs.filter(doc => {
+      if (doc.getFlag(MODULE_ID, "managed")) return true;
+      if (obsoleteSuperiorFolderIds.has(doc.folder?.id ?? doc.folder)) return true;
+      const identifier = doc.system?.identifier;
+      const classMod = doc.getFlag?.(MODULE_ID, "classMod");
+      return !desiredItemIds.has(doc.id) && (identifier === "superior-shinobi" || classMod === "superior-shinobi");
+    }).map(doc => doc.id);
+    if (removableIds.length) await Item.implementation.deleteDocuments(removableIds, {pack: pack.collection});
+
+    // Remove obsolete module-managed folders, including the original duplicate Superior Shinobi tree.
+    const staleFolders = packFolders.filter(folder => !desiredFolderIds.has(folder.id) && (
+      folder.getFlag?.(MODULE_ID, "managed") || obsoleteSuperiorFolderIds.has(folder.id)
+    ));
+    if (staleFolders.length) {
+      const staleIds = new Set(staleFolders.map(folder => folder.id));
+      const depth = folder => {
+        let value = 0;
+        let parent = folder.folder?.id ?? folder.folder;
+        const seen = new Set();
+        while (parent && staleIds.has(parent) && !seen.has(parent)) {
+          seen.add(parent);
+          value += 1;
+          parent = folderCollection?.get(parent)?.folder?.id ?? folderCollection?.get(parent)?.folder;
+        }
+        return value;
+      };
+      for (const folder of [...staleFolders].sort((a,b) => depth(b) - depth(a))) {
+        try {
+          await FolderClass.deleteDocuments([folder.id], {pack: pack.collection, deleteSubfolders: true, deleteContents: false});
+        } catch (error) {
+          console.warn(`${MODULE_ID} | Could not remove obsolete folder ${folder.name}`, error);
+        }
       }
-      return depth;
-    };
-    staleFolders.sort((a, b) => staleDepth(b) - staleDepth(a));
-    for (const folder of staleFolders) {
-      await FolderClass.deleteDocuments([folder.id], {pack: pack.collection});
     }
-
     const existingFolders = folders.filter(folder => folderCollection?.has(folder._id));
     const missingFolders = folders.filter(folder => !folderCollection?.has(folder._id));
     if (existingFolders.length) await FolderClass.updateDocuments(existingFolders, {pack: pack.collection});

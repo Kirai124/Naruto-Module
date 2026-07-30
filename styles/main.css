@@ -497,62 +497,75 @@
 .n5eb-superior-tracker-dialog .technique-use-list{max-height:220px;overflow:auto;display:grid;gap:.2rem;}
 .n5eb-superior-tracker-dialog .technique-use-list>div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(127,127,127,.25);padding:.15rem 0;}
 
-/* Edo Tensei Class Mod */
+/* ------------------------------------------------------------ */
+/* Edo Tensei tracker and quick creator                          */
+/* ------------------------------------------------------------ */
 .n5eb-edo-tracker-strip {
-  --edo-accent: #7a2725;
+  --edo-accent: #a43138;
   display: grid;
-  grid-template-columns: minmax(150px, auto) repeat(2, minmax(110px, .5fr)) minmax(110px, auto);
-  gap: 8px;
-  align-items: center;
-  margin: 0 0 10px;
-  padding: 8px 10px;
-  border: 1px solid color-mix(in srgb, var(--edo-accent) 75%, transparent);
-  border-radius: 7px;
-  background: color-mix(in srgb, var(--edo-accent) 14%, var(--color-bg-option, #19181d));
+  grid-template-columns: minmax(150px,1.2fr) repeat(2,minmax(110px,1fr)) minmax(165px,1fr);
+  gap: 7px;
+  align-items: stretch;
+  margin: 0 0 8px;
+  padding: 7px;
+  border: 1px solid color-mix(in srgb,var(--edo-accent) 72%,#000);
+  border-radius: 6px;
+  background: color-mix(in srgb,var(--edo-accent) 14%,rgba(0,0,0,.35));
 }
-.n5eb-edo-tracker-strip > div { display:flex; justify-content:space-between; gap:8px; padding:6px 8px; border-left:2px solid var(--edo-accent); background:rgba(0,0,0,.16); }
-.n5eb-edo-tracker-strip button { border-color:var(--edo-accent); font-weight:700; }
-.n5eb-edo-tracker, .n5eb-edo-creator { --edo-accent:#7a2725; display:grid; gap:12px; padding:4px; }
-.n5eb-edo-tracker section, .n5eb-edo-creator section { padding:12px; border:1px solid color-mix(in srgb,var(--edo-accent) 65%,transparent); border-radius:8px; background:color-mix(in srgb,var(--edo-accent) 8%,transparent); }
-.n5eb-edo-tracker section > header, .n5eb-edo-creator section > header { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; }
-.n5eb-edo-tracker h2,.n5eb-edo-tracker h3,.n5eb-edo-creator h2,.n5eb-edo-creator h3 { margin:0; }
-.edo-stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:8px; }
-.edo-stat-grid > div { display:grid; gap:3px; padding:8px; border-left:3px solid var(--edo-accent); background:rgba(0,0,0,.18); }
-.edo-stat-grid span { font-size:11px; opacity:.8; }
-.edo-stat-grid strong { font-size:16px; }
-.edo-actions { display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
-.edo-actions button { flex:1 1 120px; }
-.n5eb-edo-tracker .hint { margin:8px 0 0; font-size:11px; opacity:.75; }
-.edo-list { display:grid; gap:6px; max-height:270px; overflow:auto; }
-.edo-list article { display:grid; grid-template-columns:38px minmax(0,1fr) auto auto; gap:8px; align-items:center; padding:6px; border:1px solid rgba(255,255,255,.09); border-radius:5px; background:rgba(0,0,0,.12); }
-.edo-list img { width:36px; height:36px; object-fit:cover; border:0; }
-.edo-list article > div { display:grid; min-width:0; }
-.edo-list small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; opacity:.72; }
-.edo-hero { display:grid; grid-template-columns:1fr 120px; gap:16px; align-items:center; padding:12px; border:1px solid color-mix(in srgb,var(--edo-accent) 75%,transparent); border-radius:8px; background:linear-gradient(120deg,color-mix(in srgb,var(--edo-accent) 24%,#111),rgba(0,0,0,.2)); }
-.edo-hero img { width:110px; height:110px; border-radius:8px; object-fit:cover; }
-.edo-hero .eyebrow { margin:0; text-transform:uppercase; letter-spacing:.12em; font-size:10px; opacity:.7; }
-.edo-hero p:last-child { margin-bottom:0; }
-.edo-config-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }
-.edo-config-grid label { display:grid; gap:4px; font-size:12px; }
-.edo-config-grid label.checkbox { display:flex; align-items:center; gap:7px; padding-top:20px; }
-.edo-config-grid input,.edo-config-grid select,.edo-ability-grid input,.edo-trait-grid select { width:100%; }
-.edo-ability-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:8px; }
-.edo-ability-grid label { display:grid; gap:4px; text-align:center; }
-.edo-ability-grid span { font-weight:700; }
-.edo-trait-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; }
-.edo-trait-grid label { display:grid; gap:4px; font-size:11px; }
-.edo-choice-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; max-height:330px; overflow:auto; padding-right:4px; }
-.edo-choice { display:grid; grid-template-columns:auto 34px minmax(0,1fr); gap:7px; align-items:center; padding:6px; border:1px solid rgba(255,255,255,.08); border-radius:5px; background:rgba(0,0,0,.12); cursor:pointer; }
-.edo-choice.disabled { opacity:.35; cursor:not-allowed; }
-.edo-choice img { width:32px; height:32px; object-fit:cover; border:0; }
-.edo-choice span { display:grid; min-width:0; }
-.edo-choice strong,.edo-choice small { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.edo-choice small { opacity:.7; }
-.n5eb-edo-creator footer { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:center; position:sticky; bottom:0; padding:10px; border-top:2px solid var(--edo-accent); background:var(--color-bg, #1b1a1f); }
-.n5eb-edo-creator footer p { margin:0; }
-.n5eb-edo-creator [data-kind="error"] { color:#ef8d8d; }
-.n5eb-edo-creator [data-kind="success"] { color:#8fe1a6; }
-.n5eb-edo-creator [data-kind="working"] { color:#e2ca83; }
-@media(max-width:900px){.edo-config-grid{grid-template-columns:repeat(2,1fr)}.edo-choice-grid{grid-template-columns:repeat(2,1fr)}.edo-trait-grid{grid-template-columns:repeat(2,1fr)}.n5eb-edo-tracker-strip{grid-template-columns:1fr 1fr}.edo-ability-grid{grid-template-columns:repeat(3,1fr)}}
-.n5eb-edo-creator .edo-inline { display:grid; grid-template-columns:1fr auto; gap:5px; }
-.n5eb-edo-creator .edo-inline button { width:34px; min-width:34px; }
+.n5eb-edo-tracker-strip .tracker-title,
+.n5eb-edo-tracker-strip .tracker-mini,
+.n5eb-edo-tracker-strip .create-edo {
+  min-height: 42px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 5px;
+  background: rgba(0,0,0,.22);
+}
+.n5eb-edo-tracker-strip .tracker-title,
+.n5eb-edo-tracker-strip .create-edo { color: var(--edo-accent); font-weight: 700; }
+.n5eb-edo-tracker-strip .tracker-mini { display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;padding:4px 7px;text-align:center; }
+.n5eb-edo-tracker-strip .tracker-mini span { font-size:11px;opacity:.8; }
+.n5eb-edo-tracker-strip .tracker-mini strong { color:var(--edo-accent); }
+.n5eb-edo-tracker-dialog { --edo-accent:#a43138;display:grid;gap:12px;padding:4px; }
+.n5eb-edo-tracker-dialog>p { margin:0;opacity:.85; }
+.n5eb-edo-tracker-dialog .tracker-card { padding:12px;border:1px solid color-mix(in srgb,var(--edo-accent) 65%,transparent);border-radius:7px;background:color-mix(in srgb,var(--edo-accent) 9%,transparent); }
+.n5eb-edo-tracker-dialog .tracker-card header { display:flex;justify-content:space-between;gap:12px;margin-bottom:8px;font-size:15px; }
+.n5eb-edo-tracker-dialog .tracker-progress { height:13px;overflow:hidden;border:1px solid color-mix(in srgb,var(--edo-accent) 65%,#000);border-radius:99px;background:rgba(0,0,0,.35); }
+.n5eb-edo-tracker-dialog .tracker-progress>span { display:block;height:100%;background:var(--edo-accent);transition:width .15s ease; }
+.n5eb-edo-tracker-dialog .tracker-controls,
+.n5eb-edo-tracker-dialog footer { display:flex;gap:7px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:10px; }
+.n5eb-edo-tracker-dialog .edo-list { display:grid;gap:6px;max-height:390px;overflow:auto; }
+.n5eb-edo-tracker-dialog .edo-row { display:flex;justify-content:space-between;gap:12px;align-items:center;padding:8px;border-left:3px solid rgba(255,255,255,.18);background:rgba(0,0,0,.15); }
+.n5eb-edo-tracker-dialog .edo-row>div:first-child { display:grid;gap:2px; }
+.n5eb-edo-tracker-dialog .edo-row>div:first-child span { font-size:11px;opacity:.78; }
+.n5eb-edo-tracker-dialog .row-actions { display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:flex-end; }
+.n5eb-edo-tracker-dialog .status { padding:3px 7px;border:1px solid rgba(255,255,255,.15);border-radius:99px;font-size:11px;opacity:.65; }
+.n5eb-edo-tracker-dialog .status.active { color:#83d78d;border-color:#83d78d;opacity:1; }
+.n5eb-edo-tracker-dialog .status.danger { color:#ff7777;border-color:#d64242;opacity:1; }
+.n5eb-edo-tracker-button,.n5eb-edo-create-button,.n5eb-edo-summon-button,.n5eb-edo-recalculate-button { color:#a43138 !important; }
+
+.n5eb-edo-creator-form { --edo-accent:#a43138;display:grid;gap:12px; }
+.n5eb-edo-creator-form .creator-note { margin:0;padding:9px 11px;border-left:4px solid var(--edo-accent);background:color-mix(in srgb,var(--edo-accent) 10%,transparent); }
+.n5eb-edo-creator-form .creator-grid { display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:9px 12px; }
+.n5eb-edo-creator-form label { display:grid;gap:4px; }
+.n5eb-edo-creator-form label>span,
+.n5eb-edo-creator-form legend { font-weight:700; }
+.n5eb-edo-creator-form input,
+.n5eb-edo-creator-form select { width:100%; }
+.n5eb-edo-creator-form fieldset { margin:0;padding:10px;border:1px solid color-mix(in srgb,var(--edo-accent) 55%,transparent);border-radius:6px;background:color-mix(in srgb,var(--edo-accent) 6%,transparent); }
+.n5eb-edo-creator-form fieldset p { margin:0 0 7px;font-size:12px;opacity:.78; }
+.n5eb-edo-creator-form .ability-grid { display:grid;grid-template-columns:repeat(6,minmax(70px,1fr));gap:7px; }
+.n5eb-edo-creator-form .ability-grid input { text-align:center; }
+.n5eb-edo-creator-form .creator-columns { display:grid;grid-template-columns:.8fr 1fr 1.35fr;gap:10px;align-items:stretch; }
+.n5eb-edo-creator-form .creator-columns fieldset { display:flex;flex-direction:column; }
+.n5eb-edo-creator-form .creator-columns select { flex:1;min-height:220px; }
+.n5eb-edo-chat h3 { color:#a43138; }
+
+@media (max-width:1000px) {
+  .n5eb-edo-tracker-strip { grid-template-columns:1fr 1fr; }
+  .n5eb-edo-creator-form .creator-columns { grid-template-columns:1fr; }
+}
+@media (max-width:700px) {
+  .n5eb-edo-tracker-strip,.n5eb-edo-creator-form .creator-grid { grid-template-columns:1fr; }
+  .n5eb-edo-creator-form .ability-grid { grid-template-columns:repeat(3,1fr); }
+  .n5eb-edo-tracker-dialog .edo-row { align-items:flex-start;flex-direction:column; }
+}
