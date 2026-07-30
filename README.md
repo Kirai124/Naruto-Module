@@ -1,5 +1,5 @@
-# N5eB Class Mod Library 0.13.4
-## Version 0.13.4 creator fix
+# N5eB Class Mod Library 0.13.5
+## Version 0.13.5 creator fix
 
 - Fixes the DialogV2 nested-form bug that caused the Creator wrapper to be discarded by the browser. This was the reason the layout appeared as unstyled text and all step buttons were inactive.
 - The Normal / Elite / Solo selection remains the first window.

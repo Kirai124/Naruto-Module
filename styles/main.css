@@ -1880,3 +1880,103 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Edo Tensei 0.13.5: stable scroll areas and non-overlapping controls */
+.n5eb-edo-creator-window .window-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden !important;
+}
+
+.n5eb-edo-creator-window .dialog-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.n5eb-edo-creator-window .n5eb-edo-creator-shell {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.n5eb-edo-creator-window .form-footer,
+.n5eb-edo-creator-window .dialog-buttons {
+  position: static !important;
+  inset: auto !important;
+  flex: 0 0 auto;
+  z-index: 20;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: #07101a;
+  box-shadow: 0 -8px 18px rgba(0,0,0,0.22);
+}
+
+.n5eb-edo-creator-shell .creator-workspace {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.n5eb-edo-creator-shell .creator-left {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 10px;
+  min-height: 0;
+  overflow: hidden;
+  padding-right: 4px;
+}
+
+.n5eb-edo-creator-shell .creator-left > .creator-step {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-content: start;
+  padding-right: 7px;
+  padding-bottom: 4px;
+  scrollbar-gutter: stable;
+}
+
+.n5eb-edo-creator-shell .creator-right {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 7px;
+  scrollbar-gutter: stable;
+}
+
+.n5eb-edo-creator-shell .creator-step-footer {
+  position: static;
+  bottom: auto;
+  z-index: 5;
+  margin: 0;
+  flex: 0 0 auto;
+  box-shadow: 0 -8px 18px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 1180px) {
+  .n5eb-edo-creator-window .window-content,
+  .n5eb-edo-creator-window .dialog-content {
+    overflow: auto !important;
+  }
+
+  .n5eb-edo-creator-window .n5eb-edo-creator-shell {
+    height: auto;
+    overflow: visible;
+  }
+
+  .n5eb-edo-creator-shell .creator-left {
+    display: flex;
+    overflow: visible;
+  }
+
+  .n5eb-edo-creator-shell .creator-left > .creator-step,
+  .n5eb-edo-creator-shell .creator-right {
+    overflow: visible;
+  }
+}

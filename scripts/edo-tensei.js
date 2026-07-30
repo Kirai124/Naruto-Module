@@ -764,7 +764,7 @@ async function openEdoCreator(actor, requestedTier=null) {
     };
     const dialog = new foundry.applications.api.DialogV2({
       window:{title:`${tierUi.label} erstellen — ${actor.name}`,icon:tierUi.icon,resizable:true},
-      position:{width:1400,height:860},
+      position:{width:Math.min(1400, Math.max(960, window.innerWidth - 70)),height:Math.min(860, Math.max(680, window.innerHeight - 70))},
       classes:["n5eb-edo-creator-window",`tier-${tier}`],
       content:creatorHtml(actor, blessings, tier),
       buttons:[
