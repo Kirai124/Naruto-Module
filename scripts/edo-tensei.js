@@ -475,20 +475,82 @@ function enforceCreatorChoiceLimit(form, blessingDocs, event) {
     }
   }
 }
+function creatorRankValue(form) {
+  return String(form?.elements?.namedItem?.("rank")?.value ?? "d").toLowerCase();
+}
+function updateAbilityBudget(form, {clampScores=false}={}) {
+  const rank = creatorRankValue(form);
+  const rankData = RANK_DATA[rank] ?? RANK_DATA.d;
+  let used = 0;
+  for (const ability of ["str","dex","con","int","wis","cha"]) {
+    const input = form.elements.namedItem(ability);
+    if (!(input instanceof HTMLInputElement)) continue;
+    input.max = String(rankData.cap);
+    if (clampScores && Number(input.value) > rankData.cap) input.value = String(rankData.cap);
+    const score = clamp(input.value || 16, 1, rankData.cap);
+    used += Math.max(0, score - 16);
+  }
+  const budget = form.querySelector?.("[data-ability-budget]");
+  if (budget) {
+    budget.textContent = `${used}/${rankData.budget} Punkte`;
+    budget.classList.toggle("over-budget", used > rankData.budget);
+  }
+  const cap = form.querySelector?.("[data-ability-cap]");
+  if (cap) cap.textContent = `Maximalwert ${rankData.cap}`;
+}
+function setCreatorStep(dialog, step) {
+  const root = dialog.element;
+  const form = root?.querySelector?.("[data-edo-creator-form]");
+  if (!form) return;
+  const maxStep = Number(form.dataset.maxStep || 4);
+  step = clamp(step, 1, maxStep);
+  form.dataset.currentStep = String(step);
+  form.querySelectorAll?.("[data-creator-step]").forEach(section => {
+    section.hidden = Number(section.dataset.creatorStep) !== step;
+  });
+  form.querySelectorAll?.("[data-creator-step-button]").forEach(button => {
+    const buttonStep = Number(button.dataset.creatorStepButton);
+    button.classList.toggle("active", buttonStep === step);
+    button.classList.toggle("complete", buttonStep < step);
+    button.setAttribute("aria-current", buttonStep === step ? "step" : "false");
+  });
+  const label = form.querySelector?.("[data-current-step-label]");
+  if (label) label.textContent = `Schritt ${step} von ${maxStep}`;
+  form.querySelectorAll?.("[data-step-prev]").forEach(button => button.disabled = step <= 1);
+  form.querySelectorAll?.("[data-step-next]").forEach(button => {
+    button.hidden = step >= maxStep;
+  });
+  form.querySelector?.(`[data-creator-step="${step}"]`)?.scrollTo?.({top:0,behavior:"smooth"});
+}
 function activateCreator(dialog, actor, blessingDocs) {
   const root = dialog.element;
   const form = root?.querySelector?.("[data-edo-creator-form]");
   if (!form) return;
-  const refresh = () => {
+  const refresh = event => {
     const living = form.elements.namedItem("vessel")?.value === "living";
     form.querySelector(".living-modifier")?.classList.toggle("is-hidden", !living);
+    const rankChanged = event?.target?.name === "rank";
+    updateAbilityBudget(form,{clampScores:rankChanged});
     updateCreatorPreview(dialog, actor, blessingDocs);
   };
   form.addEventListener("input", refresh);
   form.addEventListener("change",event=>{
     enforceCreatorChoiceLimit(form,blessingDocs,event);
-    refresh();
+    refresh(event);
   });
+  form.querySelectorAll?.("[data-creator-step-button]").forEach(button => button.addEventListener("click",event=>{
+    event.preventDefault();
+    setCreatorStep(dialog,Number(button.dataset.creatorStepButton));
+  }));
+  form.querySelectorAll?.("[data-step-next]").forEach(button => button.addEventListener("click",event=>{
+    event.preventDefault();
+    setCreatorStep(dialog,Number(form.dataset.currentStep || 1)+1);
+  }));
+  form.querySelectorAll?.("[data-step-prev]").forEach(button => button.addEventListener("click",event=>{
+    event.preventDefault();
+    setCreatorStep(dialog,Number(form.dataset.currentStep || 1)-1);
+  }));
+  setCreatorStep(dialog,1);
   refresh();
 }
 function checklistOption({name,value,label,subtext="",disabled=false,badge="",dataAttributes=""}) {
@@ -499,13 +561,47 @@ function checklistOption({name,value,label,subtext="",disabled=false,badge="",da
     ${badge ? `<span class="check-badge">${esc(badge)}</span>` : ""}
   </label>`;
 }
+function rankOptionCard(rank, {tier,cmLevel}) {
+  const data = RANK_DATA[rank];
+  const rankIndex = RANK_ORDER.indexOf(rank);
+  const solo = tier === "solo";
+  const available = solo ? rank === "s" : rankIndex < cmLevel;
+  const selected = solo ? rank === "s" : rank === "d";
+  const lock = solo && rank !== "s"
+    ? "Solo ist fest S-Rank"
+    : !available ? `Benötigt Class-Mod-Level ${rankIndex + 1}` : "Verfügbar";
+  return `<label class="creator-rank-option ${available ? "" : "disabled"}">
+    <input type="radio" name="rank" value="${rank}" ${selected ? "checked" : ""} ${available ? "" : "disabled"}>
+    <span class="rank-letter">${rank.toUpperCase()}</span>
+    <span class="rank-copy">
+      <strong>${esc(data.label)}</strong>
+      <small>Stufe ${data.level} · ${data.slots} Slots · ${data.speed} ft.</small>
+      <em>${data.budget} Attributspunkte · Cap ${data.cap}</em>
+    </span>
+    <span class="rank-state"><i class="fas ${available ? "fa-check" : "fa-lock"}"></i>${esc(lock)}</span>
+  </label>`;
+}
+function roleOptionCard(role, label, selected=false) {
+  const details = {
+    caster:["fa-hat-wizard","Mehr Jutsu Slots"],
+    controller:["fa-link","Bonus auf Save DC"],
+    defender:["fa-shield-halved","Bonus auf Armor Class"],
+    lurker:["fa-user-ninja","Lethal Attack"],
+    striker:["fa-hand-fist","Multiattack-Fokus"],
+    supporter:["fa-hand-holding-medical","Stärkere Heilung"]
+  };
+  const [icon,description] = details[role] ?? ["fa-star","Kampfrolle"];
+  return `<label class="creator-role-option">
+    <input type="radio" name="role" value="${role}" ${selected ? "checked" : ""}>
+    <span class="role-icon"><i class="fas ${icon}"></i></span>
+    <span><strong>${esc(label)}</strong><small>${esc(description)}</small></span>
+  </label>`;
+}
 function creatorHtml(actor, blessingDocs, fixedTier) {
   const cmLevel = classModLevel(actor);
   const tier = String(fixedTier ?? "standard");
   const tierData = TIER_DATA[tier] ?? TIER_DATA.standard;
   const tierUi = TIER_UI[tier] ?? TIER_UI.standard;
-  const rankKeys = tier === "solo" ? ["s"] : RANK_ORDER.slice(0, cmLevel);
-  const rankOptions = rankKeys.map(rank => `<option value="${rank}">${RANK_DATA[rank].label} · Level ${RANK_DATA[rank].level}</option>`).join("");
   const abilities = optionsFromConfig(CONFIG.DND5E.abilities).map(([key,label]) => `<option value="${key}">${esc(label)}</option>`).join("");
   const saveOptions = optionsFromConfig(CONFIG.DND5E.abilities).map(([key,label]) => checklistOption({name:"saves",value:key,label,subtext:key.toUpperCase()})).join("");
   const skillOptions = optionsFromConfig(CONFIG.DND5E.skills).map(([key,label]) => checklistOption({name:"skills",value:key,label,subtext:key.toUpperCase()})).join("");
@@ -517,71 +613,107 @@ function creatorHtml(actor, blessingDocs, fixedTier) {
     const requirement = allowed ? `Unholy Blessing${minimum === "standard" ? "" : ` · ab ${TIER_UI[minimum]?.shortLabel ?? minimum}`}` : `Benötigt ${TIER_UI[minimum]?.shortLabel ?? minimum}`;
     return checklistOption({name:"blessings",value:doc.id,label:doc.name,subtext:requirement,disabled:!allowed,badge:`${cost} P`,dataAttributes:`data-blessing-id="${doc.id}"`});
   }).join("");
-  const scoreInputs = ["str","dex","con","int","wis","cha"].map(a => `<label class="ability-input"><span>${a.toUpperCase()}</span><input type="number" name="${a}" value="16" min="1" max="26"></label>`).join("");
+  const scoreInputs = ["str","dex","con","int","wis","cha"].map(a => `<label class="ability-input"><span>${a.toUpperCase()}</span><input type="number" name="${a}" value="16" min="1" max="26"><small>Basis 16</small></label>`).join("");
   const maxSkills = 5 + tierData.extraSkills;
+  const rankOptions = RANK_ORDER.map(rank => rankOptionCard(rank,{tier,cmLevel})).join("");
+  const roleOptions = Object.entries(ROLE_LABELS).map(([role,label]) => roleOptionCard(role,label,role === "striker")).join("");
+  const allRolesNote = cmLevel >= 4 ? `<div class="creator-info"><i class="fas fa-circle-info"></i><span>Ab Class-Mod-Level 4 gelten mechanisch alle Summoning Roles gleichzeitig. Die Auswahl hier bestimmt die primäre Anzeige des Edo Tensei.</span></div>` : "";
 
-  return `<form class="n5eb-edo-creator-form n5eb-edo-creator-shell tier-${tier}" data-edo-creator-form>
+  return `<form class="n5eb-edo-creator-form n5eb-edo-creator-shell tier-${tier}" data-edo-creator-form data-current-step="1" data-max-step="4">
     <input type="hidden" name="tier" value="${tier}">
-    <section class="creator-left">
-      <div class="creator-topline">
-        <div class="creator-heading">
-          <span class="creator-tier-icon"><i class="${tierUi.icon}"></i></span>
-          <div>
-            <p class="eyebrow">N5eB · ${esc(tierUi.shortLabel)} Creator</p>
-            <h1>${esc(tierUi.label)} erstellen</h1>
-            <p class="creator-note">${esc(tierUi.description)}</p>
-          </div>
+    <header class="creator-topline">
+      <div class="creator-heading">
+        <span class="creator-tier-icon"><i class="${tierUi.icon}"></i></span>
+        <div>
+          <p class="eyebrow">N5eB · ${esc(tierUi.shortLabel)} Creator</p>
+          <h1>${esc(tierUi.label)} erstellen</h1>
+          <p class="creator-note">${esc(tierUi.description)}</p>
         </div>
-        <div class="creator-counter"><strong>${tierData.chargeCost}</strong><span>Unholy Charge${tierData.chargeCost === 1 ? "" : "s"}</span></div>
       </div>
+      <div class="creator-counter"><strong>${tierData.chargeCost}</strong><span>Unholy Charge${tierData.chargeCost === 1 ? "" : "s"}</span></div>
+    </header>
 
-      <section class="creator-tier-banner">
-        <span><strong>${tierData.hp}×</strong> HP</span>
-        <span><strong>${tierData.slots}×</strong> Jutsu Slots</span>
-        <span><strong>${maxSkills}</strong> Skills</span>
-        <span><strong>${tierData.eliteActions}</strong> Elite Actions</span>
-      </section>
-
-      <section class="creator-card">
-        <header><h3>1. Grunddaten</h3><span>Identität und Berechnung</span></header>
-        <div class="creator-grid creator-grid-main">
-          <label><span>Name</span><input name="name" value="${esc(tierUi.label)}" required></label>
-          <label><span>Clan / Lineage</span><input name="clan" placeholder="Optional"></label>
-          <label><span>Rank</span><select name="rank">${rankOptions}</select></label>
-          <label><span>Primary Role</span><select name="role">${Object.entries(ROLE_LABELS).map(([k,v])=>`<option value="${k}" ${k==='striker'?'selected':''}>${v}</option>`).join('')}</select></label>
-          <label><span>Toughness</span><input type="number" name="toughness" value="10" min="0"></label>
-          <label><span>Defensive Ability</span><select name="defenseAbility">${abilities.replace('value="dex"','value="dex" selected')}</select></label>
-          <label><span>Jutsu Ability</span><select name="jutsuAbility">${abilities.replace('value="int"','value="int" selected')}</select></label>
-          <label><span>Vessel</span><select name="vessel"><option value="intact">Intact</option><option value="decayed">Rotting / Decayed (+3 DC)</option><option value="living">Living Host (-1 to -5 DC)</option></select></label>
-          <label class="living-modifier"><span>Living Host Modifier</span><input type="number" name="livingModifier" value="1" min="1" max="5"></label>
-        </div>
-      </section>
-
-      <section class="creator-card">
-        <header><h3>2. Ability Scores</h3><span>Base 16</span></header>
-        <p class="helper-text">C/B/A/S-Rank verteilen insgesamt 6 / 12 / 18 / 24 zusätzliche Punkte. Die Höchstwerte liegen bei 20 / 22 / 24 / 26.</p>
-        <div class="ability-grid modern">${scoreInputs}</div>
-      </section>
-
-      <section class="creator-card selection-card">
-        <header><h3>3. Saving Throws</h3><span data-save-count>0/3</span></header>
-        <p class="helper-text">Wähle bis zu drei Saving-Throw-Proficiencies.</p>
-        <div class="creator-check-grid saves">${saveOptions}</div>
-      </section>
-
-      <section class="creator-card selection-card">
-        <header><h3>4. Creature Skills</h3><span data-skill-count>0/${maxSkills}</span></header>
-        <p class="helper-text">${esc(tierUi.shortLabel)} Edo Tensei können bis zu ${maxSkills} Skills erhalten. Auswahlen nach dem fünften Skill erhalten automatisch Mastery.</p>
-        <div class="creator-check-list skills">${skillOptions}</div>
-      </section>
-
-      <section class="creator-card selection-card">
-        <header><h3>5. Unholy Blessings</h3><span data-blessing-count>0/5</span></header>
-        <p class="helper-text">Die Gesamtkosten dürfen 5 Punkte nicht überschreiten. Nicht verfügbare Blessings werden ausgegraut.</p>
-        <div class="creator-check-list blessings">${blessingOptions}</div>
-      </section>
+    <section class="creator-tier-banner">
+      <span><strong>${tierData.hp}×</strong> HP</span>
+      <span><strong>${tierData.slots}×</strong> Jutsu Slots</span>
+      <span><strong>${maxSkills}</strong> Skills</span>
+      <span><strong>${tierData.eliteActions}</strong> Elite Actions</span>
     </section>
-    <aside class="creator-right" data-edo-creator-preview></aside>
+
+    <nav class="creator-step-nav" aria-label="Edo-Tensei-Erstellung">
+      <button type="button" data-creator-step-button="1"><span>1</span><strong>Rang & Rolle</strong><small>Grunddaten</small></button>
+      <button type="button" data-creator-step-button="2"><span>2</span><strong>Ability Scores</strong><small>Attribute verteilen</small></button>
+      <button type="button" data-creator-step-button="3"><span>3</span><strong>Saves & Skills</strong><small>Proficiencies</small></button>
+      <button type="button" data-creator-step-button="4"><span>4</span><strong>Blessings</strong><small>Bis 5 Punkte</small></button>
+    </nav>
+
+    <div class="creator-workspace">
+      <section class="creator-left">
+        <section class="creator-step" data-creator-step="1">
+          <section class="creator-card prominent">
+            <header><h3>Rang auswählen</h3><span>Bestimmt Stufe, Slots und Attributsbudget</span></header>
+            <div class="creator-rank-grid">${rankOptions}</div>
+          </section>
+
+          <section class="creator-card prominent">
+            <header><h3>Summoning Role auswählen</h3><span>Bestimmt den Kampfschwerpunkt</span></header>
+            ${allRolesNote}
+            <div class="creator-role-grid">${roleOptions}</div>
+          </section>
+
+          <section class="creator-card">
+            <header><h3>Grunddaten</h3><span>Identität und Basiswerte</span></header>
+            <div class="creator-grid creator-grid-main">
+              <label><span>Name</span><input name="name" value="${esc(tierUi.label)}" required></label>
+              <label><span>Clan / Lineage</span><input name="clan" placeholder="Optional"></label>
+              <label><span>Toughness</span><input type="number" name="toughness" value="10" min="0"></label>
+              <label><span>Defensive Ability</span><select name="defenseAbility">${abilities.replace('value="dex"','value="dex" selected')}</select></label>
+              <label><span>Jutsu Ability</span><select name="jutsuAbility">${abilities.replace('value="int"','value="int" selected')}</select></label>
+              <label><span>Vessel</span><select name="vessel"><option value="intact">Intact</option><option value="decayed">Rotting / Decayed (+3 DC)</option><option value="living">Living Host (-1 to -5 DC)</option></select></label>
+              <label class="living-modifier is-hidden"><span>Living Host Modifier</span><input type="number" name="livingModifier" value="1" min="1" max="5"></label>
+            </div>
+          </section>
+        </section>
+
+        <section class="creator-step" data-creator-step="2" hidden>
+          <section class="creator-card prominent ability-section">
+            <header><h3>Ability Scores verteilen</h3><div class="ability-budget"><strong data-ability-budget>0/0 Punkte</strong><span data-ability-cap>Maximalwert 16</span></div></header>
+            <p class="helper-text">Alle Werte starten bei 16. Der ausgewählte Rang bestimmt, wie viele zusätzliche Punkte verteilt werden dürfen und wie hoch ein einzelner Wert steigen kann.</p>
+            <div class="ability-grid modern">${scoreInputs}</div>
+            <div class="creator-info"><i class="fas fa-calculator"></i><span>HP verwendet Toughness + CON-Modifikator. AC verwendet die gewählte Defensive Ability. Die Vorschau rechts aktualisiert sich sofort.</span></div>
+          </section>
+        </section>
+
+        <section class="creator-step" data-creator-step="3" hidden>
+          <section class="creator-card selection-card">
+            <header><h3>Saving Throws</h3><span data-save-count>0/3</span></header>
+            <p class="helper-text">Wähle bis zu drei Saving-Throw-Proficiencies.</p>
+            <div class="creator-check-grid saves">${saveOptions}</div>
+          </section>
+
+          <section class="creator-card selection-card">
+            <header><h3>Creature Skills</h3><span data-skill-count>0/${maxSkills}</span></header>
+            <p class="helper-text">${esc(tierUi.shortLabel)} Edo Tensei können bis zu ${maxSkills} Skills erhalten. Auswahlen nach dem fünften Skill erhalten automatisch Mastery.</p>
+            <div class="creator-check-list skills">${skillOptions}</div>
+          </section>
+        </section>
+
+        <section class="creator-step" data-creator-step="4" hidden>
+          <section class="creator-card selection-card">
+            <header><h3>Unholy Blessings</h3><span data-blessing-count>0/5</span></header>
+            <p class="helper-text">Die Gesamtkosten dürfen 5 Punkte nicht überschreiten. Nicht verfügbare Blessings werden ausgegraut. Soul Fragment kostet bei S-Rank 2 Punkte.</p>
+            <div class="creator-check-list blessings">${blessingOptions}</div>
+          </section>
+        </section>
+
+        <footer class="creator-step-footer">
+          <button type="button" data-step-prev><i class="fas fa-chevron-left"></i> Zurück</button>
+          <span data-current-step-label>Schritt 1 von 4</span>
+          <button type="button" data-step-next>Weiter <i class="fas fa-chevron-right"></i></button>
+        </footer>
+      </section>
+      <aside class="creator-right" data-edo-creator-preview></aside>
+    </div>
   </form>`;
 }
 
@@ -610,7 +742,7 @@ async function openEdoCreator(actor, requestedTier=null) {
     };
     const dialog = new foundry.applications.api.DialogV2({
       window:{title:`${tierUi.label} erstellen — ${actor.name}`,icon:tierUi.icon,resizable:true},
-      position:{width:1320,height:"auto"},
+      position:{width:1400,height:860},
       classes:["n5eb-edo-creator-window",`tier-${tier}`],
       content:creatorHtml(actor, blessings, tier),
       buttons:[

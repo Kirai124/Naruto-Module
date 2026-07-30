@@ -1482,3 +1482,401 @@
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
+
+/* Edo Tensei 0.13.3: complete stepped creator */
+.n5eb-edo-creator-window .window-content {
+  overflow: hidden;
+}
+
+.n5eb-edo-creator-shell {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto minmax(0, 1fr);
+  gap: 12px;
+  min-height: 0;
+  height: min(760px, calc(100vh - 150px));
+  max-height: calc(100vh - 150px);
+}
+
+.n5eb-edo-creator-shell .creator-topline {
+  margin: 0;
+}
+
+.n5eb-edo-creator-shell .creator-tier-banner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--edo-line);
+  border-radius: 12px;
+  background: rgba(8, 16, 26, 0.86);
+}
+
+.n5eb-edo-creator-shell .creator-tier-banner > span {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 9px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.035);
+  color: var(--edo-soft);
+  font-size: 12px;
+}
+
+.n5eb-edo-creator-shell .creator-tier-banner strong {
+  color: var(--edo-strong);
+  font-size: 15px;
+}
+
+.n5eb-edo-creator-shell .creator-step-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.n5eb-edo-creator-shell .creator-step-nav button {
+  display: grid;
+  grid-template-columns: 34px minmax(0,1fr);
+  grid-template-rows: auto auto;
+  gap: 1px 9px;
+  align-items: center;
+  min-height: 55px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 11px;
+  background: rgba(8, 16, 26, 0.78);
+  text-align: left;
+}
+
+.n5eb-edo-creator-shell .creator-step-nav button > span {
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.16);
+  color: var(--edo-soft);
+  font-weight: 800;
+}
+
+.n5eb-edo-creator-shell .creator-step-nav button strong {
+  color: var(--edo-strong);
+  line-height: 1.1;
+}
+
+.n5eb-edo-creator-shell .creator-step-nav button small {
+  color: var(--edo-soft);
+}
+
+.n5eb-edo-creator-shell .creator-step-nav button.active {
+  border-color: color-mix(in srgb, var(--edo-accent) 58%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 13%, rgba(8, 16, 26, 0.9));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--edo-accent) 18%, transparent);
+}
+
+.n5eb-edo-creator-shell .creator-step-nav button.active > span,
+.n5eb-edo-creator-shell .creator-step-nav button.complete > span {
+  border-color: var(--edo-accent);
+  background: color-mix(in srgb, var(--edo-accent) 24%, rgba(8,16,26,1));
+  color: #fff;
+}
+
+.n5eb-edo-creator-shell .creator-workspace {
+  display: grid;
+  grid-template-columns: minmax(540px, 1.12fr) minmax(390px, 0.88fr);
+  gap: 14px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.n5eb-edo-creator-shell .creator-left,
+.n5eb-edo-creator-shell .creator-right {
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.n5eb-edo-creator-shell .creator-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 4px;
+}
+
+.n5eb-edo-creator-shell .creator-right {
+  display: block;
+  padding-right: 4px;
+}
+
+.n5eb-edo-creator-shell .creator-preview-card {
+  min-height: auto;
+}
+
+.n5eb-edo-creator-shell .creator-step {
+  display: grid;
+  gap: 12px;
+}
+
+.n5eb-edo-creator-shell .creator-step[hidden] {
+  display: none !important;
+}
+
+.n5eb-edo-creator-shell .creator-card.prominent {
+  border-color: color-mix(in srgb, var(--edo-accent) 25%, var(--edo-line));
+}
+
+.n5eb-edo-creator-shell .creator-rank-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.n5eb-edo-creator-shell .creator-rank-option,
+.n5eb-edo-creator-shell .creator-role-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.n5eb-edo-creator-shell .creator-rank-option input,
+.n5eb-edo-creator-shell .creator-role-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.n5eb-edo-creator-shell .creator-rank-option {
+  display: grid;
+  grid-template-columns: 36px minmax(0,1fr);
+  grid-template-rows: auto auto;
+  gap: 5px 8px;
+  min-height: 118px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 11px;
+  background: rgba(5, 12, 20, 0.78);
+}
+
+.n5eb-edo-creator-shell .creator-rank-option:hover:not(.disabled),
+.n5eb-edo-creator-shell .creator-role-option:hover {
+  border-color: color-mix(in srgb, var(--edo-accent) 42%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 8%, rgba(5, 12, 20, 0.88));
+}
+
+.n5eb-edo-creator-shell .creator-rank-option:has(input:checked),
+.n5eb-edo-creator-shell .creator-role-option:has(input:checked) {
+  border-color: var(--edo-accent);
+  background: color-mix(in srgb, var(--edo-accent) 15%, rgba(7, 15, 24, 0.96));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--edo-accent) 30%, transparent);
+}
+
+.n5eb-edo-creator-shell .creator-rank-option.disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.n5eb-edo-creator-shell .rank-letter {
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.07);
+  color: var(--edo-strong);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.n5eb-edo-creator-shell .rank-copy {
+  display: grid;
+  gap: 3px;
+}
+
+.n5eb-edo-creator-shell .rank-copy strong {
+  color: var(--edo-strong);
+}
+
+.n5eb-edo-creator-shell .rank-copy small,
+.n5eb-edo-creator-shell .rank-copy em,
+.n5eb-edo-creator-shell .rank-state {
+  color: var(--edo-soft);
+  font-size: 10px;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+.n5eb-edo-creator-shell .rank-state {
+  grid-column: 1 / 3;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.n5eb-edo-creator-shell .creator-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.n5eb-edo-creator-shell .creator-role-option {
+  display: grid;
+  grid-template-columns: 38px minmax(0,1fr);
+  gap: 9px;
+  align-items: center;
+  min-height: 64px;
+  padding: 9px 10px;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 11px;
+  background: rgba(5, 12, 20, 0.78);
+}
+
+.n5eb-edo-creator-shell .role-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  color: var(--edo-accent);
+  font-size: 16px;
+}
+
+.n5eb-edo-creator-shell .creator-role-option > span:last-child {
+  display: grid;
+  gap: 2px;
+}
+
+.n5eb-edo-creator-shell .creator-role-option strong {
+  color: var(--edo-strong);
+}
+
+.n5eb-edo-creator-shell .creator-role-option small {
+  color: var(--edo-soft);
+}
+
+.n5eb-edo-creator-shell .creator-info {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0 0 10px;
+  padding: 9px 10px;
+  border: 1px solid rgba(79,160,255,0.16);
+  border-radius: 9px;
+  background: rgba(79,160,255,0.07);
+  color: var(--edo-soft);
+  font-size: 12px;
+}
+
+.n5eb-edo-creator-shell .creator-info i {
+  margin-top: 2px;
+  color: var(--edo-accent-2);
+}
+
+.n5eb-edo-creator-shell .ability-section > header {
+  align-items: center;
+}
+
+.n5eb-edo-creator-shell .ability-budget {
+  display: grid;
+  justify-items: end;
+  gap: 1px;
+}
+
+.n5eb-edo-creator-shell .ability-budget strong {
+  color: var(--edo-accent);
+  font-size: 14px;
+}
+
+.n5eb-edo-creator-shell .ability-budget strong.over-budget {
+  color: #ff7171;
+}
+
+.n5eb-edo-creator-shell .ability-budget span {
+  color: var(--edo-soft);
+  font-size: 10px;
+}
+
+.n5eb-edo-creator-shell .ability-input small {
+  color: var(--edo-soft);
+  text-align: center;
+  font-size: 10px;
+}
+
+.n5eb-edo-creator-shell .creator-step-footer {
+  position: sticky;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-top: auto;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 11px;
+  background: rgba(7, 14, 23, 0.97);
+  backdrop-filter: blur(8px);
+}
+
+.n5eb-edo-creator-shell .creator-step-footer button {
+  min-height: 36px;
+  border-radius: 9px;
+}
+
+.n5eb-edo-creator-shell .creator-step-footer button[data-step-prev] {
+  justify-self: start;
+}
+
+.n5eb-edo-creator-shell .creator-step-footer button[data-step-next] {
+  justify-self: end;
+  border-color: color-mix(in srgb, var(--edo-accent) 56%, transparent);
+  background: color-mix(in srgb, var(--edo-accent) 17%, rgba(8,16,26,1));
+}
+
+.n5eb-edo-creator-shell .creator-step-footer > span {
+  color: var(--edo-soft);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.n5eb-edo-creator-shell .is-hidden {
+  display: none !important;
+}
+
+@media (max-width: 1180px) {
+  .n5eb-edo-creator-shell {
+    height: auto;
+    max-height: none;
+  }
+  .n5eb-edo-creator-window .window-content {
+    overflow: auto;
+  }
+  .n5eb-edo-creator-shell .creator-workspace {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+  .n5eb-edo-creator-shell .creator-left,
+  .n5eb-edo-creator-shell .creator-right {
+    overflow: visible;
+  }
+  .n5eb-edo-creator-shell .creator-right {
+    order: -1;
+  }
+}
+
+@media (max-width: 820px) {
+  .n5eb-edo-creator-shell .creator-step-nav,
+  .n5eb-edo-creator-shell .creator-tier-banner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .n5eb-edo-creator-shell .creator-rank-grid,
+  .n5eb-edo-creator-shell .creator-role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

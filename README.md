@@ -1,5 +1,5 @@
-# N5eB Class Mod Library 0.13.2
-## Version 0.13.2 creator redesign
+# N5eB Class Mod Library 0.13.3
+## Version 0.13.3 creator redesign
 
 - The Edo creator now opens with a dedicated Normal / Elite / Solo selection window.
 - Each tier opens its own locked creator with the correct HP, Jutsu Slot, Skill, Action, DC, and Unholy Charge calculations.
