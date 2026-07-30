@@ -569,3 +569,62 @@
   .n5eb-edo-creator-form .ability-grid { grid-template-columns:repeat(3,1fr); }
   .n5eb-edo-tracker-dialog .edo-row { align-items:flex-start;flex-direction:column; }
 }
+
+/* Edo Tensei v0.13 ApplicationV2 sheet controls */
+.n5eb-edo-header-quick {
+  position: relative;
+  color: #d85b62 !important;
+}
+.n5eb-edo-header-quick .edo-plus {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  padding: 1px;
+  border-radius: 50%;
+  background: var(--color-bg, #111);
+  font-size: 0.55em;
+}
+.n5eb-edo-actor-strip {
+  --edo-accent: #a43138;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 8px;
+  padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, var(--edo-accent) 72%, #000);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--edo-accent) 14%, rgba(0, 0, 0, .35));
+}
+.n5eb-edo-actor-strip > div:first-child {
+  display: grid;
+  gap: 2px;
+}
+.n5eb-edo-actor-strip > div:first-child strong {
+  color: #d85b62;
+}
+.n5eb-edo-actor-strip > div:first-child span {
+  font-size: 11px;
+  opacity: .8;
+}
+.n5eb-edo-actor-strip .edo-actor-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.n5eb-edo-actor-strip button {
+  min-height: 34px;
+}
+.dnd5e2.sheet.actor .tab[data-tab="spells"] > .n5eb-edo-tracker-strip {
+  flex: 0 0 auto;
+}
+@media (max-width: 700px) {
+  .n5eb-edo-actor-strip {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .n5eb-edo-actor-strip .edo-actor-actions > button {
+    flex: 1;
+  }
+}

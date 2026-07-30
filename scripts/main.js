@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.12.0";
+const CONTENT_VERSION = "0.13.0";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -22,6 +22,8 @@ const SEALED_BEAST_TRACKER_FLAG = "sealedBeastTracker";
 const SEALED_BEAST_TRACKER_VERSION = 1;
 const SEALED_BEAST_ATTACK_FORMULA = "2*@prof+@classmods.sealed-beast-redux.levels";
 const SEALED_BEAST_SAVE_FORMULA = "12+@classmods.sealed-beast-redux.levels+@prof";
+const EDO_TENSEI_ATTACK_FORMULA = "@classmods.edo-tensei.levels+2*@prof";
+const EDO_TENSEI_SAVE_FORMULA = "12+@prof+floor(@details.level/2)";
 const SEALED_BEAST_AWAKENING_BY_LEVEL = Object.freeze({1:45, 2:110, 3:175, 4:220, 5:275});
 const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-small-blue.webp",
@@ -329,6 +331,10 @@ function getSealedBeastClassMod(actor) {
   return getClassMod(actor, "sealed-beast-redux");
 }
 
+function getEdoTenseiClassMod(actor) {
+  return getClassMod(actor, "edo-tensei");
+}
+
 function getManagedActorItem(actor, flag) {
   return asArray(actor?.items).find(item => item.getFlag?.(MODULE_ID, flag));
 }
@@ -574,6 +580,16 @@ function calculateFlyingThunderGodArtValues(actor) {
   };
 }
 
+function calculateEdoTenseiArtValues(actor) {
+  const characterLevel = Math.max(0, Number(actor?.system?.details?.level ?? 0));
+  const proficiency = Math.max(0, Number(actor?.system?.attributes?.prof ?? 0));
+  const classModLevel = Math.max(1, Number(getEdoTenseiClassMod(actor)?.system?.levels ?? 1));
+  return {
+    attack: classModLevel + (2 * proficiency),
+    save: 12 + proficiency + Math.floor(characterLevel / 2)
+  };
+}
+
 function getClassModArtsConfiguration(identifier) {
   if (identifier === "kama-seal") return {
     item: getKamaClassMod,
@@ -598,6 +614,12 @@ function getClassModArtsConfiguration(identifier) {
     calculate: calculateSealedBeastArtValues,
     attackFormula: SEALED_BEAST_ATTACK_FORMULA,
     saveFormula: SEALED_BEAST_SAVE_FORMULA
+  };
+  if (identifier === "edo-tensei") return {
+    item: getEdoTenseiClassMod,
+    calculate: calculateEdoTenseiArtValues,
+    attackFormula: EDO_TENSEI_ATTACK_FORMULA,
+    saveFormula: EDO_TENSEI_SAVE_FORMULA
   };
   return null;
 }
@@ -642,12 +664,17 @@ async function ensureSealedBeastArtsFormulas(actor) {
   return ensureClassModArtsValues(actor, "sealed-beast-redux");
 }
 
+async function ensureEdoTenseiArtsFormulas(actor) {
+  return ensureClassModArtsValues(actor, "edo-tensei");
+}
+
 async function syncClassModArtsForActor(actor) {
   if (!actor?.isOwner) return;
   await ensureKamaArtsFormulas(actor);
   await ensureFlyingThunderGodArtsFormulas(actor);
   await ensureTenseiganArtsFormulas(actor);
   await ensureSealedBeastArtsFormulas(actor);
+  await ensureEdoTenseiArtsFormulas(actor);
 }
 
 function calculateResonanceGain(actor, state) {
@@ -843,6 +870,7 @@ async function migrateExistingClassModActors() {
         if (getTenseiganClassMod(actor)) await migrateTenseiganActor(actor);
         if (getSealedBeastClassMod(actor)) await migrateSealedBeastActor(actor);
         await ensureFlyingThunderGodArtsFormulas(actor);
+        await ensureEdoTenseiArtsFormulas(actor);
       });
     } catch (error) {
       console.error(`${MODULE_ID} | Failed to migrate Class Mod actor ${actor.name}`, error);
@@ -2136,7 +2164,7 @@ function renderClassModRuntime(app, html) {
   renderTenseiganTrackerStrip(app, html);
   renderSealedBeastTrackerStrip(app, html);
   const actor = app.actor ?? app.document;
-  if (!actor?.isOwner || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor))) return;
+  if (!actor?.isOwner || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor))) return;
   queueKamaTask(actor, () => syncClassModArtsForActor(actor)).catch(error =>
     console.error(`${MODULE_ID} | Failed to refresh Class Mod Arts values for ${actor.name}`, error)
   );
@@ -2144,6 +2172,7 @@ function renderClassModRuntime(app, html) {
 
 Hooks.on("renderActorSheet", renderClassModRuntime);
 Hooks.on("renderCharacterActorSheet", renderClassModRuntime);
+Hooks.on("renderApplicationV2", renderClassModRuntime);
 
 Hooks.on("preCreateItem", (item, data, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id || item.parent?.documentName !== "Actor") return;
@@ -2157,10 +2186,11 @@ Hooks.on("createItem", async (item, options, userId) => {
   const isFtgClassMod = item.type === "classmod" && item.system?.identifier === "flying-thunder-god";
   const isTenseiganClassMod = item.type === "classmod" && item.system?.identifier === "tenseigan";
   const isSealedBeastClassMod = item.type === "classmod" && item.system?.identifier === "sealed-beast-redux";
+  const isEdoTenseiClassMod = item.type === "classmod" && item.system?.identifier === "edo-tensei";
   const kamaRelevant = isKamaClassMod || getSealTypeKey(item) || getSealEvolutionKey(item) || ["divine-rewrite","resonance-disruption","kama-seal"].includes(item.system?.identifier);
   const tenseiganRelevant = isTenseiganClassMod || item.getFlag?.(MODULE_ID,"celestialArt") || item.getFlag?.(MODULE_ID,"tenseiganController") || item.getFlag?.(MODULE_ID,"celestialChakraModeController");
   const sealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
-  if (!kamaRelevant && !isFtgClassMod && !tenseiganRelevant && !sealedRelevant && !getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor)) return;
+  if (!kamaRelevant && !isFtgClassMod && !tenseiganRelevant && !sealedRelevant && !isEdoTenseiClassMod && !getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor)) return;
   await queueKamaTask(actor, async () => {
     if (getKamaClassMod(actor) && (kamaRelevant || isKamaClassMod)) await migrateKamaActor(actor);
     if (getTenseiganClassMod(actor) && (tenseiganRelevant || isTenseiganClassMod)) await migrateTenseiganActor(actor);
@@ -2176,14 +2206,16 @@ Hooks.on("updateItem", async (item, changes, options, userId) => {
   const hasFtg = Boolean(getFlyingThunderGodClassMod(actor));
   const hasTenseigan = Boolean(getTenseiganClassMod(actor));
   const hasSealedBeast = Boolean(getSealedBeastClassMod(actor));
-  if (!hasKama && !hasFtg && !hasTenseigan && !hasSealedBeast) return;
+  const hasEdoTensei = Boolean(getEdoTenseiClassMod(actor));
+  if (!hasKama && !hasFtg && !hasTenseigan && !hasSealedBeast && !hasEdoTensei) return;
   const isKamaClassMod = item.type === "classmod" && item.system?.identifier === "kama-seal";
   const isFtgClassMod = item.type === "classmod" && item.system?.identifier === "flying-thunder-god";
   const isTenseiganClassMod = item.type === "classmod" && item.system?.identifier === "tenseigan";
   const isSealedBeastClassMod = item.type === "classmod" && item.system?.identifier === "sealed-beast-redux";
+  const isEdoTenseiClassMod = item.type === "classmod" && item.system?.identifier === "edo-tensei";
   const isSeal = getSealTypeKey(item) || getSealEvolutionKey(item);
   const isSealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
-  if (!isKamaClassMod && !isFtgClassMod && !isTenseiganClassMod && !isSeal && !isSealedRelevant) return;
+  if (!isKamaClassMod && !isFtgClassMod && !isTenseiganClassMod && !isEdoTenseiClassMod && !isSeal && !isSealedRelevant) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
     if (hasKama && (isKamaClassMod || isSeal)) { await syncSealEvolution(actor); await refreshKamaEffect(actor); }
@@ -2222,7 +2254,7 @@ Hooks.on("preUpdateActor", (actor, changes, options, userId) => {
 
 Hooks.on("updateActor", async (actor, changes, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id) return;
-  if (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor)) return;
+  if (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor)) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
     if (getTenseiganClassMod(actor)) {
@@ -2239,7 +2271,7 @@ Hooks.on("updateActor", async (actor, changes, options, userId) => {
 Hooks.on("createActiveEffect", async (effect, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id) return;
   const actor = getKamaActorFromEffect(effect);
-  if (!actor || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor))) return;
+  if (!actor || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor))) return;
   await queueKamaTask(actor, () => syncClassModArtsForActor(actor));
 });
 

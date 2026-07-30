@@ -23,6 +23,7 @@ const TIER_DATA = Object.freeze({
 });
 const ROLE_LABELS = Object.freeze({caster:"Caster", controller:"Controller", defender:"Defender", lurker:"Lurker", striker:"Striker", supporter:"Supporter"});
 const dialogs = new Map();
+const sheetObservers = new WeakMap();
 
 function asArray(collection) {
   if (!collection) return [];
@@ -558,23 +559,141 @@ function activateTracker(dialog,actor) {
   }));
 }
 
-function renderRoot(app,html) { return html?.[0] ?? html ?? app.element?.[0] ?? app.element; }
-function renderSummonerStrip(app,html) {
-  const actor = app.actor ?? app.document;
-  if (!getClassMod(actor)) return;
-  const root = renderRoot(app,html);
-  if (!root || root.querySelector("[data-edo-strip]")) return;
-  const target = root.querySelector(".jutsu-casting-overview") ?? root.querySelector(".sheet-body");
-  if (!target) return;
+function renderRoot(app, html) {
+  if (html instanceof HTMLElement) return html;
+  if (html?.[0] instanceof HTMLElement) return html[0];
+  if (app?.element instanceof HTMLElement) return app.element;
+  if (app?.element?.[0] instanceof HTMLElement) return app.element[0];
+  return null;
+}
+
+function actorFromSheetApplication(app) {
+  const actor = app?.actor ?? app?.document;
+  return actor?.documentName === "Actor" ? actor : null;
+}
+
+function buildSummonerStrip(actor) {
   const state = readTracker(actor);
   const active = activeEdoFor(actor).length;
   const section = document.createElement("section");
   section.className = "n5eb-edo-tracker-strip";
   section.dataset.edoStrip = "true";
-  section.innerHTML = `<button class="tracker-title" data-action="open-edo-tracker"><i class="fas fa-skull"></i> Edo Tensei</button><div class="tracker-mini"><span>Unholy Charges</span><strong>${state.chargesCurrent}/${state.chargesMax}</strong></div><div class="tracker-mini"><span>Active Edo</span><strong>${active}/${maxActive(actor)}</strong></div><button class="create-edo" data-action="create-edo"><i class="fas fa-plus"></i> Create Edo Tensei</button>`;
-  target.prepend(section);
-  section.querySelector('[data-action="open-edo-tracker"]')?.addEventListener("click",()=>openTracker(actor));
-  section.querySelector('[data-action="create-edo"]')?.addEventListener("click",()=>openEdoCreator(actor));
+  section.innerHTML = `<button type="button" class="tracker-title" data-action="open-edo-tracker"><i class="fas fa-skull"></i> Edo Tensei</button><div class="tracker-mini"><span>Unholy Charges</span><strong>${state.chargesCurrent}/${state.chargesMax}</strong></div><div class="tracker-mini"><span>Active Edo</span><strong>${active}/${maxActive(actor)}</strong></div><button type="button" class="create-edo" data-action="create-edo"><i class="fas fa-plus"></i> Create Edo Tensei</button>`;
+  section.querySelector('[data-action="open-edo-tracker"]')?.addEventListener("click", event => {
+    event.preventDefault();
+    openTracker(actor);
+  });
+  section.querySelector('[data-action="create-edo"]')?.addEventListener("click", event => {
+    event.preventDefault();
+    openEdoCreator(actor);
+  });
+  return section;
+}
+
+function injectSummonerStrip(root, actor) {
+  if (!root?.querySelector || root.querySelector("[data-edo-strip]")) return false;
+  const spellsTab = root.matches?.('.tab[data-tab="spells"]')
+    ? root
+    : root.querySelector('.tab[data-tab="spells"]');
+  const overview = root.matches?.(".jutsu-casting-overview")
+    ? root
+    : (spellsTab?.querySelector(".jutsu-casting-overview") ?? root.querySelector(".jutsu-casting-overview"));
+  const target = overview ?? spellsTab;
+  if (!target) return false;
+  const section = buildSummonerStrip(actor);
+  if (overview?.parentElement) overview.before(section);
+  else target.prepend(section);
+  return true;
+}
+
+function injectGeneratedEdoStrip(root, actor) {
+  const profile = actor?.getFlag?.(MODULE_ID, PROFILE_FLAG);
+  if (!profile || !root?.querySelector || root.querySelector("[data-edo-actor-strip]")) return false;
+  const body = root.querySelector(".sheet-body") ?? root.querySelector(".tab-body") ?? root;
+  if (!body?.prepend) return false;
+  const calc = profile.calculations ?? {};
+  const section = document.createElement("section");
+  section.className = "n5eb-edo-actor-strip";
+  section.dataset.edoActorStrip = "true";
+  section.innerHTML = `<div><strong><i class="fas fa-skull"></i> Generated Edo Tensei</strong><span>${esc(RANK_DATA[profile.rank]?.label ?? profile.rank)} · ${esc(TIER_DATA[profile.tier]?.label ?? profile.tier)} · AC ${calc.armorClass ?? "?"} · HP ${calc.hitPoints ?? "?"}</span></div><div class="edo-actor-actions"><button type="button" data-action="recalculate-edo"><i class="fas fa-calculator"></i> Recalculate</button><button type="button" data-action="toggle-edo"><i class="fas ${profile.active ? "fa-door-open" : "fa-hand-sparkles"}"></i> ${profile.active ? "Return" : "Summon"}</button></div>`;
+  section.querySelector('[data-action="recalculate-edo"]')?.addEventListener("click", event => {
+    event.preventDefault();
+    recalculateEdoActor(actor);
+  });
+  section.querySelector('[data-action="toggle-edo"]')?.addEventListener("click", event => {
+    event.preventDefault();
+    profile.active ? setEdoActive(actor, false) : performSummoningCheck(actor);
+  });
+  body.prepend(section);
+  return true;
+}
+
+function injectHeaderQuickButton(app, actor) {
+  const root = renderRoot(app, app?.element);
+  if (!root?.querySelector) return false;
+  const header = root.querySelector(".window-header");
+  if (!header) return false;
+  const controls = header.querySelector(".window-controls") ?? header;
+  const isSummoner = Boolean(getClassMod(actor));
+  const profile = actor.getFlag?.(MODULE_ID, PROFILE_FLAG);
+  const key = isSummoner ? "create" : profile ? "toggle" : null;
+  if (!key || controls.querySelector(`[data-edo-header-action="${key}"]`)) return false;
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "header-control n5eb-edo-header-quick";
+  button.dataset.edoHeaderAction = key;
+  if (isSummoner) {
+    button.title = "Create Edo Tensei";
+    button.setAttribute("aria-label", "Create Edo Tensei");
+    button.innerHTML = '<i class="fas fa-skull"></i><i class="fas fa-plus edo-plus"></i>';
+    button.addEventListener("click", event => { event.preventDefault(); openEdoCreator(actor); });
+  } else {
+    button.title = profile.active ? "Return Edo Tensei" : "Summon Edo Tensei";
+    button.setAttribute("aria-label", button.title);
+    button.innerHTML = `<i class="fas ${profile.active ? "fa-door-open" : "fa-hand-sparkles"}"></i>`;
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      profile.active ? setEdoActive(actor, false) : performSummoningCheck(actor);
+    });
+  }
+  controls.prepend(button);
+  return true;
+}
+
+function observeActorSheet(app, actor) {
+  const root = renderRoot(app, app?.element);
+  if (!root || sheetObservers.has(app) || typeof MutationObserver === "undefined") return;
+  const observer = new MutationObserver(() => {
+    if (getClassMod(actor)) injectSummonerStrip(root, actor);
+    else injectGeneratedEdoStrip(root, actor);
+    injectHeaderQuickButton(app, actor);
+  });
+  observer.observe(root, {childList:true, subtree:true});
+  sheetObservers.set(app, observer);
+}
+
+function renderEdoSheetRuntime(app, html) {
+  const actor = actorFromSheetApplication(app);
+  if (!actor) return;
+  const isSummoner = Boolean(getClassMod(actor));
+  const isGenerated = Boolean(actor.getFlag?.(MODULE_ID, PROFILE_FLAG));
+  if (!isSummoner && !isGenerated) return;
+  const root = renderRoot(app, html);
+  if (isSummoner) {
+    ensureTracker(actor).catch(error => console.error(`${MODULE_ID} | Could not initialize Edo Tensei tracker`, error));
+    globalThis.N5eBClassMods?.syncClassModArts?.(actor)?.catch?.(error =>
+      console.error(`${MODULE_ID} | Could not update Edo Tensei Arts values`, error)
+    );
+    injectSummonerStrip(root, actor);
+  } else injectGeneratedEdoStrip(root, actor);
+  injectHeaderQuickButton(app, actor);
+  queueMicrotask(() => {
+    const liveRoot = renderRoot(app, app?.element);
+    if (isSummoner) injectSummonerStrip(liveRoot, actor);
+    else injectGeneratedEdoStrip(liveRoot, actor);
+    injectHeaderQuickButton(app, actor);
+    observeActorSheet(app, actor);
+  });
 }
 
 Hooks.once("ready",async()=>{
@@ -600,8 +719,28 @@ Hooks.on("getActorSheetHeaderButtons",(sheet,buttons)=>{
     buttons.unshift({label:"Recalculate Edo",class:"n5eb-edo-recalculate-button",icon:"fas fa-calculator",onclick:()=>recalculateEdoActor(actor)});
   }
 });
-Hooks.on("renderActorSheet",renderSummonerStrip);
-Hooks.on("renderCharacterActorSheet",renderSummonerStrip);
+Hooks.on("renderActorSheet",renderEdoSheetRuntime);
+Hooks.on("renderCharacterActorSheet",renderEdoSheetRuntime);
+Hooks.on("renderNPCActorSheet",renderEdoSheetRuntime);
+Hooks.on("renderApplicationV2",renderEdoSheetRuntime);
+Hooks.on("closeApplicationV2",app=>{
+  sheetObservers.get(app)?.disconnect?.();
+  sheetObservers.delete(app);
+});
+Hooks.on("getHeaderControlsApplicationV2",(app,controls)=>{
+  const actor = actorFromSheetApplication(app);
+  if (!actor) return;
+  if (getClassMod(actor)) {
+    const state = readTracker(actor);
+    controls.unshift({action:"n5ebEdoTracker",label:`Edo Tracker ${state.chargesCurrent}/${state.chargesMax}`,icon:"fa-solid fa-skull",classes:"n5eb-edo-tracker-button",visible:true,ownership:"OWNER",onClick:()=>openTracker(actor)});
+    controls.unshift({action:"n5ebCreateEdo",label:"Create Edo Tensei",icon:"fa-solid fa-plus",classes:"n5eb-edo-create-button",visible:true,ownership:"OWNER",onClick:()=>openEdoCreator(actor)});
+    return;
+  }
+  const profile = actor.getFlag?.(MODULE_ID,PROFILE_FLAG);
+  if (!profile) return;
+  controls.unshift({action:"n5ebRecalculateEdo",label:"Recalculate Edo",icon:"fa-solid fa-calculator",classes:"n5eb-edo-recalculate-button",visible:true,ownership:"OWNER",onClick:()=>recalculateEdoActor(actor)});
+  controls.unshift({action:"n5ebToggleEdo",label:profile.active?"Return Edo Tensei":"Summon Edo Tensei",icon:profile.active?"fa-solid fa-door-open":"fa-solid fa-hand-sparkles",classes:"n5eb-edo-summon-button",visible:true,ownership:"OWNER",onClick:()=>profile.active?setEdoActive(actor,false):performSummoningCheck(actor)});
+});
 Hooks.on("createItem",async(item,options,userId)=>{
   if (options?.[INTERNAL] || userId !== game.user.id || item.parent?.documentName !== "Actor") return;
   const actor = item.parent;
@@ -610,6 +749,11 @@ Hooks.on("createItem",async(item,options,userId)=>{
 Hooks.on("updateItem",async(item,changes,options,userId)=>{
   if (options?.[INTERNAL] || userId !== game.user.id || item.parent?.documentName !== "Actor") return;
   if (item.type === "classmod" && item.system?.identifier === CLASSMOD_ID) await ensureTracker(item.parent);
+});
+Hooks.on("updateActor",(actor,changes,options,userId)=>{
+  if (options?.[INTERNAL] || userId !== game.user.id || !getClassMod(actor)) return;
+  globalThis.N5eBClassMods?.syncClassModArts?.(actor)?.catch?.(error => console.error(`${MODULE_ID} | Edo Tensei Arts sync failed`, error));
+  refreshTracker(actor);
 });
 Hooks.on("preCreateItem",(item,data,options,userId)=>{
   const actor = item.parent;

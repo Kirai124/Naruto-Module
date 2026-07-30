@@ -37,6 +37,6 @@ Open **Actions → Build Foundry Release → Run workflow**, enter `v0.9.0`, and
 
 `https://github.com/Kirai124/Naruto-Module/releases/latest/download/module.json`
 
-## 0.12.0 release
+## 0.13.0 release
 
-Tag the release as `v0.12.0` and attach `n5eb-classmod-library-0.12.0.zip`. This release adds Edo Tensei and the cleanup migration for obsolete Superior Shinobi compendium folders.
+Tag the release as `v0.13.0` and attach `n5eb-classmod-library-0.13.0.zip`. This release fixes the ApplicationV2 Edo Tensei sheet controls and automatically repairs the Class Mod Arts Attack Bonus and Save DC on existing characters.

@@ -1,4 +1,13 @@
-# N5eB Class Mod Library 0.12.0
+# N5eB Class Mod Library 0.13.0
+## Version 0.13.0 fixes
+
+- Uses the Foundry ApplicationV2 render and header-control hooks, so the Edo Tensei controls now appear on the current N5eB character sheet.
+- Adds an always-visible skull-plus quick button in the sheet header and a full `Create Edo Tensei` strip above the Jutsu cards.
+- Repairs owned Edo Tensei Class Mod Arts values automatically: Attack Bonus = Class Mod level + twice proficiency; Save DC = 12 + proficiency + half character level.
+- Existing characters are repaired on world load, sheet render, actor updates, and Class Mod level changes.
+- Generated Edo actors receive visible Recalculate and Summon/Return controls on their sheets.
+- Re-runs the managed compendium cleanup, including obsolete duplicate Superior Shinobi folders.
+
 
 Creates the world compendium **N5eB Custom Class Mods** for N5eB 3.1.0 on Foundry VTT 13/14.
 
