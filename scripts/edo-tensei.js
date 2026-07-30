@@ -242,6 +242,21 @@ function calculateEdoTensei(input, blessingDocuments=[]) {
   };
 }
 
+function dialogRoot(dialog) {
+  const element = dialog?.element;
+  if (!element) return null;
+  if (element instanceof HTMLElement) return element;
+  if (element?.[0] instanceof HTMLElement) return element[0];
+  return null;
+}
+function creatorShell(dialog) {
+  return dialogRoot(dialog)?.querySelector?.("[data-edo-creator-shell]") ?? null;
+}
+function creatorDialogForm(dialog) {
+  const shell = creatorShell(dialog);
+  return shell?.closest?.("form") ?? dialogRoot(dialog)?.querySelector?.("form") ?? null;
+}
+
 function selectedValues(form, name) {
   const field = form?.elements?.namedItem?.(name);
   if (!field) return [];
@@ -323,16 +338,20 @@ async function chooseEdoTier(actor) {
       buttons:[{action:"cancel",label:"Abbrechen",icon:"fa-solid fa-xmark",callback:()=>finish(null)}],
       rejectClose:false
     });
-    dialog.addEventListener("render",()=>{
-      dialog.element?.querySelectorAll?.("[data-edo-tier]").forEach(button => button.addEventListener("click",async()=>{
+    const activateTierPicker = () => {
+      const root = dialogRoot(dialog);
+      if (!root || root.dataset.edoTierPickerActive === "true") return;
+      root.dataset.edoTierPickerActive = "true";
+      root.querySelectorAll?.("[data-edo-tier]").forEach(button => button.addEventListener("click",async()=>{
         const tier = button.dataset.edoTier;
         if (!tierAvailable(actor,tier)) return;
         finish(tier);
         await dialog.close();
       }));
-    });
+    };
+    dialog.addEventListener("render",activateTierPicker);
     dialog.addEventListener("close",()=>finish(null),{once:true});
-    dialog.render({force:true});
+    Promise.resolve(dialog.render({force:true})).then(activateTierPicker);
   });
 }
 function creatorPreviewHtml(actor, formData, blessingDocs) {
@@ -425,8 +444,8 @@ function creatorPreviewHtml(actor, formData, blessingDocs) {
   </div>`;
 }
 function updateCreatorPreview(dialog, actor, blessingDocs) {
-  const root = dialog.element;
-  const form = root?.querySelector?.("[data-edo-creator-form]");
+  const root = dialogRoot(dialog);
+  const form = creatorDialogForm(dialog);
   const preview = root?.querySelector?.("[data-edo-creator-preview]");
   const createButton = root?.querySelector?.('button[data-action="create"]');
   if (!form || !preview) return;
@@ -499,12 +518,13 @@ function updateAbilityBudget(form, {clampScores=false}={}) {
   if (cap) cap.textContent = `Maximalwert ${rankData.cap}`;
 }
 function setCreatorStep(dialog, step) {
-  const root = dialog.element;
-  const form = root?.querySelector?.("[data-edo-creator-form]");
-  if (!form) return;
-  const maxStep = Number(form.dataset.maxStep || 4);
+  const root = dialogRoot(dialog);
+  const shell = creatorShell(dialog);
+  const form = creatorDialogForm(dialog);
+  if (!shell || !form) return;
+  const maxStep = Number(shell.dataset.maxStep || 4);
   step = clamp(step, 1, maxStep);
-  form.dataset.currentStep = String(step);
+  shell.dataset.currentStep = String(step);
   form.querySelectorAll?.("[data-creator-step]").forEach(section => {
     section.hidden = Number(section.dataset.creatorStep) !== step;
   });
@@ -523,9 +543,11 @@ function setCreatorStep(dialog, step) {
   form.querySelector?.(`[data-creator-step="${step}"]`)?.scrollTo?.({top:0,behavior:"smooth"});
 }
 function activateCreator(dialog, actor, blessingDocs) {
-  const root = dialog.element;
-  const form = root?.querySelector?.("[data-edo-creator-form]");
-  if (!form) return;
+  const root = dialogRoot(dialog);
+  const shell = creatorShell(dialog);
+  const form = creatorDialogForm(dialog);
+  if (!shell || !form || shell.dataset.activated === "true") return;
+  shell.dataset.activated = "true";
   const refresh = event => {
     const living = form.elements.namedItem("vessel")?.value === "living";
     form.querySelector(".living-modifier")?.classList.toggle("is-hidden", !living);
@@ -544,11 +566,11 @@ function activateCreator(dialog, actor, blessingDocs) {
   }));
   form.querySelectorAll?.("[data-step-next]").forEach(button => button.addEventListener("click",event=>{
     event.preventDefault();
-    setCreatorStep(dialog,Number(form.dataset.currentStep || 1)+1);
+    setCreatorStep(dialog,Number(shell.dataset.currentStep || 1)+1);
   }));
   form.querySelectorAll?.("[data-step-prev]").forEach(button => button.addEventListener("click",event=>{
     event.preventDefault();
-    setCreatorStep(dialog,Number(form.dataset.currentStep || 1)-1);
+    setCreatorStep(dialog,Number(shell.dataset.currentStep || 1)-1);
   }));
   setCreatorStep(dialog,1);
   refresh();
@@ -619,7 +641,7 @@ function creatorHtml(actor, blessingDocs, fixedTier) {
   const roleOptions = Object.entries(ROLE_LABELS).map(([role,label]) => roleOptionCard(role,label,role === "striker")).join("");
   const allRolesNote = cmLevel >= 4 ? `<div class="creator-info"><i class="fas fa-circle-info"></i><span>Ab Class-Mod-Level 4 gelten mechanisch alle Summoning Roles gleichzeitig. Die Auswahl hier bestimmt die primäre Anzeige des Edo Tensei.</span></div>` : "";
 
-  return `<form class="n5eb-edo-creator-form n5eb-edo-creator-shell tier-${tier}" data-edo-creator-form data-current-step="1" data-max-step="4">
+  return `<div class="n5eb-edo-creator-form n5eb-edo-creator-shell tier-${tier}" data-edo-creator-shell data-current-step="1" data-max-step="4">
     <input type="hidden" name="tier" value="${tier}">
     <header class="creator-topline">
       <div class="creator-heading">
@@ -714,7 +736,7 @@ function creatorHtml(actor, blessingDocs, fixedTier) {
       </section>
       <aside class="creator-right" data-edo-creator-preview></aside>
     </div>
-  </form>`;
+  </div>`;
 }
 
 async function openEdoCreator(actor, requestedTier=null) {
@@ -748,7 +770,7 @@ async function openEdoCreator(actor, requestedTier=null) {
       buttons:[
         {action:"back",label:"Andere Art wählen",icon:"fa-solid fa-arrow-left",callback:()=>finish("back")},
         {action:"create",label:`${tierUi.shortLabel} Edo erstellen`,icon:"fa-solid fa-wand-magic-sparkles",default:true,callback:async(event,button)=>{
-          const form = button.form ?? dialog.element?.querySelector?.("[data-edo-creator-form]");
+          const form = creatorDialogForm(dialog) ?? button.form;
           const data = creatorFormData(form);
           try {
             finish(await createEdoTensei(actor, data, blessings));
@@ -762,9 +784,10 @@ async function openEdoCreator(actor, requestedTier=null) {
       ],
       rejectClose:false
     });
-    dialog.addEventListener("render",()=>activateCreator(dialog, actor, blessings));
+    const activate = () => activateCreator(dialog, actor, blessings);
+    dialog.addEventListener("render",activate);
     dialog.addEventListener("close",()=>finish(null),{once:true});
-    dialog.render({force:true});
+    Promise.resolve(dialog.render({force:true})).then(activate);
   });
 
   if (result === "back") return openEdoCreator(actor,null);

@@ -1,17 +1,12 @@
-# N5eB Class Mod Library 0.13.3
-## Version 0.13.3 creator redesign
+# N5eB Class Mod Library 0.13.4
+## Version 0.13.4 creator fix
 
-- The Edo creator now opens with a dedicated Normal / Elite / Solo selection window.
-- Each tier opens its own locked creator with the correct HP, Jutsu Slot, Skill, Action, DC, and Unholy Charge calculations.
-- Saving Throws, Creature Skills, and Unholy Blessings now use clear checkbox cards with live counters and validation.
-- Solo creation is locked until Class Mod level 5 and automatically uses S-Rank.
-
-- Uses the Foundry ApplicationV2 render and header-control hooks, so the Edo Tensei controls now appear on the current N5eB character sheet.
-- Adds an always-visible skull-plus quick button in the sheet header and a full `Create Edo Tensei` strip above the Jutsu cards.
-- Repairs owned Edo Tensei Class Mod Arts values automatically: Attack Bonus = Class Mod level + twice proficiency; Save DC = 12 + proficiency + half character level.
-- Existing characters are repaired on world load, sheet render, actor updates, and Class Mod level changes.
-- Generated Edo actors receive visible Recalculate and Summon/Return controls on their sheets.
-- Re-runs the managed compendium cleanup, including obsolete duplicate Superior Shinobi folders.
+- Fixes the DialogV2 nested-form bug that caused the Creator wrapper to be discarded by the browser. This was the reason the layout appeared as unstyled text and all step buttons were inactive.
+- The Normal / Elite / Solo selection remains the first window.
+- The selected tier then opens the complete four-step creator: rank and role, base data, ability scores, saves and skills, and Unholy Blessings.
+- Restores the intended card layout, separate scrolling areas, live preview, validation, and working Back / Next / step-navigation buttons.
+- Adds a post-render activation fallback for Foundry 13/14 and supports both HTMLElement and legacy jQuery-style application elements.
+- Keeps the existing Standard, Elite, and Solo calculations unchanged.
 
 
 Creates the world compendium **N5eB Custom Class Mods** for N5eB 3.1.0 on Foundry VTT 13/14.
