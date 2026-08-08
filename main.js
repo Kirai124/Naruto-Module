@@ -1,0 +1,17271 @@
+{
+  "folders": [
+    {
+      "_id": "d25462d78f8afb2a",
+      "name": "Sealed Beast Redux",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "sort": 0,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "root"
+        }
+      }
+    },
+    {
+      "_id": "9e848b07b9b04d7e",
+      "name": "Class Mod Features",
+      "type": "Item",
+      "folder": "d25462d78f8afb2a",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "features"
+        }
+      }
+    },
+    {
+      "_id": "4bcfbc3ba584a75f",
+      "name": "Core Features",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "core"
+        }
+      }
+    },
+    {
+      "_id": "5361f82fca7434f3",
+      "name": "Paths of the Beast",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "paths"
+        }
+      }
+    },
+    {
+      "_id": "218b37656a873424",
+      "name": "Transformation Arts",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 200000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "transformations"
+        }
+      }
+    },
+    {
+      "_id": "d00832aa3bf1b8fa",
+      "name": "Beast Bomb Arts & Talents",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 300000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "beast-bomb"
+        }
+      }
+    },
+    {
+      "_id": "8238caa106ac187f",
+      "name": "Beast Claw Arts & Talents",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 400000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "beast-claw"
+        }
+      }
+    },
+    {
+      "_id": "9e1887a70c0ea5b4",
+      "name": "Vermillion Abilities",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 500000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "abilities"
+        }
+      }
+    },
+    {
+      "_id": "7917560b4adbe366",
+      "name": "Vermillion Passives",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 600000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "passives"
+        }
+      }
+    },
+    {
+      "_id": "461b9d21eb5bec25",
+      "name": "Beast Summoning",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 700000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "summoning"
+        }
+      }
+    },
+    {
+      "_id": "d6bb1c78a8148b77",
+      "name": "Sealed Beast Redux Feats",
+      "type": "Item",
+      "folder": "d25462d78f8afb2a",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "feats"
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "_id": "8cb947775f5706e7",
+      "name": "Sealed Beast",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A legendary Chakra beast is sealed within you. At first you cannot communicate with it and can only call upon its power through intense emotion or training. Your relationship and control develop as this Class Mod advances.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "sealed-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "5e9f245f1c286c8b",
+      "name": "Vermillion Arts",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Features and techniques from this Class Mod use the following values:</p><p><strong>Vermillion Art Save DC:</strong> 12 + Sealed Beast Redux level + proficiency bonus.</p><p><strong>Vermillion Art Attack Bonus:</strong> twice your proficiency bonus + Sealed Beast Redux level.</p><p>The module writes the calculated values directly into the Class Mod fields so the sheet and rolls use the same numbers.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-arts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "19eea50e6ce65606",
+      "name": "Twisted Chakra",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Twisted Chakra is tracked directly on the Actor. One point of Twisted Chakra counts as two normal Chakra when voluntarily paying normal Chakra costs. Jutsu paid with Twisted Chakra count as Vermillion Arts.</p><p>If your Twisted Chakra exceeds your current normal Chakra, you enter Frenzy unless a feature such as Path of Dominion or a controlled cloak prevents it.</p><p>Bundled Transformation and Vermillion Arts automatically validate and spend their listed Twisted Chakra costs.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "twisted-chakra"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedTrackerFeature": true
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "3c0a6743f1684333",
+      "name": "Dormant Beast",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action:</strong> Activate Dormant Beast for 1 minute. On activation and at the start of each turn, lose normal Chakra equal to your proficiency bonus and gain the same amount of Twisted Chakra. Path features may change this conversion.</p><ul><li>Strength and Dexterity increase by 2.</li><li>Your unarmed damage die becomes at least d8.</li><li>Weapon and unarmed attacks count as Chakra-enhanced.</li><li>Increase damage die size by one step.</li><li>Gain +2 on saving throws against hostile jutsu.</li></ul><p>The module automates the resource conversion and direct ability bonuses. Situational die-size and Chakra-enhanced properties remain described on the feature.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "dormant-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "dormantBeastController": true
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "b4cde942c53231fc",
+      "name": "Desperate Rage",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When severe emotional trauma occurs - such as an ally being reduced to 0 HP or you being reduced to 0 HP - make a Charisma ability check against your Desperate Rage DC.</p><p><strong>Desperate Rage DC:</strong> 12 + your Class Mod level, modified by your Path and Disposition.</p><p>On a failure, enter Frenzy, lose normal Chakra equal to twice your character level, and gain the same amount of Twisted Chakra. The tracker includes a Desperate Rage roll button.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "desperate-rage"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "29e9b009493555a0",
+      "name": "Frenzy",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When Frenzy begins, regain 25 current HP; overflow becomes Temporary HP, and Dormant Beast activates. While Frenzied, normal Chakra loss used to gain Twisted Chakra is doubled, and spending Twisted Chakra also spends an equal amount of normal Chakra.</p><p>If normal Chakra reaches 0 during Frenzy, the sealed beast consumes you unless your Path changes this consequence.</p><h3>Frenzied Assault</h3><ul><li>Strength and Dexterity become at least 18.</li><li>Gain Multiattack (2), increased unarmed damage, doubled movement, expanded unarmed critical range, and an additional action that must be used for a Vermillion Art.</li></ul><p>The tracker automates the direct ability/movement effects and offers an end-Frenzy check. Targeting behavior and additional actions remain player/GM controlled.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "frenzy"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "frenzyController": true
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "44e6ff07f48640fe",
+      "name": "Frenzied Drawbacks",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 2nd level, at the start of each turn during Frenzy, make a Wisdom ability check against your Desperate Rage DC. On a failure, you cannot perceive allies, area effects affect every creature in range, and you attack creatures in the most direct path to your target. If Frenzy was not caused by Desperate Rage, the closest creature becomes your target.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "frenzied-drawbacks"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "303cd47558b6b1d4",
+      "name": "Disposition",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Disposition measures your relationship with the sealed beast and is tracked from 0 to 100 directly on the Actor. The GM may change it based on roleplay and Class Mod actions.</p><ul><li><strong>100:</strong> Dormant Beast is willingly available.</li><li><strong>75+:</strong> Add your Class Mod level to Desperate Rage checks.</li><li><strong>50+:</strong> The beast willingly communicates by thought.</li><li><strong>25 or lower:</strong> Subtract your Class Mod level from Desperate Rage checks.</li><li><strong>10 or lower:</strong> The beast is unwilling to communicate.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "disposition"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "37307e33cf67a8e6",
+      "name": "Path of Dominion",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Your seal subjugates the beast and reduces the risk of losing control.</p><ul><li><strong>Level 2:</strong> Dormant Beast produces 2 Twisted Chakra per normal Chakra lost. You no longer Frenzy merely because Twisted Chakra exceeds normal Chakra, but Twisted Chakra only counts as one normal Chakra.</li><li><strong>Level 3:</strong> Do not add Class Mod level to Desperate Rage DC.</li><li><strong>Level 4:</strong> Reduce the Desperate Rage DC by your Class Mod level.</li><li><strong>Level 5:</strong> Dormant Beast produces 4 Twisted Chakra per normal Chakra lost.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-dominion"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-dominion"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "f454b0186bc50d47",
+      "name": "Path of Wrath",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>You wield the beast with reckless abandon.</p><ul><li><strong>Level 2:</strong> Dormant Beast produces 2 Twisted Chakra per normal Chakra lost. Reaching 0 Chakra during Frenzy no longer kills you, but reaching 0 HP while Frenzied releases the beast and kills you.</li><li><strong>Levels 3-5:</strong> The conversion becomes 3, 4, then 5 Twisted Chakra per Chakra lost.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-wrath"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-wrath"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "694b96d462f8d4b5",
+      "name": "Path of Partnership",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>You build trust and mutual gain with the sealed beast.</p><ul><li><strong>Level 2:</strong> At the start of a Dormant Beast turn, a successful Charisma check against Desperate Rage DC lets you offer Chakra and receive equal Twisted Chakra, up to 10 × sealed-beast level. Frenzy no longer requires equal normal Chakra when spending Twisted Chakra.</li><li><strong>Level 3:</strong> A successful exchange produces twice as much Twisted Chakra.</li><li><strong>Level 4:</strong> Do not add Class Mod level to Desperate Rage DC.</li><li><strong>Level 5:</strong> The beast shares Chakra without a check.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-partnership"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-partnership"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "2dc2d1439e09de86",
+      "name": "Path of the Beast",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>You forcibly draw power from the sealed beast while slowly mastering control.</p><ul><li><strong>Level 2:</strong> As a Bonus Action, make a Constitution check against Desperate Rage DC. On a success, gain 10 × Class Mod level Twisted Chakra, remove an effect preventing Chakra molding, and heal by the amount gained. On a failure, enter Frenzy.</li><li><strong>Level 3:</strong> Failure no longer causes Frenzy.</li><li><strong>Level 4:</strong> You may challenge the beast. Victory enables a 4:1 Dormant Beast conversion; failure is fatal.</li><li><strong>Level 5:</strong> A pact of trust prevents Frenzy, removes Dormant Beast turn costs, and grants direct access to a 500-point Twisted Chakra pool.</li></ul><p>The tracker includes toggles for Beast Conquered and Pact of Trust so the conversion can be automated after those story events.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-the-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-the-beast"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "01e04e072f2fd3de",
+      "name": "Twisted Chakra Mode",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Your Twisted Chakra forms a bubbling cloak. Speed +15 ft, STR/DEX +2, all saves +1, 50 Temporary HP, and 15 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-mode",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 10,
+          "minimumClassModLevel": 1,
+          "sealedTransformation": {
+            "key": "twisted-chakra-mode",
+            "tier": 1,
+            "speed": 15,
+            "ability": 2,
+            "save": 1,
+            "temporaryHP": 50,
+            "twistedHP": 15,
+            "attackByLevel": false,
+            "preventsFrenzy": false
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "a96430bfd4b11d3d",
+      "name": "Twisted Chakra Mode, Stage 2",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A black veil of Chakra and red aura. Speed +30 ft, STR/DEX +2, all saves +2, attack rolls + twice Class Mod level, 75 Temporary HP, and 25 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-mode-stage-2",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ],
+          "minimumClassModLevel": 2,
+          "sealedTransformation": {
+            "key": "twisted-chakra-mode-stage-2",
+            "tier": 2,
+            "speed": 30,
+            "ability": 2,
+            "save": 2,
+            "temporaryHP": 75,
+            "twistedHP": 25,
+            "attackByLevel": true,
+            "preventsFrenzy": false
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "9436318ade0e4ad3",
+      "name": "Twisted Chakra Mode, Stage 3",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Your form becomes more beastlike and skeletal. Speed +60 ft, STR/DEX +4, all saves +3, attack rolls + twice Class Mod level, Large size, Reach 2 for melee weapons, 100 Temporary HP, and 35 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-mode-stage-3",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 30,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "twisted-chakra-mode-stage-2"
+          ],
+          "minimumClassModLevel": 3,
+          "sealedTransformation": {
+            "key": "twisted-chakra-mode-stage-3",
+            "tier": 3,
+            "speed": 60,
+            "ability": 4,
+            "save": 3,
+            "temporaryHP": 100,
+            "twistedHP": 35,
+            "attackByLevel": true,
+            "preventsFrenzy": false
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "0f0e8ac77a9b810d",
+      "name": "Twisted Chakra Cloak",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A controlled luminous cloak. Speed +90 ft, STR/DEX +4, all saves +4, attack rolls + twice Class Mod level, Reach 2, 120 Temporary HP, 50 Twisted HP, and you cannot enter Frenzy.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-cloak",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 40 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 40,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "path-of-the-beast"
+          ],
+          "minimumClassModLevel": 4,
+          "sealedTransformation": {
+            "key": "twisted-chakra-cloak",
+            "tier": 4,
+            "speed": 90,
+            "ability": 4,
+            "save": 4,
+            "temporaryHP": 120,
+            "twistedHP": 50,
+            "attackByLevel": true,
+            "preventsFrenzy": true
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "bacc9d25c6edb110",
+      "name": "Twisted Chakra Cloak, Stage 2",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>An advanced literal Chakra cloak. Speed +120 ft, STR/DEX +6, all saves +6, attack rolls + twice Class Mod level, Reach 3, 150 Temporary HP, 65 Twisted HP, and direct drawing of Twisted Chakra without a check.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-cloak-stage-2",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 50 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 50,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "twisted-chakra-cloak",
+            "path-of-the-beast"
+          ],
+          "minimumClassModLevel": 5,
+          "sealedTransformation": {
+            "key": "twisted-chakra-cloak-stage-2",
+            "tier": 5,
+            "speed": 120,
+            "ability": 6,
+            "save": 6,
+            "temporaryHP": 150,
+            "twistedHP": 65,
+            "attackByLevel": true,
+            "preventsFrenzy": true
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "725383d930dd7261",
+      "name": "Sealed Beast Mode",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Switch places with the sealed beast for 1 minute. Use the beast's size and physical ability scores, gain Twisted HP equal to its HP and Twisted Chakra equal to its Chakra, and damage/resources transfer to the beast. Dormant Beast cannot benefit this form. The module tracks the active form but the linked beast statistics remain GM-managed.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "sealed-beast-mode",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 50 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 50,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "path-of-partnership"
+          ],
+          "minimumClassModLevel": 5,
+          "sealedTransformation": {
+            "key": "sealed-beast-mode",
+            "tier": 5,
+            "speed": 0,
+            "ability": 0,
+            "save": 0,
+            "temporaryHP": 0,
+            "twistedHP": 0,
+            "attackByLevel": false,
+            "preventsFrenzy": true
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "c70f39a4de7c918b",
+      "name": "Weapons of the Beast",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While a Transformation Art is active, gain a natural melee weapon dealing 3d4 Bludgeoning, Piercing, or Slashing damage plus your chosen Strength or Dexterity modifier and proficiency bonus. Increase its die size one step for each transformation tier beyond 1.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "weapons-of-the-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ]
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "2d2bfb1847d8e3a2",
+      "name": "Twisted Resilience",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While transformed, increase the Twisted HP granted, restored each turn, and maximum by 5 per transformation tier.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "twisted-resilience"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ]
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "1d70d1195b907e8b",
+      "name": "Twisted Power",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While transformed, add twice your Class Mod level to damage rolls.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "twisted-power"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ]
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "50aee918a8961ab1",
+      "name": "Beast Bomb",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Tier 2 or higher Transformation Art unless Frenzied. Make a ranged Vermillion Art attack at 120 feet. On a hit, deal 20d12 Force damage. Hit or miss, creatures within 30 feet of the target make a Dexterity save, taking 12d12 Force damage on a failure or half on a success. Constructs and structures take four times damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "rsak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "20d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-bomb",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 30,
+          "awakeningCost": 18,
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true,
+          "minimumTransformationTier": 2
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "1364d0a6af420096",
+      "name": "Focused Beast Bomb",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When casting Beast Bomb, add 15 Twisted Chakra to either increase its critical threat range by 4 or double the area of effect.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "focused-beast-bomb"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "86d28f47ac6031e6",
+      "name": "Bigger Bombs",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While using a Tier 3+ transformation, you may add 10 Twisted Chakra to a Beast Bomb-family Art and increase its damage dice by 6. Repeat a number of times equal to transformation tier beyond 2.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "bigger-bombs"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "twisted-chakra-mode-stage-3"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "ea7004c1d13ba5dd",
+      "name": "Beast Beam",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Release a 15-foot-wide, 120-foot line. Creatures make a Dexterity save, taking 16d12 Force damage on a failure or half on a success. A failure by 5 or more destroys non-Chakra-enhanced equipment. Constructs and structures take four times damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "16d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-beam",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 30,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "7ec1aa75dfca888f",
+      "name": "Beast Bullet",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Roll 4d6; creatures in a 120-foot cone make a Dexterity save and take Xd8 Force damage on a failure, where X is the 4d6 result, or half on success. Constructs and structures take triple damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "4d6",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-bullet",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 15 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 15,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "4a9d04bd3a37beaf",
+      "name": "High Caliber",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When casting Beast Bullet, add 5 Twisted Chakra to increase its 4d6 count roll by one die step, up to 4d12.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "high-caliber"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "beast-bullet"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "614d8082daf85970",
+      "name": "Beast Flare",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Creatures in a 30-foot radius make a Constitution save, taking 10d12 Force damage and becoming Blinded and Dazed until the end of their next turn and Weakened for 1 minute on a failure.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "con",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-flare",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "ed1a03f4b8858a6b",
+      "name": "Discombobulating",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Blinded and Dazed caused by Beast Flare last one additional turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "discombobulating"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "beast-flare"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "663105636e7fd89d",
+      "name": "Beast Roar",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Creatures in a 60-foot cone make a Strength save. On a failure, they are thrown 90 feet, knocked Prone, and Dazed until the end of your next turn. Collisions deal quadruple falling damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 60,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-roar",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 10,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "3f37ebf6e99ed1ec",
+      "name": "Beast Defiance",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beast Roar gains a Reaction use against a Line, Cone, Radius, or Square effect. Clash using Vermillion Attack Bonus or Ninshou, whichever is higher, with +5; attacks without Clash roll at disadvantage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "beast-defiance"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "beast-roar"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "29347eb0c5277385",
+      "name": "Beast Claw",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Make a melee Vermillion Art attack. On a hit, deal 8d12 Force damage. Gain advantage on your first attack against the target before the end of your next turn, or impose disadvantage on its first save against your Vermillion Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "8d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-claw",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 10,
+          "awakeningCost": 18,
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "aecded72c1e0bee6",
+      "name": "Marked",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>The Beast Claw mark lasts 1 minute instead of until the end of your next turn, but its benefit applies only once per turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "marked"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "0e39b85f9556cd38",
+      "name": "Rip & Tear",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When casting Beast Claw, pay its cost again to make a second attack, once per casting.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rip-tear"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "a1030f0ffd1fc351",
+      "name": "Rend",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>After hitting the same creature twice in one turn with Beast Claw, pay its cost again to immediately deal the Art damage again.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rend"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "f5b739e486fd4d4f",
+      "name": "Beast Crash",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Move up to 120 feet and make a melee Vermillion Art attack. On a hit, deal 30d4 Force damage; the target makes a Strength save or becomes Prone and Dazed until the end of your next turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "30d4",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-crash",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-claw"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "52c86b9afc9f5b08",
+      "name": "Beast Launch",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A target that fails its Beast Crash save is knocked back four times the distance you moved before hitting it.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "beast-launch"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-crash"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "edb80d89363cc5e9",
+      "name": "Beast Rush",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>After hitting with Beast Crash, pay its cost again to move and attack a different creature. Once per casting.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "beast-rush"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-crash"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "40b8af7b10ce18f4",
+      "name": "Beast Tail",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Make a melee Vermillion Art attack. On a hit, deal 10d10 Force damage and force a Strength save; on a failure, the target is knocked Prone. Apply any additional duration stated by the GM from the source text.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d10",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-tail",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-claw"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "acf60e5c42a8e8be",
+      "name": "Stack Tails!",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beast Tail gains Combination. Allied jinchūriki or tailed beasts may use their Reaction and pay the Art cost to add one Beast Tail attack, even without knowing the Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "stack-tails"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-tail"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "65688da35c865fd9",
+      "name": "Beast Deflection",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. As a Reaction, roll 5d12 + character level and reduce incoming damage by the result. The attacker and creatures in a 15-foot cone make a Dexterity save and take damage equal to the amount reduced.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "reaction",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 15,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "5d12+@details.level",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-deflection",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-claw"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "0c8f9645c3231cf7",
+      "name": "Full Counter",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beast Deflection ignores limits on damage reduction. If it reduces the triggering damage to 0, the attacker automatically fails its Dexterity save.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "full-counter"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-deflection"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "1d51ed3bafdc5100",
+      "name": "Supreme Deflection",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Double Beast Deflection damage reduction when used against an Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "supreme-deflection"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-deflection"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "2294a57bc8c4145b",
+      "name": "Vermillion Assault",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action; 15 Twisted Chakra:</strong> For 1 minute, gain an additional action immediately and, at the start of each turn, you may pay 15 Twisted Chakra for another action usable only to cast a jutsu.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-assault"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "27c321d784ff0685",
+      "name": "Vermillion Augmentation",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action while casting a jutsu with Twisted Chakra:</strong> Choose one: add damage or healing dice equal to Class Mod level; add proficiency bonus to each damage roll of a multiattack; add construct/summon HP equal to proficiency × jutsu rank; or increase the jutsu save DC by Class Mod level.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-augmentation"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "8ab139ceb9fccfae",
+      "name": "Vermillion Authority",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Reaction; 25 Twisted Chakra:</strong> For 1 minute, hostile creatures within 120 feet that do not target you roll 2d20 on attacks and take the lower result. Non-attack effects require a Wisdom save or double their resource cost.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-authority"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "1c5c71b8dd3969ca",
+      "name": "Vermillion Resistance",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action:</strong> Spend 5 Twisted Chakra to remove up to 3 ranks of Elemental, Physical, or Mental conditions. You may spend additional groups of 5 up to three times. Spend 10 Twisted Chakra to regain the ability to Mold Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-resistance"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "78c34ace0853fb9f",
+      "name": "Vermillion Empowerment",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Spend 10 additional Twisted Chakra when using a Vermillion Art or feature. Targets cannot benefit from jutsu-derived AC/save/check bonuses, Temporary HP, damage reduction, resistance, or immunity against that effect.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-empowerment"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "82330a897793e19f",
+      "name": "Vermillion Fortitude",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action; 15 Twisted Chakra:</strong> Increase or restore Temporary HP by 3 × character level, including Temporary HP granted by Transformation Arts.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-fortitude"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "17fad5c9c9477335",
+      "name": "Vermillion Athlete",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>When making a Strength, Dexterity, or Constitution check, spend 10 Twisted Chakra to add 1d10.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-athlete"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "d0e886816ba5f6c3",
+      "name": "Vermillion Instincts",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>When an attack hits by 5 or more over your AC, spend 15 Twisted Chakra to gain an additional Reaction usable only against that attack.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-instincts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "fa744e44ddbfa98c",
+      "name": "Vermillion Rage",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action after a melee hit; 20 Twisted Chakra:</strong> Treat the hit as a critical hit. Hostile creatures have advantage on attacks against you until the start of your next turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-rage"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "4b86e27b4b97da3b",
+      "name": "Vermillion Tenacity",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action; 20 Twisted Chakra:</strong> Gain advantage on attack rolls until the start of your next turn; attacks against you cannot have advantage for the same duration.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-tenacity"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "46bb63e6e1416944",
+      "name": "Vermillion Unity",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action:</strong> Touch willing creatures and transfer up to 30 Twisted Chakra to each for 1 minute. Cannot be used during Frenzy. Path of the Beast recipients may use your Vermillion Abilities; Path of Wrath recipients Frenzy while they retain Twisted Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-unity"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "bef7d4930f92323e",
+      "name": "Devilish Blood",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Increase every ability score by 1 and gain proficiency in one saving throw of your choice.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-blood"
+      },
+      "effects": [
+        {
+          "_id": "cb66c656f6f5164f",
+          "name": "Devilish Blood",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.str.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.dex.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.con.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.int.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.wis.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.cha.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "51a92cbf0754b6b2",
+      "name": "Devilish Claws",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Natural Weapon and unarmed damage add your Sealed Beast level. As a Bonus Action, make two unarmed or natural attacks. Hits push 5 feet and let you move 5 feet without provoking; once per round, make an opportunity attack without spending a Reaction.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-claws"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "fcfab21e9b452ea3",
+      "name": "Devilish Focus",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Gain +2 to Ninjutsu and Taijutsu attack rolls and +1 to Genjutsu save DC. While Frenzied or transformed, Constitution checks have advantage and Ninjutsu/Genjutsu concentration costs no Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-focus"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "0dfc0f65dede253e",
+      "name": "Devilish Might",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Strength +1, with another +2 while transformed. Maximum bulk +10; you cannot be moved against your will. While Frenzied or transformed, melee Vermillion Art dice increase one step, melee attacks cannot have disadvantage, and you may reduce melee damage by Strength modifier as a Reaction.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-might"
+      },
+      "effects": [
+        {
+          "_id": "3a8c98a0c2fa89ff",
+          "name": "Devilish Might",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.str.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "dcd18a243843141d",
+      "name": "Devilish Mobility",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Dexterity +1, with another +2 while transformed. Speed increases by 5 feet × Class Mod level. While Frenzied or transformed, Dexterity checks have advantage, gain Dexterity save proficiency (or add Class Mod level if already proficient), your AC cannot be lowered, and attackers cannot gain advantage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-mobility"
+      },
+      "effects": [
+        {
+          "_id": "e416d4794c6e3c9f",
+          "name": "Devilish Mobility",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.dex.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 2,
+              "value": "5 * @classmods.sealed-beast-redux.levels",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "777e00d4b2378e25",
+      "name": "Devilish Presence",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Gain Intimidation proficiency, or add Sealed Beast level if already proficient. You may pull a creature using Chakra Sight into your inner world as a Reaction, forcing a Charisma save against Vermillion DC or applying Demoralized and possibly Stunned. While Frenzied or transformed, intimidate creatures within 90 feet and automatically resist forced banishment, teleportation, or movement that allows a save.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-presence"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "b422e4b2d222360c",
+      "name": "Devilish Will",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Gain +2 to Intelligence, Wisdom, and Charisma saving throws and +2 against Fūinjutsu Arts/Jutsu. While Frenzied or transformed, spend 10 Chakra to end one Genjutsu effect on yourself.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-will"
+      },
+      "effects": [
+        {
+          "_id": "2a4fdcfc01a8c6b2",
+          "name": "Devilish Will",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.int.bonuses.save",
+              "mode": 2,
+              "value": "2",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.wis.bonuses.save",
+              "mode": 2,
+              "value": "2",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.cha.bonuses.save",
+              "mode": 2,
+              "value": "2",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "680f6d14a287a621",
+      "name": "Devilish Flames",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Fire Release.</strong> Gain Fire Release affinity and learn three qualifying Fire jutsu. While Frenzied or transformed, Fire Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-flames"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "6d8770cb4be4abdc",
+      "name": "Devilish Winds",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Wind Release.</strong> Gain Wind Release affinity and learn three qualifying Wind jutsu. While Frenzied or transformed, Wind Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-winds"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "39b7cd97cc8d55e5",
+      "name": "Devilish Storm",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Lightning Release.</strong> Gain Lightning Release affinity and learn three qualifying Lightning jutsu. While Frenzied or transformed, Lightning Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-storm"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "c8fdcc2936aad71b",
+      "name": "Devilish Earth",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Earth Release.</strong> Gain Earth Release affinity and learn three qualifying Earth jutsu. While Frenzied or transformed, Earth Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-earth"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "ac19a32aafb0fb5c",
+      "name": "Devilish Waves",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Water Release.</strong> Gain Water Release affinity and learn three qualifying Water jutsu. While Frenzied or transformed, Water Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-waves"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "a177032023023f4c",
+      "name": "Beast Summoning",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Full Turn Action; 100 Twisted Chakra:</strong> Summon an avatar of your Sealed Beast. It acts with free will but follows your commands for the summoning.</p><p>The source provides a customizable Sealed Beast summon chassis: Toughness 18, defensive ability Constitution or Charisma, any 3 saves, any 4 skills, Darkvision 120 ft, Chakra equal to HP, and one role (Striker, Caster, Controller, Defender, Lurker, or Supporter). The GM should create or select the linked summon Actor.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "full",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-summoning",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 100 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 100,
+          "awakeningCost": 18,
+          "minimumClassModLevel": 1
+        }
+      },
+      "folder": "461b9d21eb5bec25"
+    },
+    {
+      "_id": "f335a87a96bee077",
+      "name": "Sealed Beast Summon Chassis",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Base abilities:</strong> STR/DEX/CON/INT/WIS/CHA 18. At each Class Mod level, distribute +8 ability points, with suggested maximums increasing to 26, 28, and 30 at higher tiers.</p><table><thead><tr><th>Rank</th><th>Level</th><th>Size</th><th>Slots</th><th>Jutsu</th><th>Speed</th></tr></thead><tbody><tr><td>D</td><td>4</td><td>M</td><td>6</td><td>2 D-Rank</td><td>50 ft</td></tr><tr><td>C</td><td>8</td><td>M-L</td><td>9</td><td>2 D, 2 C</td><td>65 ft</td></tr><tr><td>B</td><td>12</td><td>M-H</td><td>12</td><td>2 C, 2 B</td><td>80 ft</td></tr><tr><td>A</td><td>16</td><td>M-G</td><td>15</td><td>3 B, 1 A</td><td>95 ft</td></tr><tr><td>S</td><td>20</td><td>M-G</td><td>18</td><td>3 A, 1 S</td><td>110 ft</td></tr></tbody></table><p>Choose a role and appropriate summon traits. Jutsu-slot features may instead cost 10 Chakra per slot.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "sealed-beast-summon-chassis"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "461b9d21eb5bec25"
+    },
+    {
+      "_id": "abe4260da820868b",
+      "name": "Sealed Beast Redux",
+      "type": "classmod",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A five-level Class Mod for jinchūriki and other hosts of sealed Chakra beasts. It uses Actor-based Twisted Chakra, Twisted Hit Points, Disposition, Frenzy, Dormant Beast, Transformation tracking, and a Twisted Awakening point budget.</p><table><thead><tr><th>Level</th><th>Minimum Character Level</th><th>Twisted Awakening</th><th>Features</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>45</td><td>Core features, Dormant Beast, Frenzy, Twisted Chakra Mode</td></tr><tr><td>2</td><td>7</td><td>110</td><td>Frenzied Drawbacks, choose a Path</td></tr><tr><td>3</td><td>10</td><td>175</td><td>Path progression</td></tr><tr><td>4</td><td>15</td><td>220</td><td>Path progression</td></tr><tr><td>5</td><td>17</td><td>275</td><td>Path progression</td></tr></tbody></table><p><strong>Twisted Awakening:</strong> Talents are purchased by dragging them from this compendium onto the Actor. The module rejects unaffordable or unmet-prerequisite talents and calculates remaining points directly from owned items. It never stores this resource in item Uses.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "identifier": "sealed-beast-redux",
+        "levels": 1,
+        "advancement": {
+          "grant1": {
+            "_id": "40b925f8f8935b47",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.8cb947775f5706e7",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.5e9f245f1c286c8b",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.19eea50e6ce65606",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.3c0a6743f1684333",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.b4cde942c53231fc",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.29e9b009493555a0",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.303cd47558b6b1d4",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.01e04e072f2fd3de",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 1,
+            "title": "",
+            "hint": ""
+          },
+          "grant2": {
+            "_id": "c3956a1dc8c30899",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.44e6ff07f48640fe",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 2,
+            "title": "",
+            "hint": ""
+          },
+          "path": {
+            "_id": "e941c6ef1c6e5281",
+            "type": "ItemChoice",
+            "configuration": {
+              "choices": {
+                "2": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "allowDrops": false,
+              "type": null,
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.37307e33cf67a8e6"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.f454b0186bc50d47"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.694b96d462f8d4b5"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.2dc2d1439e09de86"
+                }
+              ],
+              "restriction": {}
+            },
+            "value": {
+              "added": {},
+              "replaced": {}
+            },
+            "level": 2,
+            "title": "Path of the Beast",
+            "hint": "Choose one path at 2nd level. Its later-level benefits advance automatically from the same item."
+          },
+          "awakening": {
+            "_id": "0e7d13a89afed8ce",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "twisted-awakening",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 45
+                },
+                "2": {
+                  "value": 110
+                },
+                "3": {
+                  "value": 175
+                },
+                "4": {
+                  "value": 220
+                },
+                "5": {
+                  "value": 275
+                }
+              }
+            },
+            "value": {},
+            "title": "Twisted Awakening Points",
+            "hint": ""
+          }
+        },
+        "save": {
+          "formula": "12+@classmods.sealed-beast-redux.levels+@prof",
+          "value": "12+@classmods.sealed-beast-redux.levels+@prof",
+          "scaling": ""
+        },
+        "attackBonus": {
+          "formula": "2*@prof+@classmods.sealed-beast-redux.levels",
+          "value": "2*@prof+@classmods.sealed-beast-redux.levels",
+          "scaling": ""
+        },
+        "color": "#f28c18"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "classmod",
+          "contentVersion": "0.9.0"
+        }
+      },
+      "folder": "d6bb1c78a8148b77"
+    }
+  ]
+}    {
+      "_id": "4bcfbc3ba584a75f",
+      "name": "Core Features",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "core"
+        }
+      }
+    },
+    {
+      "_id": "5361f82fca7434f3",
+      "name": "Paths of the Beast",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "paths"
+        }
+      }
+    },
+    {
+      "_id": "218b37656a873424",
+      "name": "Transformation Arts",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 200000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "transformations"
+        }
+      }
+    },
+    {
+      "_id": "d00832aa3bf1b8fa",
+      "name": "Beast Bomb Arts & Talents",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 300000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "beast-bomb"
+        }
+      }
+    },
+    {
+      "_id": "8238caa106ac187f",
+      "name": "Beast Claw Arts & Talents",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 400000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "beast-claw"
+        }
+      }
+    },
+    {
+      "_id": "9e1887a70c0ea5b4",
+      "name": "Vermillion Abilities",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 500000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "abilities"
+        }
+      }
+    },
+    {
+      "_id": "7917560b4adbe366",
+      "name": "Vermillion Passives",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 600000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "passives"
+        }
+      }
+    },
+    {
+      "_id": "461b9d21eb5bec25",
+      "name": "Beast Summoning",
+      "type": "Item",
+      "folder": "9e848b07b9b04d7e",
+      "sorting": "a",
+      "sort": 700000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "summoning"
+        }
+      }
+    },
+    {
+      "_id": "d6bb1c78a8148b77",
+      "name": "Sealed Beast Redux Feats",
+      "type": "Item",
+      "folder": "d25462d78f8afb2a",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#f28c18",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "sealed-beast-redux",
+          "folderKey": "feats"
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "_id": "8cb947775f5706e7",
+      "name": "Sealed Beast",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A legendary Chakra beast is sealed within you. At first you cannot communicate with it and can only call upon its power through intense emotion or training. Your relationship and control develop as this Class Mod advances.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "sealed-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "5e9f245f1c286c8b",
+      "name": "Vermillion Arts",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Features and techniques from this Class Mod use the following values:</p><p><strong>Vermillion Art Save DC:</strong> 12 + Sealed Beast Redux level + proficiency bonus.</p><p><strong>Vermillion Art Attack Bonus:</strong> twice your proficiency bonus + Sealed Beast Redux level.</p><p>The module writes the calculated values directly into the Class Mod fields so the sheet and rolls use the same numbers.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-arts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "19eea50e6ce65606",
+      "name": "Twisted Chakra",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Twisted Chakra is tracked directly on the Actor. One point of Twisted Chakra counts as two normal Chakra when voluntarily paying normal Chakra costs. Jutsu paid with Twisted Chakra count as Vermillion Arts.</p><p>If your Twisted Chakra exceeds your current normal Chakra, you enter Frenzy unless a feature such as Path of Dominion or a controlled cloak prevents it.</p><p>Bundled Transformation and Vermillion Arts automatically validate and spend their listed Twisted Chakra costs.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "twisted-chakra"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedTrackerFeature": true
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "3c0a6743f1684333",
+      "name": "Dormant Beast",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action:</strong> Activate Dormant Beast for 1 minute. On activation and at the start of each turn, lose normal Chakra equal to your proficiency bonus and gain the same amount of Twisted Chakra. Path features may change this conversion.</p><ul><li>Strength and Dexterity increase by 2.</li><li>Your unarmed damage die becomes at least d8.</li><li>Weapon and unarmed attacks count as Chakra-enhanced.</li><li>Increase damage die size by one step.</li><li>Gain +2 on saving throws against hostile jutsu.</li></ul><p>The module automates the resource conversion and direct ability bonuses. Situational die-size and Chakra-enhanced properties remain described on the feature.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "dormant-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "dormantBeastController": true
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "b4cde942c53231fc",
+      "name": "Desperate Rage",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When severe emotional trauma occurs - such as an ally being reduced to 0 HP or you being reduced to 0 HP - make a Charisma ability check against your Desperate Rage DC.</p><p><strong>Desperate Rage DC:</strong> 12 + your Class Mod level, modified by your Path and Disposition.</p><p>On a failure, enter Frenzy, lose normal Chakra equal to twice your character level, and gain the same amount of Twisted Chakra. The tracker includes a Desperate Rage roll button.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "desperate-rage"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "29e9b009493555a0",
+      "name": "Frenzy",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When Frenzy begins, regain 25 current HP; overflow becomes Temporary HP, and Dormant Beast activates. While Frenzied, normal Chakra loss used to gain Twisted Chakra is doubled, and spending Twisted Chakra also spends an equal amount of normal Chakra.</p><p>If normal Chakra reaches 0 during Frenzy, the sealed beast consumes you unless your Path changes this consequence.</p><h3>Frenzied Assault</h3><ul><li>Strength and Dexterity become at least 18.</li><li>Gain Multiattack (2), increased unarmed damage, doubled movement, expanded unarmed critical range, and an additional action that must be used for a Vermillion Art.</li></ul><p>The tracker automates the direct ability/movement effects and offers an end-Frenzy check. Targeting behavior and additional actions remain player/GM controlled.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "frenzy"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "frenzyController": true
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "44e6ff07f48640fe",
+      "name": "Frenzied Drawbacks",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 2nd level, at the start of each turn during Frenzy, make a Wisdom ability check against your Desperate Rage DC. On a failure, you cannot perceive allies, area effects affect every creature in range, and you attack creatures in the most direct path to your target. If Frenzy was not caused by Desperate Rage, the closest creature becomes your target.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "frenzied-drawbacks"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "303cd47558b6b1d4",
+      "name": "Disposition",
+      "type": "feat",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Disposition measures your relationship with the sealed beast and is tracked from 0 to 100 directly on the Actor. The GM may change it based on roleplay and Class Mod actions.</p><ul><li><strong>100:</strong> Dormant Beast is willingly available.</li><li><strong>75+:</strong> Add your Class Mod level to Desperate Rage checks.</li><li><strong>50+:</strong> The beast willingly communicates by thought.</li><li><strong>25 or lower:</strong> Subtract your Class Mod level from Desperate Rage checks.</li><li><strong>10 or lower:</strong> The beast is unwilling to communicate.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "disposition"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "4bcfbc3ba584a75f"
+    },
+    {
+      "_id": "37307e33cf67a8e6",
+      "name": "Path of Dominion",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Your seal subjugates the beast and reduces the risk of losing control.</p><ul><li><strong>Level 2:</strong> Dormant Beast produces 2 Twisted Chakra per normal Chakra lost. You no longer Frenzy merely because Twisted Chakra exceeds normal Chakra, but Twisted Chakra only counts as one normal Chakra.</li><li><strong>Level 3:</strong> Do not add Class Mod level to Desperate Rage DC.</li><li><strong>Level 4:</strong> Reduce the Desperate Rage DC by your Class Mod level.</li><li><strong>Level 5:</strong> Dormant Beast produces 4 Twisted Chakra per normal Chakra lost.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-dominion"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-dominion"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "f454b0186bc50d47",
+      "name": "Path of Wrath",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>You wield the beast with reckless abandon.</p><ul><li><strong>Level 2:</strong> Dormant Beast produces 2 Twisted Chakra per normal Chakra lost. Reaching 0 Chakra during Frenzy no longer kills you, but reaching 0 HP while Frenzied releases the beast and kills you.</li><li><strong>Levels 3-5:</strong> The conversion becomes 3, 4, then 5 Twisted Chakra per Chakra lost.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-wrath"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-wrath"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "694b96d462f8d4b5",
+      "name": "Path of Partnership",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>You build trust and mutual gain with the sealed beast.</p><ul><li><strong>Level 2:</strong> At the start of a Dormant Beast turn, a successful Charisma check against Desperate Rage DC lets you offer Chakra and receive equal Twisted Chakra, up to 10 × sealed-beast level. Frenzy no longer requires equal normal Chakra when spending Twisted Chakra.</li><li><strong>Level 3:</strong> A successful exchange produces twice as much Twisted Chakra.</li><li><strong>Level 4:</strong> Do not add Class Mod level to Desperate Rage DC.</li><li><strong>Level 5:</strong> The beast shares Chakra without a check.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-partnership"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-partnership"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "2dc2d1439e09de86",
+      "name": "Path of the Beast",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>You forcibly draw power from the sealed beast while slowly mastering control.</p><ul><li><strong>Level 2:</strong> As a Bonus Action, make a Constitution check against Desperate Rage DC. On a success, gain 10 × Class Mod level Twisted Chakra, remove an effect preventing Chakra molding, and heal by the amount gained. On a failure, enter Frenzy.</li><li><strong>Level 3:</strong> Failure no longer causes Frenzy.</li><li><strong>Level 4:</strong> You may challenge the beast. Victory enables a 4:1 Dormant Beast conversion; failure is fatal.</li><li><strong>Level 5:</strong> A pact of trust prevents Frenzy, removes Dormant Beast turn costs, and grants direct access to a 500-point Twisted Chakra pool.</li></ul><p>The tracker includes toggles for Beast Conquered and Pact of Trust so the conversion can be automated after those story events.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "path-of-the-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "sealedBeastPath": "path-of-the-beast"
+        }
+      },
+      "folder": "5361f82fca7434f3"
+    },
+    {
+      "_id": "01e04e072f2fd3de",
+      "name": "Twisted Chakra Mode",
+      "type": "spell",
+      "img": "icons/magic/fire/flame-burning-creature-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Your Twisted Chakra forms a bubbling cloak. Speed +15 ft, STR/DEX +2, all saves +1, 50 Temporary HP, and 15 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-mode",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 10,
+          "minimumClassModLevel": 1,
+          "sealedTransformation": {
+            "key": "twisted-chakra-mode",
+            "tier": 1,
+            "speed": 15,
+            "ability": 2,
+            "save": 1,
+            "temporaryHP": 50,
+            "twistedHP": 15,
+            "attackByLevel": false,
+            "preventsFrenzy": false
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "a96430bfd4b11d3d",
+      "name": "Twisted Chakra Mode, Stage 2",
+      "type": "spell",
+      "img": "icons/magic/fire/flame-burning-creature-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A black veil of Chakra and red aura. Speed +30 ft, STR/DEX +2, all saves +2, attack rolls + twice Class Mod level, 75 Temporary HP, and 25 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-mode-stage-2",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ],
+          "minimumClassModLevel": 2,
+          "sealedTransformation": {
+            "key": "twisted-chakra-mode-stage-2",
+            "tier": 2,
+            "speed": 30,
+            "ability": 2,
+            "save": 2,
+            "temporaryHP": 75,
+            "twistedHP": 25,
+            "attackByLevel": true,
+            "preventsFrenzy": false
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "9436318ade0e4ad3",
+      "name": "Twisted Chakra Mode, Stage 3",
+      "type": "spell",
+      "img": "icons/magic/fire/flame-burning-creature-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Your form becomes more beastlike and skeletal. Speed +60 ft, STR/DEX +4, all saves +3, attack rolls + twice Class Mod level, Large size, Reach 2 for melee weapons, 100 Temporary HP, and 35 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-mode-stage-3",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 30,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "twisted-chakra-mode-stage-2"
+          ],
+          "minimumClassModLevel": 3,
+          "sealedTransformation": {
+            "key": "twisted-chakra-mode-stage-3",
+            "tier": 3,
+            "speed": 60,
+            "ability": 4,
+            "save": 3,
+            "temporaryHP": 100,
+            "twistedHP": 35,
+            "attackByLevel": true,
+            "preventsFrenzy": false
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "0f0e8ac77a9b810d",
+      "name": "Twisted Chakra Cloak",
+      "type": "spell",
+      "img": "icons/magic/fire/flame-burning-creature-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A controlled luminous cloak. Speed +90 ft, STR/DEX +4, all saves +4, attack rolls + twice Class Mod level, Reach 2, 120 Temporary HP, 50 Twisted HP, and you cannot enter Frenzy.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-cloak",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 40 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 40,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "path-of-the-beast"
+          ],
+          "minimumClassModLevel": 4,
+          "sealedTransformation": {
+            "key": "twisted-chakra-cloak",
+            "tier": 4,
+            "speed": 90,
+            "ability": 4,
+            "save": 4,
+            "temporaryHP": 120,
+            "twistedHP": 50,
+            "attackByLevel": true,
+            "preventsFrenzy": true
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "bacc9d25c6edb110",
+      "name": "Twisted Chakra Cloak, Stage 2",
+      "type": "spell",
+      "img": "icons/magic/fire/flame-burning-creature-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>An advanced literal Chakra cloak. Speed +120 ft, STR/DEX +6, all saves +6, attack rolls + twice Class Mod level, Reach 3, 150 Temporary HP, 65 Twisted HP, and direct drawing of Twisted Chakra without a check.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "twisted-chakra-cloak-stage-2",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 50 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 50,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "twisted-chakra-cloak",
+            "path-of-the-beast"
+          ],
+          "minimumClassModLevel": 5,
+          "sealedTransformation": {
+            "key": "twisted-chakra-cloak-stage-2",
+            "tier": 5,
+            "speed": 120,
+            "ability": 6,
+            "save": 6,
+            "temporaryHP": 150,
+            "twistedHP": 65,
+            "attackByLevel": true,
+            "preventsFrenzy": true
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "725383d930dd7261",
+      "name": "Sealed Beast Mode",
+      "type": "spell",
+      "img": "icons/magic/fire/flame-burning-creature-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Switch places with the sealed beast for 1 minute. Use the beast's size and physical ability scores, gain Twisted HP equal to its HP and Twisted Chakra equal to its Chakra, and damage/resources transfer to the beast. Dormant Beast cannot benefit this form. The module tracks the active form but the linked beast statistics remain GM-managed.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "sealed-beast-mode",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 50 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 50,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "path-of-partnership"
+          ],
+          "minimumClassModLevel": 5,
+          "sealedTransformation": {
+            "key": "sealed-beast-mode",
+            "tier": 5,
+            "speed": 0,
+            "ability": 0,
+            "save": 0,
+            "temporaryHP": 0,
+            "twistedHP": 0,
+            "attackByLevel": false,
+            "preventsFrenzy": true
+          },
+          "transformationArt": true
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "c70f39a4de7c918b",
+      "name": "Weapons of the Beast",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While a Transformation Art is active, gain a natural melee weapon dealing 3d4 Bludgeoning, Piercing, or Slashing damage plus your chosen Strength or Dexterity modifier and proficiency bonus. Increase its die size one step for each transformation tier beyond 1.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "weapons-of-the-beast"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ]
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "2d2bfb1847d8e3a2",
+      "name": "Twisted Resilience",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While transformed, increase the Twisted HP granted, restored each turn, and maximum by 5 per transformation tier.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "twisted-resilience"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ]
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "1d70d1195b907e8b",
+      "name": "Twisted Power",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While transformed, add twice your Class Mod level to damage rolls.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "twisted-power"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "twisted-chakra-mode"
+          ]
+        }
+      },
+      "folder": "218b37656a873424"
+    },
+    {
+      "_id": "50aee918a8961ab1",
+      "name": "Beast Bomb",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Tier 2 or higher Transformation Art unless Frenzied. Make a ranged Vermillion Art attack at 120 feet. On a hit, deal 20d12 Force damage. Hit or miss, creatures within 30 feet of the target make a Dexterity save, taking 12d12 Force damage on a failure or half on a success. Constructs and structures take four times damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "rsak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "20d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-bomb",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 30,
+          "awakeningCost": 18,
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true,
+          "minimumTransformationTier": 2
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "1364d0a6af420096",
+      "name": "Focused Beast Bomb",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When casting Beast Bomb, add 15 Twisted Chakra to either increase its critical threat range by 4 or double the area of effect.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "focused-beast-bomb"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "86d28f47ac6031e6",
+      "name": "Bigger Bombs",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>While using a Tier 3+ transformation, you may add 10 Twisted Chakra to a Beast Bomb-family Art and increase its damage dice by 6. Repeat a number of times equal to transformation tier beyond 2.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "bigger-bombs"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "twisted-chakra-mode-stage-3"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "ea7004c1d13ba5dd",
+      "name": "Beast Beam",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Release a 15-foot-wide, 120-foot line. Creatures make a Dexterity save, taking 16d12 Force damage on a failure or half on a success. A failure by 5 or more destroys non-Chakra-enhanced equipment. Constructs and structures take four times damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "16d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-beam",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 30,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "7ec1aa75dfca888f",
+      "name": "Beast Bullet",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Roll 4d6; creatures in a 120-foot cone make a Dexterity save and take Xd8 Force damage on a failure, where X is the 4d6 result, or half on success. Constructs and structures take triple damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "4d6",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-bullet",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 15 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 15,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "4a9d04bd3a37beaf",
+      "name": "High Caliber",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When casting Beast Bullet, add 5 Twisted Chakra to increase its 4d6 count roll by one die step, up to 4d12.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "high-caliber"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "beast-bullet"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "614d8082daf85970",
+      "name": "Beast Flare",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Creatures in a 30-foot radius make a Constitution save, taking 10d12 Force damage and becoming Blinded and Dazed until the end of their next turn and Weakened for 1 minute on a failure.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "con",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-flare",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "ed1a03f4b8858a6b",
+      "name": "Discombobulating",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Blinded and Dazed caused by Beast Flare last one additional turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "discombobulating"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "beast-flare"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "663105636e7fd89d",
+      "name": "Beast Roar",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Creatures in a 60-foot cone make a Strength save. On a failure, they are thrown 90 feet, knocked Prone, and Dazed until the end of your next turn. Collisions deal quadruple falling damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 60,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-roar",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 10,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-bomb"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "3f37ebf6e99ed1ec",
+      "name": "Beast Defiance",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beast Roar gains a Reaction use against a Line, Cone, Radius, or Square effect. Clash using Vermillion Attack Bonus or Ninshou, whichever is higher, with +5; attacks without Clash roll at disadvantage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "beast-defiance"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-bomb",
+            "beast-roar"
+          ]
+        }
+      },
+      "folder": "d00832aa3bf1b8fa"
+    },
+    {
+      "_id": "29347eb0c5277385",
+      "name": "Beast Claw",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Make a melee Vermillion Art attack. On a hit, deal 8d12 Force damage. Gain advantage on your first attack against the target before the end of your next turn, or impose disadvantage on its first save against your Vermillion Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "8d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-claw",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 10,
+          "awakeningCost": 18,
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "aecded72c1e0bee6",
+      "name": "Marked",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>The Beast Claw mark lasts 1 minute instead of until the end of your next turn, but its benefit applies only once per turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "marked"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "0e39b85f9556cd38",
+      "name": "Rip & Tear",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>When casting Beast Claw, pay its cost again to make a second attack, once per casting.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rip-tear"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "a1030f0ffd1fc351",
+      "name": "Rend",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>After hitting the same creature twice in one turn with Beast Claw, pay its cost again to immediately deal the Art damage again.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rend"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "f5b739e486fd4d4f",
+      "name": "Beast Crash",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Move up to 120 feet and make a melee Vermillion Art attack. On a hit, deal 30d4 Force damage; the target makes a Strength save or becomes Prone and Dazed until the end of your next turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 120,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "30d4",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-crash",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-claw"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "52c86b9afc9f5b08",
+      "name": "Beast Launch",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A target that fails its Beast Crash save is knocked back four times the distance you moved before hitting it.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "beast-launch"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-crash"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "edb80d89363cc5e9",
+      "name": "Beast Rush",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>After hitting with Beast Crash, pay its cost again to move and attack a different creature. Once per casting.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "beast-rush"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-crash"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "40b8af7b10ce18f4",
+      "name": "Beast Tail",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. Make a melee Vermillion Art attack. On a hit, deal 10d10 Force damage and force a Strength save; on a failure, the target is knocked Prone. Apply any additional duration stated by the GM from the source text.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d10",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-tail",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-claw"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "acf60e5c42a8e8be",
+      "name": "Stack Tails!",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beast Tail gains Combination. Allied jinchūriki or tailed beasts may use their Reaction and pay the Art cost to add one Beast Tail attack, even without knowing the Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "stack-tails"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-tail"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "65688da35c865fd9",
+      "name": "Beast Deflection",
+      "type": "spell",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Requires a Transformation Art unless Frenzied. As a Reaction, roll 5d12 + character level and reduce incoming damage by the result. The attacker and creatures in a 15-foot cone make a Dexterity save and take damage equal to the amount reduced.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "reaction",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 15,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "5d12+@details.level",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-deflection",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 20,
+          "awakeningCost": 6,
+          "prerequisites": [
+            "beast-claw"
+          ],
+          "minimumClassModLevel": 1,
+          "requiresTransformation": true
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "0c8f9645c3231cf7",
+      "name": "Full Counter",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Beast Deflection ignores limits on damage reduction. If it reduces the triggering damage to 0, the attacker automatically fails its Dexterity save.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "full-counter"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-deflection"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "1d51ed3bafdc5100",
+      "name": "Supreme Deflection",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Double Beast Deflection damage reduction when used against an Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "supreme-deflection"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 6,
+          "minimumClassModLevel": 1,
+          "prerequisites": [
+            "beast-claw",
+            "beast-deflection"
+          ]
+        }
+      },
+      "folder": "8238caa106ac187f"
+    },
+    {
+      "_id": "2294a57bc8c4145b",
+      "name": "Vermillion Assault",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action; 15 Twisted Chakra:</strong> For 1 minute, gain an additional action immediately and, at the start of each turn, you may pay 15 Twisted Chakra for another action usable only to cast a jutsu.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-assault"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "27c321d784ff0685",
+      "name": "Vermillion Augmentation",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action while casting a jutsu with Twisted Chakra:</strong> Choose one: add damage or healing dice equal to Class Mod level; add proficiency bonus to each damage roll of a multiattack; add construct/summon HP equal to proficiency × jutsu rank; or increase the jutsu save DC by Class Mod level.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-augmentation"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "8ab139ceb9fccfae",
+      "name": "Vermillion Authority",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Reaction; 25 Twisted Chakra:</strong> For 1 minute, hostile creatures within 120 feet that do not target you roll 2d20 on attacks and take the lower result. Non-attack effects require a Wisdom save or double their resource cost.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-authority"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "1c5c71b8dd3969ca",
+      "name": "Vermillion Resistance",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action:</strong> Spend 5 Twisted Chakra to remove up to 3 ranks of Elemental, Physical, or Mental conditions. You may spend additional groups of 5 up to three times. Spend 10 Twisted Chakra to regain the ability to Mold Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-resistance"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "78c34ace0853fb9f",
+      "name": "Vermillion Empowerment",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Spend 10 additional Twisted Chakra when using a Vermillion Art or feature. Targets cannot benefit from jutsu-derived AC/save/check bonuses, Temporary HP, damage reduction, resistance, or immunity against that effect.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-empowerment"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "82330a897793e19f",
+      "name": "Vermillion Fortitude",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action; 15 Twisted Chakra:</strong> Increase or restore Temporary HP by 3 × character level, including Temporary HP granted by Transformation Arts.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-fortitude"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "17fad5c9c9477335",
+      "name": "Vermillion Athlete",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>When making a Strength, Dexterity, or Constitution check, spend 10 Twisted Chakra to add 1d10.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-athlete"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "d0e886816ba5f6c3",
+      "name": "Vermillion Instincts",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>When an attack hits by 5 or more over your AC, spend 15 Twisted Chakra to gain an additional Reaction usable only against that attack.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-instincts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "fa744e44ddbfa98c",
+      "name": "Vermillion Rage",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action after a melee hit; 20 Twisted Chakra:</strong> Treat the hit as a critical hit. Hostile creatures have advantage on attacks against you until the start of your next turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-rage"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "4b86e27b4b97da3b",
+      "name": "Vermillion Tenacity",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action; 20 Twisted Chakra:</strong> Gain advantage on attack rolls until the start of your next turn; attacks against you cannot have advantage for the same duration.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-tenacity"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "46bb63e6e1416944",
+      "name": "Vermillion Unity",
+      "type": "feat",
+      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Bonus Action:</strong> Touch willing creatures and transfer up to 30 Twisted Chakra to each for 1 minute. Cannot be used during Frenzy. Path of the Beast recipients may use your Vermillion Abilities; Path of Wrath recipients Frenzy while they retain Twisted Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "vermillion-unity"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 9,
+          "minimumClassModLevel": 1,
+          "vermillionAbility": true
+        }
+      },
+      "folder": "9e1887a70c0ea5b4"
+    },
+    {
+      "_id": "bef7d4930f92323e",
+      "name": "Devilish Blood",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Increase every ability score by 1 and gain proficiency in one saving throw of your choice.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-blood"
+      },
+      "effects": [
+        {
+          "_id": "cb66c656f6f5164f",
+          "name": "Devilish Blood",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.str.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.dex.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.con.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.int.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.wis.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.cha.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "51a92cbf0754b6b2",
+      "name": "Devilish Claws",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Natural Weapon and unarmed damage add your Sealed Beast level. As a Bonus Action, make two unarmed or natural attacks. Hits push 5 feet and let you move 5 feet without provoking; once per round, make an opportunity attack without spending a Reaction.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-claws"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "fcfab21e9b452ea3",
+      "name": "Devilish Focus",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Gain +2 to Ninjutsu and Taijutsu attack rolls and +1 to Genjutsu save DC. While Frenzied or transformed, Constitution checks have advantage and Ninjutsu/Genjutsu concentration costs no Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-focus"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "0dfc0f65dede253e",
+      "name": "Devilish Might",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Strength +1, with another +2 while transformed. Maximum bulk +10; you cannot be moved against your will. While Frenzied or transformed, melee Vermillion Art dice increase one step, melee attacks cannot have disadvantage, and you may reduce melee damage by Strength modifier as a Reaction.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-might"
+      },
+      "effects": [
+        {
+          "_id": "3a8c98a0c2fa89ff",
+          "name": "Devilish Might",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.str.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "dcd18a243843141d",
+      "name": "Devilish Mobility",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Dexterity +1, with another +2 while transformed. Speed increases by 5 feet × Class Mod level. While Frenzied or transformed, Dexterity checks have advantage, gain Dexterity save proficiency (or add Class Mod level if already proficient), your AC cannot be lowered, and attackers cannot gain advantage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-mobility"
+      },
+      "effects": [
+        {
+          "_id": "e416d4794c6e3c9f",
+          "name": "Devilish Mobility",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.dex.value",
+              "mode": 2,
+              "value": "1",
+              "priority": 20
+            },
+            {
+              "key": "system.attributes.movement.walk",
+              "mode": 2,
+              "value": "5 * @classmods.sealed-beast-redux.levels",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "777e00d4b2378e25",
+      "name": "Devilish Presence",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Gain Intimidation proficiency, or add Sealed Beast level if already proficient. You may pull a creature using Chakra Sight into your inner world as a Reaction, forcing a Charisma save against Vermillion DC or applying Demoralized and possibly Stunned. While Frenzied or transformed, intimidate creatures within 90 feet and automatically resist forced banishment, teleportation, or movement that allows a save.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-presence"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "b422e4b2d222360c",
+      "name": "Devilish Will",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>Gain +2 to Intelligence, Wisdom, and Charisma saving throws and +2 against Fūinjutsu Arts/Jutsu. While Frenzied or transformed, spend 10 Chakra to end one Genjutsu effect on yourself.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-will"
+      },
+      "effects": [
+        {
+          "_id": "2a4fdcfc01a8c6b2",
+          "name": "Devilish Will",
+          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "origin": null,
+          "disabled": false,
+          "duration": {},
+          "changes": [
+            {
+              "key": "system.abilities.int.bonuses.save",
+              "mode": 2,
+              "value": "2",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.wis.bonuses.save",
+              "mode": 2,
+              "value": "2",
+              "priority": 20
+            },
+            {
+              "key": "system.abilities.cha.bonuses.save",
+              "mode": 2,
+              "value": "2",
+              "priority": 20
+            }
+          ],
+          "transfer": true,
+          "statuses": [],
+          "flags": {}
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "680f6d14a287a621",
+      "name": "Devilish Flames",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Fire Release.</strong> Gain Fire Release affinity and learn three qualifying Fire jutsu. While Frenzied or transformed, Fire Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-flames"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "6d8770cb4be4abdc",
+      "name": "Devilish Winds",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Wind Release.</strong> Gain Wind Release affinity and learn three qualifying Wind jutsu. While Frenzied or transformed, Wind Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-winds"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "39b7cd97cc8d55e5",
+      "name": "Devilish Storm",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Lightning Release.</strong> Gain Lightning Release affinity and learn three qualifying Lightning jutsu. While Frenzied or transformed, Lightning Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-storm"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "c8fdcc2936aad71b",
+      "name": "Devilish Earth",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Earth Release.</strong> Gain Earth Release affinity and learn three qualifying Earth jutsu. While Frenzied or transformed, Earth Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-earth"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "ac19a32aafb0fb5c",
+      "name": "Devilish Waves",
+      "type": "feat",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Prerequisite: sealed beast has Water Release.</strong> Gain Water Release affinity and learn three qualifying Water jutsu. While Frenzied or transformed, Water Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "devilish-waves"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux",
+          "awakeningCost": 8,
+          "minimumClassModLevel": 1,
+          "vermillionPassive": true
+        }
+      },
+      "folder": "7917560b4adbe366"
+    },
+    {
+      "_id": "a177032023023f4c",
+      "name": "Beast Summoning",
+      "type": "spell",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Full Turn Action; 100 Twisted Chakra:</strong> Summon an avatar of your Sealed Beast. It acts with free will but follows your commands for the summoning.</p><p>The source provides a customizable Sealed Beast summon chassis: Toughness 18, defensive ability Constitution or Charisma, any 3 saves, any 4 skills, Darkvision 120 ft, Chakra equal to HP, and one role (Striker, Caster, Controller, Defender, Lurker, or Supporter). The GM should create or select the linked summon Actor.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "full",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "util",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 0,
+        "rank": "e",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "beast-summoning",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 100 Twisted Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:sealed-beast-redux"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "sealed-beast-redux"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "sealed-beast-redux",
+          "vermillionArt": true,
+          "twistedChakraCost": 100,
+          "awakeningCost": 18,
+          "minimumClassModLevel": 1
+        }
+      },
+      "folder": "461b9d21eb5bec25"
+    },
+    {
+      "_id": "f335a87a96bee077",
+      "name": "Sealed Beast Summon Chassis",
+      "type": "feat",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Base abilities:</strong> STR/DEX/CON/INT/WIS/CHA 18. At each Class Mod level, distribute +8 ability points, with suggested maximums increasing to 26, 28, and 30 at higher tiers.</p><table><thead><tr><th>Rank</th><th>Level</th><th>Size</th><th>Slots</th><th>Jutsu</th><th>Speed</th></tr></thead><tbody><tr><td>D</td><td>4</td><td>M</td><td>6</td><td>2 D-Rank</td><td>50 ft</td></tr><tr><td>C</td><td>8</td><td>M-L</td><td>9</td><td>2 D, 2 C</td><td>65 ft</td></tr><tr><td>B</td><td>12</td><td>M-H</td><td>12</td><td>2 C, 2 B</td><td>80 ft</td></tr><tr><td>A</td><td>16</td><td>M-G</td><td>15</td><td>3 B, 1 A</td><td>95 ft</td></tr><tr><td>S</td><td>20</td><td>M-G</td><td>18</td><td>3 A, 1 S</td><td>110 ft</td></tr></tbody></table><p>Choose a role and appropriate summon traits. Jutsu-slot features may instead cost 10 Chakra per slot.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Sealed Beast Redux",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "sealed-beast-summon-chassis"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "feature",
+          "classMod": "sealed-beast-redux"
+        }
+      },
+      "folder": "461b9d21eb5bec25"
+    },
+    {
+      "_id": "abe4260da820868b",
+      "name": "Sealed Beast Redux",
+      "type": "classmod",
+      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "system": {
+        "description": {
+          "value": "<p>A five-level Class Mod for jinchūriki and other hosts of sealed Chakra beasts. It uses Actor-based Twisted Chakra, Twisted Hit Points, Disposition, Frenzy, Dormant Beast, Transformation tracking, and a Twisted Awakening point budget.</p><table><thead><tr><th>Level</th><th>Minimum Character Level</th><th>Twisted Awakening</th><th>Features</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>45</td><td>Core features, Dormant Beast, Frenzy, Twisted Chakra Mode</td></tr><tr><td>2</td><td>7</td><td>110</td><td>Frenzied Drawbacks, choose a Path</td></tr><tr><td>3</td><td>10</td><td>175</td><td>Path progression</td></tr><tr><td>4</td><td>15</td><td>220</td><td>Path progression</td></tr><tr><td>5</td><td>17</td><td>275</td><td>Path progression</td></tr></tbody></table><p><strong>Twisted Awakening:</strong> Talents are purchased by dragging them from this compendium onto the Actor. The module rejects unaffordable or unmet-prerequisite talents and calculates remaining points directly from owned items. It never stores this resource in item Uses.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Sealed Beast Redux Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "identifier": "sealed-beast-redux",
+        "levels": 1,
+        "advancement": {
+          "grant1": {
+            "_id": "40b925f8f8935b47",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.8cb947775f5706e7",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.5e9f245f1c286c8b",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.19eea50e6ce65606",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.3c0a6743f1684333",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.b4cde942c53231fc",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.29e9b009493555a0",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.303cd47558b6b1d4",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.01e04e072f2fd3de",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 1,
+            "title": "",
+            "hint": ""
+          },
+          "grant2": {
+            "_id": "c3956a1dc8c30899",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.44e6ff07f48640fe",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 2,
+            "title": "",
+            "hint": ""
+          },
+          "path": {
+            "_id": "e941c6ef1c6e5281",
+            "type": "ItemChoice",
+            "configuration": {
+              "choices": {
+                "2": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "allowDrops": false,
+              "type": null,
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.37307e33cf67a8e6"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.f454b0186bc50d47"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.694b96d462f8d4b5"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.2dc2d1439e09de86"
+                }
+              ],
+              "restriction": {}
+            },
+            "value": {
+              "added": {},
+              "replaced": {}
+            },
+            "level": 2,
+            "title": "Path of the Beast",
+            "hint": "Choose one path at 2nd level. Its later-level benefits advance automatically from the same item."
+          },
+          "awakening": {
+            "_id": "0e7d13a89afed8ce",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "twisted-awakening",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 45
+                },
+                "2": {
+                  "value": 110
+                },
+                "3": {
+                  "value": 175
+                },
+                "4": {
+                  "value": 220
+                },
+                "5": {
+                  "value": 275
+                }
+              }
+            },
+            "value": {},
+            "title": "Twisted Awakening Points",
+            "hint": ""
+          }
+        },
+        "save": {
+          "formula": "12+@classmods.sealed-beast-redux.levels+@prof",
+          "value": "12+@classmods.sealed-beast-redux.levels+@prof",
+          "scaling": ""
+        },
+        "attackBonus": {
+          "formula": "2*@prof+@classmods.sealed-beast-redux.levels",
+          "value": "2*@prof+@classmods.sealed-beast-redux.levels",
+          "scaling": ""
+        },
+        "color": "#f28c18"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "classmod",
+          "contentVersion": "0.9.0"
+        }
+      },
+      "folder": "d6bb1c78a8148b77"
+    }
+  ]
+}
