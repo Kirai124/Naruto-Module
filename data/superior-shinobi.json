@@ -1821,7 +1821,7 @@
       "_id": "b85bda9e1e38d346",
       "name": "Supreme Strength",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -1931,7 +1931,7 @@
       "_id": "ce74d00266116168",
       "name": "Supreme Dexterity",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2041,7 +2041,7 @@
       "_id": "50749647da481717",
       "name": "Supreme Constitution",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2151,7 +2151,7 @@
       "_id": "9cb21007e0897132",
       "name": "Supreme Intelligence",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2261,7 +2261,7 @@
       "_id": "d1c25dc76564c360",
       "name": "Supreme Wisdom",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2371,7 +2371,7 @@
       "_id": "54f0c47e7e63ea15",
       "name": "Supreme Charisma",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2481,7 +2481,7 @@
       "_id": "fcd5ff2ba2548ad2",
       "name": "Supreme Limits",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2591,7 +2591,7 @@
       "_id": "62ac605ffebb9ed7",
       "name": "Supreme Concentration",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2701,7 +2701,7 @@
       "_id": "c7ddc72390bdcceb",
       "name": "Supreme Constructs",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2811,7 +2811,7 @@
       "_id": "89f5b2346292deae",
       "name": "Superior Clones",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2921,7 +2921,7 @@
       "_id": "aaaa8c9f16846257",
       "name": "Superior Summon",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3031,7 +3031,7 @@
       "_id": "de6fbb84a2465388",
       "name": "Superior Explosive Tools",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3141,7 +3141,7 @@
       "_id": "7973c2ab7dd97b25",
       "name": "Superior Traps",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3251,7 +3251,7 @@
       "_id": "976388993c6dfb96",
       "name": "Supreme Initiative",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3361,7 +3361,7 @@
       "_id": "f206c75eee5a34a7",
       "name": "Supreme Fuinjutsu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3471,7 +3471,7 @@
       "_id": "dcedc757223fb91f",
       "name": "Supreme Medicine",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3581,7 +3581,7 @@
       "_id": "af0232430b29bab6",
       "name": "Supreme Skills",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3691,7 +3691,7 @@
       "_id": "e65ed973ccf818b7",
       "name": "Supreme Bukijutsu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3801,7 +3801,7 @@
       "_id": "783ac659af87c84f",
       "name": "Supreme Clash",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3911,7 +3911,7 @@
       "_id": "ad601f7fc6d98bd2",
       "name": "Supreme Genjutsu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4021,7 +4021,7 @@
       "_id": "dc6e83754f149370",
       "name": "Supreme Speed",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4131,7 +4131,7 @@
       "_id": "4510808b4cbb4926",
       "name": "Superior Arsenal",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4241,7 +4241,7 @@
       "_id": "801963f888ddf304",
       "name": "Superior Release",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4351,7 +4351,7 @@
       "_id": "634ace10e72e801c",
       "name": "Supreme Kunai",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4461,7 +4461,7 @@
       "_id": "4bbc2c4d993bfeb8",
       "name": "Supreme Scores",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4571,7 +4571,7 @@
       "_id": "b53504d2b607881b",
       "name": "Superior Pills",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4681,7 +4681,7 @@
       "_id": "43e41792aa080fb8",
       "name": "Supreme Reduction",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4791,7 +4791,7 @@
       "_id": "b3c43f1eb15df1d1",
       "name": "Supreme Taijutsu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4901,7 +4901,7 @@
       "_id": "80c6dd24f3508ecc",
       "name": "Supreme Ninjutsu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5011,7 +5011,7 @@
       "_id": "c78c2b595a16d3db",
       "name": "Superior Toolkits",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5121,7 +5121,7 @@
       "_id": "e3001a7219e3e587",
       "name": "Supreme Efficiency",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5231,7 +5231,7 @@
       "_id": "c60c35877246d72c",
       "name": "Supreme Evasion",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5341,7 +5341,7 @@
       "_id": "2638f2f77e0ad7ac",
       "name": "Supreme Weapons",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5451,7 +5451,7 @@
       "_id": "e00b2eb7a27e5197",
       "name": "Supreme Reinforcement",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5561,7 +5561,7 @@
       "_id": "7a3507493a32600e",
       "name": "Supreme Heightening",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5671,7 +5671,7 @@
       "_id": "e8532dec9d02958a",
       "name": "Supreme Creation",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5781,7 +5781,7 @@
       "_id": "0742a4cc5f18d793",
       "name": "Supreme Combination",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5891,7 +5891,7 @@
       "_id": "8e63b20091076760",
       "name": "Supreme Persona",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -6001,7 +6001,7 @@
       "_id": "cc1f27e209952e99",
       "name": "Supreme Dragon Fist",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-pentagon-gold.webp",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -14533,7 +14533,7 @@
       "_id": "65780f7bc2f55fa4",
       "name": "The Prodigy",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14640,7 +14640,7 @@
       "_id": "fbdf6901bd76e116",
       "name": "The Tail-Less Tailed Beast",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14747,7 +14747,7 @@
       "_id": "4f910643b4f3a920",
       "name": "The Fastest Alive",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14854,7 +14854,7 @@
       "_id": "31ff8ec20dcc651a",
       "name": "The Juggernaut",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14961,7 +14961,7 @@
       "_id": "2bb09375c0606d84",
       "name": "The Hero",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15068,7 +15068,7 @@
       "_id": "e7b85330e6c8e886",
       "name": "The Genius",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15175,7 +15175,7 @@
       "_id": "35ac87d94943b194",
       "name": "The Beast",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15282,7 +15282,7 @@
       "_id": "3aa217df39275a5a",
       "name": "The Ghost",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15389,7 +15389,7 @@
       "_id": "d75b76e3a2f9873a",
       "name": "The Ripper",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15496,7 +15496,7 @@
       "_id": "f29ce4f9063355bd",
       "name": "The Master",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15603,7 +15603,7 @@
       "_id": "7ec548b97f7d08c8",
       "name": "The Specialist",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15710,7 +15710,7 @@
       "_id": "2ec962b91a2ce823",
       "name": "The Calamity",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15817,7 +15817,7 @@
       "_id": "d6a12ee010719b23",
       "name": "The Terror",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15924,7 +15924,7 @@
       "_id": "66a781114d1da291",
       "name": "The Berserker",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -16031,7 +16031,7 @@
       "_id": "437df693b45344c3",
       "name": "The Prophesised",
       "type": "feat",
-      "img": "icons/skills/social/star-medal-gold-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {

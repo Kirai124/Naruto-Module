@@ -1744,7 +1744,7 @@ async function refreshSealedBeastEffects(actor, suppliedState) {
   const state = suppliedState ?? readSealedBeastTracker(actor);
   await upsertSealedEffect(actor,"dormantBeastEffect","Dormant Beast","icons/creatures/abilities/paw-print-orange.webp",state.dormantBeast,buildDormantBeastChanges());
   await upsertSealedEffect(actor,"sealedFrenzyEffect","Frenzy","icons/creatures/abilities/mouth-teeth-fire-orange.webp",state.frenzy,buildFrenzyChanges(actor));
-  await upsertSealedEffect(actor,"sealedTransformationEffect",state.transformationName || "Sealed Beast Transformation","icons/magic/fire/flame-burning-creature-orange.webp",Boolean(state.transformation),buildTransformationChanges(actor,state));
+  await upsertSealedEffect(actor,"sealedTransformationEffect",state.transformationName || "Sealed Beast Transformation","modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",Boolean(state.transformation),buildTransformationChanges(actor,state));
 }
 
 function getNormalChakra(actor) {

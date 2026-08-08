@@ -10077,7 +10077,7 @@
       "_id": "01e04e072f2fd3de",
       "name": "Twisted Chakra Mode",
       "type": "spell",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
       "system": {
         "description": {
           "value": "<p>Your Twisted Chakra forms a bubbling cloak. Speed +15 ft, STR/DEX +2, all saves +1, 50 Temporary HP, and 15 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -10237,7 +10237,7 @@
       "_id": "a96430bfd4b11d3d",
       "name": "Twisted Chakra Mode, Stage 2",
       "type": "spell",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
       "system": {
         "description": {
           "value": "<p>A black veil of Chakra and red aura. Speed +30 ft, STR/DEX +2, all saves +2, attack rolls + twice Class Mod level, 75 Temporary HP, and 25 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -10401,7 +10401,7 @@
       "_id": "9436318ade0e4ad3",
       "name": "Twisted Chakra Mode, Stage 3",
       "type": "spell",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
       "system": {
         "description": {
           "value": "<p>Your form becomes more beastlike and skeletal. Speed +60 ft, STR/DEX +4, all saves +3, attack rolls + twice Class Mod level, Large size, Reach 2 for melee weapons, 100 Temporary HP, and 35 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -10565,7 +10565,7 @@
       "_id": "0f0e8ac77a9b810d",
       "name": "Twisted Chakra Cloak",
       "type": "spell",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
       "system": {
         "description": {
           "value": "<p>A controlled luminous cloak. Speed +90 ft, STR/DEX +4, all saves +4, attack rolls + twice Class Mod level, Reach 2, 120 Temporary HP, 50 Twisted HP, and you cannot enter Frenzy.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -10729,7 +10729,7 @@
       "_id": "bacc9d25c6edb110",
       "name": "Twisted Chakra Cloak, Stage 2",
       "type": "spell",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
       "system": {
         "description": {
           "value": "<p>An advanced literal Chakra cloak. Speed +120 ft, STR/DEX +6, all saves +6, attack rolls + twice Class Mod level, Reach 3, 150 Temporary HP, 65 Twisted HP, and direct drawing of Twisted Chakra without a check.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -10894,7 +10894,7 @@
       "_id": "725383d930dd7261",
       "name": "Sealed Beast Mode",
       "type": "spell",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
       "system": {
         "description": {
           "value": "<p>Switch places with the sealed beast for 1 minute. Use the beast's size and physical ability scores, gain Twisted HP equal to its HP and Twisted Chakra equal to its Chakra, and damage/resources transfer to the beast. Dormant Beast cannot benefit this form. The module tracks the active form but the linked beast statistics remain GM-managed.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
