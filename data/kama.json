@@ -159,7 +159,7 @@
       "_id": "2ZsF9LFhBvMgKsLY",
       "name": "Kāma Seal",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>Activation:</strong> As a Bonus Action while you are Bloodied. At 3rd Class Mod level, you can activate the seal without being Bloodied. The seal remains active for 1 minute.</p><ul><li>Gain +2 AC, +30 feet of movement, and +3 to Strength, Dexterity, and Constitution saving throws.</li><li>At 4th Class Mod level, these bonuses become +3 AC, +60 feet of movement, and +5 to those saving throws.</li><li>D-, C-, B-, A-, and S-Rank jutsu cost 3/5/7/11/15 chakra while the seal is active, unless their normal or Special cost is lower.</li><li>Gain 20 Kāma Points per Class Mod level as stacking temporary hit points. Speed Type grants 10 per level and White Kāma grants 15 per level.</li><li>Each activation automatically adds 5 Divine Rewrite.</li><li>The selected Seal Type and its automatic 3rd-level evolution are included in this Active Effect.</li></ul><p><strong>Controls:</strong> Use the “Kāma” button on the character sheet or run <code>N5eBClassMods.toggleKama(actor)</code>.</p>",
@@ -250,7 +250,7 @@
         {
           "_id": "ssN6jYg3gBI2XAXX",
           "name": "Kāma Seal - Aktiv",
-          "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": true,
           "duration": {
@@ -316,7 +316,7 @@
       "_id": "fFAO9IY9VTao1OFW",
       "name": "Divine Arts",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Once per turn while your Kāma is active, you may elevate one jutsu you cast into a Divine Art.</p><ul><li>Divine Art Save DC = 10 + half your character level + your proficiency bonus.</li><li>Divine Art Attack Bonus = half your character level + your Kāma Seal level + your proficiency bonus.</li><li>For non-d20 dice, add 2 dice or increase the total ranks of a condition by 2.</li><li>Alternatively, increase DR by 5, AC by 2, temporary hit points by 15, speed by 60 feet, teleport distance by 30 feet, or the attack roll/save DC by 1.</li></ul>",
@@ -421,7 +421,7 @@
       "_id": "pgnMu61SwzfVaHQz",
       "name": "Seal Type",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Choose one permanent Seal Type at 1st level. At 3rd level, choose the matching evolution for that same Seal Type.</p>",
@@ -526,7 +526,7 @@
       "_id": "YchrPlVJ7QTtFjBC",
       "name": "Influence",
       "type": "feat",
-      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Ōtsutsuki Influence tier.</p><ul><li>The entity that granted the Kāma always knows your location.</li><li>Once per year, when you would be reduced to 0 hit points, remain at 1 hit point, gain temporary hit points equal to half your maximum hit points, become Possessed, and gain 5 ranks of Resonance Disruption.</li></ul>",
@@ -631,7 +631,7 @@
       "_id": "g3CzhEDgXJWas5bC",
       "name": "Resonance Disruption",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Resonance Disruption is tracked by the dedicated <strong>Kāma Tracking</strong> panel rather than item uses.</p><p>Your first Kāma activation after a Full Rest adds 2 ranks. Each later activation adds one additional rank. A Long Rest removes 1 rank; the tracker’s Full Rest control removes 2 ranks and resets the escalating activation count.</p><table><thead><tr><th>Rank</th><th>Cumulative Drawback</th></tr></thead><tbody><tr><td>1</td><td>Reduce attack rolls, save DCs, and saving throws by 1 per rank.</td></tr><tr><td>2</td><td>Reduce AC by an additional 3.</td></tr><tr><td>3</td><td>Increase jutsu costs by 2 per rank.</td></tr><tr><td>4</td><td>You cannot maintain concentration on jutsu or features.</td></tr><tr><td>5</td><td>At the end of each turn, roll 1d6. On a 1, you are Incapacitated until the start of your next turn.</td></tr></tbody></table>",
@@ -737,7 +737,7 @@
       "_id": "dAJ7RPDL7R8z4zLD",
       "name": "Divine Rewrite",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Your DNA is permanently rewritten into an Ōtsutsuki form. Divine Rewrite starts at 0 and normally cannot decrease, even if you lose this Class Mod.</p><p>Each activation of the Kāma Seal automatically adds 5 Divine Rewrite, to a maximum of 100. Track the value with the dedicated <strong>Kāma Tracking</strong> panel on the character sheet or the tracker button in the sheet header.</p><p>The module grants only the highest milestone reached. At 30 Divine Rewrite, Strength, Dexterity, and Constitution—and their maximums—increase by 2.</p>",
@@ -843,7 +843,7 @@
       "_id": "dPbvTDgVnikJJeh5",
       "name": "Karmic Influences",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>At 2nd Class Mod level, choose two Karmic Influences. Choose one additional Influence at each later Class Mod level. Karmic Influences are active only while your Kāma Seal is active.</p>",
@@ -948,7 +948,7 @@
       "_id": "4kaEcJzw2OPeIBy7",
       "name": "Memetic Relays",
       "type": "feat",
-      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>While your Kāma is active, expend 6 Chakra Dice to access the combat experience of your Ōtsutsuki.</p><ul><li>Use up to half of the Ōtsutsuki’s known jutsu of each rank, provided you meet their keyword requirements. You cannot cast more than one rank above your normal limit.</li><li>Gain the Ōtsutsuki’s skill proficiencies and masteries. If both of you are proficient in the same skill, gain +3 instead.</li><li>Gain +2 to attack rolls and save DCs.</li><li>Halve the Downtime required for training.</li></ul>",
@@ -1053,7 +1053,7 @@
       "_id": "Tsi5InPTREZNEb9M",
       "name": "Absorption",
       "type": "feat",
-      "img": "icons/magic/defensive/shield-barrier-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>While your Kāma is active, you can absorb chakra. Chakra absorbed beyond your maximum becomes Temporary Chakra, up to 10 × your Class Mod level, and lasts for 8 hours. Twisted Chakra is halved.</p><p>The three embedded Absorption actions have separate roll buttons. You can use Absorption only once per round in total.</p>",
@@ -1158,7 +1158,7 @@
       "_id": "BK3gzbcVHHw4A805",
       "name": "Absorption - Action",
       "type": "spell",
-      "img": "icons/magic/defensive/shield-barrier-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>A creature within melee range makes a Dexterity saving throw against your Divine Art save DC. On a failure, reduce its chakra by 3d10 + 5 and give it 2 ranks of Exhaustion for 1 minute. On a success, reduce its chakra by 1d10 + 5.</p>",
@@ -1302,7 +1302,7 @@
       "_id": "cwnAmfjQvv0PON4L",
       "name": "Absorption - Bonus Action",
       "type": "spell",
-      "img": "icons/magic/defensive/shield-barrier-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>A creature within melee range makes a Dexterity saving throw against your Divine Art save DC. On a failure, reduce its chakra by 1d8 + 4. On a success, no chakra is removed.</p>",
@@ -1446,7 +1446,7 @@
       "_id": "PkTxfQotaYpO0dxr",
       "name": "Absorption - Reaction",
       "type": "spell",
-      "img": "icons/magic/defensive/shield-barrier-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Use this reaction against an elemental Ninjutsu, Genjutsu, Taijutsu, Bukijutsu, or equivalent Class Mod Art. Make a Divine Art attack roll contested by the caster’s save DC. On a success, negate the effect and regain chakra equal to its base cost. On a failure, reduce the damage by 5 + twice your Class Mod level and regain chakra equal to half the base cost.</p>",
@@ -1585,7 +1585,7 @@
       "_id": "PUNSae6wRWc0I7sH",
       "name": "Greater Kāma Seal",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>At 4th level, you gain half of one Divine Art enhancement even while the seal is inactive. While the seal is active, gain +3 AC, +60 feet of movement, and +5 to Strength, Dexterity, and Constitution saving throws.</p>",
@@ -1690,7 +1690,7 @@
       "_id": "6mnl9pvl0ri3iSCo",
       "name": "Divine Arts (2)",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>At 4th level, your Divine Art enhancements improve: add 4 dice or 3 condition ranks; increase DR by 9, AC by 3, temporary hit points by 30, speed by 90 feet, teleport distance by 60 feet, or the attack roll/save DC by 2.</p>",
@@ -1795,7 +1795,7 @@
       "_id": "tEDFKff1Kcutuq9A",
       "name": "Yomotsu Hirasaka",
       "type": "spell",
-      "img": "icons/magic/movement/portal-vortex-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Spend 15 chakra as an Action to create a portal to a known location within 100 miles. The portal remains open for up to 1 hour. For every additional 5 chakra spent, increase the range by 100 miles. Once the range reaches at least 500 miles, the portal can lead to another dimension.</p><p>Partially known destinations require a d100 roll. Under the source rules, a result of 25 or higher can send the portal to a random location; each major piece of reliable information increases the failure threshold by 25.</p>",
@@ -1934,7 +1934,7 @@
       "_id": "qPO3eOqC1yum6j9r",
       "name": "Divine Absorption",
       "type": "feat",
-      "img": "icons/magic/defensive/shield-barrier-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>At 5th level, while your Kāma is active, gain one Divine Action each round. It can be used as an Action, Bonus Action, or Reaction, but only to activate Absorption.</p>",
@@ -2039,7 +2039,7 @@
       "_id": "Kb2QU4LL8kbfzlDx",
       "name": "Take-Over",
       "type": "feat",
-      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Once Divine Rewrite reaches 80, every further increase is raised by half its value. At 100 Divine Rewrite, the mental confrontation with the Ōtsutsuki begins. Resolve success, failure, or permanent separation according to the campaign rules.</p>",
@@ -2144,7 +2144,7 @@
       "_id": "GpWmlLyBdy8wBKDS",
       "name": "Possession",
       "type": "feat",
-      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>While Possessed, the Ōtsutsuki controls your character sheet. You gain 50 temporary hit points at the start of each turn, +3 AC, two additional dice on non-d20 rolls, and portions of the Ōtsutsuki’s proficiency and adversary bonuses.</p><p>At the end of each turn, make a Charisma saving throw against DC 35. Reduce the DC by 5 for each 25% of your maximum chakra you currently have. Possession ends when your chakra is full or after 1 minute at the latest.</p>",
@@ -2249,7 +2249,7 @@
       "_id": "HRbXLGOeQASKh8AD",
       "name": "No Influence",
       "type": "feat",
-      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Ōtsutsuki Influence tier.</p><ul><li>Each activation after the first grants 1 additional rank of Resonance Disruption.</li><li>Increase the flat Kāma jutsu costs by 2.</li><li>No external entity can influence your Kāma abilities.</li></ul>",
@@ -2354,7 +2354,7 @@
       "_id": "CdbErvRvrxVYC5eR",
       "name": "Influence",
       "type": "feat",
-      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Ōtsutsuki Influence tier.</p><ul><li>The entity that granted the Kāma always knows your location.</li><li>Once per year, when you would be reduced to 0 hit points, remain at 1 hit point, gain temporary hit points equal to half your maximum hit points, become Possessed, and gain 5 ranks of Resonance Disruption.</li></ul>",
@@ -2459,7 +2459,7 @@
       "_id": "P69hveCubBtZ2sb1",
       "name": "Heavy Influence",
       "type": "feat",
-      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Ōtsutsuki Influence tier.</p><ul><li>Reduce Resonance Disruption gained from activating Kāma by 1 rank, to a minimum of 1.</li><li>When you activate Kāma, the GM may call for a d20 roll; on a 19–20, you become Possessed for 1 minute.</li><li>Once per year, when you would be reduced to 0 hit points, remain at 1 hit point, gain temporary hit points equal to your maximum hit points, become Possessed, and gain 6 ranks of Resonance Disruption.</li></ul>",
@@ -2564,7 +2564,7 @@
       "_id": "RzODvglYDUViAhYd",
       "name": "All-Rounder",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Kāma Seal Type.</p><ul><li>No fundamental alterations.</li><li>While your Kāma is active, increase your proficiency bonus by 1.</li></ul>",
@@ -2670,7 +2670,7 @@
       "_id": "mt58A4nvbCWrDt8j",
       "name": "All-Rounder - Evolution",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>3rd-level evolution for All-Rounder.</p><ul><li>While your Kāma is active, increase all ability scores by 2.</li></ul>",
@@ -2776,7 +2776,7 @@
       "_id": "oGIkaX5UaHj0TKIH",
       "name": "Absorber",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Kāma Seal Type.</p><ul><li>Divine Arts deal 1 fewer damage die. Reduce their DR by 2, AC by 1, temporary hit points by 5, speed by 20 feet, teleport distance by 15 feet, and Basic Enhancement attack/DC bonus by 1.</li><li>Once per turn when you deal damage, deal an additional 5d8 chakra damage. Gain Temporary Chakra equal to one-third of that damage, up to 30.</li><li>Once per turn, you may convert all damage you deal to chakra damage.</li></ul>",
@@ -2882,7 +2882,7 @@
       "_id": "5YmYLmQgn7mkCXff",
       "name": "Absorber - Evolution",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>3rd-level evolution for Absorber.</p><ul><li>Increase the save DC of the Action and Bonus Action versions of Absorption by 2.</li><li>Increase the Divine Art attack roll of the Reaction version of Absorption by 2.</li></ul>",
@@ -2988,7 +2988,7 @@
       "_id": "VcAxiUXvjmhBlZtC",
       "name": "Assault Type",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Kāma Seal Type.</p><ul><li>While Kāma is active, reduce Strength, Dexterity, and Constitution saving throws by 1.</li><li>The first time you take damage each round, take an additional 3d6 necrotic damage that cannot be reduced or ignored.</li><li>Once per turn when you deal damage, deal an additional 3d8 necrotic damage that cannot be reduced or ignored.</li><li>Increase the die size of all other damage you deal by one step.</li></ul>",
@@ -3094,7 +3094,7 @@
       "_id": "fWsBKWzKXPsB9jxs",
       "name": "Assault Type - Evolution",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>3rd-level evolution for Assault Type.</p><ul><li>Increase the additional necrotic damage by another 3d8.</li><li>Damage you deal cannot be reduced below 2 per die.</li></ul>",
@@ -3200,7 +3200,7 @@
       "_id": "iKozu3Ktui3DHHmS",
       "name": "Tank Type",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Kāma Seal Type.</p><ul><li>Increase jutsu costs by 2 chakra per rank, from +2 for D-Rank to +10 for S-Rank.</li><li>Reduce chakra gained from Absorption by one-third.</li><li>At the start of each turn while Kāma is active, gain 8 stacking temporary hit points.</li><li>While Kāma is active, gain DR 4 and +2 to Constitution saving throws.</li></ul>",
@@ -3306,7 +3306,7 @@
       "_id": "97nhnnWW5RLA9LB7",
       "name": "Tank Type - Evolution",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>3rd-level evolution for Tank Type.</p><ul><li>Increase the temporary hit points gained each turn by 4 and the DR by 2.</li><li>Increase the Constitution saving throw bonus by 1 and also apply it to Strength saving throws.</li></ul>",
@@ -3412,7 +3412,7 @@
       "_id": "dvnBBHvkoG4mnxkW",
       "name": "Speed Type",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Kāma Seal Type.</p><ul><li>Reduce Kāma Points gained by 10 per Class Mod level.</li><li>While Kāma is active, gain +30 feet of movement, +2 AC, and +2 to Dexterity saving throws.</li><li>Once per turn after seeing the result, increase your AC or a Dexterity saving throw by 3.</li><li>You may use all of your movement as teleportation.</li></ul>",
@@ -3518,7 +3518,7 @@
       "_id": "oay7I78LaVlVluhL",
       "name": "Speed Type - Evolution",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>3rd-level evolution for Speed Type.</p><ul><li>Gain another +30 feet of movement.</li><li>Increase every AC bonus granted by this Seal Type by 1.</li><li>Once per turn, spend 13 chakra to turn a critical hit against you into a normal hit.</li></ul>",
@@ -3624,7 +3624,7 @@
       "_id": "rN51ocMk9tqMwbZQ",
       "name": "Sensor Type",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Kāma Seal Type.</p><ul><li>Memetic Relays costs 2 additional Chakra Dice. Skills gained only through Memetic Relays take a -2 penalty, and your attack rolls and save DCs are reduced by 1 while it is active.</li><li>While Kāma is active, increase Perception and Passive Perception by 10.</li><li>You cannot be surprised, and attack rolls against you cannot gain advantage.</li><li>You constantly benefit from B-Rank Sensing Technique and may use its special function twice per round.</li></ul>",
@@ -3730,7 +3730,7 @@
       "_id": "JuF7MqgPIAtbkKIB",
       "name": "Sensor Type - Evolution",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>3rd-level evolution for Sensor Type.</p><ul><li>Increase Perception and Passive Perception by another 5.</li><li>Your constant Sensing Technique functions as if cast at S-Rank and can be used four times per round.</li><li>Once per turn, when a creature successfully hides from you, make a Perception check with advantage contested by its Stealth. On a success, it retroactively fails to hide.</li></ul>",
@@ -3836,7 +3836,7 @@
       "_id": "gJaPhWPnMjSA6W8a",
       "name": "White Kāma Seal",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Kāma Seal Type.</p><ul><li>Reduce movement by 5 feet, Strength/Dexterity/Constitution saving throws by 1, and Kāma Points by 5 per Class Mod level.</li><li>You do not gain Absorption or Yomotsu Hirasaka.</li><li>Gain one fewer Karmic Influence per Class Mod level.</li><li>You have no Resonance Disruption, permanently count as No Influence, and are immune to Take-Over and Possession.</li><li>While Kāma is active, gain +1 to attack rolls and save DCs.</li></ul>",
@@ -3942,7 +3942,7 @@
       "_id": "mSXVGXHgluUW43D0",
       "name": "White Kāma Seal - Evolution",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>3rd-level evolution for White Kāma Seal.</p><ul><li>While your Kāma is active, increase all ability scores by 2.</li></ul>",
@@ -4048,7 +4048,7 @@
       "_id": "nVVX2VzYWLcj3nVl",
       "name": "Karmic Attacks",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Whenever you make at least two attacks, make one additional attack.</p>",
@@ -4153,7 +4153,7 @@
       "_id": "DwK0EDAYQy1ETW3F",
       "name": "Karmic Dōjutsu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Choose Hyūga, Chinoike, Kuru, Uchiha, Jōgan, or Kokugan and gain the Latent Dōjutsu tier listed in the source PDF, treating your character level as 8 higher. Some options can be selected a second time.</p>",
@@ -4258,7 +4258,7 @@
       "_id": "jrra0eQz9jbBfESB",
       "name": "Karmic Element",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Choose an Elemental Release you can use. Jutsu with that keyword gain 1 additional Divine Art die, increasing to 2 additional dice at 4th Class Mod level.</p>",
@@ -4363,7 +4363,7 @@
       "_id": "NHob4xyyvyJlDVBH",
       "name": "Karmic Expansion",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>When casting an area-of-effect jutsu, you may increase a cone by 30 feet, a line by 60 feet, or a sphere/radius by 20 feet.</p>",
@@ -4468,7 +4468,7 @@
       "_id": "7ss0nTKgnUBXjGGG",
       "name": "Karmic Illusions",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Choose one Genjutsu keyword. Creatures cannot benefit from resistance against Genjutsu you cast with that keyword.</p>",
@@ -4573,7 +4573,7 @@
       "_id": "mJJtS2VvzQT3tn8x",
       "name": "Karmic Insight",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Twice per round, you may take the Read the Enemy Action as a Special Action.</p>",
@@ -4678,7 +4678,7 @@
       "_id": "qFllHSuhxoNh48PA",
       "name": "Karmic Kekkei Genkai",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>If you possess the required Elemental Releases, choose one permitted clan. Gain its named Release feature at the minimum required level and learn and cast its Hijutsu.</p>",
@@ -4783,7 +4783,7 @@
       "_id": "ra8vDTWIIR8oSui1",
       "name": "Karmic Resilience",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Reduce bludgeoning, piercing, slashing, and force damage you take by 8.</p>",
@@ -4888,7 +4888,7 @@
       "_id": "EFb6tlrzIm89dz1v",
       "name": "Karmic Ninjutsu Resilience",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Reduce fire, cold, lightning, earth, and wind damage you take by 8.</p>",
@@ -4993,7 +4993,7 @@
       "_id": "XsfroAN5OQQr7Cyt",
       "name": "Karmic Psychic Resilience",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Reduce psychic damage you take by 12.</p>",
@@ -5098,7 +5098,7 @@
       "_id": "ZtOgSrKBr6smGwUU",
       "name": "Karmic Space-Time",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Reduce the chakra cost of jutsu that teleport you, rapidly move you, or increase your movement speed by 5, to a minimum cost of 1.</p>",
@@ -5203,7 +5203,7 @@
       "_id": "jJGqGXu3QctaVXqL",
       "name": "Karmic Speed",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Once per turn, take the Dash or Disengage Action as a free action.</p>",
@@ -5308,7 +5308,7 @@
       "_id": "pp4gaqFOHAyRE5sg",
       "name": "Karmic Stores",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Choose one ability with limited uses. While Kāma is active, gain additional uses equal to half of that ability’s maximum uses.</p>",
@@ -5413,7 +5413,7 @@
       "_id": "XnWojxVYOIeSmhu4",
       "name": "Karmic Sheen",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Increase your unarmed and weapon damage dice by one die step.</p>",
@@ -5518,7 +5518,7 @@
       "_id": "hmTNdmcv4iBV6Alg",
       "name": "Karmic Projection",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Once per turn, cast a Ninjutsu, Genjutsu, or Class Mod Art with a range of Touch or Self as though it had a range of 90 feet.</p>",
@@ -5623,7 +5623,7 @@
       "_id": "DnjHn5XKWKewM9Qk",
       "name": "Karmic Chains",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>When a creature fails a saving throw against one of your jutsu, reduce its movement speed by 30 feet until the end of its next turn. A creature can be affected only once per round.</p>",
@@ -5728,7 +5728,7 @@
       "_id": "bqKLhr6zQiM7XsVA",
       "name": "Karmic Echo",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>When a jutsu or Class Mod Art targets only one creature, choose a second target within 10 feet of the first. Spend additional chakra equal to half the original cost, rounded down.</p>",
@@ -5833,7 +5833,7 @@
       "_id": "057AR9iYZ9sDvnuL",
       "name": "Karmic Vision",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>While Kāma is active, gain blindsight and tremorsense out to 30 feet. If you already have either sense, increase its range by 30 feet instead.</p>",
@@ -5938,7 +5938,7 @@
       "_id": "cQL5r026g4OrUdAN",
       "name": "Karmic Armor",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>At the start of each turn, gain stacking temporary hit points equal to 4 × your Class Mod level.</p>",
@@ -6043,7 +6043,7 @@
       "_id": "CmyKhqPrvrzCk2FK",
       "name": "Karmic Destruction",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Three times per rest, your damage ignores temporary hit points, damage reduction, or constructs and is applied directly to the target’s hit points.</p>",
@@ -6148,7 +6148,7 @@
       "_id": "toacRXKlOOVDNj5n",
       "name": "Karmic Guardian",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>While Kāma is active, when an ally within 5 feet is hit by an attack, use your reaction to reduce the damage by twice your character level. You can do so twice per rest.</p>",
@@ -6253,7 +6253,7 @@
       "_id": "WDVu8naNrMB7DMDP",
       "name": "Karmic Judgement",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>Once per turn, when you hit a creature with a melee attack, mark it. Its next saving throw before the end of your next turn is made with disadvantage.</p>",
@@ -6358,7 +6358,7 @@
       "_id": "Y3T9SWA9ejcblwko",
       "name": "Karmic Adaptation",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>The first time you take damage each round, gain resistance to that damage type until the end of your next turn.</p>",
@@ -6463,7 +6463,7 @@
       "_id": "WpKxnPslFC4U4nFC",
       "name": "Karmic Response",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-star-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>After failing a saving throw, gain +2d6 on your next saving throw. This bonus does not stack.</p>",
@@ -6568,7 +6568,7 @@
       "_id": "vRWXKwF85KFmevi4",
       "name": "Divine Rewrite 10%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>10% Divine Rewrite</strong> — Mental Superiority +1, maximum hit points +12, maximum chakra +8.</p>",
@@ -6659,7 +6659,7 @@
         {
           "_id": "JMGqbFipNImw5Oyq",
           "name": "Divine Rewrite 10%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -6718,7 +6718,7 @@
       "_id": "Twc75oT3TJ2VbAxC",
       "name": "Divine Rewrite 20%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>20% Divine Rewrite</strong> — Mental Superiority +1, maximum hit points +19, maximum chakra +14.</p>",
@@ -6809,7 +6809,7 @@
         {
           "_id": "2e74qqSFER9gpzzX",
           "name": "Divine Rewrite 20%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -6868,7 +6868,7 @@
       "_id": "AA4TFLJQVBOvUldt",
       "name": "Divine Rewrite 30%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>30% Divine Rewrite</strong> — Mental Superiority +1, maximum hit points +26, maximum chakra +20.</p><p>Increase Strength, Dexterity, and Constitution, and their maximums, by 2.</p>",
@@ -6959,7 +6959,7 @@
         {
           "_id": "WCQG1oMvcKAckXhx",
           "name": "Divine Rewrite 30%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7054,7 +7054,7 @@
       "_id": "yvqEaMcXRPrtd96h",
       "name": "Divine Rewrite 40%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>40% Divine Rewrite</strong> — Mental Superiority +2, maximum hit points +33, maximum chakra +26.</p>",
@@ -7145,7 +7145,7 @@
         {
           "_id": "TRjRie7tEQFZ8Oot",
           "name": "Divine Rewrite 40%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7240,7 +7240,7 @@
       "_id": "iZ0HzGb0OCey1j2P",
       "name": "Divine Rewrite 50%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>50% Divine Rewrite</strong> — Mental Superiority +2, maximum hit points +40, maximum chakra +32.</p><p>Increase your maximum Hit Dice by 5. This does not directly increase your hit points.</p>",
@@ -7331,7 +7331,7 @@
         {
           "_id": "u27CGdSSZFbIMU8z",
           "name": "Divine Rewrite 50%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7426,7 +7426,7 @@
       "_id": "8s0V8UsTT8Rmeggi",
       "name": "Divine Rewrite 60%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>60% Divine Rewrite</strong> — Mental Superiority +2, maximum hit points +47, maximum chakra +38.</p>",
@@ -7517,7 +7517,7 @@
         {
           "_id": "SHHPXb4uCWefMasI",
           "name": "Divine Rewrite 60%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7612,7 +7612,7 @@
       "_id": "xaK4d9BDTw8faFoG",
       "name": "Divine Rewrite 70%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>70% Divine Rewrite</strong> — Mental Superiority +3, maximum hit points +54, maximum chakra +44.</p>",
@@ -7703,7 +7703,7 @@
         {
           "_id": "NmwsMXW6KlcJKONo",
           "name": "Divine Rewrite 70%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7798,7 +7798,7 @@
       "_id": "A4i2hjmdvZOuMDNB",
       "name": "Divine Rewrite 80%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>80% Divine Rewrite</strong> — Mental Superiority +3, maximum hit points +61, maximum chakra +50.</p><p>Double all hit point and chakra recovery from Hit Dice and Chakra Dice.</p>",
@@ -7889,7 +7889,7 @@
         {
           "_id": "qdy51kvG6kALaQTw",
           "name": "Divine Rewrite 80%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7984,7 +7984,7 @@
       "_id": "dJgfal5J3EhAYlr2",
       "name": "Divine Rewrite 90%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>90% Divine Rewrite</strong> — Mental Superiority +3, maximum hit points +68, maximum chakra +56.</p>",
@@ -8075,7 +8075,7 @@
         {
           "_id": "ruCJOzMLEtcGd15o",
           "name": "Divine Rewrite 90%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -8170,7 +8170,7 @@
       "_id": "gFppti8uwKjT4kBQ",
       "name": "Divine Rewrite 100%",
       "type": "feat",
-      "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>100% Divine Rewrite</strong> — Mental Superiority +4, maximum hit points +75, maximum chakra +62.</p><p>Gain a flying speed equal to half your walking speed, with a minimum of 30 feet.</p>",
@@ -8261,7 +8261,7 @@
         {
           "_id": "W346xyvtBtW1h4qC",
           "name": "Divine Rewrite 100%",
-          "img": "icons/magic/transmutation/body-silhouette-humanoid-blue.webp",
+          "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -8362,7 +8362,7 @@
       "_id": "DqdOi0jYVIeyQOZ6",
       "name": "Early Kāma Seal",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Character level 4 or higher and the Kāma Seal Class Mod.</p><ul><li>Activate the 1st-level Kāma Seal while Bloodied, including access to Divine Arts.</li><li>Gain the benefits of 30 Divine Rewrite.</li><li>Gain the 1st-level benefits of the All-Rounder Seal Type.</li></ul>",
@@ -8467,7 +8467,7 @@
       "_id": "nrKa5vRND9g5zPxx",
       "name": "Progressed Kāma Seal",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Character level 10 or higher and the Kāma Seal Class Mod.</p><ul><li>Activate Kāma without being Bloodied.</li><li>Gain the benefits of 60 Divine Rewrite.</li><li>Gain Memetic Relays.</li><li>Gain two Karmic Influences.</li></ul>",
@@ -8572,7 +8572,7 @@
       "_id": "JCGdzKKrjqKJSyAh",
       "name": "Perfected Kāma Seal",
       "type": "feat",
-      "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Character level 16 or higher and the Kāma Seal Class Mod.</p><ul><li>Treat Kāma Seal and Divine Arts as though you were 4th level in this Class Mod.</li><li>Gain the benefits of 80 Divine Rewrite. Further progression is controlled by the GM.</li><li>Gain two additional Karmic Influences.</li></ul>",
@@ -8677,7 +8677,7 @@
       "_id": "7V3fZvZXuItcEUvY",
       "name": "Kāma Seal",
       "type": "classmod",
-      "img": "icons/magic/symbols/rune-sigil-red-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
           "value": "<p>The Kāma Class Mod permanently alters its bearer and binds them to the power of an Ōtsutsuki. Drag this entry onto a character, then advance its Class Mod level through the standard N5eB Advancement system.</p><table><thead><tr><th>Level</th><th>Recommended Character Level</th><th>Karmic Influences</th><th>Minimum Divine Rewrite</th><th>Features</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>0</td><td>0</td><td>Kāma Seal, Divine Arts, Seal Type, Influence, Divine Rewrite, Resonance Disruption</td></tr><tr><td>2</td><td>8</td><td>2</td><td>10</td><td>Karmic Influences</td></tr><tr><td>3</td><td>12</td><td>3</td><td>30</td><td>Seal Type Evolution, Absorption, Memetic Relays</td></tr><tr><td>4</td><td>16</td><td>4</td><td>50</td><td>Greater Kāma Seal, Divine Arts (2), Yomotsu Hirasaka</td></tr><tr><td>5</td><td>20</td><td>5</td><td>80</td><td>Divine Absorption</td></tr></tbody></table><p><strong>Automation:</strong> The Kāma button applies the active seal’s numerical bonuses. Divine Rewrite automatically manages the highest milestone reached. Resonance Disruption automates directly representable attack, save-DC, saving-throw, and AC penalties; jutsu cost increases and narrative effects remain manual.</p>",

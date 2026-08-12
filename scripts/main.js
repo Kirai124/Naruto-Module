@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.13.11";
+const CONTENT_VERSION = "0.13.12";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -780,7 +780,7 @@ async function syncResonanceDisruption(actor, suppliedState) {
   if (!effect) {
     const [created] = await actor.createEmbeddedDocuments("ActiveEffect", [{
       name:"Resonance Disruption",
-      img:"icons/magic/symbols/runes-triangle-blue.webp",
+      img:"modules/n5eb-classmod-library/assets/kama-seal.png",
       disabled:rank === 0,
       transfer:false,
       changes,
