@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.13.12";
+const CONTENT_VERSION = "0.13.13";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -1742,9 +1742,9 @@ function buildTransformationChanges(actor, state) {
 async function refreshSealedBeastEffects(actor, suppliedState) {
   if (!actor?.isOwner || !getSealedBeastClassMod(actor)) return;
   const state = suppliedState ?? readSealedBeastTracker(actor);
-  await upsertSealedEffect(actor,"dormantBeastEffect","Dormant Beast","icons/creatures/abilities/paw-print-orange.webp",state.dormantBeast,buildDormantBeastChanges());
-  await upsertSealedEffect(actor,"sealedFrenzyEffect","Frenzy","icons/creatures/abilities/mouth-teeth-fire-orange.webp",state.frenzy,buildFrenzyChanges(actor));
-  await upsertSealedEffect(actor,"sealedTransformationEffect",state.transformationName || "Sealed Beast Transformation","modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",Boolean(state.transformation),buildTransformationChanges(actor,state));
+  await upsertSealedEffect(actor,"dormantBeastEffect","Dormant Beast","modules/n5eb-classmod-library/assets/cb-redux.png",state.dormantBeast,buildDormantBeastChanges());
+  await upsertSealedEffect(actor,"sealedFrenzyEffect","Frenzy","modules/n5eb-classmod-library/assets/cb-redux.png",state.frenzy,buildFrenzyChanges(actor));
+  await upsertSealedEffect(actor,"sealedTransformationEffect",state.transformationName || "Sealed Beast Transformation","modules/n5eb-classmod-library/assets/cb-redux.png",Boolean(state.transformation),buildTransformationChanges(actor,state));
 }
 
 function getNormalChakra(actor) {

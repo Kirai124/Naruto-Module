@@ -196,7 +196,7 @@
       "_id": "8cb947775f5706e7",
       "name": "Sealed Beast",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>A legendary Chakra beast is sealed within you. At first you cannot communicate with it and can only call upon its power through intense emotion or training. Your relationship and control develop as this Class Mod advances.</p>",
@@ -301,7 +301,7 @@
       "_id": "5e9f245f1c286c8b",
       "name": "Vermillion Arts",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Features and techniques from this Class Mod use the following values:</p><p><strong>Vermillion Art Save DC:</strong> 12 + Sealed Beast Redux level + proficiency bonus.</p><p><strong>Vermillion Art Attack Bonus:</strong> twice your proficiency bonus + Sealed Beast Redux level.</p><p>The module writes the calculated values directly into the Class Mod fields so the sheet and rolls use the same numbers.</p>",
@@ -406,7 +406,7 @@
       "_id": "19eea50e6ce65606",
       "name": "Twisted Chakra",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Twisted Chakra is tracked directly on the Actor. One point of Twisted Chakra counts as two normal Chakra when voluntarily paying normal Chakra costs. Jutsu paid with Twisted Chakra count as Vermillion Arts.</p><p>If your Twisted Chakra exceeds your current normal Chakra, you enter Frenzy unless a feature such as Path of Dominion or a controlled cloak prevents it.</p><p>Bundled Transformation and Vermillion Arts automatically validate and spend their listed Twisted Chakra costs.</p>",
@@ -512,7 +512,7 @@
       "_id": "3c0a6743f1684333",
       "name": "Dormant Beast",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action:</strong> Activate Dormant Beast for 1 minute. On activation and at the start of each turn, lose normal Chakra equal to your proficiency bonus and gain the same amount of Twisted Chakra. Path features may change this conversion.</p><ul><li>Strength and Dexterity increase by 2.</li><li>Your unarmed damage die becomes at least d8.</li><li>Weapon and unarmed attacks count as Chakra-enhanced.</li><li>Increase damage die size by one step.</li><li>Gain +2 on saving throws against hostile jutsu.</li></ul><p>The module automates the resource conversion and direct ability bonuses. Situational die-size and Chakra-enhanced properties remain described on the feature.</p>",
@@ -618,7 +618,7 @@
       "_id": "b4cde942c53231fc",
       "name": "Desperate Rage",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>When severe emotional trauma occurs - such as an ally being reduced to 0 HP or you being reduced to 0 HP - make a Charisma ability check against your Desperate Rage DC.</p><p><strong>Desperate Rage DC:</strong> 12 + your Class Mod level, modified by your Path and Disposition.</p><p>On a failure, enter Frenzy, lose normal Chakra equal to twice your character level, and gain the same amount of Twisted Chakra. The tracker includes a Desperate Rage roll button.</p>",
@@ -723,7 +723,7 @@
       "_id": "29e9b009493555a0",
       "name": "Frenzy",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>When Frenzy begins, regain 25 current HP; overflow becomes Temporary HP, and Dormant Beast activates. While Frenzied, normal Chakra loss used to gain Twisted Chakra is doubled, and spending Twisted Chakra also spends an equal amount of normal Chakra.</p><p>If normal Chakra reaches 0 during Frenzy, the sealed beast consumes you unless your Path changes this consequence.</p><h3>Frenzied Assault</h3><ul><li>Strength and Dexterity become at least 18.</li><li>Gain Multiattack (2), increased unarmed damage, doubled movement, expanded unarmed critical range, and an additional action that must be used for a Vermillion Art.</li></ul><p>The tracker automates the direct ability/movement effects and offers an end-Frenzy check. Targeting behavior and additional actions remain player/GM controlled.</p>",
@@ -829,7 +829,7 @@
       "_id": "44e6ff07f48640fe",
       "name": "Frenzied Drawbacks",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Beginning at 2nd level, at the start of each turn during Frenzy, make a Wisdom ability check against your Desperate Rage DC. On a failure, you cannot perceive allies, area effects affect every creature in range, and you attack creatures in the most direct path to your target. If Frenzy was not caused by Desperate Rage, the closest creature becomes your target.</p>",
@@ -934,7 +934,7 @@
       "_id": "303cd47558b6b1d4",
       "name": "Disposition",
       "type": "feat",
-      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Disposition measures your relationship with the sealed beast and is tracked from 0 to 100 directly on the Actor. The GM may change it based on roleplay and Class Mod actions.</p><ul><li><strong>100:</strong> Dormant Beast is willingly available.</li><li><strong>75+:</strong> Add your Class Mod level to Desperate Rage checks.</li><li><strong>50+:</strong> The beast willingly communicates by thought.</li><li><strong>25 or lower:</strong> Subtract your Class Mod level from Desperate Rage checks.</li><li><strong>10 or lower:</strong> The beast is unwilling to communicate.</li></ul>",
@@ -1039,7 +1039,7 @@
       "_id": "37307e33cf67a8e6",
       "name": "Path of Dominion",
       "type": "feat",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Your seal subjugates the beast and reduces the risk of losing control.</p><ul><li><strong>Level 2:</strong> Dormant Beast produces 2 Twisted Chakra per normal Chakra lost. You no longer Frenzy merely because Twisted Chakra exceeds normal Chakra, but Twisted Chakra only counts as one normal Chakra.</li><li><strong>Level 3:</strong> Do not add Class Mod level to Desperate Rage DC.</li><li><strong>Level 4:</strong> Reduce the Desperate Rage DC by your Class Mod level.</li><li><strong>Level 5:</strong> Dormant Beast produces 4 Twisted Chakra per normal Chakra lost.</li></ul>",
@@ -1145,7 +1145,7 @@
       "_id": "f454b0186bc50d47",
       "name": "Path of Wrath",
       "type": "feat",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>You wield the beast with reckless abandon.</p><ul><li><strong>Level 2:</strong> Dormant Beast produces 2 Twisted Chakra per normal Chakra lost. Reaching 0 Chakra during Frenzy no longer kills you, but reaching 0 HP while Frenzied releases the beast and kills you.</li><li><strong>Levels 3-5:</strong> The conversion becomes 3, 4, then 5 Twisted Chakra per Chakra lost.</li></ul>",
@@ -1251,7 +1251,7 @@
       "_id": "694b96d462f8d4b5",
       "name": "Path of Partnership",
       "type": "feat",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>You build trust and mutual gain with the sealed beast.</p><ul><li><strong>Level 2:</strong> At the start of a Dormant Beast turn, a successful Charisma check against Desperate Rage DC lets you offer Chakra and receive equal Twisted Chakra, up to 10 × sealed-beast level. Frenzy no longer requires equal normal Chakra when spending Twisted Chakra.</li><li><strong>Level 3:</strong> A successful exchange produces twice as much Twisted Chakra.</li><li><strong>Level 4:</strong> Do not add Class Mod level to Desperate Rage DC.</li><li><strong>Level 5:</strong> The beast shares Chakra without a check.</li></ul>",
@@ -1357,7 +1357,7 @@
       "_id": "2dc2d1439e09de86",
       "name": "Path of the Beast",
       "type": "feat",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>You forcibly draw power from the sealed beast while slowly mastering control.</p><ul><li><strong>Level 2:</strong> As a Bonus Action, make a Constitution check against Desperate Rage DC. On a success, gain 10 × Class Mod level Twisted Chakra, remove an effect preventing Chakra molding, and heal by the amount gained. On a failure, enter Frenzy.</li><li><strong>Level 3:</strong> Failure no longer causes Frenzy.</li><li><strong>Level 4:</strong> You may challenge the beast. Victory enables a 4:1 Dormant Beast conversion; failure is fatal.</li><li><strong>Level 5:</strong> A pact of trust prevents Frenzy, removes Dormant Beast turn costs, and grants direct access to a 500-point Twisted Chakra pool.</li></ul><p>The tracker includes toggles for Beast Conquered and Pact of Trust so the conversion can be automated after those story events.</p>",
@@ -1463,7 +1463,7 @@
       "_id": "01e04e072f2fd3de",
       "name": "Twisted Chakra Mode",
       "type": "spell",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Your Twisted Chakra forms a bubbling cloak. Speed +15 ft, STR/DEX +2, all saves +1, 50 Temporary HP, and 15 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -1623,7 +1623,7 @@
       "_id": "a96430bfd4b11d3d",
       "name": "Twisted Chakra Mode, Stage 2",
       "type": "spell",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>A black veil of Chakra and red aura. Speed +30 ft, STR/DEX +2, all saves +2, attack rolls + twice Class Mod level, 75 Temporary HP, and 25 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -1787,7 +1787,7 @@
       "_id": "9436318ade0e4ad3",
       "name": "Twisted Chakra Mode, Stage 3",
       "type": "spell",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Your form becomes more beastlike and skeletal. Speed +60 ft, STR/DEX +4, all saves +3, attack rolls + twice Class Mod level, Large size, Reach 2 for melee weapons, 100 Temporary HP, and 35 Twisted HP.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -1951,7 +1951,7 @@
       "_id": "0f0e8ac77a9b810d",
       "name": "Twisted Chakra Cloak",
       "type": "spell",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>A controlled luminous cloak. Speed +90 ft, STR/DEX +4, all saves +4, attack rolls + twice Class Mod level, Reach 2, 120 Temporary HP, 50 Twisted HP, and you cannot enter Frenzy.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -2115,7 +2115,7 @@
       "_id": "bacc9d25c6edb110",
       "name": "Twisted Chakra Cloak, Stage 2",
       "type": "spell",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>An advanced literal Chakra cloak. Speed +120 ft, STR/DEX +6, all saves +6, attack rolls + twice Class Mod level, Reach 3, 150 Temporary HP, 65 Twisted HP, and direct drawing of Twisted Chakra without a check.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -2280,7 +2280,7 @@
       "_id": "725383d930dd7261",
       "name": "Sealed Beast Mode",
       "type": "spell",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Switch places with the sealed beast for 1 minute. Use the beast's size and physical ability scores, gain Twisted HP equal to its HP and Twisted Chakra equal to its Chakra, and damage/resources transfer to the beast. Dormant Beast cannot benefit this form. The module tracks the active form but the linked beast statistics remain GM-managed.</p><p><strong>Duration:</strong> 1 minute. The module spends the listed Twisted Chakra, replaces any previous transformation, applies direct bonuses, tracks Twisted HP, and restores Twisted HP at the start of your turns.</p>",
@@ -2444,7 +2444,7 @@
       "_id": "c70f39a4de7c918b",
       "name": "Weapons of the Beast",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>While a Transformation Art is active, gain a natural melee weapon dealing 3d4 Bludgeoning, Piercing, or Slashing damage plus your chosen Strength or Dexterity modifier and proficiency bonus. Increase its die size one step for each transformation tier beyond 1.</p>",
@@ -2554,7 +2554,7 @@
       "_id": "2d2bfb1847d8e3a2",
       "name": "Twisted Resilience",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>While transformed, increase the Twisted HP granted, restored each turn, and maximum by 5 per transformation tier.</p>",
@@ -2664,7 +2664,7 @@
       "_id": "1d70d1195b907e8b",
       "name": "Twisted Power",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>While transformed, add twice your Class Mod level to damage rolls.</p>",
@@ -2774,7 +2774,7 @@
       "_id": "50aee918a8961ab1",
       "name": "Beast Bomb",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Tier 2 or higher Transformation Art unless Frenzied. Make a ranged Vermillion Art attack at 120 feet. On a hit, deal 20d12 Force damage. Hit or miss, creatures within 30 feet of the target make a Dexterity save, taking 12d12 Force damage on a failure or half on a success. Constructs and structures take four times damage.</p>",
@@ -2930,7 +2930,7 @@
       "_id": "1364d0a6af420096",
       "name": "Focused Beast Bomb",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>When casting Beast Bomb, add 15 Twisted Chakra to either increase its critical threat range by 4 or double the area of effect.</p>",
@@ -3040,7 +3040,7 @@
       "_id": "86d28f47ac6031e6",
       "name": "Bigger Bombs",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>While using a Tier 3+ transformation, you may add 10 Twisted Chakra to a Beast Bomb-family Art and increase its damage dice by 6. Repeat a number of times equal to transformation tier beyond 2.</p>",
@@ -3151,7 +3151,7 @@
       "_id": "ea7004c1d13ba5dd",
       "name": "Beast Beam",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. Release a 15-foot-wide, 120-foot line. Creatures make a Dexterity save, taking 16d12 Force damage on a failure or half on a success. A failure by 5 or more destroys non-Chakra-enhanced equipment. Constructs and structures take four times damage.</p>",
@@ -3309,7 +3309,7 @@
       "_id": "7ec1aa75dfca888f",
       "name": "Beast Bullet",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. Roll 4d6; creatures in a 120-foot cone make a Dexterity save and take Xd8 Force damage on a failure, where X is the 4d6 result, or half on success. Constructs and structures take triple damage.</p>",
@@ -3462,7 +3462,7 @@
       "_id": "4a9d04bd3a37beaf",
       "name": "High Caliber",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>When casting Beast Bullet, add 5 Twisted Chakra to increase its 4d6 count roll by one die step, up to 4d12.</p>",
@@ -3573,7 +3573,7 @@
       "_id": "614d8082daf85970",
       "name": "Beast Flare",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. Creatures in a 30-foot radius make a Constitution save, taking 10d12 Force damage and becoming Blinded and Dazed until the end of their next turn and Weakened for 1 minute on a failure.</p>",
@@ -3731,7 +3731,7 @@
       "_id": "ed1a03f4b8858a6b",
       "name": "Discombobulating",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Blinded and Dazed caused by Beast Flare last one additional turn.</p>",
@@ -3842,7 +3842,7 @@
       "_id": "663105636e7fd89d",
       "name": "Beast Roar",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. Creatures in a 60-foot cone make a Strength save. On a failure, they are thrown 90 feet, knocked Prone, and Dazed until the end of your next turn. Collisions deal quadruple falling damage.</p>",
@@ -3995,7 +3995,7 @@
       "_id": "3f37ebf6e99ed1ec",
       "name": "Beast Defiance",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Beast Roar gains a Reaction use against a Line, Cone, Radius, or Square effect. Clash using Vermillion Attack Bonus or Ninshou, whichever is higher, with +5; attacks without Clash roll at disadvantage.</p>",
@@ -4106,7 +4106,7 @@
       "_id": "29347eb0c5277385",
       "name": "Beast Claw",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. Make a melee Vermillion Art attack. On a hit, deal 8d12 Force damage. Gain advantage on your first attack against the target before the end of your next turn, or impose disadvantage on its first save against your Vermillion Art.</p>",
@@ -4261,7 +4261,7 @@
       "_id": "aecded72c1e0bee6",
       "name": "Marked",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>The Beast Claw mark lasts 1 minute instead of until the end of your next turn, but its benefit applies only once per turn.</p>",
@@ -4371,7 +4371,7 @@
       "_id": "0e39b85f9556cd38",
       "name": "Rip & Tear",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>When casting Beast Claw, pay its cost again to make a second attack, once per casting.</p>",
@@ -4481,7 +4481,7 @@
       "_id": "a1030f0ffd1fc351",
       "name": "Rend",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>After hitting the same creature twice in one turn with Beast Claw, pay its cost again to immediately deal the Art damage again.</p>",
@@ -4591,7 +4591,7 @@
       "_id": "f5b739e486fd4d4f",
       "name": "Beast Crash",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. Move up to 120 feet and make a melee Vermillion Art attack. On a hit, deal 30d4 Force damage; the target makes a Strength save or becomes Prone and Dazed until the end of your next turn.</p>",
@@ -4749,7 +4749,7 @@
       "_id": "52c86b9afc9f5b08",
       "name": "Beast Launch",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>A target that fails its Beast Crash save is knocked back four times the distance you moved before hitting it.</p>",
@@ -4860,7 +4860,7 @@
       "_id": "edb80d89363cc5e9",
       "name": "Beast Rush",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>After hitting with Beast Crash, pay its cost again to move and attack a different creature. Once per casting.</p>",
@@ -4971,7 +4971,7 @@
       "_id": "40b8af7b10ce18f4",
       "name": "Beast Tail",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. Make a melee Vermillion Art attack. On a hit, deal 10d10 Force damage and force a Strength save; on a failure, the target is knocked Prone. Apply any additional duration stated by the GM from the source text.</p>",
@@ -5129,7 +5129,7 @@
       "_id": "acf60e5c42a8e8be",
       "name": "Stack Tails!",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Beast Tail gains Combination. Allied jinchūriki or tailed beasts may use their Reaction and pay the Art cost to add one Beast Tail attack, even without knowing the Art.</p>",
@@ -5240,7 +5240,7 @@
       "_id": "65688da35c865fd9",
       "name": "Beast Deflection",
       "type": "spell",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Requires a Transformation Art unless Frenzied. As a Reaction, roll 5d12 + character level and reduce incoming damage by the result. The attacker and creatures in a 15-foot cone make a Dexterity save and take damage equal to the amount reduced.</p>",
@@ -5393,7 +5393,7 @@
       "_id": "0c8f9645c3231cf7",
       "name": "Full Counter",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Beast Deflection ignores limits on damage reduction. If it reduces the triggering damage to 0, the attacker automatically fails its Dexterity save.</p>",
@@ -5504,7 +5504,7 @@
       "_id": "1d51ed3bafdc5100",
       "name": "Supreme Deflection",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Double Beast Deflection damage reduction when used against an Art.</p>",
@@ -5615,7 +5615,7 @@
       "_id": "2294a57bc8c4145b",
       "name": "Vermillion Assault",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action; 15 Twisted Chakra:</strong> For 1 minute, gain an additional action immediately and, at the start of each turn, you may pay 15 Twisted Chakra for another action usable only to cast a jutsu.</p>",
@@ -5723,7 +5723,7 @@
       "_id": "27c321d784ff0685",
       "name": "Vermillion Augmentation",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action while casting a jutsu with Twisted Chakra:</strong> Choose one: add damage or healing dice equal to Class Mod level; add proficiency bonus to each damage roll of a multiattack; add construct/summon HP equal to proficiency × jutsu rank; or increase the jutsu save DC by Class Mod level.</p>",
@@ -5831,7 +5831,7 @@
       "_id": "8ab139ceb9fccfae",
       "name": "Vermillion Authority",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Reaction; 25 Twisted Chakra:</strong> For 1 minute, hostile creatures within 120 feet that do not target you roll 2d20 on attacks and take the lower result. Non-attack effects require a Wisdom save or double their resource cost.</p>",
@@ -5939,7 +5939,7 @@
       "_id": "1c5c71b8dd3969ca",
       "name": "Vermillion Resistance",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action:</strong> Spend 5 Twisted Chakra to remove up to 3 ranks of Elemental, Physical, or Mental conditions. You may spend additional groups of 5 up to three times. Spend 10 Twisted Chakra to regain the ability to Mold Chakra.</p>",
@@ -6047,7 +6047,7 @@
       "_id": "78c34ace0853fb9f",
       "name": "Vermillion Empowerment",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Spend 10 additional Twisted Chakra when using a Vermillion Art or feature. Targets cannot benefit from jutsu-derived AC/save/check bonuses, Temporary HP, damage reduction, resistance, or immunity against that effect.</p>",
@@ -6155,7 +6155,7 @@
       "_id": "82330a897793e19f",
       "name": "Vermillion Fortitude",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action; 15 Twisted Chakra:</strong> Increase or restore Temporary HP by 3 × character level, including Temporary HP granted by Transformation Arts.</p>",
@@ -6263,7 +6263,7 @@
       "_id": "17fad5c9c9477335",
       "name": "Vermillion Athlete",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>When making a Strength, Dexterity, or Constitution check, spend 10 Twisted Chakra to add 1d10.</p>",
@@ -6371,7 +6371,7 @@
       "_id": "d0e886816ba5f6c3",
       "name": "Vermillion Instincts",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>When an attack hits by 5 or more over your AC, spend 15 Twisted Chakra to gain an additional Reaction usable only against that attack.</p>",
@@ -6479,7 +6479,7 @@
       "_id": "fa744e44ddbfa98c",
       "name": "Vermillion Rage",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action after a melee hit; 20 Twisted Chakra:</strong> Treat the hit as a critical hit. Hostile creatures have advantage on attacks against you until the start of your next turn.</p>",
@@ -6587,7 +6587,7 @@
       "_id": "4b86e27b4b97da3b",
       "name": "Vermillion Tenacity",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action; 20 Twisted Chakra:</strong> Gain advantage on attack rolls until the start of your next turn; attacks against you cannot have advantage for the same duration.</p>",
@@ -6695,7 +6695,7 @@
       "_id": "46bb63e6e1416944",
       "name": "Vermillion Unity",
       "type": "feat",
-      "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action:</strong> Touch willing creatures and transfer up to 30 Twisted Chakra to each for 1 minute. Cannot be used during Frenzy. Path of the Beast recipients may use your Vermillion Abilities; Path of Wrath recipients Frenzy while they retain Twisted Chakra.</p>",
@@ -6803,7 +6803,7 @@
       "_id": "bef7d4930f92323e",
       "name": "Devilish Blood",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Increase every ability score by 1 and gain proficiency in one saving throw of your choice.</p>",
@@ -6894,7 +6894,7 @@
         {
           "_id": "cb66c656f6f5164f",
           "name": "Devilish Blood",
-          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -6961,7 +6961,7 @@
       "_id": "51a92cbf0754b6b2",
       "name": "Devilish Claws",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Natural Weapon and unarmed damage add your Sealed Beast level. As a Bonus Action, make two unarmed or natural attacks. Hits push 5 feet and let you move 5 feet without provoking; once per round, make an opportunity attack without spending a Reaction.</p>",
@@ -7069,7 +7069,7 @@
       "_id": "fcfab21e9b452ea3",
       "name": "Devilish Focus",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Gain +2 to Ninjutsu and Taijutsu attack rolls and +1 to Genjutsu save DC. While Frenzied or transformed, Constitution checks have advantage and Ninjutsu/Genjutsu concentration costs no Chakra.</p>",
@@ -7177,7 +7177,7 @@
       "_id": "0dfc0f65dede253e",
       "name": "Devilish Might",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Strength +1, with another +2 while transformed. Maximum bulk +10; you cannot be moved against your will. While Frenzied or transformed, melee Vermillion Art dice increase one step, melee attacks cannot have disadvantage, and you may reduce melee damage by Strength modifier as a Reaction.</p>",
@@ -7268,7 +7268,7 @@
         {
           "_id": "3a8c98a0c2fa89ff",
           "name": "Devilish Might",
-          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7305,7 +7305,7 @@
       "_id": "dcd18a243843141d",
       "name": "Devilish Mobility",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Dexterity +1, with another +2 while transformed. Speed increases by 5 feet × Class Mod level. While Frenzied or transformed, Dexterity checks have advantage, gain Dexterity save proficiency (or add Class Mod level if already proficient), your AC cannot be lowered, and attackers cannot gain advantage.</p>",
@@ -7396,7 +7396,7 @@
         {
           "_id": "e416d4794c6e3c9f",
           "name": "Devilish Mobility",
-          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7439,7 +7439,7 @@
       "_id": "777e00d4b2378e25",
       "name": "Devilish Presence",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Gain Intimidation proficiency, or add Sealed Beast level if already proficient. You may pull a creature using Chakra Sight into your inner world as a Reaction, forcing a Charisma save against Vermillion DC or applying Demoralized and possibly Stunned. While Frenzied or transformed, intimidate creatures within 90 feet and automatically resist forced banishment, teleportation, or movement that allows a save.</p>",
@@ -7547,7 +7547,7 @@
       "_id": "b422e4b2d222360c",
       "name": "Devilish Will",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>Gain +2 to Intelligence, Wisdom, and Charisma saving throws and +2 against Fūinjutsu Arts/Jutsu. While Frenzied or transformed, spend 10 Chakra to end one Genjutsu effect on yourself.</p>",
@@ -7638,7 +7638,7 @@
         {
           "_id": "2a4fdcfc01a8c6b2",
           "name": "Devilish Will",
-          "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+          "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -7687,7 +7687,7 @@
       "_id": "680f6d14a287a621",
       "name": "Devilish Flames",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite: sealed beast has Fire Release.</strong> Gain Fire Release affinity and learn three qualifying Fire jutsu. While Frenzied or transformed, Fire Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
@@ -7795,7 +7795,7 @@
       "_id": "6d8770cb4be4abdc",
       "name": "Devilish Winds",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite: sealed beast has Wind Release.</strong> Gain Wind Release affinity and learn three qualifying Wind jutsu. While Frenzied or transformed, Wind Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
@@ -7903,7 +7903,7 @@
       "_id": "39b7cd97cc8d55e5",
       "name": "Devilish Storm",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite: sealed beast has Lightning Release.</strong> Gain Lightning Release affinity and learn three qualifying Lightning jutsu. While Frenzied or transformed, Lightning Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
@@ -8011,7 +8011,7 @@
       "_id": "c8fdcc2936aad71b",
       "name": "Devilish Earth",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite: sealed beast has Earth Release.</strong> Gain Earth Release affinity and learn three qualifying Earth jutsu. While Frenzied or transformed, Earth Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
@@ -8119,7 +8119,7 @@
       "_id": "ac19a32aafb0fb5c",
       "name": "Devilish Waves",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite: sealed beast has Water Release.</strong> Gain Water Release affinity and learn three qualifying Water jutsu. While Frenzied or transformed, Water Ninjutsu cannot be negated/countered, B-Rank or lower requires no hand signs, deals at least half maximum damage, and deals quadruple damage to vulnerable creatures.</p>",
@@ -8227,7 +8227,7 @@
       "_id": "a177032023023f4c",
       "name": "Beast Summoning",
       "type": "spell",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Full Turn Action; 100 Twisted Chakra:</strong> Summon an avatar of your Sealed Beast. It acts with free will but follows your commands for the summoning.</p><p>The source provides a customizable Sealed Beast summon chassis: Toughness 18, defensive ability Constitution or Charisma, any 3 saves, any 4 skills, Darkvision 120 ft, Chakra equal to HP, and one role (Striker, Caster, Controller, Defender, Lurker, or Supporter). The GM should create or select the linked summon Actor.</p>",
@@ -8376,7 +8376,7 @@
       "_id": "f335a87a96bee077",
       "name": "Sealed Beast Summon Chassis",
       "type": "feat",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p><strong>Base abilities:</strong> STR/DEX/CON/INT/WIS/CHA 18. At each Class Mod level, distribute +8 ability points, with suggested maximums increasing to 26, 28, and 30 at higher tiers.</p><table><thead><tr><th>Rank</th><th>Level</th><th>Size</th><th>Slots</th><th>Jutsu</th><th>Speed</th></tr></thead><tbody><tr><td>D</td><td>4</td><td>M</td><td>6</td><td>2 D-Rank</td><td>50 ft</td></tr><tr><td>C</td><td>8</td><td>M-L</td><td>9</td><td>2 D, 2 C</td><td>65 ft</td></tr><tr><td>B</td><td>12</td><td>M-H</td><td>12</td><td>2 C, 2 B</td><td>80 ft</td></tr><tr><td>A</td><td>16</td><td>M-G</td><td>15</td><td>3 B, 1 A</td><td>95 ft</td></tr><tr><td>S</td><td>20</td><td>M-G</td><td>18</td><td>3 A, 1 S</td><td>110 ft</td></tr></tbody></table><p>Choose a role and appropriate summon traits. Jutsu-slot features may instead cost 10 Chakra per slot.</p>",
@@ -8481,7 +8481,7 @@
       "_id": "abe4260da820868b",
       "name": "Sealed Beast Redux",
       "type": "classmod",
-      "img": "icons/creatures/abilities/mouth-teeth-fire-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/cb-redux.png",
       "system": {
         "description": {
           "value": "<p>A five-level Class Mod for jinchūriki and other hosts of sealed Chakra beasts. It uses Actor-based Twisted Chakra, Twisted Hit Points, Disposition, Frenzy, Dormant Beast, Transformation tracking, and a Twisted Awakening point budget.</p><table><thead><tr><th>Level</th><th>Minimum Character Level</th><th>Twisted Awakening</th><th>Features</th></tr></thead><tbody><tr><td>1</td><td>4</td><td>45</td><td>Core features, Dormant Beast, Frenzy, Twisted Chakra Mode</td></tr><tr><td>2</td><td>7</td><td>110</td><td>Frenzied Drawbacks, choose a Path</td></tr><tr><td>3</td><td>10</td><td>175</td><td>Path progression</td></tr><tr><td>4</td><td>15</td><td>220</td><td>Path progression</td></tr><tr><td>5</td><td>17</td><td>275</td><td>Path progression</td></tr></tbody></table><p><strong>Twisted Awakening:</strong> Talents are purchased by dragging them from this compendium onto the Actor. The module rejects unaffordable or unmet-prerequisite talents and calculates remaining points directly from owned items. It never stores this resource in item Uses.</p>",
