@@ -281,7 +281,7 @@
       "_id": "ebffc4643581b644",
       "name": "Taijutsu Specialist Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -391,7 +391,7 @@
       "_id": "02b874daa7141644",
       "name": "Weapon Specialist Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -501,7 +501,7 @@
       "_id": "7519e48bf702275d",
       "name": "Hunter-Nin Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -611,7 +611,7 @@
       "_id": "8e543e4d5639d17a",
       "name": "Genjutsu Specialist Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -721,7 +721,7 @@
       "_id": "6aa9f2e9febd898d",
       "name": "Intelligence Operative Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -831,7 +831,7 @@
       "_id": "f8100e2f2eaa354c",
       "name": "Medical-Nin Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -941,7 +941,7 @@
       "_id": "eb310908739d029d",
       "name": "Ninjutsu-Specialist Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1051,7 +1051,7 @@
       "_id": "8d1cd5973e82c21b",
       "name": "Cooking-Nin Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1161,7 +1161,7 @@
       "_id": "372ec6a8605e6e51",
       "name": "Scout-Nin Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1271,7 +1271,7 @@
       "_id": "94ef1693b99d889b",
       "name": "Sci-Nin Supreme",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1381,7 +1381,7 @@
       "_id": "92f080b30f4e0f46",
       "name": "Puppet Master: Black/Green/Red",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1491,7 +1491,7 @@
       "_id": "a12fe32ac56a4eac",
       "name": "Puppet Master: Blue",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1601,7 +1601,7 @@
       "_id": "f90df4810d8d7205",
       "name": "Puppet Master: Purple",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1711,7 +1711,7 @@
       "_id": "f68114ddc6177de6",
       "name": "Puppet Master: White",
       "type": "feat",
-      "img": "icons/skills/trades/academics-book-study-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "1327355921fb2dae",
       "sort": 0,
       "ownership": {
@@ -1821,7 +1821,7 @@
       "_id": "b85bda9e1e38d346",
       "name": "Supreme Strength",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -1931,7 +1931,7 @@
       "_id": "ce74d00266116168",
       "name": "Supreme Dexterity",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2041,7 +2041,7 @@
       "_id": "50749647da481717",
       "name": "Supreme Constitution",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2151,7 +2151,7 @@
       "_id": "9cb21007e0897132",
       "name": "Supreme Intelligence",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2261,7 +2261,7 @@
       "_id": "d1c25dc76564c360",
       "name": "Supreme Wisdom",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2371,7 +2371,7 @@
       "_id": "54f0c47e7e63ea15",
       "name": "Supreme Charisma",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2481,7 +2481,7 @@
       "_id": "fcd5ff2ba2548ad2",
       "name": "Supreme Limits",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2591,7 +2591,7 @@
       "_id": "62ac605ffebb9ed7",
       "name": "Supreme Concentration",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2701,7 +2701,7 @@
       "_id": "c7ddc72390bdcceb",
       "name": "Supreme Constructs",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2811,7 +2811,7 @@
       "_id": "89f5b2346292deae",
       "name": "Superior Clones",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -2921,7 +2921,7 @@
       "_id": "aaaa8c9f16846257",
       "name": "Superior Summon",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3031,7 +3031,7 @@
       "_id": "de6fbb84a2465388",
       "name": "Superior Explosive Tools",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3141,7 +3141,7 @@
       "_id": "7973c2ab7dd97b25",
       "name": "Superior Traps",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3251,7 +3251,7 @@
       "_id": "976388993c6dfb96",
       "name": "Supreme Initiative",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3361,7 +3361,7 @@
       "_id": "f206c75eee5a34a7",
       "name": "Supreme Fuinjutsu",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3471,7 +3471,7 @@
       "_id": "dcedc757223fb91f",
       "name": "Supreme Medicine",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3581,7 +3581,7 @@
       "_id": "af0232430b29bab6",
       "name": "Supreme Skills",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3691,7 +3691,7 @@
       "_id": "e65ed973ccf818b7",
       "name": "Supreme Bukijutsu",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3801,7 +3801,7 @@
       "_id": "783ac659af87c84f",
       "name": "Supreme Clash",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -3911,7 +3911,7 @@
       "_id": "ad601f7fc6d98bd2",
       "name": "Supreme Genjutsu",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4021,7 +4021,7 @@
       "_id": "dc6e83754f149370",
       "name": "Supreme Speed",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4131,7 +4131,7 @@
       "_id": "4510808b4cbb4926",
       "name": "Superior Arsenal",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4241,7 +4241,7 @@
       "_id": "801963f888ddf304",
       "name": "Superior Release",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4351,7 +4351,7 @@
       "_id": "634ace10e72e801c",
       "name": "Supreme Kunai",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4461,7 +4461,7 @@
       "_id": "4bbc2c4d993bfeb8",
       "name": "Supreme Scores",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4571,7 +4571,7 @@
       "_id": "b53504d2b607881b",
       "name": "Superior Pills",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4681,7 +4681,7 @@
       "_id": "43e41792aa080fb8",
       "name": "Supreme Reduction",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4791,7 +4791,7 @@
       "_id": "b3c43f1eb15df1d1",
       "name": "Supreme Taijutsu",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -4901,7 +4901,7 @@
       "_id": "80c6dd24f3508ecc",
       "name": "Supreme Ninjutsu",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5011,7 +5011,7 @@
       "_id": "c78c2b595a16d3db",
       "name": "Superior Toolkits",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5121,7 +5121,7 @@
       "_id": "e3001a7219e3e587",
       "name": "Supreme Efficiency",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5231,7 +5231,7 @@
       "_id": "c60c35877246d72c",
       "name": "Supreme Evasion",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5341,7 +5341,7 @@
       "_id": "2638f2f77e0ad7ac",
       "name": "Supreme Weapons",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5451,7 +5451,7 @@
       "_id": "e00b2eb7a27e5197",
       "name": "Supreme Reinforcement",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5561,7 +5561,7 @@
       "_id": "7a3507493a32600e",
       "name": "Supreme Heightening",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5671,7 +5671,7 @@
       "_id": "e8532dec9d02958a",
       "name": "Supreme Creation",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5781,7 +5781,7 @@
       "_id": "0742a4cc5f18d793",
       "name": "Supreme Combination",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -5891,7 +5891,7 @@
       "_id": "8e63b20091076760",
       "name": "Supreme Persona",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -6001,7 +6001,7 @@
       "_id": "cc1f27e209952e99",
       "name": "Supreme Dragon Fist",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "b3464634d2df4d9b",
       "sort": 0,
       "ownership": {
@@ -6111,7 +6111,7 @@
       "_id": "ff122d27ad47d740",
       "name": "Supreme Drunken Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6221,7 +6221,7 @@
       "_id": "4502c1df3b2b4a1d",
       "name": "Supreme Frog Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6331,7 +6331,7 @@
       "_id": "486e93bc119a95ae",
       "name": "Supreme Iron Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6441,7 +6441,7 @@
       "_id": "6b2d5388e1d76a02",
       "name": "Supreme Lion Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6551,7 +6551,7 @@
       "_id": "be3936e37208e71b",
       "name": "Supreme Rabbit Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6661,7 +6661,7 @@
       "_id": "d1a516c2c2e82f16",
       "name": "Supreme Serpent Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6771,7 +6771,7 @@
       "_id": "901f84996c06ef13",
       "name": "Supreme Silent Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6881,7 +6881,7 @@
       "_id": "3737fb38f5351fa4",
       "name": "Supreme Wolf Fist",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -6991,7 +6991,7 @@
       "_id": "345c3eb2cd644457",
       "name": "Supreme Blade Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7101,7 +7101,7 @@
       "_id": "6f5768dbc8895252",
       "name": "Supreme Power Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7211,7 +7211,7 @@
       "_id": "f49b7ae92e96c2f2",
       "name": "Supreme Dueling Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7321,7 +7321,7 @@
       "_id": "68331fb2ef13eb53",
       "name": "Supreme Great Weapon Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7431,7 +7431,7 @@
       "_id": "159ccf2bad3cd0cd",
       "name": "Supreme Polearm Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7541,7 +7541,7 @@
       "_id": "43a932ba7c1aad60",
       "name": "Supreme Silent Killing",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7651,7 +7651,7 @@
       "_id": "294d2f3e6d2db2f6",
       "name": "Supreme Sharpshooter Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7761,7 +7761,7 @@
       "_id": "83a3e0353987e9ac",
       "name": "Supreme Shield Guardian Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7871,7 +7871,7 @@
       "_id": "e08a28d68345e86e",
       "name": "Supreme Spider Web Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -7981,7 +7981,7 @@
       "_id": "ed7a75b3398bbea3",
       "name": "Supreme Throwing Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -8091,7 +8091,7 @@
       "_id": "7f7b8d85ed8babb5",
       "name": "Supreme Trickster Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -8201,7 +8201,7 @@
       "_id": "8b1ffd90853bd8cf",
       "name": "Supreme Two-Weapon Stance",
       "type": "feat",
-      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "43883f8d0fea8317",
       "sort": 0,
       "ownership": {
@@ -8311,7 +8311,7 @@
       "_id": "33f6ed177bf5a64f",
       "name": "Supreme Aburame",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -8421,7 +8421,7 @@
       "_id": "ce13cfad504c3392",
       "name": "Supreme Akimichi",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -8531,7 +8531,7 @@
       "_id": "c11ebe31a7b2f5f4",
       "name": "Supreme Bakuton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -8641,7 +8641,7 @@
       "_id": "dcf90f8fd6bcaf48",
       "name": "Supreme Chinoike",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -8751,7 +8751,7 @@
       "_id": "c3a77d7f4b3f92fc",
       "name": "Supreme Fuma",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -8861,7 +8861,7 @@
       "_id": "e469c7d54683295e",
       "name": "Supreme Fushin",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -8971,7 +8971,7 @@
       "_id": "f3875827566825b1",
       "name": "Supreme Futton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9081,7 +9081,7 @@
       "_id": "919bcc865a215607",
       "name": "Supreme Genwa",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9191,7 +9191,7 @@
       "_id": "a923bb7452c13984",
       "name": "Supreme Hanami",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9301,7 +9301,7 @@
       "_id": "5a6be003453f7b01",
       "name": "Supreme Hoshigaki",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9411,7 +9411,7 @@
       "_id": "e387020ac912a470",
       "name": "Supreme Hebi",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9521,7 +9521,7 @@
       "_id": "f4c018469ae80ddb",
       "name": "Supreme Hoshi",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9631,7 +9631,7 @@
       "_id": "9e745f6068b6889f",
       "name": "Supreme Hatake",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9741,7 +9741,7 @@
       "_id": "1f51300e53b94d2b",
       "name": "Supreme Hozuki",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9851,7 +9851,7 @@
       "_id": "0950debb96a8df0e",
       "name": "Supreme Hyuga",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -9961,7 +9961,7 @@
       "_id": "22817cdb190237a5",
       "name": "Supreme Iburi",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10071,7 +10071,7 @@
       "_id": "6e04ee26ba5eaaab",
       "name": "Supreme Inuzuka",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10181,7 +10181,7 @@
       "_id": "7f60264f442c1443",
       "name": "Supreme Jiton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10291,7 +10291,7 @@
       "_id": "b5d8a9771bf259ab",
       "name": "Supreme Jugo",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10401,7 +10401,7 @@
       "_id": "b8adf14b57847090",
       "name": "Supreme Kaguya",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10511,7 +10511,7 @@
       "_id": "8eb89322be9756e3",
       "name": "Supreme Kashu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10621,7 +10621,7 @@
       "_id": "ef4340492cec1eb5",
       "name": "Supreme Keton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10731,7 +10731,7 @@
       "_id": "7be3a557a467f432",
       "name": "Supreme Konjiki",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10841,7 +10841,7 @@
       "_id": "659aa770c495f93d",
       "name": "Supreme Kurama",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -10951,7 +10951,7 @@
       "_id": "fe43d5ee65b99df7",
       "name": "Supreme Kuru",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11061,7 +11061,7 @@
       "_id": "c9a343287a1d714d",
       "name": "Supreme Namikaze",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11171,7 +11171,7 @@
       "_id": "eea3a827bcaa99c4",
       "name": "Supreme Nara",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11281,7 +11281,7 @@
       "_id": "480f7c0266bbf187",
       "name": "Supreme Non-Clan",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11391,7 +11391,7 @@
       "_id": "0afeb44b784f24af",
       "name": "Supreme Ranton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11501,7 +11501,7 @@
       "_id": "888b10bfe37c39ce",
       "name": "Supreme Ryu",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11611,7 +11611,7 @@
       "_id": "0158fdb8ff410266",
       "name": "Supreme Sarutobi",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11721,7 +11721,7 @@
       "_id": "1f22a6d19c5a0ba1",
       "name": "Supreme Senju",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11831,7 +11831,7 @@
       "_id": "f46bb01ec3415d89",
       "name": "Supreme Shakuton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -11941,7 +11941,7 @@
       "_id": "272808ad25a03757",
       "name": "Supreme Shi Hou",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12051,7 +12051,7 @@
       "_id": "22a0267498972686",
       "name": "Supreme Shikigami",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12161,7 +12161,7 @@
       "_id": "7e97f9749bd3a361",
       "name": "Supreme Shoton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12271,7 +12271,7 @@
       "_id": "a3f84ba0bbcf0c20",
       "name": "Supreme Synthetic Human",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12381,7 +12381,7 @@
       "_id": "cf7493e1c956a0a3",
       "name": "Supreme Tsuchigumo",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12491,7 +12491,7 @@
       "_id": "8018682f7a9a3a9e",
       "name": "Supreme Uchiha",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12601,7 +12601,7 @@
       "_id": "a972d7b5baa40ad7",
       "name": "Supreme Uzumaki",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12711,7 +12711,7 @@
       "_id": "d8c031b27b89c332",
       "name": "Supreme Vesper",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12821,7 +12821,7 @@
       "_id": "7bef173af4fabcab",
       "name": "Supreme Yamada",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -12931,7 +12931,7 @@
       "_id": "b168751fa3f685f5",
       "name": "Supreme Yamanaka",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -13041,7 +13041,7 @@
       "_id": "2fccd1e8b7f6bb10",
       "name": "Supreme Yoton",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -13151,7 +13151,7 @@
       "_id": "fd1eedeb3e7d3802",
       "name": "Supreme Yuki",
       "type": "feat",
-      "img": "icons/magic/symbols/runes-triangle-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "777f72ab23430ee6",
       "sort": 0,
       "ownership": {
@@ -13261,7 +13261,7 @@
       "_id": "312f92fbe1bfd190",
       "name": "Gaining Superior Shinobi",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -13367,7 +13367,7 @@
       "_id": "9e6fc44f2e7bcd7c",
       "name": "Superior [Level 1]",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -13473,7 +13473,7 @@
       "_id": "f48f633995723540",
       "name": "Superior Reserves",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -13579,7 +13579,7 @@
       "_id": "4677acfc96120ea4",
       "name": "Superior Techniques",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -13685,7 +13685,7 @@
       "_id": "be7ac0bf1aac96cb",
       "name": "Burdensome Skill",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -13791,7 +13791,7 @@
       "_id": "035680e8aed24b09",
       "name": "The Perfect Hit [Level 2]",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -13897,7 +13897,7 @@
       "_id": "250ff8b62553a978",
       "name": "Superior [Level 3]",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -14003,7 +14003,7 @@
       "_id": "a46aab05ab57a3aa",
       "name": "Epithet",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -14109,7 +14109,7 @@
       "_id": "46716a30d1a0652e",
       "name": "The Perfect Hit [Level 4]",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -14215,7 +14215,7 @@
       "_id": "0af86105832bbff1",
       "name": "Unique Technique",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -14321,7 +14321,7 @@
       "_id": "50c6ad80f319485c",
       "name": "Epithet [Level 5]",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -14427,7 +14427,7 @@
       "_id": "df89546f4ea08041",
       "name": "Supreme",
       "type": "feat",
-      "img": "icons/magic/control/buff-strength-muscle-damage-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "381fb1866c1eb2e4",
       "sort": 0,
       "ownership": {
@@ -14533,7 +14533,7 @@
       "_id": "65780f7bc2f55fa4",
       "name": "The Prodigy",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14640,7 +14640,7 @@
       "_id": "fbdf6901bd76e116",
       "name": "The Tail-Less Tailed Beast",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14747,7 +14747,7 @@
       "_id": "4f910643b4f3a920",
       "name": "The Fastest Alive",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14854,7 +14854,7 @@
       "_id": "31ff8ec20dcc651a",
       "name": "The Juggernaut",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -14961,7 +14961,7 @@
       "_id": "2bb09375c0606d84",
       "name": "The Hero",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15068,7 +15068,7 @@
       "_id": "e7b85330e6c8e886",
       "name": "The Genius",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15175,7 +15175,7 @@
       "_id": "35ac87d94943b194",
       "name": "The Beast",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15282,7 +15282,7 @@
       "_id": "3aa217df39275a5a",
       "name": "The Ghost",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15389,7 +15389,7 @@
       "_id": "d75b76e3a2f9873a",
       "name": "The Ripper",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15496,7 +15496,7 @@
       "_id": "f29ce4f9063355bd",
       "name": "The Master",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15603,7 +15603,7 @@
       "_id": "7ec548b97f7d08c8",
       "name": "The Specialist",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15710,7 +15710,7 @@
       "_id": "2ec962b91a2ce823",
       "name": "The Calamity",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15817,7 +15817,7 @@
       "_id": "d6a12ee010719b23",
       "name": "The Terror",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -15924,7 +15924,7 @@
       "_id": "66a781114d1da291",
       "name": "The Berserker",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -16031,7 +16031,7 @@
       "_id": "437df693b45344c3",
       "name": "The Prophesised",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "612c37811407fad2",
       "sort": 0,
       "ownership": {
@@ -16138,7 +16138,7 @@
       "_id": "1566e7c188bd70ba",
       "name": "Beginner Superiority",
       "type": "feat",
-      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "803f69768b195501",
       "sort": 0,
       "ownership": {
@@ -16244,7 +16244,7 @@
       "_id": "c509060589244a75",
       "name": "Adept Superiority",
       "type": "feat",
-      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "803f69768b195501",
       "sort": 0,
       "ownership": {
@@ -16350,7 +16350,7 @@
       "_id": "c2405b720fb1ed92",
       "name": "Expert Superiority",
       "type": "feat",
-      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "803f69768b195501",
       "sort": 0,
       "ownership": {
@@ -16456,7 +16456,7 @@
       "_id": "3a6d1f57c61588bd",
       "name": "Master Superiority",
       "type": "feat",
-      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "803f69768b195501",
       "sort": 0,
       "ownership": {
@@ -16562,7 +16562,7 @@
       "_id": "92dc3f0222415f77",
       "name": "Perfect Superiority",
       "type": "feat",
-      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "803f69768b195501",
       "sort": 0,
       "ownership": {
@@ -16668,7 +16668,7 @@
       "_id": "6e96d816dfc79764",
       "name": "Purple Lightning",
       "type": "spell",
-      "img": "icons/magic/lightning/bolt-strike-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "55a6cf06317d42b0",
       "sort": 0,
       "ownership": {
@@ -16809,7 +16809,7 @@
       "_id": "b0b1763507353f6f",
       "name": "Mastered Shadow Clone Technique",
       "type": "spell",
-      "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "55a6cf06317d42b0",
       "sort": 0,
       "ownership": {
@@ -16951,7 +16951,7 @@
       "_id": "086a8d86625c1167",
       "name": "Mastered Flying Thunder God",
       "type": "spell",
-      "img": "icons/magic/movement/trail-streak-zigzag-yellow.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "55a6cf06317d42b0",
       "sort": 0,
       "ownership": {
@@ -17092,7 +17092,7 @@
       "_id": "af1aa586c886fc98",
       "name": "Lesser Superiority",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "50fc49943f3cfd04",
       "sort": 0,
       "ownership": {
@@ -17198,7 +17198,7 @@
       "_id": "93b11e41b7555287",
       "name": "Greater Superiority",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "50fc49943f3cfd04",
       "sort": 0,
       "ownership": {
@@ -17304,7 +17304,7 @@
       "_id": "0be645a8e0ddffc8",
       "name": "Legendary Superiority",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "50fc49943f3cfd04",
       "sort": 0,
       "ownership": {
@@ -17410,7 +17410,7 @@
       "_id": "452a172700035a6a",
       "name": "Adversary Epithet Interaction: The Prodigy",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "134d6f5c2c8ecdba",
       "sort": 0,
       "ownership": {
@@ -17516,7 +17516,7 @@
       "_id": "d943326b912e6cc0",
       "name": "Adversary Epithet Interaction: The Tail-Less Tailed Beast",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "134d6f5c2c8ecdba",
       "sort": 0,
       "ownership": {
@@ -17622,7 +17622,7 @@
       "_id": "c25377495406740c",
       "name": "Adversary Epithet Interaction: The Juggernaut",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "134d6f5c2c8ecdba",
       "sort": 0,
       "ownership": {
@@ -17728,7 +17728,7 @@
       "_id": "5d46f9f3497b4c64",
       "name": "Adversary Epithet Interaction: The Beast",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "134d6f5c2c8ecdba",
       "sort": 0,
       "ownership": {
@@ -17834,7 +17834,7 @@
       "_id": "d02e10a98c9310dc",
       "name": "Adversary Epithet Interaction: The Ghost",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "134d6f5c2c8ecdba",
       "sort": 0,
       "ownership": {
@@ -17940,7 +17940,7 @@
       "_id": "d73e90d8ba799277",
       "name": "Supreme Speed",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18046,7 +18046,7 @@
       "_id": "c8fab9296cc95c13",
       "name": "Supreme Skills",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18152,7 +18152,7 @@
       "_id": "6e780471cace13d0",
       "name": "Supreme Clash",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18258,7 +18258,7 @@
       "_id": "18ef30dc621a1438",
       "name": "Supreme Mind",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18364,7 +18364,7 @@
       "_id": "7ed1973ffc87ee8b",
       "name": "Supreme Traits",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18470,7 +18470,7 @@
       "_id": "d738863caac1c3f3",
       "name": "Unique Technique (Adversary)",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18576,7 +18576,7 @@
       "_id": "0ce6658c3bb6d8e8",
       "name": "Altered Technique",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18682,7 +18682,7 @@
       "_id": "bb385f31cbac8e52",
       "name": "Supreme Precision",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18788,7 +18788,7 @@
       "_id": "02b720179585782c",
       "name": "Supreme Awareness",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -18894,7 +18894,7 @@
       "_id": "5520ca48ad483c21",
       "name": "Supreme Response",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -19000,7 +19000,7 @@
       "_id": "dca34d64c77756d2",
       "name": "Supreme Execution",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -19106,7 +19106,7 @@
       "_id": "9434da900c2b489d",
       "name": "Supreme Difficulty",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -19212,7 +19212,7 @@
       "_id": "2724672e73c4d236",
       "name": "Supreme Efficiency (Adversary)",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -19318,7 +19318,7 @@
       "_id": "f8c036d3b7f141ce",
       "name": "Supreme Epithet",
       "type": "feat",
-      "img": "icons/creatures/abilities/wolf-howl-moon-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "084ee89a730819d7",
       "sort": 0,
       "ownership": {
@@ -19424,7 +19424,7 @@
       "_id": "797d0c7bc5b34ddf",
       "name": "Superior Shinobi",
       "type": "classmod",
-      "img": "modules/n5eb-classmod-library/assets/superior-shinobi-cover.png",
+      "img": "modules/n5eb-classmod-library/assets/superior-shinobi.png",
       "folder": "266ea11551ed5d28",
       "sort": 0,
       "ownership": {
