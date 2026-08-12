@@ -281,7 +281,7 @@
       "_id": "7d48edaafba624bf",
       "name": "Edo Tensei",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -388,7 +388,7 @@
       "_id": "977691d705c58c7c",
       "name": "Unholy Arts & Unholy Blessings",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -495,7 +495,7 @@
       "_id": "32ea6c26c26b06d1",
       "name": "Kinjutsu Mastery",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -602,7 +602,7 @@
       "_id": "5b79ac654e8cedfb",
       "name": "Memory Feedback",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -709,7 +709,7 @@
       "_id": "44bea558a7ab4093",
       "name": "Forbidden Insight",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -719,7 +719,7 @@
         {
           "_id": "540f907b8a37f05a",
           "name": "Forbidden Insight",
-          "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+          "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -846,7 +846,7 @@
       "_id": "22fc66f5acb04277",
       "name": "Stolen Legacy",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -953,7 +953,7 @@
       "_id": "6eae411aee9976ab",
       "name": "Master of the Undying (Reversed Summoning)",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -1060,7 +1060,7 @@
       "_id": "54112c2e8c9089e7",
       "name": "Forbidden Insight - Deepened",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -1070,7 +1070,7 @@
         {
           "_id": "978ee02ed4faf003",
           "name": "Forbidden Insight - Deepened",
-          "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+          "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
           "origin": null,
           "disabled": false,
           "duration": {},
@@ -1197,7 +1197,7 @@
       "_id": "fe8bd842298fa4fa",
       "name": "Echoes of Past Lives",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -1304,7 +1304,7 @@
       "_id": "0fc3ad721c8a7e9c",
       "name": "Effortless Summoning",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -1411,7 +1411,7 @@
       "_id": "455562d17149c7b7",
       "name": "Absolute Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "391c594411aa192e",
       "sort": 0,
       "ownership": {
@@ -1518,7 +1518,7 @@
       "_id": "2d64d34281a11ff6",
       "name": "Whispers of the Coffin",
       "type": "feat",
-      "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "e8cb4242783cd81d",
       "sort": 0,
       "ownership": {
@@ -1626,7 +1626,7 @@
       "_id": "d9d95608e9fe8a4e",
       "name": "Infinite Binding",
       "type": "feat",
-      "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "e8cb4242783cd81d",
       "sort": 0,
       "ownership": {
@@ -1734,7 +1734,7 @@
       "_id": "20d115cb78c54fe9",
       "name": "Effortless Rejuvenation",
       "type": "feat",
-      "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "e8cb4242783cd81d",
       "sort": 0,
       "ownership": {
@@ -1842,7 +1842,7 @@
       "_id": "217ea12925943ffe",
       "name": "Master of Puppets",
       "type": "feat",
-      "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "e8cb4242783cd81d",
       "sort": 0,
       "ownership": {
@@ -1950,7 +1950,7 @@
       "_id": "8434e7eb6d11a35a",
       "name": "Echo of the Fallen",
       "type": "feat",
-      "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "e8cb4242783cd81d",
       "sort": 0,
       "ownership": {
@@ -2058,7 +2058,7 @@
       "_id": "7cb407acc214556c",
       "name": "Instantaneous Summoning",
       "type": "feat",
-      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "c75de4eea09bf076",
       "sort": 0,
       "ownership": {
@@ -2166,7 +2166,7 @@
       "_id": "1d941882e78d219a",
       "name": "Corpse Infusion",
       "type": "feat",
-      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "c75de4eea09bf076",
       "sort": 0,
       "ownership": {
@@ -2274,7 +2274,7 @@
       "_id": "e26690d5114f8747",
       "name": "Cursed Detonation",
       "type": "feat",
-      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "c75de4eea09bf076",
       "sort": 0,
       "ownership": {
@@ -2382,7 +2382,7 @@
       "_id": "ad7e8f2996edbdc4",
       "name": "Soul Transference",
       "type": "feat",
-      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "c75de4eea09bf076",
       "sort": 0,
       "ownership": {
@@ -2490,7 +2490,7 @@
       "_id": "aa2d21d9dc930efe",
       "name": "Grave Exchange",
       "type": "feat",
-      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "c75de4eea09bf076",
       "sort": 0,
       "ownership": {
@@ -2598,7 +2598,7 @@
       "_id": "52df6f6241c5efdd",
       "name": "Bound Soul Harmony",
       "type": "feat",
-      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "c75de4eea09bf076",
       "sort": 0,
       "ownership": {
@@ -2706,7 +2706,7 @@
       "_id": "04c7ca4f240512f4",
       "name": "Summoning: Edo Tensei",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -2852,7 +2852,7 @@
       "_id": "cb6c0fa7c2f78b01",
       "name": "Curse of Eternal Bonds",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -2998,7 +2998,7 @@
       "_id": "63ce1d10a132129c",
       "name": "Edo Tensei Control",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -3144,7 +3144,7 @@
       "_id": "2a8cb1d9f8335dbb",
       "name": "Vessel Reforging",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -3290,7 +3290,7 @@
       "_id": "0f367159eff9904e",
       "name": "Bone-Crushing Combination",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -3436,7 +3436,7 @@
       "_id": "646e68df39ed03c6",
       "name": "Soul Surge Overload",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -3582,7 +3582,7 @@
       "_id": "c336d1fde166d252",
       "name": "Ritual Severance Strike",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -3728,7 +3728,7 @@
       "_id": "bb3c4414816fef3a",
       "name": "Chains of the Death Realm",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -3874,7 +3874,7 @@
       "_id": "f563c539fbf7f469",
       "name": "Profane Chakra Siphon",
       "type": "spell",
-      "img": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "180666ddf554a8bc",
       "sort": 0,
       "ownership": {
@@ -4020,7 +4020,7 @@
       "_id": "d8e3c4d96cf88bac",
       "name": "Adamantine Skin",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4129,7 +4129,7 @@
       "_id": "695bd69ee486d226",
       "name": "Ashen Lorekeeper",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4238,7 +4238,7 @@
       "_id": "67304fa37f85bb5c",
       "name": "Ashen Trickster",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4347,7 +4347,7 @@
       "_id": "8226bdb8d41c03d6",
       "name": "Bone Prowess",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4456,7 +4456,7 @@
       "_id": "bbe780af7deec6a3",
       "name": "Bonegrinder Momentum",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4565,7 +4565,7 @@
       "_id": "895618558e570dc2",
       "name": "Bone Hydra Spawn",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4674,7 +4674,7 @@
       "_id": "5e5640d0a24ee07e",
       "name": "Borrowed Discipline",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4783,7 +4783,7 @@
       "_id": "fa115397ea198fbc",
       "name": "Chakra Husk",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -4892,7 +4892,7 @@
       "_id": "4fd766a2d7b857e2",
       "name": "Corpse Artisan",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5001,7 +5001,7 @@
       "_id": "aee5deaa3a7c9f0c",
       "name": "Corpse Healer",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5110,7 +5110,7 @@
       "_id": "823ce22edf701b51",
       "name": "Corpse Tracker",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5219,7 +5219,7 @@
       "_id": "736e7cd9abf35c96",
       "name": "Deathmask Performer",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5328,7 +5328,7 @@
       "_id": "94c398d12ff8ca72",
       "name": "Death’s Watch",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5437,7 +5437,7 @@
       "_id": "2403a97c5f78bc7b",
       "name": "Dread Aura",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5546,7 +5546,7 @@
       "_id": "082660d95314eb16",
       "name": "Earthen Juggernaut",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5655,7 +5655,7 @@
       "_id": "0d0ec00aa62b7adc",
       "name": "Flesh Stalker",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5764,7 +5764,7 @@
       "_id": "14a5ca5130eb2816",
       "name": "Flameforged Soul",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5873,7 +5873,7 @@
       "_id": "0eee5c1a26b173e0",
       "name": "Grave Whisper",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -5982,7 +5982,7 @@
       "_id": "12c6360ed1c9690b",
       "name": "Gravebound Arsenal",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6091,7 +6091,7 @@
       "_id": "455fbc8e0b9b8d2a",
       "name": "Husk of the Forgotten",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6200,7 +6200,7 @@
       "_id": "86a3c66e7b22de69",
       "name": "Iron Husk",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6311,7 +6311,7 @@
       "_id": "6b703a77a5dd6d50",
       "name": "Martial Revenant",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6420,7 +6420,7 @@
       "_id": "0a7afd1175626c44",
       "name": "Ninshou Revenant",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6529,7 +6529,7 @@
       "_id": "90f9b772391f571a",
       "name": "Phantom Reflex",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6638,7 +6638,7 @@
       "_id": "b502c63dc8e90fe8",
       "name": "Rot-Eater Savant",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6747,7 +6747,7 @@
       "_id": "b61d16f2baaad7be",
       "name": "Shadow Gale Movement",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6859,7 +6859,7 @@
       "_id": "4af4db5b96eabe65",
       "name": "Silent Hunter",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -6968,7 +6968,7 @@
       "_id": "3ff1e8e1b36db2d0",
       "name": "Silent Scholar",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7077,7 +7077,7 @@
       "_id": "c485770c8fe55545",
       "name": "Skilldrinker’s Legacy",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7186,7 +7186,7 @@
       "_id": "e9687ab18fcd7377",
       "name": "Soul Fragment",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7295,7 +7295,7 @@
       "_id": "966ce1e0f25b68b7",
       "name": "Stormwrought Revenant",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7404,7 +7404,7 @@
       "_id": "119aa1f658de6ed8",
       "name": "Tempest Wraith",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7513,7 +7513,7 @@
       "_id": "f0d44da74bd4b8e5",
       "name": "Tombborne Guile",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7622,7 +7622,7 @@
       "_id": "32cba8f2a7a41c14",
       "name": "Torrential Husk",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7731,7 +7731,7 @@
       "_id": "fc528fe22ada58af",
       "name": "Twin Pact Invocation",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7840,7 +7840,7 @@
       "_id": "ded6aa8a2a778dec",
       "name": "Unyielding Core",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -7949,7 +7949,7 @@
       "_id": "e002e61009bc69c7",
       "name": "Voidbrand Illusionist",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -8058,7 +8058,7 @@
       "_id": "3f5805a3f99e1675",
       "name": "Wraith King’s Stride",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -8167,7 +8167,7 @@
       "_id": "7d2426f9405c7a6b",
       "name": "Wraith’s Insight",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "8ab74c46ea9e67b8",
       "sort": 0,
       "ownership": {
@@ -8276,7 +8276,7 @@
       "_id": "ed027b58bd0827ac",
       "name": "Black Veins Resurgence",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -8385,7 +8385,7 @@
       "_id": "143cc4ce3d929052",
       "name": "Bloodstorm Reaping",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -8494,7 +8494,7 @@
       "_id": "b6b64e4daa0748ea",
       "name": "Bone Crown Tyrant",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -8603,7 +8603,7 @@
       "_id": "4f54105c4549fa8c",
       "name": "Corpseforge Arsenal",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -8712,7 +8712,7 @@
       "_id": "1a105a66665ba6ac",
       "name": "Death’s Mantle",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -8821,7 +8821,7 @@
       "_id": "4817498d4cf90225",
       "name": "Heating Up",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -8930,7 +8930,7 @@
       "_id": "4ba09589589139f1",
       "name": "Howl of the Forgotten",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9039,7 +9039,7 @@
       "_id": "830d8f2004b23aa9",
       "name": "I Must Break You",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9148,7 +9148,7 @@
       "_id": "350453b7d11ae994",
       "name": "Iron Will Eternal",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9257,7 +9257,7 @@
       "_id": "feb3af1b99e6dc4d",
       "name": "Netherbrand Curse",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9366,7 +9366,7 @@
       "_id": "3bd8f84d18df525c",
       "name": "Pale Lantern",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9475,7 +9475,7 @@
       "_id": "96bcb23425820695",
       "name": "Rotting Dominion",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9584,7 +9584,7 @@
       "_id": "ca3eac9f42c6514c",
       "name": "Severed Time",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9693,7 +9693,7 @@
       "_id": "ddd359777c43490b",
       "name": "Soul Anchor",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9802,7 +9802,7 @@
       "_id": "cfed4e97d86511d1",
       "name": "Soulbinding Arsenal",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "cf26dad4f428842a",
       "sort": 0,
       "ownership": {
@@ -9911,7 +9911,7 @@
       "_id": "1a43f7272081076e",
       "name": "Profane Ascension",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "63d84bbeff4cb07d",
       "sort": 0,
       "ownership": {
@@ -10020,7 +10020,7 @@
       "_id": "ca5edd6d4f95b978",
       "name": "Blasphemous Transcription",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "63d84bbeff4cb07d",
       "sort": 0,
       "ownership": {
@@ -10129,7 +10129,7 @@
       "_id": "068557dac13a1fec",
       "name": "Abyssal Reclamation",
       "type": "feat",
-      "img": "icons/magic/unholy/orb-glowing-yellow-purple.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "63d84bbeff4cb07d",
       "sort": 0,
       "ownership": {
@@ -10238,7 +10238,7 @@
       "_id": "6c1809094993aaf1",
       "name": "Edo Tensei Profile",
       "type": "feat",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "3d38811b4f82f8b2",
       "sort": 0,
       "ownership": {
@@ -10345,7 +10345,7 @@
       "_id": "b69aa2be85880ee4",
       "name": "D-Rank Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/skull-energy-light-white.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "1436f788236b1fc4",
       "sort": 0,
       "ownership": {
@@ -10453,7 +10453,7 @@
       "_id": "9d222d124f9b7242",
       "name": "C-Rank Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/skull-energy-light-white.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "1436f788236b1fc4",
       "sort": 0,
       "ownership": {
@@ -10561,7 +10561,7 @@
       "_id": "145a8e0d4b8fecdc",
       "name": "B-Rank Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/skull-energy-light-white.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "1436f788236b1fc4",
       "sort": 0,
       "ownership": {
@@ -10669,7 +10669,7 @@
       "_id": "02e8e5f78fb7b489",
       "name": "A-Rank Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/skull-energy-light-white.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "1436f788236b1fc4",
       "sort": 0,
       "ownership": {
@@ -10777,7 +10777,7 @@
       "_id": "f58252f0895a1fe7",
       "name": "S-Rank Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/skull-energy-light-white.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "1436f788236b1fc4",
       "sort": 0,
       "ownership": {
@@ -10885,7 +10885,7 @@
       "_id": "f3eb956ff2868ec0",
       "name": "Caster Role",
       "type": "feat",
-      "img": "icons/skills/social/intimidation-impressing.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "ef61cd3e649bbfef",
       "sort": 0,
       "ownership": {
@@ -10993,7 +10993,7 @@
       "_id": "8e733c0f4e45aadb",
       "name": "Controller Role",
       "type": "feat",
-      "img": "icons/skills/social/intimidation-impressing.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "ef61cd3e649bbfef",
       "sort": 0,
       "ownership": {
@@ -11101,7 +11101,7 @@
       "_id": "eee490f2cb753a3c",
       "name": "Defender Role",
       "type": "feat",
-      "img": "icons/skills/social/intimidation-impressing.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "ef61cd3e649bbfef",
       "sort": 0,
       "ownership": {
@@ -11209,7 +11209,7 @@
       "_id": "1ec831d6d6481a42",
       "name": "Lurker Role",
       "type": "feat",
-      "img": "icons/skills/social/intimidation-impressing.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "ef61cd3e649bbfef",
       "sort": 0,
       "ownership": {
@@ -11317,7 +11317,7 @@
       "_id": "79a65a788de841f9",
       "name": "Striker Role",
       "type": "feat",
-      "img": "icons/skills/social/intimidation-impressing.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "ef61cd3e649bbfef",
       "sort": 0,
       "ownership": {
@@ -11425,7 +11425,7 @@
       "_id": "2e2fa3f11a3fe22d",
       "name": "Supporter Role",
       "type": "feat",
-      "img": "icons/skills/social/intimidation-impressing.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "ef61cd3e649bbfef",
       "sort": 0,
       "ownership": {
@@ -11533,7 +11533,7 @@
       "_id": "6fcf43354317f99a",
       "name": "Standard Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/undead-ghost-scream-teal.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "f90c4dbdba7d0a99",
       "sort": 0,
       "ownership": {
@@ -11641,7 +11641,7 @@
       "_id": "a609dec4bacd4e46",
       "name": "Elite Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/undead-ghost-scream-teal.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "f90c4dbdba7d0a99",
       "sort": 0,
       "ownership": {
@@ -11749,7 +11749,7 @@
       "_id": "c8d89edeb6b964e7",
       "name": "Solo Edo Tensei",
       "type": "feat",
-      "img": "icons/magic/death/undead-ghost-scream-teal.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "f90c4dbdba7d0a99",
       "sort": 0,
       "ownership": {
@@ -11857,7 +11857,7 @@
       "_id": "85071e1b23433ef6",
       "name": "Edo Tensei",
       "type": "classmod",
-      "img": "modules/n5eb-classmod-library/assets/edo-tensei-cover.webp",
+      "img": "modules/n5eb-classmod-library/assets/edo-tensei.png",
       "folder": "6ac5c035595258ab",
       "sort": 0,
       "ownership": {
