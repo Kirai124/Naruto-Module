@@ -1,0 +1,4636 @@
+{
+  "id": "tenseigan",
+  "version": "0.8.1",
+  "label": "Tenseigan",
+  "folders": [
+    {
+      "_id": "b7bcee6e4f91b71b",
+      "name": "Tenseigan",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "sort": 0,
+      "color": "#7687e8",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "tenseigan",
+          "folderKey": "root"
+        }
+      }
+    },
+    {
+      "_id": "c63b44d219cda8ce",
+      "name": "Class Mod Features",
+      "type": "Item",
+      "folder": "b7bcee6e4f91b71b",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#7687e8",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "tenseigan",
+          "folderKey": "features"
+        }
+      }
+    },
+    {
+      "_id": "d0ce58b1d0553623",
+      "name": "Core Features",
+      "type": "Item",
+      "folder": "c63b44d219cda8ce",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#7687e8",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "tenseigan",
+          "folderKey": "core"
+        }
+      }
+    },
+    {
+      "_id": "958077fe18aaab54",
+      "name": "Celestial Arts",
+      "type": "Item",
+      "folder": "c63b44d219cda8ce",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#7687e8",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "tenseigan",
+          "folderKey": "arts"
+        }
+      }
+    },
+    {
+      "_id": "e9e457d7d317c431",
+      "name": "Truth-Seeking Orb Techniques",
+      "type": "Item",
+      "folder": "c63b44d219cda8ce",
+      "sorting": "a",
+      "sort": 200000,
+      "color": "#7687e8",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "tenseigan",
+          "folderKey": "orbs"
+        }
+      }
+    },
+    {
+      "_id": "f4d5aac5889a1369",
+      "name": "Celestial Strain",
+      "type": "Item",
+      "folder": "c63b44d219cda8ce",
+      "sorting": "a",
+      "sort": 300000,
+      "color": "#7687e8",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "tenseigan",
+          "folderKey": "strain"
+        }
+      }
+    },
+    {
+      "_id": "d1e8ac8323861d38",
+      "name": "Tenseigan Feats",
+      "type": "Item",
+      "folder": "b7bcee6e4f91b71b",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#7687e8",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "tenseigan",
+          "folderKey": "feats"
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "_id": "dc8489c02062f81f",
+      "name": "Tenseigan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 1st level, one of your Byakugan transforms into the Tenseigan.</p>\n<p><strong>Activation:</strong> As a Bonus Action, spend 4 Chakra to activate the eye. It remains active for 10 minutes, or until both your normal Chakra and Celestial Chakra reach 0. At 3rd Class Mod level, the Tenseigan can remain active permanently.</p>\n<ul><li><strong>Perfect Vision.</strong> Gain 500 feet of Truesight, 3 miles of Darkvision, and see distant objects as though they were within 10 feet.</li>\n<li><strong>Otherworldly Sight.</strong> Perceive pocket dimensions, spatial distortions, and the souls of living and dead creatures.</li>\n<li><strong>Celestial Oversight.</strong> Gain 1 mile of Chakra Sight; your vision cannot be obscured.</li></ul>\n<p>At 2nd level, the Tenseigan envelops your second Byakugan and you become immune to Blinded and Dazzled while it is active. At 3rd level, you may spend 1 Hit Die when gaining Celestial Strain to reduce the amount gained by 1.</p>\n<p><strong>Controls:</strong> Use the Tenseigan button on the character sheet or run <code>N5eBClassMods.toggleTenseigan(actor)</code>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan Class Mod 1",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "tenseigan-eye"
+      },
+      "effects": [
+        {
+          "_id": "5601d119a2c3f9ff",
+          "name": "Tenseigan — Active",
+          "img": "icons/magic/perception/eye-ringed-glow-angry-small-blue.webp",
+          "origin": null,
+          "disabled": true,
+          "duration": {
+            "seconds": 600,
+            "rounds": 100
+          },
+          "changes": [],
+          "transfer": true,
+          "statuses": [],
+          "flags": {
+            "n5eb-classmod-library": {
+              "tenseiganEffect": true
+            }
+          }
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "tenseigan",
+          "tenseiganController": true
+        }
+      },
+      "folder": "d0ce58b1d0553623"
+    },
+    {
+      "_id": "2a487f6d4a243252",
+      "name": "Celestial Arts",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>You gain a separate pool of <strong>Celestial Chakra</strong> while you possess the Tenseigan. It can power Hyūga Clan Hijutsu and Celestial Arts.</p>\n<ul><li>Short Rest: recover half your maximum Celestial Chakra, up to twice between Long Rests.</li>\n<li>Long Rest: recover all Celestial Chakra, once between Full Rests.</li>\n<li>When Celestial Chakra powers a Hyūga Clan Hijutsu, each point counts as 2 normal Chakra and the Hijutsu is treated as a Celestial Art.</li></ul>\n<p><strong>Celestial Art Save DC:</strong> 10 + half character level + proficiency bonus.</p>\n<p><strong>Celestial Art Attack Bonus:</strong> half character level + Tenseigan Class Mod level + proficiency bonus.</p>\n<p>The module stores Celestial Chakra directly on the Actor and automatically spends it when a bundled Celestial Art is used.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan Class Mod 1",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "celestial-arts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "tenseigan"
+        }
+      },
+      "folder": "d0ce58b1d0553623"
+    },
+    {
+      "_id": "a5065261c1f34164",
+      "name": "Celestial Strain",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Celestial power places extreme strain on the body. This module tracks Celestial Strain directly on the Actor rather than through item uses.</p>\n<ul><li>Gain 1 rank whenever you cast or upcast an A-Rank or higher Hyūga Hijutsu using Celestial Chakra.</li>\n<li>Gain 2 ranks whenever you cast a Celestial Art using Celestial Chakra.</li>\n<li>At the end of a Full Rest, reduce Strain by 1.</li>\n<li>One week of recuperative Downtime reduces Strain by 2d4.</li></ul>\n<p>The numerical penalties from the Celestial Strain table are applied automatically. Turn-start damage and the concentration restriction are displayed in the tracker for the player and GM.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan Class Mod 1",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "celestial-strain"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "strain",
+          "classMod": "tenseigan"
+        }
+      },
+      "folder": "f4d5aac5889a1369"
+    },
+    {
+      "_id": "538a115013062b3a",
+      "name": "Celestial Reincarnation Eye",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>At 2nd level, you perceive the flow of celestial energy and the truth of reincarnation. While the Tenseigan is active, you can see a creature's name, whether it lies, past incarnations, and damage or distortions in reality.</p>\n<p>As a Bonus Action, collect celestial energy for 1 minute. At the end of each turn, roll 1d10 × your Class Mod level and add the result to the pool. Spend the pool to:</p>\n<ul><li>Heal yourself and chosen creatures within Truesight for half the collected total, up to each maximum.</li>\n<li>When reduced to 0 HP, immediately reform, prevent further damage until your next turn, and restore HP equal to the collected total.</li>\n<li>Reincarnate a creature within Truesight that died no longer than 10 minutes ago, restoring HP equal to the collected total.</li></ul>\n<p>This can ignore decapitation, disintegration, soul theft, and effects that would consume your soul. Once used, it cannot be used again until a Long Rest.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "1d10*@classmods.tenseigan.levels",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan Class Mod 2",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "celestial-reincarnation-eye"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "tenseigan"
+        }
+      },
+      "folder": "d0ce58b1d0553623"
+    },
+    {
+      "_id": "3b8dd246da1f691e",
+      "name": "Celestial Chakra Mode",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>At 3rd level, activate the <strong>Celestial Chakra Mode</strong> as a Bonus Action while your Tenseigan is active. It lasts 10 minutes.</p>\n<ul><li>Strength, Dexterity, and Wisdom become 24.</li><li>Gain a Fly Speed equal to your movement speed.</li><li>Ignore Damage Resistance and gain 10 Damage Reduction against all damage.</li>\n<li>Hyūga Clan Hijutsu powered by Celestial Chakra are treated as 2 ranks higher. If they cannot benefit from upcasting, add 2d8 damage once per rank.</li>\n<li>Spend 1 Chakra Die to gain one Art Magnification benefit.</li><li>Gain +2 AC, +2 Celestial Art Save DC, and +3 Celestial Art Attack Bonus.</li></ul>\n<p>At 5th level, Eternal Tenseigan replaces these values with the stronger benefits described by that feature.</p>\n<p><strong>Controls:</strong> Use the Celestial Mode button on the character sheet or run <code>N5eBClassMods.toggleCelestialChakraMode(actor)</code>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan Class Mod 3",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "celestial-chakra-mode"
+      },
+      "effects": [
+        {
+          "_id": "372a3f3bb80641c5",
+          "name": "Celestial Chakra Mode — Active",
+          "img": "icons/magic/light/aura-hand-blue.webp",
+          "origin": null,
+          "disabled": true,
+          "duration": {
+            "seconds": 600,
+            "rounds": 100
+          },
+          "changes": [],
+          "transfer": true,
+          "statuses": [],
+          "flags": {
+            "n5eb-classmod-library": {
+              "celestialChakraModeEffect": true
+            }
+          }
+        }
+      ],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "tenseigan",
+          "celestialChakraModeController": true
+        }
+      },
+      "folder": "d0ce58b1d0553623"
+    },
+    {
+      "_id": "992b3bb6f3f50ceb",
+      "name": "Celestial Truth-Seeking Orbs",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>At 4th level, six permanent crystallized orbs of Celestial Chakra orbit you. The module tracks available orbs directly on the Actor.</p>\n<p>Spent orbs are unavailable. Orbs committed to a created form return when that form ends normally; if the form is destroyed, they are spent. A Short Rest can restore missing orbs by spending one Chakra Die per orb, and a Long Rest restores all six.</p>\n<p>The granted Truth-Seeking Orb techniques automatically spend their listed number of orbs when used.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan Class Mod 4",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "celestial-truth-seeking-orbs"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "tenseigan"
+        }
+      },
+      "folder": "d0ce58b1d0553623"
+    },
+    {
+      "_id": "44f6742fc41756b2",
+      "name": "Eternal Tenseigan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>At 5th level, the Tenseigan reaches its eternal zenith. You become immune to Mental conditions, add 10 Hit Dice and Chakra Dice to your maximum pools, and may spend 10 Celestial Chakra to enter or leave any perceived Plane, Dimension, or Spatial Distortion.</p>\n<p>When Celestial Chakra Mode is active, its benefits become:</p><ul><li>Strength, Dexterity, and Wisdom become 30.</li><li>Base movement speed increases by 300 feet and Fly Speed equals movement speed.</li><li>Gain 25 Damage Reduction and ignore Damage Resistance and Immunity.</li><li>Gain one additional Reaction or Bonus Action at the start of each turn.</li><li>Hyūga Hijutsu powered by Celestial Chakra are treated as 4 ranks higher; if no upcast benefit applies, add 2d8 damage per rank.</li><li>Spend 1 Chakra Die to gain twice one Art Magnification benefit.</li><li>Gain +3 AC, +3 Celestial Art Save DC, and +5 Celestial Art Attack Bonus.</li></ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "none",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan Class Mod 5",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "eternal-tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "tenseigan"
+        }
+      },
+      "folder": "d0ce58b1d0553623"
+    },
+    {
+      "_id": "9e80749bee1558d9",
+      "name": "Bronze Palm Judgement Unlife",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Create twelve spheres of Celestial Chakra and strike a creature's heart from within. Make a melee Celestial Art attack at disadvantage. On a hit, the target makes a Constitution save.</p><ul><li><strong>Failure:</strong> 30 ranks of Lacerated, 3 ranks of Weakened, and 1 rank of Slowed.</li><li><strong>Success:</strong> 10 ranks of Lacerated and 1 rank of Weakened.</li></ul><p>On a failed save, these ranks ignore condition immunity and can only be removed by an S-Rank Medical Release jutsu or Art cast over one minute. A hit creature cannot regain HP for six turns or Elite Actions.</p><p><strong>Art Magnification:</strong> Increase Lacerated by 5 ranks.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 15,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "con",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "bronze-palm-judgement-unlife",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 30,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "0c4fe2c2f2b501c7",
+      "name": "Bronze Wheel Revolving Tranquility",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Create an ethereal blade that shatters into motes binding the souls of creatures around you. Choose up to five unaffected creatures. All others in a 30-foot radius make a Charisma save.</p><p>On a failure, a target is Grappled, Restrained, unable to Mold Chakra, and takes 14d8 Chakra damage at the start of each turn. It may repeat the save as an Action. On success, it cannot Mold Chakra until the end of its next turn. Maintaining this Art costs no additional Celestial Chakra.</p><p><strong>Art Magnification:</strong> Deal 3d8 additional damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": 30,
+          "width": null,
+          "units": "ft",
+          "type": "radius",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "14d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "cha",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [
+          "concentration"
+        ],
+        "identifier": "bronze-wheel-revolving-tranquility",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 25 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 25,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "1a078b21a96d275e",
+      "name": "Celestial Palm of Peace",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Until the start of your next turn, whenever an attack targets you or you take damage, move up to your full movement toward the source and make a melee Celestial Art attack at advantage. If your result exceeds the triggering attack, nullify it. If the source is within melee range, make two attacks, each dealing unarmed damage + 4d4 on a hit.</p><p>You may trigger this effect an additional number of times equal to your Class Mod level.</p><p><strong>Art Magnification:</strong> Gain +1d4 to attack rolls with this Art and deal an additional 4d4 with each attack.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "reaction",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "round"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4d4",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-palm-of-peace",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 15 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 15,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "9ac99afbd8304165",
+      "name": "Celestial Perfect Revolution",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p><strong>Action:</strong> Choose up to five unaffected creatures. All other creatures and structures in a 30-foot radius make a Strength save. On a failure they take 12d12 Chakra damage, are pulled inward, knocked back 60 feet, and fall prone. On success, take half damage and no prone. Colliding with a structure destroys it and deals an additional 3d8 bludgeoning damage per 5 feet pushed through.</p><p><strong>Reaction:</strong> Create a 5-foot barrier around yourself or a creature in range. It has 16d12 HP, grants total cover until the end of the current turn, then three-quarters cover until the start of the protected creature's next turn.</p><p><strong>Art Magnification:</strong> Increase damage and barrier HP by 2d12.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": 30,
+          "width": null,
+          "units": "ft",
+          "type": "radius",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "12d12",
+              "chakra"
+            ],
+            [
+              "3d8",
+              "bludgeoning"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-perfect-revolution",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 15 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 15,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "508b0014ebeb1b66",
+      "name": "Divine Mandate of Rejection",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Remove all Elemental or Physical conditions affecting you and gain advantage on saves against regaining them for one minute. Chosen creatures within 20 feet make a Constitution save, taking 6d10 Chakra and Force damage, gaining all removed conditions, and becoming unable to Mold Chakra for three turns on a failure, or half damage on success.</p><p><strong>Art Magnification:</strong> Deal 3d10 additional damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": 20,
+          "width": null,
+          "units": "ft",
+          "type": "radius",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "6d10",
+              "chakra"
+            ],
+            [
+              "6d10",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "con",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "divine-mandate-of-rejection",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 15 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 15,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "8773cd9f24a17266",
+      "name": "Divine Needle Injection",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Make three melee Celestial Art attacks against up to three creatures. On a hit, deal unarmed damage + 4d10 Chakra damage. At the start of the target's next turn, it makes a Constitution save, taking 4d10 Chakra damage for each successful hit and becoming unable to Mold Chakra for three turns on a failure, or half damage on success. If it has 0 Chakra, deal double Force damage to HP instead.</p><p><strong>Art Magnification:</strong> Make one additional attack.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 15,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4d10",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "con",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "divine-needle-injection",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 15 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 15,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "bf1838fef2c8f9d2",
+      "name": "Golden Wheel Celestial Blade",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>All chosen creatures in a 120-foot cone make a Charisma save. On a failure, take 20d10 Chakra damage and half that result as Force damage; on success, half as much. Failing by 5 or more also inflicts Slowed and prevents Mold Chakra for six turns or Elite Actions. Targets at 0 Chakra instead take triple HP damage as Force.</p><p><strong>Art Magnification:</strong> Deal 2d10 additional damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": 120,
+          "width": null,
+          "units": "ft",
+          "type": "cone",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "20d10",
+              "chakra"
+            ],
+            [
+              "10d10",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "cha",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "golden-wheel-celestial-blade",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 20,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "035a0c11e8647dfb",
+      "name": "Golden Wheel Reincarnation Unlife",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Make one melee Celestial Art attack at advantage and compare it to the AC of every chosen creature within 30 feet. On a hit, deal 20d12 Chakra damage and half that result as Force damage.</p><p>The next Art or Jutsu each affected creature casts expends all resources as normal, deals it an additional 10d12 Chakra damage and half as Force, and forces a Constitution save; on a failure it gains Slowed and cannot Mold Chakra for six turns or Elite Actions.</p><p><strong>Art Magnification:</strong> Deal an additional 2d12 damage with both effects.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": 30,
+          "width": null,
+          "units": "ft",
+          "type": "radius",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "20d12",
+              "chakra"
+            ],
+            [
+              "10d12",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "con",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "golden-wheel-reincarnation-unlife",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 30,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "effef294cb81170b",
+      "name": "Heavenly Angel Palm",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>For one minute, Celestial Chakra coats your palms or forearms. Gentle Fist unarmed attacks use a d12 and gain Reach 2. Hyūga Hijutsu cost 4 less (minimum 1), increase damage dice by two steps, and deal three additional damage dice. “8-Trigrams” Hijutsu become a 20-foot radius. Your unarmed attacks, Hyūga Hijutsu, and Celestial Arts ignore up to 20 DR, doubled against Chakra damage.</p><p>As a Bonus Action, make two ranged Celestial Art attacks against a creature within 120 feet, dealing unarmed damage + 2d10 Chakra and Force damage on a hit.</p><p><strong>Art Magnification:</strong> Concentration cannot be lost.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "rsak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "2d10",
+              "chakra"
+            ],
+            [
+              "2d10",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [
+          "concentration"
+        ],
+        "identifier": "heavenly-angel-palm",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 25 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 25,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "f3d208463c24982a",
+      "name": "Heavenly Palm Unbirth",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Make a melee Celestial Art attack. On a hit, reduce the target's current and maximum Chakra by 14d12 and prevent Mold Chakra for three turns. If your attack exceeds AC by 10, double the reduction. Add twice your Class Mod level to the result of the Class check and become immune to effects that would automatically fail that Clash. A hit target cannot regain HP or Chakra until the end of your next turn. At 0 Chakra, deal double Force damage to HP instead.</p><p><strong>Art Magnification:</strong> Deal 3d12 additional damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 15,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "14d12",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "heavenly-palm-unbirth",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 10,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "c4e270cdbaa29d73",
+      "name": "Silver Wheel Blade of Judgement",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Make two ranged Celestial Art attacks against up to two creatures within 500 feet. On a hit, deal unarmed damage + 8d6 Chakra damage. Targets at 0 Chakra instead take double Force damage to HP.</p><p>Creatures in a 5-foot-wide, 40-foot-long line behind each target make a Dexterity save, taking unarmed damage + 2d6 Force damage on a failure or half on success.</p><p><strong>Art Magnification:</strong> Make one additional attack.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 500,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "rsak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "8d6",
+              "chakra"
+            ],
+            [
+              "2d6",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "silver-wheel-blade-of-judgement",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 10 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 10,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "ba8545aee699bd05",
+      "name": "Silver Wheel Celestial Explosion",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Make a melee Celestial Art attack at advantage. On a hit, deal unarmed damage + 14d10 Chakra damage and increase all of the target's Jutsu costs by 30 Chakra for one minute. All other creatures in a 20-foot burst make a Dexterity save, taking the same total as Force damage on a failure or half on success.</p><p><strong>Art Magnification:</strong> Deal an additional 3d10 damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": 20,
+          "width": null,
+          "units": "ft",
+          "type": "radius",
+          "prompt": true
+        },
+        "range": {
+          "value": 15,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "14d10",
+              "chakra"
+            ],
+            [
+              "14d10",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "silver-wheel-celestial-explosion",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 20,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "eb581ed008f8fe3e",
+      "name": "Ultimate Angel Needle Palm",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p><strong>Revitalize:</strong> As an Action, an allied target may spend up to five Chakra Dice and five Hit Dice, recovering the result +10 per die spent, removing all ranks of up to two conditions, and removing failed Death Saves.</p><p><strong>Surge:</strong> As a Bonus Action, the target's next Jutsu is treated as four ranks higher. If no upcast bonus applies, add 2d8 damage once per rank.</p><p><strong>Art Magnification:</strong> Increase healing by +10 per die spent or increase the upcast by two additional ranks.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 15,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "ultimate-angel-needle-palm",
+        "jutsu": {
+          "components": [
+            "hs"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 20 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 20,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "81318bb17db00d61",
+      "name": "Ultimate Divine Providence",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Conjure <strong>Providence</strong>, a Gargantuan seven-headed celestial construct, for one minute. While it exists, you cannot act; it uses your Action, Bonus Action, movement, and Reaction on your turn.</p><p><strong>Providence:</strong> AC 20 + twice Tenseigan level; HP 26d12 + 180; Speed 20 ft. × Tenseigan level. STR 28, DEX 24, CON 30, INT 3, WIS 10, CHA 1. It has all condition immunities, Chakra Sight and Tremorsense 120 ft., Critical Defense, Immutable Form, and ignores resistance while treating immunity as resistance.</p><p>It has seven heads. Each 50 HP lost destroys one head and reduces its number of attacks. Dragon's Maw: +13, reach 120 ft., 3d6 + STR bludgeoning. Synchronous Assault: +13, reach 90 ft., 4d8 per remaining head. Sacrificial Defense can intercept damage. Celestial Art: Subjugate grapples a target; on a failed Constitution save against your Celestial Art DC, it loses 6d8 Chakra at the start of each turn while grappled.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "turn",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "minute"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "ultimate-divine-providence",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 30 Celestial Chakra."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "art",
+          "classMod": "tenseigan",
+          "celestialChakraCost": 30,
+          "celestialArt": true
+        }
+      },
+      "folder": "958077fe18aaab54"
+    },
+    {
+      "_id": "a67db060a781221c",
+      "name": "Celestial Strike",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Spend 1 orb. Make a melee or ranged Celestial Art attack against a creature within 1 mile. On a hit, deal 10d10 Force and Chakra damage; the target makes a Strength save or is knocked back 60 feet.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 1000,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d10",
+              "force"
+            ],
+            [
+              "10d10",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-strike",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 1 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 1
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "29bcacb907ac2507",
+      "name": "Celestial Collapse",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Spend 3 orbs. Launch a sphere to a space within 240 feet; creatures of your choice in a 90-foot radius make a Charisma save, taking 20d12 Force and Chakra damage on a failure or half on success. A creature reduced to 0 HP is converted to Celestial Chakra; gain temporary Celestial Chakra equal to twice its level.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 240,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "save",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "20d12",
+              "force"
+            ],
+            [
+              "20d12",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "cha",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-collapse",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 3 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 3
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "1613110bb2bb3651",
+      "name": "Celestial Aegis",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Spend 1 orb. The next time you take damage before your next turn, the orb intercepts and shatters. You may spend another orb immediately to continue the protection against the next instance of damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-aegis",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 1 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 1
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "48747c73510fd5a3",
+      "name": "Celestial Reflection",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Spend 2 orbs when targeted or affected by Ninjutsu, Genjutsu, or an Art. Absorb it and release it back at its source using your Celestial Art Attack Bonus or Save DC.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "reaction",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-reflection",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 2 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 2
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "11c2a2312e3254fe",
+      "name": "Celestial Supremacy",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Spend 3 orbs when you Clash with an Art, Ninjutsu, or Genjutsu. Add a number of d8s equal to your Class Mod level to the Clash check. You are immune to effects that would automatically fail the Clash. On a success, the loser also suffers Golden Wheel Reincarnation Unlife.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "reaction",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-supremacy",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 3 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 3
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "4b7f06cc0b349c9a",
+      "name": "Celestial Armament",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Commit 2 orbs to create any Celestial Chakra weapon for one minute. You are proficient with it and use your Celestial Art Attack Bonus. On a hit, deal normal weapon damage + 3d10 Force and Chakra damage. Reach increases by 5 feet and the weapon returns to your hand.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "msak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "3d10",
+              "force"
+            ],
+            [
+              "3d10",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-armament",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 2 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 2
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "44f9333fe60ec155",
+      "name": "Celestial Duplicate",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Commit 3 orbs to create a Medium duplicate for one minute. It has your AC, movement, senses, save bonuses, and HP equal to 25 × Class Mod level. It acts after your turn and may Dash, Disengage, Dodge, Help, or make one Celestial Art attack within 120 feet for 4d10 Force and Chakra damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "rsak",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4d10",
+              "force"
+            ],
+            [
+              "4d10",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-duplicate",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 3 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 3
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "f5c5803fccac7568",
+      "name": "Celestial Familiar",
+      "type": "spell",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>Commit 1 orb to create a Tiny celestial animal for up to 24 hours. AC equals your Celestial Art Save DC; HP equals 10 × Class Mod level; speed 60 feet. It can carry 5 pounds, deliver a 25-word message, and share its senses. It cannot attack or use Jutsu.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": 30,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": "art",
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "art"
+        },
+        "level": 9,
+        "rank": "s",
+        "school": "trs",
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "versatileScaling": {
+          "formula": "",
+          "mode": "none"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "recharge": {
+          "value": null,
+          "formula": "1d8",
+          "charged": false
+        },
+        "properties": [],
+        "identifier": "celestial-familiar",
+        "jutsu": {
+          "components": [
+            "m"
+          ],
+          "keywords": [
+            "hijutsu",
+            "taijutsu"
+          ],
+          "countsKnown": false,
+          "ability": "",
+          "type": "taijutsu"
+        },
+        "chakra": {
+          "cost": "0",
+          "scaling": {
+            "mode": "none",
+            "value": 0
+          },
+          "special": "Consumes 1 Celestial Truth-Seeking Orb(s)."
+        },
+        "method": "spell",
+        "prepared": 0,
+        "sourceItem": "classmod:tenseigan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb": {
+          "classmodArt": {
+            "classmod": "tenseigan"
+          }
+        },
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "orb",
+          "classMod": "tenseigan",
+          "truthSeekingOrbCost": 1
+        }
+      },
+      "folder": "e9e457d7d317c431"
+    },
+    {
+      "_id": "1035b47b7ef173a3",
+      "name": "Tenseigan",
+      "type": "classmod",
+      "img": "modules/n5eb-classmod-library/assets/tenseigan-eye.png",
+      "system": {
+        "description": {
+          "value": "<p>The Tenseigan is a five-level Class Mod centered on Celestial Chakra, Celestial Arts, reincarnation, and escalating Celestial Strain. Drag this entry onto a character and advance it through the normal N5eB Advancement workflow.</p>\n<table><thead><tr><th>Level</th><th>Minimum Character Level</th><th>Arts Mastered</th><th>Arts Known</th><th>Celestial Chakra</th><th>Feature</th></tr></thead><tbody>\n<tr><td>1</td><td>8</td><td>0</td><td>2</td><td>75</td><td>Tenseigan, Celestial Arts, Celestial Strain</td></tr>\n<tr><td>2</td><td>10</td><td>1</td><td>3</td><td>150</td><td>Celestial Reincarnation Eye</td></tr>\n<tr><td>3</td><td>14</td><td>2</td><td>4</td><td>250</td><td>Celestial Chakra Mode</td></tr>\n<tr><td>4</td><td>16</td><td>3</td><td>5</td><td>350</td><td>Celestial Truth-Seeking Orbs</td></tr>\n<tr><td>5</td><td>18</td><td>4</td><td>6</td><td>500</td><td>Eternal Tenseigan</td></tr></tbody></table>\n<p><strong>Leveling:</strong> A known Celestial Art must be used 3d4+3 times in life-threatening combat before it is Mastered. The Actor tracker records the mastery target and each bundled Art's uses automatically.</p>\n<p><strong>Automation:</strong> Celestial Chakra, Celestial Strain, Truth-Seeking Orbs, Art mastery, rest recovery, Art costs, Art attack/save values, Tenseigan activation, and Celestial Chakra Mode are stored directly on the Actor. No tracker uses an item's Uses field.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Tenseigan Class Mod",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "identifier": "tenseigan",
+        "levels": 1,
+        "advancement": {
+          "grant1": {
+            "_id": "79f7f0c19f6d18c9",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.dc8489c02062f81f",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.2a487f6d4a243252",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.a5065261c1f34164",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 1,
+            "title": "",
+            "hint": ""
+          },
+          "grant2": {
+            "_id": "fe36df55aba08cfe",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.538a115013062b3a",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 2,
+            "title": "",
+            "hint": ""
+          },
+          "grant3": {
+            "_id": "fe6010cf89bb9b72",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.3b8dd246da1f691e",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 3,
+            "title": "",
+            "hint": ""
+          },
+          "grant4": {
+            "_id": "eaa2c43aeec4805f",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.992b3bb6f3f50ceb",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.a67db060a781221c",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.29bcacb907ac2507",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.1613110bb2bb3651",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.48747c73510fd5a3",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.11c2a2312e3254fe",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.4b7f06cc0b349c9a",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.44f9333fe60ec155",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.f5c5803fccac7568",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 4,
+            "title": "",
+            "hint": ""
+          },
+          "grant5": {
+            "_id": "4d85cbe4e76cb810",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.44f6742fc41756b2",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 5,
+            "title": "",
+            "hint": ""
+          },
+          "arts": {
+            "_id": "aa37740369369c61",
+            "type": "ItemChoice",
+            "configuration": {
+              "choices": {
+                "1": {
+                  "count": 2,
+                  "replacement": false
+                },
+                "2": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "3": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "4": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "5": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "allowDrops": false,
+              "type": null,
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.9e80749bee1558d9"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.0c4fe2c2f2b501c7"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.1a078b21a96d275e"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.9ac99afbd8304165"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.508b0014ebeb1b66"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.8773cd9f24a17266"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.bf1838fef2c8f9d2"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.035a0c11e8647dfb"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.effef294cb81170b"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.f3d208463c24982a"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.c4e270cdbaa29d73"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.ba8545aee699bd05"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.eb581ed008f8fe3e"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.81318bb17db00d61"
+                }
+              ],
+              "restriction": {}
+            },
+            "value": {
+              "added": {},
+              "replaced": {}
+            },
+            "level": 1,
+            "title": "Celestial Arts",
+            "hint": "Choose two Celestial Arts at 1st level and one additional Art at each later Class Mod level."
+          },
+          "celestialChakra": {
+            "_id": "d0c82beb6ea7904f",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "celestial-chakra",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 75
+                },
+                "2": {
+                  "value": 150
+                },
+                "3": {
+                  "value": 250
+                },
+                "4": {
+                  "value": 350
+                },
+                "5": {
+                  "value": 500
+                }
+              }
+            },
+            "value": {},
+            "title": "Celestial Chakra",
+            "hint": ""
+          },
+          "celestialArtsKnown": {
+            "_id": "5fac30be6d283040",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "celestial-arts-known",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 2
+                },
+                "2": {
+                  "value": 3
+                },
+                "3": {
+                  "value": 4
+                },
+                "4": {
+                  "value": 5
+                },
+                "5": {
+                  "value": 6
+                }
+              }
+            },
+            "value": {},
+            "title": "Celestial Arts Known",
+            "hint": ""
+          },
+          "celestialArtsMastered": {
+            "_id": "d6870c2b62f2ca90",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "celestial-arts-mastered",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 0
+                },
+                "2": {
+                  "value": 1
+                },
+                "3": {
+                  "value": 2
+                },
+                "4": {
+                  "value": 3
+                },
+                "5": {
+                  "value": 4
+                }
+              }
+            },
+            "value": {},
+            "title": "Celestial Arts Mastered Required",
+            "hint": ""
+          },
+          "minimumLevel": {
+            "_id": "2cbc2f6da458ad05",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "minimum-character-level",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 8
+                },
+                "2": {
+                  "value": 10
+                },
+                "3": {
+                  "value": 14
+                },
+                "4": {
+                  "value": 16
+                },
+                "5": {
+                  "value": 18
+                }
+              }
+            },
+            "value": {},
+            "title": "Minimum Character Level",
+            "hint": ""
+          }
+        },
+        "save": {
+          "formula": "10+floor(@details.level/2)+@prof",
+          "value": "10+floor(@details.level/2)+@prof",
+          "scaling": ""
+        },
+        "attackBonus": {
+          "formula": "floor(@details.level/2)+@classmods.tenseigan.levels+@prof",
+          "value": "floor(@details.level/2)+@classmods.tenseigan.levels+@prof",
+          "scaling": ""
+        },
+        "color": "#7687e8"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "classmod",
+          "classMod": "tenseigan",
+          "contentVersion": "0.8.1"
+        }
+      },
+      "folder": "d1e8ac8323861d38"
+    }
+  ]
+}
