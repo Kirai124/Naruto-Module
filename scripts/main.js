@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.14.2";
+const CONTENT_VERSION = "0.15.0";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -26,6 +26,8 @@ const EDO_TENSEI_ATTACK_FORMULA = "@classmods.edo-tensei.levels+2*@prof";
 const EDO_TENSEI_SAVE_FORMULA = "12+@prof+floor(@details.level/2)";
 const HEAVENLY_GATES_ATTACK_FORMULA = "@prof+@abilities.str.mod";
 const HEAVENLY_GATES_SAVE_FORMULA = "10+@prof+@abilities.str.mod";
+const CRIMSON_PRIEST_ATTACK_FORMULA = "floor(@details.level/2)+@classmods.crimson-priest.levels+@prof";
+const CRIMSON_PRIEST_SAVE_FORMULA = "10+floor(@details.level/2)+@prof";
 const SEALED_BEAST_AWAKENING_BY_LEVEL = Object.freeze({1:45, 2:110, 3:175, 4:220, 5:275});
 const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-small-blue.webp",
@@ -37,7 +39,7 @@ const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-large-blue.webp",
   "icons/magic/light/explosion-star-blue.webp"
 ]);
-const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi", "edo-tensei", "heavenly-gates"]);
+const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi", "edo-tensei", "heavenly-gates", "crimson-priest"]);
 
 const SEAL_TYPE_KEYS = Object.freeze([
   "all-rounder", "absorber", "assault-type", "tank-type", "speed-type", "sensor-type", "white-kama-seal"
@@ -102,6 +104,22 @@ function patchClassModItemChoiceFlow() {
             const optionPath = flags.heavenlyGatesArtPath ?? flags.heavenlyGatesConditioningPath ?? flags.heavenlyGatesAffinityPath;
             if (path && optionPath && optionPath !== "both" && optionPath !== path) return false;
             if (flags.heavenlyGatesArt && Number(flags.heavenlyGatesRequiredStage ?? 1) > allowedStage) return false;
+            return true;
+          });
+        }
+
+        if (identifier === "crimson-priest") {
+          const actor = this.item?.actor ?? (this.item?.parent?.documentName === "Actor" ? this.item.parent : null);
+          const ownedItems = asArray(actor?.items);
+          const selectedOath = ownedItems.map(item => item.flags?.[MODULE_ID]?.crimsonPriestOath).find(value => ["predator","acolyte","nightmare"].includes(value)) ?? null;
+          const ownedIdentifiers = new Set(ownedItems.map(item => item.system?.identifier).filter(Boolean));
+          section.items = section.items.filter(entry => {
+            if (entry.checked) return true;
+            const source = poolByUuid.get(entry.uuid);
+            const flags = source?.flags?.[MODULE_ID] ?? {};
+            if (flags.crimsonPriestArtKind === "oath" && selectedOath && flags.crimsonPriestOath !== selectedOath) return false;
+            const incompatible = Array.isArray(flags.incompatiblePacts) ? flags.incompatiblePacts : [];
+            if (incompatible.some(identifier => ownedIdentifiers.has(identifier))) return false;
             return true;
           });
         }
@@ -362,6 +380,10 @@ function getEdoTenseiClassMod(actor) {
 
 function getHeavenlyGatesClassMod(actor) {
   return getClassMod(actor, "heavenly-gates");
+}
+
+function getCrimsonPriestClassMod(actor) {
+  return getClassMod(actor, "crimson-priest");
 }
 
 function getManagedActorItem(actor, flag) {
@@ -631,6 +653,16 @@ function calculateHeavenlyGatesArtValues(actor) {
   };
 }
 
+function calculateCrimsonPriestArtValues(actor) {
+  const characterLevel = Math.max(0, Number(actor?.system?.details?.level ?? 0));
+  const proficiency = Math.max(0, Number(actor?.system?.attributes?.prof ?? 0));
+  const classModLevel = Math.max(1, Number(getCrimsonPriestClassMod(actor)?.system?.levels ?? 1));
+  return {
+    attack: Math.floor(characterLevel / 2) + classModLevel + proficiency,
+    save: 10 + Math.floor(characterLevel / 2) + proficiency
+  };
+}
+
 function getClassModArtsConfiguration(identifier) {
   if (identifier === "kama-seal") return {
     item: getKamaClassMod,
@@ -667,6 +699,12 @@ function getClassModArtsConfiguration(identifier) {
     calculate: calculateHeavenlyGatesArtValues,
     attackFormula: HEAVENLY_GATES_ATTACK_FORMULA,
     saveFormula: HEAVENLY_GATES_SAVE_FORMULA
+  };
+  if (identifier === "crimson-priest") return {
+    item: getCrimsonPriestClassMod,
+    calculate: calculateCrimsonPriestArtValues,
+    attackFormula: CRIMSON_PRIEST_ATTACK_FORMULA,
+    saveFormula: CRIMSON_PRIEST_SAVE_FORMULA
   };
   return null;
 }
@@ -719,6 +757,10 @@ async function ensureHeavenlyGatesArtsFormulas(actor) {
   return ensureClassModArtsValues(actor, "heavenly-gates");
 }
 
+async function ensureCrimsonPriestArtsFormulas(actor) {
+  return ensureClassModArtsValues(actor, "crimson-priest");
+}
+
 async function syncClassModArtsForActor(actor) {
   if (!actor?.isOwner) return;
   await ensureKamaArtsFormulas(actor);
@@ -727,6 +769,7 @@ async function syncClassModArtsForActor(actor) {
   await ensureSealedBeastArtsFormulas(actor);
   await ensureEdoTenseiArtsFormulas(actor);
   await ensureHeavenlyGatesArtsFormulas(actor);
+  await ensureCrimsonPriestArtsFormulas(actor);
 }
 
 function calculateResonanceGain(actor, state) {
@@ -924,6 +967,7 @@ async function migrateExistingClassModActors() {
         await ensureFlyingThunderGodArtsFormulas(actor);
         await ensureEdoTenseiArtsFormulas(actor);
         await ensureHeavenlyGatesArtsFormulas(actor);
+        await ensureCrimsonPriestArtsFormulas(actor);
       });
     } catch (error) {
       console.error(`${MODULE_ID} | Failed to migrate Class Mod actor ${actor.name}`, error);
@@ -2238,10 +2282,11 @@ Hooks.on("createItem", async (item, options, userId) => {
   const isSealedBeastClassMod = item.type === "classmod" && item.system?.identifier === "sealed-beast-redux";
   const isEdoTenseiClassMod = item.type === "classmod" && item.system?.identifier === "edo-tensei";
   const isHeavenlyGatesClassMod = item.type === "classmod" && item.system?.identifier === "heavenly-gates";
+  const isCrimsonPriestClassMod = item.type === "classmod" && item.system?.identifier === "crimson-priest";
   const kamaRelevant = isKamaClassMod || getSealTypeKey(item) || getSealEvolutionKey(item) || ["divine-rewrite","resonance-disruption","kama-seal"].includes(item.system?.identifier);
   const tenseiganRelevant = isTenseiganClassMod || item.getFlag?.(MODULE_ID,"celestialArt") || item.getFlag?.(MODULE_ID,"tenseiganController") || item.getFlag?.(MODULE_ID,"celestialChakraModeController");
   const sealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
-  if (!kamaRelevant && !isFtgClassMod && !tenseiganRelevant && !sealedRelevant && !isEdoTenseiClassMod && !isHeavenlyGatesClassMod && !getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor)) return;
+  if (!kamaRelevant && !isFtgClassMod && !tenseiganRelevant && !sealedRelevant && !isEdoTenseiClassMod && !isHeavenlyGatesClassMod && !isCrimsonPriestClassMod && !getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor) && !getCrimsonPriestClassMod(actor)) return;
   await queueKamaTask(actor, async () => {
     if (getKamaClassMod(actor) && (kamaRelevant || isKamaClassMod)) await migrateKamaActor(actor);
     if (getTenseiganClassMod(actor) && (tenseiganRelevant || isTenseiganClassMod)) await migrateTenseiganActor(actor);
@@ -2259,16 +2304,18 @@ Hooks.on("updateItem", async (item, changes, options, userId) => {
   const hasSealedBeast = Boolean(getSealedBeastClassMod(actor));
   const hasEdoTensei = Boolean(getEdoTenseiClassMod(actor));
   const hasHeavenlyGates = Boolean(getHeavenlyGatesClassMod(actor));
-  if (!hasKama && !hasFtg && !hasTenseigan && !hasSealedBeast && !hasEdoTensei && !hasHeavenlyGates) return;
+  const hasCrimsonPriest = Boolean(getCrimsonPriestClassMod(actor));
+  if (!hasKama && !hasFtg && !hasTenseigan && !hasSealedBeast && !hasEdoTensei && !hasHeavenlyGates && !hasCrimsonPriest) return;
   const isKamaClassMod = item.type === "classmod" && item.system?.identifier === "kama-seal";
   const isFtgClassMod = item.type === "classmod" && item.system?.identifier === "flying-thunder-god";
   const isTenseiganClassMod = item.type === "classmod" && item.system?.identifier === "tenseigan";
   const isSealedBeastClassMod = item.type === "classmod" && item.system?.identifier === "sealed-beast-redux";
   const isEdoTenseiClassMod = item.type === "classmod" && item.system?.identifier === "edo-tensei";
   const isHeavenlyGatesClassMod = item.type === "classmod" && item.system?.identifier === "heavenly-gates";
+  const isCrimsonPriestClassMod = item.type === "classmod" && item.system?.identifier === "crimson-priest";
   const isSeal = getSealTypeKey(item) || getSealEvolutionKey(item);
   const isSealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
-  if (!isKamaClassMod && !isFtgClassMod && !isTenseiganClassMod && !isEdoTenseiClassMod && !isHeavenlyGatesClassMod && !isSeal && !isSealedRelevant) return;
+  if (!isKamaClassMod && !isFtgClassMod && !isTenseiganClassMod && !isEdoTenseiClassMod && !isHeavenlyGatesClassMod && !isCrimsonPriestClassMod && !isSeal && !isSealedRelevant) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
     if (hasKama && (isKamaClassMod || isSeal)) { await syncSealEvolution(actor); await refreshKamaEffect(actor); }
@@ -2307,7 +2354,7 @@ Hooks.on("preUpdateActor", (actor, changes, options, userId) => {
 
 Hooks.on("updateActor", async (actor, changes, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id) return;
-  if (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor)) return;
+  if (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor) && !getCrimsonPriestClassMod(actor)) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
     if (getTenseiganClassMod(actor)) {
@@ -2324,7 +2371,7 @@ Hooks.on("updateActor", async (actor, changes, options, userId) => {
 Hooks.on("createActiveEffect", async (effect, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id) return;
   const actor = getKamaActorFromEffect(effect);
-  if (!actor || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor))) return;
+  if (!actor || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor) && !getCrimsonPriestClassMod(actor))) return;
   await queueKamaTask(actor, () => syncClassModArtsForActor(actor));
 });
 

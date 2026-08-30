@@ -1,6 +1,6 @@
 {
   "id": "heavenly-gates",
-  "version": "1.0",
+  "version": "1.1",
   "label": "Heavenly Gates",
   "folders": [
     {
@@ -7372,7 +7372,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "4d8",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -7452,7 +7457,8 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 1
+          "heavenlyGatesRequiredStage": 1,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -7521,7 +7527,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "8d4",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -7600,7 +7611,8 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "breaths",
-          "heavenlyGatesRequiredStage": 1
+          "heavenlyGatesRequiredStage": 1,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -7669,8 +7681,13 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
-          "versatile": ""
+          "parts": [
+            [
+              "5d6",
+              "bludgeoning"
+            ]
+          ],
+          "versatile": "5d10"
         },
         "formula": "",
         "save": {
@@ -7749,7 +7766,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 2
+          "heavenlyGatesRequiredStage": 2,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is the normal version; Versatile is the Finisher damage."
         },
         "n5eb": {
           "classmodArt": {
@@ -8115,8 +8134,13 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
-          "versatile": ""
+          "parts": [
+            [
+              "6d8",
+              "bludgeoning"
+            ]
+          ],
+          "versatile": "7d12"
         },
         "formula": "",
         "save": {
@@ -8195,7 +8219,8 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 3
+          "heavenlyGatesRequiredStage": 3,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -8412,7 +8437,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "2d6",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -8492,7 +8522,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "breaths",
-          "heavenlyGatesRequiredStage": 3
+          "heavenlyGatesRequiredStage": 3,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is the additional damage per successful hit (three attacks)."
         },
         "n5eb": {
           "classmodArt": {
@@ -8561,8 +8593,13 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
-          "versatile": ""
+          "parts": [
+            [
+              "3d8",
+              "bludgeoning"
+            ]
+          ],
+          "versatile": "3d12"
         },
         "formula": "",
         "save": {
@@ -8642,7 +8679,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 4
+          "heavenlyGatesRequiredStage": 4,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is per caster attack; Versatile is the Finisher die."
         },
         "n5eb": {
           "classmodArt": {
@@ -8711,8 +8750,13 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
-          "versatile": ""
+          "parts": [
+            [
+              "2d4",
+              "bludgeoning"
+            ]
+          ],
+          "versatile": "10d4"
         },
         "formula": "",
         "save": {
@@ -8791,7 +8835,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 4
+          "heavenlyGatesRequiredStage": 4,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is the first-hit extra damage; Versatile is the final attack damage."
         },
         "n5eb": {
           "classmodArt": {
@@ -9159,8 +9205,13 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
-          "versatile": ""
+          "parts": [
+            [
+              "6d8",
+              "bludgeoning"
+            ]
+          ],
+          "versatile": "6d12"
         },
         "formula": "",
         "save": {
@@ -9239,7 +9290,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 5
+          "heavenlyGatesRequiredStage": 5,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is per successful hit; Versatile is the Finisher die."
         },
         "n5eb": {
           "classmodArt": {
@@ -9308,7 +9361,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "1d8",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -9388,7 +9446,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 5
+          "heavenlyGatesRequiredStage": 5,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is the first successful hit. Later hits step the damage die and 5+ hits add 5d6 fall damage per the Art text."
         },
         "n5eb": {
           "classmodArt": {
@@ -9457,7 +9517,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "1d10+@abilities.str.mod",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -9537,7 +9602,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "breaths",
-          "heavenlyGatesRequiredStage": 5
+          "heavenlyGatesRequiredStage": 5,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is per successful hit; number of attacks equals active Heavenly Breaths."
         },
         "n5eb": {
           "classmodArt": {
@@ -9755,7 +9822,20 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "2d10",
+              "bludgeoning"
+            ],
+            [
+              "4d10",
+              "bludgeoning"
+            ],
+            [
+              "6d6",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -9834,7 +9914,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 6
+          "heavenlyGatesRequiredStage": 6,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native parts cover the three listed additional damage components (third hit uses the fixed 60ft total knockback = 6d6 fall damage)."
         },
         "n5eb": {
           "classmodArt": {
@@ -10052,8 +10134,13 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
-          "versatile": ""
+          "parts": [
+            [
+              "20d12",
+              "force"
+            ]
+          ],
+          "versatile": "24d12"
         },
         "formula": "",
         "save": {
@@ -10131,7 +10218,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "breaths",
-          "heavenlyGatesRequiredStage": 6
+          "heavenlyGatesRequiredStage": 6,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage defaults to Sphere direct-hit damage; Versatile is Blast direct-hit damage. Secondary AoE damage remains in the Art text."
         },
         "n5eb": {
           "classmodArt": {
@@ -10200,7 +10289,16 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "10d12",
+              "bludgeoning"
+            ],
+            [
+              "10d12",
+              "force"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -10281,7 +10379,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 7
+          "heavenlyGatesRequiredStage": 7,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is the direct target hit. Line/radius shockwave damage remains in the Art text."
         },
         "n5eb": {
           "classmodArt": {
@@ -10647,7 +10747,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "5d10",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -10728,7 +10833,9 @@
           "heavenlyGatesArt": true,
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
-          "heavenlyGatesRequiredStage": 8
+          "heavenlyGatesRequiredStage": 8,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage is per direct hit; the 5d8 force line behind the target remains a separate save in the Art text."
         },
         "n5eb": {
           "classmodArt": {
@@ -10797,7 +10904,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "(@details.level+@prof+@abilities.str.mod+@classmods.heavenly-gates.levels)d10+75",
+              "radiant"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -10877,7 +10989,9 @@
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "breaths",
           "heavenlyGatesRequiredStage": 7,
-          "heavenlyGatesLethalFinisher": true
+          "heavenlyGatesLethalFinisher": true,
+          "damageAutomationVersion": 1,
+          "damageAutomationNote": "Native damage automates the failed Dexterity-save radiant formula. Secondary eye-burn damage remains a separate save."
         },
         "n5eb": {
           "classmodArt": {
@@ -10946,7 +11060,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "(@details.level+@prof+@abilities.str.mod+@classmods.heavenly-gates.levels)d12+100",
+              "bludgeoning"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -11027,7 +11146,8 @@
           "heavenlyGatesArtKind": "technique",
           "heavenlyGatesArtPath": "gates",
           "heavenlyGatesRequiredStage": 8,
-          "heavenlyGatesLethalFinisher": true
+          "heavenlyGatesLethalFinisher": true,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -11568,7 +11688,7 @@
           "managed": true,
           "category": "classmod",
           "classMod": "heavenly-gates",
-          "contentVersion": "0.14.2"
+          "contentVersion": "0.15.0"
         }
       },
       "folder": "bde2e6ee5cc92608"

@@ -2039,3 +2039,29 @@
   .n5eb-heavenly-tracker-strip { grid-template-columns:1fr 1fr; }
   .n5eb-heavenly-tracker .heavenly-grid { grid-template-columns:1fr; }
 }
+
+/* Crimson Priest tracker -------------------------------------------------- */
+.n5eb-crimson-tracker-strip {
+  display:grid; grid-template-columns:minmax(150px,1.4fr) repeat(3,minmax(70px,.65fr)); gap:6px;
+  align-items:stretch; margin:8px 0; padding:7px; border:1px solid rgba(125,11,24,.45); border-radius:7px;
+  background:linear-gradient(90deg,rgba(85,7,18,.16),rgba(0,0,0,.05));
+}
+.n5eb-crimson-tracker-strip .tracker-title,.n5eb-crimson-tracker-strip .tracker-mini {min-height:38px;border-radius:5px;}
+.n5eb-crimson-tracker-strip .tracker-title {display:flex;align-items:center;gap:8px;justify-content:flex-start;font-weight:700;}
+.n5eb-crimson-tracker-strip .tracker-title img {width:27px;height:27px;object-fit:cover;border:0;}
+.n5eb-crimson-tracker-strip .tracker-mini {display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.n5eb-crimson-tracker-strip .tracker-mini span {font-size:10px;text-transform:uppercase;opacity:.7;}
+.n5eb-crimson-tracker-strip .tracker-mini strong {font-size:14px;}
+.n5eb-crimson-tracker-window .window-content {padding:0;}
+.n5eb-crimson-tracker {padding:14px;}
+.n5eb-crimson-tracker > header {display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;}
+.n5eb-crimson-tracker h2 {margin:0;}.n5eb-crimson-tracker header p{margin:3px 0 0;opacity:.75;}
+.n5eb-crimson-tracker .piety-orb {display:flex;align-items:baseline;gap:2px;font-size:28px;font-weight:800;}
+.n5eb-crimson-tracker .piety-orb small {font-size:13px;opacity:.7;}
+.n5eb-crimson-tracker .crimson-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.n5eb-crimson-tracker .crimson-grid > div {padding:9px;border:1px solid rgba(255,255,255,.1);border-radius:6px;background:rgba(255,255,255,.035);}
+.n5eb-crimson-tracker .crimson-grid span {display:block;font-size:10px;text-transform:uppercase;opacity:.65;}
+.n5eb-crimson-tracker .crimson-grid strong {display:block;margin-top:3px;}
+.n5eb-crimson-tracker footer {display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;}
+.n5eb-crimson-tracker footer button {flex:1 1 125px;}
+@media (max-width:700px){.n5eb-crimson-tracker-strip{grid-template-columns:1fr 1fr}.n5eb-crimson-tracker .crimson-grid{grid-template-columns:1fr}}

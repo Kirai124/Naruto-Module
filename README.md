@@ -1,4 +1,13 @@
-# N5eB Class Mod Library 0.14.2
+# N5eB Class Mod Library 0.15.0
+## Version 0.15.0 — Crimson Priest + Damage Automation
+
+- Adds the complete **Crimson Priest** Class Mod from the supplied v1.1 document: 5 levels, 16 Pacts, 3 Death Oaths, 9 Blood Arts, and 18 Oath Arts.
+- Adds a Piety tracker with Standard / Elite / Solo gains, Oath Art Piety spending, Blood Art HP / Hit-Die spending, Doctrine of Carnage selections, and Jashin's Mandate controls.
+- Applies the direct Oath ability-score/chakra/movement bonuses that can be represented safely with N5eB Active Effects.
+- Adds native damage formulas to damage-dealing Crimson Priest Arts and dynamic actor-side formulas where the damage depends on current Class Mod state.
+- Adds native damage to Heavenly Gates techniques and **retroactively migrates the new damage data onto already-owned Heavenly Gates / Eight Gates Arts** by stable item identifier; no re-import is required.
+- Keeps complex conditional/secondary damage in the rules text when combining it into the primary roll would apply damage to the wrong target or at the wrong time.
+
 ## Version 0.14.2 — Heavenly Gates Duplicate Grant Fix
 
 - Serializes Heavenly Gates Actor synchronization so overlapping Foundry Class Mod advancement/update hooks cannot grant the same Gate or Heavenly Breath twice.
@@ -49,6 +58,7 @@ Included Class Mods:
 - Superior Shinobi
 - Edo Tensei
 - Heavenly Gates
+- Crimson Priest
 
 All bundled descriptions are written in English. Each Class Mod has its own colored folder tree inside the same world compendium.
 
