@@ -84,7 +84,7 @@ function readTracker(actor) { return normalizeTracker(actor, actor?.getFlag?.(MO
 async function writeTracker(actor, patch={}, {render=true}={}) {
   if (!actor?.isOwner) return readTracker(actor);
   const next = normalizeTracker(actor, {...readTracker(actor), ...patch});
-  await actor.setFlag(MODULE_ID, TRACKER_FLAG, next, {[INTERNAL]:true});
+  await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:next},{[INTERNAL]:{edoTracker:true}});
   if (render) {
     actor.sheet?.render?.(false);
     refreshTracker(actor);
@@ -95,7 +95,7 @@ async function ensureTracker(actor) {
   if (!getClassMod(actor) || !actor?.isOwner) return null;
   const raw = actor.getFlag(MODULE_ID, TRACKER_FLAG);
   const normalized = normalizeTracker(actor, raw);
-  if (!raw || JSON.stringify(raw) !== JSON.stringify(normalized)) await actor.setFlag(MODULE_ID, TRACKER_FLAG, normalized, {[INTERNAL]:true});
+  if (!raw || JSON.stringify(raw) !== JSON.stringify(normalized)) await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:normalized},{[INTERNAL]:{edoTracker:true}});
   return normalized;
 }
 async function spendCharges(actor, amount, {reason="Edo Tensei"}={}) {
@@ -141,7 +141,7 @@ function activeControlCost(summoner, exclude=null) {
 async function setEdoActive(actor, active, {controlled=true,render=true}={}) {
   const profile = actor.getFlag(MODULE_ID, PROFILE_FLAG);
   if (!profile) return;
-  await actor.setFlag(MODULE_ID, PROFILE_FLAG, {...profile, active:Boolean(active), controlled:Boolean(controlled)}, {[INTERNAL]:true});
+  await actor.update({[`flags.${MODULE_ID}.${PROFILE_FLAG}`]:{...profile, active:Boolean(active), controlled:Boolean(controlled)}},{[INTERNAL]:{edoProfile:true}});
   if (render) {
     actor.sheet?.render?.(false);
     const summoner = await fromUuid(profile.summonerUuid).catch(() => null);
@@ -960,7 +960,7 @@ async function recalculateEdoActor(actor) {
     const spent = Math.max(0,oldSlotsMax-current);
     await slots.update({"system.uses.max":String(calc.jutsuSlots),"system.uses.value":Math.max(0,calc.jutsuSlots-spent)},{[INTERNAL]:true});
   }
-  await actor.setFlag(MODULE_ID,PROFILE_FLAG,{...profile,calculations:calc},{[INTERNAL]:true});
+  await actor.update({[`flags.${MODULE_ID}.${PROFILE_FLAG}`]:{...profile,calculations:calc}},{[INTERNAL]:{edoProfile:true}});
   ui.notifications.info(`${actor.name} recalculated: AC ${calc.armorClass}, HP ${calc.hitPoints}, ${calc.jutsuSlots} Jutsu Slots.`);
   actor.sheet?.render?.(false);
   return calc;
@@ -1010,9 +1010,9 @@ function trackerHtml(actor) {
   }).join("") || '<em>No Edo Tensei Actors created yet.</em>';
   return `<div class="n5eb-edo-tracker-dialog" data-edo-root>
     <p>Unholy Charges and generated Edo Tensei are stored on Actors, not Item Uses.</p>
-    <section class="tracker-card"><header><span>Unholy Charges</span><strong>${state.chargesCurrent}/${state.chargesMax}</strong></header><div class="tracker-progress"><span style="width:${state.chargesMax?state.chargesCurrent/state.chargesMax*100:0}%"></span></div><div class="tracker-controls"><button data-action="charge-minus">-1</button><button data-action="create-edo"><i class="fas fa-skull"></i> Create Edo Tensei</button><button data-action="charge-plus">+1</button></div><p>Short-rest recoveries used: ${state.shortRestRecoveriesUsed}/2</p></section>
+    <section class="tracker-card"><header><span>Unholy Charges</span><strong>${state.chargesCurrent}/${state.chargesMax}</strong></header><div class="tracker-progress"><span style="width:${state.chargesMax?state.chargesCurrent/state.chargesMax*100:0}%"></span></div><div class="tracker-controls"><button type="button" data-action="charge-minus">-1</button><button type="button" data-action="create-edo"><i class="fas fa-skull"></i> Create Edo Tensei</button><button type="button" data-action="charge-plus">+1</button></div><p>Short-rest recoveries used: ${state.shortRestRecoveriesUsed}/2</p></section>
     <section class="tracker-card"><header><span>Created Edo Tensei</span><strong>${active.length}/${maxActive(actor)} Active</strong></header><div class="edo-list">${rows}</div></section>
-    <footer><button data-action="short-rest">Short Rest</button><button data-action="long-rest">Long Rest</button><button data-action="full-rest">Full Rest</button></footer>
+    <footer><button type="button" data-action="short-rest">Short Rest</button><button type="button" data-action="long-rest">Long Rest</button><button type="button" data-action="full-rest">Full Rest</button></footer>
   </div>`;
 }
 async function openTracker(actor) {
@@ -1173,13 +1173,8 @@ function renderEdoSheetRuntime(app, html) {
   const isGenerated = Boolean(actor.getFlag?.(MODULE_ID, PROFILE_FLAG));
   if (!isSummoner && !isGenerated) return;
   const root = renderRoot(app, html);
-  if (isSummoner) {
-    ensureTracker(actor).catch(error => console.error(`${MODULE_ID} | Could not initialize Edo Tensei tracker`, error));
-    globalThis.N5eBClassMods?.syncClassModArts?.(actor)?.catch?.(error =>
-      console.error(`${MODULE_ID} | Could not update Edo Tensei Arts values`, error)
-    );
-    injectSummonerStrip(root, actor);
-  } else injectGeneratedEdoStrip(root, actor);
+  if (isSummoner) injectSummonerStrip(root, actor);
+  else injectGeneratedEdoStrip(root, actor);
   injectHeaderQuickButton(app, actor);
   queueMicrotask(() => {
     const liveRoot = renderRoot(app, app?.element);

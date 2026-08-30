@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.14.0";
+const CONTENT_VERSION = "0.14.1";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -950,7 +950,7 @@ function buildKamaTrackerHtml(actor) {
         <div class="tracker-progress"><span data-bar="rewrite" style="width:${state.divineRewrite}%"></span></div>
         <div class="tracker-controls">
           ${game.user.isGM ? '<button type="button" data-action="rewrite-minus"><i class="fas fa-minus"></i> 5</button>' : ''}
-          <input type="number" data-input="rewrite" min="${rewriteMin}" max="100" step="5" value="${state.divineRewrite}">
+          <input type="number" name="n5eb-kama-rewrite" aria-label="Divine Rewrite" data-input="rewrite" min="${rewriteMin}" max="100" step="5" value="${state.divineRewrite}">
           <button type="button" data-action="rewrite-plus"><i class="fas fa-plus"></i> 5</button>
         </div>
       </section>
@@ -959,7 +959,7 @@ function buildKamaTrackerHtml(actor) {
         <div class="tracker-pips" data-pips="resonance">${[1,2,3,4,5].map(rank => `<span class="${rank <= state.resonanceDisruption ? 'filled' : ''}"></span>`).join('')}</div>
         <div class="tracker-controls">
           <button type="button" data-action="resonance-minus"><i class="fas fa-minus"></i> 1</button>
-          <input type="number" data-input="resonance" min="0" max="5" step="1" value="${state.resonanceDisruption}">
+          <input type="number" name="n5eb-kama-resonance" aria-label="Resonance Disruption" data-input="resonance" min="0" max="5" step="1" value="${state.resonanceDisruption}">
           <button type="button" data-action="resonance-plus"><i class="fas fa-plus"></i> 1</button>
         </div>
       </section>
@@ -1531,14 +1531,14 @@ function buildTenseiganTrackerHtml(actor) {
     <p class="tracker-intro">All values are stored directly on <strong>${foundry.utils.escapeHTML?.(actor.name) ?? actor.name}</strong>; no item Uses fields are used.</p>
     <section class="tracker-card chakra"><header><strong>Celestial Chakra</strong><span data-value="chakra">${state.celestialChakra}/${state.celestialChakraMax}</span></header>
       <div class="tracker-progress"><span data-bar="chakra" style="width:${state.celestialChakraMax ? state.celestialChakra/state.celestialChakraMax*100 : 0}%"></span></div>
-      <div class="tracker-controls"><button data-action="chakra-minus-5">−5</button><button data-action="chakra-minus">−1</button><input data-input="chakra" type="number" min="0" max="${state.celestialChakraMax}" value="${state.celestialChakra}"><button data-action="chakra-plus">+1</button><button data-action="chakra-plus-5">+5</button></div></section>
+      <div class="tracker-controls"><button type="button" data-action="chakra-minus-5">−5</button><button type="button" data-action="chakra-minus">−1</button><input name="n5eb-tenseigan-chakra" aria-label="Celestial Chakra" data-input="chakra" type="number" min="0" max="${state.celestialChakraMax}" value="${state.celestialChakra}"><button type="button" data-action="chakra-plus">+1</button><button type="button" data-action="chakra-plus-5">+5</button></div></section>
     <section class="tracker-card strain"><header><strong>Celestial Strain</strong><span data-value="strain">${state.celestialStrain}/${TENSEIGAN_STRAIN_MAX}</span></header>
       <div class="tracker-progress danger"><span data-bar="strain" style="width:${state.celestialStrain/TENSEIGAN_STRAIN_MAX*100}%"></span></div>
-      <div class="tracker-controls"><button data-action="strain-minus">−1</button><input data-input="strain" type="number" min="0" max="${TENSEIGAN_STRAIN_MAX}" value="${state.celestialStrain}"><button data-action="strain-plus">+1</button></div>
+      <div class="tracker-controls"><button type="button" data-action="strain-minus">−1</button><input name="n5eb-tenseigan-strain" aria-label="Celestial Strain" data-input="strain" type="number" min="0" max="${TENSEIGAN_STRAIN_MAX}" value="${state.celestialStrain}"><button type="button" data-action="strain-plus">+1</button></div>
       <p class="strain-warning">${state.celestialStrain >= 30 ? '4d6+4 Necrotic and Chakra damage at the start of each turn while Tenseigan is active.' : state.celestialStrain >= 20 ? 'Concentration cannot be maintained while Tenseigan is active.' : state.celestialStrain >= 15 ? '2d4+2 Necrotic and Chakra damage at the start of each turn while Tenseigan is active.' : 'No manual threshold effect is currently active.'}</p></section>
     <section class="tracker-card orbs"><header><strong>Truth-Seeking Orbs</strong><span data-value="orbs">${state.truthSeekingOrbs}/6</span></header><div class="orb-pips">${[1,2,3,4,5,6].map(i=>`<i class="${i<=state.truthSeekingOrbs?'filled':''}"></i>`).join('')}</div></section>
     <section class="tracker-card mastery"><header><strong>Celestial Art Mastery</strong><span>${mastered}/${requiredMastered} required for next level</span></header><p>Mastery target: <strong>${state.masteryTarget}</strong> uses per Art.</p><div class="mastery-list">${artRows}</div></section>
-    <div class="tracker-actions"><button data-action="save"><i class="fas fa-floppy-disk"></i> Save Values</button><button data-action="short-rest"><i class="fas fa-campground"></i> Short Rest Recovery</button><button data-action="long-rest"><i class="fas fa-moon"></i> Long Rest Recovery</button><button data-action="full-rest"><i class="fas fa-bed"></i> Full Rest</button><button data-action="spend-hit-die">Spend Hit Die: −1 Strain</button><button data-action="restore-orb">Spend Chakra Die: +1 Orb</button><button data-action="recuperate">1 Week Recuperation (2d4)</button>${game.user.isGM?'<button data-action="reroll-mastery">Reroll Mastery Target</button><button data-action="reset">GM Reset</button>':''}</div>
+    <div class="tracker-actions"><button type="button" data-action="save"><i class="fas fa-floppy-disk"></i> Save Values</button><button type="button" data-action="short-rest"><i class="fas fa-campground"></i> Short Rest Recovery</button><button type="button" data-action="long-rest"><i class="fas fa-moon"></i> Long Rest Recovery</button><button type="button" data-action="full-rest"><i class="fas fa-bed"></i> Full Rest</button><button type="button" data-action="spend-hit-die">Spend Hit Die: −1 Strain</button><button type="button" data-action="restore-orb">Spend Chakra Die: +1 Orb</button><button type="button" data-action="recuperate">1 Week Recuperation (2d4)</button>${game.user.isGM?'<button type="button" data-action="reroll-mastery">Reroll Mastery Target</button><button type="button" data-action="reset">GM Reset</button>':''}</div>
   </div>`;
 }
 
@@ -2090,16 +2090,16 @@ function buildSealedBeastTrackerHtml(actor) {
   return `<div class="n5eb-sealed-beast-tracker-dialog" data-sealed-beast-tracker-root>
     <p class="tracker-intro">All values are stored directly on <strong>${foundry.utils.escapeHTML?.(actor.name) ?? actor.name}</strong>. No item Uses fields are used.</p>
     <div class="tracker-grid">
-      <label>Twisted Chakra<input type="number" min="0" step="1" data-input="twisted" value="${state.twistedChakra}"></label>
-      <label>Twisted HP<input type="number" min="0" step="1" data-input="twisted-hp" value="${state.twistedHitPoints}"></label>
-      <label>Twisted HP Maximum<input type="number" min="0" step="1" data-input="twisted-hp-max" value="${state.twistedHitPointsMax}"></label>
-      <label>Disposition<input type="number" min="0" max="100" step="1" data-input="disposition" value="${state.disposition}"></label>
+      <label>Twisted Chakra<input type="number" name="n5eb-sealed-twisted-chakra" min="0" step="1" data-input="twisted" value="${state.twistedChakra}"></label>
+      <label>Twisted HP<input type="number" name="n5eb-sealed-twisted-hp" min="0" step="1" data-input="twisted-hp" value="${state.twistedHitPoints}"></label>
+      <label>Twisted HP Maximum<input type="number" name="n5eb-sealed-twisted-hp-max" min="0" step="1" data-input="twisted-hp-max" value="${state.twistedHitPointsMax}"></label>
+      <label>Disposition<input type="number" name="n5eb-sealed-disposition" min="0" max="100" step="1" data-input="disposition" value="${state.disposition}"></label>
     </div>
     <section class="tracker-card"><header><strong>Twisted Awakening</strong><span>${budget.remaining} remaining / ${budget.maximum}</span></header><div class="tracker-progress"><span style="width:${budget.maximum ? clampSealed(budget.spent/budget.maximum*100,0,100) : 0}%"></span></div><small>${budget.spent} points spent by owned talents.</small></section>
     <section class="tracker-card status"><header><strong>Status</strong><span>Desperate Rage DC ${dc}</span></header>
       <div class="status-pills"><span class="${state.dormantBeast?'active':''}">Dormant Beast</span><span class="${state.frenzy?'active danger':''}">Frenzy</span><span class="${state.transformation?'active':''}">${foundry.utils.escapeHTML?.(state.transformationName) ?? state.transformationName}</span></div>
-      <label><input type="checkbox" data-input="conquered" ${state.beastConquered?'checked':''}> Beast Conquered</label>
-      <label><input type="checkbox" data-input="pact" ${state.pactOfTrust?'checked':''}> Pact of Trust</label>
+      <label><input type="checkbox" name="n5eb-sealed-conquered" data-input="conquered" ${state.beastConquered?'checked':''}> Beast Conquered</label>
+      <label><input type="checkbox" name="n5eb-sealed-pact" data-input="pact" ${state.pactOfTrust?'checked':''}> Pact of Trust</label>
     </section>
     <div class="tracker-actions">
       <button type="button" data-action="save"><i class="fas fa-floppy-disk"></i> Save Values</button>
@@ -2213,14 +2213,11 @@ Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
 });
 
 function renderClassModRuntime(app, html) {
+  // Rendering a sheet must stay side-effect free. Updating Actor/Item data from a render
+  // hook can create a render -> update -> render feedback loop on N5eB sheets.
   renderKamaTrackerStrip(app, html);
   renderTenseiganTrackerStrip(app, html);
   renderSealedBeastTrackerStrip(app, html);
-  const actor = app.actor ?? app.document;
-  if (!actor?.isOwner || (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor))) return;
-  queueKamaTask(actor, () => syncClassModArtsForActor(actor)).catch(error =>
-    console.error(`${MODULE_ID} | Failed to refresh Class Mod Arts values for ${actor.name}`, error)
-  );
 }
 
 Hooks.on("renderActorSheet", renderClassModRuntime);

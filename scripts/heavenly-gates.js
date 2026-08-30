@@ -57,25 +57,38 @@ function esc(v){ return foundry.utils.escapeHTML(String(v ?? "")); }
 function getActivityItem(activity){ return activity?.item ?? activity?.parent?.item ?? null; }
 
 function defaultTracker(actor){
-  return {version:1,path:getPath(actor),activeStage:0,startedAt:0,lastBacklash:"",lastSelfDamage:0,lastRecovery:0};
+  return {version:2,path:getPath(actor),activeStage:0,startedAt:0,lastBacklash:"",lastSelfDamage:0,lastRecovery:0,tempHpBaseline:0,tempHpGranted:0,tempChakraBaseline:0,tempChakraGranted:0};
 }
 function normalizeTracker(actor,value={}){
-  const path=getPath(actor) ?? (value.path === "gates" || value.path === "breaths" ? value.path : null);
-  const maximum=maxStage(actor,path);
+  const selectedPath=getPath(actor);
+  const storedPath=value.path === "gates" || value.path === "breaths" ? value.path : null;
+  const rawStage=Math.max(0,Math.floor(Number(value.activeStage ?? 0) || 0));
+  // While a release is active, preserve the path it was opened with so a path/level
+  // edit can be detected and resolved instead of silently transforming the release.
+  const path=rawStage>0 ? (storedPath ?? selectedPath) : selectedPath;
+  const hardMaximum=path === "gates" ? 8 : path === "breaths" ? 7 : 0;
+  const activeStage=clamp(rawStage,0,hardMaximum);
   return {
-    version:1,
+    version:2,
     path,
-    activeStage:clamp(value.activeStage ?? 0,0,maximum),
+    activeStage,
     startedAt:Number(value.startedAt ?? 0),
     lastBacklash:String(value.lastBacklash ?? ""),
     lastSelfDamage:Math.max(0,Number(value.lastSelfDamage ?? 0)),
-    lastRecovery:Math.max(0,Number(value.lastRecovery ?? 0))
+    lastRecovery:Math.max(0,Number(value.lastRecovery ?? 0)),
+    tempHpBaseline:Math.max(0,Number(value.tempHpBaseline ?? 0)),
+    tempHpGranted:Math.max(0,Number(value.tempHpGranted ?? 0)),
+    tempChakraBaseline:Math.max(0,Number(value.tempChakraBaseline ?? 0)),
+    tempChakraGranted:Math.max(0,Number(value.tempChakraGranted ?? 0))
   };
 }
 function readTracker(actor){ return normalizeTracker(actor,actor?.getFlag?.(MODULE_ID,TRACKER_FLAG) ?? defaultTracker(actor)); }
 async function writeTracker(actor,patch={}, {render=true,refresh=true}={}){
   const next=normalizeTracker(actor,{...readTracker(actor),...patch});
-  await actor.setFlag(MODULE_ID,TRACKER_FLAG,next);
+  const raw=actor?.getFlag?.(MODULE_ID,TRACKER_FLAG);
+  if(!raw || JSON.stringify(raw)!==JSON.stringify(next)) {
+    await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:next},{[INTERNAL]:{heavenlyGatesTracker:true}});
+  }
   if(refresh) await refreshReleaseEffect(actor,next);
   if(render){ actor.sheet?.render?.(false); refreshDialog(actor); }
   return next;
@@ -111,14 +124,20 @@ async function refreshReleaseEffect(actor,state=readTracker(actor)){
     if(effect) await effect.delete({[INTERNAL]:{heavenlyGates:true}});
     return;
   }
+  const sameStage=Boolean(effect && moduleFlag(effect,"path")===state.path && Number(moduleFlag(effect,"stage"))===state.activeStage);
+  const startTime=sameStage ? Number(effect.duration?.startTime ?? game.time?.worldTime ?? 0) : Number(game.time?.worldTime ?? 0);
   const data={
     name:`Heavenly Gates — ${STAGES[state.path]?.[state.activeStage]?.name ?? `Stage ${state.activeStage}`}`,
     img:ICON,disabled:false,transfer:false,
-    duration:{seconds:60,rounds:10,startTime:game.time?.worldTime},
+    duration:{seconds:60,rounds:10,startTime},
     changes:effectChanges(state.path,state.activeStage),statuses:[],flags:{[MODULE_ID]:{[EFFECT_FLAG]:true,path:state.path,stage:state.activeStage}}
   };
-  if(effect) await effect.update(data,{[INTERNAL]:{heavenlyGates:true}});
-  else await actor.createEmbeddedDocuments("ActiveEffect",[data],{[INTERNAL]:{heavenlyGates:true}});
+  if(!effect) {
+    await actor.createEmbeddedDocuments("ActiveEffect",[data],{[INTERNAL]:{heavenlyGates:true}});
+    return;
+  }
+  const changed=effect.name!==data.name || effect.img!==data.img || effect.disabled!==false || effect.transfer!==false || Number(effect.duration?.seconds??0)!==60 || Number(effect.duration?.rounds??0)!==10 || JSON.stringify(effect.changes??[])!==JSON.stringify(data.changes) || moduleFlag(effect,"path")!==state.path || Number(moduleFlag(effect,"stage"))!==state.activeStage;
+  if(changed) await effect.update(data,{[INTERNAL]:{heavenlyGates:true}});
 }
 
 function findAvailableClassDie(actor,kind){
@@ -152,35 +171,43 @@ async function recoverResource(actor,path,diceCount,label){
   const kind=path==="gates"?"cd":"hd", denom=dieDenomination(actor,kind), con=conMod(actor);
   const formula=`${diceCount}d${denom}${con*diceCount>=0?'+':''}${con*diceCount}`;
   const gained=Math.max(0,await rollFormula(actor,formula,label));
-  if(path==="gates"){
-    const chakra=actor.system?.attributes?.chakra ?? {}, current=Number(chakra.value??0), maximum=Number(chakra.max??current), temp=Number(chakra.temp??0);
-    const direct=Math.min(gained,Math.max(0,maximum-current)), overflow=Math.max(0,gained-direct);
-    await actor.update({"system.attributes.chakra.value":current+direct,"system.attributes.chakra.temp":temp+overflow},{[INTERNAL]:{heavenlyGates:true}});
-  } else {
-    const hp=actor.system?.attributes?.hp ?? {}, current=Number(hp.value??0), maximum=Number(hp.max??current), temp=Number(hp.temp??0);
-    const direct=Math.min(gained,Math.max(0,maximum-current)), overflow=Math.max(0,gained-direct);
-    await actor.update({"system.attributes.hp.value":current+direct,"system.attributes.hp.temp":temp+overflow},{[INTERNAL]:{heavenlyGates:true}});
-  }
-  return gained;
+  const root=path==="gates"?"chakra":"hp";
+  const resource=actor.system?.attributes?.[root] ?? {}, current=Number(resource.value??0), maximum=Number(resource.max??current), temp=Number(resource.temp??0);
+  const direct=Math.min(gained,Math.max(0,maximum-current)), overflow=Math.max(0,gained-direct);
+  await actor.update({[`system.attributes.${root}.value`]:current+direct,[`system.attributes.${root}.temp`]:temp+overflow},{[INTERNAL]:{heavenlyGates:true}});
+  return {gained,direct,overflow};
 }
 async function convertReleaseTemporary(actor){
   const state=readTracker(actor); if(!state.path || !state.activeStage) return 0;
-  const isGates=state.path==="gates", root=isGates?"chakra":"hp", resource=actor.system?.attributes?.[root] ?? {};
-  const current=Number(resource.value??0), maximum=Number(resource.max??current), temp=Number(resource.temp??0);
-  const amount=Math.min(25,Math.max(0,maximum-current),Math.max(0,temp)); if(!amount) return 0;
-  await actor.update({[`system.attributes.${root}.value`]:current+amount,[`system.attributes.${root}.temp`]:temp-amount},{[INTERNAL]:{heavenlyGates:true}});
+  const isGates=state.path==="gates", root=isGates?"chakra":"hp", grantKey=isGates?"tempChakraGranted":"tempHpGranted";
+  const resource=actor.system?.attributes?.[root] ?? {}, current=Number(resource.value??0), maximum=Number(resource.max??current), temp=Number(resource.temp??0), granted=Math.max(0,Number(state[grantKey]??0));
+  const amount=Math.min(25,Math.max(0,maximum-current),Math.max(0,temp),granted); if(!amount) return 0;
+  const next=normalizeTracker(actor,{...state,[grantKey]:Math.max(0,granted-amount)});
+  await actor.update({[`system.attributes.${root}.value`]:current+amount,[`system.attributes.${root}.temp`]:temp-amount,[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:next},{[INTERNAL]:{heavenlyGates:true}});
+  refreshDialog(actor);
   ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content:`<p><strong>${esc(actor.name)} — Heavenly Gates:</strong> ${amount} Temporary ${isGates?"Chakra":"HP"} converted into regular ${isGates?"Chakra":"HP"} at the start of the turn.</p>`});
   return amount;
 }
 async function recoverGateHealing(actor){
-  if(availableDice(actor,"hd")<2) return {ok:false,gained:0};
-  if(!await spendDice(actor,"hd",2)) return {ok:false,gained:0};
   const denom=dieDenomination(actor,"hd"), con=conMod(actor);
   const gained=Math.max(0,await rollFormula(actor,`2d${denom}${2*con>=0?'+':''}${2*con}`,"Gate of Healing — Hit Dice"));
   const hp=actor.system?.attributes?.hp ?? {}, current=Number(hp.value??0), maximum=Number(hp.max??current), temp=Number(hp.temp??0);
   const direct=Math.min(gained,Math.max(0,maximum-current)), overflow=Math.max(0,gained-direct);
   await actor.update({"system.attributes.hp.value":current+direct,"system.attributes.hp.temp":temp+overflow},{[INTERNAL]:{heavenlyGates:true}});
-  return {ok:true,gained};
+  return {gained,direct,overflow};
+}
+function releaseTempBaseline(actor){
+  return {tempHpBaseline:Math.max(0,Number(actor.system?.attributes?.hp?.temp??0)),tempChakraBaseline:Math.max(0,Number(actor.system?.attributes?.chakra?.temp??0)),tempHpGranted:0,tempChakraGranted:0};
+}
+async function clearReleaseTemporary(actor,state=readTracker(actor)){
+  const updates={};
+  for(const [root,baselineKey,grantKey] of [["hp","tempHpBaseline","tempHpGranted"],["chakra","tempChakraBaseline","tempChakraGranted"]]){
+    const granted=Math.max(0,Number(state[grantKey]??0)); if(!granted) continue;
+    const current=Math.max(0,Number(actor.system?.attributes?.[root]?.temp??0)), baseline=Math.max(0,Number(state[baselineKey]??0));
+    const visibleGrant=Math.max(0,current-baseline), remove=Math.min(granted,visibleGrant);
+    if(remove>0) updates[`system.attributes.${root}.temp`]=Math.max(0,current-remove);
+  }
+  if(Object.keys(updates).length) await actor.update(updates,{[INTERNAL]:{heavenlyGates:true}});
 }
 async function applyUnavoidableDamage(actor,amount,reason){
   amount=Math.max(0,Math.floor(Number(amount)||0)); if(!amount) return 0;
@@ -206,16 +233,24 @@ function canActivate(actor,requestedStage=null,{notify=true}={}){
 async function activateNext(actor,{requestedStage=null}={}){
   actor=actorFromContext(actor); if(!actor || !canActivate(actor,requestedStage)) return false;
   const path=getPath(actor), state=readTracker(actor), stage=requestedStage ?? state.activeStage+1, data=STAGES[path][stage];
+  const starting=state.activeStage===0, baseline=starting?releaseTempBaseline(actor):{};
   if(!await spendDice(actor,data.kind,data.dice)) return ui.notifications.error("The required class dice could not be spent.");
+  if(path==="gates" && stage===2 && !await spendDice(actor,"hd",2)) return ui.notifications.error("Gate of Healing could not spend its 2 Hit Dice.");
   const recovered=await recoverResource(actor,path,data.dice,`${data.name} — ${path==="gates"?"Chakra":"Hit"} Die Recovery`);
-  let extraHealing=0;
-  if(path==="gates" && stage===2){
-    const extra=await recoverGateHealing(actor); if(!extra.ok) return ui.notifications.error("Gate of Healing could not spend its 2 Hit Dice."); extraHealing=extra.gained;
+  let extra={gained:0,direct:0,overflow:0};
+  if(path==="gates" && stage===2) extra=await recoverGateHealing(actor);
+  const patch={path,activeStage:stage,startedAt:Number(game.time?.worldTime ?? Date.now()/1000),lastRecovery:recovered.gained+extra.gained,lastBacklash:"",...baseline};
+  if(path==="gates") patch.tempChakraGranted=(starting?0:state.tempChakraGranted)+recovered.overflow;
+  else patch.tempHpGranted=(starting?0:state.tempHpGranted)+recovered.overflow;
+  if(extra.overflow) patch.tempHpGranted=(starting?0:state.tempHpGranted)+extra.overflow;
+  await writeTracker(actor,patch);
+  if(data.activationDamage){
+    const dmg=await rollFormula(actor,data.activationDamage,`${data.name} — Activation Damage`);
+    await applyUnavoidableDamage(actor,dmg,`${data.name} activation`);
   }
-  if(data.activationDamage){ const dmg=await rollFormula(actor,data.activationDamage,`${data.name} — Activation Damage`); await applyUnavoidableDamage(actor,dmg,`${data.name} activation`); }
-  await writeTracker(actor,{path,activeStage:stage,startedAt:Date.now(),lastRecovery:recovered+extraHealing,lastBacklash:""});
   const per=data.perArt;
-  ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content:`<p><strong>${esc(actor.name)} opens ${esc(data.name)}.</strong></p><p>Release stage ${stage}/${maxStage(actor,path)}. Current self-damage: <strong>${esc(per)} Necrotic per Heavenly/Beastly Art</strong> (half for other jutsu).${extraHealing?` Gate of Healing restored ${extraHealing} additional HP/Temporary HP.`:""}</p>${data.activationReminder?`<p><strong>Activation reminder:</strong> ${esc(data.activationReminder)}</p>`:""}`});
+  ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content:`<p><strong>${esc(actor.name)} opens ${esc(data.name)}.</strong></p><p>Release stage ${stage}/${maxStage(actor,path)}. Current self-damage: <strong>${esc(per)} Necrotic per Heavenly/Beastly Art</strong> (half for other jutsu).${extra.gained?` Gate of Healing restored ${extra.gained} additional HP/Temporary HP.`:""}</p>${data.activationReminder?`<p><strong>Activation reminder:</strong> ${esc(data.activationReminder)}</p>`:""}`});
+  if(Number(actor.system?.attributes?.hp?.value??0)<=0) await deactivate(actor,{reason:"ended on unconsciousness"});
   return true;
 }
 
@@ -251,7 +286,8 @@ async function deactivate(actor,{reason="deactivated"}={}){
     if(backlash.total) await applyUnavoidableDamage(actor,backlash.total,"Heavenly Gates deactivation backlash");
     summary=[`Numeric backlash: ${backlash.total} unavoidable Necrotic damage.`,...backlash.parts,backlash.conditions.length?`Apply/verify ranked conditions manually: ${backlash.conditions.join("; ")}`:""] .filter(Boolean).join(" ");
   }
-  await writeTracker(actor,{activeStage:0,startedAt:0,lastBacklash:summary},{refresh:true});
+  await clearReleaseTemporary(actor,state);
+  await writeTracker(actor,{activeStage:0,startedAt:0,lastBacklash:summary,tempHpBaseline:0,tempHpGranted:0,tempChakraBaseline:0,tempChakraGranted:0},{refresh:true});
   ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content:`<p><strong>${esc(actor.name)} — Heavenly Gates ${esc(reason)}.</strong></p><p>${esc(summary)}</p>`});
   return true;
 }
@@ -281,7 +317,8 @@ async function processArtUse(actor,item){
   const amount=moduleFlag(item,"heavenlyGatesArt") ? full : Math.floor(full/2);
   await applyUnavoidableDamage(actor,amount,`${item.name} self-damage`);
   await writeTracker(actor,{lastSelfDamage:amount},{refresh:false});
-  if(moduleFlag(item,"heavenlyGatesLethalFinisher")) await deactivate(actor,{reason:`ended by ${item.name}`});
+  if(Number(actor.system?.attributes?.hp?.value??0)<=0) await deactivate(actor,{reason:"ended on unconsciousness"});
+  else if(moduleFlag(item,"heavenlyGatesLethalFinisher")) await deactivate(actor,{reason:`ended by ${item.name}`});
 }
 
 async function getPackDocuments(){ const pack=game.packs.get(PACK_COLLECTION); return pack ? await pack.getDocuments() : []; }
@@ -303,10 +340,34 @@ async function syncStageItems(actor){
 }
 async function ensureActor(actor){
   if(!getClassMod(actor)) return;
+  const selected=getPath(actor), state=readTracker(actor);
+  if(state.activeStage>0 && (!selected || selected!==state.path)) {
+    await deactivate(actor,{reason:"ended because the Heavenly Gates path changed"});
+  } else if(state.activeStage>maxStage(actor,state.path)) {
+    await deactivate(actor,{reason:"ended because the Class Mod level no longer supports the active stage"});
+  }
   await syncStageItems(actor);
+  const normalized=readTracker(actor), raw=actor?.getFlag?.(MODULE_ID,TRACKER_FLAG);
+  if(!raw || JSON.stringify(raw)!==JSON.stringify(normalized)) {
+    await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:normalized},{[INTERNAL]:{heavenlyGatesTracker:true}});
+  }
+  await refreshReleaseEffect(actor,normalized);
+}
+async function cleanupActor(actor){
   const state=readTracker(actor);
-  if(state.activeStage>maxStage(actor,state.path)) await deactivate(actor,{reason:"reduced below the active release stage"});
-  else { await actor.setFlag(MODULE_ID,TRACKER_FLAG,state); await refreshReleaseEffect(actor,state); }
+  await clearReleaseTemporary(actor,state);
+  const stages=arr(actor?.items).filter(i=>moduleFlag(i,GRANTED_STAGE_FLAG));
+  if(stages.length) await actor.deleteEmbeddedDocuments("Item",stages.map(i=>i.id),{[INTERNAL]:{heavenlyGates:true}});
+  const effects=arr(actor?.effects).filter(e=>moduleFlag(e,EFFECT_FLAG));
+  if(effects.length) await actor.deleteEmbeddedDocuments("ActiveEffect",effects.map(e=>e.id),{[INTERNAL]:{heavenlyGates:true}});
+  if(actor?.getFlag?.(MODULE_ID,TRACKER_FLAG)!==undefined) await actor.update({[`flags.${MODULE_ID}.-=${TRACKER_FLAG}`]:null},{[INTERNAL]:{heavenlyGates:true}});
+  refreshDialog(actor);
+}
+function isRelevantClassModItem(item){
+  return item?.type==="classmod" && item.system?.identifier===CLASSMOD_ID;
+}
+function isRelevantPathItem(item){
+  return moduleFlag(item,"heavenlyGatesPath") || ["unstoppable-force-eight-gates","immovable-object-seven-heavenly-breaths"].includes(item?.system?.identifier);
 }
 
 function trackerKey(actor){ return actor?.uuid ?? actor?.id; }
@@ -324,7 +385,7 @@ function trackerHtml(actor){
     <header><div><h2>Heavenly Gates</h2><p>${esc(pathName)}</p></div><div class="stage-orb">${s.activeStage}<small>/${maximum}</small></div></header>
     <section class="heavenly-grid"><div><span>Current</span><strong>${esc(current)}</strong></div><div><span>Next</span><strong>${esc(next)}</strong></div><div><span>Hit Dice</span><strong>${hd}</strong></div><div><span>Chakra Dice</span><strong>${cd}</strong></div></section>
     <section class="heavenly-summary"><h3>Automated bonuses</h3><p>${esc(currentSummary(actor))}</p>${s.lastRecovery?`<p><strong>Last recovery:</strong> ${s.lastRecovery}</p>`:""}${s.lastSelfDamage?`<p><strong>Last self-damage:</strong> ${s.lastSelfDamage}</p>`:""}${s.lastBacklash?`<p class="backlash"><strong>Last backlash:</strong> ${esc(s.lastBacklash)}</p>`:""}</section>
-    <footer><button data-action="advance" ${!path||s.activeStage>=maximum?"disabled":""}><i class="fas fa-forward"></i> Open Next Stage</button><button data-action="deactivate" ${!s.activeStage?"disabled":""}><i class="fas fa-hand"></i> Deactivate</button>${game.user.isGM?'<button data-action="reset"><i class="fas fa-rotate-left"></i> GM Reset Tracker</button>':''}</footer>
+    <footer><button type="button" data-action="advance" ${!path||s.activeStage>=maximum?"disabled":""}><i class="fas fa-forward"></i> Open Next Stage</button><button type="button" data-action="deactivate" ${!s.activeStage?"disabled":""}><i class="fas fa-hand"></i> Deactivate</button>${game.user.isGM?'<button type="button" data-action="reset"><i class="fas fa-rotate-left"></i> GM Reset Tracker</button>':''}</footer>
   </div>`;
 }
 async function openTracker(actor){
@@ -339,7 +400,7 @@ function activateDialog(dialog,actor){
   const root=dialog.element?.querySelector?.('[data-heavenly-root]'); if(!root) return;
   root.querySelector('[data-action="advance"]')?.addEventListener('click',()=>activateNext(actor).catch(console.error));
   root.querySelector('[data-action="deactivate"]')?.addEventListener('click',()=>deactivate(actor).catch(console.error));
-  root.querySelector('[data-action="reset"]')?.addEventListener('click',async()=>{ await writeTracker(actor,{activeStage:0,startedAt:0,lastBacklash:"",lastSelfDamage:0,lastRecovery:0}); });
+  root.querySelector('[data-action="reset"]')?.addEventListener('click',async()=>{ const state=readTracker(actor); await clearReleaseTemporary(actor,state); await writeTracker(actor,{activeStage:0,startedAt:0,lastBacklash:"",lastSelfDamage:0,lastRecovery:0,tempHpBaseline:0,tempHpGranted:0,tempChakraBaseline:0,tempChakraGranted:0}); });
 }
 function renderRoot(app,html){ return html?.[0] ?? html ?? app.element?.[0] ?? app.element; }
 function renderStrip(app,html){
@@ -348,7 +409,7 @@ function renderStrip(app,html){
   const target=root.querySelector('.jutsu-casting-overview')??root.querySelector('.sheet-body'); if(!target) return;
   const s=readTracker(actor), path=s.path, maximum=maxStage(actor,path), data=s.activeStage?STAGES[path]?.[s.activeStage]:null;
   const section=document.createElement('section'); section.className='n5eb-heavenly-tracker-strip'; section.dataset.heavenlyStrip='true';
-  section.innerHTML=`<button class="tracker-title" data-action="open-heavenly"><img src="${ICON}"> Heavenly Gates</button><div class="tracker-mini"><span>Path</span><strong>${path==="gates"?"Gates":path==="breaths"?"Breaths":"Choose"}</strong></div><div class="tracker-mini"><span>Stage</span><strong>${s.activeStage}/${maximum}</strong></div><div class="tracker-mini"><span>Self-Dmg</span><strong>${data?.perArt??"—"}</strong></div>`;
+  section.innerHTML=`<button type="button" class="tracker-title" data-action="open-heavenly"><img src="${ICON}"> Heavenly Gates</button><div class="tracker-mini"><span>Path</span><strong>${path==="gates"?"Gates":path==="breaths"?"Breaths":"Choose"}</strong></div><div class="tracker-mini"><span>Stage</span><strong>${s.activeStage}/${maximum}</strong></div><div class="tracker-mini"><span>Self-Dmg</span><strong>${data?.perArt??"—"}</strong></div>`;
   target.prepend(section); section.querySelector('[data-action="open-heavenly"]')?.addEventListener('click',()=>openTracker(actor));
 }
 
@@ -361,18 +422,19 @@ Hooks.on("getActorSheetHeaderButtons",(sheet,buttons)=>{
   const actor=sheet.actor??sheet.document; if(!getClassMod(actor)) return; const s=readTracker(actor), maximum=maxStage(actor,s.path);
   buttons.unshift({label:`Heavenly ${s.activeStage}/${maximum}`,class:"n5eb-heavenly-tracker-button",icon:"fas fa-fire-flame-curved",onclick:()=>openTracker(actor)});
 });
-Hooks.on("renderActorSheet",renderStrip); Hooks.on("renderCharacterActorSheet",renderStrip);
+Hooks.on("renderActorSheet",renderStrip); Hooks.on("renderCharacterActorSheet",renderStrip); Hooks.on("renderApplicationV2",renderStrip);
 Hooks.on("createItem",async(item,options,userId)=>{
   if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor") return; const actor=item.parent;
-  if(item.type==="classmod"&&item.system?.identifier===CLASSMOD_ID || getClassMod(actor)) await ensureActor(actor);
+  if(isRelevantClassModItem(item) || (getClassMod(actor)&&isRelevantPathItem(item))) await ensureActor(actor);
 });
 Hooks.on("updateItem",async(item,changes,options,userId)=>{
   if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor") return; const actor=item.parent;
-  if(getClassMod(actor) || item.type==="classmod"&&item.system?.identifier===CLASSMOD_ID) await ensureActor(actor);
+  if(getClassMod(actor) && (isRelevantClassModItem(item)||isRelevantPathItem(item))) await ensureActor(actor);
 });
 Hooks.on("deleteItem",async(item,options,userId)=>{
   if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor") return; const actor=item.parent;
-  if(getClassMod(actor)) await ensureActor(actor);
+  if(isRelevantClassModItem(item)) await cleanupActor(actor);
+  else if(getClassMod(actor)&&isRelevantPathItem(item)) await ensureActor(actor);
 });
 Hooks.on("updateActor",async(actor,changes,options,userId)=>{
   if(options?.[INTERNAL]||userId!==game.user.id||!getClassMod(actor)) return;

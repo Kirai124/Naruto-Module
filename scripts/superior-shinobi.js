@@ -24,7 +24,10 @@ function normalize(actor,source={}){
 function readTracker(actor){ return normalize(actor,actor?.getFlag?.(MODULE_ID,TRACKER_FLAG) ?? {}); }
 async function writeTracker(actor,patch={},options={}){
   const previous=readTracker(actor); const next=normalize(actor,{...previous,...patch});
-  await actor.setFlag(MODULE_ID,TRACKER_FLAG,next);
+  const raw=actor?.getFlag?.(MODULE_ID,TRACKER_FLAG);
+  if(!raw || JSON.stringify(raw)!==JSON.stringify(next)) {
+    await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:next},{[INTERNAL]:{superiorTracker:true}});
+  }
   await refreshEffect(actor,next);
   actor.sheet?.render?.(false);
   refreshDialog(actor);
@@ -42,7 +45,15 @@ function prophesisedCost(actor,item,cost){
 }
 function availableDice(actor,type){ return Number(actor?.system?.attributes?.[type]?.value ?? 0); }
 
-async function ensureTracker(actor){ if(!getClassMod(actor)) return null; const state=readTracker(actor); await actor.setFlag(MODULE_ID,TRACKER_FLAG,state); await refreshEffect(actor,state); return state; }
+async function ensureTracker(actor){
+  if(!getClassMod(actor)) return null;
+  const raw=actor?.getFlag?.(MODULE_ID,TRACKER_FLAG), state=readTracker(actor);
+  if(!raw || JSON.stringify(raw)!==JSON.stringify(state)) {
+    await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:state},{[INTERNAL]:{superiorTracker:true}});
+  }
+  await refreshEffect(actor,state);
+  return state;
+}
 function effectChanges(actor,state){
   const level=getLevel(actor), burden=state.burden;
   let ac=(level>=1?1:0)+(level>=3?2:0), speed=(level>=1?30:0)+(level>=3?30:0), save=(level>=1?1:0)+(level>=3?1:0), attack=(level>=3?1:0);
@@ -62,14 +73,27 @@ async function refreshEffect(actor,state=readTracker(actor)){
   if(!getClassMod(actor)) return;
   let effect=arr(actor.effects).find(e=>e.getFlag?.(MODULE_ID,EFFECT_FLAG));
   const data={name:"Superior Shinobi — Superior & Burden",img:"icons/magic/control/buff-strength-muscle-damage-red.webp",disabled:false,transfer:false,duration:{},changes:effectChanges(actor,state),flags:{[MODULE_ID]:{[EFFECT_FLAG]:true}}};
-  if(effect) await effect.update(data,{[INTERNAL]:{superior:true}}); else await actor.createEmbeddedDocuments("ActiveEffect",[data],{[INTERNAL]:{superior:true}});
+  if(!effect) {
+    await actor.createEmbeddedDocuments("ActiveEffect",[data],{[INTERNAL]:{superior:true}});
+    return;
+  }
+  const changed=effect.name!==data.name || effect.img!==data.img || effect.disabled!==false || effect.transfer!==false || JSON.stringify(effect.changes??[])!==JSON.stringify(data.changes);
+  if(changed) await effect.update(data,{[INTERNAL]:{superior:true}});
+}
+async function cleanupActor(actor){
+  const effects=arr(actor?.effects).filter(e=>e.getFlag?.(MODULE_ID,EFFECT_FLAG));
+  if(effects.length) await actor.deleteEmbeddedDocuments("ActiveEffect",effects.map(e=>e.id),{[INTERNAL]:{superior:true}});
+  if(actor?.getFlag?.(MODULE_ID,TRACKER_FLAG)!==undefined) {
+    await actor.update({[`flags.${MODULE_ID}.-=${TRACKER_FLAG}`]:null},{[INTERNAL]:{superiorCleanup:true}});
+  }
+  refreshDialog(actor);
 }
 
 async function rollDie(formula,label){ const roll=await (new Roll(formula)).evaluate(); await roll.toMessage({flavor:label}); return Number(roll.total ?? 0); }
 async function useReserve(actor){
   actor=actorFromContext(actor); if(!actor || !getClassMod(actor)) return ui.notifications.warn("No Superior Shinobi character is selected.");
   const state=readTracker(actor); const hd=actor.system?.attributes?.hd ?? {}; const cd=actor.system?.attributes?.cd ?? {};
-  const content=`<form class="n5eb-superior-pay"><p>Choose the resource gained and the die source.</p><div class="form-group"><label>Resource</label><select name="resource"><option value="health">Health (double as Temporary HP)</option><option value="chakra">Chakra (Temporary Chakra)</option></select></div><div class="form-group"><label>Source</label><select name="source">${state.reserveCurrent>0?`<option value="reserve">Reserve Die (${state.reserveCurrent}/${state.reserveMax})</option>`:""}${availableDice(actor,"hd")>0?`<option value="hd">Hit Die (${hd.value})</option>`:""}${availableDice(actor,"cd")>0?`<option value="cd">Chakra Die (${cd.value})</option>`:""}</select></div></form>`;
+  const content=`<form class="n5eb-superior-pay"><p>Choose the resource gained and the die source.</p><div class="form-group"><label>Resource<select name="resource" aria-label="Resource"><option value="health">Health (double as Temporary HP)</option><option value="chakra">Chakra (Temporary Chakra)</option></select></label></div><div class="form-group"><label>Source<select name="source" aria-label="Die Source">${state.reserveCurrent>0?`<option value="reserve">Reserve Die (${state.reserveCurrent}/${state.reserveMax})</option>`:""}${availableDice(actor,"hd")>0?`<option value="hd">Hit Die (${hd.value})</option>`:""}${availableDice(actor,"cd")>0?`<option value="cd">Chakra Die (${cd.value})</option>`:""}</select></label></div></form>`;
   const result=await foundry.applications.api.DialogV2.wait({window:{title:`Superior Reserves — ${actor.name}`},content,buttons:[{action:"use",label:"Use Reserve",icon:"fa-solid fa-battery-three-quarters",default:true,callback:(event,button)=>new FormDataExtended(button.form).object},{action:"cancel",label:"Cancel"}],rejectClose:false});
   if(!result?.source) return;
   const resource=result.resource; const source=result.source; let formula;
@@ -90,7 +114,7 @@ async function payTechnique(actor,item){
   if(cost===0){ ui.notifications.info(`${item.name} has no die cost due to The Prophesised.`); return true; }
   const options=[]; if(free>0) options.push(`<option value="free">Free Use (${free}/${max} remaining)</option>`); if(availableDice(actor,"hd")>=cost) options.push(`<option value="hd">Spend ${cost} Hit ${cost===1?"Die":"Dice"}</option>`); if(availableDice(actor,"cd")>=cost) options.push(`<option value="cd">Spend ${cost} Chakra ${cost===1?"Die":"Dice"}</option>`);
   if(!options.length){ ui.notifications.error(`${item.name} cannot be paid: no free uses or dice remain.`); return false; }
-  const result=await foundry.applications.api.DialogV2.wait({window:{title:`Pay ${item.name}`},content:`<form><p><strong>Active Cost:</strong> ${cost} Hit or Chakra ${cost===1?"Die":"Dice"}.</p><div class="form-group"><label>Payment</label><select name="payment">${options.join("")}</select></div></form>`,buttons:[{action:"pay",label:"Pay",icon:"fa-solid fa-coins",default:true,callback:(event,button)=>new FormDataExtended(button.form).object.payment},{action:"cancel",label:"Cancel"}],rejectClose:false});
+  const result=await foundry.applications.api.DialogV2.wait({window:{title:`Pay ${item.name}`},content:`<form><p><strong>Active Cost:</strong> ${cost} Hit or Chakra ${cost===1?"Die":"Dice"}.</p><div class="form-group"><label>Payment<select name="payment" aria-label="Payment">${options.join("")}</select></label></div></form>`,buttons:[{action:"pay",label:"Pay",icon:"fa-solid fa-coins",default:true,callback:(event,button)=>new FormDataExtended(button.form).object.payment},{action:"cancel",label:"Cancel"}],rejectClose:false});
   if(!result) return false;
   if(result==="free"){ const map={...state.freeUsesSpent,[id]:spent+1}; await writeTracker(actor,{freeUsesSpent:map}); }
   else { const key=result==="hd"?"hd":"cd", data=actor.system.attributes[key]; await actor.update({[`system.attributes.${key}.spent`]:Number(data.spent ?? 0)+cost},{[INTERNAL]:{superior:true}}); await writeTracker(actor,{combatDiceSpent:state.combatDiceSpent+cost}); }
@@ -123,8 +147,8 @@ function trackerHtml(actor){
   const s=readTracker(actor), maxFree=freeUsesMax(actor), techniques=ownedTechniques(actor);
   const opts=['<option value="">No Prophesised reduction</option>',...techniques.map(i=>`<option value="${techniqueIdentifier(i)}" ${s.prophesisedTechniqueId===techniqueIdentifier(i)?"selected":""}>${foundry.utils.escapeHTML(i.name)}</option>`)].join('');
   const prophesised=hasOwnedItem(actor,"the-prophesised")
-    ? `<section class="tracker-card"><header><span>The Prophesised</span><strong>${s.burden>=15?"Disabled by Burden":"Active"}</strong></header><select data-input="prophesised" ${s.burden>=15?"disabled":""}>${opts}</select></section>` : "";
-  return `<div class="n5eb-superior-tracker-dialog" data-superior-root><p>Actor-based tracking: no Item Uses are used.</p><section class="tracker-card"><header><span>Reserve Dice</span><strong>${s.reserveCurrent}/${s.reserveMax}</strong></header><div class="tracker-controls"><button data-action="reserve-minus">-1</button><button data-action="use-reserve"><i class="fas fa-battery-three-quarters"></i> Use Superior Reserve</button><button data-action="reserve-plus">+1</button></div></section><section class="tracker-card"><header><span>Burden</span><strong>${s.burden}/30</strong></header><div class="tracker-progress"><span style="width:${s.burden/30*100}%"></span></div><p>${burdenText(s.burden)}</p><div class="tracker-controls"><button data-action="burden-minus">-1</button><input data-input="burden" type="number" min="0" max="30" value="${s.burden}"><button data-action="burden-plus">+1</button></div></section><section class="tracker-card"><header><span>Combat Dice Spent</span><strong>${s.combatDiceSpent}</strong></header><button data-action="apply-burden">Finish Combat & Apply Burden</button></section><section class="tracker-card"><header><span>Technique Free Uses</span><strong>${maxFree} each / Long Rest</strong></header><div class="technique-use-list">${techniques.map(i=>{const id=techniqueIdentifier(i),used=Number(s.freeUsesSpent[id]??0);return `<div><span>${foundry.utils.escapeHTML(i.name)}</span><strong>${Math.max(0,maxFree-used)}/${maxFree}</strong></div>`}).join('')||'<em>No owned Superior Techniques.</em>'}</div><button data-action="reset-free">Reset Free Uses</button></section>${prophesised}<footer><button data-action="short-rest">Short Rest</button><button data-action="long-rest">Long Rest</button><button data-action="full-rest">Full Rest</button></footer></div>`;
+    ? `<section class="tracker-card"><header><span>The Prophesised</span><strong>${s.burden>=15?"Disabled by Burden":"Active"}</strong></header><select name="n5eb-superior-prophesised" aria-label="The Prophesised Technique" data-input="prophesised" ${s.burden>=15?"disabled":""}>${opts}</select></section>` : "";
+  return `<div class="n5eb-superior-tracker-dialog" data-superior-root><p>Actor-based tracking: no Item Uses are used.</p><section class="tracker-card"><header><span>Reserve Dice</span><strong>${s.reserveCurrent}/${s.reserveMax}</strong></header><div class="tracker-controls"><button type="button" data-action="reserve-minus">-1</button><button type="button" data-action="use-reserve"><i class="fas fa-battery-three-quarters"></i> Use Superior Reserve</button><button type="button" data-action="reserve-plus">+1</button></div></section><section class="tracker-card"><header><span>Burden</span><strong>${s.burden}/30</strong></header><div class="tracker-progress"><span style="width:${s.burden/30*100}%"></span></div><p>${burdenText(s.burden)}</p><div class="tracker-controls"><button type="button" data-action="burden-minus">-1</button><input name="n5eb-superior-burden" aria-label="Burden" data-input="burden" type="number" min="0" max="30" value="${s.burden}"><button type="button" data-action="burden-plus">+1</button></div></section><section class="tracker-card"><header><span>Combat Dice Spent</span><strong>${s.combatDiceSpent}</strong></header><button type="button" data-action="apply-burden">Finish Combat & Apply Burden</button></section><section class="tracker-card"><header><span>Technique Free Uses</span><strong>${maxFree} each / Long Rest</strong></header><div class="technique-use-list">${techniques.map(i=>{const id=techniqueIdentifier(i),used=Number(s.freeUsesSpent[id]??0);return `<div><span>${foundry.utils.escapeHTML(i.name)}</span><strong>${Math.max(0,maxFree-used)}/${maxFree}</strong></div>`}).join('')||'<em>No owned Superior Techniques.</em>'}</div><button type="button" data-action="reset-free">Reset Free Uses</button></section>${prophesised}<footer><button type="button" data-action="short-rest">Short Rest</button><button type="button" data-action="long-rest">Long Rest</button><button type="button" data-action="full-rest">Full Rest</button></footer></div>`;
 }
 async function openTracker(actor){ actor=actorFromContext(actor); if(!actor||!getClassMod(actor)) return ui.notifications.warn("No Superior Shinobi character is selected."); await ensureTracker(actor); const key=trackerKey(actor); if(dialogs.get(key)?.rendered) return dialogs.get(key).bringToFront(); const DialogV2=foundry.applications.api.DialogV2; const dialog=new DialogV2({window:{title:`Superior Shinobi Tracker — ${actor.name}`,icon:"fa-solid fa-star",resizable:true},position:{width:680,height:"auto"},classes:["n5eb-superior-tracker-window"],content:trackerHtml(actor),buttons:[{action:"close",label:"Close"}]}); dialogs.set(key,dialog); dialog.addEventListener("render",()=>activateDialog(dialog,actor)); dialog.addEventListener("close",()=>dialogs.delete(key),{once:true}); await dialog.render({force:true}); return dialog; }
 function refreshDialog(actor){ const d=dialogs.get(trackerKey(actor)); if(d?.rendered) d.render({force:true}); }
@@ -132,14 +156,15 @@ function activateDialog(dialog,actor){ const root=dialog.element?.querySelector?
   root.querySelectorAll('button[data-action]').forEach(b=>b.addEventListener('click',()=>act(b.dataset.action).catch(console.error)));
   root.querySelector('[data-input="burden"]')?.addEventListener('change',e=>writeTracker(actor,{burden:Number(e.currentTarget.value)})); root.querySelector('[data-input="prophesised"]')?.addEventListener('change',e=>writeTracker(actor,{prophesisedTechniqueId:String(e.currentTarget.value)})); }
 function renderRoot(app,html){ return html?.[0] ?? html ?? app.element?.[0] ?? app.element; }
-function renderStrip(app,html){ const actor=app.actor??app.document; if(!getClassMod(actor)) return; const root=renderRoot(app,html); if(!root||root.querySelector('[data-superior-strip]')) return; const target=root.querySelector('.jutsu-casting-overview')??root.querySelector('.sheet-body'); if(!target) return; const s=readTracker(actor); const section=document.createElement('section'); section.className='n5eb-superior-tracker-strip'; section.dataset.superiorStrip='true'; section.innerHTML=`<button class="tracker-title" data-action="open-superior"><i class="fas fa-star"></i> Superior Shinobi</button><div class="tracker-mini"><span>Reserve</span><strong>${s.reserveCurrent}/${s.reserveMax}</strong></div><div class="tracker-mini"><span>Burden</span><strong>${s.burden}/30</strong></div><div class="tracker-mini"><span>Combat Dice</span><strong>${s.combatDiceSpent}</strong></div>`; target.prepend(section); section.querySelector('[data-action="open-superior"]')?.addEventListener('click',()=>openTracker(actor)); }
+function renderStrip(app,html){ const actor=app.actor??app.document; if(!getClassMod(actor)) return; const root=renderRoot(app,html); if(!root||root.querySelector('[data-superior-strip]')) return; const target=root.querySelector('.jutsu-casting-overview')??root.querySelector('.sheet-body'); if(!target) return; const s=readTracker(actor); const section=document.createElement('section'); section.className='n5eb-superior-tracker-strip'; section.dataset.superiorStrip='true'; section.innerHTML=`<button type="button" class="tracker-title" data-action="open-superior"><i class="fas fa-star"></i> Superior Shinobi</button><div class="tracker-mini"><span>Reserve</span><strong>${s.reserveCurrent}/${s.reserveMax}</strong></div><div class="tracker-mini"><span>Burden</span><strong>${s.burden}/30</strong></div><div class="tracker-mini"><span>Combat Dice</span><strong>${s.combatDiceSpent}</strong></div>`; target.prepend(section); section.querySelector('[data-action="open-superior"]')?.addEventListener('click',()=>openTracker(actor)); }
 
 Hooks.once('ready',async()=>{ globalThis.N5eBSuperior=Object.freeze({openTracker,useReserve,getTracker:readTracker,setTracker:writeTracker,applyCombatBurden}); if(game.system.id!=="n5eb") return; if(game.user.isGM) for(const actor of game.actors??[]) if(getClassMod(actor)) await ensureTracker(actor); });
 Hooks.on('getActorSheetHeaderButtons',(sheet,buttons)=>{const actor=sheet.actor??sheet.document;if(!getClassMod(actor))return;const s=readTracker(actor);buttons.unshift({label:`Reserve ${s.reserveCurrent}/${s.reserveMax} · Burden ${s.burden}`,class:'n5eb-superior-tracker-button',icon:'fas fa-star',onclick:()=>openTracker(actor)});});
-Hooks.on('renderActorSheet',renderStrip); Hooks.on('renderCharacterActorSheet',renderStrip);
-Hooks.on('createItem',async(item,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if(item.type==='classmod'&&item.system?.identifier===CLASSMOD_ID||getClassMod(actor)&&isTechnique(item))await ensureTracker(actor);});
-Hooks.on('updateItem',async(item,changes,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if(getClassMod(actor)&&item.type==='classmod'&&item.system?.identifier===CLASSMOD_ID)await ensureTracker(actor);});
-Hooks.on('updateActor',async(actor,changes,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||!getClassMod(actor))return;await ensureTracker(actor);});
+Hooks.on('renderActorSheet',renderStrip); Hooks.on('renderCharacterActorSheet',renderStrip); Hooks.on('renderApplicationV2',renderStrip);
+Hooks.on('createItem',async(item,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if(item.type==='classmod'&&item.system?.identifier===CLASSMOD_ID)await ensureTracker(actor);else if(getClassMod(actor)&&isTechnique(item))refreshDialog(actor);});
+Hooks.on('updateItem',async(item,changes,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if(item.type==='classmod'&&item.system?.identifier===CLASSMOD_ID&&getClassMod(actor))await ensureTracker(actor);});
+Hooks.on('deleteItem',async(item,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if(item.type==='classmod'&&item.system?.identifier===CLASSMOD_ID)await cleanupActor(actor);else if(getClassMod(actor)&&isTechnique(item))refreshDialog(actor);});
+Hooks.on('updateActor',(actor,changes,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||!getClassMod(actor))return;refreshDialog(actor);});
 Hooks.on('dnd5e.postUseActivity',activity=>{const item=getActivityItem(activity),actor=activity?.actor??item?.actor;if(!actor||!isTechnique(item)||!getClassMod(actor))return;payTechnique(actor,item).catch(error=>{console.error(`${MODULE_ID} | Superior Technique payment failed`,error);ui.notifications.error(`Superior Technique tracking failed: ${error.message}`);});});
 Hooks.on('dnd5e.restCompleted',(actor,result)=>{if(getClassMod(actor))applyRest(actor,result?.type).catch(console.error);});
 Hooks.on('deleteCombat',combat=>{if(!game.user.isGM)return;const actors=new Set(arr(combat.combatants).map(c=>c.actor).filter(a=>a&&getClassMod(a)));for(const actor of actors)applyCombatBurden(actor).catch(console.error);});
