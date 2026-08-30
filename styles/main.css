@@ -1980,3 +1980,62 @@
     overflow: visible;
   }
 }
+
+/* Heavenly Gates tracker */
+.n5eb-heavenly-tracker-strip {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.5fr) repeat(3, minmax(80px, 1fr));
+  gap: 6px;
+  align-items: stretch;
+  margin: 0 0 8px;
+  padding: 7px;
+  border: 1px solid rgba(160, 32, 48, 0.55);
+  border-radius: 7px;
+  background: linear-gradient(135deg, rgba(46, 8, 12, 0.94), rgba(15, 10, 12, 0.9));
+}
+.n5eb-heavenly-tracker-strip .tracker-title,
+.n5eb-heavenly-tracker-strip .tracker-mini {
+  min-height: 44px;
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+}
+.n5eb-heavenly-tracker-strip .tracker-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.n5eb-heavenly-tracker-strip .tracker-title img { width: 27px; height: 27px; object-fit: cover; border: 0; }
+.n5eb-heavenly-tracker-strip .tracker-mini { display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.n5eb-heavenly-tracker-strip .tracker-mini span { font-size: 10px; text-transform: uppercase; opacity: 0.7; }
+.n5eb-heavenly-tracker-strip .tracker-mini strong { font-size: 14px; }
+
+.n5eb-heavenly-tracker-window .window-content { padding: 0; }
+.n5eb-heavenly-tracker {
+  padding: 14px;
+  background: radial-gradient(circle at top right, rgba(139,24,38,0.28), transparent 40%), #0e0b0d;
+  color: var(--color-text-light-primary, #eee);
+}
+.n5eb-heavenly-tracker > header { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+.n5eb-heavenly-tracker h2, .n5eb-heavenly-tracker h3 { margin:0; }
+.n5eb-heavenly-tracker header p { margin:3px 0 0; opacity:0.75; }
+.n5eb-heavenly-tracker .stage-orb {
+  display:flex; align-items:baseline; justify-content:center; min-width:72px; min-height:72px; border-radius:50%;
+  border:2px solid rgba(217,64,83,0.7); background:rgba(119,18,31,0.35); font-size:30px; font-weight:800;
+}
+.n5eb-heavenly-tracker .stage-orb small { font-size:13px; opacity:0.7; }
+.n5eb-heavenly-tracker .heavenly-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.n5eb-heavenly-tracker .heavenly-grid > div { padding:9px; border:1px solid rgba(255,255,255,0.1); border-radius:6px; background:rgba(255,255,255,0.035); }
+.n5eb-heavenly-tracker .heavenly-grid span { display:block; font-size:10px; text-transform:uppercase; opacity:0.65; }
+.n5eb-heavenly-tracker .heavenly-grid strong { display:block; margin-top:3px; }
+.n5eb-heavenly-tracker .heavenly-summary { margin-top:10px; padding:10px; border-left:3px solid rgba(205,51,70,0.8); background:rgba(255,255,255,0.03); }
+.n5eb-heavenly-tracker .heavenly-summary p { margin:5px 0; }
+.n5eb-heavenly-tracker .heavenly-summary .backlash { color:#ffb5bf; }
+.n5eb-heavenly-tracker footer { display:flex; flex-wrap:wrap; gap:7px; margin-top:12px; }
+.n5eb-heavenly-tracker footer button { flex:1 1 150px; }
+@media (max-width: 720px) {
+  .n5eb-heavenly-tracker-strip { grid-template-columns:1fr 1fr; }
+  .n5eb-heavenly-tracker .heavenly-grid { grid-template-columns:1fr; }
+}

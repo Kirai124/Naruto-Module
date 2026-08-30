@@ -1,4 +1,14 @@
-# N5eB Class Mod Library 0.13.5
+# N5eB Class Mod Library 0.14.0
+## Version 0.14.0 — Heavenly Gates
+
+- Adds the complete **Heavenly Gates** Class Mod with both the **Eight Gates** and **Seven Heavenly Breaths** paths.
+- Includes the five-level progression, Advanced Conditioning choices, all Superhuman Affinities, Limitless features, 15 Abilities, and 25 Techniques.
+- Automatically grants/removes the legal Gate/Breath stage controllers for the selected path and current Class Mod level.
+- Adds an Actor tracker for the active stage, Hit/Chakra Dice costs, temporary HP/Chakra overflow, cumulative ability/speed boosts, activation damage, Art self-damage, and numeric deactivation backlash.
+- Enforces path/stage prerequisites for bundled Heavenly/Beastly Arts and synchronizes their Class Mod attack/save values.
+- Ranked N5eB backlash conditions and post-release vulnerabilities are surfaced as explicit tracker/chat reminders rather than guessed condition-rank mutations.
+- Uses `systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp` for every bundled Heavenly Gates Item and Active Effect.
+
 ## Version 0.13.5 creator fix
 
 - Fixes the DialogV2 nested-form bug that caused the Creator wrapper to be discarded by the browser. This was the reason the layout appeared as unstyled text and all step buttons were inactive.
@@ -17,6 +27,8 @@ Included Class Mods:
 - Tenseigan
 - Sealed Beast Redux
 - Superior Shinobi
+- Edo Tensei
+- Heavenly Gates
 
 All bundled descriptions are written in English. Each Class Mod has its own colored folder tree inside the same world compendium.
 
@@ -72,7 +84,7 @@ The Tenseigan folder tree uses celestial blue-violet (`#7687e8`).
 
 ## Existing trackers
 
-Kāma Divine Rewrite and Resonance Disruption, Tenseigan resources, and Sealed Beast resources are stored directly on the Actor. Flying Thunder God, Kāma, Tenseigan, and Sealed Beast Art formulas are written as current numeric values to the owned Class Mod so the sheet display and rolls use the same result.
+Kāma Divine Rewrite and Resonance Disruption, Tenseigan resources, Sealed Beast resources, and the Heavenly Gates release tracker are stored directly on the Actor. Flying Thunder God, Kāma, Tenseigan, Sealed Beast, Edo Tensei, and Heavenly Gates Art formulas are written as current numeric values to the owned Class Mod so the sheet display and rolls use the same result.
 
 ## Manual synchronization
 
@@ -92,6 +104,7 @@ Open trackers for a selected token or assigned character:
 N5eBClassMods.openKamaTracker();
 N5eBClassMods.openTenseiganTracker();
 N5eBClassMods.openSealedBeastTracker();
+N5eBHeavenlyGates.openTracker();
 ```
 
 ## GitHub distribution

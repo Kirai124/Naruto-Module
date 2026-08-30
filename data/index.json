@@ -1,11 +1,12 @@
 {
-  "version": "0.13.17",
+  "version": "0.14.0",
   "files": [
     "flying-thunder-god.json",
     "kama.json",
     "tenseigan.json",
     "sealed-beast-redux.json",
     "superior-shinobi.json",
-    "edo-tensei.json"
+    "edo-tensei.json",
+    "heavenly-gates.json"
   ]
 }
