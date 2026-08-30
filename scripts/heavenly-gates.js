@@ -7,6 +7,7 @@ const GRANTED_STAGE_FLAG = "heavenlyGatesGrantedStage";
 const INTERNAL = MODULE_ID;
 const ICON = "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp";
 const dialogs = new Map();
+const actorTaskQueues = new Map();
 
 const MAX_STAGE = Object.freeze({
   gates: Object.freeze({1:2, 2:4, 3:6, 4:7, 5:8}),
@@ -36,6 +37,16 @@ const STAGES = Object.freeze({
 });
 
 function arr(value){ return value ? (Array.isArray(value) ? value : Array.from(value)) : []; }
+function actorQueueKey(actor){ return actor?.uuid ?? actor?.id ?? null; }
+function queueActorTask(actor, task){
+  const key=actorQueueKey(actor);
+  if(!key) return Promise.resolve().then(task);
+  const previous=actorTaskQueues.get(key) ?? Promise.resolve();
+  const current=previous.catch(()=>{}).then(task);
+  actorTaskQueues.set(key,current);
+  return current.finally(()=>{ if(actorTaskQueues.get(key)===current) actorTaskQueues.delete(key); });
+}
+
 function actorFromContext(actor){ return actor ?? canvas?.tokens?.controlled?.[0]?.actor ?? game.user?.character ?? null; }
 function getClassMod(actor){ return arr(actor?.items).find(i=>i.type==="classmod" && i.system?.identifier===CLASSMOD_ID) ?? null; }
 function getLevel(actor){ return Math.max(0,Math.min(5,Number(getClassMod(actor)?.system?.levels ?? 0))); }
@@ -322,23 +333,84 @@ async function processArtUse(actor,item){
 }
 
 async function getPackDocuments(){ const pack=game.packs.get(PACK_COLLECTION); return pack ? await pack.getDocuments() : []; }
-async function syncStageItems(actor){
+
+function stageKey(document){
+  const stage=moduleFlag(document,"heavenlyGatesStage");
+  if(!stage?.path || !Number(stage.stage)) return null;
+  return `${stage.path}:${Number(stage.stage)}`;
+}
+
+async function syncStageItemsCore(actor){
   const cm=getClassMod(actor); if(!cm) return;
   const path=getPath(actor), maximum=maxStage(actor,path), docs=await getPackDocuments();
-  const desired=docs.filter(d=>{ const st=moduleFlag(d,"heavenlyGatesStage"); return st?.path===path && Number(st.stage)<=maximum; });
-  const desiredIds=new Set(desired.map(d=>d.system?.identifier));
-  const owned=arr(actor.items).filter(i=>moduleFlag(i,GRANTED_STAGE_FLAG));
-  const remove=owned.filter(i=>!desiredIds.has(i.system?.identifier));
-  if(remove.length) await actor.deleteEmbeddedDocuments("Item",remove.map(i=>i.id),{[INTERNAL]:{heavenlyGates:true}});
-  const have=new Set(arr(actor.items).map(i=>i.system?.identifier));
-  const create=desired.filter(d=>!have.has(d.system?.identifier)).map(d=>{
-    const source=d.toObject(); delete source._id;
+  const allStageDocs=docs.filter(d=>moduleFlag(d,"heavenlyGatesStage"));
+  const desired=allStageDocs.filter(d=>{ const st=moduleFlag(d,"heavenlyGatesStage"); return st?.path===path && Number(st.stage)<=maximum; });
+  const desiredByKey=new Map(desired.map(d=>[stageKey(d),d]));
+  const knownIdentifiers=new Set(allStageDocs.map(d=>d.system?.identifier).filter(Boolean));
+
+  // A Class Mod level-up can emit several Foundry update hooks before the previous
+  // async hook has finished. Older builds could therefore run two stage syncs in
+  // parallel and both create the same Gate/Breath. Treat stage identity as unique
+  // and repair any duplicates already present on the Actor.
+  const actorStages=arr(actor.items).filter(i=>
+    Boolean(moduleFlag(i,GRANTED_STAGE_FLAG)) ||
+    Boolean(stageKey(i)) ||
+    knownIdentifiers.has(i.system?.identifier)
+  );
+  const grouped=new Map();
+  for(const item of actorStages){
+    const key=stageKey(item) ?? [...desiredByKey.entries()].find(([,doc])=>doc.system?.identifier===item.system?.identifier)?.[0] ?? null;
+    if(!key) continue;
+    if(!grouped.has(key)) grouped.set(key,[]);
+    grouped.get(key).push(item);
+  }
+
+  const removeIds=[];
+  for(const [key,items] of grouped){
+    if(!desiredByKey.has(key)){
+      removeIds.push(...items.map(i=>i.id));
+      continue;
+    }
+    if(items.length>1){
+      const keep=items.find(i=>moduleFlag(i,GRANTED_STAGE_FLAG)) ?? items[0];
+      removeIds.push(...items.filter(i=>i!==keep).map(i=>i.id));
+    }
+  }
+  if(removeIds.length){
+    await actor.deleteEmbeddedDocuments("Item",[...new Set(removeIds)],{[INTERNAL]:{heavenlyGates:true,dedupe:true}});
+    console.info(`${MODULE_ID} | Removed ${new Set(removeIds).size} duplicate/stale Heavenly Gates stage item(s) from ${actor.name}.`);
+  }
+
+  const refreshed=arr(actor.items);
+  const ownedByKey=new Map();
+  for(const item of refreshed){
+    const key=stageKey(item);
+    if(key && desiredByKey.has(key) && !ownedByKey.has(key)) ownedByKey.set(key,item);
+  }
+
+  // Adopt a matching legacy copy instead of creating another one. This also makes
+  // cleanup deterministic for Actors that already had stage items before 0.14.2.
+  const adopt=[];
+  for(const [key,item] of ownedByKey){
+    if(moduleFlag(item,GRANTED_STAGE_FLAG)) continue;
+    adopt.push({_id:item.id,[`flags.${MODULE_ID}.${GRANTED_STAGE_FLAG}`]:true});
+  }
+  if(adopt.length) await actor.updateEmbeddedDocuments("Item",adopt,{[INTERNAL]:{heavenlyGates:true,adopt:true}});
+
+  const presentKeys=new Set([...ownedByKey.keys()]);
+  const create=[];
+  for(const [key,doc] of desiredByKey){
+    if(presentKeys.has(key)) continue;
+    const source=doc.toObject(); delete source._id;
     source.flags=foundry.utils.mergeObject(source.flags??{},{[MODULE_ID]:{[GRANTED_STAGE_FLAG]:true}},{inplace:false,overwrite:true});
-    return source;
-  });
+    create.push(source);
+  }
   if(create.length) await actor.createEmbeddedDocuments("Item",create,{[INTERNAL]:{heavenlyGates:true}});
 }
-async function ensureActor(actor){
+
+async function syncStageItems(actor){ return queueActorTask(actor,()=>syncStageItemsCore(actor)); }
+
+async function ensureActorCore(actor){
   if(!getClassMod(actor)) return;
   const selected=getPath(actor), state=readTracker(actor);
   if(state.activeStage>0 && (!selected || selected!==state.path)) {
@@ -346,23 +418,26 @@ async function ensureActor(actor){
   } else if(state.activeStage>maxStage(actor,state.path)) {
     await deactivate(actor,{reason:"ended because the Class Mod level no longer supports the active stage"});
   }
-  await syncStageItems(actor);
+  await syncStageItemsCore(actor);
   const normalized=readTracker(actor), raw=actor?.getFlag?.(MODULE_ID,TRACKER_FLAG);
   if(!raw || JSON.stringify(raw)!==JSON.stringify(normalized)) {
     await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:normalized},{[INTERNAL]:{heavenlyGatesTracker:true}});
   }
   await refreshReleaseEffect(actor,normalized);
 }
-async function cleanupActor(actor){
+async function ensureActor(actor){ return queueActorTask(actor,()=>ensureActorCore(actor)); }
+
+async function cleanupActorCore(actor){
   const state=readTracker(actor);
   await clearReleaseTemporary(actor,state);
-  const stages=arr(actor?.items).filter(i=>moduleFlag(i,GRANTED_STAGE_FLAG));
+  const stages=arr(actor?.items).filter(i=>moduleFlag(i,GRANTED_STAGE_FLAG) || Boolean(stageKey(i)));
   if(stages.length) await actor.deleteEmbeddedDocuments("Item",stages.map(i=>i.id),{[INTERNAL]:{heavenlyGates:true}});
   const effects=arr(actor?.effects).filter(e=>moduleFlag(e,EFFECT_FLAG));
   if(effects.length) await actor.deleteEmbeddedDocuments("ActiveEffect",effects.map(e=>e.id),{[INTERNAL]:{heavenlyGates:true}});
   if(actor?.getFlag?.(MODULE_ID,TRACKER_FLAG)!==undefined) await actor.update({[`flags.${MODULE_ID}.-=${TRACKER_FLAG}`]:null},{[INTERNAL]:{heavenlyGates:true}});
   refreshDialog(actor);
 }
+async function cleanupActor(actor){ return queueActorTask(actor,()=>cleanupActorCore(actor)); }
 function isRelevantClassModItem(item){
   return item?.type==="classmod" && item.system?.identifier===CLASSMOD_ID;
 }

@@ -1,4 +1,12 @@
-# N5eB Class Mod Library 0.14.1
+# N5eB Class Mod Library 0.14.2
+## Version 0.14.2 — Heavenly Gates Duplicate Grant Fix
+
+- Serializes Heavenly Gates Actor synchronization so overlapping Foundry Class Mod advancement/update hooks cannot grant the same Gate or Heavenly Breath twice.
+- Makes Gate/Breath grants idempotent by using path + stage as the unique stage identity instead of relying only on a snapshot of Actor item identifiers.
+- Automatically removes duplicate or stale Heavenly Gates stage items already present on an Actor the next time that Actor is synchronized.
+- Adopts matching legacy stage items into managed Heavenly Gates state instead of creating an additional copy.
+- Keeps stage cleanup deterministic when changing path, lowering the Class Mod level, or removing Heavenly Gates.
+
 ## Version 0.14.1 — Runtime / Sheet Stability Fixes
 
 - Removes all Actor/Item mutation work from sheet render hooks, preventing render → update → render feedback loops and the resulting flood of browser form/accessibility warnings.
