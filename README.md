@@ -1,5 +1,5 @@
-# N5eB Class Mod Library 0.16.0
-## Version 0.16.0 — Hashirama Cells + Crimson Priest Art Update
+# N5eB Class Mod Library 0.17.0
+## Version 0.17.0 — Hashirama Cells + Crimson Priest Art Update
 
 - Adds the complete **Hashirama Cells (Remastered)** Class Mod with five-level progression, 10 Perfected Wood Arts, and 10 Passive Legacy Arts.
 - Adds an Actor-based **Legacy Chakra** tracker (20/40/60/80/100), long/full-rest restoration, Perfect Match 3:1 regular-Chakra conversion, and Perfected Art spending.
@@ -205,3 +205,7 @@ After adding **Edo Tensei** to a character, the character sheet gains an **Edo T
 - Standard, Elite, and Solo multipliers and restrictions
 
 Generated Edo Tensei Actors have **Summon / Return** and **Recalculate Edo** sheet buttons. The module also removes obsolete module-managed folder trees during synchronization, including the old duplicate Superior Shinobi tree, while retaining the current Superior Shinobi implementation.
+
+
+## Madara Cells (0.17.0)
+Madara Cells is included with the supplied Madara artwork for all of its entries. Automation covers Legacy Chakra, Mastered Defence, Hatred Surge / Overcome with Hatred turn handling, Extraordinary Talent choices, Partial/Perfect Match movement/resource rules, Mastered Technique activation, Sharingan-use replenishment where the owned N5eB item exposes a uses pool, Mangekyō charge conversion where a compatible uses pool is present, and passive score/save/movement bonuses.

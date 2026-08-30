@@ -1,0 +1,6356 @@
+{
+  "id": "madara-cells",
+  "version": "1.0",
+  "label": "Madara Cells",
+  "folders": [
+    {
+      "_id": "adeac020b78cc4b0",
+      "name": "Madara Cells",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "sort": 0,
+      "color": "#59151c",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "madara-cells",
+          "folderKey": "root"
+        }
+      }
+    },
+    {
+      "_id": "0d926603829bec27",
+      "name": "Madara Cells Class Mod",
+      "type": "Item",
+      "folder": "adeac020b78cc4b0",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#59151c",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "madara-cells",
+          "folderKey": "classmod"
+        }
+      }
+    },
+    {
+      "_id": "d1e9ea0fc89734bb",
+      "name": "Guides & Progression",
+      "type": "Item",
+      "folder": "adeac020b78cc4b0",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#59151c",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "madara-cells",
+          "folderKey": "guide"
+        }
+      }
+    },
+    {
+      "_id": "c1dfde4bcfae6d56",
+      "name": "Class Mod Features",
+      "type": "Item",
+      "folder": "adeac020b78cc4b0",
+      "sorting": "a",
+      "sort": 200000,
+      "color": "#59151c",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "madara-cells",
+          "folderKey": "features"
+        }
+      }
+    },
+    {
+      "_id": "23994d27935d2a5e",
+      "name": "Mastered Techniques",
+      "type": "Item",
+      "folder": "adeac020b78cc4b0",
+      "sorting": "a",
+      "sort": 300000,
+      "color": "#59151c",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "madara-cells",
+          "folderKey": "mastered"
+        }
+      }
+    },
+    {
+      "_id": "54eb6e189d943975",
+      "name": "Legacy Passives",
+      "type": "Item",
+      "folder": "adeac020b78cc4b0",
+      "sorting": "a",
+      "sort": 400000,
+      "color": "#59151c",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "madara-cells",
+          "folderKey": "passive"
+        }
+      }
+    },
+    {
+      "_id": "dac5f268c6da8b40",
+      "name": "Adversary Rules & Traits",
+      "type": "Item",
+      "folder": "adeac020b78cc4b0",
+      "sorting": "a",
+      "sort": 500000,
+      "color": "#59151c",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "madara-cells",
+          "folderKey": "adversary"
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "_id": "5713cbe7528b59e9",
+      "name": "Madara Cells — Gaining & Levelling",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<hr />\n<p>Madara Cells are artificial cells grown from the DNA of the legendary Uchiha Madara, granting recipients fragments of his incredible power. Acceptance of these cells can endow advanced ocular capabilities (including the Sharingan and its heightened evolutions), significantly increased stamina and chakra reserves, and an overall enhancement of natural abilities. They represent a rare medical breakthrough, requiring a physically compatible host and a highly skilled medical-nin to graft them successfully. The Madara Cells class mod provides a multifaceted boost that emulates the devastating might and prowess seen in those who have tapped into Madara’s genetic legacy.</p>\n<h3>Gaining Madara Cells</h3>\n<p>Madaras Cells are living cells derived from the Ghost of the Uchiha, containing a fraction of his immense power and significantly enhancing the abilities of the recipient. Due to Madara's extraordinary aura farming abilities, these cells decay far more slowly than normal, making them accessible even long after his death. However, to harness their power, the cells must be implanted into a suitable host. Implantation requires the following steps:</p>\n<p><strong>Step 1:</strong> The User must find a source of living.</p>\n<p><strong>Step 2:</strong>  Second, implant the cells. This requires immense medical skill and time. The user or a skilled practitioner must spend 4DT and then succeed on a <strong>DC 25 Wisdom (Medicine)</strong> ability check. If the check fails, the cells begin to decay faster. The procedure can be attempted once more with the same batch; on a second failure, the cells become unusable, and new ones must be found.</p>\n<p><strong>Step 3:</strong> Third, synchronize with the cells. The user must succeed on a <strong>DC 20 Constitution (Chakra Control)</strong> ability check. On success, they gain the first level of the Madara Cells class mod. On a failure, the cells start rejecting the user's body. The user has three attempts to succeed before the cells completely reject them; on the third failure, new cells must be found. Each attempt requires 4 DT.</p>\n<h3>Leveling up this class mod</h3>\n<p>Advancing with Madara Cells is difficult and time-consuming. Unlike normal shinobi classes that require experience points, becoming more in sync with the cells necessitates consistent use of their abilities in combat and during downtime training, accepting the risks of potential failure.</p>\n<p>At Levels 10, 12, 14, and 16, you may attempt to harness the cells further to draw closer to the Ghost of the Uchiha's abilities. While in a suitable area for rest and recovery, you can attempt to master controling Madara's Cells.</p>\n<p><strong>Step 1:</strong> First, you may attempt a Constitution (Chakra Control) check with the DC specified in the table below. On a success, you gain the next level of this class mod. On a failure, proceed to the next step. Each attempt requires 4 DT, and you can attempt this check once per class mod level when you meet the level and downtime requirements. If you fail the check at an earlier level, you can reattempt it at a later class mod level.</p>\n<p><strong>Step 2:</strong> If you fail the initial Chakra Control check, you or another can force the cells to cooperate by making a Wisdom (Medicine) check with the DC specified in the table. On success, you gain the next level of the class mod, but your body begins to reject the cells, and you permanently lose a number of hit dice equal to the class mod level attained. These losses are culmulative, and should your number of Hit Die reach 0, you become overwhelmed by Madaras's Cells, causing your body to rapidly age and start to fall apart and decay. You die and are unable to be ressurected short of Divine Intervention. If you fail this check three times, the cells become incompatible with your body, and you cannot gain additional levels in this class mod. Each attempt requires 4 DT.</p>\n<h5>Madara Cells Synchronization DCs</h5>\n<p>| Mod Level | Chakra Control DC | Medicine DC\n|:-:|:-------------:|:-----:|\n| 2  | 20 | 15 |\n| 3  | 25 | 20 |\n| 4 | 30 | 25 |\n| 5 | 35 | 30 |</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-cells-gaining-leveling"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "guide",
+          "classMod": "madara-cells"
+        }
+      },
+      "folder": "d1e9ea0fc89734bb"
+    },
+    {
+      "_id": "4481b4641342ed4d",
+      "name": "Madara Cells — Notes & Changelog",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Hi, Po here. Why wouldn't I make an Uchiha mirror to <a href=\"https://homebrewery.naturalcrit.com/share/uQhcevk2LdtW\">Hashirama Cells</a>. Also I had a few hours to kill.</p>\n<hr />\n<h3>Other Helpful Links</h3>\n<p><a href=\"https://homebrewery.naturalcrit.com/share/rG4Ekt7bwMYz\">Sharingan Genjutsu Compendium</a></p>\n<h1>Change Log</h1>\n<h2>27/03/2025 Update</h2>\n<ul>\n<li>New Release who dis</li>\n</ul>\n<h2>04/1/2025</h2>\n<ul>\n<li>Adjusted Legacy Chakra cost for Arts.</li>\n<li>Adjusted Wording on Fury of Indra.</li>\n<li>Base Adversary Traits Made</li>\n<li>Madara Cell Adversary Traits Coming Soon.</li>\n</ul>\n<h2>08/09/2025</h2>\n<ul>\n<li>Added Adversary Traits</li>\n<li>Small tweaks to some wording and gramatical adjustments</li>\n<li>Started to add the Uchiha Variant stuff but stopped, will finish later.</li>\n</ul>\n<h2>Next Update</h2>\n<ul>\n<li>Class Mod Feats</li>\n<li>Madara Cells Level 6</li>\n<li>More Arts maybe</li>\n<li>Looking into Legacy Chakra and potentially reworking it slightly.</li>\n<li>Will want to improve language and formatting more</li>\n<li>Creating alternative rules for Gaining Madara Cells that are less lore-accurate but more inline with current base-game class mod design.</li>\n<li>Madara-Cells Adversary traits</li>\n<li>Include support for Hijutsu expansion compendium.</li>\n<li>4.0 Compatibility</li>\n</ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-cells-notes"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "guide",
+          "classMod": "madara-cells"
+        }
+      },
+      "folder": "d1e9ea0fc89734bb"
+    },
+    {
+      "_id": "9be779669cafb2a7",
+      "name": "Apex Sharingan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 1st level in this class mod, you gain affinity to Fire Nature Release and access to the Uchiha Hijutsu list and the Uchiha Sharingan Feature as though you were a level 11 Uchiha. Since your body hasn't fully adapted to the cells, when you cast a jutsu with the Fire Release keyword (unless you already had affinity to that nature), increase its cost by 3. Additionally, jutsu you cast with the Fire Release keyword or Uchiha hijutsu increase their damage dice by +1.</p>\n<p>Also at 1st level, you begin to grasp at Madara's Mastery of Uchiha Techniques. Choose two Uchiha Hijutsu of any rank you can cast; you learn them, and they don't count against your number of jutsu known. If you already know a chosen jutsu, reduce its cost by your level in this class mod (minimum 1). You gain an additional jutsu this way each time you gain a level in this class mod. When casting an Uchiha Hijutsu chosen through this class mod, you can expend 2 <em><strong>Legacy Chakra</strong></em> to gain the <em><strong>Mastered Technique</strong></em> benefits for that jutsu, which is then considered an Art.</p>\n<p>Finally, the Madara Cells in your body enhance your Uchiha Hijutsu, allowing you to use your Legacy Save DC and Attack Bonus if you choose:</p>\n<p><strong>Legacy Save DC:</strong> 12 + Madara Cells level + your Proficiency bonus\n<strong>Legacy Attack Bonus:</strong> Twice your Proficiency Bonus + Madara Cells level</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "apex-sharingan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "9d4182b252be470b",
+      "name": "Legacy Chakra",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At 1st level of this class mod, the cells give you an additional pool of chakra to access within your body. This chakra may be used to cast Fire Release Jutsu and Uchiha Hijutsu, and can be used for various Legacy Passives. For every 1 Legacy Chakra you spend casting any Uchiha Hijutsu, you treat the chakra spent as 2. You may replenish your Sharingan Uses for the cost of 1 <strong>Legacy Chakra</strong> This chakra is restored after a long rest.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-legacy-chakra"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "b15f069d11f31307",
+      "name": "Mastered Defence",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Starting at 1st level, you gain a mastery of reactions second only to Madara. You gain a pool of Mastered Defence Reactions equal to half your proficiency modifier + your level in this class mod. These additional reactions can only be used once per turn, and you can replenish this pool at a cost of 10 legacy chakra. You can use an additional reaction this way once per round, increasing to two reactions at 3rd level, and 3 reactions at 5th level.</p>\n<p>Additionally, at 1st level of this class mod, the foreign cells within your body start to enhance your prowess to slowly match that of Madara's. Your Dexterity score increases by +2. Your Dexterity Ability Score maximum increase by +2</p>\n<p>At the 3rd level of this class mod, the cells have started to multiply, enhancing your mental capabilities. Your Intelligence score increases by +2. Your Intelligence Ability Score maximum increases by +2.</p>\n<p>Finally, at the 5th level of this class mod, you have prowess rivalling Madara himself. Your Dexterity and Intelligence Scores increase by +2, and their maximums increase by +2.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-defence"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "9a19cc19e551d80d",
+      "name": "Legacy Passives",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 1st level, the new cells in your body allow you to access a fraction of the Ghost of the Uchiha's power. Choose 1 Legacy Passive, located in the <em><strong>Legacy Passives</strong></em> section.\nEvery time you gain a level in this class mod you select one additional Legacy Passive.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-legacy-passives"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "09615c8eb7d0c442",
+      "name": "Hatred Surge",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Starting at the 1st level of this class mod when you fall below 1/4 of your total hit points, you beging to be overwhelmed by the Curse of Hatred now running through your veins. You must succeed a DC 16 Constitution check at the start of each turn you are below the threshold. On a successful save, you maintain control, but increase the DC of the check by 1. (The DC of the check resets when you raise above the threshold of hp that would force you to make the check.)</p>\n<p>On a failure, you enter an uncontrollable frenzy, having entirely lost yourself to the curse of hatred, entering the  <strong>Overcome with Hatred</strong> state.</p>\n<p>While in the <strong>Overcome with Hatred</strong> state, you cannot control your actions, seeing friend and foe in equal measure. At the start of your turn, you lash out wildly at an random person nearby. Your DM will secretly a number to determine which person is targeted, and then you will attack attempting to do as much damage as possible, as quickly as possible against that target. At the end of the turn, you may attempt to remake the Constiution check, regaining control on a successful save. If you hit 0 hp while in the Overcome with Hatred state the cells fully take over your body, if you're not stabilized within 3 turns of you hitting 0 health your mind is irrevocably changed. You immediately stabilize with 1 HP, and flee the area, now being an NPC under the control of the DM, swearing vengence against the people who were once your allies.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "hatred-surge"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "734070bad86ab1c6",
+      "name": "Extraordinary Talent",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Your Madara Cells begin to improve your natural ones, enhancing your current abilities. Starting at 2nd level, the process of adapting another being's physiology not only to your body but also to your chakra network cause a flux of mutations to your flesh. Wherever your grafted Madara Cells are on your body, a faint but visable outline of a face imprints into the flesh. Your creature type is considered Mutant in addition to Humanoid. At this level, and again each time you level up in this class mod, you gain one skill or tool</p>\n<p>proficiency, or one Rank of Mastery in a Skill or Tool that you already have (appropriateness determined by the DM) that represents muscle memory retained by the Cells.</p>\n<p>Starting at 4th level, all Dexerity, Intelligence, and Wisdom skill checks you make gain a bonus equal to your level in this Class Mod.</p>\n<p>Additionally, while you are benefiting from your Sharingan feature, you can freely distinguish Clones of any kind from the Caster so long as you are not in your <strong>Overcome with Hatred</strong> state. If Clones are already considered distinguishable without a feature, you instead gain a bonus to skill checks for Constitution and Wisdom as well.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "extraordinary-talent"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 2
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "0983fc48b0b96ab0",
+      "name": "Uchiha Technique Proficiency",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At 2nd level, you have become acustomed to using Madara's mastered techniques, and gain the following benefits:</p>\n<ul>\n<li>You no longer pay additional chakra to cast Fire Release Jutsu as a result of this class mod.</li>\n<li>Uchiha Hijutsu that you cast bypass resistance.</li>\n<li>When you would cast a Uchiha Hijutsu, it cannot have disadvantage on the clash check.</li>\n<li>When a creature would gain a condition from the result of an Uchiha Hijutsu you cast, they have disadvantage on attempts to remove it.</li>\n</ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "uchiha-technique-proficiency"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 2
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "191d3e6883d7b9b7",
+      "name": "Partial Match",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Your cells are now 40% merged with the Madara Cells. Starting at 2nd level, you gain advantage to your Con check for the Overcome with Hatred feature. You gain an additional 1-Tomoe Sharingan and 2-Tomoe Sharingan Feature, and your movement speed increases by +15 feet.</p>\n<p>At 4th level of this class mod, you gain an additional 1-Tomoe Sharingan, 2-Tomoe Sharingan, and 3-Tomoe Sharingan feature, and your bonus to movement increases to +30.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-partial-match"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 2
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "6237b1c3ace7486b",
+      "name": "Indirect Reincarnation",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Madara Cells within your body allow elevate you into a whole other tier of Shinobi. At 4th level, you may be always considered as benefiting from your Sharingan Feature, and Jutsu you cast with Legacy Chakra are unable to be Interrupted, Negated, or Dispelled by jutsu or effects of equal or lesser rank.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "indirect-reincarnation"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 4
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "9e98afea8f2007be",
+      "name": "Perfect Match",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At 5th level, your Legacy Chakra and regular chakra are perfectly in sync, allowing you to access both simultaneously. You may use your Legacy Chakra in place of regular Chakra, and may use your regular Chakra for all features granted by this class mod at an exchange rate of 3 chakra for 1 Legacy Chakra. Additionally, by spending extra Chakra equal to 3 x Jutsu Level (D = 1, C = 2, etc.), any Fire Release may be considered Uchiha Hijutsu for the purposes of this class mod, feats, clan and class features, etc. Additionally when you get this feature, you lose the <strong>Hatred Surge</strong> 1st level feature. Additionally, if you have access to the Mangekyo Class mod, you may convert Legacy Chakra into Mangekyo Art Chages at a rate of 10 Legacy Chakra per 1 Mangekyo Art Charge.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-perfect-match"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "madara-cells",
+          "featureLevel": 5
+        }
+      },
+      "folder": "c1dfde4bcfae6d56"
+    },
+    {
+      "_id": "db0b249bc56cf23a",
+      "name": "Mastered Genjutsu: Sharingan!",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Genjutsu cast by Genjutsu: Sharingan! no longer requires the Visual keyword, and can be cast regardless of genjutsu components.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-genjutsu-sharingan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "genjutsu-sharingan",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "bfe66674a0402bae",
+      "name": "Mastered Uchiha Awaiting Stance",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Attacks or Jutsu cast as a result of Uchiha Awaiting Stance no longer have a limit of once per casting.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-uchiha-awaiting-stance"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "uchiha-awaiting-stance",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "41ea483db1df4952",
+      "name": "Mastered Uchiha Great Assault",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Mastered Uchiha Great Assault is automatically upcasted by 1 additional rank (Ignoring rank restrictions) and on hit they gain a rank of bruised.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-uchiha-great-assault"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "uchiha-great-assault",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "c8985c168ec0c25f",
+      "name": "Mastered Uchiha Shuriken Rain",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When you cast this jutsu, target two 10ft radius sphere's instead within range. If a target is in both spheres, they make only need to make a single saving throw against both effects. Increase the damage die by 1 size, and the target now must succeed on a strength saving throw vs your <strong>Legacy Save DC</strong> to remove the restrained condition. This jutsu no longer consumes a stack of Shuriken or Kunai, as they are summoned in with Space-Time Ninjutsu.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-uchiha-shuriken-rain"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "uchiha-shuriken-rain",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "af06c0bc81a18e19",
+      "name": "Mastered Uchiha Ember Bullet",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>If a creature targeted by your Uchiha Ember Bullet jutsu does not have cover, you have advantage on the attack. It grants 1 additional rank of burned on a successful hit.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-uchiha-ember-bullet"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "uchiha-ember-bullet",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "4fcd9fa1c82429a2",
+      "name": "Mastered Genjutsu: Deflect!",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When this jutsu would make another creature have to make a wisdom saving throw, it does so at disadvantage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-genjutsu-deflect"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "genjutsu-deflect",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "6930640175189dcc",
+      "name": "Mastered Genjutsu: Red Star",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When a creature would start their turn under the effects of Genjutsu: Red Star, they gain 1 additional rank of Demoralized. If a creature has 5 ranks of Demoralized and would gain additional ranks of demoralized from Genjutsu: Red Star, it triggers the additional damage as outlined in the Critical Failure feature of Genjutsu: Red Star as the Sun successfully crashes into the effected target.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-genjutsu-red-star"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "genjutsu-red-star",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "66554858d124eb74",
+      "name": "Mastered Uchiha Flame Ball",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Uchiha Flame Balls Range increases by 30 feet, it's radius increases by +10, and its beam width by 5ft. It's damage becomes 6d10+6 when cast at C rank, and does an additional 2d6+2 damage for every rank it's cast above C-Rank.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-uchiha-flame-ball"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "uchiha-flame-ball",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "d2326dd1a844e161",
+      "name": "Mastered Uchiha Flame Flower",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You can command a single sphere created from this jutsu to attack a target as a <strong>Free Action</strong> once per round. Additionally, upon a successful hit, these spheres inflict 1 rank of <strong>Burned</strong> on the target. Additionally, Flame Flower no longer requires chakra to be spend to maintain concentration.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-uchiha-flame-flower"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "uchiha-flame-flower",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "dfca6ad358943382",
+      "name": "Mastered Genjutsu: Ephemera!",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The command limit is now 12 words, and any task reasonably completed within a minute. Additionally If they complete the task while still being under the effects of this Genjutsu, you can instead choose to grant them a new task.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-genjutsu-ephemera"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "genjutsu-ephemera",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "1aa95bd1d0fcc31d",
+      "name": "Mastered Uchiha Flame Spiral",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You create an additional spiral, your flame spirals lose their vulnerability to Cold, and they use your Legacy Save DC for their AC.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-uchiha-flame-spiral"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "mastered-technique",
+          "classMod": "madara-cells",
+          "madaraMasteredTechnique": true,
+          "baseJutsuIdentifier": "uchiha-flame-spiral",
+          "legacyChakraCost": 2
+        }
+      },
+      "folder": "23994d27935d2a5e"
+    },
+    {
+      "_id": "629760e8574d8c7a",
+      "name": "Eugenics",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Your Legacy Chakra enhances your Kekkai Genkai. You may cast jutsu with the Hijutsu keyword using Legacy Chakra. When you do, you may use your Legacy Save DC if the jutsu requires a saving throw. If the Jutsu requires an attack roll, instead use your Legacy Attack Bonus. If the jutsu does damage, it deals additional damage equal to twice your level in this class mod.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-eugenics"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "395fb03d9998c713",
+      "name": "Glorious Uchiha Technique",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Choose 2 additonal  Uchiha Hijutsu up to your max Jutsu rank, this jutsu can now benifit from the Mastered Uchiha Technique Feature</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "glorious-uchiha-technique"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "0bf649cded953ed2",
+      "name": "Majestic Uchiha Technique",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p><em>Requires Glorious Uchiha Technique</em></p>\n<p>Choose 3 additonal  Uchiha Hijutsu up to your max Jutsu rank, this jutsu can now benifit from the Mastered Uchiha Technique Feature.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Glorious Uchiha Technique",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "majestic-uchiha-technique"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true,
+          "requiresIdentifiers": [
+            "glorious-uchiha-technique"
+          ]
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "813ae743229293b1",
+      "name": "Occular Acuity",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When benefiting from your Sharingan Feature, you gain the following effects:</p>\n<ul>\n<li>15ft of True Sight</li>\n<li>120 Feet of Chakra Vision</li>\n<li>120 Feet of Dark Vision</li>\n</ul>\n<p>Additionally, attacks or Jutsu with a base range of 30ft or more gain an additional 30ft of range.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "occular-acuity"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "0f9eca437236aa6c",
+      "name": "Movement Mastery",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You gain an additional +10 movement per <strong>Madara Cells</strong> level, movement you make may be considered teleportation. Additionally, when a Jutsu or feature allows you to make a Dexterity save to take only half\ndamage, you instead take no damage and suffer no effects if\nyou succeed on a saving throw, and only half damage if you fail</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "movement-mastery"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "c34fdcfc972011f1",
+      "name": "Searing Flames",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When you would apply ranks of <strong>Burned</strong> with a Uchiha Hijutsu, the amount of ranks you apply are increased by 1. Additionally, increase the DC to remove ranks of <strong>Burned</strong> applied by you by your level in this class mod.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "searing-flames"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "b0b03c9f1396d7aa",
+      "name": "Fury of Indra",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When you would make an attack action, you can make an additional attack. Attacks you make deal additional damage equal to your <strong>Madara Cells</strong> level up. You may use your Legacy Chakra to cast Taijutsu and Bukijutsu. When you do, you may use your Legacy Art Attack Bonus if the jutsu requires an attack roll, and your Legacy Save DC if the jutsu requires a saving throw. If the Jutsu deals damage, it deals additional damage equal to twice your class mod level twice per turn. Additionally, you can wield weapons with the Two-Handed property in one hand without penalty.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "fury-of-indra"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "d4f9c07a16744b01",
+      "name": "Madara's Memories of Mastery",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p><em>Requires Level 3 of this classmod</em>\nYou gain 3 <strong>Advanced Adaptations</strong> as detailed in the Uchiha Clan. Any limited use features replenished on a Short Rest gain additional uses equal to your <strong>Madara Cells</strong> level.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Level 3 Madara Cells",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madaras-memories-of-mastery"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true,
+          "requiredClassModLevel": 3
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "da9552716e25d5f7",
+      "name": "Mental Mastery",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You add your class mod level to all Intelligence, Wisdom, and Charisma saving throws.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-mental-mastery"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "c72a2efc8396c3a6",
+      "name": "Legend of the Sharingan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When you would utilize the Hypnotic Eye 1 or 2 Sharingan feature, you no longer require a bonus action to increase the Save DC. Additionally, the range of Uchiha Hijutsu with the Genjutsu Keyword becomes equal to your Sharingan Chakra Vision Range.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "legend-of-the-sharingan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "16d7027edf331268",
+      "name": "Physical Mastery",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You add your class mod level to all Strength, Dexterity, and Constitution saving throws.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-physical-mastery"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "39065554aea57f5c",
+      "name": "Mastered Sharingan Agility",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p><em>Requires Level 3 in this Class Mod</em></p>\n<p>Your AC is Calculated as 15 + Your Dexterity (or Intelligence Modifier) + Half of your proficiency bonus (rounded down).\nYou gain Damage reduction vs all sources of damage equal to your Proficiency bonus.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Level 3 Madara Cells",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mastered-sharingan-agility"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "legacy-passive",
+          "classMod": "madara-cells",
+          "madaraLegacyPassive": true,
+          "requiredClassModLevel": 3
+        }
+      },
+      "folder": "54eb6e189d943975"
+    },
+    {
+      "_id": "6e13a9a4ca80f3ae",
+      "name": "Madara Cell Adversaries — Tiers & Legacy DC",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>__\n__</p>\n<p>Alongside player characters, there is the potential for\nadversaries to have access to the power of Madara Cells.\nThis has always been possible but there have been very\nfew rules to help guide GM’s through the process of even\ngranting adversaries with such a power. So now with\nthis, Adversaries will have additional rules, traits, and\nbonuses associated with being able to access Madara Cells.\nThe power of Madara Cells can be applied as a Clan or\nAffiliation Modifier. It is suggested that only Elite or Solo\nadversaries gain access to Madara Cells.\nUnlike adversaries with other class mods, adversaries with Madara Cells still have their normal Chakra, but also have an additional pool of chakra called &quot;Legacy Chakra&quot; which they can only use to cast Uchiha Hijutsu. Additionally, Madara Cell Adversaries should be considered as Uchiha in addition to their standard Clan Type.</p>\n<h3>Madara Cell Tiers</h3>\n<p>Madara Cell Adversaries gain their bonuses like all other\nAdversaries. Though in a similar fashion to players with\nlevels to their class mods, Adversaries do have\nMadara Cell tiers. The tiers are Lesser, Greater &amp; Legendary,\nand each have the following bonuses attributed to them;</p>\n<h4>Lesser Madara Cells</h4>\n<p>Tier Bonus: +2</p>\n<ul>\n<li>Gain 2 Madara Cells Traits. These count as both an Affiliation and Role Trait.</li>\n<li>Gain 2 Mastered Techniques. These Jutsu are added to the Adversaries Jutsu List if they aren't already.</li>\n<li>+1 Bonus to AC and Saving Throws</li>\n<li>+5 Bonus to Damage Reduction</li>\n<li>+20 Movement Speed</li>\n<li>+20 Legacy Chakra</li>\n<li>+6 Stat Points</li>\n<li>Adversary gains 1 additional reaction be round.</li>\n<li>All Uchiha Hijutsu the adversary casts increase the number of damage, healing, temporary hit point or damage reduction dice by +1.</li>\n</ul>\n<h4>Greater Madara Cells</h4>\n<p>Tier Bonus: +4</p>\n<ul>\n<li>Gain 4 Madara Cells Traits. These count as both an Affiliation and Role Trait.</li>\n<li>Gain 4 Mastered Techniques. These Jutsu are added to the Adversaries Jutsu List if they aren't already.</li>\n<li>+2 Bonus to AC and Saving Throws</li>\n<li>+10 Bonus to Damage Reduction</li>\n<li>+40 Movement Speed</li>\n<li>+60 Legacy Chakra</li>\n<li>+8 Stat Points</li>\n<li>Adversary gains 2 additional reaction be round.</li>\n<li>All Uchiha Hijutsu the adversary casts increase the number of damage, healing, temporary hit point or damage reduction dice by +2.</li>\n</ul>\n<h4>Legendary Madara Cells</h4>\n<p>Tier Bonus: +8</p>\n<ul>\n<li>Gain 6 Madara Cells Traits. These count as both an Affiliation and Role Trait.</li>\n<li>Gain 6 Mastered Techniques. These Jutsu are added to the Adversaries Jutsu List if they aren't already.</li>\n<li>+3 Bonus to AC and Saving Throws</li>\n<li>+20 Bonus to Damage Reduction</li>\n<li>+40 Movement Speed</li>\n<li>+100 Legacy Chakra</li>\n<li>+10 Stat Points</li>\n<li>Adversary gains 3 additional reaction be round.</li>\n<li>All Uchiha Hijutsu the adversary casts increase the number of damage, healing, temporary hit point or damage reduction dice by +3.</li>\n</ul>\n<h4>You're literally Madara</h4>\n<ul>\n<li>Replace your Character Sheet with the Statistics found <a href=\"https://homebrewery.naturalcrit.com/share/E7J4P0PLd1YT\">here</a> on page 4.</li>\n</ul>\n<h3>Legacy Art Attack and Save DC</h3>\n<p>Adversaries have a separate attack bonus for their class\nmod-based arts. The Adversary, unlike players can choose\nto use a Jutsu’s original attack bonus or DC, instead of their\nclass mod attack or DC. Adversaries calculate their Attack\nbonus and Save DC as follows;</p>\n<p><strong>Legacy Save DC</strong> = 10 + half Adversary Level +\nProficiency bonus;</p>\n<p><strong>Legacy Attack Bonus</strong> = Half Adversary Level +\nAdversary Tier Bonus + Proficiency bonus;</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "madara-cell-adversary-tiers"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-guide",
+          "classMod": "madara-cells"
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "64b17a1e66702804",
+      "name": "Burning Hatred",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At the begining of the Adversaries turn roll 1d10. If the roll is 10, they regain 5 Legacy Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-burning-hatred"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "d703d3a572712819",
+      "name": "Everburning Flames",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When this adversary would apply ranks of <strong>Burned</strong> with an Uchiha Hijutsu, the amount of ranks applied are doubled.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-everburning-flames"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "c649bd5875193aa0",
+      "name": "Persistant Flames",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The DC to remove ranks of <strong>Burned</strong> applied by this adversary are increased by its <strong>Tier Bonus</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-persistant-flames"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "9b297f0e8c314260",
+      "name": "Sharingan of Legend",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>This adversary gains +2 to its DC while using Uchiha Hijutsu with the Genjutsu keyword. Additionally, the range of these jutsu becomes the range of the adversaries Chakra Sight.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-sharingan-of-legend"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "3350e6e862e10291",
+      "name": "Flexible Legacy",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary can spend Legacy Chakra in place of normal Chakra at a rate of 3:1 (3 Legacy Chakra = 1 Normal Chakra).</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-flexible-legacy"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "8f2078af812b7ffb",
+      "name": "Clones of the Ghost",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>As a full-turn action, once per Combat, the adversary may create up to 5 clones with one-quarter HP and Chakra. They act on the adversary’s initiative. These clones may use any Uchiha Clan Traits or Features this adversary has.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-clones-of-the-ghost"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "349ca74e8b4a58c8",
+      "name": "Mental Perfection",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adverary gains a bonus to its Intelligence, Wisdom, and Charisma Saving throws equal to half of its Proficiency Modifier.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-mental-perfection"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "3b1de2fda7dc1ad9",
+      "name": "Physical Perfection",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary gains a bonus to its Strength, Dexterity, and Constitution saving throws equal to half of its Proficiency Modifiers</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-physical-perfection"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "91274676ee16aa4a",
+      "name": "Unshakeable Conviction",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary is immune to the Confused</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-unshakeable-conviction"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "c09d23541fd6b5ae",
+      "name": "Unmistakeable Bravery",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary is immune to the Fear Condition</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-unmistakeable-bravery"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "24543fdc27650e6c",
+      "name": "Menacing Aura",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At the start of a hostile creatures turn that can see or sense the adversary, they must succeed on a Wisdom save (DC = Legacy Art Bonus) or gain 2 ranks of Fear. Failure by 5 or more grants 4 ranks of Fear, and Failure by 10 or more also leaves them Stunned until the end of their next turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-menacing-aura"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "8be6727d8fe65fdc",
+      "name": "24 Hours of Power",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary ignores levels of exhaustion equal to less than half of its proficiency modifier. Ranks of Exhaustion that exceed this number will have their normal full culmulative effects.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-24-hours-of-power"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "914fcb8210250bbd",
+      "name": "Majestic Destroyer",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Once Per Round, the Adversary can spend Legeacy Chakra up to 5x their Tier Bonus when casting a Uchiha Hijutsu to deal additional damage equal to double the amount of Legacy Chakra Spent.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-majestic-destroyer"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "fe5fd82616bc2161",
+      "name": "Exceptional Flame",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary treats Ninjutsu with the Fire Release Keyword as Uchiha Hijutsu for the purpose of Features and Traits.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-exceptional-flame"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "c4124e940fcf45bc",
+      "name": "Forced Summoning Contract",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary gains the following action:</p>\n<p><em><strong>Forced Summoning Contract:</strong></em> <em>Ranged Legacy Art Save:</em> range 60ft., one target. Save vs CHA, If the target is a summoned creature by the <strong>Summoning Technique</strong> or has the Demon or Tailed Beast creature type , and currently has 5 ranks of Fear that have been applied by you, it must mave pass a Charisma Saving Throw vs your Legacy Art DC or gain <strong>Subjugated</strong>. While <strong>Subjugated</strong>, a creature can be summoned by you using the <strong>Summoning Technique</strong>, at which point it must obey your commands as if it were a C-Rank or lower summon. This creature may reattempt this saving throw every 24 hours, losing <strong>Subjugated</strong> on a successful save.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-forced-summoning-contract"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "6b6e2449c533165f",
+      "name": "Artifical Curse of Hatred",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary can spend 5 Legacy Chakra once per turn to give a creature other than itself disadvantage on a saving throw or skill check.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-artifical-curse-of-hatred"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "6ef4ae61d8018c5a",
+      "name": "Sharingan Agility",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Your Adversary gains an amount of DR equal to half their proficiency bonus against non-psychic damage.</p>\n<p>Also, your Adversary may use the following AC calculation (15 + Intelligence or Dexterity Modifier + half proficiency). If they do, the DR granted by this trait becomes equal to their full proficiency bonus.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-sharingan-agility"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "891ab0308f7d04c8",
+      "name": "Exceptional Reactionary Abilities",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary can, as an action, spend 10 Legacy Chakra to gain an additional reaction, once per round</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-exceptional-reactionary-abilities"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "9116c4a55500cfaf",
+      "name": "Mangekyō Synergy",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Adversary can only take this if the Adversary also has the Mangekyō Class Mod.\nThe Adversary can convert Legacy Chakra into Mangekyō Art Charges at a rate of 10 Legacy Chakra per 1 Mangekyō Art Charge.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "adversary-mangekyo-synergy"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "adversary-trait",
+          "classMod": "madara-cells",
+          "madaraAdversaryTrait": true
+        }
+      },
+      "folder": "dac5f268c6da8b40"
+    },
+    {
+      "_id": "ea379609d09ccc31",
+      "name": "Madara Cells",
+      "type": "classmod",
+      "img": "modules/n5eb-classmod-library/assets/madara-cells.png",
+      "system": {
+        "description": {
+          "value": "<hr />\n<p>Madara Cells are artificial cells grown from the DNA of the legendary Uchiha Madara, granting recipients fragments of his incredible power. Acceptance of these cells can endow advanced ocular capabilities (including the Sharingan and its heightened evolutions), significantly increased stamina and chakra reserves, and an overall enhancement of natural abilities. They represent a rare medical breakthrough, requiring a physically compatible host and a highly skilled medical-nin to graft them successfully. The Madara Cells class mod provides a multifaceted boost that emulates the devastating might and prowess seen in those who have tapped into Madara’s genetic legacy.</p>\n<h3>Gaining Madara Cells</h3>\n<p>Madaras Cells are living cells derived from the Ghost of the Uchiha, containing a fraction of his immense power and significantly enhancing the abilities of the recipient. Due to Madara's extraordinary aura farming abilities, these cells decay far more slowly than normal, making them accessible even long after his death. However, to harness their power, the cells must be implanted into a suitable host. Implantation requires the following steps:</p>\n<p><strong>Step 1:</strong> The User must find a source of living.</p>\n<p><strong>Step 2:</strong>  Second, implant the cells. This requires immense medical skill and time. The user or a skilled practitioner must spend 4DT and then succeed on a <strong>DC 25 Wisdom (Medicine)</strong> ability check. If the check fails, the cells begin to decay faster. The procedure can be attempted once more with the same batch; on a second failure, the cells become unusable, and new ones must be found.</p>\n<p><strong>Step 3:</strong> Third, synchronize with the cells. The user must succeed on a <strong>DC 20 Constitution (Chakra Control)</strong> ability check. On success, they gain the first level of the Madara Cells class mod. On a failure, the cells start rejecting the user's body. The user has three attempts to succeed before the cells completely reject them; on the third failure, new cells must be found. Each attempt requires 4 DT.</p>\n<h3>Leveling up this class mod</h3>\n<p>Advancing with Madara Cells is difficult and time-consuming. Unlike normal shinobi classes that require experience points, becoming more in sync with the cells necessitates consistent use of their abilities in combat and during downtime training, accepting the risks of potential failure.</p>\n<p>At Levels 10, 12, 14, and 16, you may attempt to harness the cells further to draw closer to the Ghost of the Uchiha's abilities. While in a suitable area for rest and recovery, you can attempt to master controling Madara's Cells.</p>\n<p><strong>Step 1:</strong> First, you may attempt a Constitution (Chakra Control) check with the DC specified in the table below. On a success, you gain the next level of this class mod. On a failure, proceed to the next step. Each attempt requires 4 DT, and you can attempt this check once per class mod level when you meet the level and downtime requirements. If you fail the check at an earlier level, you can reattempt it at a later class mod level.</p>\n<p><strong>Step 2:</strong> If you fail the initial Chakra Control check, you or another can force the cells to cooperate by making a Wisdom (Medicine) check with the DC specified in the table. On success, you gain the next level of the class mod, but your body begins to reject the cells, and you permanently lose a number of hit dice equal to the class mod level attained. These losses are culmulative, and should your number of Hit Die reach 0, you become overwhelmed by Madaras's Cells, causing your body to rapidly age and start to fall apart and decay. You die and are unable to be ressurected short of Divine Intervention. If you fail this check three times, the cells become incompatible with your body, and you cannot gain additional levels in this class mod. Each attempt requires 4 DT.</p>\n<h5>Madara Cells Synchronization DCs</h5>\n<p>| Mod Level | Chakra Control DC | Medicine DC\n|:-:|:-------------:|:-----:|\n| 2  | 20 | 15 |\n| 3  | 25 | 20 |\n| 4 | 30 | 25 |\n| 5 | 35 | 30 |</p>\n<h5>Madara Cells</h5>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Level</th>\n  <th style=\"text-align:center\">Minimum Level Requirements</th>\n  <th style=\"text-align:center\">Mastered Uchiha Techniques</th>\n  <th style=\"text-align:center\">Legacy Passives</th>\n  <th style=\"text-align:center\">Legacy Chakra</th>\n  <th style=\"text-align:center\">Features</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>\n<p>| 1st | 8 | 2 | 1 | 20 |Apex Sharingan, Mastered Technique, Legacy Chakra, Mastered Defence, Legacy Passives, Hatred Surge\n| 2nd | 10 | 3 | 2 |40 |Extraordinary Talent, Partial Match, Uchiha Technique Proficiency\n| 3rd | 12 | 4 | 3 |60 | Mastered Defence (2)\n| 4th | 14 | 5 | 4 | 80 |Indirect Reincarnation, Extraordinary Mutation (2), Partial Match (2)\n| 5th | 16 | 6 | 5 | 100 |Mastered Defence (3), Perfect Match\n|  |  | |  |  |</p><p><strong>Automation:</strong> This module tracks Legacy Chakra, Mastered Defence reactions, Madara Cell mutation proficiencies, Hatred Surge/Overcome with Hatred, Partial/Perfect Match, Legacy-to-regular Chakra conversion, Mastered Technique activation, several Legacy Passive bonuses, and combat/rest state changes. Effects that require choosing an exact external Uchiha/Sharingan system document are surfaced in the tracker rather than silently guessing a system UUID.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Madara Cells",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "identifier": "madara-cells",
+        "levels": 1,
+        "advancement": {
+          "core1": {
+            "_id": "d72347642e5b944d",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.9be779669cafb2a7",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.9d4182b252be470b",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.b15f069d11f31307",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.9a19cc19e551d80d",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.09615c8eb7d0c442",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 1,
+            "title": "Madara Cells I",
+            "hint": ""
+          },
+          "mastered": {
+            "_id": "6024eafad42e6201",
+            "type": "ItemChoice",
+            "configuration": {
+              "choices": {
+                "1": {
+                  "count": 2,
+                  "replacement": false
+                },
+                "2": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "3": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "4": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "5": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "allowDrops": false,
+              "type": null,
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.db0b249bc56cf23a"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.bfe66674a0402bae"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.41ea483db1df4952"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.c8985c168ec0c25f"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.af06c0bc81a18e19"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.4fcd9fa1c82429a2"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.6930640175189dcc"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.66554858d124eb74"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.d2326dd1a844e161"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.dfca6ad358943382"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.1aa95bd1d0fcc31d"
+                }
+              ]
+            },
+            "value": {},
+            "title": "Mastered Uchiha Techniques",
+            "hint": ""
+          },
+          "passives": {
+            "_id": "940f50e255cefa74",
+            "type": "ItemChoice",
+            "configuration": {
+              "choices": {
+                "1": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "2": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "3": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "4": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "5": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "allowDrops": false,
+              "type": null,
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.629760e8574d8c7a"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.395fb03d9998c713"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.0bf649cded953ed2"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.813ae743229293b1"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.0f9eca437236aa6c"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.c34fdcfc972011f1"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.b0b03c9f1396d7aa"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.d4f9c07a16744b01"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.da9552716e25d5f7"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.c72a2efc8396c3a6"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.16d7027edf331268"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.39065554aea57f5c"
+                }
+              ]
+            },
+            "value": {},
+            "title": "Legacy Passives",
+            "hint": ""
+          },
+          "core2": {
+            "_id": "4795f11b9927bf60",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.734070bad86ab1c6",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.191d3e6883d7b9b7",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.0983fc48b0b96ab0",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 2,
+            "title": "Madara Cells II",
+            "hint": ""
+          },
+          "core4": {
+            "_id": "0a48b7bc4921dea1",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.6237b1c3ace7486b",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 4,
+            "title": "Madara Cells IV",
+            "hint": ""
+          },
+          "core5": {
+            "_id": "7be714371773147e",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.9e98afea8f2007be",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 5,
+            "title": "Madara Cells V",
+            "hint": ""
+          },
+          "legacy": {
+            "_id": "284af93b8bc50f40",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "madara-legacy-chakra",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 20
+                },
+                "2": {
+                  "value": 40
+                },
+                "3": {
+                  "value": 60
+                },
+                "4": {
+                  "value": 80
+                },
+                "5": {
+                  "value": 100
+                }
+              }
+            },
+            "value": {},
+            "title": "Legacy Chakra",
+            "hint": ""
+          },
+          "masteredKnown": {
+            "_id": "3228c76fcc7b3874",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "mastered-uchiha-techniques-known",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 2
+                },
+                "2": {
+                  "value": 3
+                },
+                "3": {
+                  "value": 4
+                },
+                "4": {
+                  "value": 5
+                },
+                "5": {
+                  "value": 6
+                }
+              }
+            },
+            "value": {},
+            "title": "Mastered Uchiha Techniques Known",
+            "hint": ""
+          },
+          "passiveKnown": {
+            "_id": "e5b4756fda376ecc",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "madara-legacy-passives-known",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 1
+                },
+                "2": {
+                  "value": 2
+                },
+                "3": {
+                  "value": 3
+                },
+                "4": {
+                  "value": 4
+                },
+                "5": {
+                  "value": 5
+                }
+              }
+            },
+            "value": {},
+            "title": "Legacy Passives Known",
+            "hint": ""
+          }
+        },
+        "save": {
+          "formula": "12+@classmods.madara-cells.levels+@prof",
+          "value": "12+@classmods.madara-cells.levels+@prof",
+          "scaling": ""
+        },
+        "attackBonus": {
+          "formula": "2*@prof+@classmods.madara-cells.levels",
+          "value": "2*@prof+@classmods.madara-cells.levels",
+          "scaling": ""
+        },
+        "color": "#59151c"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "classmod",
+          "classMod": "madara-cells",
+          "contentVersion": "0.17.0"
+        }
+      },
+      "folder": "0d926603829bec27"
+    }
+  ]
+}

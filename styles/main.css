@@ -2092,3 +2092,14 @@
 .n5eb-hashirama-tracker footer button{flex:1 1 150px;}
 .n5eb-hashirama-tracker .hostility-log{margin:10px 0 0;padding:8px;border-left:3px solid rgba(101,65,35,.7);background:rgba(255,255,255,.03);}
 @media(max-width:700px){.n5eb-hashirama-tracker-strip{grid-template-columns:1fr 1fr}.n5eb-hashirama-tracker .hashirama-grid{grid-template-columns:1fr}}
+
+/* Madara Cells */
+.n5eb-madara-tracker-strip{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding:.45rem .6rem;margin:.35rem 0;border:1px solid rgba(92,18,27,.7);border-radius:6px;background:linear-gradient(90deg,rgba(45,5,12,.92),rgba(15,8,15,.82));}
+.n5eb-madara-tracker-strip .tracker-title{display:flex;align-items:center;gap:.35rem;font-weight:700;}
+.n5eb-madara-tracker-strip .tracker-title img{width:24px;height:24px;object-fit:cover;border-radius:50%;}
+.n5eb-madara-tracker-strip .tracker-mini{display:flex;gap:.3rem;align-items:center;padding:.15rem .4rem;border-left:1px solid rgba(255,255,255,.18);}
+.n5eb-madara-tracker header{display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.n5eb-madara-tracker .legacy-orb{font-size:1.7rem;font-weight:800}.n5eb-madara-tracker .legacy-orb small{font-size:.75rem;font-weight:500;}
+.n5eb-madara-tracker .madara-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem;margin:.7rem 0;}
+.n5eb-madara-tracker .madara-grid>div{display:flex;justify-content:space-between;gap:.5rem;padding:.4rem;border:1px solid rgba(120,30,40,.35);border-radius:5px;}
+.n5eb-madara-tracker footer{display:flex;flex-wrap:wrap;gap:.35rem}.n5eb-madara-tracker .hostility-log{margin-top:.6rem;}
