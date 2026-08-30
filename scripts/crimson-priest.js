@@ -4,7 +4,7 @@ const PACK_COLLECTION = "world.n5eb-custom-class-mods";
 const TRACKER_FLAG = "crimsonPriestTracker";
 const EFFECT_FLAG = "crimsonPriestOathEffect";
 const INTERNAL = MODULE_ID;
-const ICON = "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp";
+const ICON = "systems/n5eb/assets/content/items/triplescythe.webp";
 const dialogs = new Map();
 const queues = new Map();
 let sourceCache = null;
@@ -167,10 +167,10 @@ Hooks.once("ready",async()=>{
   if(game.system.id!=="n5eb") return;
   globalThis.N5eBCrimsonPriest=Object.freeze({openTracker,changePiety,syncDamageAutomation:syncAllCombatData,getTracker:readTracker});
   // main.js performs the world-pack sync in its ready hook. Foundry does not await
-  // async hook listeners, so wait briefly for the 0.15.0 pack before caching sources.
+  // async hook listeners, so wait briefly for the 0.16.0 pack before caching sources.
   if(game.user.isGM){
     for(let attempt=0;attempt<50;attempt++){
-      if(game.settings.get(MODULE_ID,"contentVersion")==="0.15.0" && game.packs.get(PACK_COLLECTION)) break;
+      if(game.settings.get(MODULE_ID,"contentVersion")==="0.16.0" && game.packs.get(PACK_COLLECTION)) break;
       await new Promise(resolve=>setTimeout(resolve,100));
     }
   }

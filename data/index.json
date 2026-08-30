@@ -1,5 +1,5 @@
 {
-  "version": "0.15.0",
+  "version": "0.16.0",
   "files": [
     "flying-thunder-god.json",
     "kama.json",
@@ -8,6 +8,7 @@
     "superior-shinobi.json",
     "edo-tensei.json",
     "heavenly-gates.json",
-    "crimson-priest.json"
+    "crimson-priest.json",
+    "hashirama-cells.json"
   ]
 }

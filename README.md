@@ -1,4 +1,15 @@
-# N5eB Class Mod Library 0.15.0
+# N5eB Class Mod Library 0.16.0
+## Version 0.16.0 — Hashirama Cells + Crimson Priest Art Update
+
+- Adds the complete **Hashirama Cells (Remastered)** Class Mod with five-level progression, 10 Perfected Wood Arts, and 10 Passive Legacy Arts.
+- Adds an Actor-based **Legacy Chakra** tracker (20/40/60/80/100), long/full-rest restoration, Perfect Match 3:1 regular-Chakra conversion, and Perfected Art spending.
+- Automates **Senju Durability**, Level 4 physical ability-check bonuses, Mental/Physical Perfection saves, **Passive Regeneration**, **Wooden Hostility** checks and 2d4 turn damage, Partial Match rest temp HP, Extraordinary Mutation skill proficiency/expertise choices, and dynamic Tree Bind Flourish Burial bonus damage.
+- Wooden Hostility blocks chakra-molding jutsu while active and can be contested from the tracker; Perfect Match automatically disables the Hostility state.
+- Adds tracker controls for **Overwhelming Splinters** and Perfected Wood Art activation.
+- Uses the supplied Hashirama artwork for all bundled Hashirama Cells entries.
+- Changes every bundled **Crimson Priest** Item and its runtime tracker/effects to `systems/n5eb/assets/content/items/triplescythe.webp`.
+- Keeps the 0.15.0 retroactive Heavenly Gates / Eight Gates damage migration intact.
+
 ## Version 0.15.0 — Crimson Priest + Damage Automation
 
 - Adds the complete **Crimson Priest** Class Mod from the supplied v1.1 document: 5 levels, 16 Pacts, 3 Death Oaths, 9 Blood Arts, and 18 Oath Arts.
@@ -59,6 +70,7 @@ Included Class Mods:
 - Edo Tensei
 - Heavenly Gates
 - Crimson Priest
+- Hashirama Cells
 
 All bundled descriptions are written in English. Each Class Mod has its own colored folder tree inside the same world compendium.
 
@@ -114,7 +126,7 @@ The Tenseigan folder tree uses celestial blue-violet (`#7687e8`).
 
 ## Existing trackers
 
-Kāma Divine Rewrite and Resonance Disruption, Tenseigan resources, Sealed Beast resources, and the Heavenly Gates release tracker are stored directly on the Actor. Flying Thunder God, Kāma, Tenseigan, Sealed Beast, Edo Tensei, and Heavenly Gates Art formulas are written as current numeric values to the owned Class Mod so the sheet display and rolls use the same result.
+Kāma Divine Rewrite and Resonance Disruption, Tenseigan resources, Sealed Beast resources, the Heavenly Gates release tracker, and Hashirama Cells Legacy Chakra/Hostility state are stored directly on the Actor. Flying Thunder God, Kāma, Tenseigan, Sealed Beast, Edo Tensei, and Heavenly Gates Art formulas are written as current numeric values to the owned Class Mod so the sheet display and rolls use the same result.
 
 ## Manual synchronization
 
@@ -135,6 +147,7 @@ N5eBClassMods.openKamaTracker();
 N5eBClassMods.openTenseiganTracker();
 N5eBClassMods.openSealedBeastTracker();
 N5eBHeavenlyGates.openTracker();
+N5eBHashiramaCells.openTracker();
 ```
 
 ## GitHub distribution

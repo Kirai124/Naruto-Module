@@ -213,7 +213,7 @@
       "_id": "2b85b21da7863523",
       "name": "Gaining & Levelling the Crimson Priest",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<h2>It begins with blood. It always does.</h2>\n<p>A man may live his life in peace, may walk the narrow road of law and order, but Jashin does not seek the peaceful. He does not call upon the shepherds nor the scholars, nor the weary fools who beg for long lives and quiet deaths. No, Jashin's voice is heard in the screams of the dying, in the gurgling last breaths of the slain. He does not offer wisdom, only hunger. He does not grant mercy, only the promise of suffering without end.</p>\n<p>To become the Crimson Priest, one does not ask. <em><strong>One is chosen.</strong></em></p>\n<p>The first sacrifice must be deliberate. A death without hesitation, without remorse. A clean offering. The knife does not tremble, the hands do not falter. The gods have no use for the weak-willed. Jashin does not bless the hesitant. Only those who accept blood as truth may walk this path.</p>\n<p>Then comes the trial. The suffering. A gift wrapped in agony, a test written in wounds. The flesh will burn, the bones will break, the body will scream for relief that will never come. And yet, the chosen must endure. They must laugh through the torment, revel in their ruin, for pain is not a punishment—it is a promise.</p>\n<p>When the suffering ends, they will rise anew, <em><strong>reborn in slaughter.</strong></em></p>\n<p>From that moment on, the body is no longer theirs. It belongs to Jashin. The blood in their veins is his ink, the wounds upon their flesh his scripture. Their hands exist only to reap, to carve, to spill crimson offerings upon the soil until the world is empty of all but silence.</p>\n<h2>Levelling Up Crimson Priest</h2>\n<p>To advance as a Crimson Priest, one must sacrifice worthy</p>\n<p>adversaries—foes who stand as true warriors in their own</p>\n<p>right, those who, in life, were feared, and in\ndeath, will serve as the foundation of the priest’s</p>\n<p>ascension. Only those of Elite Rank or higher are</p>\n<p>considered fit to be offered to Jashin.</p>\n<p>At the beginning of each new level in this Class</p>\n<p>Mod, the DM will roll 2d6 + the Crimson Priest’s</p>\n<p>current level. The result is the number of adversaries</p>\n<p>that must be sacrificed through Blood Rituals before the</p>\n<p>next level is attained. These rituals are not mere</p>\n<p>killings—they are ceremonial executions,\nperformed with absolute devotion, ensuring that\nJashin’s hunger is satiated.</p>",
@@ -318,7 +318,7 @@
       "_id": "f72e0badcd986edd",
       "name": "Crimson Priest Rules Overview",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<h2>The first cut is always the sweetest. That is what they say.</h2>\n<h2>The Jashin Adept is not merely a man, nor a warrior, nor a common murderer. They are a vessel, a hollow thing filled only with the will of their god, their every act a hymn of violence. Where they walk, blood pools in their wake, bodies left as silent prayers to an indifferent deity.</h2>\n<h2>Pain is no stranger to them, nor is death. They have welcomed both, tasted them, drowned in them and risen anew, laughing, smiling, as their wounds closed and their bones reset themselves like a cruel joke played on the world. There is no agony deep enough to break them, no blade sharp enough to still their hands. For they have been unmade and remade in Jashin’s image.</h2>\n<h2>Some call them zealots, but they know better. They are shepherds, and all men are lambs. They do not kill for pleasure, nor for coin, nor even for themselves. They kill because it is written. Because Jashin demands it. Because the world must bleed.</h2>\n<h2>They do not question. They do not falter. They do not cease.</h2>\n<p>For Jashin is eternal.\nAnd so is the slaughter.</p><p>At the beginning of the 1st level of the Crimson Priest Class Mod, you form a sacred contract with Jashin, binding yourself to his will through Pacts. These pacts grant power, but each comes with a demand—an offering, a ritual, or a duty that must be upheld.</p>\n<p>Upon entering this Class Mod, you choose one Pact from the list of Jashin’s Pacts. As you gain levels in this Class Mod, you unlock additional Pacts, deepening your connection to Jashin and expanding your abilities.</p>\n<p>Each Pact is permanent and cannot be undone. Your faith is a contract, sealed in blood, and Jashin does not suffer those who break their vows.</p>\n<h3>Crimson Rite</h3>\n<p>True devotion to Jashin manifests through the spilling of blood in His name. Each life taken is a sacred offering that strengthens both body and spirit. This rite transforms death into power, allowing the Crimson Priest to channel their faith through dark rituals. The more they kill, the deeper their bond with their god becomes, the greater the abyss that swallows them whole.</p>\n<p>At the 1st level, whenever the Crimson Priest defeats a creature, they receive Piety, representing the favor granted by their lord. When you kill an enemy creature, you gain the following benefits:</p>\n<ul>\n<li>1 for <em>Standard enemies.</em></li>\n<li>4 for <em>Elite enemies.</em></li>\n<li>8 for <em>Solo enemies.</em></li>\n</ul>\n<p>The Crimson Priest can store up to 5 + (Classmod Level × 5) Piety. However, faith demands constant devotion. At the end of each day, the Crimson Priest loses 1 Piety. The Crimson Priest immediately loses 5 Piety if they spare a worthy sacrifice. If a full 24 hours pass without any remaining Piety, the Crimson Priest dies immediately, their body failing as Jashin withdraws His blessing.</p>\n<p>Piety serve not only as a measure of devotion but also as a resource. The Crimson Priest uses Piety to cast Oath Arts and activate features granted by their chosen Death Oath.</p>\n<p>At the beginning of the 2nd level of the Crimson Priest Class Mod, your bond with Jashin deepens as you take on your <em><strong>Death Oath</strong></em>, a covenant that defines the nature of your devotion. With this sacred vow, your methods of offering blood in Jashin’s name evolve, expanding the ways in which you gain Piety through the Crimson Rite.</p>\n<p>Each Death Oath has its own unique <em><strong>Acts of Devotion</strong></em>, specific to the chosen path. These acts dictate how you may continue to accumulate Piety outside of direct combat, ensuring that every Crimson Priest serves Jashin in a manner befitting their oath.</p>\n<p><em>The detailed <strong>Acts of Devotion</strong> will be found within the descriptions of each individual Death Oath.</em></p>\n<h3>Death Oath</h3>\n<p>Jashin does not grant His power freely, nor does He allow His followers to serve without purpose. Every Crimson Priest is chosen for a path—a sacred duty that defines the way they bring death in His name. These are known as <em><strong>Death Oaths</strong></em>, pacts sealed in blood.</p>\n<p>At the beginning of the 2nd level, you gain acess to a Death Oath. Each Oath grants different strengths, guiding the Crimson Priest toward a distinct method of spreading Jashin’s will:</p>\n<ul>\n<li><p><em><strong>Oath of the Predator</strong></em> — The path of the relentless hunter. Those who take this Oath are masters of Taijutsu and Bukijutsu. To fight them is to fight a storm of blades and fury, an executioner who never tires, never hesitates, and never stops until the last drop of blood has been spilled.</p>\n</li>\n<li><p><em><strong>Oath of the Acolyte</strong></em> — The path of the devout practitioner. This Oath is for those who wield Ninjutsu as a sacred extension of Jashin’s will. Acolytes carve Jashin’s sigil into the battlefield, their enemies burned, broken, and torn apart by unholy ninjutsu might.</p>\n</li>\n<li><p><em><strong>Oath of the Nightmare</strong></em> — The path of terror. Those who take this Oath do not simply kill; they unmake the mind. Masters of Genjutsu, they drown their enemies in hallucinations, breaking their sanity before stealing their lives.</p>\n</li>\n</ul>\n<p>Once chosen, an Oath cannot be undone. It is a divine mandate, a binding purpose that sets the Crimson Priest apart from all others.</p>",
@@ -423,7 +423,7 @@
       "_id": "b7ff7b0cb49c54b0",
       "name": "My Lord's Gift",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>At the beginning of the 1st level of the Crimson Priest Class Mod, you are marked by Jashin’s divine will, severing your ties to mortal frailty. Death no longer holds claim over you, so long as the sacrifices continue.</p>\n<p>When you are reduced to 0 hit points, you do not enter the Dying condition, do not fall unconscious, and do not need to make death saving throws. Additionally, you are immune to effects that would kill you instantly. However, your immortality comes at a price:</p>\n<p>For every 15 damage taken past 0 HP, you gain 1 rank of Exhaustion.\nYou do not die from reaching Exhaustion 10. No amount of suffering will release you from this existence unless Jashin himself wills it. You can remove 3 Exhaustion you gained through this feat through per rest. Your Exhaustion limit still 10 for purpose of gaining ranks.</p>",
@@ -529,7 +529,7 @@
       "_id": "9b37eadd06a28ae2",
       "name": "Weapon of the Devoted",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>Also in the 1st level, through your devotion and your deep understanding of Jashinism, you have crafted or received your very first weapon, a sacred tool imbued with the will of your god. This weapon is more than a mere tool of combat—it is a conduit for the Crimson Priest's dark power and the embodiment of your bond with your god. This weapon takes the form of a simple weapon, such as a kunai, spear, or other basic tools, but it has been enhanced with the power of the crimson rites.</p>\n<p>Choose one simple weapon. Upon selection, this weapon transforms into an ethereal black object, taking on an appearance inspired by the traditional weapon wielded by the Crimson Priest. Regardless of its original form, this weapon is now considered a Chakra Enhanced Weapon, with the following benefits:</p>\n<ul>\n<li><strong>Piercing Damage:</strong> The weapon’s damage type is now considered piercing, regardless of the weapon's original type and deal 2d8 + Your Taijutsu Modifier + 2 times (Class Mod Level).</li>\n<li><strong>Chakra Conduit:</strong> The weapon channels chakra, allowing the Crimson Priest to deal one additional die of damage when under the effects of Deadly Possession.</li>\n<li><strong>Profane Symbol:</strong> The weapon is marked with a symbol of Jashin that signifies your devotion and power. You can use it as a focus for your Blood Arts.</li>\n</ul>\n<p>You are now bound to this weapon, which must be used in your devotion to Jashin. While it can be repaired, it cannot be replaced or altered without losing the bond it shares with you. If you ever break or lose your weapon, you must spend a significant period of time (4 downtime) to craft or receive a new one, and its power will be temporarily diminished until the new weapon is imbued with the proper rite.</p>\n<p>At the beginning of the 3rd level of the Crimson Priest Class Mod, your devotion to Jashin deepens, and in return, you are granted a second weapon forged from the blood of those you have sacrificed. This is no ordinary blade, nor a relic of mortal craftsmanship, it is an extension of your faith, a vessel of carnage molded by the slaughter you have offered in Jashin’s name.</p>\n<p>You create a unique weapon, forged from the lifeblood of your victims, imbued with divine malice. Work with your DM to determine its appearance, ensuring that its form reflects both your character’s will and Jashin’s hunger. You may choose any melee weapon as the base form of your relic. The DM selects two properties for your weapon (like critical, trip, multiattack, etc.), reflecting the nature of its creation and the influence of Jashin. This weapon deals 3d12 + Your Taijutsu Modifier + 3 times (Class Mod Level) slashing damage and is considered Chakra Enhanced for the purpose of overcoming resistances. It cannot be broken and you cannot be disarmed while wielding your <em><strong>Relic of Slaughter</strong></em>.</p>\n<p>The weapon is marked with a symbol of Jashin that signifies your devotion and power. You can use it as a focus for your <em><strong>Blood and Oath</strong></em> arts.</p>\n<hr />\n<blockquote>\n<p><em>&quot;All things exist to be cut down. The blood that flows, the screams that echo, the bones that shatter—these are the only truths of this world. Mercy is a lie. Peace is weakness. Slaughter is devotion.&quot;</em></p>\n<p>— Jashin Lord</p>\n</blockquote>",
@@ -635,7 +635,7 @@
       "_id": "bdab25b7c8535d51",
       "name": "Crimson Rite",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>True devotion to Jashin manifests through the spilling of blood in His name. Each life taken is a sacred offering that strengthens both body and spirit. This rite transforms death into power, allowing the Crimson Priest to channel their faith through dark rituals. The more they kill, the deeper their bond with their god becomes, the greater the abyss that swallows them whole.</p>\n<p>At the 1st level, whenever the Crimson Priest defeats a creature, they receive Piety, representing the favor granted by their lord. When you kill an enemy creature, you gain the following benefits:</p>\n<ul>\n<li>1 for <em>Standard enemies.</em></li>\n<li>4 for <em>Elite enemies.</em></li>\n<li>8 for <em>Solo enemies.</em></li>\n</ul>\n<p>The Crimson Priest can store up to 5 + (Classmod Level × 5) Piety. However, faith demands constant devotion. At the end of each day, the Crimson Priest loses 1 Piety. The Crimson Priest immediately loses 5 Piety if they spare a worthy sacrifice. If a full 24 hours pass without any remaining Piety, the Crimson Priest dies immediately, their body failing as Jashin withdraws His blessing.</p>\n<p>Piety serve not only as a measure of devotion but also as a resource. The Crimson Priest uses Piety to cast Oath Arts and activate features granted by their chosen Death Oath.</p>\n<p>At the beginning of the 2nd level of the Crimson Priest Class Mod, your bond with Jashin deepens as you take on your <em><strong>Death Oath</strong></em>, a covenant that defines the nature of your devotion. With this sacred vow, your methods of offering blood in Jashin’s name evolve, expanding the ways in which you gain Piety through the Crimson Rite.</p>\n<p>Each Death Oath has its own unique <em><strong>Acts of Devotion</strong></em>, specific to the chosen path. These acts dictate how you may continue to accumulate Piety outside of direct combat, ensuring that every Crimson Priest serves Jashin in a manner befitting their oath.</p>\n<p><em>The detailed <strong>Acts of Devotion</strong> will be found within the descriptions of each individual Death Oath.</em></p>",
@@ -741,7 +741,7 @@
       "_id": "6c86fc3eee1bfcdf",
       "name": "Death Oath",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>Jashin does not grant His power freely, nor does He allow His followers to serve without purpose. Every Crimson Priest is chosen for a path—a sacred duty that defines the way they bring death in His name. These are known as <em><strong>Death Oaths</strong></em>, pacts sealed in blood.</p>\n<p>At the beginning of the 2nd level, you gain acess to a Death Oath. Each Oath grants different strengths, guiding the Crimson Priest toward a distinct method of spreading Jashin’s will:</p>\n<ul>\n<li><p><em><strong>Oath of the Predator</strong></em> — The path of the relentless hunter. Those who take this Oath are masters of Taijutsu and Bukijutsu. To fight them is to fight a storm of blades and fury, an executioner who never tires, never hesitates, and never stops until the last drop of blood has been spilled.</p>\n</li>\n<li><p><em><strong>Oath of the Acolyte</strong></em> — The path of the devout practitioner. This Oath is for those who wield Ninjutsu as a sacred extension of Jashin’s will. Acolytes carve Jashin’s sigil into the battlefield, their enemies burned, broken, and torn apart by unholy ninjutsu might.</p>\n</li>\n<li><p><em><strong>Oath of the Nightmare</strong></em> — The path of terror. Those who take this Oath do not simply kill; they unmake the mind. Masters of Genjutsu, they drown their enemies in hallucinations, breaking their sanity before stealing their lives.</p>\n</li>\n</ul>\n<p>Once chosen, an Oath cannot be undone. It is a divine mandate, a binding purpose that sets the Crimson Priest apart from all others.</p>",
@@ -847,7 +847,7 @@
       "_id": "8373d4fc44b011cd",
       "name": "Blood Arts",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>Blood Arts\nAt 2nd level, you unlock the power of Blood Arts, techniques that do not consume chakra but instead demand your life force. These forbidden arts push beyond the limits of the body, drawing directly from your <em><strong>Hit Points or Hit Die</strong></em> to fuel their devastating effects. Regardless of their form, all Blood Arts share a single truth—power must be earned through suffering. You don't need to spend hit point or hit die when concentrating on a Blood Art.</p>\n<p>Once selected, Blood Arts cannot be changed. You gain additional Blood Arts as you grow in level.</p>\n<p><em><strong>Blood Art Save DC</strong></em> = 10 + half your character Level + your Proficiency bonus;</p>\n<p><em><strong>Blood Art Attack Bonus</strong></em> = Half your character Level + your class mod level + Your Proficiency bonus.</p>",
@@ -953,7 +953,7 @@
       "_id": "b8aa330cfd19072b",
       "name": "Oath Arts",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>At 2nd level, upon swearing your Death Oath, you unlock access to Oath Arts, powerful abilities that embody your devotion to Jashin. Unlike traditional techniques, Oath Arts are fueled by <em><strong>Piety</strong></em>, channeling the divine favor granted by your lord.</p>\n<p>Each Oath has its own unique set of Oath Arts, reflecting its philosophy and approach to sacrifice. Predators wield brutal, relentless techniques that enhance their physical prowess. Acolytes channel destructive chakra through their bodies, unleashing devastating ninjutsu. Nightmares twist the minds of their victims, breaking their will with illusions and psychological torment. You don't need to spend Piety when concentrating on a Oath Art.</p>\n<p>Once selected, Oath Arts cannot be changed. You gain additional Oath Arts as you grow in level.</p>\n<ul>\n<li><p><em><strong>Oath Art Save DC</strong></em> = 10 + your Level in this class mod + twice your Proficiency bonus;</p>\n</li>\n<li><p><em><strong>Oath Art Attack Bonus</strong></em> = Twice your Proficiency Bonus + twice your level in this class mod.</p>\n</li>\n</ul>",
@@ -1059,7 +1059,7 @@
       "_id": "8e466401c8b401a9",
       "name": "Relentless Devotion",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>At 3rd level, your unyielding devotion to Jashin allows you to push past the limits of mortal endurance, continuing to fight even as your body is torn apart. Wounds that would cripple lesser warriors become fuel for your wrath, and pain only drives you further into Jashin’s embrace.</p>\n<p>Twice per rest, when you take damage, you may choose to ignore all penalties from physical conditions inflicted by that attack until the end of your next turn.</p>\n<p>Also, you gain a number of temporary hit points equal to three times your Constitution modifier whenever you spend a Piety. This stacks up to three times.</p>\n<p>Once per turn, when you are reduced to 0 HP, you can immediately take an action before applying the effects of My Lord’s Gift.\nYou do not suffer disadvantage on attack rolls or ability checks from Exhaustion until you reach rank 5.</p>",
@@ -1165,7 +1165,7 @@
       "_id": "5652e498d5eda4cb",
       "name": "Doctrine of Carnage",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>Beginning at 4th level of this class mod, your will transcends the limits of mortality, bending reality through sheer devotion. Select one <em><strong>Oath Art</strong></em> from your chosen Death Oath. The Piety cost of this Art is reduced by half (minimum 1).</p>\n<p>Furthermore, your mastery over pain and sacrifice allows you to twist your own suffering into an instrument of destruction. Select one Blood Art that requires a Hit Point or Hit Die cost. The first time you activate this Blood Art per rest, you reduce its cost to 0.</p>",
@@ -1271,7 +1271,7 @@
       "_id": "8381add6e2b34bfd",
       "name": "Jashin's Mandate",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>Beginning at 5th level of this class mod, the will of Jashin courses through your veins, compelling you to enact His divine judgment without hesitation.</p>\n<p>You can spend Piety to gain an action, bonus action, or reaction. The costs for each type of action are:</p>\n<ul>\n<li><em><strong>Action:</strong></em> 20 Piety</li>\n<li><em><strong>Bonus Action:</strong></em> 13 Piety</li>\n<li><em><strong>Reaction:</strong></em> 7 Piety</li>\n</ul>",
@@ -1377,7 +1377,7 @@
       "_id": "2af2429ecf86e57c",
       "name": "Pact of Endless Flesh",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> Your body regenerates even from the most grievous injuries. You gain regeneration equal to your Your constitution Modifier + 2x Class Mod level at the start of each turn, provided you have at least 1 HP. You only gain this feat benefits in combat.</p>\n</li>\n<li><p><strong>Burden:</strong> Your nerves are dulled to everything, not just pain. You cannot benefit from healing effects that are not granted by Jashin or your own abilities.(You can still spend hit die to heal yourself while resting.)</p>\n</li>\n</ul>",
@@ -1484,7 +1484,7 @@
       "_id": "166d6c488ee7a4fe",
       "name": "Pact of the Hollow Mind",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> Your mind is a fortress. You are immune to the Charmed, Confused, and Fear conditions and gain advantage on all Intelligence and Wisdom saving throws.</p>\n</li>\n<li><p><strong>Burden:</strong> Your faith is an obsession. You suffer disadvantage on saving throws against physical conditions. Also you take +3 damage die from earth and bludgeoning damage.</p>\n</li>\n</ul>",
@@ -1591,7 +1591,7 @@
       "_id": "ca1b75e6c71f9495",
       "name": "Pact of the Shattered Veil",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<h2><strong>Prerequisite:</strong> Not have Pact of the Hollow Mind</h2>\n<ul>\n<li><p><strong>Boon:</strong> You gain 60 feet of Truesight, allowing you to see through darkness, illusions, and invisibility.</p>\n</li>\n<li><p><strong>Burden:</strong> Your mind is forever altered. You suffer disadvantage on all Wisdom saving throws against fear and berserk effects.</p>\n</li>\n</ul>",
@@ -1700,7 +1700,7 @@
       "_id": "8d36cb51b51604da",
       "name": "Pact of the Crimson Shroud",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> When you reduce a creature to 0 HP, you become Heavily Obscured for 1 minute as a thick veil of blood surrounds you. This grants you advantage on Stealth checks and imposes disadvantage on ranged attacks against you.</p>\n</li>\n<li><p><strong>Burden:</strong> The blood never truly washes away. All enemies have advantage on tracking you by scent, and you automatically fail Stealth checks against creatures with Keen Smell.</p>\n</li>\n</ul>",
@@ -1807,7 +1807,7 @@
       "_id": "ef839d4a402d118b",
       "name": "Pact of the Blood Moon",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> On your first turn in combat, your movement speed doubles, your first melee attack automatically scores a critical hit and deal additional 2 damage die.</p>\n</li>\n<li><p><strong>Burden:</strong> You are driven by battle, but slowed in peace. Your movement speed is reduced to 20 feet when not in combat and you take double damage when surprised. You can't benefit from effect that nullify surprised.</p>\n</li>\n</ul>",
@@ -1914,7 +1914,7 @@
       "_id": "5e3961bab622e5ee",
       "name": "Pact of the Hunger",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<h2><strong>Prerequisite:</strong> Not have Pact of the Endless Flesh</h2>\n<ul>\n<li><p><strong>Boon:</strong> Your connection to Jashin weakens your mortal shell. As an action, you can consume the flesh of those you slay to regain HP (15d10+30 HP per consumed creature).</p>\n</li>\n<li><p><strong>Burden:</strong> You gain disadvantage to poisoned and corroted conditions. Also, you become vulnerable to acid, and necrotic damage. Your body rejects decay, allowing you to function even under grievous wounds.</p>\n</li>\n</ul>",
@@ -2023,7 +2023,7 @@
       "_id": "210ab2de3fe22f69",
       "name": "Pact of the Crimson Echo",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> When you or a creature take damage from an enemy’s attack or jutsu, you may use your reaction to cast an Art against the attacker. You deal additional damage equal to half the damage you or the creature received back to the attacker as Necrotic damage.</p>\n</li>\n<li><p><strong>Burden:</strong> The echoes of pain never fade. You take double damage from psychic effects, as your suffering lingers beyond the physical.</p>\n</li>\n</ul>",
@@ -2130,7 +2130,7 @@
       "_id": "a3ec311b130779f8",
       "name": "Pact of the Flesh Bound",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p>Boon: When you cast a jutsu, you may sacrifice HP equal to twice its cost instead of spending chakra.</p>\n</li>\n<li><p>Burden: Your existence is bound to your offerings. For every 24 hours you go without sacrificing an adversary, you suffer 1 rank of exhaustion.</p>\n</li>\n</ul>",
@@ -2237,7 +2237,7 @@
       "_id": "0a3cc2c4a39366b8",
       "name": "Pact of the Broken Chains",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> You become immune to the Restrained, Dazed, and Grappled conditions, and effects that would reduce your movement speed have no effect on you. Also, if you pass a Dexterity saving throw, you take no damage.</p>\n</li>\n<li><p><strong>Burden:</strong> Freedom comes at a cost. You cannot benefit from any bonuses to movement speed. This applies to movement speed granted by this class mod.</p>\n</li>\n</ul>",
@@ -2344,7 +2344,7 @@
       "_id": "f9634d147748a1d1",
       "name": "Pact of the Unfaltering Step",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> You gain resistence to be forcibly moved by any means and you may walk across unstable or difficult terrain without penalty. Additionally, once per long rest, you may ignore an effect that would otherwise teleport or banish you.</p>\n</li>\n<li><p><strong>Burden:</strong> You are drawn toward battle. You cannot willingly retreat from combat unless all allies have already disengaged.</p>\n</li>\n</ul>",
@@ -2451,7 +2451,7 @@
       "_id": "894f9110edf9f168",
       "name": "Pact of the Midnight Choir",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> You can hear the thoughts of creatures who are within 15% HP of death as faint whispers. This allows you to learn one secret they possess before they perish. If you spend 1 Piety, you may force them to answer one question truthfully before they die.</p>\n</li>\n<li><p><strong>Burden:</strong> The whispers never stop. You suffer disadvantage on concentration checks when near a bloodied creature (-50% hit point) creature, as their voices claw at your mind.</p>\n</li>\n</ul>",
@@ -2558,7 +2558,7 @@
       "_id": "75e1a00d656ec91c",
       "name": "Pact of the Unending War",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> Each time you roll initiative, you gain temporary HP equal to your (Constitution Modifier + Class Mod level) × 5. Additionally, once per long rest, you may ignore the effects of exhaustion until combat ends.</p>\n</li>\n<li><p><strong>Burden:</strong> You do not know rest. You cannot gain the benefits of a long rest unless you have no rank of Exhaustion.</p>\n</li>\n</ul>",
@@ -2665,7 +2665,7 @@
       "_id": "f85854601a083e54",
       "name": "Pact of the Cursed Tongue",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> Your words carry an unnatural weight. Whenever you speak a command to a creature, they must make a Wisdom saving throw or be forced to obey if it does not cause them direct harm. (DC = 8 + Proficiency Bonus + Charisma Modifier). This effect cannot be used on the same creature more than once per long rest.</p>\n</li>\n<li><p><strong>Burden:</strong> Your tongue betrays you. Whenever you fail a social check, your words take on a sinister tone, causing unintended hostility. Creatures gain advantage against genjutsu you cast.</p>\n</li>\n</ul>",
@@ -2772,7 +2772,7 @@
       "_id": "974cc373a68bf2d9",
       "name": "Pact of Life Essence",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> You gain 1 additional Hit Die for every Class Mod level, significantly enhancing your vitality and endurance in battle.</p>\n</li>\n<li><p><strong>Burden:</strong> Your connection to chakra weakens. You permanently lose 1 Chakra Die for every Class Mod level.</p>\n</li>\n</ul>",
@@ -2879,7 +2879,7 @@
       "_id": "d60819abde64dc6b",
       "name": "Pact of Life Force",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> Your Hit Die size increases by one step (e.g., d8 becomes d10, d10 becomes d12). Additionally, your maximum hit points permanently increase by an amount equal to your character level. For each level after that, gain 1 extra hit point. Additionally, if your Die hit is already d12, gain +1 hit point per level.</p>\n</li>\n<li><p><strong>Burden:</strong> Your Chakra Points maximum is reduced by 35, representing your diminished spiritual energy as you embrace physical might.</p>\n</li>\n</ul>",
@@ -2986,7 +2986,7 @@
       "_id": "fc93000923e7c43b",
       "name": "Pact of the Scarlet Martyr",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Passive</p>\n<hr />\n<ul>\n<li><p><strong>Boon:</strong> Once per round, when you take damage, you gain temporary hit points equal to half the damage taken (rounded down). These temporary hit points last until the end of your next turn.</p>\n</li>\n<li><p><strong>Burden:</strong> Your mind becomes open to the whispers and torments of Jashin. You gain vulnerability to Psychic damage.</p>\n</li>\n</ul>",
@@ -3093,7 +3093,7 @@
       "_id": "b8152c9d8fdeeccc",
       "name": "Oath of the Predator",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>Jashin demands blood, and the Predator is His chosen executioner. Those who take this Oath embrace brutality, speed, and relentless close-quarters combat, becoming avatars of slaughter. They master Taijutsu and Bukijutsu, overwhelming their foes with sheer ferocity. They do not fight to win—they fight to kill.</p>\n<h5>Predator’s Devotion</h5>\n<p>At the beginning of the 2nd level of this Class Mod, you gain additional ways to accumulate Piety through your unique Acts of Devotion:</p>\n<ul>\n<li><p><strong>Relentless Butchery</strong> – If you reduce an enemy to 0 HP using your Weapon of the Devoted, you gain 1 additional Piety.</p>\n</li>\n<li><p><strong>Bloodstained Advance</strong> – If you kill two or more enemies in a single turn, you gain 1 additional Piety.</p>\n</li>\n<li><p><strong>Jashin’s Momentum</strong> – If you land a melee critical hit, you gain 1 additional Piety.</p>\n</li>\n</ul>\n<h5>Predator's Illumination</h5>\n<p>At the 2nd level, the Predator’s body begins to manifest the true gifts of Jashin, refining itself into the ultimate weapon of slaughter.</p>\n<ul>\n<li><p>Strength and Dexterity each increase by 2, up to a maximum of 22.</p>\n</li>\n<li><p>Movement speed increases by 5 feet per Piety remaining.</p>\n</li>\n<li><p>Damage reduction equal to twice your Class Mod level.</p>\n</li>\n<li><p>Critical Threat Range increases by 1 (this bypass the imposed limit by 1) and you gain +2 Deadly with you <strong>Weapon of the Devoted</strong></p>\n</li>\n</ul>\n<p>At the 4th level, the Predator moves beyond the realm of warriors, becoming a force of sheer lethality. Every step is calculated, every strike a death sentence. His presence alone shifts the tide of battle, his body honed into the perfect instrument of Jashin’s will.</p>\n<ul>\n<li><p>Strength and Dexterity each increase by an additional 2, up to a maximum of 24.</p>\n</li>\n<li><p>Damage reduction now equals three times your Class Mod level.</p>\n</li>\n<li><p>You gain additional +2 Deadly (this bipass the imposed limit by 1).</p>\n</li>\n<li><p>Once per turn, when you hit a creature with a melee attack, you can roll an additional weapon damage die.</p>\n</li>\n<li><p>When you drop an enemy creature's hit points to 0, your next melee attack has advantage.</p>\n</li>\n<li><p>Your attacks ignore resistance to slashing, piercing, and bludgeoning damage, and treat immunity as resistance.</p>\n</li>\n<li><p>You can Dash as a free action once per turn.</p>\n</li>\n</ul>",
@@ -3200,7 +3200,7 @@
       "_id": "060e06b2b5bed73d",
       "name": "Oath of the Acolyte",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>To walk the path of the Acolyte is to surrender not only your body but your chakra in devotion to Jashin. Where others see energy as a tool, the Acolyte sees offering—a divine transaction between mortal and god.</p>\n<h5>Acolyte's Devotion</h5>\n<p>At the 2nd level, the Acolyte learns that true faith is proven not in words, but in action. Jashin demands sacrifice, and it is through this devotion that the Acolyte strengthens his bond with the divine.</p>\n<ul>\n<li><p><strong>Clash of Devotion</strong> – Whenever you win a clash, you gain 1 Piety.</p>\n</li>\n<li><p><strong>Chakra Sacrifice</strong> – Whenever you expend 20 or more chakra in a single round, you gain 1 Piety.</p>\n</li>\n<li><p><strong>Infliction of Suffering</strong> – When you cause an enemy to suffer 5 ranks of a condition from jutsus or abilities, you gain 1 Piety.</p>\n</li>\n</ul>\n<h5>Acolyte's Enlightment</h5>\n<p>At the 2nd level, the Acolyte fully embraces Jashin’s divine fury, refining their body and chakra to become a living conduit of obliteration. Their chakra flows like wildfire, their form fortified by faith alone.</p>\n<ul>\n<li><p>Intelligence and Constitution each increase by 2, up to a maximum of 22.</p>\n</li>\n<li><p>You gaing 10 chakra points per class mod level.</p>\n</li>\n<li><p>Damage Reduction ninjutsu you cast gain additional reduction equal to twice your Constitution and Intelligence Modifier. This can be done one per turn.</p>\n</li>\n<li><p>Twice per rest you can make one enemy creature fail a saving throw to resist a ninjutsu you cast.</p>\n</li>\n<li><p>Your concentration cannot be broken by taking damage.</p>\n</li>\n</ul>\n<hr />\n<blockquote>\n<h2>Lord's Blessing</h2>\n<p>You gain the Medical keyword, but you may not learn or use jutsus that provide healing or restorative effects.</p>\n<p>If you already possess the Medical keyword, you gain two additional Medical jutsu instead.</p>\n</blockquote>\n<p>At the 4th level, the Acolyte surpasses the limits of mortal spellcasters, turning their own life force into a boundless well of destruction. The line between sacrifice and power vanishes, as every technique becomes an extension of Jashin’s will.</p>\n<ul>\n<li><p>Intelligence and Constitution each increase by an additional 2, up to a maximum of 24.</p>\n</li>\n<li><p>Your Ninjutsu ignore Damage Reduction. Once per turn, if an enemy has immunity, they instead take full damage.</p>\n</li>\n<li><p>Twice per rest, when you cast a Ninjutsu, you can roll additional damage die equal to twice your level in this class mod.</p>\n</li>\n<li><p>Now you can make one enemy creature fail a saving throw to resist a ninjutsu you cast 2 additional times.</p>\n</li>\n<li><p>Twice per rest, you may cast a Ninjutsu at no chakra cost.</p>\n</li>\n<li><p>Your body is fueled by destruction itself—whenever you reduce a creature to 0 HP, you regain chakra equal to twice your Class Mod level.</p>\n</li>\n</ul>",
@@ -3307,7 +3307,7 @@
       "_id": "560c495b53cf1431",
       "name": "Oath of The Nightmare",
       "type": "feat",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p>The path of the Nightmare is for those who seek not only to serve Jashin, but to embrace the very essence of fear itself. The Nightmare Priest is not just a harbinger of death, but a master of mental torment and terror. Their enemies’ minds become their battlefield, and the very idea of death is often the least of their worries. To walk this path is to drown your enemies in fear, breaking their spirits before their bodies even fall.</p>\n<h5>Nightmare's Devotion</h5>\n<p>At the 2nd level, the Nightmare understands that terror is the truest offering to Jashin. He does not fight for dominance—he fights to leave a permanent scar upon the soul.</p>\n<ul>\n<li><p><strong>Terror’s Mark</strong> – Once per turn, when you kill a creature that critically failed a Genjutsu you cast, you gain 2 Piety.</p>\n</li>\n<li><p><strong>Mental Unraveling</strong> – When you affect 4 or more creatures with a single Genjutsu, you gain 1 Piety.</p>\n</li>\n<li><p><strong>Mind’s Reflection</strong> – When a creature affected by one of your Genjutsu causes damage to an allied creature due to hallucinations or mental manipulation, you gain 1 Piety.</p>\n</li>\n</ul>\n<h5>Nightmare's Darkness</h5>\n<p>At the 3rd level, the Nightmare evolves beyond illusion</p>\n<p>and deception—he becomes fear incarnate. His</p>\n<p>words carry the weight of madness, his presence</p>\n<p>alone enough to send weaker minds spiraling</p>\n<p>into despair. To think of him is to summon him,</p>\n<p>to hear him is to falter, and to see him is to</p>\n<p>know that the battle has already been lost.</p>\n<ul>\n<li>Wisdom and Charisma each increase</li>\n</ul>\n<p>by 2, up to a maximum of 22.</p>\n<ul>\n<li>You gain 10 additional Chakra Points</li>\n</ul>\n<p>per Class Mod level.</p>\n<ul>\n<li>Your Genjutsu ignores resistance</li>\n</ul>\n<p>and treats immunity as resistance.</p>\n<ul>\n<li>Whenever a creature fails a Genjutsu</li>\n</ul>\n<p>you cast  that inflicts a mental condition,</p>\n<p>the enemy creature gain 1 extra</p>\n<p>ranks. This happens twice per rest.</p>\n<ul>\n<li>Any feature, jutsu or trait that</li>\n</ul>\n<p>removes all ranks of a condition</p>\n<p>can only remove up to 2 ranks of\na mental condition you caused.</p>\n<p>At the 4th level, your control over the minds of your enemies becomes absolute. The boundaries between reality and illusion blur, leaving those you target in a state of sheer terror. No one is safe from your grasp, not even their allies.</p>\n<ul>\n<li><p>Wisdom and Charisma each increase by 2, up to a maximum of 24.</p>\n</li>\n<li><p>Twice per rest, you can force a creature under the effect of one of your Genjutsu to take psychic damage equal to your 3 times (Your Wisdom Modifier + Charisma Modifier + Class Mod level).</p>\n</li>\n<li><p>Twice per rest, When a willing creature attacks a creature under the effect of a Genjutsu you cast, it will be a critical hit.</p>\n</li>\n<li><p>Once per rest, when you cast a Genjutsu on a creature within a range of 120 feet, The creature have disadvantage on all attack rolls and saving throws for the duration of the genjutsu.</p>\n</li>\n<li><p>Whenever you strike a creature already under the effects of a mental condition (Confused, Frightened, Charmed, etc.), your attack deals additional damage equal to three times your Class Mod level.</p>\n</li>\n<li><p>Creatures that are under mental conditions suffer a -2 penalty to their next saving throw against you.</p>\n</li>\n</ul>\n<hr />\n<blockquote>\n<h2>Lord's Blessing</h2>\n<p>Your Weapon of the Devoted deals psychic damage instead of the normal damage. You can use your Wisdom or Charisma Modifier to hit and damage rolls.</p>\n</blockquote>",
@@ -3414,7 +3414,7 @@
       "_id": "8aa980ec2627283f",
       "name": "Blood Art: Deadly Possession",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 30 feet</p>\n<p><strong>Duration:</strong> Concentration, up to 1 minutes</p>\n<p><strong>Components:</strong> B, CM</p>\n<p><strong>Cost:</strong> 20 Hit Points or 3 Hit Die</p>\n<p><strong>Keywords:</strong> Ritual, Kinjutsu</p>\n<p><strong>Description:</strong> By consuming the fresh blood of your enemy, automatically, your skin will become dark with white marks all over the body, similar to a skeleton — including the symbol of Death. After that, You draw the Jashin symbol on the ground and stands in the center of the drawing, which serves as a link between you and the victim. This connection is sealed by inscribing Jashin’s sigil onto the battlefield—a 5-foot-radius symbol of His divine will. Until this ritual ends, you and your target are permanently entwined, bound by the laws of blood and agony.</p>\n<ul>\n<li><p><strong>Shared Agony:</strong> Whenever you take damage from yourself, your linked target takes the same damage, ignoring their resistances or immunities. If the damage would be halved due to a resistance you possess, the full unmitigated damage is still transferred to the linked target.</p>\n</li>\n<li><p><strong>Sanctuary of Suffering:</strong> While standing within your Jashin sigil, you gain resistance to all damage types.</p>\n</li>\n<li><p><strong>Self-Cast Permission:</strong> Any jutsu or Blood Art you cast can now target yourself, allowing you to use your own body as a conduit of destruction.</p>\n</li>\n<li><p><strong>Unbreakable Covenant:</strong> Your movement speed becomes 0. If you are forcibly moved outside its bounds, or if you take a reaction or bonus action to willingly step beyond its edge, the ritual stops. However, if you go back inside the symbol, the connection is made again. While inside the symbol, Arts ignores M component.</p>\n</li>\n</ul>\n<p>If your linked target dies, the sigil vanishes in a burst of dark energy.</p>\n<hr />\n<blockquote>\n<h2>Blood Trail</h2>\n<p>Any Bleed effect you cause leaves behind traces of blood, marking the battlefield with your dark devotion.\nThis blood lingers for 1 minute before drying and becoming inert.</p>\n<p>Additionally, as a Bonus Action, you may use your Weapon of the Devoted to collect this spilled blood.</p>\n<p>When using blood as a component to cast an art, it will be referred to as <em>B</em></p>\n</blockquote>",
@@ -3563,7 +3563,7 @@
       "_id": "76c271d5efc09059",
       "name": "Blood Art: Danse Macabre",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong>  Reaction (when taking damage) or Action (self-inflicted)</p>\n<p><strong>Range:</strong> Self</p>\n<p><strong>Duration:</strong> Until restored (or 5 minutes for self-severed limbs)</p>\n<p><strong>Components:</strong> M</p>\n<p><strong>Cost:</strong> 3 Hit Die</p>\n<p><strong>Keywords:</strong> Ninjutsu, Kinjutsu</p>\n<p><strong>Description:</strong> Jashin’s chosen do not fear destruction—they embrace it. When struck by a deadly blow, you may invoke this unholy rite, negating all damage at the cost of a part of your own body. Roll a d6 to determine which limb is sacrificed:</p>\n<ul>\n<li><strong>1 –</strong> Right Arm</li>\n<li><strong>2 –</strong> Left Arm</li>\n<li><strong>3 –</strong> Right Leg</li>\n<li><strong>4 –</strong> Left Leg</li>\n<li><strong>5-6</strong> – Head</li>\n</ul>\n<p>Severed limbs remain animate, writhing with Jashin’s dark blessing. Despite dismemberment, you continue to function, albeit with penalties:</p>\n<ul>\n<li><p>If one arm is lost, you cannot wield two-handed weapons.</p>\n</li>\n<li><p>If both arms are lost, you lose the HS keyword, preventing you from casting certain jutsus.</p>\n</li>\n<li><p>If one leg is lost, your movement speed is halved and you have disadvantage on Dexterity checks.</p>\n</li>\n<li><p>If both legs are lost, you lose the M keyword, preventing movement-based jutsus.</p>\n</li>\n<li><p>If your head is lost, you immediately suffer +5 exhaustion levels, Until you put it back in place.</p>\n</li>\n</ul>\n<p>Severed limbs can be reattached by pressing them against the wound and spending 1 Hit die. This process takes 1 minute. If a limb is completely destroyed, you may regrow it over a Full Rest by expending 3 Hit Die.</p>\n<p>As an Action, you may sever one of your own limbs, taking 6d8 unreducible necrotic damage. Instead of falling uselessly, the severed limb remains under your control, moving freely for 5 minutes before falling inert. You  can control it with a free action.</p>\n<ul>\n<li>The limb can crawl 15ft per turn, grab, or perform simple tasks within 30 feet of you.</li>\n<li>A severed arm can still perform somatic components for jutsu.</li>\n<li>A severed leg can move independently, carrying small objects or tripping enemies.</li>\n</ul>\n<p>You may reattach the limb freely at any time, without expending a Hit Die, provided it has not been completely destroyed.</p>",
@@ -3711,7 +3711,7 @@
       "_id": "25b98372763642e1",
       "name": "Blood Art: Crimson Rend",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> Weapons Range</p>\n<p><strong>Duration:</strong> Instantaneous</p>\n<p><strong>Components:</strong> W (Slashing), M</p>\n<p><strong>Cost:</strong> 8 Hit Points or 1 Hit Die</p>\n<p><strong>Keywords:</strong> Bukijutsu, Kinjutsu</p>\n<p><strong>Description:</strong>\nYou channel Jashin’s unholy might through your Weapon of the Devoted, striking with ruthless precision to cripple and drain your target. Make a melee Blood Art attack against a creature within range using your Weapon of the Devoted. On a hit, the target takes your weapons damage + 4d10 slashing damage and must succeed on a Constitution saving throw against your Blood Art Save DC or gain 2 ranks of lacerated and 2 ranks of weakened.</p>\n<p><em><strong>Crimsom Link effect:</strong></em> If you are under the effects of Deadly Possession and inflict damage on yourself with this art, the damage the linked creature takes is maximized and conditions you inflict with Crimson Rend are transfered directly to your linked target, bypassing resistances and immunities.</p>",
@@ -3851,7 +3851,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "blood",
           "bloodHpCost": 8,
-          "bloodHdCost": 1
+          "bloodHdCost": 1,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -3865,7 +3866,7 @@
       "_id": "5e5360d4008c4562",
       "name": "Blood Art: Blood Impalement",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 60 feet</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> W (Piercing), M</p>\n<p><strong>Cost:</strong> 12 Hit Points or 1 Hit Die</p>\n<p><strong>Keywords:</strong> Bukijutsu, Kinjutsu</p>\n<p><strong>Description:</strong> You hurl your Weapon of the Devoted, infused with the fervent essence of your blood sacrifice, toward a target within range. Make a Ranged Blood Art Attack roll against the target. On a hit, the target takes your weapons damage + 15d10 Psychic damage as your weapon impales their body and soul. Additionally, they must succeed on a Wisdom saving throw against your Blood Art Save DC or become Stunned until the end of your next turn.</p>\n<p>The impaled creature must spend an action to remove the weapon from its body. Each time it casts a jutsu while impaled, the cost of the jutsu is doubled.</p>",
@@ -4005,7 +4006,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "blood",
           "bloodHpCost": 12,
-          "bloodHdCost": 1
+          "bloodHdCost": 1,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -4019,7 +4021,7 @@
       "_id": "aed4fc8867091509",
       "name": "Blood Art: Lord's Bestowal",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Classification:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> Special</p>\n<p><strong>Range:</strong> Weapons range</p>\n<p><strong>Duration:</strong> Concentration, up to 1 Minute</p>\n<p><strong>Components:</strong> W (Melee Slashing or Piercing), M, CM</p>\n<p><strong>Cost:</strong> 12 Hit Points or 1 Hit Die</p>\n<p><strong>Keywords:</strong> Bukijutsu, Kinjutsu</p>\n<p><strong>Description:</strong> You focus your chakra and inject it into your weapon. As a part of the activation of this art, as an action, make a melee Blood Art attack targeting a creature within range. On a hit, you deal your [weapons damage] and draw blood from your target, coating your weapon in it. For the duration, you weapon deals an additional 10d10 necrotic damage twice per turn. If you miss on this first attack, this jutsu fails and you lose concentration immediately.</p>\n<p>If you hit on the first attack, as a bonus action, you can cast Deadly Possession with the blood of the creature that was targeted by this art.</p>",
@@ -4169,7 +4171,7 @@
       "_id": "8363f2b981f024e4",
       "name": "Blood Art: Red Retribution",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> 1 Reaction, which you take when damaged by a hostile creature</p>\n<p><strong>Range:</strong> Self (30-foot radius)</p>\n<p><strong>Duration:</strong> Instantaneous</p>\n<p><strong>Components:</strong> HS, CM</p>\n<p><strong>Cost:</strong> 1 Hit Die</p>\n<p><strong>Keywords:</strong> Genjutsu, Kinjutsu</p>\n<p><strong>Description:</strong> The echoes of your pain turn into waves of psychic torment, punishing those who dare raise their hands against Jashin's chosen. When harmed by an enemy’s attack or jutsu, you unleash a wave of blood-infused vengeance granted by Jashin. All hostile creatures within a 30-foot radius must make a Constitution saving throw against your Blood Art Save DC. On a failure, they take Psychic damage equal to the amount of damage you received from the triggering attack, plus additional damage equal to your Class Mod level × 2. On a success, they take half damage.</p>\n<p><em><strong>Crimsom Link effect:</strong></em> If you are under the effects of Deadly Possession and inflict damage on yourself with this art, the damage the linked creature takes is maximized, bypassing resistances and immunities.</p>",
@@ -4318,7 +4320,7 @@
       "_id": "15312513850b339b",
       "name": "Blood Art: Scarlet Cyclone",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> Self (20-foot radius)</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> W (Slashing), M</p>\n<p><strong>Cost:</strong> 15 Hit Points or 1 Hit Die</p>\n<p><strong>Keywords:</strong> Bukijutsu, Kinjutsu</p>\n<p><strong>Description:</strong> You spin with deadly precision, channeling Jashin’s fury through your Weapon of the Devoted. All creatures within a 20-foot radius must succeed on a Dexterity saving throw against your Blood Art Save DC. On a failed save, they take 16d12 Slashing damage, gain 5 ranks of Lacerated condition, and are knocked prone. On a successful save, creatures take half damage and suffer no conditions.</p>\n<p>If your weapon has the reach property, the art's range increases by 10ft. For each reach rank after the first, the art increases the range by 5ft.</p>\n<p><em><strong>Crimsom Link effect:</strong></em> If you are under the effect of Deadly Possession, you can choose to take half of the damage as if you had succeded the saving throw, transferring the damage to the linked creature as if the they had failed the saving throw.</p>",
@@ -4458,7 +4460,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "blood",
           "bloodHpCost": 15,
-          "bloodHdCost": 1
+          "bloodHdCost": 1,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -4472,7 +4475,7 @@
       "_id": "bfd6b10322178c56",
       "name": "Blood Art: Jashin’s Tribute",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> Reaction, which you take when an ally reduces a hostile creature to 0 Hit Points</p>\n<p><strong>Range:</strong> Weapons range</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> W (Weapon of the Devoted), M</p>\n<p><strong>Cost:</strong> 8 Hit Points or 1 Hit Die</p>\n<p><strong>Keywords:</strong> Bukijutsu, Kinjutsu</p>\n<p><strong>Description:</strong>\nUpon witnessing an ally strike down an enemy, you swiftly intervene, moving up to your movement speed towards the fallen enemy (this movement does not provoke opportunity attacks). As part of the same reaction, you plunge your Weapon of the Devoted into the dying creature, symbolically claiming its death as your own offering.</p>\n<p>You immediately gain an additional Piety from your Crimson Rite feature. Additionally, you regain hit points equal to half the damage dealt by your ally's final attack.</p>\n<p><em><strong>Crimsom Link effect:</strong></em> If you are under the effects of Deadly Possession, you transfer all condition currently affecting you directly to the dying creature’s soul, cleansing yourself entirely. This effect does not affect conditions that were applied by this classmod (e.g. Exhaustion).</p>",
@@ -4621,7 +4624,7 @@
       "_id": "a67911ce468a7403",
       "name": "Blood Art: Devil's Execution",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Category:</strong> Blood Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> Weapons range</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> W (Weapon of the Devoted), M</p>\n<p><strong>Cost:</strong> 18 Hit Points or 2 Hit Die</p>\n<p><strong>Description:</strong> You perform a swift, devastating strike empowered by Jashin’s unquenchable thirst. Make a melee attack using your Weapon of the Devoted against one target within reach. On a successful hit, the target takes your weapons damage + 8d12 Slashing damage and suffers 3 Ranks of Lacerated.</p>\n<p><em><strong>Executioner's Grace:</strong></em> If 6 or more d12 rolled on this art show the number 7, the target is immediately decapitated and killed, unless it is immune to instant death effects or does not require a head to survive.</p>",
@@ -4760,7 +4763,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "blood",
           "bloodHpCost": 18,
-          "bloodHdCost": 2
+          "bloodHdCost": 2,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -4774,7 +4778,7 @@
       "_id": "1139ce1b583c7862",
       "name": "Hungering Hand",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Predator, Danse Macabre</p>\n<p><strong>Catergory:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 30 feet</p>\n<p><strong>Duration:</strong> Concentration, up to 1 minute</p>\n<p><strong>Components:</strong> M</p>\n<p><strong>Cost:</strong> 6 Piety</p>\n<p><strong>Description:</strong>\nJashin's chosen do not merely strangle their foes—they offer their own flesh to do so. By tearing free your own arm and hurling it towards an enemy, you create an unholy grasp that constricts the very breath from their lungs.</p>\n<p>Make a Oath Art ranged attack against a creature within the range. On a hit, your severed hand wraps around their throat, binding them in a death grip. The target suffers the following effects:</p>\n<ul>\n<li><p>They cannot perform Hand Seals.</p>\n</li>\n<li><p>They immediately suffer 2 ranks of Exhaustion.</p>\n</li>\n<li><p>At the end of each of their turns, they suffer 2 additional ranks of Exhaustion.</p>\n</li>\n</ul>\n<p>While this Blood Art remains active, you lose the use of your severed arm, including its ability to perform attacks, jutsus requiring Hand Seals (if it was your only functional arm), or other interactions.</p>\n<p>At the start of their turn, the target may attempt a Strength saving throw vs Oath DC. On a success, they rip the severed arm free, ending the effect and removing all Exhaustion ranks caused by this Oath Art. The arm is released on the ground and enters the Danse Macabre effect as if you had torn it off with an action.</p>",
@@ -4921,7 +4925,7 @@
       "_id": "5500aacd9a41a738",
       "name": "Predator’s Judgement",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Predator</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> Self (60-foot cone)</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> W (Weapon of the Devoted), M, CM</p>\n<p><strong>Keywords:</strong> Bukijutsu, Kinjutsu</p>\n<p><strong>Cost:</strong> 14 Piety</p>\n<p><strong>Description:</strong> You strike the earth with your Weapon of the Devoted, unleashing a wave of crimson energy infused with Jashin’s wrath. Each creature of your choice within a 60-foot cone must succeed on a Strength saving throw against your Oath Art Save DC or take 50d10 Necrotic damage, becoming Dazed, Stunned and gaining 3 ranks of Weakened until the end of your next turn. On a successful save, creatures take half damage and suffer no conditions.</p>\n<p>Additionally, any creature reduced to 0 hit points by this Oath Art instantly dies, becoming a sacred offering to Jashin. You immediately regain a number of Hit Points equal to half the damage each creature takes.</p>",
@@ -5062,7 +5066,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "predator",
-          "pietyCost": 14
+          "pietyCost": 14,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -5076,7 +5081,7 @@
       "_id": "6c2a3e7c9c9b4776",
       "name": "Blood Sovereignty",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Predator</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> Self (60-foot radius)</p>\n<p><strong>Duration:</strong> Concentration, up to 1 minute</p>\n<p><strong>Components:</strong> CM</p>\n<p><strong>Cost:</strong> 7 Piety</p>\n<p><strong>Description:</strong>\nYou consecrate the battlefield to Jashin, claiming dominion over spilled blood. While this Oath Art is active, whenever any creature (including yourself and allies) within a 60-foot radius takes damage, you immediately regain hit points equal to twice your Class Mod level. Additionally, enemies within the area that begin their turn with the Bleeding condition lose additional hit points equal to twice your Class Mod level.</p>\n<p>At any time during the duration, you can expend 1 additional Piety (no action required) to cause one creature within the radius who currently suffers from Bleeding to immediately make a Constitution saving throw. On a failure, the creature takes 8d10 Necrotic damage and is Dazed until the end of your next turn.</p>",
@@ -5131,7 +5136,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "8d10",
+              "necrotic"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -5209,7 +5219,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "predator",
-          "pietyCost": 7
+          "pietyCost": 7,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -5223,7 +5234,7 @@
       "_id": "5a6dbcd1191b252b",
       "name": "Mark of the Blood Hunter",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Predator</p>\n<p><strong>Oath Art Type:</strong> Technique</p>\n<p><strong>Casting Time:</strong> 1 Bonus Action</p>\n<p><strong>Range:</strong> 90 feet</p>\n<p><strong>Duration:</strong> 1 Minute</p>\n<p><strong>Cost:</strong> 4 Piety</p>\n<p><strong>Description:</strong>\nYou designate a single creature within range, marking it with the Sigil of the Blood Hunter. For the duration, once per turn, when you attack a creature marked by your Blood Hunter’s Mark, you deal additional Xd8 acid damage (where X = your Class Mod level × 4) if you have advantage on the attack roll, or An ally is within 5 feet of the target. If you have disadvantage on the attack, you cannot benefit from this additional damage. For each successful hit, the marked creature must make a Constitution saving throw at disadvantage vs your Oath Art DC, gaining 1 rank of corroded and decreasing its AC by 1. If the marked creature attempts to escape or hide, you automatically know its exact location.</p>\n<p>Additionally, if the marked creature dies during this effect, you regain hit points equal to Xd8 (where X = your Class Mod level × 4) and recover 1 Piety.</p>",
@@ -5278,7 +5289,12 @@
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "4d8*@classmods.crimson-priest.levels",
+              "acid"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -5354,7 +5370,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "predator",
-          "pietyCost": 4
+          "pietyCost": 4,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -5368,7 +5385,7 @@
       "_id": "1c647fdac229f45a",
       "name": "My God's Mercy",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Predator</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> Weapons range</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> W (Weapon of the Devoted), M, CM</p>\n<p><strong>Keywords:</strong> Bukijutsu, Kinjutsu</p>\n<p><strong>Cost:</strong> 8 Piety</p>\n<p><strong>Description:</strong>\nYou perform a ruthless strike intended to cripple your prey and prolong their suffering. Make a melee Oath Art attack against a creature within reach. On a hit, the creature takes you weapons damage + 28d10 Slashing damage + 12d8 Necrotic damage and the enemy creature must make a strength saving throw. On a failed save, they gain 2 ranks of Weakened and 3 ranks of Slowed, lasting for 1 minute.</p>\n<p>If you drop the target creature's hit points to 0, you regain 2 spent Piety as you revel in Jashin's cruel favor.</p>",
@@ -5513,7 +5530,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "predator",
-          "pietyCost": 8
+          "pietyCost": 8,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -5527,7 +5545,7 @@
       "_id": "4d1f398f488bf324",
       "name": "Hunter Feast",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Predator</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Bonus Action</p>\n<p><strong>Range:</strong> Self</p>\n<p><strong>Duration:</strong> Concentration, up to 1 minute</p>\n<p><strong>Components:</strong> Weapon of the Devoted</p>\n<p><strong>Cost:</strong> 6 Piety</p>\n<p><strong>Description:</strong> You channel the fury of Jashin into your physical form, transforming your body into a living weapon of divine carnage. For the duration, you gain the following effects:</p>\n<ul>\n<li><p>Your Strength and Dexterity scores increase by 4 (maximum 26).</p>\n</li>\n<li><p>Your movement speed is doubled, and opportunity attacks against you are made at disadvantage.</p>\n</li>\n<li><p>Your critical threat range is increased by 2 (stacks with other bonuses).</p>\n</li>\n<li><p>Each successful melee attack deals an additional 3d10 Necrotic damage and applies 1 rank of Bleeding.</p>\n</li>\n</ul>\n<h2>Acolyte Arts</h2>",
@@ -5575,14 +5593,19 @@
           "scale": false
         },
         "ability": "art",
-        "actionType": "",
+        "actionType": "msak",
         "chatFlavor": "",
         "critical": {
           "threshold": null,
           "damage": ""
         },
         "damage": {
-          "parts": [],
+          "parts": [
+            [
+              "3d10",
+              "necrotic"
+            ]
+          ],
           "versatile": ""
         },
         "formula": "",
@@ -5658,7 +5681,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "predator",
-          "pietyCost": 6
+          "pietyCost": 6,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -5672,7 +5696,7 @@
       "_id": "ca9e999b0b964cd0",
       "name": "Sanguine Husk Technique",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Acolyte</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 20ft radius</p>\n<p><strong>Duration:</strong> 1 Minute</p>\n<p><strong>Components:</strong> B (Injected into a corpse)</p>\n<p><strong>Cost:</strong> 8 Piety</p>\n<p><strong>Description:</strong>\nJashin does not tolerate wasted flesh. Through this profane ritual, you inject your own tainted blood into a fresh corpse, forcing it to rise as your Sanguine Husk—a grotesque imitation of life, animated solely by your will.</p>\n<p>You may raise up to two Husks at once. These creatures retain no memories, intelligence, or personality—they exist only to serve as vessels of carnage. While active, the Husks follow your commands and move independently, attacking at your direction.</p>\n<h5>Sanguine Husk Statistics:</h5>\n<ul>\n<li><p>Uses the basic physical attributes (Strength, Dexterity, Constitution) of the original body, but has no mental scores (Intelligence, Wisdom, Charisma = 0).</p>\n</li>\n<li><p>Its AC is equal your Oath DC.</p>\n</li>\n<li><p>It has half the hit points the creature had in life (Max of 100).</p>\n</li>\n<li><p>It retains basic melee weapon proficiency but cannot use jutsu or chakra-based abilities.</p>\n</li>\n<li><p>It takes its turn immediately after yours in initiative.</p>\n</li>\n<li><p>If it is reduced to 0 HP, it bursts into a bloody mist, healing you for half the damage it took, leaving behind a blood-like smoke that lasts for 1 minute or until removed</p>\n</li>\n<li><p>As a Bonus Action, you may issue a mental command to any or all Husks you control. If given no command, they use their action to attack the nearest hostile creature.</p>\n</li>\n<li><p>If they move further than 60 feet from you, they collapse into lifeless corpses once more.</p>\n</li>\n</ul>\n<p>When you expend additional 5 Piety while casting this Blood Art, you may raise an additional Husk per 5 die spent.  If you slay a creature with a melee attack, you can use your reaction to immediately raise it as a Sanguine Husk without additional cost.</p>\n<p>When this Blood Art ends, or if you willingly dismiss it, all Husks collapse into lifeless, blood-soaked remains.  A body that was animated by this technique cannot be reanimated again  Full Rest has passed.</p>",
@@ -5720,7 +5744,7 @@
           "scale": false
         },
         "ability": "art",
-        "actionType": "",
+        "actionType": "msak",
         "chatFlavor": "",
         "critical": {
           "threshold": null,
@@ -5819,7 +5843,7 @@
       "_id": "353243253cfc75aa",
       "name": "Sacrament of the Blasted Flesh",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Acolyte</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> Full-turn action</p>\n<p><strong>Range:</strong> Self (600ft area)</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> CM</p>\n<p><strong>Cost:</strong> You Die</p>\n<p><strong>Description:</strong> True devotion demands absolute sacrifice. You have meticulously inscribed countless explosive seals onto your own flesh, transforming your body into a living bomb of divine destruction. In a final, glorious act, you throw yourself into the fray and trigger the ritualistic detonation, unleashing a cataclysmic blast of carnage and fire.</p>\n<p>All creatures within 600 feet of you must make a Strength saving throw against your Oath DC. On a failure, they take 200d6 force damage + 100. On a success, they take half damage. Structures and objects in the area automatically take full damage.</p>",
@@ -5957,7 +5981,9 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "acolyte",
-          "pietyCost": 0
+          "pietyCost": 0,
+          "damageAutomationVersion": 1,
+          "crimsonPriestSelfSacrifice": true
         },
         "n5eb": {
           "classmodArt": {
@@ -5971,7 +5997,7 @@
       "_id": "b7e84cc1da066ab3",
       "name": "Black Sacrament",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Acolyte</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 15 Feet</p>\n<p><strong>Duration:</strong> Concentration, up to 1 Minute</p>\n<p><strong>Components:</strong> HS, CM, CS</p>\n<p><strong>Cost:</strong> 12 Piety</p>\n<p><strong>Description:</strong>\nYou draw a circle of blood in the air and press it against an enemy within range, sealing their fate in the name of Jashin. The target must make a Constitution saving throw vs your Oath Art Save DC. On a failure, they take 12d8 necrotic damage and are marked with the Brand of Sacrifice. While marked:</p>\n<ul>\n<li><p>At the start of each of their turns, the target takes 5d8 acid damage, ignoring resistance. This damage increases by 2d8 every turn the mark remains until the marked creature falls to 0 hit points.</p>\n</li>\n<li><p>If the creature falls to 0 hit points while marked, they die immediately and are permanently Sealed. They cannot be revived by any means unless the seal is removed with a Chakra Control check vs your Oath Art Save DC + 5.</p>\n</li>\n<li><p>The creature may attempt a new Constitution saving throw at the end of each of their turns. On a failure, the mark persists and they take 3d8 additional necrotic damage.</p>\n</li>\n</ul>\n<p>The mark disappears when the creature succeeds on their Constitution saving throw.</p>",
@@ -6111,7 +6137,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "acolyte",
-          "pietyCost": 12
+          "pietyCost": 12,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -6125,7 +6152,7 @@
       "_id": "643b9142e2882ff6",
       "name": "Profane Bolt",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Acolyte</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 60 Feet</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> HS, CM, CS</p>\n<p><strong>Cost:</strong> 7 Piety</p>\n<p><strong>Description:</strong> You extend your hand, channeling the will of Jashin into a searing bolt of profane energy. A crackling black lightning bolt erupts from your palm, striking a creature within range. The target must make a Dexterity saving throw vs your Oath Art Save DC. On a failure, they take 12d8 necrotic damage and 12d8 chakra damage. On a success, they take half as much damage.</p>\n<p>If the target fails the Dexterity saving throw, they must immediately make a Constitution saving throw. On a failure, they receive 3 ranks of Sealed, unable to mold chakra properly.</p>",
@@ -6269,7 +6296,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "acolyte",
-          "pietyCost": 7
+          "pietyCost": 7,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -6283,7 +6311,7 @@
       "_id": "7b30d1a772eb9a7e",
       "name": "Abyssal Maw",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Acolyte</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 60 Feet (20-foot radius)</p>\n<p><strong>Duration:</strong> Concentration, up to 1 Minute</p>\n<p><strong>Components:</strong> HS, CM, CS</p>\n<p><strong>Cost:</strong> 14 Piety</p>\n<p><strong>Description:</strong>\nYou open a profane abyss beneath your enemies, a spiraling maw of blackened void that devours chakra and vitality alike. The ground within a 20-foot radius centered on a point within range warps into a swirling chasm of cursed energy, becoming difficult terrain for the duration.</p>\n<p>When a creature of your choice starts its turn or enters the area for the first time, it must make a Strength saving throw vs your Oath Art Save DC. On a failure, it is pulled 10 feet toward the center of the abyss. Any creature that remains inside the abyss for 3 consecutive turns suffers the following:</p>\n<ul>\n<li><p>Falls prone as the abyssal forces drag them down.</p>\n</li>\n<li><p>Their movement speed is halved for 1 minute.</p>\n</li>\n<li><p>They gain 5 ranks of Weakened and Sealed.</p>\n</li>\n</ul>\n<p>The abyss persists for the duration or until you dismiss it. Creatures who escape the area retain the effects.</p>\n<p>A creature that remains inside the abyss for 5 consecutive turns is completely consumed and dragged into a cursed dimension beyond mortal comprehension. The creature disappears entirely, unable to escape by any means short of divine intervention.</p>\n<p>If the creature somehow returns from this dimension, they are instantly afflicted with 50d10 psychic damage.</p>",
@@ -6432,7 +6460,7 @@
       "_id": "39034fe4afde91ff",
       "name": "Requiem",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Acolyte</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Reaction, which you take when you are targeted by an attack or forced to make a saving throw</p>\n<p><strong>Range:</strong> Self (10-foot radius)</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> HS, CM</p>\n<p><strong>Cost:</strong> 6 Piety</p>\n<p><strong>Description:</strong>\nWhen an enemy strikes at you, you invoke the will of Jashin, inscribing a crimson sigil beneath your feet that detonates in a pulse of profane energy. The attack that triggered this Oath Art automatically fails, or, if you were forced to make a saving throw, you instead suffer no effects, even on a failure.</p>\n<p>Immediately after, all creatures of your choice within 10 feet must make a Constitution saving throw against your Oath Art Save DC, taking 8d8 chakra damage on a failed save or half as much on a success. Creatures who fail this saving throw also gain 1 rank of Sealed, their chakra network momentarily severed.</p>\n<p>If the creature that triggered this reaction is within 5 feet of you, it automatically fails its saving throw and must succeed on a Strength saving throw or be launched 20 feet backward, landing prone.</p>\n<h2>Nightmare Arts</h2>",
@@ -6497,7 +6525,7 @@
         },
         "formula": "",
         "save": {
-          "ability": "con",
+          "ability": "str",
           "dc": null,
           "scaling": "art"
         },
@@ -6571,7 +6599,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "acolyte",
-          "pietyCost": 6
+          "pietyCost": 6,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -6585,7 +6614,7 @@
       "_id": "1aad5cfe0c8d2202",
       "name": "Shroud of Unreality",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Nightmare</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 45 Feet Radius</p>\n<p><strong>Duration:</strong> Concentration, up to 1 Minute</p>\n<p><strong>Components:</strong> HS, CM</p>\n<p><strong>Cost:</strong> 8 Piety</p>\n<p><strong>Description:</strong>\nYou weave the fabric of perception into a nightmare, shrouding the battlefield in an ephemeral illusion that blurs the line between reality and delusion. All creatures of your choice within range must make an Intelligence saving throw against your Oath Art DC. On a failure, they become Ensnared by the False Realm, suffering the following effects:</p>\n<ul>\n<li><p>They gain 4 ranks of Confusion and Slowed, seeing shifting visions of threats and allies blending together.</p>\n</li>\n<li><p>Each time they attempt to cast a jutsu, attack, or move out of the affected area, they must make a new Intelligence saving throw. On a failure, they hesitate, wasting the action or movement as if frozen in indecision.</p>\n</li>\n</ul>\n<p>If a creature remains within the area for three consecutive turns, they gain two additional ranks of Confusion, and their vision blurs completely, rendering them Blinded until the effect ends.</p>\n<p>A creature can remake its saving throw at the end of each of its turns, ending the effect on a success.</p>",
@@ -6733,7 +6762,7 @@
       "_id": "af00e45a08c192f3",
       "name": "Mind Fracture",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Nightmare</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Reaction, which you take when a creature within range succeeds on an Intelligence, Wisdom, or Charisma saving throw.</p>\n<p><strong>Range:</strong> 30 Feet</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> HS, CM</p>\n<p><strong>Cost:</strong> 8 Piety</p>\n<h2><strong>Description:</strong>\nThe mind is fragile, and even the act of resisting can leave cracks in its foundation. When a creature within range successfully makes an Intelligence, Wisdom, or Charisma saving throw, you force it to make an Intelligence saving throw against your Oath Art DC.</h2>\n<h2><em><strong>Failure:</strong></em> The creature takes 6d10 psychic damage as an overwhelming illusion rips through its mental defenses, momentarily shattering its perception. It also gains 2 ranks of Concussed and is unable to concentrate on jutsu or abilities until the end of its next turn.</h2>\n<p><em><strong>Critical Failure:</strong></em> As above, but the target instead takes 10d10 psychic damage and becomes Dazed for 1 minute. It may attempt a new saving throw at the end of each of its turns to end the effect. It also gains 4 ranks of Concussed and is unable to concentrate on jutsu or abilities until the end of its next turn.</p>",
@@ -6872,7 +6901,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "nightmare",
-          "pietyCost": 8
+          "pietyCost": 8,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -6886,7 +6916,7 @@
       "_id": "9723168700ccac04",
       "name": "Nightmare Rend",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Nightmare</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 60 Feet</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> HS, CM</p>\n<p><strong>Cost:</strong> 10 Piety</p>\n<h2><strong>Description:</strong>\nYou tear through the fabric of a creature’s mind, forcefully distorting its perception of reality into an unbearable nightmare. Choose one creature within range that you can see. The target must make an Intelligence saving throw against your Oath Art Save DC.</h2>\n<h2><em><strong>Failure:</strong></em> The target takes 14d10 psychic damage and becomes Confused for 1 minute. While Confused by this effect, the creature must roll twice whenever it makes an attack roll, ability check, or saving throw, and take the lower result.</h2>\n<p><em><strong>Critical Failure:</strong></em> As above, but the target also gains 5 ranks of Fear and immediately drops whatever it is holding, unable to willingly move closer to you for the duration.</p>\n<p>A creature affected by this Oath Art may attempt a new Intelligence saving throw at the end of each of its turns. On a success, the Fear and Confusion effects end, but the lingering mental damage prevents them from benefiting from advantage on any attack roll for the next minute.</p>",
@@ -7025,7 +7055,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "nightmare",
-          "pietyCost": 10
+          "pietyCost": 10,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -7039,7 +7070,7 @@
       "_id": "22ee71126dff8127",
       "name": "Abyssal Grasp",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Nightmare</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 60 Feet</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> HS, CM</p>\n<p><strong>Cost:</strong> 12 Piety</p>\n<p><strong>Description:</strong></p>\n<h2>You summon shadowy tendrils from the depths of an illusory abyss, reaching out to ensnare a target within range. The target must make a Strength saving throw against your Oath Art Save DC.</h2>\n<h2><em><strong>Critical Success:</strong></em> The target resists the illusion entirely, suffering no effect.</h2>\n<h2><em><strong>Success:</strong></em> The target momentarily escapes the grasp, suffering 6d12 psychic damage as visions of being dragged into the abyss overwhelm their mind.</h2>\n<h2><em><strong>Failure:</strong></em> The target is Restrained for 1 minute, as the abyssal tendrils coil around them, and suffers 12d12 psychic damage. At the end of each of its turns, it may repeat the saving throw to end the effect.</h2>\n<h2><em><strong>Critical Failure:</strong></em> The abyss claims a greater hold. The target is Restrained and suffers 24d12 psychic damage. Additionally, they gain 5 ranks of Fear until the end of their next turn as the terror of oblivion consumes their mind.</h2>\n<p>If a creature remains restrained by this Nightmare Art for three turns or longer, the abyss begins to consume them, rendering them Blinded and Deafened until the effect ends.</p>",
@@ -7178,7 +7209,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "nightmare",
-          "pietyCost": 12
+          "pietyCost": 12,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -7192,7 +7224,7 @@
       "_id": "724822ee0c955ad4",
       "name": "Endless Descent",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Nightmare</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 30 Feet</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> HS, CM, CS</p>\n<p><strong>Cost:</strong> 14 Piety</p>\n<h2><strong>Description:</strong>\nYou fracture the mind of a creature within range, trapping it in an endless, spiraling illusion of falling into a void. The target must make an Intelligence saving throw against your Oath Art Save DC.</h2>\n<h2><em><strong>Critical Success:</strong></em> The target resists the illusion, suffering no effects.</h2>\n<h2><em><strong>Success:</strong></em> The target suffers 10d10 psychic damage as their mind momentarily struggles to grasp reality.</h2>\n<h2><em><strong>Failure:</strong></em> The target is Knocked Prone and suffers 15d10 psychic damage as their senses are overwhelmed by the illusion of falling endlessly into the abyss. Their movement speed is also halved until the end of their next turn.</h2>\n<p><em><strong>Critical Failure:</strong></em> The target is Knocked Prone and suffers 30d10 psychic damage as their consciousness begins to slip into the abyss. They gain 5 ranks of Slowed and must succeed on another Intelligence saving throw at the start of their next turn, or be Stunned until the end of that turn.</p>",
@@ -7332,7 +7364,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "nightmare",
-          "pietyCost": 14
+          "pietyCost": 14,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -7346,7 +7379,7 @@
       "_id": "0ed5c652602a00fd",
       "name": "God’s Condemnation",
       "type": "spell",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<p><strong>Prerequisite:</strong> Oath of the Nightmare</p>\n<p><strong>Category:</strong> Oath Art</p>\n<p><strong>Casting Time:</strong> 1 Action</p>\n<p><strong>Range:</strong> 60 Feet</p>\n<p><strong>Duration:</strong> Instant</p>\n<p><strong>Components:</strong> HS, CM</p>\n<p><strong>Cost:</strong> 20 Piety</p>\n<p><strong>Description:</strong>\nYou invoke the absolute judgment of Jashin, manifesting a vision of the god of slaughter before your target. The creature must make a saving throw using the lowest among Intelligence, Wisdom, or Charisma against your Oath Art Save DC.</p>\n<p>On a failure, the target suffers 100d12 psychic damage and is afflicted with 5 ranks of Fear and Berserk as their mind is shattered under the divine presence. A creature afflicted with both conditions takes 20d10 additional psychic damage whenever it attempts to attack you. This Art ignores immunity to Fear and Berserk.</p>\n<p>If the target's hit points are reduced to 0 by this Art, their body convulses in a final act of chaos. Before dying, they must immediately cast the highest-rank jutsu in their arsenal, targeting a random ally in range. If the jutsu requires concentration, they automatically maintain it until their death takes effect.</p>\n<p>If the target has no allies within range, a swirling void of endless darkness erupts beneath them—the manifestation of Jashin’s hunger. This black hole drags them into the abyss, sealing them permanently within the Death Dimension, a place of eternal torment reserved for those who fail to offer sacrifice. The creature cannot be revived by any means unless Jashin himself is appeased.</p>",
@@ -7485,7 +7518,8 @@
           "classMod": "crimson-priest",
           "crimsonPriestArtKind": "oath",
           "crimsonPriestOath": "nightmare",
-          "pietyCost": 20
+          "pietyCost": 20,
+          "damageAutomationVersion": 1
         },
         "n5eb": {
           "classmodArt": {
@@ -7499,7 +7533,7 @@
       "_id": "f3365b364ca01198",
       "name": "Crimson Priest",
       "type": "classmod",
-      "img": "systems/n5eb/assets/content/jutsu-icons/7th-inner-gate.webp",
+      "img": "systems/n5eb/assets/content/items/triplescythe.webp",
       "system": {
         "description": {
           "value": "<h2>The first cut is always the sweetest. That is what they say.</h2>\n<h2>The Jashin Adept is not merely a man, nor a warrior, nor a common murderer. They are a vessel, a hollow thing filled only with the will of their god, their every act a hymn of violence. Where they walk, blood pools in their wake, bodies left as silent prayers to an indifferent deity.</h2>\n<h2>Pain is no stranger to them, nor is death. They have welcomed both, tasted them, drowned in them and risen anew, laughing, smiling, as their wounds closed and their bones reset themselves like a cruel joke played on the world. There is no agony deep enough to break them, no blade sharp enough to still their hands. For they have been unmade and remade in Jashin’s image.</h2>\n<h2>Some call them zealots, but they know better. They are shepherds, and all men are lambs. They do not kill for pleasure, nor for coin, nor even for themselves. They kill because it is written. Because Jashin demands it. Because the world must bleed.</h2>\n<h2>They do not question. They do not falter. They do not cease.</h2>\n<p>For Jashin is eternal.\nAnd so is the slaughter.</p><p>To advance as a Crimson Priest, one must sacrifice worthy</p>\n<p>adversaries—foes who stand as true warriors in their own</p>\n<p>right, those who, in life, were feared, and in\ndeath, will serve as the foundation of the priest’s</p>\n<p>ascension. Only those of Elite Rank or higher are</p>\n<p>considered fit to be offered to Jashin.</p>\n<p>At the beginning of each new level in this Class</p>\n<p>Mod, the DM will roll 2d6 + the Crimson Priest’s</p>\n<p>current level. The result is the number of adversaries</p>\n<p>that must be sacrificed through Blood Rituals before the</p>\n<p>next level is attained. These rituals are not mere</p>\n<p>killings—they are ceremonial executions,\nperformed with absolute devotion, ensuring that\nJashin’s hunger is satiated.</p>\n<h5>Crimson Priest</h5>\n<p>| Level | Min Level Requirements  | Pacts | Blood Arts| Oath Arts| Piety Limit | Features\n|:----:|:-----:|:-:|:-:|:-:|:-:|:-:\n| 1st  | 8 |1| - | - | 10 |My Lord's Gift, Weapon of the Devoted, Crimson Rite, Pacts\n| 2nd | -- |1| 2 | 1 | 15 |Death Oath, Blood Arts, Oath Arts\n| 3rd | 13 |2| 2 | 1 | 20 |Weapon of the Devoted (2), Relentless Devotion\n| 4th | -- |2| 3 | 2 | 25 |Death Oath (2), Doctrine of Carnage\n| 5th | -- |3| 3 | 2 | 30 |Jashin's Mandate</p><p><strong>Automation:</strong> The module tracks Piety, applies Blood Art HP/Hit-Die costs and Oath Art Piety costs, supports Doctrine of Carnage cost reductions, applies selected Oath ability/chakra/movement bonuses, and provides native damage rolls for damage-dealing Arts. Damage formulas are also migrated onto already-owned managed Arts.</p>",
@@ -7965,7 +7999,7 @@
           "managed": true,
           "category": "classmod",
           "classMod": "crimson-priest",
-          "contentVersion": "0.15.0"
+          "contentVersion": "0.16.0"
         }
       },
       "folder": "8f3f357aa14a227a"

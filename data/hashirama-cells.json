@@ -1,0 +1,3776 @@
+{
+  "id": "hashirama-cells",
+  "version": "1.0",
+  "label": "Hashirama Cells",
+  "folders": [
+    {
+      "_id": "a1cbf01dd4241b49",
+      "name": "Hashirama Cells",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "sort": 0,
+      "color": "#315d3a",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "hashirama-cells",
+          "folderKey": "root"
+        }
+      }
+    },
+    {
+      "_id": "308642d816ea72c2",
+      "name": "Hashirama Cells Class Mod",
+      "type": "Item",
+      "folder": "a1cbf01dd4241b49",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#315d3a",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "hashirama-cells",
+          "folderKey": "classmod"
+        }
+      }
+    },
+    {
+      "_id": "eb0ac59743fbe7e5",
+      "name": "Guides & Progression",
+      "type": "Item",
+      "folder": "a1cbf01dd4241b49",
+      "sorting": "a",
+      "sort": 100000,
+      "color": "#315d3a",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "hashirama-cells",
+          "folderKey": "guide"
+        }
+      }
+    },
+    {
+      "_id": "14d62c3e98051c2e",
+      "name": "Class Mod Features",
+      "type": "Item",
+      "folder": "a1cbf01dd4241b49",
+      "sorting": "a",
+      "sort": 200000,
+      "color": "#315d3a",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "hashirama-cells",
+          "folderKey": "features"
+        }
+      }
+    },
+    {
+      "_id": "48d4432479734a19",
+      "name": "Perfected Wood Arts",
+      "type": "Item",
+      "folder": "a1cbf01dd4241b49",
+      "sorting": "a",
+      "sort": 300000,
+      "color": "#315d3a",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "hashirama-cells",
+          "folderKey": "perfected"
+        }
+      }
+    },
+    {
+      "_id": "91b1f85833c835d5",
+      "name": "Passive Legacy Arts",
+      "type": "Item",
+      "folder": "a1cbf01dd4241b49",
+      "sorting": "a",
+      "sort": 400000,
+      "color": "#315d3a",
+      "description": "",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "hashirama-cells",
+          "folderKey": "passive"
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "_id": "7e910bf56026996c",
+      "name": "Hashirama Cells — Gaining & Levelling",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<hr />\n<p>The Hashirama Cells are artificial cells cultivated from The First Hokage’s DNA, that ultimately grants the receiver of the cells some of the traits and abilities of Hashirama Senju.\nThere are many different uses and abilities that come with the body's acceptance of Hashirama Cells, such as regeneration, limb replacement, additional stamina reserves, access to the Wood Release Kekkei Genkai and the enhancement of one's natural abilities.</p>\n<p>Hashirama Cells are a medical phenomenon, requiring a suitable host as well as an extremely talented Medical-nin to successfully graft the cells onto the user's body.</p>\n<p>The purpose of the Hashirama Cells Class Mod is to provide users with more of a 'one size fits all' Class Mod that isn't just Sage Mode or Curse Seal. It is meant to recreate the versatility and power of those who have used Hashirama Cells in the source material</p>\n<h3>GAINING HASHIRAMA CELLS</h3>\n<p>Hashirama cells are the living cells of the First Hokage, these cells contain a small portion of his powers and massively boost the user's power. The reason these cells can be found is due to Hashirama's regenerative factor, it causes these cells to die significantly slower than most others allowing them to be accessed long after his death. Anyone who finds these cells will have to implant them into someone, be it themselves or another before they can access Hashirama's abilities. To implant the cells the user must do the following;</p>\n<p><strong>Step 1:</strong> The User must find a source of Hashirama cells that are still alive.</p>\n<p><strong>Step 2:</strong>  After finding the cells the next step is to implant them, this takes an insane amount of medical skill and time, the user or another skilled creature must succeed a DC 30 Wisdom (Medicine) ability check to successfully implant these cells. It takes 5 weeks to complete this procedure. If the procedure fails, the cells begin to decay quicker, The procedure can be done one more time with the current batch of cells, on a second failure they become unusable and the user must find a new batch.</p>\n<p><strong>Step 3:</strong> After the cells have been successfully implanted the user must begin to sync with them. The user must succeed a DC 25  Constitution (Chakra Control) ability check. On success, the user gains the first level of the Hashirama Cells class mod. On a failure the user fails to sync with the cells, they stay in the body of the user but begin to reject the other cells. the user has 3 chances to succeed in the check before the cells completely reject the user's body, on the third failure the user must find new cells. Regardless of the result of the Chakra Control check, 5 weeks of downtime is required to properly attempt to sync with the cells.</p>\n<h3>LEVELING UP THIS CLASS MOD</h3>\n<p>Leveling up Hashirama Cells is a difficult and time-consuming process. Unlike normal shinobi classes that require the player to gain XP to reach their next level, becoming more in sync with Hashirama's Cells requires the user to consistently use the abilities that come with it, in both combat and through passive downtime training. To do this a person would need to also assume the risks of potentially failing such a training process.</p>\n<p>At Character Levels 10, 12, 14, and 16, you may further harness the cells within your body to ascend closer to the abilities of the First Hokage. When in an area suitable for rest and recovery, you may attempt to control the Hashirama Cells in your body.</p>\n<p><strong>Step 1:</strong> Attempt a Constitution (Chakra Control) check. The DC is notated on the table below. If you succeed, you gain the next level of this class mod. If you fail, proceed to Step 2. Each time you gain a level in this class mod, you may attempt this step again once you meet level and downtime requirements. This step takes 5 weeks of downtime to attempt.</p>\n<p><strong>Step 2:</strong> If you fail the initial Chakra Control check to level up, you or another may force the cells within your body to cooperate. You or another may perform a Wisdom (Medicine) check. The DC is notated on the table below. If performing the check on yourself, it is made at advantage. Upon success, you gain the next level of this class mod, but your body slowly attempts to reject the cells within you. You permanently lose a number of hit die equal to the class mod level attained. These permanent hit die losses stack with others. If you fail this check 3 times, the cells in your body have no further compatibility with Hashirama's, and you cannot gain additional levels in this class mod. Each attempt of this step takes 5 weeks of downtime.</p>\n<h5>Hashirama Cells Synchronization DCs</h5>\n<p>| Mod Level | Chakra Control DC | Medicine DC\n|:-:|:-------------:|:-----:|\n| 2  | 25 | 20 |\n| 3  | 30 | 25 |\n| 4 | 35 | 30 |\n| 5 | 40 | 35 |</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "hashirama-cells-gaining-leveling"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "guide",
+          "classMod": "hashirama-cells"
+        }
+      },
+      "folder": "eb0ac59743fbe7e5"
+    },
+    {
+      "_id": "2f33cdb65981099e",
+      "name": "Why Make a Remaster?",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Great question, and a popular one too! Class mods are a wonderful option for DMs and players that grant a character powerful features and provide amazing moments of story-telling. But more often than not class mods provide tremendous benefits and boosts of strength with little drawback to speak of. Now some tables may find no trouble with the power fantasy a class mod provides and that is 100% okay, but the aim of this rework is to attempt for a balance that adds risk to the reward -- <em>a give and take</em> -- if you will. With this rework, a character now must juggle their use of Hashirama Cell abilities and be mindful of the risks involved with genetic grafting. The result we hope to produce with this rework should provide DMs and players with a dynamic story-telling expierence filled with exciting ups and downs!</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "hashirama-cells-remaster-notes"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "guide",
+          "classMod": "hashirama-cells"
+        }
+      },
+      "folder": "eb0ac59743fbe7e5"
+    },
+    {
+      "_id": "326adb8967356d36",
+      "name": "Senju Durability",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At 1st level of this class mod, the foreign cells within your body start to enhance your stamina and durability to slowly match that of Hashirama's. Your Constitution score increases by +2, to a maximum of 22.</p>\n<p>At the 3rd level of this class mod, the cells have started to multiply, enhancing your stamina reserves even further. Your Constitution score increases by +2, to a maximum of 24.</p>\n<p>Finally, at the 5th level of this class mod, you have enough stamina to rival the First Hokage himself. Your Constitution score increases by +2, to a maximum of 26.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "senju-durability"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "9d246a84497effe8",
+      "name": "Perfected Wood Arts",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 1st level in this class mod, you gain affinity to both Earth and Water Nature Releases, as well as access to the Senju Clan Jutsu list. Even while you possess these new Nature affinities, your body still hasn’t completely adapted to the cells. When you cast a jutsu with the Earth or Water Release keyword (unless you have affinity to that nature already), increase the cost of the jutsu cast by 3. Otherwise, jutsu you cast with the Earth and Water Release keyword, and Senju Clan jutsu, increase their damage dice by +1.</p>\n<p>Also, at 1st level, you begin to perfect Senju Clan jutsu. At 1st level and each time you gain a level in this class mod, choose a Senju Clan jutsu, at any rank you can cast. You learn that jutsu and it doesn't count against your number of jutsu known. If you already have this jutsu on your list, instead reduce its cost by your level in this class mod (min 1). When casting a Senju Clan jutsu you have chosen through this class mod, you can choose to expend 5 Legacy Chakra to gain the Perfected Wood Art benefits for that jutsu.</p>\n<p>Finally, when using Senju Clan Jutsu, the Hashirama Cells in your body enhance the jutsu, allowing you to use your Legacy Save DC and Attack Bonus if you choose:</p>\n<p><strong>Legacy Save DC:</strong> 13 + your level in this class mod + your proficiency bonus\n<strong>Legacy Attack Bonus:</strong> Twice your proficiency bonus + your level in this class mod</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-wood-arts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "8c956f3dcfb288f9",
+      "name": "Legacy Chakra",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At 1st level of this class mod, the cells give you an additional pool of chakra to access within your body. This chakra may be used to cast Earth release, Water release, and Senju Clan jutsu, and can be used for various Legacy Arts. For every 1 Legacy Chakra you spend casting a Senju Clan jutsu, you treat the chakra spent as 2.  This chakra is restored after a long rest.</p>\n<p>Upon reaching 4th level in this class mod, once per turn, when you would deal damage using a Senju Clan jutsu or a Ninjutsu with the Fuinjutsu keyword you cast using only Legacy Chakra, the creature's ability to cast jutsu and spend Chakra is temporarily hindered, using the following to determine its effects. If an effect uses a jutsu's rank to determine its value, use the following (D-Rank: 1, C-Rank: 2, B-Rank: 3, A-Rank: 4, S-Rank: 5);</p>\n<ul>\n<li>If used against a Minion Adversary, the minion cannot cast jutsu or spend chakra for the next minute.</li>\n<li>If used against a Standard Adversary, deal Chakra damage equal to 10 times the rank of the jutsu cast.</li>\n<li>If used against an Elite Adversary, deal Chakra damage equal to 15 times the rank of the jutsu cast.</li>\n<li>If used against a Solo Adversary, deal Chakra damage equal to 20 times the rank of the jutsu cast.</li>\n</ul>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "legacy-chakra"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "ece6b3c14fd16392",
+      "name": "Passive Regeneration",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Starting at 1st level your cells rapidly heal without the use of jutsu or hand seals. At the start of your turn while you are below 50% if your total hit points, you heal 1d4 + your Constitution modifier.</p>\n<p>At 3rd level in this class mod, while you are below 75% of your total hit points, you heal 2d4 + your Constitution modifier. You have resistance to the Bruised and Bleeding conditions.</p>\n<p>At 5th level, you heal 4d4 + your Constitution modifier, and this healing may now restore you back to your full hit points. While you are above 50% of your total hit points, you are immune to the Bruised and Bleeding conditions.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "passive-regeneration"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "69fd10da6fb86146",
+      "name": "Wooden Hostility",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Starting at the 1st level of this class mod when you fall below 50% of your total hit points, the foreign cells within your body fight against your control, you must succeed a DC 20 Constitution check at the start of each turn you are below the hit point threshold threshold.</p>\n<ul>\n<li><strong>On a Success:</strong> You maintain control, but increase the DC of the check by +1 at the start of each turn thereafter while you remain below 50% of your total hit points. The DC of this check resets when your current hit points are restored above 50%.</li>\n<li><strong>On a failure:</strong> Large branches and spikes of wood erupt violently from the source of the grafted cells on your body as you enter the <em><strong>Wooden Hostility</strong></em> condition.</li>\n</ul>\n<p>While in the Wooden Hostility condition, you cannot mold chakra, you take 2d4 damage at the start of your turns as the cells begin to overtake your body, you can not heal from any source including the Passive Regeneration class mod feature. You may use your action to repeat the Constitution check to remove the condition, but you have disadvantage, and no effect can remove this disadvantage. Alternatively, as a full turn action you can sever the source the wood is sprouting from, ending the condition immediately. Doing so reduces your hit point maximum by half, and you lose half your hit dice. If these cells were grafted onto a limb, you lose that limb in the process. After 1 week of downtime you can restore up to 25 points from your hit point maximum and up to two lost hit dice. If you reach 0 hit points while in the Wooden Hostility state, the cells fully corrupt your body. If you aren't stabilized within 1 minute during this time, your body turns into a massive tree, and you cannot be revived by any means.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "wooden-hostility"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 1
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "e03033d29451f1e6",
+      "name": "Passive Legacy Arts",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 2nd level, the new cells in your body allow you to access powerful techniques unlocked by your genetic connection to the First Hokage. Choose two Passive Legacy Arts, located in the <em><strong>Passive Legacy Arts</strong></em> section. Every time you gain a level in this class mod you select one additional Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "passive-legacy-arts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 2
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "b93eadfdf9dc1f85",
+      "name": "Extraordinary Mutation",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Your Hashirama Cells begin to improve your body's natural ones, enhancing your physical abilities. Starting at 2nd level in this class mod, the process of adapting another being's physiology to not only your body but also to your chakra network causes a flux of mutation in your flesh. Wherever your grafted Hashirama Cells are on your body, a faintly visible outline of a face imprints into the flesh. Your creature type is now considered Mutant in addition to Humanoid. At this level, and again each time you level up in this class mod, you gain one skill proficiency (or one determined by the DM) that represents muscle memory retained by the Cells. If you already have proficiency in this skill, you instead gain expertise.</p>\n<p>Starting at 4th level, you add your class mod level to all strength, dexterity, and constitution checks.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "extraordinary-mutation"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 2
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "a5a0197ef9a165dc",
+      "name": "Partial Match",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Your cells are now partially merged with the Hashirama Cells. Starting at 2nd level, you have advantage on your Constitution check to resist gaining the Wooden Hostility condition. You have advantage on saving throws against poison, and you have resistance against poison damage. Additionally, after completing a rest, you gain a number of temporary hit points equal to double your current <strong>Passive Regeneration</strong> healing.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "partial-match"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 2
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "4322becb9cc62c64",
+      "name": "Perfect Match",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>At 5th level, your Legacy Chakra and regular chakra are perfectly in sync, allowing you to access both simultaneously. You may use your Legacy Chakra in place of regular Chakra, and may use your regular Chakra for all features granted by this class mod at an exchange rate of 3 chakra for 1 Legacy Chakra. Additionally, by spending extra Chakra equal to 3 x Jutsu Level (D = 1, C = 2, etc.), any Water or Earth Release may be considered Senju Clan Jutsu for the purposes of this class mod, feats, clan bonuses, etc. Additionally, when you get this feature you no longer suffer the affects of the <em><strong>Wooden Hostility</strong></em> feature.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfect-match"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "core",
+          "classMod": "hashirama-cells",
+          "featureLevel": 5
+        }
+      },
+      "folder": "14d62c3e98051c2e"
+    },
+    {
+      "_id": "2569d401d87719a3",
+      "name": "Perfected Great Forest Technique",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>While the target is grappled it is also considered restrained. At the beginning of the restrained creature's turns you can casue it to take 2d4 piercing damage as splinters bury into the target.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "2d4",
+              "piercing"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-great-forest-technique"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-great-forest-technique",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "aee3c3376fba39b6",
+      "name": "Perfected World of Trees",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Affected creatures in the radius of your Wood Release: World of Trees jutsu now must make a Dexterity Saving Throw equal to your Legacy Save DC. Upon failure, they are slowed. The creature may reattempt the save at the start of their turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-world-of-trees"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-world-of-trees",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "a8844942da8d697b",
+      "name": "Perfected Piercing Bark",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>If a creature targeted by your Wood Release: Piercing Bark jutsu does not have cover, you have advantage on the attack. Additionally, you may cast the jutsu at C-Rank for no additional cost.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-piercing-bark"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-piercing-bark",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "7ec4ef7329bae80c",
+      "name": "Perfected Foo Dog Heads",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The first time a pillar created by your Wood Release: Foo Dog Heads jutsu is reduced to 0 Hit Points by a hostile creature, it is instead reduced to 1 Hit point. Additionally, add your constitution modifier to the chakra lost by this jutsu.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-foo-dog-heads"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-foo-dog-heads",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "632aa53abbc679cd",
+      "name": "Perfected Great Spear Tree",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Pillars created by your Wood Release: Great Spear Tree now have an AC equal to your Legacy Save DC. Additionally, double the Hit Points of the created pillars.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-great-spear-tree"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-great-spear-tree",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "0bb5a9d7f487d35e",
+      "name": "Perfected Hobi Technique",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The dome created by your Wood Release: Hobi Technique now has an AC equal to your Legacy Save DC, and you double the health of the dome. Additionally, you may decide to concentrate on the jutsu, using Legacy Chakra as you do. When you concentrate on this jutsu, the dome remains and recovers half its maximum Hit Points at the start of your turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-hobi-technique"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-hobi-technique",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "b5a26b97948bf472",
+      "name": "Perfected Hotei Technique",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When initially casting the Wood Release: Hotei Technique jutsu, selected targets automatically fail the first Strength Saving Throw.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-hotei-technique"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-hotei-technique",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "c5da7871c453f798",
+      "name": "Perfected Wood Clone",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Clones created by your Wood Release: Wood Clone have twice the number of hit points, can cast twice as many jutsu, and use your Legacy Save DC for their AC.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-wood-clone"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-wood-clone",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "8071f6ca7bf2a617",
+      "name": "Perfected Wood Dragon Summoning",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>The Dragon created by your Wood Release: Wood Dragon Summoning uses your Legacy Save DC for its AC. Additionally, the first time the dragon is reduced to 0 Hit Points by a hostile creature, it is instead reduced to 1 Hit point. It cannot go below this 1 hit point until the end of your next turn. Finally, you may choose which creatures in range are affected by Detonation.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-wood-dragon-summoning"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-wood-dragon-summoning",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "c326ea6ee530eb1b",
+      "name": "Perfected Tree Bind Flourish Burial",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You may choose which creatures in range are affected by your Wood Release: Tree Bind Flourish Burial. The tree created by this jutsu has an additional 50 Hit Points and regains half its maximum Hit Points at the start of your turn. Additionally, add Xd8 additional earth damage dealt, where X is your current level in this class mod.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d8",
+              "earth"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "perfected-tree-bind-flourish-burial"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "perfected-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPerfectedArt": true,
+          "baseJutsuIdentifier": "wood-release-tree-bind-flourish-burial",
+          "legacyChakraCost": 5
+        }
+      },
+      "folder": "48d4432479734a19"
+    },
+    {
+      "_id": "2c854f2e7111eb3d",
+      "name": "Eugenics",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Your Legacy Chakra enhances your Kekkei Genkai. You may cast jutsu with the Hijutsu keyword using Legacy Chakra. When you do, you may use your Legacy Save DC if the jutsu requires a saving throw. If the Jutsu requires an attack roll, instead use your Legacy Attack Bonus. If the jutsu deals damage, it deals additional damage equal to twice your level in this class mod.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "eugenics"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "aa6e9c2eaa04d1df",
+      "name": "Great Forest Sage",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Choose one additional Wood Release Jutsu up to your max jutsu rank, this jutsu can now benefit from the Perfected Wood Release Feature.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "great-forest-sage"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "1742f8e6d48c8dc4",
+      "name": "Greater Forest Sage",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p><em>Requires Great Forest Sage</em></p>\n<p>Choose two additional Wood Release Jutsu up to your max Jutsu rank, this jutsu can now benefit from the Perfected Wood Release Feature.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Great Forest Sage",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "greater-forest-sage"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true,
+          "requiresIdentifiers": [
+            "great-forest-sage"
+          ]
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "09caf85f159aa98e",
+      "name": "Improved Regeneration",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>When using the Passive Regeneration feature granted by this class mod, increase the healing die by 1 step (d4&gt;d6&gt;d8&gt;d10&gt;d12).</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "improved-regeneration"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "2a6e9d5f11da11bd",
+      "name": "Wood Expertise",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You may ignore the handsign (HS) component of Senju Clan jutsu you cast.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "wood-expertise"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "6bf2ccff77736e90",
+      "name": "True Regeneration",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p><em>Requires Level 3 of this class mod, Improved Regeneration</em></p>\n<p>When you spend 1 week of downtime to restore lost hit points and hit dice from your Wooden Hostility feature, you restore all after 1 week. If you have lost a limb or other vital body part as a result of this feature, or due to another effect, you can spend 5 weeks of downtime to completely restore. When using the Passive Regeneration feature granted by this class mod, increase the healing die by 1 step (d4&gt;d6&gt;d8&gt;d10&gt;d12).</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Level 3 Hashirama Cells; Improved Regeneration",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "true-regeneration"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true,
+          "requiresIdentifiers": [
+            "improved-regeneration"
+          ],
+          "requiredClassModLevel": 3
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "bcb5aa27a6f7971b",
+      "name": "Mental Perfection",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You add half your class mod level (rounded up) to all intelligence, wisdom, and charisma saving throws.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "mental-perfection"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "ef03733c26228989",
+      "name": "Overwhelming Splinters",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>Once per turn, when you hit with a weapon attack or an attack roll with a Senju Clan Jutsu, Water, or Earth Release jutsu, you may spend an amount of Legacy Chakra up to your level in this class mod x 10. When you do, the target takes additional damage equal to the amount of Legacy Chakra spent.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "overwhelming-splinters"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "d26c9092a7ac27f4",
+      "name": "Physical Perfection",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p>You add half your class mod level (rounded up) to all strength, dexterity, and constitution saving throws.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "physical-perfection"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "a9d25462f196a718",
+      "name": "Wood Armor",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<p><em>Requires Level 3 in this Class Mod</em></p>\n<p>When wearing no armor, your AC is equal to 15 + your Constitution modifier + Half your proficiency bonus (Rounded down). When this armor is active, you are immune to critical damage.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Level 3 Hashirama Cells",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "wood-armor"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "passive-art",
+          "classMod": "hashirama-cells",
+          "hashiramaPassiveArt": true,
+          "requiredClassModLevel": 3
+        }
+      },
+      "folder": "91b1f85833c835d5"
+    },
+    {
+      "_id": "aafdcfcdd9514b6e",
+      "name": "Hashirama Cells",
+      "type": "classmod",
+      "img": "modules/n5eb-classmod-library/assets/hashirama-cells.png",
+      "system": {
+        "description": {
+          "value": "<hr />\n<p>The Hashirama Cells are artificial cells cultivated from The First Hokage’s DNA, that ultimately grants the receiver of the cells some of the traits and abilities of Hashirama Senju.\nThere are many different uses and abilities that come with the body's acceptance of Hashirama Cells, such as regeneration, limb replacement, additional stamina reserves, access to the Wood Release Kekkei Genkai and the enhancement of one's natural abilities.</p>\n<p>Hashirama Cells are a medical phenomenon, requiring a suitable host as well as an extremely talented Medical-nin to successfully graft the cells onto the user's body.</p>\n<p>The purpose of the Hashirama Cells Class Mod is to provide users with more of a 'one size fits all' Class Mod that isn't just Sage Mode or Curse Seal. It is meant to recreate the versatility and power of those who have used Hashirama Cells in the source material</p><p>Leveling up Hashirama Cells is a difficult and time-consuming process. Unlike normal shinobi classes that require the player to gain XP to reach their next level, becoming more in sync with Hashirama's Cells requires the user to consistently use the abilities that come with it, in both combat and through passive downtime training. To do this a person would need to also assume the risks of potentially failing such a training process.</p>\n<p>At Character Levels 10, 12, 14, and 16, you may further harness the cells within your body to ascend closer to the abilities of the First Hokage. When in an area suitable for rest and recovery, you may attempt to control the Hashirama Cells in your body.</p>\n<p><strong>Step 1:</strong> Attempt a Constitution (Chakra Control) check. The DC is notated on the table below. If you succeed, you gain the next level of this class mod. If you fail, proceed to Step 2. Each time you gain a level in this class mod, you may attempt this step again once you meet level and downtime requirements. This step takes 5 weeks of downtime to attempt.</p>\n<p><strong>Step 2:</strong> If you fail the initial Chakra Control check to level up, you or another may force the cells within your body to cooperate. You or another may perform a Wisdom (Medicine) check. The DC is notated on the table below. If performing the check on yourself, it is made at advantage. Upon success, you gain the next level of this class mod, but your body slowly attempts to reject the cells within you. You permanently lose a number of hit die equal to the class mod level attained. These permanent hit die losses stack with others. If you fail this check 3 times, the cells in your body have no further compatibility with Hashirama's, and you cannot gain additional levels in this class mod. Each attempt of this step takes 5 weeks of downtime.</p>\n<h5>Hashirama Cells Synchronization DCs</h5>\n<p>| Mod Level | Chakra Control DC | Medicine DC\n|:-:|:-------------:|:-----:|\n| 2  | 25 | 20 |\n| 3  | 30 | 25 |\n| 4 | 35 | 30 |\n| 5 | 40 | 35 |</p>\n<h5>Hashirama Cells</h5>\n<table>\n<thead>\n<tr>\n  <th style=\"text-align:center\">Level</th>\n  <th style=\"text-align:center\">Minimum Level Requirements</th>\n  <th style=\"text-align:center\">Perfected Wood Arts</th>\n  <th style=\"text-align:center\">Passive Legacy Arts</th>\n  <th style=\"text-align:center\">Legacy Chakra</th>\n  <th style=\"text-align:center\">Features</th>\n</tr>\n</thead>\n<tbody>\n</tbody>\n</table>\n<p>| 1st | 8 | 1 | — | 20 | Senju Durability, Perfected Wood Arts, Legacy Chakra, Passive Regeneration, Wooden Hostility\n| 2nd | 10 | 2 | 2 |40 | Passive Legacy Arts, Extraordinary Mutation,\n&lt;/brPartial&gt;Partial match\n| 3rd | 12 | 3 | 3 | 60 |Senju Durability (2), Passive Regeneration (2)\n| 4th | 14 | 4 | 4 | 80 | Extraordinary Mutation (2), Legacy Chakra (2)\n| 5th | 16 | 5 | 5 | 100 |Senju Durability (3), Passive Regeneration (3),\n&lt;/brPerfect&gt;Perfect Match</p><p><strong>Automation:</strong> The module tracks Legacy Chakra, restores it on long rests, applies Senju Durability, automates Passive Regeneration and Wooden Hostility turn checks/self-damage, grants Partial Match rest temporary HP, enforces Passive Legacy Art prerequisites, supports Perfect Match resource conversion, and provides a Hashirama Cells tracker for Perfected Wood Art activation and Overwhelming Splinters.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Hashirama Cells (Remastered)",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "identifier": "hashirama-cells",
+        "levels": 1,
+        "advancement": {
+          "core1": {
+            "_id": "f33a2fb2814cb679",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.326adb8967356d36",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.9d246a84497effe8",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.8c956f3dcfb288f9",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.ece6b3c14fd16392",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.69fd10da6fb86146",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 1,
+            "title": "Hashirama Cells I",
+            "hint": ""
+          },
+          "perfected": {
+            "_id": "d6b8d9cc8fa7aec9",
+            "type": "ItemChoice",
+            "configuration": {
+              "choices": {
+                "1": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "2": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "3": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "4": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "5": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "allowDrops": false,
+              "type": null,
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.2569d401d87719a3"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.aee3c3376fba39b6"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.a8844942da8d697b"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.7ec4ef7329bae80c"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.632aa53abbc679cd"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.0bb5a9d7f487d35e"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.b5a26b97948bf472"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.c5da7871c453f798"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.8071f6ca7bf2a617"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.c326ea6ee530eb1b"
+                }
+              ]
+            },
+            "value": {},
+            "title": "Perfected Wood Arts",
+            "hint": ""
+          },
+          "core2": {
+            "_id": "7811791a458ba0bf",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.e03033d29451f1e6",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.b93eadfdf9dc1f85",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.a5a0197ef9a165dc",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 2,
+            "title": "Hashirama Cells II",
+            "hint": ""
+          },
+          "passives": {
+            "_id": "19f75e51b522fdbb",
+            "type": "ItemChoice",
+            "configuration": {
+              "choices": {
+                "2": {
+                  "count": 2,
+                  "replacement": false
+                },
+                "3": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "4": {
+                  "count": 1,
+                  "replacement": false
+                },
+                "5": {
+                  "count": 1,
+                  "replacement": false
+                }
+              },
+              "allowDrops": false,
+              "type": null,
+              "pool": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.2c854f2e7111eb3d"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.aa6e9c2eaa04d1df"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.1742f8e6d48c8dc4"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.09caf85f159aa98e"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.2a6e9d5f11da11bd"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.6bf2ccff77736e90"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.bcb5aa27a6f7971b"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.ef03733c26228989"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.d26c9092a7ac27f4"
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.a9d25462f196a718"
+                }
+              ]
+            },
+            "value": {},
+            "title": "Passive Legacy Arts",
+            "hint": ""
+          },
+          "core5": {
+            "_id": "771e47aace90bff3",
+            "type": "ItemGrant",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.4322becb9cc62c64",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "level": 5,
+            "title": "Hashirama Cells V",
+            "hint": ""
+          },
+          "legacy": {
+            "_id": "ff2171a5ec97ec67",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "legacy-chakra",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 20
+                },
+                "2": {
+                  "value": 40
+                },
+                "3": {
+                  "value": 60
+                },
+                "4": {
+                  "value": 80
+                },
+                "5": {
+                  "value": 100
+                }
+              }
+            },
+            "value": {},
+            "title": "Legacy Chakra",
+            "hint": ""
+          },
+          "perfectedKnown": {
+            "_id": "745651ae0c2848ad",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "perfected-wood-arts-known",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 1
+                },
+                "2": {
+                  "value": 2
+                },
+                "3": {
+                  "value": 3
+                },
+                "4": {
+                  "value": 4
+                },
+                "5": {
+                  "value": 5
+                }
+              }
+            },
+            "value": {},
+            "title": "Perfected Wood Arts Known",
+            "hint": ""
+          },
+          "passiveKnown": {
+            "_id": "cdec4ad90d9930be",
+            "type": "ScaleValue",
+            "configuration": {
+              "identifier": "passive-legacy-arts-known",
+              "type": "number",
+              "distance": {
+                "units": ""
+              },
+              "scale": {
+                "1": {
+                  "value": 0
+                },
+                "2": {
+                  "value": 2
+                },
+                "3": {
+                  "value": 3
+                },
+                "4": {
+                  "value": 4
+                },
+                "5": {
+                  "value": 5
+                }
+              }
+            },
+            "value": {},
+            "title": "Passive Legacy Arts Known",
+            "hint": ""
+          }
+        },
+        "save": {
+          "formula": "13+@classmods.hashirama-cells.levels+@prof",
+          "value": "13+@classmods.hashirama-cells.levels+@prof",
+          "scaling": ""
+        },
+        "attackBonus": {
+          "formula": "2*@prof+@classmods.hashirama-cells.levels",
+          "value": "2*@prof+@classmods.hashirama-cells.levels",
+          "scaling": ""
+        },
+        "color": "#315d3a"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "category": "classmod",
+          "classMod": "hashirama-cells",
+          "contentVersion": "0.16.0"
+        }
+      },
+      "folder": "308642d816ea72c2"
+    }
+  ]
+}
