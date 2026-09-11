@@ -1,5 +1,5 @@
 {
-  "version": "0.17.0",
+  "version": "0.18.0",
   "files": [
     "flying-thunder-god.json",
     "kama.json",
@@ -10,6 +10,7 @@
     "heavenly-gates.json",
     "crimson-priest.json",
     "hashirama-cells.json",
-    "madara-cells.json"
+    "madara-cells.json",
+    "cursed-seal.json"
   ]
 }

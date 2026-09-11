@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.17.0";
+const CONTENT_VERSION = "0.18.0";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -32,6 +32,8 @@ const HASHIRAMA_CELLS_ATTACK_FORMULA = "2*@prof+@classmods.hashirama-cells.level
 const HASHIRAMA_CELLS_SAVE_FORMULA = "13+@classmods.hashirama-cells.levels+@prof";
 const MADARA_CELLS_ATTACK_FORMULA = "2*@prof+@classmods.madara-cells.levels";
 const MADARA_CELLS_SAVE_FORMULA = "12+@classmods.madara-cells.levels+@prof";
+const CURSED_SEAL_ATTACK_FORMULA = "floor(@details.level/2)+@classmods.cursed-seal.levels+@prof";
+const CURSED_SEAL_SAVE_FORMULA = "10+floor(@details.level/2)+@prof";
 const SEALED_BEAST_AWAKENING_BY_LEVEL = Object.freeze({1:45, 2:110, 3:175, 4:220, 5:275});
 const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-small-blue.webp",
@@ -43,7 +45,7 @@ const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-large-blue.webp",
   "icons/magic/light/explosion-star-blue.webp"
 ]);
-const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi", "edo-tensei", "heavenly-gates", "crimson-priest", "hashirama-cells", "madara-cells"]);
+const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi", "edo-tensei", "heavenly-gates", "crimson-priest", "hashirama-cells", "madara-cells", "cursed-seal"]);
 
 const SEAL_TYPE_KEYS = Object.freeze([
   "all-rounder", "absorber", "assault-type", "tank-type", "speed-type", "sensor-type", "white-kama-seal"
@@ -213,7 +215,10 @@ Hooks.once("ready", async () => {
     toggleDormantBeast,
     setSealedBeastFrenzy,
     rollDesperateRage,
-    clearSealedBeastTransformation
+    clearSealedBeastTransformation,
+    openCursedSealTracker: (actor) => globalThis.N5eBCursedSeal?.openTracker?.(actor),
+    getCursedSealTracker: (actor) => globalThis.N5eBCursedSeal?.getTracker?.(actor),
+    syncCursedSealActor: (actor) => globalThis.N5eBCursedSeal?.syncActor?.(actor)
   });
   globalThis.SyncN5eBClassMods = () => syncLibrary({force: true});
 
@@ -426,6 +431,10 @@ function getHashiramaCellsClassMod(actor) {
 
 function getMadaraCellsClassMod(actor) {
   return getClassMod(actor, "madara-cells");
+}
+
+function getCursedSealClassMod(actor) {
+  return getClassMod(actor, "cursed-seal");
 }
 
 function getManagedActorItem(actor, flag) {
@@ -720,6 +729,16 @@ function calculateMadaraCellsArtValues(actor) {
   return {attack:(2*proficiency)+classModLevel, save:12+classModLevel+proficiency};
 }
 
+function calculateCursedSealArtValues(actor) {
+  const characterLevel = Math.max(0, Number(actor?.system?.details?.level ?? 0));
+  const proficiency = Math.max(0, Number(actor?.system?.attributes?.prof ?? 0));
+  const classModLevel = Math.max(1, Number(getCursedSealClassMod(actor)?.system?.levels ?? 1));
+  return {
+    attack: Math.floor(characterLevel / 2) + classModLevel + proficiency,
+    save: 10 + Math.floor(characterLevel / 2) + proficiency
+  };
+}
+
 function getClassModArtsConfiguration(identifier) {
   if (identifier === "kama-seal") return {
     item: getKamaClassMod,
@@ -774,6 +793,12 @@ function getClassModArtsConfiguration(identifier) {
     calculate: calculateMadaraCellsArtValues,
     attackFormula: MADARA_CELLS_ATTACK_FORMULA,
     saveFormula: MADARA_CELLS_SAVE_FORMULA
+  };
+  if (identifier === "cursed-seal") return {
+    item: getCursedSealClassMod,
+    calculate: calculateCursedSealArtValues,
+    attackFormula: CURSED_SEAL_ATTACK_FORMULA,
+    saveFormula: CURSED_SEAL_SAVE_FORMULA
   };
   return null;
 }
@@ -838,6 +863,10 @@ async function ensureMadaraCellsArtsFormulas(actor) {
   return ensureClassModArtsValues(actor, "madara-cells");
 }
 
+async function ensureCursedSealArtsFormulas(actor) {
+  return ensureClassModArtsValues(actor, "cursed-seal");
+}
+
 async function syncClassModArtsForActor(actor) {
   if (!actor?.isOwner) return;
   await ensureKamaArtsFormulas(actor);
@@ -849,6 +878,7 @@ async function syncClassModArtsForActor(actor) {
   await ensureCrimsonPriestArtsFormulas(actor);
   await ensureHashiramaCellsArtsFormulas(actor);
   await ensureMadaraCellsArtsFormulas(actor);
+  await ensureCursedSealArtsFormulas(actor);
 }
 
 function calculateResonanceGain(actor, state) {
@@ -1049,6 +1079,7 @@ async function migrateExistingClassModActors() {
         await ensureCrimsonPriestArtsFormulas(actor);
         await ensureHashiramaCellsArtsFormulas(actor);
         await ensureMadaraCellsArtsFormulas(actor);
+        await ensureCursedSealArtsFormulas(actor);
       });
     } catch (error) {
       console.error(`${MODULE_ID} | Failed to migrate Class Mod actor ${actor.name}`, error);

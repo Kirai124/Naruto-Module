@@ -1,5 +1,5 @@
-# N5eB Class Mod Library 0.17.0
-## Version 0.17.0 — Hashirama Cells + Crimson Priest Art Update
+# N5eB Class Mod Library 0.18.0
+## Version 0.18.0 — Cursed Seal Class Mod
 
 - Adds the complete **Hashirama Cells (Remastered)** Class Mod with five-level progression, 10 Perfected Wood Arts, and 10 Passive Legacy Arts.
 - Adds an Actor-based **Legacy Chakra** tracker (20/40/60/80/100), long/full-rest restoration, Perfect Match 3:1 regular-Chakra conversion, and Perfected Art spending.
@@ -148,6 +148,7 @@ N5eBClassMods.openTenseiganTracker();
 N5eBClassMods.openSealedBeastTracker();
 N5eBHeavenlyGates.openTracker();
 N5eBHashiramaCells.openTracker();
+N5eBCursedSeal.openTracker();
 ```
 
 ## GitHub distribution
@@ -207,5 +208,10 @@ After adding **Edo Tensei** to a character, the character sheet gains an **Edo T
 Generated Edo Tensei Actors have **Summon / Return** and **Recalculate Edo** sheet buttons. The module also removes obsolete module-managed folder trees during synchronization, including the old duplicate Superior Shinobi tree, while retaining the current Superior Shinobi implementation.
 
 
-## Madara Cells (0.17.0)
+## Madara Cells (0.18.0)
 Madara Cells is included with the supplied Madara artwork for all of its entries. Automation covers Legacy Chakra, Mastered Defence, Hatred Surge / Overcome with Hatred turn handling, Extraordinary Talent choices, Partial/Perfect Match movement/resource rules, Mastered Technique activation, Sharingan-use replenishment where the owned N5eB item exposes a uses pool, Mangekyō charge conversion where a compatible uses pool is present, and passive score/save/movement bonuses.
+
+
+## Cursed Seal Class Mod
+
+Version 0.18.0 adds the complete Cursed Seal Class Mod from *Secrets of Power - Class Modification Compendium*, including Cursed Chakra/Corruption tracking, stage automation, actor-owned Cursed Art generation with Corrupted Boosts, automatic Cursed Chakra cost substitution, dynamic damage dice/rerolls, Mutations, Orders, seal types and the lower-power Cursed Seal feat track. All Cursed Seal content uses `systems/n5eb/assets/content/classmod-icons/cursed-seal/cursemark-second-state.webp`.
