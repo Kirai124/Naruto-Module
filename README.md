@@ -1,3 +1,7 @@
+# N5eB Class Mod Library v0.18.2
+
+This build adds the Cursed Seal Class Mod directly to the library and gives it a Sealed Beast Redux-style tracker strip in the N5eB Jutsu casting overview. Click **CURSED SEAL** to open the full tracker or click the status tile for quick Release/End Transformation. Cursed Chakra, Corruption, Patron DC, release stages, Hit Die exhaustion, Cursed Arts, and supported Cursed Art damage/cost changes are tracked by the module.
+
 # N5eB Class Mod Library 0.18.0
 ## Version 0.18.0 — Cursed Seal Class Mod
 

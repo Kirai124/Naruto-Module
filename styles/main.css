@@ -2189,3 +2189,22 @@
 
 @media(max-width:1000px){.n5eb-cursed-seal-tracker-strip{grid-template-columns:1fr 1fr}.n5eb-cursed-seal-tracker-dialog .cursed-stat-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.n5eb-cursed-seal-tracker-strip,.n5eb-cursed-seal-tracker-dialog .tracker-grid,.n5eb-cursed-seal-tracker-dialog .cursed-stat-grid{grid-template-columns:1fr}.n5eb-cursed-seal-tracker-dialog .cursed-art-row{grid-template-columns:1fr}.n5eb-cursed-seal-tracker-dialog .cursed-hero{grid-template-columns:46px 1fr}.n5eb-cursed-seal-tracker-dialog .cursed-release-state{grid-column:1/-1;text-align:center}}
+
+/* Cursed Seal v0.18.2 — Sealed-Beast-style quick transformation control */
+.n5eb-cursed-seal-tracker-strip .quick-release {
+  width:100%;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+}
+.n5eb-cursed-seal-tracker-strip .quick-release:hover,
+.n5eb-cursed-seal-tracker-strip .tracker-title:hover {
+  border-color:var(--cursed-accent);
+  background:color-mix(in srgb,var(--cursed-accent) 18%,rgba(0,0,0,.28));
+  box-shadow:0 0 10px color-mix(in srgb,var(--cursed-accent) 20%,transparent);
+}
+.n5eb-cursed-seal-tracker-strip .quick-release:focus-visible,
+.n5eb-cursed-seal-tracker-strip .tracker-title:focus-visible {
+  outline:2px solid var(--cursed-accent);
+  outline-offset:1px;
+}

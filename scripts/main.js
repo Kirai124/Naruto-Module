@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.18.1";
+const CONTENT_VERSION = "0.18.2";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -2374,6 +2374,9 @@ function renderClassModRuntime(app, html) {
   renderKamaTrackerStrip(app, html);
   renderTenseiganTrackerStrip(app, html);
   renderSealedBeastTrackerStrip(app, html);
+  // Cursed Seal intentionally uses the very same render path as Sealed Beast Redux so
+  // its tracker strip appears in the Jutsu casting overview on the N5eB character sheet.
+  globalThis.N5eBCursedSeal?.renderTrackerStrip?.(app, html);
 }
 
 Hooks.on("renderActorSheet", renderClassModRuntime);

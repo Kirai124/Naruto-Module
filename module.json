@@ -1,8 +1,8 @@
 {
   "id": "n5eb-classmod-library",
   "title": "N5eB Class Mod Library",
-  "description": "Creates a world compendium containing fully prepared N5eB Class Mods, including Cursed Seal with an actor-sheet tracker, dedicated tracker window, automatic Cursed Chakra/Corruption/Release tracking, Cursed Art resource automation, and retroactive migrations.",
-  "version": "0.18.1",
+  "description": "Creates a world compendium containing fully prepared N5eB Class Mods, including Cursed Seal with a Sealed-Beast-style Jutsu-page tracker strip, a dedicated transformation window, persistent Cursed Chakra/Corruption tracking, Cursed Art automation, and retroactive migrations.",
+  "version": "0.18.2",
   "authors": [
     {
       "name": "Kirai124",
@@ -41,5 +41,5 @@
   ],
   "url": "https://github.com/Kirai124/Naruto-Module",
   "manifest": "https://github.com/Kirai124/Naruto-Module/releases/latest/download/module.json",
-  "download": "https://github.com/Kirai124/Naruto-Module/releases/download/v0.18.1/n5eb-classmod-library-0.18.1.zip"
+  "download": "https://github.com/Kirai124/Naruto-Module/releases/download/v0.18.2/n5eb-classmod-library-0.18.2.zip"
 }
