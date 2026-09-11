@@ -215,3 +215,8 @@ Madara Cells is included with the supplied Madara artwork for all of its entries
 ## Cursed Seal Class Mod
 
 Version 0.18.0 adds the complete Cursed Seal Class Mod from *Secrets of Power - Class Modification Compendium*, including Cursed Chakra/Corruption tracking, stage automation, actor-owned Cursed Art generation with Corrupted Boosts, automatic Cursed Chakra cost substitution, dynamic damage dice/rerolls, Mutations, Orders, seal types and the lower-power Cursed Seal feat track. All Cursed Seal content uses `systems/n5eb/assets/content/classmod-icons/cursed-seal/cursemark-second-state.webp`.
+
+
+## Cursed Seal Tracker
+
+Characters with the **Cursed Seal** Class Mod receive a Sealed-Beast-style tracker strip on the character sheet and a dedicated tracker window. The runtime stores Cursed Chakra, Corruption, Patron DC, active Release stage, temporary Cursed Chakra, exhausted Hit Dice, Magnified Art state, and rest-based limits directly on the actor. Cursed Arts and supported normal jutsu are synchronized while Release is active so Cursed Chakra costs and class-mod attack/save values are handled by the module.

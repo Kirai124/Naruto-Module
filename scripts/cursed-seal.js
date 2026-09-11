@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const CLASSMOD_ID = "cursed-seal";
 const TRACKER_FLAG = "cursedSealTracker";
-const TRACKER_VERSION = 1;
+const TRACKER_VERSION = 2;
 const INTERNAL = MODULE_ID;
 const ICON = "systems/n5eb/assets/content/classmod-icons/cursed-seal/cursemark-second-state.webp";
 const PACK_COLLECTION = "world.n5eb-custom-class-mods";
@@ -72,7 +72,11 @@ function normalizeTracker(raw,actor){
   let current=Number(raw?.cursedChakra??max); if(!Number.isFinite(current))current=max;
   if(oldMax<max)current+=max-oldMax;
   const temp=Math.max(0,Math.floor(Number(raw?.tempCursedChakra??0)));
-  return {...base,...raw,version:TRACKER_VERSION,cursedChakraMax:max,cursedChakra:clamp(current,0,max+temp),corruption:clamp(Math.floor(Number(raw?.corruption??0)),0,20),activeStage:clamp(Math.floor(Number(raw?.activeStage??0)),0,3),tempCursedChakra:temp,drTypes:arr(raw?.drTypes).map(String),hitDicePenalty:Math.max(0,Math.floor(Number(raw?.hitDicePenalty??0))),stage3FreeArtsUsed:Math.max(0,Math.floor(Number(raw?.stage3FreeArtsUsed??0))),magnifiedBoosts:arr(raw?.magnifiedBoosts).map(String)};
+  const level=getLevel(actor);
+  const minimumCorruption=LEVEL_CORRUPTION[level]??0;
+  const corruption=Math.max(minimumCorruption,clamp(Math.floor(Number(raw?.corruption??0)),0,20));
+  const activeStage=clamp(Math.floor(Number(raw?.activeStage??0)),0,3);
+  return {...base,...raw,version:TRACKER_VERSION,cursedChakraMax:max,cursedChakra:clamp(current,0,max+temp),corruption,activeStage:stageAvailable(actor,activeStage,{...base,...raw,corruption})?activeStage:0,tempCursedChakra:temp,drTypes:arr(raw?.drTypes).map(String),hitDicePenalty:Math.max(0,Math.floor(Number(raw?.hitDicePenalty??0))),stage3FreeArtsUsed:Math.max(0,Math.floor(Number(raw?.stage3FreeArtsUsed??0))),magnifiedBoosts:arr(raw?.magnifiedBoosts).map(String)};
 }
 function readTracker(actor){return normalizeTracker(actor?.getFlag?.(MODULE_ID,TRACKER_FLAG)??{},actor);}
 async function writeTracker(actor,patch={}, {render=true,sync=true}={}){
@@ -249,7 +253,7 @@ async function deactivateSeal(actor,{skipHitDice=false,silent=false}={}){
   if(!silent)ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content:`<p><strong>${esc(actor.name)}</strong> exits Cursed Seal Release.${penalty?` ${penalty} Hit ${penalty===1?'Die is':'Dice are'} exhausted until a Full Rest.`:''}</p>`});
 }
 async function changeCursedChakra(actor,delta,reason="Tracker adjustment"){const s=readTracker(actor),cap=s.cursedChakraMax+s.tempCursedChakra,next=clamp(s.cursedChakra+Number(delta||0),0,cap);await writeTracker(actor,{cursedChakra:next},{render:true,sync:true});if(reason)ui.notifications.info(`Cursed Chakra ${delta>=0?'+':''}${delta}: ${next}/${s.cursedChakraMax}.`);return next;}
-async function changeCorruption(actor,delta,reason="Tracker adjustment"){const s=readTracker(actor),next=clamp(s.corruption+Number(delta||0),0,20);await writeTracker(actor,{corruption:next},{render:true,sync:true});ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content:`<p><strong>${esc(actor.name)} — Corruption:</strong> ${s.corruption} → ${next}. Patron DC ${5+next}.</p>`});return next;}
+async function changeCorruption(actor,delta,reason="Tracker adjustment"){const s=readTracker(actor),change=Number(delta||0);if(change<0){ui.notifications.warn("Corruption is permanent and cannot be reduced. Use the GM Reset only to correct setup mistakes.");return s.corruption;}const next=clamp(s.corruption+change,0,20);await writeTracker(actor,{corruption:next},{render:true,sync:true});ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content:`<p><strong>${esc(actor.name)} — Corruption:</strong> ${s.corruption} → ${next}. Patron DC ${5+next}.</p>`});return next;}
 async function spendCursedChakra(actor,amount,reason="Cursed Chakra"){amount=Math.max(0,Math.floor(Number(amount)||0));const s=readTracker(actor);if(amount>s.cursedChakra){ui.notifications.warn(`${reason} needs ${amount} Cursed Chakra; only ${s.cursedChakra} remains.`);return false;}await writeTracker(actor,{cursedChakra:s.cursedChakra-amount},{render:false,sync:false});return true;}
 function findAvailableClassDie(actor,kind){const aggregate=arr(actor?.system?.attributes?.[kind]?.classes);return aggregate.find(item=>Number(item?.system?.[kind]?.value??0)>0)??arr(Object.values(actor?.classes??{})).find(item=>Number(item?.system?.[kind]?.value??0)>0);}
 async function spendChakraDie(actor){actor=actorFromContext(actor);if(!actor||!getClassMod(actor))return;const cd=actor.system?.attributes?.cd??{};if(Number(cd.value??0)<1)return ui.notifications.warn("No Chakra Dice remain.");const denomination=Math.max(2,Number(cd.denomination??8));const roll=await(new Roll(`1d${denomination}`)).evaluate();await roll.toMessage({speaker:ChatMessage.getSpeaker({actor}),flavor:`${actor.name} — Cursed Chakra Recovery`});const cls=findAvailableClassDie(actor,"cd");if(cls)await cls.update({"system.cd.spent":Number(cls.system?.cd?.spent??0)+1},{[INTERNAL]:{cursedSealRecovery:true}});else await actor.update({"system.attributes.cd.spent":Number(cd.spent??0)+1},{[INTERNAL]:{cursedSealRecovery:true}});
@@ -267,10 +271,10 @@ async function createCursedArt(actor){
   let curseAbility="";if(boosts.includes("curse")){curseAbility=String(await chooseCurseSaveAbility(source)??"");if(!curseAbility)return;}
   const data=source.toObject();delete data._id;delete data.folder;data.name=`Corrupted ${source.name}`;data.img=ICON;data.system=cloneJson(data.system);data.system.identifier=`corrupted-${source.system?.identifier??source.id}`;data.system.sourceItem="classmod:cursed-seal";data.system.chakra=cloneJson(data.system.chakra??{});data.system.chakra.cost="0";data.system.chakra.special="Cursed Chakra (automatic)";data.system.save=cloneJson(data.system.save??{});data.system.save.scaling="art";data.system.save.dc=null;data.system.attack=cloneJson(data.system.attack??{});data.system.attack.bonus="";data.system.jutsu=cloneJson(data.system.jutsu??{});data.system.jutsu.keywords=Array.from(new Set([...arr(data.system.jutsu.keywords),"class mod art","cursed art"]));
   const base={sourceName:source.name,sourceIdentifier:source.system?.identifier??source.id,rank:normalizeRank(source.system?.rank),damage:cloneJson(source.system?.damage),critical:cloneJson(source.system?.critical),range:cloneJson(source.system?.range),actionType:source.system?.actionType??"",save:cloneJson(source.system?.save),attack:cloneJson(source.system?.attack),chakra:cloneJson(source.system?.chakra),descriptionValue:source.system?.description?.value??""};const boostNames=boosts.map(key=>catalog.boosts.find(b=>b.key===key)?.name??key);
-  data.flags=cloneJson(data.flags??{});data.flags[MODULE_ID]={...(data.flags[MODULE_ID]??{}),managed:false,classMod:CLASSMOD,cursedArt:true,cursedArtSourceId:source.id,cursedArtSourceUuid:source.uuid,cursedArtRank:base.rank,cursedArtBoosts:boosts,cursedArtBoostNames:boostNames,cursedArtCurseSaveAbility:curseAbility,cursedArtBase:base};
+  data.flags=cloneJson(data.flags??{});data.flags[MODULE_ID]={...(data.flags[MODULE_ID]??{}),managed:false,classMod:CLASSMOD_ID,cursedArt:true,cursedArtSourceId:source.id,cursedArtSourceUuid:source.uuid,cursedArtRank:base.rank,cursedArtBoosts:boosts,cursedArtBoostNames:boostNames,cursedArtCurseSaveAbility:curseAbility,cursedArtBase:base};
   const [created]=await actor.createEmbeddedDocuments("Item",[data],{[INTERNAL]:{cursedArtCreate:true}});if(created){await syncOneCursedArt(actor,created,readTracker(actor));ui.notifications.info(`${created.name} was created with fully managed Cursed Chakra and damage math.`);}refreshDialog(actor);actor.sheet?.render?.(false);return created;
 }
-async function configureMagnifiedArt(actor){actor=actorFromContext(actor);if(!actor||getLevel(actor)<3)return ui.notifications.warn("Magnified Cursed Art unlocks at Cursed Seal level 3.");const state=readTracker(actor),arts=cursedArts(actor);if(!arts.length)return ui.notifications.warn("Create at least one Cursed Art first.");if(state.magnifiedArtId&&!state.magnifiedBoostChangeAvailable)return ui.notifications.warn("The Magnified Art's extra boosts can be changed after a Full Rest.");const catalog=await loadCatalog(),boostOpts=catalog.boosts.map(b=>`<option value="${esc(b.key)}">${esc(b.name)}</option>`).join('');const artField=state.magnifiedArtId?`<input type="hidden" name="art" value="${esc(state.magnifiedArtId)}"><p><strong>Magnified Art:</strong> ${esc(actor.items.get(state.magnifiedArtId)?.name??'Unknown')}</p>`:`<div class="form-group"><label>Magnified Cursed Art<select name="art">${arts.map(i=>`<option value="${i.id}">${esc(i.name)}</option>`).join('')}</select></label></div>`;const result=await foundry.applications.api.DialogV2.wait({window:{title:"Magnified Cursed Art"},content:`<form>${artField}<div class="form-group"><label>Extra Boost 1<select name="boost1">${boostOpts}</select></label></div><div class="form-group"><label>Extra Boost 2<select name="boost2">${boostOpts}</select></label></div></form>`,buttons:[{action:"save",label:"Apply",default:true,callback:(event,button)=>new FormDataExtended(button.form).object},{action:"cancel",label:"Cancel"}],rejectClose:false});if(!result)return;const boosts=[String(result.boost1),String(result.boost2)];if(!validateBoostPair(boosts))return ui.notifications.warn("That duplicate boost is not repeatable.");await writeTracker(actor,{magnifiedArtId:String(result.art),magnifiedBoosts:boosts,magnifiedBoostChangeAvailable:false});}
+async function configureMagnifiedArt(actor){actor=actorFromContext(actor);if(!actor||getLevel(actor)<3)return ui.notifications.warn("Magnified Cursed Art unlocks at Cursed Seal level 3.");const state=readTracker(actor),arts=cursedArts(actor);if(!arts.length)return ui.notifications.warn("Create at least one Cursed Art first.");if(state.magnifiedArtId&&!state.magnifiedBoostChangeAvailable)return ui.notifications.warn("The Magnified Art's extra boosts can be changed after a Full Rest.");const catalog=await loadCatalog(),boostOpts=catalog.boosts.map(b=>`<option value="${esc(b.key)}">${esc(b.name)}</option>`).join('');const artField=state.magnifiedArtId?`<input type="hidden" name="art" value="${esc(state.magnifiedArtId)}"><p><strong>Magnified Art:</strong> ${esc(actor.items.get(state.magnifiedArtId)?.name??'Unknown')}</p>`:`<div class="form-group"><label>Magnified Cursed Art<select name="art">${arts.map(i=>`<option value="${i.id}">${esc(i.name)}</option>`).join('')}</select></label></div>`;const result=await foundry.applications.api.DialogV2.wait({window:{title:"Magnified Cursed Art"},content:`<form>${artField}<div class="form-group"><label>Extra Boost 1<select name="boost1">${boostOpts}</select></label></div><div class="form-group"><label>Extra Boost 2<select name="boost2">${boostOpts}</select></label></div></form>`,buttons:[{action:"save",label:"Apply",default:true,callback:(event,button)=>new FormDataExtended(button.form).object},{action:"cancel",label:"Cancel"}],rejectClose:false});if(!result)return;const art=actor.items.get(String(result.art));if(!art)return ui.notifications.warn("The selected Cursed Art no longer exists.");const boosts=[String(result.boost1),String(result.boost2)],combined=[...arr(flag(art,"cursedArtBoosts")),...boosts];if(!validateBoostPair(combined))return ui.notifications.warn("A Corrupted Boost can only be duplicated when its rules explicitly allow it (Critical, Effort or Penetration), and never more than twice total.");const source=actor.items.get(flag(art,"cursedArtSourceId"))??art;for(const key of boosts){const problem=validateBoostForSource(key,source);if(problem)return ui.notifications.warn(problem);}await writeTracker(actor,{magnifiedArtId:art.id,magnifiedBoosts:boosts,magnifiedBoostChangeAvailable:false});}
 async function chooseSealType(actor){actor=actorFromContext(actor);if(!actor||!getClassMod(actor))return;const existing=arr(actor.items).filter(i=>flag(i,"cursedSealType"));if(existing.length)return ui.notifications.warn(`A Cursed Seal Type is already owned: ${existing[0].name}.`);const cat=await loadCatalog();const result=await foundry.applications.api.DialogV2.wait({window:{title:"Choose Cursed Seal Type"},content:`<form><p>Standard seals are normal choices. Genesis and Glitched/Unknown are special GM options.</p><div class="form-group"><label>Seal Type<select name="seal">${cat.seals.map(s=>`<option value="${esc(s.key)}">${esc(s.name)}${s.special?' [Special]':''}</option>`).join('')}</select></label></div></form>`,buttons:[{action:"choose",label:"Choose",default:true,callback:(event,button)=>new FormDataExtended(button.form).object.seal},{action:"cancel",label:"Cancel"}],rejectClose:false});if(!result)return;const source=cat.seals.find(s=>s.key===result);if(!source)return;const pack=game.packs.get(PACK_COLLECTION);const doc=await pack?.getDocument(source.id);if(!doc)return ui.notifications.error("Cursed Seal Type could not be loaded from the compendium.");const data=doc.toObject();delete data._id;await actor.createEmbeddedDocuments("Item",[data],{[INTERNAL]:{cursedSealType:true}});await writeTracker(actor,{sealType:source.key});}
 
 async function processActivityUse(actor,item){let state=readTracker(actor);if(isCursedArt(item)){const cost=currentArtCost(actor,item,state);if(!await spendCursedChakra(actor,cost,item.name))return;const patch={};const seal=getSealType(actor,state);if(cost===0&&state.activeStage>=3&&["heaven","sun"].includes(seal))patch.stage3FreeArtsUsed=state.stage3FreeArtsUsed+1;if(state.peaceHalfCost)patch.peaceHalfCost=false;if(Object.keys(patch).length)state=await writeTracker(actor,patch,{render:false,sync:true});}
@@ -282,7 +286,7 @@ function canUseActivity(actor,item){const state=readTracker(actor);if(isCursedAr
 }
 
 async function applyRest(actor,type){let state=readTracker(actor);if(type==="short"){const patch={initiativeActivationUsed:false};if(getLevel(actor)>=5)patch.cursedChakra=state.cursedChakraMax;await writeTracker(actor,patch,{render:false,sync:true});}
-  else if(type==="long"){const patch={initiativeActivationUsed:false,longActivationHpUsed:false,longActivationChakraUsed:false,magnifiedBoostChangeAvailable:state.magnifiedArtId?true:state.magnifiedBoostChangeAvailable};if(getLevel(actor)>=5)patch.cursedChakra=state.cursedChakraMax;await writeTracker(actor,patch,{render:false,sync:true});}
+  else if(type==="long"){const patch={initiativeActivationUsed:false,longActivationHpUsed:false,longActivationChakraUsed:false};if(getLevel(actor)>=5)patch.cursedChakra=state.cursedChakraMax;await writeTracker(actor,patch,{render:false,sync:true});}
   else if(type==="full"){
     if(state.activeStage)await deactivateSeal(actor,{skipHitDice:true,silent:true});
     state=readTracker(actor);
@@ -300,17 +304,135 @@ async function applyRest(actor,type){let state=readTracker(actor);if(type==="sho
 }
 async function cleanupActor(actor){if(!actor)return;let state=readTracker(actor);if(state.activeStage){state=normalizeTracker({...state,activeStage:0,tempCursedChakra:0,cursedChakra:Math.min(state.cursedChakra,state.cursedChakraMax),drTypes:[],lastStageStartedAt:0,peaceHalfCost:false},actor);await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:state},{[INTERNAL]:{cursedSealCleanup:true}});}const effects=arr(actor.effects).filter(e=>flag(e,"cursedSealStageEffect")||flag(e,"cursedSealCorruptionEffect"));if(effects.length)await actor.deleteEmbeddedDocuments("ActiveEffect",effects.map(e=>e.id),{[INTERNAL]:{cursedSealEffect:true}});await syncNormalJutsu(actor,state);const arts=cursedArts(actor);if(arts.length)await actor.deleteEmbeddedDocuments("Item",arts.map(i=>i.id),{[INTERNAL]:{cursedSealCleanup:true}});if(actor.getFlag?.(MODULE_ID,TRACKER_FLAG)!==undefined)await actor.update({[`flags.${MODULE_ID}.-=${TRACKER_FLAG}`]:null},{[INTERNAL]:{cursedSealCleanup:true}});refreshDialog(actor);}
 
-function corruptionMilestones(state){const c=state.corruption;const out=[];if(c>=1)out.push("Release");if(c>=3)out.push("5 THP / Corruption");if(c>=5)out.push("Minor Order");if(c>=7)out.push("Arts +2 dice");if(c>=10)out.push("Major Order");if(c>=13)out.push("+1 Saves");if(c>=15)out.push("Minor + Major Order");if(c>=17)out.push("B+ Arts -2");if(c>=20)out.push("Patron Dominion");return out;}
-function trackerHtml(actor){const s=readTracker(actor),level=getLevel(actor),values=artValues(actor),seal=getSealType(actor,s),arts=cursedArts(actor),highest=highestStage(actor,s),reqCorr=LEVEL_CORRUPTION[level]??0;return `<div class="n5eb-cursed-seal-tracker" data-cursed-seal-root><header><div><h2>Cursed Seal</h2><p>Class Mod Level ${level} • ${seal?esc(seal.toUpperCase()):'No Seal Type'}</p></div><div class="cursed-orb">${s.cursedChakra}<small>/${s.cursedChakraMax}${s.tempCursedChakra?` +${s.tempCursedChakra}`:''}</small></div></header><section class="cursed-grid"><div><span>Corruption</span><strong>${s.corruption}/20</strong></div><div><span>Patron DC</span><strong>${5+s.corruption}</strong></div><div><span>Release</span><strong>${s.activeStage?`Stage ${s.activeStage}`:'Dormant'}</strong></div><div><span>Highest Stage</span><strong>${highest||'Locked'}</strong></div><div><span>Cursed Art Attack</span><strong>+${values.attack}</strong></div><div><span>Cursed Art Save</span><strong>DC ${values.save}</strong></div><div><span>Cursed Arts</span><strong>${arts.length}/${artsKnown(actor)}</strong></div><div><span>Hit Dice Exhausted</span><strong>${s.hitDicePenalty}</strong></div></section><div class="cursed-milestones"><strong>Corruption Milestones:</strong> ${corruptionMilestones(s).map(esc).join(' • ')||'None yet'}</div>${s.corruption<reqCorr?`<p class="cursed-warning">Current Class Mod level normally requires ${reqCorr} Corruption.</p>`:''}<footer><button type="button" data-action="chakra-minus">-1 Cursed</button><button type="button" data-action="chakra-plus">+1 Cursed</button><button type="button" data-action="corruption-minus">-1 Corruption</button><button type="button" data-action="corruption-plus">+1 Corruption</button><button type="button" data-action="recover">Spend Chakra Die</button>${!seal?'<button type="button" data-action="seal-type">Choose Seal Type</button>':''}${[1,2,3].map(stage=>`<button type="button" data-action="stage-${stage}" ${stageAvailable(actor,stage,s)?'':'disabled'}>Stage ${stage}</button>`).join('')}${s.activeStage?'<button type="button" data-action="deactivate">Deactivate</button>':''}<button type="button" data-action="create-art" ${arts.length>=artsKnown(actor)?'disabled':''}>Create Cursed Art</button>${level>=3?`<button type="button" data-action="magnified">${s.magnifiedArtId?'Magnified Boosts':'Choose Magnified Art'}</button>`:''}</footer></div>`;}
+function corruptionMilestones(state){
+  const c=state.corruption;
+  const entries=[
+    [1,"Release"],[3,"Activation THP"],[5,"Minor Order"],[7,"Cursed Arts +2 dice"],[10,"Major Order"],
+    [13,"+1 Saves"],[15,"Minor + Major Order"],[17,"B+ Arts -2 cost"],[20,"Patron Dominion"]
+  ];
+  return entries.map(([rank,label])=>({rank,label,active:c>=rank}));
+}
+function nextCorruptionMilestone(state){return corruptionMilestones(state).find(entry=>!entry.active)??null;}
+function sealLabel(key){return String(key||"None").split("-").map(part=>part?part[0].toUpperCase()+part.slice(1):part).join(" ");}
+function ownedCursedSummary(actor){
+  const items=arr(actor?.items);
+  return {
+    mutations:items.filter(i=>flag(i,"cursedSealMutation")).length,
+    minorOrders:items.filter(i=>flag(i,"cursedSealOrder")&&flag(i,"orderType")==="minor").length,
+    majorOrders:items.filter(i=>flag(i,"cursedSealOrder")&&flag(i,"orderType")==="major").length
+  };
+}
+function cursedArtRows(actor,state){
+  const arts=cursedArts(actor);
+  if(!arts.length)return '<div class="cursed-empty">No Cursed Arts created yet.</div>';
+  return arts.map(item=>{
+    const rank=normalizeRank(flag(item,"cursedArtRank")??item.system?.rank);
+    const boosts=[...arr(flag(item,"cursedArtBoostNames"))];
+    if(state.magnifiedArtId===item.id)boosts.push(...arr(state.magnifiedBoosts).map(k=>sealLabel(k)));
+    return `<div class="cursed-art-row"><div><strong>${esc(item.name)}</strong><small>${titleRank(rank)}-Rank${state.magnifiedArtId===item.id?' • Magnified':''}</small></div><span>${esc(boosts.join(' • ')||'No boosts')}</span><b>${currentArtCost(actor,item,state)} CC</b></div>`;
+  }).join('');
+}
+function trackerHtml(actor){
+  const s=readTracker(actor),level=getLevel(actor),values=artValues(actor),seal=getSealType(actor,s),arts=cursedArts(actor),highest=highestStage(actor,s),summary=ownedCursedSummary(actor),milestones=corruptionMilestones(s),next=nextCorruptionMilestone(s);
+  const corruptionPct=clamp((s.corruption/20)*100,0,100);
+  const chakraCap=s.cursedChakraMax+s.tempCursedChakra;
+  const chakraPct=chakraCap?clamp((s.cursedChakra/chakraCap)*100,0,100):0;
+  const stagePills=[1,2,3].map(stage=>{
+    const available=stageAvailable(actor,stage,s),active=s.activeStage===stage;
+    return `<span class="${active?'active ':''}${available?'available':'locked'}">Stage ${stage}${active?' • Active':available?' • Ready':' • Locked'}</span>`;
+  }).join('');
+  return `<div class="n5eb-cursed-seal-tracker-dialog" data-cursed-seal-root>
+    <p class="tracker-intro">All Cursed Seal resources are stored directly on <strong>${esc(actor.name)}</strong> and are synchronized with the Class Mod automatically. Normal item Uses fields are not used.</p>
+    <div class="cursed-hero">
+      <img src="${ICON}" alt="Cursed Seal">
+      <div><strong>Cursed Seal</strong><span>Level ${level} • ${esc(sealLabel(seal))}</span></div>
+      <div class="cursed-release-state ${s.activeStage?'active':''}">${s.activeStage?`Stage ${s.activeStage}`:'Dormant'}</div>
+    </div>
+    <div class="tracker-grid cursed-input-grid">
+      <label>Cursed Chakra<input type="number" min="0" max="${chakraCap}" step="1" data-input="cursed-chakra" value="${s.cursedChakra}"></label>
+      <label>Corruption<input type="number" min="${LEVEL_CORRUPTION[level]??0}" max="20" step="1" data-input="corruption" value="${s.corruption}"></label>
+    </div>
+    <section class="tracker-card"><header><strong>Cursed Chakra</strong><span>${s.cursedChakra} / ${s.cursedChakraMax}${s.tempCursedChakra?` + ${s.tempCursedChakra} temporary`:''}</span></header><div class="tracker-progress cursed-chakra-progress"><span style="width:${chakraPct}%"></span></div><small>While Release is active, supported Ninjutsu, Genjutsu, Taijutsu and Bukijutsu automatically spend this pool instead of normal Chakra.</small></section>
+    <section class="tracker-card"><header><strong>Corruption</strong><span>Patron DC ${5+s.corruption}</span></header><div class="tracker-progress corruption-progress"><span style="width:${corruptionPct}%"></span></div><div class="milestone-pills">${milestones.map(m=>`<span class="${m.active?'active':''}">${m.rank}: ${esc(m.label)}</span>`).join('')}</div><small>${next?`Next milestone: ${next.rank} Corruption — ${esc(next.label)}.`:'Maximum Corruption reached.'}</small></section>
+    <section class="tracker-card status"><header><strong>Release Status</strong><span>Highest available: ${highest?`Stage ${highest}`:'Locked'}</span></header><div class="status-pills"><span class="${s.activeStage?'':'active'}">Dormant</span>${stagePills}<span class="${seal?'active':''}">${esc(sealLabel(seal))}</span></div></section>
+    <section class="cursed-stat-grid">
+      <div><span>Cursed Art Attack</span><strong>+${values.attack}</strong></div><div><span>Cursed Art Save</span><strong>DC ${values.save}</strong></div>
+      <div><span>Cursed Arts</span><strong>${arts.length}/${artsKnown(actor)}</strong></div><div><span>Hit Dice Exhausted</span><strong>${s.hitDicePenalty}</strong></div>
+      <div><span>Mutations Owned</span><strong>${summary.mutations}</strong></div><div><span>Orders Owned</span><strong>${summary.minorOrders} Minor / ${summary.majorOrders} Major</strong></div>
+    </section>
+    <section class="tracker-card cursed-arts-card"><header><strong>Cursed Arts</strong><span>Automatic cost & damage sync</span></header><div class="cursed-art-list">${cursedArtRows(actor,s)}</div></section>
+    <div class="tracker-actions">
+      <button type="button" data-action="save"><i class="fas fa-floppy-disk"></i> Save Values</button>
+      <button type="button" data-action="recover"><i class="fas fa-dice-d20"></i> Spend Chakra Die</button>
+      ${!seal?'<button type="button" data-action="seal-type"><i class="fas fa-fingerprint"></i> Choose Seal Type</button>':''}
+      <button type="button" data-action="activate-highest" ${highest&&!s.activeStage?'':'disabled'}><i class="fas fa-bolt"></i> Activate Highest Stage</button>
+      ${[1,2,3].map(stage=>`<button type="button" data-action="stage-${stage}" ${stageAvailable(actor,stage,s)&&!s.activeStage?'':'disabled'}><i class="fas fa-fire-flame-curved"></i> Stage ${stage}</button>`).join('')}
+      <button type="button" data-action="deactivate" ${s.activeStage?'':'disabled'}><i class="fas fa-person"></i> End Release</button>
+      <button type="button" data-action="create-art" ${arts.length<artsKnown(actor)?'':'disabled'}><i class="fas fa-wand-magic-sparkles"></i> Create Cursed Art</button>
+      ${level>=3?`<button type="button" data-action="magnified"><i class="fas fa-burst"></i> ${s.magnifiedArtId?'Configure Magnified Art':'Choose Magnified Art'}</button>`:''}
+      <button type="button" data-action="sync"><i class="fas fa-arrows-rotate"></i> Resync Automation</button>
+      ${game.user.isGM?'<button type="button" data-action="reset"><i class="fas fa-rotate-left"></i> Reset Tracker</button>':''}
+    </div>
+  </div>`;
+}
 function dialogKey(actor){return actor?.uuid??actor?.id;}
-function refreshDialog(actor){const d=dialogs.get(dialogKey(actor));if(d?.rendered)d.render({force:true});}
-async function openTracker(actor){actor=actorFromContext(actor);if(!actor||!getClassMod(actor))return ui.notifications.warn("No Cursed Seal Class Mod found.");await ensureActor(actor);const key=dialogKey(actor);if(dialogs.get(key)?.rendered)return dialogs.get(key).bringToFront();const d=new foundry.applications.api.DialogV2({window:{title:`Cursed Seal — ${actor.name}`,icon:"fa-solid fa-skull",resizable:true},position:{width:720,height:"auto"},classes:["n5eb-cursed-seal-tracker-window"],content:trackerHtml(actor),buttons:[{action:"close",label:"Close"}]});dialogs.set(key,d);d.addEventListener("render",()=>activateTrackerDialog(d,actor));d.addEventListener("close",()=>dialogs.delete(key),{once:true});await d.render({force:true});return d;}
-function activateTrackerDialog(dialog,actor){const root=dialog.element?.querySelector?.('[data-cursed-seal-root]');if(!root)return;const run=fn=>fn().catch(error=>{console.error(`${MODULE_ID} | Cursed Seal automation failed`,error);ui.notifications.error(`Cursed Seal automation failed: ${error.message}`);});root.querySelector('[data-action="chakra-minus"]')?.addEventListener('click',()=>run(()=>changeCursedChakra(actor,-1)));root.querySelector('[data-action="chakra-plus"]')?.addEventListener('click',()=>run(()=>changeCursedChakra(actor,1)));root.querySelector('[data-action="corruption-minus"]')?.addEventListener('click',()=>run(()=>changeCorruption(actor,-1)));root.querySelector('[data-action="corruption-plus"]')?.addEventListener('click',()=>run(()=>changeCorruption(actor,1)));root.querySelector('[data-action="recover"]')?.addEventListener('click',()=>run(()=>spendChakraDie(actor)));root.querySelector('[data-action="seal-type"]')?.addEventListener('click',()=>run(()=>chooseSealType(actor)));for(const stage of [1,2,3])root.querySelector(`[data-action="stage-${stage}"]`)?.addEventListener('click',()=>run(()=>activateStage(actor,stage)));root.querySelector('[data-action="deactivate"]')?.addEventListener('click',()=>run(()=>deactivateSeal(actor)));root.querySelector('[data-action="create-art"]')?.addEventListener('click',()=>run(()=>createCursedArt(actor)));root.querySelector('[data-action="magnified"]')?.addEventListener('click',()=>run(()=>configureMagnifiedArt(actor)));}
+function refreshDialog(actor){
+  const dialog=dialogs.get(dialogKey(actor));
+  if(!dialog?.element)return;
+  const wrapper=dialog.element.querySelector('[data-cursed-seal-root]')?.parentElement;
+  if(!wrapper)return;
+  wrapper.innerHTML=trackerHtml(actor);
+  activateTrackerDialog(dialog,actor);
+}
+async function saveTrackerValues(actor,root){
+  const s=readTracker(actor),cap=s.cursedChakraMax+s.tempCursedChakra;
+  const chakra=clamp(Number(root.querySelector('[data-input="cursed-chakra"]')?.value??s.cursedChakra),0,cap);
+  const requestedCorruption=clamp(Number(root.querySelector('[data-input="corruption"]')?.value??s.corruption),LEVEL_CORRUPTION[getLevel(actor)]??0,20);
+  const corruption=Math.max(s.corruption,requestedCorruption);
+  await writeTracker(actor,{cursedChakra:chakra,corruption});
+}
+async function resetTracker(actor){
+  if(!game.user.isGM)return;
+  if(readTracker(actor).activeStage)await deactivateSeal(actor,{skipHitDice:true,silent:true});
+  const fresh=trackerDefault(actor);fresh.corruption=LEVEL_CORRUPTION[getLevel(actor)]??0;fresh.sealType=getSealType(actor,readTracker(actor));
+  await actor.update({[`flags.${MODULE_ID}.${TRACKER_FLAG}`]:normalizeTracker(fresh,actor)},{[INTERNAL]:{cursedSealTracker:true}});
+  await ensureActor(actor);actor.sheet?.render?.(false);refreshDialog(actor);
+}
+async function openTracker(actor){
+  actor=actorFromContext(actor);if(!actor||!getClassMod(actor))return ui.notifications.warn("No Cursed Seal Class Mod found.");
+  await ensureActor(actor);const key=dialogKey(actor),existing=dialogs.get(key);if(existing)return existing.bringToFront?.();
+  const content=document.createElement('div');content.innerHTML=trackerHtml(actor);
+  const d=new foundry.applications.api.DialogV2({window:{title:`Cursed Seal Tracker — ${actor.name}`,icon:"fa-solid fa-skull",resizable:true},position:{width:680,height:"auto"},classes:["n5eb-cursed-seal-tracker-window"],content,buttons:[{action:"close",label:"Close",icon:"fa-solid fa-xmark"}]});
+  dialogs.set(key,d);d.addEventListener("render",()=>activateTrackerDialog(d,actor));d.addEventListener("close",()=>dialogs.delete(key),{once:true});await d.render({force:true});return d;
+}
+function activateTrackerDialog(dialog,actor){
+  const root=dialog.element?.querySelector?.('[data-cursed-seal-root]');if(!root||root.dataset.activated==="true")return;root.dataset.activated="true";
+  root.addEventListener('click',event=>{
+    const button=event.target.closest('button[data-action]');if(!button)return;const action=button.dataset.action;
+    const run=fn=>Promise.resolve().then(fn).catch(error=>{console.error(`${MODULE_ID} | Cursed Seal tracker action failed`,error);ui.notifications.error(`Cursed Seal tracker failed: ${error.message}`);}).finally(()=>refreshDialog(actor));
+    if(action==='save')run(()=>saveTrackerValues(actor,root));
+    else if(action==='recover')run(()=>spendChakraDie(actor));
+    else if(action==='seal-type')run(()=>chooseSealType(actor));
+    else if(action==='activate-highest')run(()=>activateStage(actor,highestStage(actor,readTracker(actor))));
+    else if(action?.startsWith('stage-'))run(()=>activateStage(actor,Number(action.split('-')[1])));
+    else if(action==='deactivate')run(()=>deactivateSeal(actor));
+    else if(action==='create-art')run(()=>createCursedArt(actor));
+    else if(action==='magnified')run(()=>configureMagnifiedArt(actor));
+    else if(action==='sync')run(()=>ensureActor(actor));
+    else if(action==='reset')run(()=>resetTracker(actor));
+  });
+}
 function renderRoot(app,html){return html?.[0]??html??app.element?.[0]??app.element;}
-function renderStrip(app,html){const actor=app.actor??app.document;if(!getClassMod(actor))return;const root=renderRoot(app,html);if(!root||root.querySelector?.('[data-cursed-seal-strip]'))return;const target=root.querySelector?.('.jutsu-casting-overview')??root.querySelector?.('.sheet-body');if(!target)return;const s=readTracker(actor),section=document.createElement('section');section.className='n5eb-cursed-seal-tracker-strip';section.dataset.cursedSealStrip='true';section.innerHTML=`<button type="button" class="tracker-title" data-action="open-cursed-seal"><img src="${ICON}"> Cursed Seal</button><div class="tracker-mini"><span>Cursed Chakra</span><strong>${s.cursedChakra}/${s.cursedChakraMax}</strong></div><div class="tracker-mini"><span>Corruption</span><strong>${s.corruption}</strong></div><div class="tracker-mini"><span>Patron DC</span><strong>${5+s.corruption}</strong></div><div class="tracker-mini"><span>Stage</span><strong>${s.activeStage||'—'}</strong></div>`;target.prepend(section);section.querySelector('[data-action="open-cursed-seal"]')?.addEventListener('click',()=>openTracker(actor));}
+function renderStrip(app,html){
+  const actor=app.actor??app.document;if(!getClassMod(actor))return;const root=renderRoot(app,html);if(!root||root.querySelector?.('[data-cursed-seal-strip]'))return;
+  const target=root.querySelector?.('.jutsu-casting-overview')??root.querySelector?.('.sheet-body');if(!target)return;const s=readTracker(actor),seal=getSealType(actor,s);
+  const section=document.createElement('section');section.className='n5eb-cursed-seal-tracker-strip';section.dataset.cursedSealStrip='true';
+  section.innerHTML=`<button type="button" class="tracker-title" data-action="open-cursed-seal"><img src="${ICON}" alt=""><span>Cursed Seal</span></button><div class="tracker-mini"><span>Cursed Chakra</span><strong>${s.cursedChakra}/${s.cursedChakraMax}${s.tempCursedChakra?` +${s.tempCursedChakra}`:''}</strong></div><div class="tracker-mini"><span>Corruption</span><strong>${s.corruption}/20</strong></div><div class="tracker-mini"><span>Patron DC</span><strong>${5+s.corruption}</strong></div><div class="tracker-mini status"><span>${s.activeStage?`Stage ${s.activeStage}`:'Dormant'}</span><strong>${esc(sealLabel(seal))}</strong></div>`;
+  target.prepend(section);section.querySelector('[data-action="open-cursed-seal"]')?.addEventListener('click',()=>openTracker(actor));
+}
 
 Hooks.once("ready",async()=>{if(game.system.id!=="n5eb")return;globalThis.N5eBCursedSeal=Object.freeze({openTracker,getTracker:readTracker,activateStage,deactivateSeal,createCursedArt,configureMagnifiedArt,chooseSealType,spendCursedChakra,changeCorruption,spendChakraDie,syncActor:ensureActor,currentArtCost});if(game.user.isGM)for(const actor of game.actors??[])if(getClassMod(actor))await queue(actor,()=>ensureActor(actor));});
-Hooks.on("getActorSheetHeaderButtons",(sheet,buttons)=>{const actor=sheet.actor??sheet.document;if(!getClassMod(actor))return;const s=readTracker(actor);buttons.unshift({label:`Cursed ${s.cursedChakra}/${s.cursedChakraMax} • Corr ${s.corruption}`,class:"n5eb-cursed-seal-tracker-button",icon:"fas fa-skull",onclick:()=>openTracker(actor)});});
+Hooks.on("getActorSheetHeaderButtons",(sheet,buttons)=>{const actor=sheet.actor??sheet.document;if(!getClassMod(actor))return;const s=readTracker(actor),highest=highestStage(actor,s);buttons.unshift({label:`CC ${s.cursedChakra}/${s.cursedChakraMax} · Corr ${s.corruption}`,class:"n5eb-cursed-seal-tracker-button",icon:"fas fa-gauge-high",onclick:()=>openTracker(actor)});buttons.unshift({label:s.activeStage?`Cursed Seal S${s.activeStage}`:"Cursed Seal",class:"n5eb-cursed-seal-release-toggle",icon:"fas fa-skull",onclick:()=>s.activeStage?deactivateSeal(actor):(highest?activateStage(actor,highest):openTracker(actor))});});
 Hooks.on("renderActorSheet",renderStrip);Hooks.on("renderCharacterActorSheet",renderStrip);Hooks.on("renderApplicationV2",renderStrip);
 Hooks.on("createItem",async(item,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if((item.type==="classmod"&&item.system?.identifier===CLASSMOD_ID)||getClassMod(actor))await queue(actor,()=>ensureActor(actor));});
 Hooks.on("updateItem",async(item,changes,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if(!getClassMod(actor))return;await queue(actor,async()=>{if(!isCursedArt(item)){const linked=cursedArts(actor).filter(a=>flag(a,"cursedArtSourceId")===item.id);if(linked.length){for(const art of linked){const base=artBase(art);const update={sourceName:item.name,sourceIdentifier:item.system?.identifier??item.id,rank:normalizeRank(item.system?.rank),damage:cloneJson(item.system?.damage),critical:cloneJson(item.system?.critical),range:cloneJson(item.system?.range),actionType:item.system?.actionType??"",save:cloneJson(item.system?.save),attack:cloneJson(item.system?.attack),chakra:cloneJson(item.system?.chakra),descriptionValue:item.system?.description?.value??base.descriptionValue??""};await art.update({[`flags.${MODULE_ID}.cursedArtBase`]:update},{[INTERNAL]:{cursedArtBase:true}});}}}await ensureActor(actor);});});

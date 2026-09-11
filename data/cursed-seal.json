@@ -621,7 +621,7 @@
           "managed": true,
           "category": "classmod",
           "classMod": "cursed-seal",
-          "contentVersion": "0.18.0"
+          "contentVersion": "0.18.1"
         }
       },
       "folder": "1fde6723aeae7768"
@@ -727,7 +727,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "guide",
-          "contentVersion": "0.18.0"
+          "contentVersion": "0.18.1"
         }
       },
       "folder": "a03259df71e3d668"
@@ -833,7 +833,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "guide",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealGuide": "corruption"
         }
       },
@@ -940,7 +940,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "cursed-seal-feature",
           "requiredLevel": 1
         }
@@ -1048,7 +1048,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "cursed-chakra",
           "requiredLevel": 1
         }
@@ -1156,7 +1156,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "cursed-seal-release",
           "requiredLevel": 1
         }
@@ -1264,7 +1264,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "cursed-arts",
           "requiredLevel": 1
         }
@@ -1372,7 +1372,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "cursed-power",
           "requiredLevel": 2
         }
@@ -1480,7 +1480,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "cursed-mutations",
           "requiredLevel": 2
         }
@@ -1588,7 +1588,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "magnified-cursed-art",
           "requiredLevel": 3
         }
@@ -1696,7 +1696,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "feature",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeature": "the-chosen",
           "requiredLevel": 5
         }
@@ -1804,7 +1804,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "heaven",
           "specialSeal": false
         }
@@ -1912,7 +1912,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "earth",
           "specialSeal": false
         }
@@ -2020,7 +2020,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "hell",
           "specialSeal": false
         }
@@ -2128,7 +2128,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "sun",
           "specialSeal": false
         }
@@ -2236,7 +2236,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "moon",
           "specialSeal": false
         }
@@ -2344,7 +2344,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "stars",
           "specialSeal": false
         }
@@ -2452,7 +2452,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "war",
           "specialSeal": false
         }
@@ -2560,7 +2560,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "peace",
           "specialSeal": false
         }
@@ -2668,7 +2668,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "order",
           "specialSeal": false
         }
@@ -2776,7 +2776,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "genesis",
           "specialSeal": true
         }
@@ -2884,7 +2884,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "seal-type",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealType": "glitched",
           "specialSeal": true
         }
@@ -2992,7 +2992,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "armor",
           "repeatable": false,
           "maxCopies": 1
@@ -3101,7 +3101,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "chakra-network",
           "repeatable": false,
           "maxCopies": 1
@@ -3210,7 +3210,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "control",
           "repeatable": false,
           "maxCopies": 1
@@ -3319,7 +3319,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "critical",
           "repeatable": true,
           "maxCopies": 2
@@ -3428,7 +3428,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "curse",
           "repeatable": false,
           "maxCopies": 1
@@ -3537,7 +3537,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "distance",
           "repeatable": false,
           "maxCopies": 1
@@ -3646,7 +3646,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "drive",
           "repeatable": false,
           "maxCopies": 1
@@ -3755,7 +3755,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "efficiency",
           "repeatable": false,
           "maxCopies": 1
@@ -3864,7 +3864,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "effort",
           "repeatable": true,
           "maxCopies": 2
@@ -3973,7 +3973,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "element-bleed",
           "repeatable": false,
           "maxCopies": 1
@@ -4082,7 +4082,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "element-burned",
           "repeatable": false,
           "maxCopies": 1
@@ -4191,7 +4191,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "element-chilled",
           "repeatable": false,
           "maxCopies": 1
@@ -4300,7 +4300,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "element-corroded-envenomed",
           "repeatable": false,
           "maxCopies": 1
@@ -4409,7 +4409,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "element-shocked",
           "repeatable": false,
           "maxCopies": 1
@@ -4518,7 +4518,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "flurry",
           "repeatable": false,
           "maxCopies": 1
@@ -4627,7 +4627,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "focus",
           "repeatable": false,
           "maxCopies": 1
@@ -4736,7 +4736,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "force",
           "repeatable": false,
           "maxCopies": 1
@@ -4845,7 +4845,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "fortitude",
           "repeatable": false,
           "maxCopies": 1
@@ -4954,7 +4954,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "guard-shatter",
           "repeatable": false,
           "maxCopies": 1
@@ -5063,7 +5063,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "healing",
           "repeatable": false,
           "maxCopies": 1
@@ -5172,7 +5172,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "penetration",
           "repeatable": true,
           "maxCopies": 2
@@ -5281,7 +5281,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "power",
           "repeatable": false,
           "maxCopies": 1
@@ -5390,7 +5390,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "presence",
           "repeatable": false,
           "maxCopies": 1
@@ -5499,7 +5499,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "reflexes",
           "repeatable": false,
           "maxCopies": 1
@@ -5608,7 +5608,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "shapes",
           "repeatable": false,
           "maxCopies": 1
@@ -5717,7 +5717,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "tenacity-break",
           "repeatable": false,
           "maxCopies": 1
@@ -5826,7 +5826,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "flames",
           "repeatable": false,
           "maxCopies": 1
@@ -5935,7 +5935,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "sky",
           "repeatable": false,
           "maxCopies": 1
@@ -6044,7 +6044,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "storm",
           "repeatable": false,
           "maxCopies": 1
@@ -6153,7 +6153,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "earth",
           "repeatable": false,
           "maxCopies": 1
@@ -6262,7 +6262,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "sea",
           "repeatable": false,
           "maxCopies": 1
@@ -6371,7 +6371,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "mind",
           "repeatable": false,
           "maxCopies": 1
@@ -6480,7 +6480,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "sickness",
           "repeatable": false,
           "maxCopies": 1
@@ -6589,7 +6589,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "decay",
           "repeatable": false,
           "maxCopies": 1
@@ -6698,7 +6698,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "seals",
           "repeatable": false,
           "maxCopies": 1
@@ -6807,7 +6807,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "will",
           "repeatable": false,
           "maxCopies": 1
@@ -6916,7 +6916,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "corrupted-boost",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealBoost": "weakness",
           "repeatable": false,
           "maxCopies": 1
@@ -7025,7 +7025,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "secondary-chakra-network",
           "mutationType": "recessive"
         }
@@ -7133,7 +7133,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "amplified-muscle-density",
           "mutationType": "recessive"
         }
@@ -7241,7 +7241,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "amplified-mental-accuity",
           "mutationType": "recessive"
         }
@@ -7349,7 +7349,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "cellular-multiplication",
           "mutationType": "recessive"
         }
@@ -7457,7 +7457,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "perceptive-sensory",
           "mutationType": "recessive"
         }
@@ -7565,7 +7565,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "elemental-averse",
           "mutationType": "recessive"
         }
@@ -7673,7 +7673,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "amplified-focus",
           "mutationType": "recessive"
         }
@@ -7781,7 +7781,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "danger-sense",
           "mutationType": "recessive"
         }
@@ -7889,7 +7889,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "patrons-knowledge",
           "mutationType": "recessive"
         }
@@ -7997,7 +7997,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "passive-absorption",
           "mutationType": "recessive"
         }
@@ -8105,7 +8105,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "cursed-wings",
           "mutationType": "dominant"
         }
@@ -8213,7 +8213,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "cursed-tail",
           "mutationType": "dominant"
         }
@@ -8321,7 +8321,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "cursed-eyes",
           "mutationType": "dominant"
         }
@@ -8429,7 +8429,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "cursed-polarizer",
           "mutationType": "dominant"
         }
@@ -8537,7 +8537,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "cursed-moon",
           "mutationType": "dominant"
         }
@@ -8645,7 +8645,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "mutation",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealMutation": "cursed-stars",
           "mutationType": "dominant"
         }
@@ -8753,7 +8753,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "broken-truths",
           "orderType": "minor"
         }
@@ -8861,7 +8861,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "burned-bridges",
           "orderType": "minor"
         }
@@ -8969,7 +8969,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "forbidden-knowledge",
           "orderType": "minor"
         }
@@ -9077,7 +9077,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "greed-by-another-name",
           "orderType": "minor"
         }
@@ -9185,7 +9185,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "guided-following",
           "orderType": "minor"
         }
@@ -9293,7 +9293,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "my-enemys-enemy",
           "orderType": "minor"
         }
@@ -9401,7 +9401,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "stolen-future",
           "orderType": "minor"
         }
@@ -9509,7 +9509,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "stolen-history",
           "orderType": "minor"
         }
@@ -9617,7 +9617,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "stolen-techniques",
           "orderType": "minor"
         }
@@ -9725,7 +9725,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "thin-line",
           "orderType": "minor"
         }
@@ -9833,7 +9833,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "brutal-betrayal",
           "orderType": "major"
         }
@@ -9941,7 +9941,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "sacrificial-debt",
           "orderType": "major"
         }
@@ -10049,7 +10049,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "self-sabotage",
           "orderType": "major"
         }
@@ -10157,7 +10157,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "always-too-late",
           "orderType": "major"
         }
@@ -10265,7 +10265,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "demon-time",
           "orderType": "major"
         }
@@ -10373,7 +10373,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "destroying-the-past",
           "orderType": "major"
         }
@@ -10481,7 +10481,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "abandoned-love",
           "orderType": "major"
         }
@@ -10589,7 +10589,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "even-in-death",
           "orderType": "major"
         }
@@ -10697,7 +10697,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "order",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealOrder": "misery-loves-company",
           "orderType": "major"
         }
@@ -10805,7 +10805,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "classmod-feat",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeat": "cursed-beginnings"
         }
       },
@@ -10912,7 +10912,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "classmod-feat",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeat": "adept-cursed-seal"
         }
       },
@@ -11019,7 +11019,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "classmod-feat",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeat": "expert-cursed-seal"
         }
       },
@@ -11126,7 +11126,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "classmod-feat",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealFeat": "superior-cursed-seal"
         }
       },
@@ -11233,7 +11233,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "guide",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealGuide": "adversaries"
         }
       },
@@ -11340,7 +11340,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "guide",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealGuide": "adversary-traits"
         }
       },
@@ -11447,7 +11447,7 @@
           "managed": true,
           "classMod": "cursed-seal",
           "category": "guide",
-          "contentVersion": "0.18.0",
+          "contentVersion": "0.18.1",
           "cursedSealGuide": "gm-guidance"
         }
       },

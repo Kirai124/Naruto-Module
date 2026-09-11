@@ -8648,7 +8648,7 @@
         "n5eb-classmod-library": {
           "managed": true,
           "category": "classmod",
-          "contentVersion": "0.9.0"
+          "contentVersion": "0.18.1"
         }
       },
       "folder": "d6bb1c78a8148b77"

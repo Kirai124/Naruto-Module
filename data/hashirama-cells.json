@@ -3767,7 +3767,7 @@
           "managed": true,
           "category": "classmod",
           "classMod": "hashirama-cells",
-          "contentVersion": "0.16.0"
+          "contentVersion": "0.18.1"
         }
       },
       "folder": "308642d816ea72c2"
