@@ -4156,7 +4156,7 @@
       "img": "modules/n5eb-classmod-library/assets/kama-seal.png",
       "system": {
         "description": {
-          "value": "<p>Choose Hyūga, Chinoike, Kuru, Uchiha, Jōgan, or Kokugan and gain the Latent Dōjutsu tier listed in the source PDF, treating your character level as 8 higher. Some options can be selected a second time.</p>",
+          "value": "<p>Choose Hyūga, Chinoike, Kuru, Uchiha, Jōgan, or Kokugan. When this Influence is added to an Actor, the Kāma tracker opens the Dōjutsu choice and automatically grants every eligible N5eB Latent Ability while treating your character level as 8 higher. Chinoike, Kuru, and Uchiha may be selected a second time to unlock their remaining Latent tiers. Latent eye activation granted this way costs no chakra.</p>",
           "chat": ""
         },
         "source": {
@@ -4249,7 +4249,8 @@
         "n5eb-classmod-library": {
           "managed": true,
           "category": "karmic",
-          "classMod": "kama-seal"
+          "classMod": "kama-seal",
+          "repeatable": true
         }
       },
       "folder": "reKYP17zdlOpkT1a"
@@ -9134,11 +9135,11 @@
         "n5eb-classmod-library": {
           "managed": true,
           "category": "classmod",
-          "contentVersion": "0.18.1"
+          "contentVersion": "0.18.3"
         }
       },
       "folder": "nalhPxCy3I11Q83G"
     }
   ],
-  "version": "0.6.0"
+  "version": "0.18.3"
 }

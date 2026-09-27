@@ -1,11 +1,11 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.18.2";
+const CONTENT_VERSION = "0.18.3";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
-const KAMA_TRACKER_VERSION = 1;
+const KAMA_TRACKER_VERSION = 2;
 const KAMA_ATTACK_FORMULA = "floor(@details.level/2)+@classmods.kama-seal.levels+@prof";
 const KAMA_SAVE_FORMULA = "10+floor(@details.level/2)+@prof";
 const FTG_ATTACK_FORMULA = "2*@abilities.dex.mod+2*@classmods.flying-thunder-god.levels";
@@ -50,6 +50,55 @@ const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tense
 const SEAL_TYPE_KEYS = Object.freeze([
   "all-rounder", "absorber", "assault-type", "tank-type", "speed-type", "sensor-type", "white-kama-seal"
 ]);
+
+const KARMIC_DOJUTSU = Object.freeze({
+  hyuga: Object.freeze({
+    label: "Hyūga — Byakugan",
+    shortLabel: "Byakugan",
+    baseCap: 4,
+    maximumCap: 4,
+    tiers: Object.freeze(["Latent Byakugan I", "Latent Byakugan II", "Latent Byakugan III", "Latent Byakugan IV"])
+  }),
+  chinoike: Object.freeze({
+    label: "Chinoike — Ketsuryūgan",
+    shortLabel: "Ketsuryūgan",
+    baseCap: 2,
+    maximumCap: 3,
+    tiers: Object.freeze(["Latent Ketsuryūgan I", "Latent Ketsuryūgan II", "Latent Ketsuryūgan III"]),
+    tierTwoJutsu: "Genjutsu Ketsuryugan"
+  }),
+  kuru: Object.freeze({
+    label: "Kuru — Kurugan",
+    shortLabel: "Kurugan",
+    baseCap: 2,
+    maximumCap: 3,
+    tiers: Object.freeze(["Latent Kurugan I", "Latent Kurugan II", "Latent Kurugan III"])
+  }),
+  uchiha: Object.freeze({
+    label: "Uchiha — Sharingan",
+    shortLabel: "Sharingan",
+    baseCap: 2,
+    maximumCap: 4,
+    tiers: Object.freeze(["Latent Sharingan I", "Latent Sharingan II", "Latent Sharingan III", "Latent Sharingan IV"]),
+    tierTwoJutsu: "Genjutsu: Sharingan!"
+  }),
+  jogan: Object.freeze({
+    label: "Jōgan",
+    shortLabel: "Jōgan",
+    baseCap: 1,
+    maximumCap: 1,
+    tiers: Object.freeze([]),
+    external: true
+  }),
+  kokugan: Object.freeze({
+    label: "Kokugan",
+    shortLabel: "Kokugan",
+    baseCap: 2,
+    maximumCap: 2,
+    tiers: Object.freeze([]),
+    external: true
+  })
+});
 
 /**
  * N5eB 3.1.0 keeps choices from earlier ItemChoice levels in the current pool.
@@ -196,6 +245,10 @@ Hooks.once("ready", async () => {
     collection: PACK_COLLECTION,
     toggleKama,
     openKamaTracker,
+    configureKarmicDojutsu,
+    syncKarmicDojutsu,
+    setKamaPossessed,
+    rollKamaPossessionSave,
     getKamaTracker: readKamaTracker,
     setKamaTracker: updateKamaTracker,
     syncKamaRewrite,
@@ -492,7 +545,14 @@ function defaultKamaTracker() {
     version: KAMA_TRACKER_VERSION,
     divineRewrite: 0,
     resonanceDisruption: 0,
-    activationsSinceFullRest: 0
+    activationsSinceFullRest: 0,
+    possessed: false,
+    possessionRounds: 0,
+    possessionProficiency: 0,
+    possessionLastTurn: "",
+    takeoverStatus: "dormant",
+    possessionSuppressed: false,
+    influenceRescueUsed: false
   };
 }
 
@@ -501,8 +561,15 @@ function normalizeKamaTracker(value) {
   return {
     version: KAMA_TRACKER_VERSION,
     divineRewrite: Math.clamp(Number(source.divineRewrite ?? 0), 0, 100),
-    resonanceDisruption: Math.clamp(Number(source.resonanceDisruption ?? 0), 0, 5),
-    activationsSinceFullRest: Math.max(0, Math.floor(Number(source.activationsSinceFullRest ?? 0)))
+    resonanceDisruption: Math.max(0, Math.floor(Number(source.resonanceDisruption ?? 0))),
+    activationsSinceFullRest: Math.max(0, Math.floor(Number(source.activationsSinceFullRest ?? 0))),
+    possessed: Boolean(source.possessed),
+    possessionRounds: Math.clamp(Math.floor(Number(source.possessionRounds ?? 0)), 0, 10),
+    possessionProficiency: Math.clamp(Math.floor(Number(source.possessionProficiency ?? 0)), 0, 20),
+    possessionLastTurn: String(source.possessionLastTurn ?? ""),
+    takeoverStatus: ["dormant", "pending", "won", "split", "lost"].includes(source.takeoverStatus) ? source.takeoverStatus : "dormant",
+    possessionSuppressed: Boolean(source.possessionSuppressed),
+    influenceRescueUsed: Boolean(source.influenceRescueUsed)
   };
 }
 
@@ -531,9 +598,165 @@ async function updateKamaTracker(actor, patch={}, {sync=true, render=true, allow
 async function ensureKamaTracker(actor, {fresh=false}={}) {
   const raw = actor?.getFlag?.(MODULE_ID, KAMA_TRACKER_FLAG);
   if (!fresh && raw && Number(raw.version) === KAMA_TRACKER_VERSION) return readKamaTracker(actor);
-  const state = defaultKamaTracker();
+  const state = fresh ? defaultKamaTracker() : normalizeKamaTracker(raw);
   await actor.update({[`flags.${MODULE_ID}.${KAMA_TRACKER_FLAG}`]: state}, {[KAMA_INTERNAL_OPTION]: {tracker: true}});
   return state;
+}
+
+function escapeKamaHtml(value) {
+  return foundry.utils.escapeHTML?.(String(value ?? "")) ?? String(value ?? "");
+}
+
+function getKarmicDojutsuItems(actor) {
+  return asArray(actor?.items).filter(item => item.system?.identifier === "karmic-dojutsu");
+}
+
+function getKarmicDojutsuClan(item) {
+  const value = item?.getFlag?.(MODULE_ID, "karmicDojutsuClan");
+  return Object.hasOwn(KARMIC_DOJUTSU, value) ? value : "";
+}
+
+function getKarmicDojutsuSummary(actor) {
+  const selected = getKarmicDojutsuItems(actor).map(getKarmicDojutsuClan).filter(Boolean);
+  const labels = selected.map(key => KARMIC_DOJUTSU[key].shortLabel);
+  const pending = getKarmicDojutsuItems(actor).length - selected.length;
+  return {labels, pending};
+}
+
+function getAvailableKarmicDojutsu(actor, currentItem) {
+  const counts = {};
+  for (const item of getKarmicDojutsuItems(actor)) {
+    if (item === currentItem) continue;
+    const clan = getKarmicDojutsuClan(item);
+    if (clan) counts[clan] = (counts[clan] ?? 0) + 1;
+  }
+  return Object.entries(KARMIC_DOJUTSU).filter(([key, config]) => {
+    const count = counts[key] ?? 0;
+    return count === 0 || (count === 1 && config.maximumCap > config.baseCap);
+  });
+}
+
+async function configureKarmicDojutsu(actor, item) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if (!actor || !getKamaClassMod(actor)) return ui.notifications.warn("No Kāma character is selected.");
+  const choices = getKarmicDojutsuItems(actor);
+  if (!choices.length) return ui.notifications.warn("This character has not selected Karmic Dōjutsu.");
+  if (!(item && choices.includes(item))) {
+    item = choices.find(entry => !getKarmicDojutsuClan(entry));
+    if (!item && choices.length > 1) {
+      const itemId = await foundry.applications.api.DialogV2.wait({
+        window:{title:`Configure Karmic Dōjutsu — ${actor.name}`},
+        content:`<form><div class="form-group"><label for="n5eb-karmic-dojutsu-item">Selection to change</label><select id="n5eb-karmic-dojutsu-item" name="item">${choices.map((entry, index) => `<option value="${entry.id}">${index + 1}. ${escapeKamaHtml(KARMIC_DOJUTSU[getKarmicDojutsuClan(entry)]?.shortLabel ?? "Pending choice")}</option>`).join("")}</select></div></form>`,
+        buttons:[
+          {action:"continue", label:"Continue", default:true, callback:(event, button) => new FormDataExtended(button.form).object.item},
+          {action:"cancel", label:"Cancel"}
+        ],
+        rejectClose:false
+      });
+      item = choices.find(entry => entry.id === itemId);
+      if (!item) return false;
+    }
+    item ??= choices[0];
+  }
+
+  const available = getAvailableKarmicDojutsu(actor, item);
+  if (!available.length) return ui.notifications.warn("No legal Karmic Dōjutsu option remains for this selection.");
+  const currentClan = getKarmicDojutsuClan(item);
+  const result = await foundry.applications.api.DialogV2.wait({
+    window:{title:`Choose Karmic Dōjutsu — ${actor.name}`},
+    content:`<form>
+      <p>Select the eye awakened by this instance of <strong>Karmic Dōjutsu</strong>. Chinoike, Kuru, and Uchiha can be selected a second time to unlock their remaining Latent tiers.</p>
+      <div class="form-group"><label for="n5eb-karmic-dojutsu-clan">Dōjutsu</label><select id="n5eb-karmic-dojutsu-clan" name="clan">${available.map(([key, config]) => `<option value="${key}" ${key === currentClan ? "selected" : ""}>${escapeKamaHtml(config.label)}</option>`).join("")}</select></div>
+    </form>`,
+    buttons:[
+      {action:"choose", label:"Bind Dōjutsu", icon:"fa-solid fa-eye", default:true, callback:(event, button) => new FormDataExtended(button.form).object.clan},
+      {action:"cancel", label:"Cancel"}
+    ],
+    rejectClose:false
+  });
+  if (!result || !KARMIC_DOJUTSU[result]) return false;
+  const config = KARMIC_DOJUTSU[result];
+  const details = config.external
+    ? `<p><strong>Selected Dōjutsu:</strong> ${escapeKamaHtml(config.shortLabel)}.</p><p>This option uses the linked Jōgan/Kokugan homebrew feat because it is not included in the installed N5eB system compendiums: <a href="https://homebrewery.naturalcrit.com/share/ORhUdCp9OKqk">open feat document</a>.</p>`
+    : `<p><strong>Selected Dōjutsu:</strong> ${escapeKamaHtml(config.label)}.</p><p>The module grants every eligible Latent tier from the N5eB Clan compendium, treating the character as 8 levels higher. The granted eye's initial activation costs no chakra.</p>`;
+  await item.update({
+    name:`Karmic Dōjutsu — ${config.shortLabel}`,
+    "system.description.value":details,
+    [`flags.${MODULE_ID}.karmicDojutsuClan`]:result
+  }, {[KAMA_INTERNAL_OPTION]:{karmicDojutsuChoice:true}});
+  await syncKarmicDojutsu(actor);
+  actor.sheet?.render?.(false);
+  if (config.external) ui.notifications.info(`${config.shortLabel} was selected. Its linked homebrew feat is not bundled in the N5eB system, so its feature remains rules-text driven.`);
+  return true;
+}
+
+async function findSystemItemByName(name) {
+  const normalized = String(name).trim().toLocaleLowerCase();
+  for (const collection of ["n5eb.clan", "n5eb.hb-clan", "n5eb.jutsus", "n5eb.hb-jutsus"]) {
+    const pack = game.packs.get(collection);
+    if (!pack) continue;
+    const index = await pack.getIndex({fields:["name", "system.identifier", "system.prerequisites.level"]});
+    const row = index.find(entry => String(entry.name ?? "").trim().toLocaleLowerCase() === normalized);
+    if (row) return pack.getDocument(row._id);
+  }
+  return null;
+}
+
+async function getDesiredKarmicDojutsuItems(actor) {
+  const selections = getKarmicDojutsuItems(actor).map(getKarmicDojutsuClan).filter(Boolean);
+  const counts = selections.reduce((result, key) => ({...result, [key]:(result[key] ?? 0) + 1}), {});
+  const effectiveLevel = Math.max(0, Number(actor.system?.details?.level ?? 0)) + 8;
+  const desired = new Map();
+
+  for (const [key, count] of Object.entries(counts)) {
+    const config = KARMIC_DOJUTSU[key];
+    if (!config || config.external) continue;
+    const cap = Math.min(config.tiers.length, count > 1 ? config.maximumCap : config.baseCap);
+    let highestGrantedTier = 0;
+    for (let index = 0; index < cap; index += 1) {
+      const source = await findSystemItemByName(config.tiers[index]);
+      if (!source) {
+        console.warn(`${MODULE_ID} | N5eB system item not found: ${config.tiers[index]}`);
+        continue;
+      }
+      const requiredLevel = Math.max(0, Number(source.system?.prerequisites?.level ?? 0));
+      if (requiredLevel > effectiveLevel) continue;
+      desired.set(source.name, source);
+      highestGrantedTier = index + 1;
+    }
+    if (config.tierTwoJutsu && highestGrantedTier >= 2) {
+      const source = await findSystemItemByName(config.tierTwoJutsu);
+      if (source) desired.set(source.name, source);
+      else console.warn(`${MODULE_ID} | N5eB system item not found: ${config.tierTwoJutsu}`);
+    }
+  }
+  return desired;
+}
+
+async function syncKarmicDojutsu(actor) {
+  if (!actor?.isOwner || !getKamaClassMod(actor)) return;
+  const desired = await getDesiredKarmicDojutsuItems(actor);
+  const managed = asArray(actor.items).filter(item => item.getFlag?.(MODULE_ID, "karmicDojutsuManaged"));
+  const stale = managed.filter(item => !desired.has(item.getFlag(MODULE_ID, "karmicDojutsuSourceName"))).map(item => item.id);
+  if (stale.length) await actor.deleteEmbeddedDocuments("Item", stale, {[KAMA_INTERNAL_OPTION]:{karmicDojutsuSync:true}});
+
+  const ownedNames = new Set(asArray(actor.items).filter(item => !stale.includes(item.id)).map(item => String(item.name ?? "").trim().toLocaleLowerCase()));
+  const create = [];
+  for (const source of desired.values()) {
+    if (ownedNames.has(String(source.name ?? "").trim().toLocaleLowerCase())) continue;
+    const data = source.toObject();
+    delete data._id;
+    delete data.folder;
+    foundry.utils.setProperty(data, `flags.${MODULE_ID}.karmicDojutsuManaged`, true);
+    foundry.utils.setProperty(data, `flags.${MODULE_ID}.karmicDojutsuSourceName`, source.name);
+    if (/^Latent /i.test(source.name)) {
+      foundry.utils.setProperty(data, "system.consume.amount", 0);
+      foundry.utils.setProperty(data, `flags.${MODULE_ID}.karmicDojutsuFreeActivation`, true);
+    }
+    create.push(data);
+    ownedNames.add(String(source.name ?? "").trim().toLocaleLowerCase());
+  }
+  if (create.length) await actor.createEmbeddedDocuments("Item", create, {[KAMA_INTERNAL_OPTION]:{karmicDojutsuSync:true}});
 }
 
 function addChange(changes, key, value, mode=CONST.ACTIVE_EFFECT_MODES.ADD, priority=20) {
@@ -657,6 +880,114 @@ async function removeKamaPoints(actor) {
     "system.attributes.hp.temp": Math.min(current, baseline),
     [`flags.${MODULE_ID}.-=${KAMA_TEMP_HP_FLAG}`]: null
   }, {[KAMA_INTERNAL_OPTION]: {kamaPoints: true}});
+}
+
+function getEffectiveKamaInfluence(actor, state=readKamaTracker(actor)) {
+  if (state.takeoverStatus === "won") return "influence-heavy-influence";
+  if (state.takeoverStatus === "split") return "influence-no-influence";
+  return getSelectedInfluence(actor)?.system?.identifier ?? "";
+}
+
+function canKamaBePossessed(actor, state=readKamaTracker(actor)) {
+  if (getSealTypeKey(getSelectedSealType(actor)) === "white-kama-seal") return false;
+  if (state.possessionSuppressed || state.takeoverStatus === "won") return false;
+  return getEffectiveKamaInfluence(actor, state) !== "influence-no-influence";
+}
+
+function getKamaPossessionEffect(actor) {
+  return asArray(actor?.effects).find(effect => effect.getFlag?.(MODULE_ID, "kamaPossessionEffect"));
+}
+
+async function syncKamaPossessionEffect(actor, state=readKamaTracker(actor)) {
+  if (!actor?.isOwner) return;
+  let effect = getKamaPossessionEffect(actor);
+  if (!state.possessed) {
+    if (effect) await actor.deleteEmbeddedDocuments("ActiveEffect", [effect.id], {[KAMA_INTERNAL_OPTION]:{kamaPossession:true}});
+    return;
+  }
+  const data = {
+    name:"Kāma Possession",
+    img:`modules/${MODULE_ID}/assets/kama-seal.png`,
+    disabled:false,
+    transfer:false,
+    duration:{seconds:60, rounds:10, startTime:game.time.worldTime, startRound:game.combat?.round ?? null, startTurn:game.combat?.turn ?? null},
+    changes:[{key:"system.attributes.ac.bonus", mode:CONST.ACTIVE_EFFECT_MODES.ADD, value:"3", priority:30}],
+    flags:{[MODULE_ID]:{kamaPossessionEffect:true}}
+  };
+  if (!effect) [effect] = await actor.createEmbeddedDocuments("ActiveEffect", [data], {[KAMA_INTERNAL_OPTION]:{kamaPossession:true}});
+  else await effect.update({name:data.name, img:data.img, disabled:false, changes:data.changes}, {[KAMA_INTERNAL_OPTION]:{kamaPossession:true}});
+}
+
+async function setKamaPossessed(actor, possessed=true, {force=false, reason=""}={}) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if (!actor || !getKamaClassMod(actor)) return ui.notifications.warn("No Kāma character is selected.");
+  const state = readKamaTracker(actor);
+  if (possessed && !force && !canKamaBePossessed(actor, state)) {
+    return ui.notifications.warn("This Kāma cannot currently be Possessed.");
+  }
+  if (possessed && getKamaEffect(actor)?.disabled) await toggleKama(actor);
+  const next = await updateKamaTracker(actor, {
+    possessed:Boolean(possessed),
+    possessionRounds:0,
+    possessionLastTurn:""
+  }, {sync:false, render:false});
+  await syncKamaPossessionEffect(actor, next);
+  if (possessed) {
+    await actor.update({"system.attributes.hp.temp":Math.max(0, Number(actor.system?.attributes?.hp?.temp ?? 0)) + 50}, {[KAMA_INTERNAL_OPTION]:{kamaPossession:true}});
+  }
+  actor.sheet?.render?.(false);
+  refreshOpenTracker(actor);
+  const suffix = reason ? ` (${escapeKamaHtml(reason)})` : "";
+  ui.notifications.info(`Kāma Possession ${possessed ? "activated" : "ended"}${suffix}.`);
+  return next;
+}
+
+function getKamaPossessionDC(actor) {
+  const chakra = actor?.system?.attributes?.chakra ?? {};
+  const value = Math.max(0, Number(chakra.value ?? 0));
+  const maximum = Math.max(1, Number(chakra.max ?? 0));
+  const quarters = Math.min(4, Math.floor((value / maximum) * 4));
+  return Math.max(15, 35 - (quarters * 5));
+}
+
+async function rollKamaPossessionSave(actor) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  const state = readKamaTracker(actor);
+  if (!actor || !state.possessed) return ui.notifications.warn("This character is not Possessed.");
+  const chakra = actor.system?.attributes?.chakra ?? {};
+  if (Number(chakra.max ?? 0) > 0 && Number(chakra.value ?? 0) >= Number(chakra.max)) {
+    await setKamaPossessed(actor, false, {reason:"Chakra is full"});
+    return true;
+  }
+  const charisma = actor.system?.abilities?.cha ?? {};
+  const proficiency = Math.max(0, Number(actor.system?.attributes?.prof ?? 0));
+  const proficient = Math.max(0, Number(charisma.proficient ?? 0));
+  const modifier = Number.isFinite(Number(charisma.mod)) ? Number(charisma.mod) : Math.floor((Number(charisma.value ?? 10) - 10) / 2);
+  const bonus = modifier + Math.floor(proficiency * proficient);
+  const dc = getKamaPossessionDC(actor);
+  const roll = await new Roll("1d20 + @bonus", {bonus}).evaluate();
+  await roll.toMessage({speaker:ChatMessage.getSpeaker({actor}), flavor:`Kāma Possession — Charisma Save (DC ${dc}, Mental Superiority excluded)`});
+  const success = Number(roll.total ?? 0) >= dc;
+  if (success) await setKamaPossessed(actor, false, {reason:"Charisma save succeeded"});
+  return success;
+}
+
+async function processKamaPossessionTurn(actor, combat) {
+  const state = readKamaTracker(actor);
+  if (!state.possessed) return;
+  const turnKey = `${combat?.id ?? "combat"}:${combat?.round ?? 0}:${combat?.turn ?? 0}`;
+  if (state.possessionLastTurn === turnKey) return;
+  if (state.possessionRounds >= 10) {
+    await setKamaPossessed(actor, false, {reason:"10 rounds elapsed"});
+    return;
+  }
+  const chakra = actor.system?.attributes?.chakra ?? {};
+  if (Number(chakra.max ?? 0) > 0 && Number(chakra.value ?? 0) >= Number(chakra.max)) {
+    await setKamaPossessed(actor, false, {reason:"Chakra is full"});
+    return;
+  }
+  await actor.update({"system.attributes.hp.temp":Math.max(0, Number(actor.system?.attributes?.hp?.temp ?? 0)) + 50}, {[KAMA_INTERNAL_OPTION]:{kamaPossession:true}});
+  await updateKamaTracker(actor, {possessionRounds:state.possessionRounds + 1, possessionLastTurn:turnKey}, {sync:false});
 }
 
 function calculateKamaArtValues(actor) {
@@ -885,7 +1216,7 @@ function calculateResonanceGain(actor, state) {
   if (getSealTypeKey(getSelectedSealType(actor)) === "white-kama-seal") return 0;
   const priorActivations = state.activationsSinceFullRest;
   let gain = 2 + priorActivations;
-  const influence = getSelectedInfluence(actor)?.system?.identifier;
+  const influence = getEffectiveKamaInfluence(actor, state);
   if (influence === "influence-no-influence" && priorActivations > 0) gain += 1;
   if (influence === "influence-heavy-influence") gain = Math.max(1, gain - 1);
   return gain;
@@ -894,13 +1225,19 @@ function calculateResonanceGain(actor, state) {
 async function handleKamaActivation(actor) {
   const state = await ensureKamaTracker(actor);
   const resonanceGain = calculateResonanceGain(actor, state);
+  const rewriteGain = state.divineRewrite >= 80 ? KAMA_REWRITE_STEP * 1.5 : KAMA_REWRITE_STEP;
+  const divineRewrite = Math.min(100, state.divineRewrite + rewriteGain);
   const next = {
-    divineRewrite: Math.min(100, state.divineRewrite + KAMA_REWRITE_STEP),
-    resonanceDisruption: Math.min(5, state.resonanceDisruption + resonanceGain),
-    activationsSinceFullRest: state.activationsSinceFullRest + 1
+    divineRewrite,
+    resonanceDisruption: state.resonanceDisruption + resonanceGain,
+    activationsSinceFullRest: state.activationsSinceFullRest + 1,
+    ...(divineRewrite >= 100 && state.takeoverStatus === "dormant" ? {takeoverStatus:"pending"} : {})
   };
   await updateKamaTracker(actor, next, {render: false});
   await grantOrAdjustKamaPoints(actor);
+  if (divineRewrite >= 100 && state.takeoverStatus === "dormant") {
+    ui.notifications.warn(`${actor.name}'s Divine Rewrite reached 100%. Resolve Take-Over in the Kāma Tracker.`);
+  }
   actor.sheet?.render?.(false);
 }
 
@@ -913,6 +1250,12 @@ async function toggleKama(actor) {
   if (!effect) return ui.notifications.error("The Kāma Seal Active Effect was not found.");
 
   const activating = effect.disabled;
+  if (activating && getKamaLevel(actor) < 3) {
+    const hp = actor.system?.attributes?.hp ?? {};
+    const value = Number(hp.value ?? 0);
+    const maximum = Math.max(1, Number(hp.max ?? 0));
+    if (value >= maximum / 2) return ui.notifications.warn("Before Kāma Seal level 3, the seal can only be activated while Bloodied (below half maximum HP).");
+  }
   const update = {disabled: !activating, changes: buildKamaChanges(actor)};
   if (activating) {
     update["duration.startTime"] = game.time.worldTime;
@@ -1061,8 +1404,10 @@ async function migrateKamaActor(actor) {
   await removeLegacyTrackerEffects(actor);
   await ensureKamaArtsFormulas(actor);
   await syncSealEvolution(actor);
+  await syncKarmicDojutsu(actor);
   await syncKamaRewrite(actor);
   await syncResonanceDisruption(actor);
+  await syncKamaPossessionEffect(actor);
   await refreshKamaEffect(actor);
 }
 
@@ -1098,28 +1443,64 @@ function trackerDialogKey(actor) {
 function buildKamaTrackerHtml(actor) {
   const state = readKamaTracker(actor);
   const rewriteMin = game.user.isGM ? 0 : state.divineRewrite;
+  const active = getKamaEffect(actor)?.disabled === false;
+  const dojutsu = getKarmicDojutsuSummary(actor);
+  const takeoverLabels = {dormant:"Dormant", pending:"Take-Over pending", won:"Ōtsutsuki defeated", split:"Permanently split", lost:"Ōtsutsuki victorious"};
+  const possessionAllowed = canKamaBePossessed(actor, state);
+  const heavyInfluence = getEffectiveKamaInfluence(actor, state) === "influence-heavy-influence";
   return `
     <div class="n5eb-kama-tracker-dialog" data-kama-tracker-root>
       <p class="tracker-intro">These values are stored directly on <strong>${foundry.utils.escapeHTML?.(actor.name) ?? actor.name}</strong>. They are not item uses.</p>
+      <section class="tracker-card status ${active ? "active" : ""}">
+        <header><span>Kāma Seal</span><strong data-value="seal-status">${active ? "Active" : "Inactive"}</strong></header>
+        <div class="tracker-actions">
+          <button type="button" data-action="toggle-kama"><i class="fas fa-diamond"></i> <span data-value="seal-action">${active ? "Deactivate Seal" : "Activate Seal"}</span></button>
+        </div>
+      </section>
       <section class="tracker-card rewrite">
         <header><span>Divine Rewrite</span><strong data-value="rewrite">${state.divineRewrite}%</strong></header>
         <div class="tracker-progress"><span data-bar="rewrite" style="width:${state.divineRewrite}%"></span></div>
         <div class="tracker-controls">
           ${game.user.isGM ? '<button type="button" data-action="rewrite-minus"><i class="fas fa-minus"></i> 5</button>' : ''}
-          <input type="number" name="n5eb-kama-rewrite" aria-label="Divine Rewrite" data-input="rewrite" min="${rewriteMin}" max="100" step="5" value="${state.divineRewrite}">
+          <input type="number" name="n5eb-kama-rewrite" aria-label="Divine Rewrite" data-input="rewrite" min="${rewriteMin}" max="100" step="2.5" value="${state.divineRewrite}">
           <button type="button" data-action="rewrite-plus"><i class="fas fa-plus"></i> 5</button>
         </div>
       </section>
       <section class="tracker-card resonance">
-        <header><span>Resonance Disruption</span><strong data-value="resonance">${state.resonanceDisruption} / 5</strong></header>
+        <header><span>Resonance Disruption</span><strong data-value="resonance">${state.resonanceDisruption} ${state.resonanceDisruption === 1 ? "rank" : "ranks"}</strong></header>
         <div class="tracker-pips" data-pips="resonance">${[1,2,3,4,5].map(rank => `<span class="${rank <= state.resonanceDisruption ? 'filled' : ''}"></span>`).join('')}</div>
         <div class="tracker-controls">
           <button type="button" data-action="resonance-minus"><i class="fas fa-minus"></i> 1</button>
-          <input type="number" name="n5eb-kama-resonance" aria-label="Resonance Disruption" data-input="resonance" min="0" max="5" step="1" value="${state.resonanceDisruption}">
+          <input type="number" name="n5eb-kama-resonance" aria-label="Resonance Disruption" data-input="resonance" min="0" step="1" value="${state.resonanceDisruption}">
           <button type="button" data-action="resonance-plus"><i class="fas fa-plus"></i> 1</button>
         </div>
       </section>
-      <div class="tracker-meta">Activations since Full Rest: <strong data-value="activations">${state.activationsSinceFullRest}</strong></div>
+      <section class="tracker-card possession ${state.possessed ? "active" : ""}">
+        <header><span>Possession</span><strong data-value="possession-status">${state.possessed ? "Possessed" : possessionAllowed ? "Controlled" : "Immune"}</strong></header>
+        <p>Rounds: <strong data-value="possession-rounds">${state.possessionRounds}</strong> / 10 · Control Save DC: <strong data-value="possession-dc">${getKamaPossessionDC(actor)}</strong></p>
+        <p class="tracker-note">Possession applies +3 AC and grants 50 temporary HP at the start of each tracked turn. The Ōtsutsuki's individual proficiencies, added non-d20 dice, and Adversary Features remain sheet-specific.</p>
+        <div class="tracker-actions">
+          <button type="button" data-action="toggle-possession" ${!state.possessed && !possessionAllowed ? "disabled" : ""}><i class="fas fa-user-shield"></i> <span data-value="possession-action">${state.possessed ? "End Possession" : "Become Possessed"}</span></button>
+          <button type="button" data-action="possession-save" ${state.possessed ? "" : "disabled"}><i class="fas fa-dice-d20"></i> Charisma Save</button>
+          <button type="button" data-action="influence-check" ${heavyInfluence && !state.possessed ? "" : "disabled"}><i class="fas fa-dice-d20"></i> Heavy Influence Check</button>
+        </div>
+      </section>
+      <section class="tracker-card dojutsu">
+        <header><span>Karmic Dōjutsu</span><strong data-value="dojutsu-count">${dojutsu.labels.length} configured${dojutsu.pending ? ` · ${dojutsu.pending} pending` : ""}</strong></header>
+        <p data-value="dojutsu-list">${dojutsu.labels.length ? dojutsu.labels.map(escapeKamaHtml).join(", ") : "No Dōjutsu selected."}</p>
+        <div class="tracker-actions"><button type="button" data-action="configure-dojutsu" ${getKarmicDojutsuItems(actor).length ? "" : "disabled"}><i class="fas fa-eye"></i> Configure Dōjutsu</button></div>
+      </section>
+      <section class="tracker-card takeover">
+        <header><span>Take-Over</span><strong data-value="takeover-status">${takeoverLabels[state.takeoverStatus]}</strong></header>
+        <p class="tracker-note">At 100% Divine Rewrite, record the Mind Palace outcome here. Success suppresses Possession until the Ōtsutsuki awakens again; Split permanently uses No Influence.</p>
+        <div class="tracker-actions">
+          <button type="button" data-action="takeover-won" ${state.divineRewrite >= 100 ? "" : "disabled"}>Success</button>
+          <button type="button" data-action="takeover-split" ${state.divineRewrite >= 100 ? "" : "disabled"}>Split</button>
+          <button type="button" data-action="takeover-lost" ${state.divineRewrite >= 100 ? "" : "disabled"}>Failure</button>
+          <button type="button" data-action="takeover-awaken" ${state.takeoverStatus === "won" ? "" : "disabled"}>Ōtsutsuki Awakens</button>
+        </div>
+      </section>
+      <div class="tracker-meta">Activations since Full Rest: <strong data-value="activations">${state.activationsSinceFullRest}</strong> · Influence rescue: <strong>${state.influenceRescueUsed ? "Used" : "Ready"}</strong>${game.user.isGM && state.influenceRescueUsed ? ' · <button type="button" data-action="reset-influence-rescue">Reset yearly rescue</button>' : ""}</div>
       <div class="tracker-actions">
         <button type="button" data-action="save"><i class="fas fa-floppy-disk"></i> Save Values</button>
         <button type="button" data-action="long-rest"><i class="fas fa-campground"></i> Long Rest</button>
@@ -1131,23 +1512,10 @@ function buildKamaTrackerHtml(actor) {
 
 function refreshTrackerRoot(root, actor) {
   if (!root) return;
-  const state = readKamaTracker(actor);
-  const rewriteInput = root.querySelector('[data-input="rewrite"]');
-  const resonanceInput = root.querySelector('[data-input="resonance"]');
-  if (rewriteInput) {
-    rewriteInput.value = state.divineRewrite;
-    if (!game.user.isGM) rewriteInput.min = state.divineRewrite;
-  }
-  if (resonanceInput) resonanceInput.value = state.resonanceDisruption;
-  const rewriteValue = root.querySelector('[data-value="rewrite"]');
-  const resonanceValue = root.querySelector('[data-value="resonance"]');
-  const activationsValue = root.querySelector('[data-value="activations"]');
-  if (rewriteValue) rewriteValue.textContent = `${state.divineRewrite}%`;
-  if (resonanceValue) resonanceValue.textContent = `${state.resonanceDisruption} / 5`;
-  if (activationsValue) activationsValue.textContent = state.activationsSinceFullRest;
-  const bar = root.querySelector('[data-bar="rewrite"]');
-  if (bar) bar.style.width = `${state.divineRewrite}%`;
-  root.querySelectorAll('[data-pips="resonance"] span').forEach((pip, index) => pip.classList.toggle("filled", index < state.resonanceDisruption));
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = buildKamaTrackerHtml(actor);
+  const fresh = wrapper.querySelector("[data-kama-tracker-root]");
+  if (fresh) root.innerHTML = fresh.innerHTML;
 }
 
 function refreshOpenTracker(actor) {
@@ -1166,7 +1534,28 @@ function activateKamaTrackerDialog(dialog, actor) {
     const action = button.dataset.action;
     const state = readKamaTracker(actor);
     try {
-      if (action === "rewrite-plus") await updateKamaTracker(actor, {divineRewrite: state.divineRewrite + 5});
+      if (action === "toggle-kama") await toggleKama(actor);
+      else if (action === "toggle-possession") await setKamaPossessed(actor, !state.possessed);
+      else if (action === "possession-save") await rollKamaPossessionSave(actor);
+      else if (action === "influence-check" && getEffectiveKamaInfluence(actor, state) === "influence-heavy-influence") {
+        const roll = await new Roll("1d20").evaluate();
+        await roll.toMessage({speaker:ChatMessage.getSpeaker({actor}), flavor:"Heavy Influence — Possession Check (19–20)"});
+        if (Number(roll.total ?? 0) >= 19) await setKamaPossessed(actor, true, {reason:"Heavy Influence check"});
+      }
+      else if (action === "reset-influence-rescue" && game.user.isGM) await updateKamaTracker(actor, {influenceRescueUsed:false});
+      else if (action === "configure-dojutsu") await configureKarmicDojutsu(actor);
+      else if (action === "takeover-won" && state.divineRewrite >= 100) {
+        if (state.possessed) await setKamaPossessed(actor, false, {reason:"Take-Over defeated"});
+        await updateKamaTracker(actor, {takeoverStatus:"won", possessionSuppressed:true});
+      } else if (action === "takeover-split" && state.divineRewrite >= 100) {
+        if (state.possessed) await setKamaPossessed(actor, false, {reason:"Ōtsutsuki split"});
+        await updateKamaTracker(actor, {takeoverStatus:"split", possessionSuppressed:true});
+      } else if (action === "takeover-lost" && state.divineRewrite >= 100) {
+        await updateKamaTracker(actor, {takeoverStatus:"lost", possessionSuppressed:false});
+        await setKamaPossessed(actor, true, {force:true, reason:"Take-Over failed"});
+      } else if (action === "takeover-awaken" && state.takeoverStatus === "won") {
+        await updateKamaTracker(actor, {takeoverStatus:"dormant", possessionSuppressed:false});
+      } else if (action === "rewrite-plus") await updateKamaTracker(actor, {divineRewrite: state.divineRewrite + 5});
       else if (action === "rewrite-minus") await updateKamaTracker(actor, {divineRewrite: state.divineRewrite - 5}, {allowRewriteDecrease: game.user.isGM});
       else if (action === "resonance-plus") await updateKamaTracker(actor, {resonanceDisruption: state.resonanceDisruption + 1});
       else if (action === "resonance-minus") await updateKamaTracker(actor, {resonanceDisruption: state.resonanceDisruption - 1});
@@ -1205,7 +1594,7 @@ async function openKamaTracker(actor) {
   const DialogV2 = foundry.applications.api.DialogV2;
   const dialog = new DialogV2({
     window:{title:`Kāma Tracker — ${actor.name}`, icon:"fa-solid fa-diamond", resizable:true},
-    position:{width:520, height:"auto"},
+    position:{width:680, height:"auto"},
     classes:["n5eb-kama-tracker-window"],
     content,
     buttons:[{action:"close", label:"Close", icon:"fa-solid fa-xmark"}]
@@ -1233,13 +1622,15 @@ function renderKamaTrackerStrip(app, html) {
   const target = root.querySelector(".jutsu-casting-overview") ?? root.querySelector(".sheet-body");
   if (!target) return;
   const state = readKamaTracker(actor);
+  const active = getKamaEffect(actor)?.disabled === false;
   const section = document.createElement("section");
   section.className = "n5eb-kama-tracker-strip";
   section.dataset.kamaTrackerStrip = "true";
   section.innerHTML = `
     <button type="button" class="tracker-title" data-action="open-kama-tracker"><i class="fas fa-diamond"></i> Kāma Tracking</button>
     <div class="tracker-mini rewrite"><span>Divine Rewrite</span><div><i style="width:${state.divineRewrite}%"></i></div><strong>${state.divineRewrite}%</strong></div>
-    <div class="tracker-mini resonance"><span>Resonance</span><div>${[1,2,3,4,5].map(rank => `<i class="${rank <= state.resonanceDisruption ? 'filled' : ''}"></i>`).join('')}</div><strong>${state.resonanceDisruption}/5</strong></div>`;
+    <div class="tracker-mini resonance"><span>Resonance</span><div>${[1,2,3,4,5].map(rank => `<i class="${rank <= state.resonanceDisruption ? 'filled' : ''}"></i>`).join('')}</div><strong>${state.resonanceDisruption}</strong></div>
+    <div class="tracker-mini status"><span>${state.possessed ? "Possessed" : active ? "Seal Active" : "Seal Inactive"}</span><strong>${state.possessed ? `${state.possessionRounds}/10` : ""}</strong></div>`;
   target.prepend(section);
   section.querySelector('[data-action="open-kama-tracker"]')?.addEventListener("click", () => openKamaTracker(actor));
 }
@@ -2400,7 +2791,8 @@ Hooks.on("createItem", async (item, options, userId) => {
   const isCrimsonPriestClassMod = item.type === "classmod" && item.system?.identifier === "crimson-priest";
   const isHashiramaCellsClassMod = item.type === "classmod" && item.system?.identifier === "hashirama-cells";
   const isMadaraCellsClassMod = item.type === "classmod" && item.system?.identifier === "madara-cells";
-  const kamaRelevant = isKamaClassMod || getSealTypeKey(item) || getSealEvolutionKey(item) || ["divine-rewrite","resonance-disruption","kama-seal"].includes(item.system?.identifier);
+  const isKarmicDojutsu = item.system?.identifier === "karmic-dojutsu";
+  const kamaRelevant = isKamaClassMod || isKarmicDojutsu || getSealTypeKey(item) || getSealEvolutionKey(item) || ["divine-rewrite","resonance-disruption","kama-seal"].includes(item.system?.identifier);
   const tenseiganRelevant = isTenseiganClassMod || item.getFlag?.(MODULE_ID,"celestialArt") || item.getFlag?.(MODULE_ID,"tenseiganController") || item.getFlag?.(MODULE_ID,"celestialChakraModeController");
   const sealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
   if (!kamaRelevant && !isFtgClassMod && !tenseiganRelevant && !sealedRelevant && !isEdoTenseiClassMod && !isHeavenlyGatesClassMod && !isCrimsonPriestClassMod && !isHashiramaCellsClassMod && !isMadaraCellsClassMod && !getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor) && !getCrimsonPriestClassMod(actor) && !getHashiramaCellsClassMod(actor) && !getMadaraCellsClassMod(actor)) return;
@@ -2409,6 +2801,7 @@ Hooks.on("createItem", async (item, options, userId) => {
     if (getTenseiganClassMod(actor) && (tenseiganRelevant || isTenseiganClassMod)) await migrateTenseiganActor(actor);
     if (getSealedBeastClassMod(actor) && (sealedRelevant || isSealedBeastClassMod)) await migrateSealedBeastActor(actor);
     await syncClassModArtsForActor(actor);
+    if (getKamaClassMod(actor) && isKarmicDojutsu && !getKarmicDojutsuClan(item)) await configureKarmicDojutsu(actor, item);
   });
 });
 
@@ -2434,12 +2827,14 @@ Hooks.on("updateItem", async (item, changes, options, userId) => {
   const isCrimsonPriestClassMod = item.type === "classmod" && item.system?.identifier === "crimson-priest";
   const isHashiramaCellsClassMod = item.type === "classmod" && item.system?.identifier === "hashirama-cells";
   const isMadaraCellsClassMod = item.type === "classmod" && item.system?.identifier === "madara-cells";
+  const isKarmicDojutsu = item.system?.identifier === "karmic-dojutsu";
+  const isCharacterClass = item.type === "class";
   const isSeal = getSealTypeKey(item) || getSealEvolutionKey(item);
   const isSealedRelevant = isSealedBeastClassMod || item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation");
-  if (!isKamaClassMod && !isFtgClassMod && !isTenseiganClassMod && !isEdoTenseiClassMod && !isHeavenlyGatesClassMod && !isCrimsonPriestClassMod && !isHashiramaCellsClassMod && !isMadaraCellsClassMod && !isSeal && !isSealedRelevant) return;
+  if (!isKamaClassMod && !isKarmicDojutsu && !(hasKama && isCharacterClass) && !isFtgClassMod && !isTenseiganClassMod && !isEdoTenseiClassMod && !isHeavenlyGatesClassMod && !isCrimsonPriestClassMod && !isHashiramaCellsClassMod && !isMadaraCellsClassMod && !isSeal && !isSealedRelevant) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
-    if (hasKama && (isKamaClassMod || isSeal)) { await syncSealEvolution(actor); await refreshKamaEffect(actor); }
+    if (hasKama && (isKamaClassMod || isSeal || isKarmicDojutsu || isCharacterClass)) { await syncSealEvolution(actor); await syncKarmicDojutsu(actor); await refreshKamaEffect(actor); }
     if (hasTenseigan && isTenseiganClassMod) { await ensureTenseiganTracker(actor); await refreshTenseiganEffects(actor); await syncCelestialStrainEffect(actor); }
     if (hasSealedBeast && isSealedRelevant) await migrateSealedBeastActor(actor);
   });
@@ -2448,21 +2843,46 @@ Hooks.on("updateItem", async (item, changes, options, userId) => {
 Hooks.on("deleteItem", async (item, options, userId) => {
   if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id || item.parent?.documentName !== "Actor") return;
   const actor = item.parent;
-  const kamaRelevant = getSealTypeKey(item) || getSealEvolutionKey(item);
+  const kamaRelevant = getSealTypeKey(item) || getSealEvolutionKey(item) || item.system?.identifier === "karmic-dojutsu";
   const sealedRelevant = item.getFlag?.(MODULE_ID,"classMod") === "sealed-beast-redux" || item.getFlag?.(MODULE_ID,"sealedBeastPath") || item.getFlag?.(MODULE_ID,"sealedTransformation") || item.system?.identifier === "sealed-beast-redux";
   if (!kamaRelevant && !sealedRelevant) return;
   await queueKamaTask(actor, async () => {
-    if (getKamaClassMod(actor) && kamaRelevant) { await syncSealEvolution(actor); await refreshKamaEffect(actor); }
+    if (getKamaClassMod(actor) && kamaRelevant) { await syncSealEvolution(actor); await syncKarmicDojutsu(actor); await refreshKamaEffect(actor); }
     if (getSealedBeastClassMod(actor)) { await ensureSealedBeastTracker(actor); await refreshSealedBeastEffects(actor); actor.sheet?.render?.(false); }
   });
 });
 
 Hooks.on("preUpdateActor", (actor, changes, options, userId) => {
-  if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id || !getSealedBeastClassMod(actor)) return;
+  if (options?.[KAMA_INTERNAL_OPTION] || userId !== game.user.id) return;
   const proposed = foundry.utils.getProperty(changes,"system.attributes.hp.value");
   if (proposed == null) return;
   const current = Number(actor.system?.attributes?.hp?.value ?? 0);
   const next = Number(proposed);
+  let kamaRescued = false;
+  if (getKamaClassMod(actor) && next <= 0 && current > 0) {
+    const kama = readKamaTracker(actor);
+    const influence = getEffectiveKamaInfluence(actor, kama);
+    const eligible = ["influence-influence", "influence-heavy-influence"].includes(influence)
+      && !kama.influenceRescueUsed && canKamaBePossessed(actor, kama);
+    if (eligible) {
+      const maximum = Math.max(1, Number(actor.system?.attributes?.hp?.max ?? 1));
+      const temporary = influence === "influence-heavy-influence" ? maximum : Math.floor(maximum / 2);
+      foundry.utils.setProperty(changes, "system.attributes.hp.value", 1);
+      foundry.utils.setProperty(changes, "system.attributes.hp.temp", Math.max(0, Number(actor.system?.attributes?.hp?.temp ?? 0)) + temporary);
+      foundry.utils.setProperty(changes, `flags.${MODULE_ID}.${KAMA_TRACKER_FLAG}`, normalizeKamaTracker({
+        ...kama,
+        possessed:true,
+        possessionRounds:0,
+        possessionLastTurn:"",
+        influenceRescueUsed:true,
+        resonanceDisruption:kama.resonanceDisruption + (influence === "influence-heavy-influence" ? 6 : 5)
+      }));
+      kamaRescued = true;
+      ui.notifications.warn(`${actor.name}'s Kāma prevented them from falling and triggered Possession.`);
+    }
+  }
+  if (kamaRescued) return;
+  if (!getSealedBeastClassMod(actor)) return;
   const state = readSealedBeastTracker(actor);
   if (!state.transformation || !state.twistedHitPoints || next >= current) return;
   const incoming = current - next;
@@ -2478,6 +2898,18 @@ Hooks.on("updateActor", async (actor, changes, options, userId) => {
   if (!getKamaClassMod(actor) && !getFlyingThunderGodClassMod(actor) && !getTenseiganClassMod(actor) && !getSealedBeastClassMod(actor) && !getEdoTenseiClassMod(actor) && !getHeavenlyGatesClassMod(actor) && !getCrimsonPriestClassMod(actor)) return;
   await queueKamaTask(actor, async () => {
     await syncClassModArtsForActor(actor);
+    if (getKamaClassMod(actor)) {
+      const state = readKamaTracker(actor);
+      await syncKamaRewrite(actor, state);
+      await syncResonanceDisruption(actor, state);
+      await syncKamaPossessionEffect(actor, state);
+      if (foundry.utils.hasProperty?.(changes, "system.details.level")) await syncKarmicDojutsu(actor);
+      const chakra = actor.system?.attributes?.chakra ?? {};
+      if (state.possessed && Number(chakra.max ?? 0) > 0 && Number(chakra.value ?? 0) >= Number(chakra.max)) {
+        await setKamaPossessed(actor, false, {reason:"Chakra is full"});
+      }
+      refreshOpenTracker(actor);
+    }
     if (getTenseiganClassMod(actor)) {
       const chakra = Number(actor.system?.attributes?.chakra?.value ?? 0);
       if (chakra <= 0 && isTenseiganActive(actor)) await toggleTenseigan(actor);
@@ -2525,6 +2957,9 @@ Hooks.on("deleteActiveEffect", async (effect, options, userId) => {
   if (!actor) return;
   await queueKamaTask(actor, async () => {
     if (effect.getFlag?.(MODULE_ID,"kamaSealEffect")) await removeKamaPoints(actor);
+    if (effect.getFlag?.(MODULE_ID,"kamaPossessionEffect") && readKamaTracker(actor).possessed) {
+      await updateKamaTracker(actor, {possessed:false, possessionRounds:0, possessionLastTurn:""}, {sync:false});
+    }
     if (effect.getFlag?.(MODULE_ID,"tenseiganEffect") || effect.getFlag?.(MODULE_ID,"celestialChakraModeEffect")) await ensureTenseiganArtsFormulas(actor);
     await syncClassModArtsForActor(actor);
   });
@@ -2572,6 +3007,9 @@ Hooks.on("dnd5e.postUseActivity", (activity) => {
 Hooks.on("updateCombat", async (combat, changes, options, userId) => {
   if (!game.user.isGM || userId !== game.user.id || (!Object.hasOwn(changes,"turn") && !Object.hasOwn(changes,"round"))) return;
   const actor = combat.combatant?.actor;
-  if (!actor || !getSealedBeastClassMod(actor)) return;
-  await queueKamaTask(actor, () => processSealedBeastTurn(actor,combat));
+  if (!actor) return;
+  await queueKamaTask(actor, async () => {
+    if (getKamaClassMod(actor)) await processKamaPossessionTurn(actor, combat);
+    if (getSealedBeastClassMod(actor)) await processSealedBeastTurn(actor,combat);
+  });
 });

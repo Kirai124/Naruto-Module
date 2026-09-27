@@ -1,7 +1,7 @@
 .n5eb-kama-tracker-strip {
   --kama-accent: #18b7b5;
   display: grid;
-  grid-template-columns: minmax(140px, auto) minmax(220px, 1fr) minmax(180px, .8fr);
+  grid-template-columns: minmax(140px, auto) minmax(210px, 1fr) minmax(175px, .8fr) minmax(120px, auto);
   gap: 10px;
   align-items: center;
   margin: 0 0 10px;
@@ -57,6 +57,15 @@
   background: var(--kama-accent);
 }
 
+.n5eb-kama-tracker-strip .tracker-mini.status {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 9px;
+  border: 1px solid color-mix(in srgb, var(--kama-accent) 55%, transparent);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .18);
+}
+
 .n5eb-kama-tracker-dialog {
   --kama-accent: #18b7b5;
   display: grid;
@@ -74,6 +83,11 @@
   border: 1px solid color-mix(in srgb, var(--kama-accent) 65%, transparent);
   border-radius: 7px;
   background: color-mix(in srgb, var(--kama-accent) 9%, transparent);
+}
+
+.n5eb-kama-tracker-dialog .tracker-card.active {
+  box-shadow: inset 3px 0 0 var(--kama-accent);
+  background: color-mix(in srgb, var(--kama-accent) 17%, transparent);
 }
 
 .n5eb-kama-tracker-dialog .tracker-card header {
@@ -140,6 +154,17 @@
   padding: 8px 10px;
   border-left: 3px solid var(--kama-accent);
   background: rgba(0, 0, 0, .15);
+}
+
+.n5eb-kama-tracker-dialog .tracker-note {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: .78;
+}
+
+.n5eb-kama-tracker-dialog button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
 }
 
 @media (max-width: 850px) {

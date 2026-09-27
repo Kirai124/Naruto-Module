@@ -1,3 +1,9 @@
+# N5eB Class Mod Library v0.18.3
+
+This build completes the interactive Kāma flow. Karmic Dōjutsu now opens a real Clan/Dōjutsu choice and grants the eligible Latent Ability items from the installed N5eB system while treating the character as eight levels higher. Repeat selections for Chinoike, Kuru, and Uchiha unlock their remaining tiers, and Sharingan/Ketsuryūgan tier 2 grants the matching Genjutsu.
+
+The Kāma tracker now activates/deactivates the seal, tracks unlimited Resonance Disruption ranks, handles the accelerated Divine Rewrite gain above 80%, records Take-Over outcomes, starts/ends Possession, rolls the special Charisma control save, and tracks the ten-round Possession duration. Possession applies its +3 AC, grants 50 temporary HP at the start of tracked turns, ends at full Chakra, and supports the Influence/Heavy Influence zero-HP rescue.
+
 # N5eB Class Mod Library v0.18.2
 
 This build adds the Cursed Seal Class Mod directly to the library and gives it a Sealed Beast Redux-style tracker strip in the N5eB Jutsu casting overview. Click **CURSED SEAL** to open the full tracker or click the status tile for quick Release/End Transformation. Cursed Chakra, Corruption, Patron DC, release stages, Hit Die exhaustion, Cursed Arts, and supported Cursed Art damage/cost changes are tracked by the module.
