@@ -2128,6 +2128,11 @@
 .n5eb-madara-tracker .madara-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.45rem;margin:.7rem 0;}
 .n5eb-madara-tracker .madara-grid>div{display:flex;justify-content:space-between;gap:.5rem;padding:.4rem;border:1px solid rgba(120,30,40,.35);border-radius:5px;}
 .n5eb-madara-tracker footer{display:flex;flex-wrap:wrap;gap:.35rem}.n5eb-madara-tracker .hostility-log{margin-top:.6rem;}
+.n5eb-madara-tracker .madara-tracker-card{margin:.65rem 0;padding:.55rem .65rem;border:1px solid rgba(120,30,40,.4);border-radius:6px;background:rgba(45,5,12,.18);}
+.n5eb-madara-tracker .madara-tracker-card h3{margin:0 0 .3rem;}
+.n5eb-madara-tracker .tracker-controls{display:flex;flex-wrap:wrap;gap:.35rem;}
+.n5eb-madara-tracker .madara-jutsu-list{margin:.35rem 0;padding:0;list-style:none;}
+.n5eb-madara-tracker .madara-jutsu-list li{display:flex;justify-content:space-between;gap:.5rem;padding:.2rem .35rem;border-bottom:1px solid rgba(255,255,255,.08);}
 
 /* Cursed Seal tracker ---------------------------------------------------- */
 .n5eb-cursed-seal-tracker-strip {

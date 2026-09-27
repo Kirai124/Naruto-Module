@@ -1,4 +1,4 @@
-# N5eB Class Mod Library v0.18.3
+# N5eB Class Mod Library v0.18.4
 
 This build completes the interactive Kāma flow. Karmic Dōjutsu now opens a real Clan/Dōjutsu choice and grants the eligible Latent Ability items from the installed N5eB system while treating the character as eight levels higher. Repeat selections for Chinoike, Kuru, and Uchiha unlock their remaining tiers, and Sharingan/Ketsuryūgan tier 2 grants the matching Genjutsu.
 
@@ -218,8 +218,8 @@ After adding **Edo Tensei** to a character, the character sheet gains an **Edo T
 Generated Edo Tensei Actors have **Summon / Return** and **Recalculate Edo** sheet buttons. The module also removes obsolete module-managed folder trees during synchronization, including the old duplicate Superior Shinobi tree, while retaining the current Superior Shinobi implementation.
 
 
-## Madara Cells (0.18.0)
-Madara Cells is included with the supplied Madara artwork for all of its entries. Automation covers Legacy Chakra, Mastered Defence, Hatred Surge / Overcome with Hatred turn handling, Extraordinary Talent choices, Partial/Perfect Match movement/resource rules, Mastered Technique activation, Sharingan-use replenishment where the owned N5eB item exposes a uses pool, Mangekyō charge conversion where a compatible uses pool is present, and passive score/save/movement bonuses.
+## Madara Cells (0.18.4)
+Madara Cells includes a Foundry v13/v14 tracker in the character sheet and header controls. Automation covers Legacy Chakra casting, Mastered Defence, synchronization checks and advancement, Hatred Surge turn handling, Extraordinary Talent choices, Partial/Perfect Match, automatic Sharingan and Tomoe grants from the official N5eB compendium, Mastered Technique activation, Sharingan-use replenishment, Mangekyō charge conversion, senses, score/save/movement bonuses, Mastered Sharingan Agility and migration of existing tracker data.
 
 
 ## Cursed Seal Class Mod
