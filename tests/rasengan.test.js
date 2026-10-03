@@ -48,6 +48,40 @@ test('simultaneous duplicate purchase spends RP exactly once',async()=>{
  assert.equal(results.filter(r=>r.status==='fulfilled').length,1);assert.deepEqual(API.getTracker(actor).learned,['rasengan']);assert.equal(remainingPoints(actor,API.getTracker(actor),ARTS),13);
  assert.equal(actor.items.filter(item=>item.flags?.[MID]?.rasenganArt==='rasengan').length,1);
 });
+function mutateDatabaseOperations(actor){
+ const seen=new WeakSet();actor.databaseOperations=[];
+ for(const name of ['update','createEmbeddedDocuments','deleteEmbeddedDocuments']){
+  const original=actor[name].bind(actor);
+  actor[name]=async(...args)=>{
+   const options=args[name==='update'?1:2]??{};
+   if(options.parent?.documentName==='Actor'&&name==='update')throw new Error('Actor is not a valid embedded Document within the Actor Document');
+   assert.equal(seen.has(options),false,'Every database operation must receive a fresh options object');seen.add(options);
+   const expectedParent=name==='update'?(actor.parent??null):actor;
+   assert.equal(options.parent??expectedParent,expectedParent,'Database routing must use the actual document parent');
+   // Foundry fills in routing fields on the object passed by the caller.
+   options.parent??=expectedParent;
+   options.pack??=name==='update'?null:'embedded-operation';
+   actor.databaseOperations.push({name,parent:options.parent,options});
+   return original(...args);
+  };
+ }
+ return actor;
+}
+test('Foundry-mutated embedded options never leak into the next world Actor tracker update',async()=>{
+ const actor=mutateDatabaseOperations(fresh('operation-world'));
+ await API.purchase(actor,'rasengan');
+ forms.push({type:'force'});await API.formArt(actor,'rasengan');
+ assert.equal(API.getTracker(actor).chakra,392);assert.equal(API.getTracker(actor).cores.length,1);
+ assert.ok(actor.databaseOperations.filter(op=>op.name==='update').every(op=>op.parent===null&&!op.options.pack));
+});
+test('token Actor tracker updates keep their own parent after embedded item creation',async()=>{
+ const actor=fresh('operation-token');actor.parent={documentName:'ActorDelta',uuid:'Scene.scene.Token.token.ActorDelta.delta'};
+ actor.uuid='Scene.scene.Token.token.Actor.synthetic';mutateDatabaseOperations(actor);
+ await API.purchase(actor,'rasengan');forms.push({type:'chakra'});await API.formArt(actor,'rasengan');
+ await API.rest(actor,'full');
+ assert.equal(API.getTracker(actor).chakra,400);assert.deepEqual(API.getTracker(actor).learned,['rasengan']);
+ assert.ok(actor.databaseOperations.filter(op=>op.name==='update').every(op=>op.parent===actor.parent));
+});
 test('failed native Art creation leaves the RP ledger and learned list unchanged',async()=>{
  const actor=fresh('failed-item',1);actor.createEmbeddedDocuments=async()=>{throw new Error('native creation failed');};
  await assert.rejects(API.purchase(actor,'rasengan'),/native creation failed/);

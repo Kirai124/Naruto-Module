@@ -1,14 +1,20 @@
+## Hotfix 0.19.3 — Rasengan-Datenbankfehler
+
+Behebt `Actor is not a valid embedded Document within the Actor Document`: Jeder Rasengan-Datenbankaufruf erhält jetzt eigene Optionen. Von Foundry ergänzte `parent`-/`pack`-Einträge aus einer Item-/Effektoperation werden nicht in nachfolgende Actor-Updates übernommen. Die Korrektur gilt für Käufe, Formen, Chakra-Zahlungen und Echo-Effekte auf mehreren Charakteren.
+
+Den kompletten ZIP-Inhalt übernehmen, **Build Foundry Release** mit **v0.19.3** starten und Foundry vollständig neu laden. Bereits vorhandene Rasengan-Daten bleiben erhalten. Details: [Hotfix 0.19.3](docs/UPDATE-0.19.3.md).
+
 ## Update 0.19.2 — Tracker, Käufe und Performance
 
 Rasengan lädt bei gewöhnlichen Item-Änderungen kein Kompendium mehr. Rasengan und Kāma öffnen eigene, skalierbare Fenster mit festen Tabs links und einem scrollbaren Inhaltsbereich. Art-Käufe erstellen zuerst das native Item und speichern danach die Punkte; unvollständige Käufe aus 0.19.1 werden beim Öffnen ohne weitere Kosten ergänzt. Kāma zeigt die einzelnen Dōjutsu-Tiers samt Status und direkten Aktivierungsknöpfen.
 
-Den gesamten ZIP-Inhalt ins Repository übernehmen, **Build Foundry Release** mit **v0.19.2** ausführen und Foundry neu laden. Details: [Update 0.19.2](docs/UPDATE-0.19.2.md).
+Den gesamten ZIP-Inhalt ins Repository übernehmen, **Build Foundry Release** mit **v0.19.3** ausführen und Foundry neu laden. Details: [Update 0.19.2](docs/UPDATE-0.19.2.md).
 
 ## Installationskorrektur 0.19.1
 
 Die veröffentlichte 0.19.0-ZIP enthielt trotz der neuen Manifestversion noch den 0.18.4-Code. Diese Ausgabe enthält das vollständige Update. Das neue Archiv hat **keinen Oberordner**: `module.json`, `scripts`, `data`, `styles` und `.github` liegen direkt im ZIP-Hauptverzeichnis.
 
-Den kompletten entpackten Inhalt in das Hauptverzeichnis des GitHub-Repositories übernehmen und die Action **Build Foundry Release** mit **v0.19.2** starten. Die Action prüft vor dem Bauen, ob Manifest, Code, Datenindex und alle Rasengan-Dateien zusammenpassen; ein Versionsmix wird abgebrochen.
+Den kompletten entpackten Inhalt in das Hauptverzeichnis des GitHub-Repositories übernehmen und die Action **Build Foundry Release** mit **v0.19.3** starten. Die Action prüft vor dem Bauen, ob Manifest, Code, Datenindex und alle Rasengan-Dateien zusammenpassen; ein Versionsmix wird abgebrochen.
 
 Nach dem Update Foundry neu laden. Als GM öffnet `await N5eBClassMods.sync({notify:true})` die erneute Synchronisierung, falls Auto-Sync ausgeschaltet ist. Rasengan befindet sich im Welt-Kompendium **N5eB Custom Class Mods**.
 
@@ -16,7 +22,7 @@ Nach dem Update Foundry neu laden. Als GM öffnet `await N5eBClassMods.sync({not
 
 Rasengan Class Mod levels 1–4, all 20 Arts, a tracker with Overview / Rasengan Arts / Spiral Echoes, permanent Echo storage, compression/evolution, native damage application, Karma Dōjutsu controls and optional minimum character levels.
 
-See [installation, usage and validation notes](docs/UPDATE-0.19.1.md). Build Foundry Release with **v0.19.2**. Uzuhiko is reserved for a later release.
+See [installation, usage and validation notes](docs/UPDATE-0.19.1.md). Build Foundry Release with **v0.19.3**. Uzuhiko is reserved for a later release.
 
 # N5eB Class Mod Library v0.18.4
 

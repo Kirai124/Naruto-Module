@@ -3,7 +3,9 @@ import {ARTS} from './rasengan-catalog.js';
 import {MODULE_ID as ID, TRACKER_FLAG, level, intelligence, values, normalize, remainingPoints, cost, reshapeCost, damageParts, canPurchase, usagePrerequisite} from './rasengan-rules.js';
 
 const dialogs=new Map(), queues=new Map(), damageQueues=new Map(), combatActors=new Map(), bypass=new WeakSet();
-const INTERNAL={[ID]:{rasengan:true}};
+// Foundry mutates operation options (including parent/pack). Never share them
+// between embedded Item/Effect operations and Actor updates, or between Actors.
+const internalOptions=(options={})=>({[ID]:{rasengan:true},...options});
 const esc=v=>foundry.utils.escapeHTML(String(v??''));
 const clone=v=>foundry.utils.deepClone(v);
 const random=()=>foundry.utils.randomID();
@@ -12,7 +14,7 @@ const getActor=context=>context?.documentName==='Actor'?context:context?.actor??
 const read=actor=>normalize(actor,actor?.getFlag(ID,TRACKER_FLAG),ARTS);
 function own(actor){if(!actor?.isOwner)throw new Error('You must own the Rasengan character.');if(!level(actor))throw new Error('Rasengan Class Mod is required.');}
 function queue(actor,task){const key=actor.uuid,previous=queues.get(key)??Promise.resolve(),current=previous.catch(()=>{}).then(task);queues.set(key,current);return current.finally(()=>{if(queues.get(key)===current)queues.delete(key);});}
-async function write(actor,state){own(actor);const next=normalize(actor,state,ARTS);if(JSON.stringify(actor.getFlag(ID,TRACKER_FLAG))!==JSON.stringify(next))await actor.update({[`flags.${ID}.${TRACKER_FLAG}`]:next},{...INTERNAL,render:false});refresh(actor);refreshStrip(actor);return read(actor);}
+async function write(actor,state){own(actor);const next=normalize(actor,state,ARTS);if(JSON.stringify(actor.getFlag(ID,TRACKER_FLAG))!==JSON.stringify(next))await actor.update({[`flags.${ID}.${TRACKER_FLAG}`]:next},internalOptions({render:false}));refresh(actor);refreshStrip(actor);return read(actor);}
 async function message(actor,content,flags={}){return ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content,flags:{[ID]:flags}});}
 async function form(title,content,label='Apply'){
   return foundry.applications.api.DialogV2.wait({window:{title},content,buttons:[{action:'apply',label,default:true,callback:(e,b)=>new FormDataExtended(b.form).object},{action:'cancel',label:'Cancel'}],rejectClose:false});
@@ -37,7 +39,7 @@ async function ensureArtItem(actor, art) {
   if (Array.from(actor.items).some(item=>item.flags?.[ID]?.rasenganArt===art.id)) return [];
   const source=(await bundledItems()).find(item=>item._id===art.itemId);
   if (!source) throw new Error(`Missing bundled Rasengan Art: ${art.name}`);
-  const created=await actor.createEmbeddedDocuments('Item',[itemSource(source)],INTERNAL);
+  const created=await actor.createEmbeddedDocuments('Item',[itemSource(source)],internalOptions());
   if (!created?.length) throw new Error(`${art.name} could not be added to the character. No Rasengan Points were spent.`);
   return created;
 }
@@ -47,7 +49,7 @@ async function ensureActor(actor){
   await ensureSheetValues(actor);
   const data=await bundledItems(),owned=new Set(Array.from(actor.items).map(i=>i.system?.identifier));
   const features=data.filter(i=>i.flags?.[ID]?.rasenganFeatureLevel && Number(i.flags[ID].rasenganFeatureLevel)<=level(actor)&&!owned.has(i.system?.identifier));
-  if(features.length)await actor.createEmbeddedDocuments('Item',features.map(itemSource),INTERNAL);
+  if(features.length)await actor.createEmbeddedDocuments('Item',features.map(itemSource),internalOptions());
   // Repair purchases committed by 0.19.1 before a failed native item import, without charging again.
   for(const id of read(actor).learned)await ensureArtItem(actor,artBy(id));
 }
@@ -58,7 +60,7 @@ async function ensureSheetValues(actor){
     'system.save.value':String(v.dc),'system.save.formula':'10+@abilities.int.mod+floor(@details.level/4)','system.save.scaling':''
   },patch={};
   for(const [path,value] of Object.entries(expected))if(String(foundry.utils.getProperty(item,path)??'')!==value)patch[path]=value;
-  if(Object.keys(patch).length)await item.update(patch,INTERNAL);
+  if(Object.keys(patch).length)await item.update(patch,internalOptions());
 }
 async function purchase(actor,id){return queue(actor,async()=>{
   own(actor);const state=read(actor),art=artBy(id);if(!art)throw new Error('Unknown Art');
@@ -68,7 +70,7 @@ async function purchase(actor,id){return queue(actor,async()=>{
   try {await write(actor,state);}
   catch(error){
     // A failed ledger save must not leave a newly granted free Art on the sheet.
-    if(created.length)await actor.deleteEmbeddedDocuments('Item',created.map(item=>item.id),INTERNAL);
+    if(created.length)await actor.deleteEmbeddedDocuments('Item',created.map(item=>item.id),internalOptions());
     throw error;
   }
 });}
@@ -84,7 +86,7 @@ async function externalCosts(actor,art){
     if(Number(tracker[key])<art.celestialCost)throw new Error('Not enough Celestial Chakra');
     await globalThis.N5eBClassMods.setTenseiganTracker(actor,{[key]:Number(tracker[key])-art.celestialCost});
   }
-  if(Object.keys(updates).length)await actor.update(updates,INTERNAL);
+  if(Object.keys(updates).length)await actor.update(updates,internalOptions());
 }
 async function formationOptions(actor,art){
   const v=values(actor),state=read(actor);
@@ -244,7 +246,7 @@ Hooks.on('renderChatMessageHTML',(m,element)=>{
   button.addEventListener('click',async()=>{button.disabled=true;try{
     const target=await resolveTarget(p.target);if(!target?.isOwner)throw new Error('The GM / target owner must apply conditions.');
     if(p.prone&&typeof target.toggleStatusEffect==='function')await target.toggleStatusEffect('prone',{active:true});
-    if(p.noHealing&&!Array.from(target.effects??[]).some(e=>e.flags?.[ID]?.spiralHealingSource===p.source))await target.createEmbeddedDocuments('ActiveEffect',[{name:'Spiral Rasengan — Healing Block',img:'modules/n5eb-classmod-library/assets/rasengan.svg',disabled:false,changes:[],flags:{[ID]:{spiralHealingSource:p.source}},description:'Cannot regain Hit Points until the start of the Rasengan user’s next turn.'}],INTERNAL);
+    if(p.noHealing&&!Array.from(target.effects??[]).some(e=>e.flags?.[ID]?.spiralHealingSource===p.source))await target.createEmbeddedDocuments('ActiveEffect',[{name:'Spiral Rasengan — Healing Block',img:'modules/n5eb-classmod-library/assets/rasengan.svg',disabled:false,changes:[],flags:{[ID]:{spiralHealingSource:p.source}},description:'Cannot regain Hit Points until the start of the Rasengan user’s next turn.'}],internalOptions());
     await m.update({[`flags.${ID}.rasenganCondition.applied`]:true});
   }catch(error){button.disabled=false;ui.notifications.error(error.message);}});
 });
@@ -253,7 +255,7 @@ Hooks.on('updateCombat',async(combat,changes,options,userId)=>{
   if(userId!==game.user.id||(!Object.hasOwn(changes,'turn')&&!Object.hasOwn(changes,'round')))return;
   const source=combat.combatant?.actor;if(!source)return;
   const actors=[...Array.from(game.actors??[]),...Array.from(canvas.tokens?.placeables??[]).map(t=>t.actor).filter(Boolean)];
-  for(const target of new Map(actors.map(a=>[a.uuid,a])).values())if(target.isOwner){const ids=Array.from(target.effects??[]).filter(e=>e.flags?.[ID]?.spiralHealingSource===source.uuid).map(e=>e.id);if(ids.length)await target.deleteEmbeddedDocuments('ActiveEffect',ids,INTERNAL);}
+  for(const target of new Map(actors.map(a=>[a.uuid,a])).values())if(target.isOwner){const ids=Array.from(target.effects??[]).filter(e=>e.flags?.[ID]?.spiralHealingSource===source.uuid).map(e=>e.id);if(ids.length)await target.deleteEmbeddedDocuments('ActiveEffect',ids,internalOptions());}
 });
 async function rollDamage(actor,parts,budget,label){
   const results=[],dice=[];let rerollsUsed=0;

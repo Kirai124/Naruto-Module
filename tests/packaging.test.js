@@ -9,10 +9,10 @@ const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 function changed(fn){const copy=mkdtempSync(join(tmpdir(),'naruto-payload-'));try{cpSync(root,copy,{recursive:true});fn(copy);}finally{rmSync(copy,{recursive:true,force:true});}}
 function json(path,fn){const value=JSON.parse(readFileSync(path,'utf8'));fn(value);writeFileSync(path,JSON.stringify(value));}
 test('the complete payload passes validation with all items, folders and new runtimes',()=>{
- assert.deepEqual(validateBuild(root),{version:'0.19.2',items:887,folders:121,runtimes:10});
+ assert.deepEqual(validateBuild(root),{version:'0.19.3',items:887,folders:121,runtimes:10});
 });
 test('changing only the manifest version cannot create a misleading release',()=>changed(copy=>{
- json(join(copy,'module.json'),m=>m.version='0.19.3');assert.throws(()=>validateBuild(copy),/Runtime content version 0\.19\.2 != manifest version 0\.19\.3/);
+ json(join(copy,'module.json'),m=>m.version='0.19.4');assert.throws(()=>validateBuild(copy),/Runtime content version 0\.19\.3 != manifest version 0\.19\.4/);
 }));
 test('a release missing Rasengan script or data files is rejected before publishing',()=>changed(copy=>{
  rmSync(join(copy,'scripts/rasengan.js'));rmSync(join(copy,'data/rasengan.json'));assert.throws(()=>validateBuild(copy),/Missing file: scripts\/rasengan.js/);
