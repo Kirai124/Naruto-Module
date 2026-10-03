@@ -2239,19 +2239,27 @@
   outline-offset:1px;
 }
 
-/* Rasengan: side navigation and one scrollable content column. */
-.n5eb-rasengan-window {min-width:560px;max-height:calc(100vh - 32px);}
-.n5eb-rasengan-window .window-content {min-height:0;padding:0;overflow:hidden;display:flex;flex-direction:column;}
-.n5eb-rasengan-window .dialog-content {flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;}
-.n5eb-rasengan-window .dialog-content>div {min-height:0;flex:1;display:flex;flex-direction:column;}
-.n5eb-rasengan-window .dialog-buttons {flex-shrink:0;padding:8px;}
-.n5eb-rasengan {display:grid;grid-template-columns:180px minmax(0,1fr);height:100%;min-height:0;flex:1;overflow:hidden;background:radial-gradient(ellipse at top right,rgba(62,150,212,.16),transparent 50%);}
-.n5eb-rasengan nav {padding:18px 12px;border-right:1px solid rgba(100,180,230,.3);overflow-y:auto;}
-.n5eb-rasengan nav button {display:block;width:100%;text-align:left;margin:8px 0;white-space:normal;}
-.n5eb-rasengan nav button.active {background:rgba(63,160,220,.25);border-color:#4f9ad0;font-weight:700;}
-.n5eb-rasengan main {min-width:0;min-height:0;overflow-y:auto;padding:18px;overscroll-behavior:contain;}
-.n5eb-rasengan [hidden] {display:none!important;}
-.n5eb-rasengan h2 {margin:0 0 8px;}.n5eb-rasengan h3 {margin:0 0 8px;color:#7bc9ef;}
+/* Sheet-like tracker windows: fixed left sidebar and a single body scroller. */
+.n5eb-tracker-window {min-width:560px;max-height:calc(100vh - 32px);}
+.n5eb-tracker-window .window-content {display:flex;flex-direction:column;flex:1;min-height:0;padding:0;overflow:hidden;}
+.n5eb-tracker-window .n5eb-rasengan,
+.n5eb-tracker-window .n5eb-kama-tracker-dialog {display:grid;grid-template-columns:170px minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:0;flex:1;min-height:0;height:100%;overflow:hidden;padding:0;background:radial-gradient(ellipse at top right,rgba(62,150,212,.12),transparent 65%);}
+.n5eb-tracker-window .n5eb-tracker-sidebar {display:flex;flex-direction:column;align-items:stretch;gap:8px;min-height:0;overflow-y:auto;padding:18px 12px;border-right:1px solid rgba(100,180,230,.3);background:rgba(0,0,0,.18);}
+.n5eb-tracker-sidebar .tracker-emblem {width:60px;height:60px;object-fit:contain;border:0;align-self:center;margin-bottom:4px;}
+.n5eb-tracker-window .n5eb-tracker-sidebar h2 {margin:0;border:0;font-size:22px;}
+.n5eb-tracker-window .n5eb-tracker-sidebar p {font-size:12px;line-height:1.5;margin:0 0 8px;opacity:.85;}
+.n5eb-tracker-window .n5eb-tracker-sidebar button {display:block;width:100%;flex:0 0 auto;min-height:38px;text-align:left;white-space:normal;margin:0;padding:8px 10px;border-radius:6px;}
+.n5eb-tracker-window .n5eb-tracker-sidebar button.active {background:rgba(63,160,220,.25);border-color:#4f9ad0;font-weight:700;box-shadow:inset 3px 0 #7bc9ef;}
+.n5eb-tracker-window .n5eb-tracker-body {display:block;min-width:0;min-height:0;overflow-y:auto;padding:18px;overscroll-behavior:contain;scrollbar-gutter:stable;}
+.n5eb-tracker-window [hidden] {display:none!important;}
+.n5eb-tracker-window [data-busy] .rasengan-actions button,
+.n5eb-tracker-window [data-busy] .tracker-actions button,
+.n5eb-tracker-window [data-busy] .tracker-controls button,
+.n5eb-tracker-window [data-busy] .kama-eye-row button {pointer-events:none;opacity:.5;}
+.n5eb-tracker-body>header {display:block;margin-bottom:16px;border-bottom:1px solid rgba(100,180,230,.2);padding-bottom:8px;}
+.n5eb-tracker-body>header h2 {margin:0 0 8px;border:0;}
+.n5eb-tracker-body>header p {font-size:12px;opacity:.85;}
+.n5eb-rasengan h3 {margin:0 0 8px;color:#7bc9ef;}
 .n5eb-rasengan .rasengan-stats {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
 .n5eb-rasengan .rasengan-stats>div,.n5eb-rasengan .rasengan-card {border:1px solid rgba(100,180,230,.3);border-radius:8px;background:rgba(20,70,110,.10);padding:12px;margin-bottom:10px;}
 .n5eb-rasengan .rasengan-stats span,.n5eb-rasengan small {display:block;opacity:.78;line-height:1.5;}
@@ -2262,12 +2270,13 @@
 .n5eb-rasengan summary {cursor:pointer;line-height:1.5;}.n5eb-rasengan summary span {display:block;font-size:12px;opacity:.8;}
 .n5eb-rasengan-strip {display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:6px 0;padding:8px;border:1px solid #4f9ad0;border-radius:6px;background:rgba(30,100,160,.12);}
 .n5eb-rasengan-strip button {width:auto;}
-/* Fixed height and a single body scroller prevent the first/last Kāma cards from clipping. */
-.n5eb-kama-tracker-window {max-height:calc(100vh - 32px);}
-.n5eb-kama-tracker-window .window-content {min-height:0;overflow:hidden;display:flex;flex-direction:column;}
-.n5eb-kama-tracker-window .dialog-content {min-height:0;flex:1;overflow-y:auto;overscroll-behavior:contain;padding:4px 8px;}
-.n5eb-kama-tracker-window .dialog-buttons {flex-shrink:0;}
-.n5eb-kama-tracker-dialog {min-height:min-content;}
-@media(max-width:700px){.n5eb-rasengan {grid-template-columns:130px minmax(0,1fr);}.n5eb-rasengan main{padding:10px}.n5eb-rasengan .rasengan-row{align-items:flex-start;flex-direction:column}}
-.n5eb-rasengan-window .dialog-form,
-.n5eb-kama-tracker-window .dialog-form {flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden;}
+.n5eb-tracker-window .n5eb-kama-tracker-dialog {background:radial-gradient(ellipse at top right,rgba(40,170,180,.12),transparent 65%);}
+.n5eb-kama-tracker-window .n5eb-tracker-sidebar {border-color:rgba(40,170,180,.4);}
+.n5eb-kama-tracker-window .n5eb-tracker-sidebar button.active {background:rgba(40,170,180,.18);border-color:#2baab0;box-shadow:inset 3px 0 #52d2d8;}
+.n5eb-kama-tracker-window .tracker-card {margin-bottom:12px;}
+.n5eb-kama-tracker-window .tracker-meta {margin:12px 0;line-height:1.6;}
+.kama-eye-list {display:grid;gap:8px;margin:12px 0;}
+.kama-eye-row {display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px;border:1px solid rgba(40,170,180,.3);border-radius:6px;}
+.kama-eye-row small {display:block;opacity:.75;font-size:11px;line-height:1.5;}
+.kama-eye-row button {width:auto;flex:0 0 auto;}
+@media(max-width:700px){.n5eb-tracker-window .n5eb-rasengan,.n5eb-tracker-window .n5eb-kama-tracker-dialog{grid-template-columns:135px minmax(0,1fr)}.n5eb-tracker-window .n5eb-tracker-body{padding:10px}.n5eb-rasengan .rasengan-row{align-items:flex-start;flex-direction:column}}

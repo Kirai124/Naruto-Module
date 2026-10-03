@@ -50,7 +50,7 @@ test('Karmic eye utility fallback preserves legitimate uses after removing inval
  const actor=eyeActor(false);await N5eBClassMods.toggleKarmicDojutsu(actor);assert.deepEqual(actor.getUse(),{consume:{resources:true}});
 });
 test('module packaging uses the new version and includes all runtime entry points',()=>{
- const module=JSON.parse(readFileSync(new URL('../module.json',import.meta.url)));assert.equal(module.version,'0.19.1');assert.ok(module.esmodules.includes('scripts/rasengan.js'));assert.equal(module.esmodules[0],'scripts/classmod-settings.js');
+ const module=JSON.parse(readFileSync(new URL('../module.json',import.meta.url)));assert.equal(module.version,'0.19.2');assert.ok(module.esmodules.includes('scripts/rasengan.js'));assert.equal(module.esmodules[0],'scripts/classmod-settings.js');
  const index=JSON.parse(readFileSync(new URL('../data/index.json',import.meta.url)));assert.equal(index.version,module.version);assert.ok(index.files.includes('rasengan.json'));
  for(const p of module.esmodules)assert.ok(readFileSync(new URL('../'+p,import.meta.url)).length);
 });

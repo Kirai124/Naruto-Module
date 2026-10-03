@@ -1,7 +1,8 @@
+import {createTrackerWindow, trackerTabs} from './tracker-window.js';
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.19.1";
+const CONTENT_VERSION = "0.19.2";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -777,16 +778,16 @@ async function repairKarmicDojutsuConsumption(actor) {
   }
 }
 
-async function toggleKarmicDojutsu(actor) {
+async function toggleKarmicDojutsu(actor, itemId) {
   actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
   if(!actor?.isOwner) return ui.notifications.warn("Select a character you own.");
   await repairKarmicDojutsuConsumption(actor);
   const items=asArray(actor.items).filter(item => item.getFlag?.(MODULE_ID,"karmicDojutsuFreeActivation"));
   if(!items.length) return ui.notifications.warn("No module-granted Latent Dōjutsu activation was found.");
   let item=items[items.length-1];
-  const result=await foundry.applications.api.DialogV2.wait({window:{title:"Karmic Dōjutsu"},content:`<form><label>Dōjutsu tier<select name="item">${items.map(i => `<option value="${i.id}" ${i.id===item.id?"selected":""}>${escapeKamaHtml(i.name)}</option>`).join("")}</select></label></form>`,buttons:[{action:"toggle",label:"Activate / Deactivate",default:true,callback:(event,button)=>new FormDataExtended(button.form).object.item},{action:"cancel",label:"Cancel"}],rejectClose:false});
+  const result=itemId ?? await foundry.applications.api.DialogV2.wait({window:{title:"Karmic Dōjutsu"},content:`<label>Dōjutsu tier<select name="item">${items.map(i => `<option value="${i.id}" ${i.id===item.id?"selected":""}>${escapeKamaHtml(i.name)}</option>`).join("")}</select></label>`,buttons:[{action:"toggle",label:"Activate / Deactivate",default:true,callback:(event,button)=>new FormDataExtended(button.form).object.item},{action:"cancel",label:"Cancel"}],rejectClose:false});
   if(typeof result!=="string"||result==="cancel")return;
-  item=actor.items.get(result);if(!item)return;
+  item=items.find(eye=>eye.id===result);if(!item)return;
   const effects=asArray(item.effects).filter(e => e.transfer && !e.flags?.[MODULE_ID]?.karmicDojutsuUnrelated);
   const actorEffects=asArray(actor.effects).filter(e => e.origin && item.uuid && String(e.origin).startsWith(item.uuid));
   if(effects.length || actorEffects.length){
@@ -1485,7 +1486,12 @@ function trackerDialogKey(actor) {
   return actor?.uuid ?? actor?.id;
 }
 
-function buildKamaTrackerHtml(actor) {
+function karmicEyeEffects(actor,item) {
+  return [...asArray(item.effects).filter(effect=>effect.transfer&&!effect.flags?.[MODULE_ID]?.karmicDojutsuUnrelated),
+    ...asArray(actor.effects).filter(effect=>item.uuid&&String(effect.origin??'').startsWith(item.uuid))];
+}
+
+function buildKamaTrackerHtml(actor, tab="overview") {
   const state = readKamaTracker(actor);
   const rewriteMin = game.user.isGM ? 0 : state.divineRewrite;
   const active = getKamaEffect(actor)?.disabled === false;
@@ -1494,15 +1500,22 @@ function buildKamaTrackerHtml(actor) {
   const possessionAllowed = canKamaBePossessed(actor, state);
   const heavyInfluence = getEffectiveKamaInfluence(actor, state) === "influence-heavy-influence";
   return `
-    <div class="n5eb-kama-tracker-dialog" data-kama-tracker-root>
+    <div class="n5eb-kama-tracker-dialog" data-kama-tracker-root data-tab="${tab}">
+      <aside class="n5eb-tracker-sidebar" aria-label="Kāma tracker">
+        <img class="tracker-emblem" src="modules/${MODULE_ID}/assets/kama-seal.png" alt="">
+        <h2>Kāma</h2><p>Divine Rewrite<br><strong>${state.divineRewrite}%</strong></p>
+        ${Object.entries({overview:"Overview",dojutsu:"Karmic Dōjutsu",possession:"Possession",takeover:"Take-Over"}).map(([key,label])=>`<button type="button" data-tab-button="${key}" class="${tab===key?"active":""}" aria-selected="${tab===key}">${label}</button>`).join("")}
+        <p>Seal ${active?"Active":"Inactive"}<br>Resonance ${state.resonanceDisruption}</p>
+      </aside>
+      <main class="n5eb-tracker-body"><header class="tracker-heading"><h2>${escapeKamaHtml(actor.name)}</h2><p>Kāma Seal · Rewrite ${state.divineRewrite}% · Resonance ${state.resonanceDisruption}</p></header>
       <p class="tracker-intro">These values are stored directly on <strong>${foundry.utils.escapeHTML?.(actor.name) ?? actor.name}</strong>. They are not item uses.</p>
-      <section class="tracker-card status ${active ? "active" : ""}">
+      <section class="tracker-card status ${active ? "active" : ""}" data-panel="overview" ${tab!=="overview"?"hidden":""}>
         <header><span>Kāma Seal</span><strong data-value="seal-status">${active ? "Active" : "Inactive"}</strong></header>
         <div class="tracker-actions">
           <button type="button" data-action="toggle-kama"><i class="fas fa-diamond"></i> <span data-value="seal-action">${active ? "Deactivate Seal" : "Activate Seal"}</span></button>
         </div>
       </section>
-      <section class="tracker-card rewrite">
+      <section class="tracker-card rewrite" data-panel="overview" ${tab!=="overview"?"hidden":""}>
         <header><span>Divine Rewrite</span><strong data-value="rewrite">${state.divineRewrite}%</strong></header>
         <div class="tracker-progress"><span data-bar="rewrite" style="width:${state.divineRewrite}%"></span></div>
         <div class="tracker-controls">
@@ -1511,7 +1524,7 @@ function buildKamaTrackerHtml(actor) {
           <button type="button" data-action="rewrite-plus"><i class="fas fa-plus"></i> 5</button>
         </div>
       </section>
-      <section class="tracker-card resonance">
+      <section class="tracker-card resonance" data-panel="overview" ${tab!=="overview"?"hidden":""}>
         <header><span>Resonance Disruption</span><strong data-value="resonance">${state.resonanceDisruption} ${state.resonanceDisruption === 1 ? "rank" : "ranks"}</strong></header>
         <div class="tracker-pips" data-pips="resonance">${[1,2,3,4,5].map(rank => `<span class="${rank <= state.resonanceDisruption ? 'filled' : ''}"></span>`).join('')}</div>
         <div class="tracker-controls">
@@ -1520,7 +1533,7 @@ function buildKamaTrackerHtml(actor) {
           <button type="button" data-action="resonance-plus"><i class="fas fa-plus"></i> 1</button>
         </div>
       </section>
-      <section class="tracker-card possession ${state.possessed ? "active" : ""}">
+      <section class="tracker-card possession ${state.possessed ? "active" : ""}" data-panel="possession" ${tab!=="possession"?"hidden":""}>
         <header><span>Possession</span><strong data-value="possession-status">${state.possessed ? "Possessed" : possessionAllowed ? "Controlled" : "Immune"}</strong></header>
         <p>Rounds: <strong data-value="possession-rounds">${state.possessionRounds}</strong> / 10 · Control Save DC: <strong data-value="possession-dc">${getKamaPossessionDC(actor)}</strong></p>
         <p class="tracker-note">Possession applies +3 AC and grants 50 temporary HP at the start of each tracked turn. The Ōtsutsuki's individual proficiencies, added non-d20 dice, and Adversary Features remain sheet-specific.</p>
@@ -1530,12 +1543,16 @@ function buildKamaTrackerHtml(actor) {
           <button type="button" data-action="influence-check" ${heavyInfluence && !state.possessed ? "" : "disabled"}><i class="fas fa-dice-d20"></i> Heavy Influence Check</button>
         </div>
       </section>
-      <section class="tracker-card dojutsu">
+      <section class="tracker-card dojutsu" data-panel="dojutsu" ${tab!=="dojutsu"?"hidden":""}>
         <header><span>Karmic Dōjutsu</span><strong data-value="dojutsu-count">${dojutsu.labels.length} configured${dojutsu.pending ? ` · ${dojutsu.pending} pending` : ""}</strong></header>
         <p data-value="dojutsu-list">${dojutsu.labels.length ? dojutsu.labels.map(escapeKamaHtml).join(", ") : "No Dōjutsu selected."}</p>
-        <div class="tracker-actions"><button type="button" data-action="configure-dojutsu" ${getKarmicDojutsuItems(actor).length ? "" : "disabled"}><i class="fas fa-eye"></i> Configure Dōjutsu</button><button type="button" data-action="toggle-dojutsu" ${Array.from(actor.items).some(item => item.getFlag?.(MODULE_ID, "karmicDojutsuFreeActivation")) ? "" : "disabled"}><i class="fas fa-eye"></i> Activate / Deactivate Dōjutsu</button></div>
+        <div class="kama-eye-list">${asArray(actor.items).filter(item=>item.getFlag?.(MODULE_ID,"karmicDojutsuFreeActivation")).map(item=>{
+          const effects=karmicEyeEffects(actor,item),active=effects.some(effect=>!effect.disabled);
+          return `<div class="kama-eye-row"><div><strong>${escapeKamaHtml(item.name)}</strong><small>${effects.length?(active?"Active":"Inactive"):"Native activation activity"} · No initial Chakra cost</small></div><button type="button" data-action="toggle-dojutsu" data-item-id="${item.id}">${effects.length?(active?"Deactivate":"Activate"):"Use"}</button></div>`;
+        }).join("")||'<p class="tracker-note">Configure a Karmic Dōjutsu to grant its Latent eye features.</p>'}</div>
+        <div class="tracker-actions"><button type="button" data-action="configure-dojutsu" ${getKarmicDojutsuItems(actor).length ? "" : "disabled"}><i class="fas fa-eye"></i> Configure Dōjutsu</button></div>
       </section>
-      <section class="tracker-card takeover">
+      <section class="tracker-card takeover" data-panel="takeover" ${tab!=="takeover"?"hidden":""}>
         <header><span>Take-Over</span><strong data-value="takeover-status">${takeoverLabels[state.takeoverStatus]}</strong></header>
         <p class="tracker-note">At 100% Divine Rewrite, record the Mind Palace outcome here. Success suppresses Possession until the Ōtsutsuki awakens again; Split permanently uses No Influence.</p>
         <div class="tracker-actions">
@@ -1545,22 +1562,24 @@ function buildKamaTrackerHtml(actor) {
           <button type="button" data-action="takeover-awaken" ${state.takeoverStatus === "won" ? "" : "disabled"}>Ōtsutsuki Awakens</button>
         </div>
       </section>
-      <div class="tracker-meta">Activations since Full Rest: <strong data-value="activations">${state.activationsSinceFullRest}</strong> · Influence rescue: <strong>${state.influenceRescueUsed ? "Used" : "Ready"}</strong>${game.user.isGM && state.influenceRescueUsed ? ' · <button type="button" data-action="reset-influence-rescue">Reset yearly rescue</button>' : ""}</div>
-      <div class="tracker-actions">
+      <div class="tracker-meta" data-panel="overview" ${tab!=="overview"?"hidden":""}>Activations since Full Rest: <strong data-value="activations">${state.activationsSinceFullRest}</strong> · Influence rescue: <strong>${state.influenceRescueUsed ? "Used" : "Ready"}</strong>${game.user.isGM && state.influenceRescueUsed ? ' · <button type="button" data-action="reset-influence-rescue">Reset yearly rescue</button>' : ""}</div>
+      <div class="tracker-actions" data-panel="overview" ${tab!=="overview"?"hidden":""}>
         <button type="button" data-action="save"><i class="fas fa-floppy-disk"></i> Save Values</button>
         <button type="button" data-action="long-rest"><i class="fas fa-campground"></i> Long Rest</button>
         <button type="button" data-action="full-rest"><i class="fas fa-bed"></i> Full Rest</button>
         ${game.user.isGM ? '<button type="button" data-action="reset"><i class="fas fa-rotate-left"></i> Reset to 0</button>' : ''}
       </div>
+      </main>
     </div>`;
 }
 
 function refreshTrackerRoot(root, actor) {
   if (!root) return;
   const wrapper = document.createElement("div");
-  wrapper.innerHTML = buildKamaTrackerHtml(actor);
+  const scroll=root.querySelector(".n5eb-tracker-body")?.scrollTop??0;
+  wrapper.innerHTML = buildKamaTrackerHtml(actor, root.dataset.tab);
   const fresh = wrapper.querySelector("[data-kama-tracker-root]");
-  if (fresh) root.innerHTML = fresh.innerHTML;
+  if (fresh) {root.innerHTML = fresh.innerHTML;root.querySelector(".n5eb-tracker-body").scrollTop=scroll;}
 }
 
 function refreshOpenTracker(actor) {
@@ -1574,13 +1593,16 @@ function activateKamaTrackerDialog(dialog, actor) {
   if (!root || root.dataset.activated === "true") return;
   root.dataset.activated = "true";
   root.addEventListener("click", async event => {
+    const tab=event.target.closest("[data-tab-button]");
+    if(tab){event.preventDefault();event.stopPropagation();trackerTabs(root,tab.dataset.tabButton);return;}
     const button = event.target.closest("button[data-action]");
-    if (!button) return;
+    if (!button || button.disabled || root.dataset.busy) return;
+    event.preventDefault();event.stopPropagation();root.dataset.busy="true";button.disabled=true;
     const action = button.dataset.action;
     const state = readKamaTracker(actor);
     try {
       if (action === "toggle-kama") await toggleKama(actor);
-      else if (action === "toggle-dojutsu") await toggleKarmicDojutsu(actor);
+      else if (action === "toggle-dojutsu") await toggleKarmicDojutsu(actor, button.dataset.itemId);
       else if (action === "toggle-possession") await setKamaPossessed(actor, !state.possessed);
       else if (action === "possession-save") await rollKamaPossessionSave(actor);
       else if (action === "influence-check" && getEffectiveKamaInfluence(actor, state) === "influence-heavy-influence") {
@@ -1623,6 +1645,7 @@ function activateKamaTrackerDialog(dialog, actor) {
       console.error(`${MODULE_ID} | Kāma tracker update failed`, error);
       ui.notifications.error(`Kāma tracker could not be updated: ${error.message}`);
     }
+    delete root.dataset.busy;
     refreshTrackerRoot(root, actor);
   });
 }
@@ -1632,21 +1655,16 @@ async function openKamaTracker(actor) {
   if (!actor || !getKamaClassMod(actor)) return ui.notifications.warn("No Kāma character is selected.");
   const key = trackerDialogKey(actor);
   const existing = kamaTrackerDialogs.get(key);
-  if (existing) return existing.bringToFront?.();
+  if (existing?.rendered) {existing.bringToFront();return existing;}
   await ensureKamaTracker(actor);
+  const opened=kamaTrackerDialogs.get(key);if(opened){opened.bringToFront();return opened;}
 
-  const content = document.createElement("div");
-  content.innerHTML = buildKamaTrackerHtml(actor);
-  const DialogV2 = foundry.applications.api.DialogV2;
-  const dialog = new DialogV2({
+  const dialog = createTrackerWindow({
     window:{title:`Kāma Tracker — ${actor.name}`, icon:"fa-solid fa-diamond", resizable:true},
-    position:{width:680, height:Math.min(760, window.innerHeight - 80)},
-    classes:["n5eb-kama-tracker-window"],
-    content,
-    buttons:[{action:"close", label:"Close", icon:"fa-solid fa-xmark"}]
-  });
+    position:{width:850, height:Math.min(760, window.innerHeight - 80)},
+    classes:["n5eb-tracker-window","n5eb-kama-tracker-window"]
+  }, ()=>buildKamaTrackerHtml(actor), app=>activateKamaTrackerDialog(app,actor));
   kamaTrackerDialogs.set(key, dialog);
-  dialog.addEventListener("render", () => activateKamaTrackerDialog(dialog, actor));
   dialog.addEventListener("close", () => kamaTrackerDialogs.delete(key), {once:true});
   await dialog.render({force:true});
   return dialog;

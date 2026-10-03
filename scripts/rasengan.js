@@ -1,3 +1,4 @@
+import {createTrackerWindow, trackerTabs} from './tracker-window.js';
 import {ARTS} from './rasengan-catalog.js';
 import {MODULE_ID as ID, TRACKER_FLAG, level, intelligence, values, normalize, remainingPoints, cost, reshapeCost, damageParts, canPurchase, usagePrerequisite} from './rasengan-rules.js';
 
@@ -11,10 +12,10 @@ const getActor=context=>context?.documentName==='Actor'?context:context?.actor??
 const read=actor=>normalize(actor,actor?.getFlag(ID,TRACKER_FLAG),ARTS);
 function own(actor){if(!actor?.isOwner)throw new Error('You must own the Rasengan character.');if(!level(actor))throw new Error('Rasengan Class Mod is required.');}
 function queue(actor,task){const key=actor.uuid,previous=queues.get(key)??Promise.resolve(),current=previous.catch(()=>{}).then(task);queues.set(key,current);return current.finally(()=>{if(queues.get(key)===current)queues.delete(key);});}
-async function write(actor,state){own(actor);await actor.update({[`flags.${ID}.${TRACKER_FLAG}`]:normalize(actor,state,ARTS)},INTERNAL);refresh(actor);return read(actor);}
+async function write(actor,state){own(actor);const next=normalize(actor,state,ARTS);if(JSON.stringify(actor.getFlag(ID,TRACKER_FLAG))!==JSON.stringify(next))await actor.update({[`flags.${ID}.${TRACKER_FLAG}`]:next},{...INTERNAL,render:false});refresh(actor);refreshStrip(actor);return read(actor);}
 async function message(actor,content,flags={}){return ChatMessage.create({speaker:ChatMessage.getSpeaker({actor}),content,flags:{[ID]:flags}});}
 async function form(title,content,label='Apply'){
-  return foundry.applications.api.DialogV2.wait({window:{title},content:`<form>${content}</form>`,buttons:[{action:'apply',label,default:true,callback:(e,b)=>new FormDataExtended(b.form).object},{action:'cancel',label:'Cancel'}],rejectClose:false});
+  return foundry.applications.api.DialogV2.wait({window:{title},content,buttons:[{action:'apply',label,default:true,callback:(e,b)=>new FormDataExtended(b.form).object},{action:'cancel',label:'Cancel'}],rejectClose:false});
 }
 const yes=(title,content)=>foundry.applications.api.DialogV2.confirm({window:{title},content,rejectClose:false});
 function targetRef(token){return {uuid:token.actor.uuid,name:token.name??token.actor.name,tokenUuid:token.document?.uuid??token.uuid};}
@@ -22,23 +23,53 @@ function targets(){return Array.from(game.user.targets??[]).filter(t=>t.actor).m
 async function resolveTarget(uuid){const doc=await fromUuid(uuid);return doc?.documentName==='Actor'?doc:doc?.actor??null;}
 function turnKey(actor){const c=game.combat;if(!c)return '';const index=c.turns?.findIndex(t=>t.actor?.uuid===actor.uuid)??-1;const round=Number(c.round??0)-(index>=0&&Number(c.turn??0)<index?1:0);return `${c.id}:${round}:${actor.uuid}`;}
 function reactionAvailable(actor,state){const k=turnKey(actor);return !k||state.reactionTurn!==k;}
+let contentPromise;
+function bundledItems() {
+  // Load only this small bundle once, never all 887 compendium documents on an item update.
+  contentPromise ??= fetch(`modules/${ID}/data/rasengan.json`).then(async response => {
+    if (!response.ok) throw new Error('Rasengan content could not be loaded. Check the installed module files.');
+    return (await response.json()).items;
+  }).catch(error => {contentPromise = null; throw error;});
+  return contentPromise;
+}
+function itemSource(source) {const data=clone(source);delete data._id;delete data.folder;return data;}
+async function ensureArtItem(actor, art) {
+  if (Array.from(actor.items).some(item=>item.flags?.[ID]?.rasenganArt===art.id)) return [];
+  const source=(await bundledItems()).find(item=>item._id===art.itemId);
+  if (!source) throw new Error(`Missing bundled Rasengan Art: ${art.name}`);
+  const created=await actor.createEmbeddedDocuments('Item',[itemSource(source)],INTERNAL);
+  if (!created?.length) throw new Error(`${art.name} could not be added to the character. No Rasengan Points were spent.`);
+  return created;
+}
 async function ensureActor(actor){
   if(!actor?.isOwner||!level(actor))return;
   if(!actor.getFlag(ID,TRACKER_FLAG))await write(actor,read(actor));
-  const pack=game.packs.get('world.n5eb-custom-class-mods');if(!pack)return;
-  const data=await pack.getDocuments(),owned=new Set(Array.from(actor.items).map(i=>i.system?.identifier));
-  const features=data.filter(i=>i.flags?.[ID]?.classMod==='rasengan'&&Number(i.flags?.[ID]?.rasenganFeatureLevel)<=level(actor)&&!owned.has(i.system?.identifier));
-  if(features.length)await actor.createEmbeddedDocuments('Item',features.map(i=>{const d=i.toObject();delete d._id;delete d.folder;return d;}),INTERNAL);
+  await ensureSheetValues(actor);
+  const data=await bundledItems(),owned=new Set(Array.from(actor.items).map(i=>i.system?.identifier));
+  const features=data.filter(i=>i.flags?.[ID]?.rasenganFeatureLevel && Number(i.flags[ID].rasenganFeatureLevel)<=level(actor)&&!owned.has(i.system?.identifier));
+  if(features.length)await actor.createEmbeddedDocuments('Item',features.map(itemSource),INTERNAL);
+  // Repair purchases committed by 0.19.1 before a failed native item import, without charging again.
+  for(const id of read(actor).learned)await ensureArtItem(actor,artBy(id));
+}
+async function ensureSheetValues(actor){
+  const item=Array.from(actor.items).find(rasenganClassMod);if(!item?.update)return;
+  const v=values(actor),expected={
+    'system.attackBonus.value':String(v.attack),'system.attackBonus.formula':'@abilities.int.mod+@details.level+@classmods.rasengan.levels','system.attackBonus.scaling':'',
+    'system.save.value':String(v.dc),'system.save.formula':'10+@abilities.int.mod+floor(@details.level/4)','system.save.scaling':''
+  },patch={};
+  for(const [path,value] of Object.entries(expected))if(String(foundry.utils.getProperty(item,path)??'')!==value)patch[path]=value;
+  if(Object.keys(patch).length)await item.update(patch,INTERNAL);
 }
 async function purchase(actor,id){return queue(actor,async()=>{
   own(actor);const state=read(actor),art=artBy(id);if(!art)throw new Error('Unknown Art');
   const reason=canPurchase(actor,state,art,ARTS);if(reason)throw new Error(reason);
-  state.learned.push(id);await write(actor,state);
-  // The tracker is authoritative; importing an item never bypasses the point purchase.
-  const pack=game.packs.get('world.n5eb-custom-class-mods');
-  const source=await pack?.getDocument(art.itemId);
-  if(source&&!Array.from(actor.items).some(i=>i.flags?.[ID]?.rasenganArt===id)){
-    const d=source.toObject();delete d._id;delete d.folder;await actor.createEmbeddedDocuments('Item',[d],INTERNAL);
+  const created=await ensureArtItem(actor,art);
+  state.learned.push(id);
+  try {await write(actor,state);}
+  catch(error){
+    // A failed ledger save must not leave a newly granted free Art on the sheet.
+    if(created.length)await actor.deleteEmbeddedDocuments('Item',created.map(item=>item.id),INTERNAL);
+    throw error;
   }
 });}
 function checkUse(actor,state,art){own(actor);const reason=usagePrerequisite(actor,state,art);if(reason)throw new Error(reason);if(remainingPoints(actor,state,ARTS)<0)throw new Error('Your learned Arts exceed the budget after a level reduction. Have the GM review them.');}
@@ -293,7 +324,7 @@ function html(actor,tab='overview'){
     return `<article class="rasengan-card rasengan-art"><details><summary><strong>${esc(a.name)}</strong> <span>${a.points} RP · ${esc(a.costText)}${learned?' · Learned':''}</span></summary>${a.description}</details><small>${esc(a.prerequisiteText??'No additional prerequisite')}${reason?' · '+esc(reason):''}</small><div class="rasengan-actions">${learned?button('use','Use',a.id,Boolean(reason))+button('form','Form & maintain',a.id,v.level<2||Boolean(reason)):button('buy',`Learn (${a.points} RP)`,a.id,Boolean(reason))}</div></article>`;
   }).join('');
   const echoes=Array.from(groups.entries()).map(([uuid,list])=>`<section class="rasengan-card"><h3>${esc(list[0].targetName)} <span>${list.length} Echoes</span></h3><details><summary>Stored dice: ${list.flatMap(e=>e.parts.map(p=>p.formula)).map(esc).join(' + ')}</summary>${list.map(e=>`<div class="rasengan-row"><span>${esc(e.artName)} · ${e.parts.map(p=>esc(p.formula)).join(' + ')}</span><small>${esc(e.id)}</small></div>`).join('')}</details><div class="rasengan-actions">${button('echo','Release (Bonus Action)',uuid,v.level<3)}${button('reaction','Release (Reaction)',uuid,v.level<3||!reactionAvailable(actor,s))}${game.user.isGM?button('relink','Relink target',uuid):''}</div></section>`).join('')||'<p>No Spiral Echoes stored. On a successful Art attack, choose to store its damage.</p>';
-  return `<div class="n5eb-rasengan" data-rasengan-root data-tab="${tab}"><nav aria-label="Rasengan tracker"><h2>Rasengan</h2><p>Level ${v.level} / 4</p>${['overview','arts','echoes'].map(t=>`<button type="button" data-tab-button="${t}" class="${tab===t?'active':''}">${{overview:'Overview',arts:'Rasengan Arts',echoes:'Spiral Echoes'}[t]}${t==='echoes'?` (${s.echoes.length})`:''}</button>`).join('')}<p>${s.chakra} / ${v.maximum}<br>Planetary Chakra</p></nav><main><header><h2>${esc(actor.name)}</h2><p>${points} Rasengan Points available · Attack +${v.attack} · DC ${v.dc}</p></header><div data-panel="overview" ${tab!=='overview'?'hidden':''}>${overview}</div><div data-panel="arts" ${tab!=='arts'?'hidden':''}>${arts}</div><div data-panel="echoes" ${tab!=='echoes'?'hidden':''}>${echoes}</div></main></div>`;
+  return `<div class="n5eb-rasengan" data-rasengan-root data-tab="${tab}"><aside class="n5eb-tracker-sidebar" aria-label="Rasengan tracker"><img class="tracker-emblem" src="modules/n5eb-classmod-library/assets/rasengan.svg" alt=""><h2>Rasengan</h2><p>Level ${v.level} / 4</p>${['overview','arts','echoes'].map(t=>`<button type="button" data-tab-button="${t}" class="${tab===t?'active':''}">${{overview:'Overview',arts:'Rasengan Arts',echoes:'Spiral Echoes'}[t]}${t==='echoes'?` (${s.echoes.length})`:''}</button>`).join('')}<p>${s.chakra} / ${v.maximum}<br>Planetary Chakra</p></aside><main class="n5eb-tracker-body"><header><h2>${esc(actor.name)}</h2><p>${points} Rasengan Points available · Attack +${v.attack} · DC ${v.dc}</p></header><div data-panel="overview" ${tab!=='overview'?'hidden':''}>${overview}</div><div data-panel="arts" ${tab!=='arts'?'hidden':''}>${arts}</div><div data-panel="echoes" ${tab!=='echoes'?'hidden':''}>${echoes}</div></main></div>`;
 }
 function refresh(actor){
   const dialog=dialogs.get(actor.uuid),root=dialog?.element?.querySelector('[data-rasengan-root]');if(!root)return;
@@ -338,17 +369,20 @@ async function act(actor,action,id){
   if(action==='cooldown'&&game.user.isGM){const result=await form('Combo cooldown',`<label>Days remaining<input name="days" type="number" min="0" value="${Math.max(0,Math.ceil((read(actor).cooldownUntil-game.time.worldTime)/86400))}"></label>`);if(result&&typeof result==='object')return queue(actor,()=>write(actor,{...read(actor),cooldownUntil:game.time.worldTime+Math.max(0,Number(result.days))*86400}));}
 }
 async function openTracker(context){
-  const actor=getActor(context);own(actor);await ensureActor(actor);const previous=dialogs.get(actor.uuid);if(previous)return previous.bringToFront();
-  const content=document.createElement('div');content.innerHTML=html(actor);
-  const dialog=new foundry.applications.api.DialogV2({window:{title:`Rasengan — ${actor.name}`,icon:'fa-solid fa-hurricane',resizable:true},position:{width:950,height:Math.min(760,window.innerHeight-80)},classes:['n5eb-rasengan-window'],content,buttons:[{action:'close',label:'Close'}]});dialogs.set(actor.uuid,dialog);
-  dialog.addEventListener('render',()=>{
-    const root=dialog.element.querySelector('[data-rasengan-root]');if(!root||root.dataset.bound)return;root.dataset.bound='true';
+  const actor=getActor(context);own(actor);
+  const previous=dialogs.get(actor.uuid);if(previous?.rendered){previous.bringToFront();return previous;}
+  await queue(actor,()=>ensureActor(actor));
+  const opened=dialogs.get(actor.uuid);if(opened){opened.bringToFront();return opened;}
+  const dialog=createTrackerWindow({window:{title:`Rasengan — ${actor.name}`,icon:'fa-solid fa-hurricane',resizable:true},position:{width:950,height:Math.min(760,window.innerHeight-80)},classes:['n5eb-tracker-window','n5eb-rasengan-window']},()=>html(actor),app=>{
+    const root=app.element.querySelector('[data-rasengan-root]');if(!root||root.dataset.bound)return;root.dataset.bound='true';
     root.addEventListener('click',async e=>{
-      const tab=e.target.closest('[data-tab-button]');if(tab){root.dataset.tab=tab.dataset.tabButton;refresh(actor);return;}
-      const b=e.target.closest('[data-action]');if(!b||b.disabled)return;const action=b.dataset.action,id=b.dataset.id;b.disabled=true;
-      try{await act(actor,action,id);}catch(error){console.error(`${ID} | Rasengan`,error);ui.notifications.error(error.message);}finally{refresh(actor);}
+      const tab=e.target.closest('[data-tab-button]');if(tab){e.preventDefault();e.stopPropagation();trackerTabs(root,tab.dataset.tabButton);return;}
+      const b=e.target.closest('[data-action]');if(!b||b.disabled||root.dataset.busy)return;
+      e.preventDefault();e.stopPropagation();const action=b.dataset.action,id=b.dataset.id;root.dataset.busy='true';b.disabled=true;
+      try{await act(actor,action,id);}catch(error){console.error(`${ID} | Rasengan`,error);ui.notifications.error(error.message);}finally{delete root.dataset.busy;refresh(actor);}
     });
   });
+  dialogs.set(actor.uuid,dialog);
   dialog.addEventListener('close',()=>dialogs.delete(actor.uuid),{once:true});await dialog.render({force:true});return dialog;
 }
 function renderStrip(app,element){
@@ -358,6 +392,15 @@ function renderStrip(app,element){
   const v=values(actor),s=read(actor),strip=document.createElement('section');strip.className='n5eb-rasengan-strip';strip.dataset.rasenganStrip='true';
   strip.innerHTML=`<button type="button"><i class="fas fa-hurricane"></i> Rasengan Tracker</button><span>Planetary Chakra <strong>${s.chakra}/${v.maximum}</strong></span><span>RP <strong>${remainingPoints(actor,s,ARTS)}/${v.points}</strong></span><span>Echoes <strong>${s.echoes.length}</strong></span>`;
   strip.querySelector('button').addEventListener('click',()=>openTracker(actor).catch(e=>ui.notifications.error(e.message)));target.prepend(strip);
+}
+function refreshStrip(actor){
+  for(const app of Object.values(actor.apps??{})){
+    const root=app.element?.querySelector?app.element:app.element?.[0],strip=root?.querySelector('[data-rasengan-strip]');if(!strip)continue;
+    const state=read(actor),v=values(actor),numbers=strip.querySelectorAll('strong');
+    if(numbers[0])numbers[0].textContent=`${state.chakra}/${v.maximum}`;
+    if(numbers[1])numbers[1].textContent=`${remainingPoints(actor,state,ARTS)}/${v.points}`;
+    if(numbers[2])numbers[2].textContent=state.echoes.length;
+  }
 }
 async function applyChatDamage(message,button){
   if(damageQueues.has(message.id))return;button.disabled=true;damageQueues.set(message.id,true);
@@ -387,9 +430,21 @@ Hooks.once('ready',async()=>{
   if(activeGM?.id===game.user.id)for(const actor of game.actors)if(level(actor))await queue(actor,()=>ensureActor(actor));
   for(const c of game.combats??[])if(c.combatant?.actor)combatActors.set(c.id,{uuid:c.combatant.actor.uuid,key:`${c.id}:${c.round}:${c.combatant.actor.uuid}`});
 });
-Hooks.on('createItem',(item,options,userId)=>{if(options?.[ID]||userId!==game.user.id||item.parent?.documentName!=='Actor'||!level(item.parent))return;queue(item.parent,()=>ensureActor(item.parent)).catch(e=>ui.notifications.error(e.message));});
-Hooks.on('updateItem',(item,changes,options,userId)=>{if(options?.[ID]||userId!==game.user.id||item.parent?.documentName!=='Actor'||!level(item.parent))return;queue(item.parent,()=>ensureActor(item.parent)).catch(e=>ui.notifications.error(e.message));});
-Hooks.on('updateActor',actor=>refresh(actor));
+function rasenganClassMod(item){return item?.type==='classmod'&&item.system?.identifier==='rasengan';}
+Hooks.on('createItem',(item,options,userId)=>{
+  if(options?.[ID]||userId!==game.user.id||item.parent?.documentName!=='Actor'||!rasenganClassMod(item))return;
+  queue(item.parent,()=>ensureActor(item.parent)).catch(e=>ui.notifications.error(e.message));
+});
+Hooks.on('updateItem',(item,changes,options,userId)=>{
+  if(options?.[ID]||userId!==game.user.id||item.parent?.documentName!=='Actor'||!rasenganClassMod(item))return;
+  if(changes['system.levels']===undefined&&foundry.utils.getProperty(changes,'system.levels')===undefined)return;
+  queue(item.parent,()=>ensureActor(item.parent)).then(()=>refresh(item.parent)).catch(e=>ui.notifications.error(e.message));
+});
+Hooks.on('updateActor',(actor,changes,options)=>{
+  if(options?.[ID]?.rasengan)return; // write() already refreshes once after the save.
+  if(actor.isOwner&&level(actor)&&(changes.system||Object.keys(changes).some(key=>key.startsWith('system.'))))queue(actor,()=>ensureSheetValues(actor)).catch(e=>console.error(`${ID} | Rasengan values`,e));
+  if(Object.keys(changes).some(key=>key==='system'||key==='name'||key.startsWith('system.')||key==='flags'||key.startsWith(`flags.${ID}.${TRACKER_FLAG}`)))refresh(actor);
+});
 Hooks.on('dnd5e.restCompleted',(actor,result)=>{if(actor.isOwner&&level(actor)&&['long','full'].includes(result?.type))queue(actor,async()=>{const s=read(actor);s.discountUsed=0;s.cores=[];s.reactionTurn='';if(result.type==='full'){s.chakra=values(actor).maximum;s.chakraLocked=false;if(s.comboAwaitingFullRest){s.comboAwaitingFullRest=false;s.cooldownUntil=game.time.worldTime+30*86400;}}await write(actor,s);});});
 Hooks.on('updateCombat',async(combat,changes,options,userId)=>{
   if(!Object.hasOwn(changes,'turn')&&!Object.hasOwn(changes,'round'))return;

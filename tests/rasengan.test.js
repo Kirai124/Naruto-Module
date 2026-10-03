@@ -17,7 +17,8 @@ class Actor {
   constructor(id,l=4){this.id=id;this.uuid=`Actor.${id}`;this.name=id;this.documentName='Actor';this.isOwner=true;this.flags={};this.items=[{id:'cm',type:'classmod',system:{identifier:'rasengan',levels:l}}];this.system={details:{level:14},abilities:{int:{mod:4}},attributes:{hp:{value:50},ac:{value:12},chakra:{value:100}}};this.effects=[];documents.set(this.uuid,this);}
   getFlag(ns,key){return this.flags?.[ns]?.[key];}
   async update(patch){for(const [path,value] of Object.entries(patch))set(this,path,value);return this;}
-  async createEmbeddedDocuments(){return [];}
+  async createEmbeddedDocuments(type,data){const created=data.map(d=>({...structuredClone(d),id:`created${++sequence}`}));this.items.push(...created);return created;}
+  async deleteEmbeddedDocuments(type,ids){this.items=this.items.filter(i=>!ids.includes(i.id));}
   async toggleStatusEffect(id,options){this.lastStatus={id,options};}
 }
 globalThis.game={user:{id:'gm',isGM:true,targets:new Set()},users:{activeGM:{id:'gm'}},actors:[],combats:[],messages:[],system:{id:'n5eb'},packs:{get:()=>null},time:{worldTime:1000},settings:{get:()=>false}};
@@ -29,6 +30,8 @@ globalThis.Roll=class {
 };
 await import('../scripts/rasengan.js');for(const fn of hooks.get('ready')??[])await fn();
 const API=globalThis.N5eBRasengan;
+const bundle=JSON.parse(readFileSync(new URL('../data/rasengan.json',import.meta.url)));
+globalThis.fetch=async()=>({ok:true,json:async()=>structuredClone(bundle)});
 const fresh=(id,l=4)=>{forms=[];confirms=[];rolls=[];game.combat=null;game.user.targets=new Set();return new Actor(id,l);};
 const setup=async(actor,patch={})=>actor.update({[`flags.${MID}.rasenganTracker`]:normalize(actor,patch,ARTS)});
 
@@ -43,6 +46,34 @@ test('bundled Arts match supplied text, cost 60 total, and retain special mixed 
 test('simultaneous duplicate purchase spends RP exactly once',async()=>{
  const actor=fresh('purchase',1);const results=await Promise.allSettled([API.purchase(actor,'rasengan'),API.purchase(actor,'rasengan')]);
  assert.equal(results.filter(r=>r.status==='fulfilled').length,1);assert.deepEqual(API.getTracker(actor).learned,['rasengan']);assert.equal(remainingPoints(actor,API.getTracker(actor),ARTS),13);
+ assert.equal(actor.items.filter(item=>item.flags?.[MID]?.rasenganArt==='rasengan').length,1);
+});
+test('failed native Art creation leaves the RP ledger and learned list unchanged',async()=>{
+ const actor=fresh('failed-item',1);actor.createEmbeddedDocuments=async()=>{throw new Error('native creation failed');};
+ await assert.rejects(API.purchase(actor,'rasengan'),/native creation failed/);
+ assert.deepEqual(API.getTracker(actor).learned,[]);assert.equal(remainingPoints(actor,API.getTracker(actor),ARTS),15);
+});
+test('a native creation canceled by another hook never charges points',async()=>{
+ const actor=fresh('canceled-item',1);actor.createEmbeddedDocuments=async()=>[];
+ await assert.rejects(API.purchase(actor,'rasengan'),/could not be added/);
+ assert.equal(remainingPoints(actor,API.getTracker(actor),ARTS),15);
+});
+test('failed ledger save rolls back the newly granted native Art',async()=>{
+ const actor=fresh('failed-ledger',1);actor.update=async()=>{throw new Error('ledger failed');};
+ await assert.rejects(API.purchase(actor,'rasengan'),/ledger failed/);
+ assert.equal(actor.items.filter(item=>item.flags?.[MID]?.rasenganArt).length,0);assert.deepEqual(API.getTracker(actor).learned,[]);
+});
+test('unrelated item changes cause no compendium reads, item grants, or actor writes',async()=>{
+ const actor=fresh('performance',1);let work=0;
+ actor.update=actor.createEmbeddedDocuments=async()=>{work++;};
+ game.packs.get=()=>{work++;throw new Error('Unexpected compendium load');};
+ const item={parent:actor,type:'spell',system:{identifier:'clone-technique'}};
+ for(let n=0;n<100;n++){
+   for(const fn of hooks.get('updateItem')??[])await fn(item,{'system.uses.spent':n},{},'gm');
+   for(const fn of hooks.get('createItem')??[])await fn(item,{},'gm');
+   for(const fn of hooks.get('updateItem')??[])await fn({...actor.items[0],parent:actor},{'system.description.value':'text'},{},'gm');
+ }
+ assert.equal(work,0);game.packs.get=()=>null;
 });
 test('prerequisite Arts enforce the learning chain; unrelated Class Mods gate usage only',async()=>{
  const actor=fresh('prereq');await assert.rejects(API.purchase(actor,'ultra-big-ball-rasengan'),/prerequisite/);
