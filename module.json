@@ -2,7 +2,7 @@
   "id": "n5eb-classmod-library",
   "title": "N5eB Class Mod Library",
   "description": "Creates a world compendium containing fully prepared N5eB Class Mods, including automated Kāma and Madara Cells trackers, resource handling, transformations, progression, and feature grants.",
-  "version": "0.18.4",
+  "version": "0.19.0",
   "authors": [
     {
       "name": "Kirai124",
