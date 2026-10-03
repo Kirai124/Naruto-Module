@@ -1,0 +1,3408 @@
+{
+  "id": "rasengan",
+  "version": "0.19.0",
+  "label": "Rasengan",
+  "folders": [
+    {
+      "_id": "ac6edb9cfe0e7a72",
+      "name": "Rasengan",
+      "type": "Item",
+      "folder": null,
+      "sorting": "a",
+      "sort": 0,
+      "color": "#4f9ad0",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "folderKey": "root"
+        }
+      }
+    },
+    {
+      "_id": "1ccb27f8b5d7f570",
+      "name": "Class Mod & Features",
+      "type": "Item",
+      "folder": "ac6edb9cfe0e7a72",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#4f9ad0",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "folderKey": "features"
+        }
+      }
+    },
+    {
+      "_id": "ed68f901f02f26d4",
+      "name": "Rasengan Arts",
+      "type": "Item",
+      "folder": "ac6edb9cfe0e7a72",
+      "sorting": "a",
+      "sort": 0,
+      "color": "#4f9ad0",
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "folderKey": "arts"
+        }
+      }
+    }
+  ],
+  "items": [
+    {
+      "_id": "37a26420769a5dc2",
+      "name": "Rasengan",
+      "type": "classmod",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<h2>Rasengan Class Mod — Levels 1–4</h2><p>15 Rasengan Points per level (60 total); 100 Planetary Chakra per level, restored on Full Rest. Use the Rasengan tracker for purchases, formation, attacks, evolution, compression and permanent Spiral Echoes. Uzuhiko is reserved for a future update.</p><p>## Gaining the Rasengan</p><p>The Rasengan is not merely learned — it is created through an understanding of chakra that very few shinobi ever achieve. It requires absolute control over chakra rotation, compression, and shape.</p><p>For Kirai, however, the Rasengan is only the beginning. His understanding of <strong>Planetary Chakra</strong> allows him to push the technique beyond its normal limits and develop his own variations of the Rasengan.</p><p>The path to mastering this technique begins with understanding the principles that make it possible.</p><p>##### Step 1: Understanding Rotation</p><p>You must first understand the three fundamental principles behind the Rasengan: <strong>Rotation, Compression, and Containment.</strong></p><p>This requires 1 downtime spent studying advanced chakra-control principles and the theory behind the Rasengan, followed by a DC 20 Intelligence (Ninshou) check.</p><p>If you fail, your understanding remains incomplete. You must wait an additional week of downtime before attempting the check again.</p><p>##### Step 2: Creating the Core</p><p>Knowledge alone is not enough. You must prove that your body is capable of creating and controlling the chakra necessary to form a Rasengan.</p><p>During actual gameplay or a significant narrative event, you must create and maintain a stable sphere of rotating chakra under extreme circumstances.</p><p>The exact circumstances are determined by the DM, but the event must represent a meaningful breakthrough in your chakra control.</p><p>Examples include:</p><p>- Successfully controlling your chakra while severely injured or exhausted.</p><p>- Maintaining precise chakra control while protecting another creature.</p><p>- Discovering a new method of controlling chakra through your own experimentation.</p><p>- Successfully forming the core of the Rasengan during a moment where failure would have serious consequences.</p><p>The important part is not the specific challenge.</p><p><strong>The Rasengan must be created through your own understanding and skill.</strong></p><p>##### Step 3: The First Rasengan</p><p>Once the first two steps have been completed, you must spend 3 downtime perfecting the technique.</p><p>Each Downtime requires 250 Ryo for training materials, specialized equipment, seals, or other resources necessary for developing your chakra control.</p><p>At the end of the three Downtimes, you must succeed on a DC 18 Wisdom Ability check.</p><p>On a success, you finally compress your chakra into a stable rotating sphere.</p><p><strong>You have created the Rasengan.</strong></p><p>If you fail, your chakra destabilizes before the technique can be completed. You must go through the three Downtimes again before attempting the check.</p><p>___</p><p>Once complete, your chakra control has reached a level previously thought impossible, and you unlock <strong>1st level in the Rasengan Class Mod</strong>.</p><p>### Leveling Up the Rasengan</p><p>Progression in the Rasengan Class Mod does not come from simply repeating the same training exercises. The Rasengan evolves alongside its user, and every new level represents a deeper understanding of chakra manipulation and Planetary Chakra.</p><p>To gain another level in this Class Mod, you must demonstrate that your current understanding of the Rasengan is no longer sufficient.</p><p>##### Path of the Rasengan</p><p>Each time you wish to gain a new level in this Class Mod, you must accomplish a significant feat in which your Rasengan or understanding of Planetary Chakra plays a decisive role.</p><p>This may be defeating a powerful enemy, surviving an extreme situation, or discovering a new application of the Rasengan.</p><p>The exact requirements are determined by the DM, but the feat must demonstrate genuine growth in your mastery of the technique.</p><p>A simple victory is not enough.</p><p><strong>You must evolve.</strong></p><p>##### Transcendence Through Combat</p><p>Upon completing a Path of the Rasengan, you must spend a Long Rest reflecting on the experience and the way your chakra behaved throughout it.</p><p>During this rest, you analyze the rotation, compression, and flow of your chakra, searching for the next step in your understanding.</p><p>After the Long Rest, your chakra realigns with your newfound understanding, and you gain the next level in the Rasengan Class Mod.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "identifier": "rasengan",
+        "levels": 1,
+        "advancement": {
+          "core1": {
+            "_id": "e9e37d85c0cb6b59",
+            "type": "ItemGrant",
+            "level": 1,
+            "title": "Rasengan 1",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.031c24dba4e68874",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.f99085eccb38e845",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.37d01e164acf5619",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "hint": ""
+          },
+          "core2": {
+            "_id": "9e7fabaa9fe1f3e4",
+            "type": "ItemGrant",
+            "level": 2,
+            "title": "Rasengan 2",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.52052545f59158ff",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.d9b9080a69efa609",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "hint": ""
+          },
+          "core3": {
+            "_id": "ce883aa0a647ba7e",
+            "type": "ItemGrant",
+            "level": 3,
+            "title": "Rasengan 3",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.21add3e9d66cad7d",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.4998657cf9d528ff",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "hint": ""
+          },
+          "core4": {
+            "_id": "64d52824daf75621",
+            "type": "ItemGrant",
+            "level": 4,
+            "title": "Rasengan 4",
+            "configuration": {
+              "items": [
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.6cb265c7283088b7",
+                  "optional": false
+                },
+                {
+                  "uuid": "Compendium.world.n5eb-custom-class-mods.Item.d048dd379f622d46",
+                  "optional": false
+                }
+              ],
+              "optional": false,
+              "spell": null
+            },
+            "value": {},
+            "hint": ""
+          }
+        },
+        "save": {
+          "formula": "10+@abilities.int.mod+floor(@details.level/4)",
+          "value": "10+@abilities.int.mod+floor(@details.level/4)",
+          "scaling": ""
+        },
+        "attackBonus": {
+          "formula": "@abilities.int.mod+@details.level+@classmods.rasengan.levels",
+          "value": "@abilities.int.mod+@details.level+@classmods.rasengan.levels",
+          "scaling": ""
+        },
+        "color": "#4f9ad0"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "classmod",
+          "contentVersion": "0.19.0",
+          "minimumCharacterLevels": {
+            "1": 4,
+            "2": 8,
+            "3": 10,
+            "4": 14
+          }
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "6dfd57a62ea4c90a",
+      "name": "Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 2</p><p><strong>Cost:</strong> 8 Planetary Chakra  </p><p><strong>Range:</strong> 5 feet   </p><p><strong>Duration:</strong> Instantaneous</p><p>You form a dense sphere of rapidly rotating chakra in the palm of your hand.</p><p>Make a Melee Rasengan Art Attack against one creature within your reach.</p><p>On a hit, the target takes <strong>6d8 Chakra Damage</strong>.</p><p>If the target is Large or smaller, you may push it up to 30 feet away from you.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "6d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "ca786fbb3073635c",
+      "name": "Spiralling Serial Spheres Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 2</p><p><strong>Cost:</strong> 16 Planetary Chakra  </p><p><strong>Range:</strong> 5 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p>You form a dense sphere of rapidly rotating chakra in the palm of each of your hands.</p><p>Make a Ranged Rasengan Art Attack against one creature within range.</p><p>On a hit, the target takes <strong>10d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-spiralling-serial-spheres-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "spiralling-serial-spheres-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "e83c50629dc11b94",
+      "name": "Rasenshuriken",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 12 Planetary Chakra  </p><p><strong>Range:</strong> 30 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p>You form a dense sphere of rapidly rotating chakra that takes the form of a Shuriken in the palm of one of your free hands.</p><p>Make a Rasengan Art Attack against one creature within your reach.</p><p>On a hit, the target takes <strong>8d8 Chakra Damage</strong>.</p><p>The target does not gain the benefits of Half Cover or Three-Quarters Cover against this attack.</p><p>If the target is within a 5 feet range of you, you have disadvantage on the Attack Roll.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "8d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-rasenshuriken"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "rasenshuriken",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "7eaef7bae9b35327",
+      "name": "Big Ball Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 2</p><p><strong>Cost:</strong> 20 Planetary Chakra  </p><p><strong>Range:</strong> 5 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p>You form a dense sphere of rapidly rotating chakra in the palm of your hand thats significantly larger then the normal Rasengan.</p><p>Every creature in a 15 feet radius must make a save against your Rasengan Save DC.</p><p>On a failed save, each target takes <strong>4d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-big-ball-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "big-ball-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "771a26a015a3e1bd",
+      "name": "Ultra Big Ball Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 30 Planetary Chakra  </p><p><strong>Range:</strong> Touch  </p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Big Ball Rasengan</p><p>You form a dense sphere of rapidly rotating chakra in the palm of your hand thats significantly larger then the normal Big Ball Rasengan.</p><p>Every creature in a 25 feet radius must make a save against your Rasengan Save DC.</p><p>On a failed save, each target takes <strong>6d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "6d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Big Ball Rasengan",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-ultra-big-ball-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "ultra-big-ball-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "9b8e46214838037a",
+      "name": "Rasengan: Flash",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 2</p><p><strong>Cost:</strong> 14 Planetary Chakra  </p><p><strong>Range:</strong> 20 feet line  </p><p><strong>Duration:</strong> Instantaneous</p><p>You form a dense sphere of rapidly rotating chakra in the palm of your hand which then fires as a beam in a 20 feet long and 5 feet wide line.</p><p>Make a Melee Rasengan Art Attack against all creatures within the line.</p><p>On a hit, the target takes <strong>4d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-rasengan-flash"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "rasengan-flash",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "58e64d9fbc70c7dc",
+      "name": "Super-Ultra-Big Ball Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 4</p><p><strong>Cost:</strong> 35 Planetary Chakra  </p><p><strong>Range:</strong> Touch  </p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Ultra Big Ball Rasengan</p><p>You form a dense sphere of rapidly rotating chakra in the palm of your hand thats significantly larger then the Ultra Big Ball Rasengan.</p><p>Every creature in a 40 feet radius must make a save against your Rasengan Save DC.</p><p>On a failed save, each target takes <strong>8d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "8d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Ultra Big Ball Rasengan",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-super-ultra-big-ball-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "super-ultra-big-ball-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "888861e2441d8512",
+      "name": "Rasendan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 2</p><p><strong>Cost:</strong> 8 Planetary Chakra  </p><p><strong>Range:</strong> 30 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p>You form a dense sphere of rapidly rotating chakra in the palm of your hand.</p><p>Make a Melee Rasengan Art Attack against one creature within your reach.</p><p>On a hit, the target takes <strong>4d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-rasendan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "rasendan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "70b47635d8aaefca",
+      "name": "Multi Shot Rasendan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 2</p><p><strong>Cost:</strong> 16 Planetary Chakra  </p><p><strong>Range:</strong> 30 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Rasendan</p><p>You form a dense sphere of rapidly rotating chakra in the palm of your hand</p><p>Make a Melee Rasengan Art Attack against three creatures within your reach.</p><p>On a hit, the target takes <strong>4d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Rasendan",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-multi-shot-rasendan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "multi-shot-rasendan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "19c0cf2375f455bb",
+      "name": "Planetary Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 12 Planetary Chakra  </p><p><strong>Range:</strong> Touch  </p><p><strong>Duration:</strong> Instantaneous</p><p>You compress Planetary Chakra into the Rasengan, causing the sphere to become significantly denser.</p><p>Make a Melee Rasengan Art Attack against one creature within your reach.</p><p>On a hit, the target takes <strong>8d8 Chakra Damage</strong>.</p><p>The target must succeed on a Strength Saving Throw or be pushed up to 20 feet away from you and knocked Prone.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "8d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-planetary-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "planetary-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "bf8267d097dc7a4b",
+      "name": "Vanishing Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 2</p><p><strong>Cost:</strong> 1 Planetary Chakra  </p><p><strong>Range:</strong> 30 feet  </p><p><strong>Duration:</strong> 1 Round</p><p>You alter the chakra structure of your Rasengan, causing it to disappear from sight immediately after being thrown.</p><p>Make a Ranged Rasengan Art Attack against one creature within range.</p><p>On a hit, the target takes <strong>5d8 Chakra Damage</strong>.</p><p>The target does not gain the benefits of Half Cover or Three-Quarters Cover against this attack.</p><p>The target cannot take reactions against this Rasengan Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "5d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-vanishing-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "vanishing-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "51344d07a14eecb6",
+      "name": "Portal Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 10 Planetary Chakra  </p><p><strong>Range:</strong> Sight</p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Yomotsu Hirasaka</p><p>You alter the chakra structure of your Rasengan, causing it to disappear into a Portal that reappears behind the Target.</p><p>The creature must make a save against your Rasengan Save DC.</p><p>On a hit, the target takes <strong>6d8 Chakra Damage</strong>.</p><p>The target does not gain the benefits of Half Cover or Three-Quarters Cover against this attack.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "6d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Yomotsu Hirasaka",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-portal-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "portal-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "4c909f22eaeeea51",
+      "name": "Crescent Moon Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 10 Planetary Chakra &amp; 10 Celestial Chakra </p><p><strong>Range:</strong> 30 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Tenseigan</p><p>By fusing your Celestial Chakra with the Planetary Chakra your harnessed the size of the Rasengan is increased, which glows a bright white, light-purple colour, and forms a white crescent moon with a star inside of it.</p><p>Make a Ranged Rasengan Art Attack against one creature within range.</p><p>On a hit, the target takes <strong>10d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Tenseigan",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-crescent-moon-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "crescent-moon-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "84234f943af167ec",
+      "name": "Deep Crimson Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 15 Planetary Chakra  </p><p><strong>Range:</strong> touch </p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Kāma Seal</p><p>You alter the chakra structure of your Rasengan, using the Power of the Ōtsutsuki that resides within you. When you harness their Power for this Rasengan Art, the Rasengan becomes massive and takes on a deep red Color.</p><p>Make a Meele Rasengan Art Attack against one creature within range.</p><p>On a hit, the target takes <strong>10d8 Chakra Damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Kāma Seal",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-deep-crimson-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "deep-crimson-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "8c73ba5e1c508e60",
+      "name": "Meteoriten Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 4</p><p><strong>Cost:</strong> 45 Planetary Chakra  </p><p><strong>Range:</strong> 60 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p>You launch a massive sphere of compressed Planetary Chakra.</p><p>Choose a point within range. Each creature within a 50-foot-radius sphere centered on that point must make a Dexterity Saving Throw.</p><p>On a failed save, a creature takes <strong>10d8 Chakra Damage</strong> and is pushed 20 feet away from the center.</p><p>On a successful save, the creature takes half as much damage and is not pushed.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-meteoriten-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "meteoriten-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "fd1c9e293c9f9d51",
+      "name": "Spiral Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 15 Planetary Chakra  </p><p><strong>Range:</strong> Touch  </p><p><strong>Duration:</strong> Instantaneous</p><p>You manipulate the rotation of the Rasengan into multiple layers of opposing rotation.</p><p>Make a Melee Rasengan Art Attack.</p><p>On a hit, the target takes <strong>10d8 Chakra Damage</strong>.</p><p>The target must then succeed on a Constitution Saving Throw.</p><p>On a failure, the target cannot regain Hit Points until the start of your next turn.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "10d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-spiral-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "spiral-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "9605af9a572042af",
+      "name": "Planetary Rasengan: Cataclysm",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 5</p><p><strong>Cost:</strong> 60 Planetary Chakra  </p><p><strong>Range:</strong> 120 feet  </p><p><strong>Duration:</strong> Instantaneous</p><p>You compress an immense amount of Planetary Chakra into a single Rasengan.</p><p>Choose a point within range.</p><p>Each creature within a 60-foot-radius sphere centered on that point must make a Dexterity Saving Throw.</p><p>On a failed save, a creature takes <strong>12d10 Chakra Damage</strong> and is pushed up to 30 feet away from the center. On a successful save, the creature takes half as much damage.</p><p>Creatures that fail the Saving Throw are also knocked Prone.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "12d10",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-planetary-rasengan-cataclysm"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "planetary-rasengan-cataclysm",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "50244206237c4353",
+      "name": "Ultimate Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 3</p><p><strong>Cost:</strong> 0 Planetary Chakra  </p><p><strong>Range:</strong> Touch  </p><p><strong>Duration:</strong> Instantaneous</p><p>You concentrate everything you have learned about chakra rotation and Planetary Chakra into a single Rasengan.</p><p>Make a Melee Rasengan Art Attack.</p><p>On a hit, the target takes <strong>20d10 Chakra Damage</strong>.</p><p>The target must then succeed on a Constitution Saving Throw.</p><p>On a failure, the target is pushed 30 feet away from you and knocked Prone.</p><p>A creature that succeeds on the Saving Throw is pushed 15 feet instead.</p><p>This Technique can only be used while you have 1 Hit Point remaining.</p><p>The user falls unconscious after this Rasengan Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "20d10",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-ultimate-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "ultimate-rasengan",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "26d862cda7138787",
+      "name": "Chōjikū Raisen Senkai: Rasen Chidori Sōkyoku Hōten Jigen Retsudan Messhōshō",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 5</p><p><strong>Cost:</strong> 50 Planetary Chakra</p><p><strong>Range:</strong> Touch</p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Character with a Chidori next to the User.</p><p>The Users press their Rasengan and Chidori into each other, combining it into one singular Force. </p><p>Both users rush forward with the Jutsu in Hand and attack the Target.</p><p>Because the Energy of this Jutsu is too high it goes directly through the Target and Shoots back out behind it, leaving open a rift in the current Dimension.</p><p>Make a Melee Rasengan Art Attack.</p><p>On a hit, the target takes <strong>25d10 Chakra Damage</strong> and <strong>25d10 Lightning damage</strong>.</p><p>Both users cant mold Chakra until they finish a Full Rest. This Technique cant be just again until 1 Month after the Full Rest.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "25d10",
+              "chakra"
+            ],
+            [
+              "25d10",
+              "lightning"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Character with a Chidori next to the User.",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-ch-jik-raisen-senkai-rasen-chidori-s-kyoku-h-ten-jigen-retsudan-messh-sh"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "ch-jik-raisen-senkai-rasen-chidori-s-kyoku-h-ten-jigen-retsudan-messh-sh",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "1799041ec534a49f",
+      "name": "Flying Raijin Jiku Shippu Senko Rennodan Zeroshiki",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p><strong>Rasengan Points:</strong> 4</p><p><strong>Cost:</strong> Rasengan Art &amp; 35 Chakra</p><p><strong>Range:</strong> Touch </p><p><strong>Duration:</strong> Instantaneous</p><p><strong>Prerequisite:</strong> Flying Thunder God</p><p>The User kicks the Target away and sends it flying in a straight line. The user then throws Items marked the Hiraishin Seal after the target and teleports between them whil constintely hitting the target. After moving 60 feet the user can then use their bonus action to finish the combo with a Rasengan Art.</p><p>Make a Melee Rasengan Art Attack.</p><p>On a hit, the target takes <strong>12d8</strong> and <strong>the Rasengan Art damage</strong>.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "other",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "12d8",
+              "chakra"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "Flying Thunder God",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-art-flying-raijin-jiku-shippu-senko-rennodan-zeroshiki"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "art",
+          "rasenganArt": "flying-raijin-jiku-shippu-senko-rennodan-zeroshiki",
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "ed68f901f02f26d4"
+    },
+    {
+      "_id": "031c24dba4e68874",
+      "name": "Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 1st level in this Class Mod, you unlock the foundation of the Rasengan.</p><p>The Rasengan is a Technique created through the precise manipulation of chakra rotation, compression, and shape. Unlike most Techniques, the Rasengan does not require Hand Seals unless otherwise specified.</p><p>The Rasengan serves as the foundation for all <strong>Rasengan Arts</strong> you learn through this Class Mod.</p><p>You may form the Rasengan whenever you would normally be able to use a Technique, provided you have a free hand.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 1,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "f99085eccb38e845",
+      "name": "Planetary Chakra",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 1st level in this Class Mod, you begin to understand the connection between your own chakra and the chakra that exists throughout the world around you.</p><p>You gain access to <strong>Planetary Chakra</strong>, a special resource used exclusively by certain Rasengan Arts.</p><p>Your Planetary Chakra Points are determined by the Rasengan Class Mod table.</p><p>Planetary Chakra Points are restored when you finish a Full Rest.</p><p>Planetary Chakra is separate from your normal Chakra pool and cannot be spent as normal Chakra.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-planetary-chakra"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 1,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "37d01e164acf5619",
+      "name": "Rasengan Arts",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 1st level of this Class Mod, you unlock the first techniques developed from your mastery of the Rasengan.</p><p>You gain access to *<strong>Rasengan Arts</strong>*, a set of exclusive Techniques unique to this Class Mod. These are not standard Jutsu and do not require Hand Seals unless specified.</p><p>Rasengan Arts use <strong>Planetary Chakra Points</strong> as their primary resource when a cost is specified, and you gain additional Arts as you grow in this Class Mod. </p><p>___</p><p>Whenever you gain a level in this Class Mod from 1st through 4th level, you gain 15 Rasengan Points, which may be spent to learn Rasengan Arts.</p><p>You select your Arts from the listed Rasengan Arts at the end of this Class Mod section.</p><p>These Arts use your <strong>Rasengan Art Attack Bonus</strong> or <strong>Rasengan Art Save DC</strong>.</p><p>___</p><p>To calculate your Rasengan Art Save DC and Attack Bonus, use the following formulas:</p><p>___</p><p><strong>Rasengan Art Save DC:</strong> 10 + your Intelligence Modifier + 1/4 your Character Level;</p><p><strong>Rasengan Art Attack Bonus:</strong> Your Intelligence Modifier + your Character Level + your Rasengan Class Mod Level</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-rasengan-arts"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 1,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "52052545f59158ff",
+      "name": "Advanced Chakra Control",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 2nd level in this Class Mod, your control over chakra has reached the point where you can freely manipulate your Rasengan Arts without causing their structure to collapse.</p><p>You gain the following benefits:</p><p>- Whenever you use a <strong>Rasengan Art</strong> that deals Chakra damage, you may choose to deal its damage as <strong>Chakra, Bludgeoning, or Force damage</strong>.</p><p>- You may form a Rasengan Art without immediately releasing it. A Rasengan Art formed in this way remains maintained in your hand until you release it, dismiss it, or otherwise lose control of the Technique.</p><p>- You have advantage on any Ability Check made specifically to maintain control of a Rasengan Art.</p><p>Additionally, when you use a Rasengan Art, you may reduce its Planetary Chakra cost by <strong>5</strong>.</p><p>You may use this benefit a number of times equal to your Intelligence Modifier, regaining all expended uses when you finish a Long Rest.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-advanced-chakra-control"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 2,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "d9b9080a69efa609",
+      "name": "Rasengan Evolution",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 2nd level, your understanding of shape manipulation allows you to alter the structure of a Rasengan even after it has already been formed.</p><p>While maintaining a Rasengan Art that has not yet been released, you may use a <strong>Bonus Action</strong> to reshape it into another Rasengan Art you know.</p><p>If the new Rasengan Art has a higher Planetary Chakra cost than the Art currently being maintained, you must expend Planetary Chakra equal to the difference between the two costs.</p><p>If the new Rasengan Art has a lower Planetary Chakra cost, the difference is not refunded.</p><p>Reshaping a Rasengan Art does not release or activate it. The newly formed Art remains maintained and may be released normally.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-rasengan-evolution"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 2,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "21add3e9d66cad7d",
+      "name": "Spiral Echo",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 3rd level in this Class Mod, you have learned that the rotation created by a Rasengan does not need to end when the Technique itself is released.</p><p>When you hit a creature with a <strong>Rasengan Art</strong>, you may choose to imprint the rotation of that Art onto the target instead of immediately dealing its damage.</p><p>When you do so, record the damage dice that the Rasengan Art would have dealt. The target takes no damage from those dice at that time, but gains a <strong>Spiral Echo</strong> containing them.</p><p>Any other effects of the Rasengan Art resolve normally unless they specifically require the Art to deal damage.</p><p>A creature may have any number of Spiral Echoes placed upon it, and there is no maximum amount of damage that may be stored in this way.</p><p>Spiral Echoes do not disappear when you finish a Rest, move away from the affected creature, or after a certain amount of time has passed. The rotation remains within the target until you choose to release it.</p><p>As a <strong>Bonus Action</strong>, you may release any number of Spiral Echoes currently stored within one creature you are aware of.</p><p>When released, roll all stored damage dice contained within the chosen Spiral Echoes. The creature immediately takes the resulting damage as <strong>Chakra damage</strong>.</p><p>Alternatively, when a creature carrying one or more of your Spiral Echoes makes an Attack or activates a Technique, you may use your <strong>Reaction</strong> to release any number of Spiral Echoes stored within that creature before the triggering action resolves.</p><p>If you release at least <strong>3 Spiral Echoes</strong> in this way, the target must succeed on a Constitution Saving Throw against your Rasengan Art Save DC. On a failed save, the sudden release of rotational force disrupts the creature and interrupts the triggering Attack or Technique.</p><p>Once a Spiral Echo has been released, its stored damage is removed from the target.</p><p>Only you may willingly release Spiral Echoes created by your Rasengan Arts.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-spiral-echo"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 3,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "4998657cf9d528ff",
+      "name": "Compressed Core",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 3rd level, you have learned to continue compressing a Rasengan after its initial formation, forcing increasingly greater amounts of rotational force into its core.</p><p>Whenever you are maintaining a <strong>Rasengan Art</strong> that has not yet been released, it gains one <strong>Compression Level</strong> at the end of each of your turns in which you continue to maintain it.</p><p>A Rasengan Art can hold a maximum of <strong>3 Compression Levels</strong>.</p><p>For each Compression Level stored within the Art:</p><p>- The Rasengan Art deals <strong>one additional damage die</strong> of the same type and size as its primary damage dice. This increases by one, each round.</p><p>- You gain a <strong>+1 bonus</strong> to its Rasengan Art Attack Roll. If the Art instead requires a Saving Throw, increase its Rasengan Art Save DC by <strong>1</strong>.</p><p>All Compression Levels are lost immediately after the Rasengan Art is released, dismissed, or you otherwise lose control of it.</p><p>If you use <strong>Rasengan Evolution</strong> to reshape the maintained Rasengan Art into another Rasengan Art, all accumulated Compression Levels are retained.</p><p>The additional damage dice granted by Compressed Core change to match the primary damage dice of the newly formed Rasengan Art.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-compressed-core"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 3,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "6cb265c7283088b7",
+      "name": "Perfect Rotation",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 4th level, you have achieved an extraordinary level of control over the rotation of your Rasengan Arts.</p><p>The rotation of your chakra remains perfectly stable even while you move, fight, or manipulate other forms of chakra.</p><p>You gain the following benefits:</p><p>- You no longer have disadvantage on Ranged Rasengan Art Attacks caused by being within 5 feet of a hostile creature.</p><p>- Whenever a Rasengan Art requires an Attack Roll, you may reroll an Attack Roll that results in a natural 1. You must use the new result.</p><p>- Creatures have disadvantage on Saving Throws made against your Rasengan Arts.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-perfect-rotation"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 4,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    },
+    {
+      "_id": "d048dd379f622d46",
+      "name": "Mastered Rasengan",
+      "type": "feat",
+      "img": "modules/n5eb-classmod-library/assets/rasengan.svg",
+      "system": {
+        "description": {
+          "value": "<p>At 4th level, the Rasengan has become an extension of your chakra control rather than simply a Technique you perform.</p><p>Whenever you use a Rasengan Art, you may alter its rotation and structure immediately before the Technique resolves.</p><p>If the Art deals damage, you may reroll a number of its damage dice equal to your Intelligence Modifier. You must use the new results.</p><p>If the Art pushes or pulls a creature, you may increase that distance by up to <strong>10 feet</strong>.</p><p>If the Art affects an area, you may reduce the size of that area by any amount up to <strong>5 feet</strong>, allowing you to more precisely control which creatures are caught within the Technique.</p><p># Rasengan Arts</p><p>The following Techniques represent the different applications of the Rasengan.</p><p>Unlike ordinary Jutsu, Rasengan Arts are built upon the same fundamental Technique. By changing the rotation, compression, shape, or density of the chakra, the user can create entirely different applications of the Rasengan.</p><p>Unless an Art states otherwise, a Rasengan Art does not require Hand Seals.</p>",
+          "chat": ""
+        },
+        "source": {
+          "custom": "Rasengan Class Mod — Kirai",
+          "rules": "n5eb",
+          "book": "Homebrew"
+        },
+        "activation": {
+          "type": "special",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": "inst"
+        },
+        "cover": null,
+        "crewed": false,
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": "",
+          "prompt": true
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "recovery": "",
+          "prompt": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null,
+          "scale": false
+        },
+        "ability": null,
+        "actionType": "",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "type": {
+          "value": "classmod",
+          "subtype": "",
+          "nestedsubtype": ""
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false,
+          "formula": "1d8"
+        },
+        "attack": {
+          "bonus": "",
+          "flat": false
+        },
+        "enchantment": null,
+        "summons": null,
+        "prerequisites": {
+          "level": null
+        },
+        "properties": [],
+        "identifier": "rasengan-mastered-rasengan"
+      },
+      "effects": [],
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "n5eb-classmod-library": {
+          "managed": true,
+          "classMod": "rasengan",
+          "category": "feature",
+          "rasenganFeatureLevel": 4,
+          "contentVersion": "0.19.0"
+        }
+      },
+      "folder": "1ccb27f8b5d7f570"
+    }
+  ]
+}
