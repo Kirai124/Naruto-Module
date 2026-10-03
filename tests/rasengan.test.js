@@ -48,6 +48,15 @@ test('simultaneous duplicate purchase spends RP exactly once',async()=>{
  assert.equal(results.filter(r=>r.status==='fulfilled').length,1);assert.deepEqual(API.getTracker(actor).learned,['rasengan']);assert.equal(remainingPoints(actor,API.getTracker(actor),ARTS),13);
  assert.equal(actor.items.filter(item=>item.flags?.[MID]?.rasenganArt==='rasengan').length,1);
 });
+test('Chōjikū partner dropdown accepts a visible player character UUID and preserves its name',async()=>{
+ const actor=fresh('rasen-partner'),partner=fresh('Chidori Player'),npc=fresh('NPC'),hidden=fresh('Hidden');
+ actor.type=partner.type=hidden.type='character';npc.type='npc';hidden.visible=false;game.actors=[actor,partner,npc,hidden];
+ const art=ARTS.find(a=>a.partner);await setup(actor,{learned:[art.id]});
+ const before=API.getTracker(actor).chakra;forms.push({partner:'Chidori Player'});await assert.rejects(API.formArt(actor,art.id),/Select a player character/);assert.equal(API.getTracker(actor).chakra,before);
+ for(const invalid of [actor.uuid,npc.uuid,hidden.uuid]){forms.push({partner:invalid});await assert.rejects(API.formArt(actor,art.id),/Select a player character/);}
+ forms.push({partner:partner.uuid,type:'chakra'});await API.formArt(actor,art.id);
+ const core=API.getTracker(actor).cores[0];assert.equal(core.partnerUuid,partner.uuid);assert.equal(core.partner,partner.name);game.actors=[];
+});
 function mutateDatabaseOperations(actor){
  const seen=new WeakSet();actor.databaseOperations=[];
  for(const name of ['update','createEmbeddedDocuments','deleteEmbeddedDocuments']){

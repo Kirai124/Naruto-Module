@@ -1,8 +1,8 @@
 {
   "id": "n5eb-classmod-library",
   "title": "N5eB Class Mod Library",
-  "description": "N5eB Class Mods with automated trackers, Rasengan Arts, persistent Spiral Echoes, Karmic D\u014djutsu controls and optional minimum character levels.",
-  "version": "0.19.3",
+  "description": "N5eB Class Mods with automated trackers, Rasengan Arts, persistent Spiral Echoes, Karmic Dōjutsu controls and optional minimum character levels.",
+  "version": "0.19.5",
   "authors": [
     {
       "name": "Kirai124",
@@ -43,5 +43,5 @@
   ],
   "url": "https://github.com/Kirai124/Naruto-Module",
   "manifest": "https://github.com/Kirai124/Naruto-Module/releases/latest/download/module.json",
-  "download": "https://github.com/Kirai124/Naruto-Module/releases/download/v0.19.3/n5eb-classmod-library-0.19.3.zip"
+  "download": "https://github.com/Kirai124/Naruto-Module/releases/download/v0.19.5/n5eb-classmod-library-0.19.5.zip"
 }

@@ -10,7 +10,7 @@ export function validateBuild(root){
   const main=need('scripts/main.js')?readFileSync(resolve(root,'scripts/main.js'),'utf8'):'';
   const content=/const CONTENT_VERSION\s*=\s*["']([^"']+)["']/.exec(main)?.[1];
   if(content!==module.version)errors.push(`Runtime content version ${content} != manifest version ${module.version}`);
-  for(const required of ['scripts/classmod-settings.js','scripts/rasengan.js']){
+  for(const required of ['scripts/classmod-settings.js','scripts/rasengan.js','scripts/madara-cells.js']){
     if(!module.esmodules?.includes(required))errors.push(`Missing runtime entry point in module.json: ${required}`);
     need(required);
   }
@@ -31,6 +31,7 @@ export function validateBuild(root){
       if(arts.length!==20)errors.push(`Expected 20 Rasengan Arts, found ${arts.length}`);
       if(!bundle.items.some(i=>i.type==='classmod'&&i.system?.identifier==='rasengan'))errors.push('Rasengan Class Mod item is missing');
     }
+    if(file==='madara-cells.json'&&bundle.version!==module.version)errors.push(`Madara bundle version ${bundle.version} != manifest ${module.version}`);
     for(const i of bundle.items??[]){if(ids.has(i._id))errors.push(`Duplicate Item ID: ${i._id}`);ids.add(i._id);items.push(i);}
     for(const f of bundle.folders??[]){if(folderIds.has(f._id))errors.push(`Duplicate Folder ID: ${f._id}`);folderIds.add(f._id);}
   }

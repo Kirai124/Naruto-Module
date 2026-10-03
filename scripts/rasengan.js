@@ -90,11 +90,13 @@ async function externalCosts(actor,art){
 }
 async function formationOptions(actor,art){
   const v=values(actor),state=read(actor);
+  const partners=partnerCandidates(actor);
   return form(`Form ${art.name}`,`<p>${esc(art.costText)} · Attack +${v.attack} · DC ${v.dc}</p>
     ${v.level>=2?`<label>Damage type<select name="type"><option value="chakra">Chakra</option><option value="bludgeoning">Bludgeoning</option><option value="force">Force</option></select></label><label><input type="checkbox" name="discount" ${state.discountUsed>=v.discounts?'disabled':''}> Reduce cost by 5 (${Math.max(0,v.discounts-state.discountUsed)} uses remaining)</label>`:''}
-    ${art.partner?'<label>Adjacent partner with Chidori (required)<input type="text" name="partner" placeholder="Name"></label>':''}
+    ${art.partner?`<label>Player character with Chidori (adjacent)<select name="partner" required><option value="">Select player character</option>${partners.map(partner=>`<option value="${esc(partner.uuid)}">${esc(partner.name)}</option>`).join('')}</select></label>`:''}
     ${art.combo?`<label>Finishing Rasengan Art<select name="finisher">${ARTS.filter(a=>state.learned.includes(a.id)&&!a.combo&&!a.partner).map(a=>`<option value="${a.id}">${esc(a.name)} (${a.cost} Planetary Chakra)</option>`).join('')}</select></label>`:''}`, 'Form / Pay');
 }
+function partnerCandidates(actor){return Array.from(game.actors??[]).filter(other=>other.uuid!==actor.uuid&&other.type==='character'&&other.visible!==false).sort((a,b)=>a.name.localeCompare(b.name));}
 async function formArt(actor,id,{maintain=true}={}){
   const art=artBy(id);if(!art)throw new Error('Unknown Art');own(actor);
   if(maintain&&level(actor)<2)throw new Error('Advanced Chakra Control (level 2) is required to maintain an Art.');
@@ -103,14 +105,15 @@ async function formArt(actor,id,{maintain=true}={}){
     const state=read(actor);checkUse(actor,state,art);
     const hands=art.id==='spiralling-serial-spheres-rasengan'?2:1;
     if(state.cores.reduce((n,c)=>n+(c.hands??1),0)+hands>2)throw new Error('Not enough free hands. Release or dismiss a core first.');
-    if(art.partner&&!String(options.partner??'').trim())throw new Error('An adjacent Chidori partner must be named.');
+    const partner=art.partner?partnerCandidates(actor).find(other=>other.uuid===options.partner):null;
+    if(art.partner&&!partner)throw new Error('Select a player character as the adjacent Chidori partner.');
     const finisher=art.combo?artBy(options.finisher):null;if(art.combo&&!finisher)throw new Error('Choose a finishing Art');
     if(finisher)checkUse(actor,state,finisher);
     const discount=level(actor)>=2&&Boolean(options.discount);if(discount&&state.discountUsed>=values(actor).discounts)throw new Error('No cost reduction uses remain');
     const payment=cost(art,discount)+(finisher?.cost??0);if(state.chakra<payment)throw new Error('Not enough Planetary Chakra');
     await externalCosts(actor,art);if(finisher)await externalCosts(actor,finisher);
     state.chakra-=payment;if(discount)state.discountUsed++;
-    const core={id:random(),hands,art:id,finisher:finisher?.id??null,partner:String(options.partner??''),compression:0,type:level(actor)>=2?options.type??'chakra':'chakra',paid:payment,formed:game.time.worldTime};
+    const core={id:random(),hands,art:id,finisher:finisher?.id??null,partner:partner?.name??'',partnerUuid:partner?.uuid??null,compression:0,type:level(actor)>=2?options.type??'chakra':'chakra',paid:payment,formed:game.time.worldTime};
     state.cores.push(core);await write(actor,state);
     await message(actor,`<h3>${esc(art.name)} formed</h3><p>${payment} Planetary Chakra paid${discount?' (cost reduction used)':''}. ${maintain?'Maintained in one hand.':'Ready to release.'}</p>`);
     return core.id;

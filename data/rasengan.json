@@ -1,6 +1,6 @@
 {
   "id": "rasengan",
-  "version": "0.19.3",
+  "version": "0.19.5",
   "label": "Rasengan",
   "folders": [
     {
@@ -186,7 +186,7 @@
           "managed": true,
           "classMod": "rasengan",
           "category": "classmod",
-          "contentVersion": "0.19.3",
+          "contentVersion": "0.19.5",
           "minimumCharacterLevels": {
             "1": 4,
             "2": 8,
@@ -304,7 +304,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -416,7 +416,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "spiralling-serial-spheres-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -528,7 +528,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "rasenshuriken",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -640,7 +640,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "big-ball-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -752,7 +752,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "ultra-big-ball-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -864,7 +864,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "rasengan-flash",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -976,7 +976,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "super-ultra-big-ball-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1088,7 +1088,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "rasendan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1200,7 +1200,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "multi-shot-rasendan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1312,7 +1312,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "planetary-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1424,7 +1424,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "vanishing-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1536,7 +1536,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "portal-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1648,7 +1648,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "crescent-moon-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1760,7 +1760,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "deep-crimson-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1872,7 +1872,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "meteoriten-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -1984,7 +1984,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "spiral-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -2096,7 +2096,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "planetary-rasengan-cataclysm",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -2208,7 +2208,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "ultimate-rasengan",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -2324,7 +2324,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "ch-jik-raisen-senkai-rasen-chidori-s-kyoku-h-ten-jigen-retsudan-messh-sh",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -2436,7 +2436,7 @@
           "classMod": "rasengan",
           "category": "art",
           "rasenganArt": "flying-raijin-jiku-shippu-senko-rennodan-zeroshiki",
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "ed68f901f02f26d4"
@@ -2543,7 +2543,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 1,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -2650,7 +2650,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 1,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -2757,7 +2757,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 1,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -2864,7 +2864,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 2,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -2971,7 +2971,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 2,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -3078,7 +3078,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 3,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -3185,7 +3185,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 3,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -3292,7 +3292,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 4,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
@@ -3399,7 +3399,7 @@
           "classMod": "rasengan",
           "category": "feature",
           "rasenganFeatureLevel": 4,
-          "contentVersion": "0.19.3"
+          "contentVersion": "0.19.5"
         }
       },
       "folder": "1ccb27f8b5d7f570"
