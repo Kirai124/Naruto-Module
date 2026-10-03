@@ -7999,7 +7999,14 @@
           "managed": true,
           "category": "classmod",
           "classMod": "crimson-priest",
-          "contentVersion": "0.18.1"
+          "contentVersion": "0.18.1",
+          "minimumCharacterLevels": {
+            "1": 8,
+            "2": 8,
+            "3": 13,
+            "4": 13,
+            "5": 13
+          }
         }
       },
       "folder": "8f3f357aa14a227a"

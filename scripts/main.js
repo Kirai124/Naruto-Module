@@ -1,7 +1,7 @@
 const MODULE_ID = "n5eb-classmod-library";
 const PACK_NAME = "n5eb-custom-class-mods";
 const PACK_COLLECTION = `world.${PACK_NAME}`;
-const CONTENT_VERSION = "0.18.4";
+const CONTENT_VERSION = "0.19.1";
 const KAMA_REWRITE_STEP = 5;
 const KAMA_TEMP_HP_FLAG = "kamaTemporaryHitPoints";
 const KAMA_TRACKER_FLAG = "kamaTracker";
@@ -45,7 +45,7 @@ const TENSEIGAN_LEGACY_ICONS = new Set([
   "icons/magic/perception/eye-ringed-glow-angry-large-blue.webp",
   "icons/magic/light/explosion-star-blue.webp"
 ]);
-const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi", "edo-tensei", "heavenly-gates", "crimson-priest", "hashirama-cells", "madara-cells", "cursed-seal"]);
+const CLASS_MOD_IDENTIFIERS = new Set(["flying-thunder-god", "kama-seal", "tenseigan", "sealed-beast-redux", "superior-shinobi", "edo-tensei", "heavenly-gates", "crimson-priest", "hashirama-cells", "madara-cells", "cursed-seal", "rasengan"]);
 
 const SEAL_TYPE_KEYS = Object.freeze([
   "all-rounder", "absorber", "assault-type", "tank-type", "speed-type", "sensor-type", "white-kama-seal"
@@ -245,7 +245,10 @@ Hooks.once("ready", async () => {
     collection: PACK_COLLECTION,
     toggleKama,
     openKamaTracker,
+    openRasenganTracker:(actor) => globalThis.N5eBRasengan?.openTracker(actor),
+    getRasenganTracker:(actor) => globalThis.N5eBRasengan?.getTracker(actor),
     configureKarmicDojutsu,
+    toggleKarmicDojutsu,
     syncKarmicDojutsu,
     setKamaPossessed,
     rollKamaPossessionSave,
@@ -757,6 +760,48 @@ async function syncKarmicDojutsu(actor) {
     ownedNames.add(String(source.name ?? "").trim().toLocaleLowerCase());
   }
   if (create.length) await actor.createEmbeddedDocuments("Item", create, {[KAMA_INTERNAL_OPTION]:{karmicDojutsuSync:true}});
+  await repairKarmicDojutsuConsumption(actor);
+}
+
+/** Only repair the module-granted Latent activation; unrelated Sharingan/Jutsu retain their costs. */
+async function repairKarmicDojutsuConsumption(actor) {
+  for (const item of asArray(actor.items).filter(item => item.getFlag?.(MODULE_ID, "karmicDojutsuFreeActivation"))) {
+    const patch={"system.consume.type":"", "system.consume.target":null, "system.consume.amount":0};
+    for (const activity of asArray(item.system?.activities)) {
+      const targets=activity.consumption?.targets;
+      if (Array.isArray(targets)) patch[`system.activities.${activity.id}.consumption.targets`]=targets.filter(target => target.type !== "attribute");
+    }
+    const source=item.toObject();
+    const changed=Object.entries(patch).some(([key,value]) => JSON.stringify(foundry.utils.getProperty(source,key)) !== JSON.stringify(value));
+    if(changed) await item.update(patch, {[KAMA_INTERNAL_OPTION]:{karmicDojutsuSync:true}});
+  }
+}
+
+async function toggleKarmicDojutsu(actor) {
+  actor ??= canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  if(!actor?.isOwner) return ui.notifications.warn("Select a character you own.");
+  await repairKarmicDojutsuConsumption(actor);
+  const items=asArray(actor.items).filter(item => item.getFlag?.(MODULE_ID,"karmicDojutsuFreeActivation"));
+  if(!items.length) return ui.notifications.warn("No module-granted Latent Dōjutsu activation was found.");
+  let item=items[items.length-1];
+  const result=await foundry.applications.api.DialogV2.wait({window:{title:"Karmic Dōjutsu"},content:`<form><label>Dōjutsu tier<select name="item">${items.map(i => `<option value="${i.id}" ${i.id===item.id?"selected":""}>${escapeKamaHtml(i.name)}</option>`).join("")}</select></label></form>`,buttons:[{action:"toggle",label:"Activate / Deactivate",default:true,callback:(event,button)=>new FormDataExtended(button.form).object.item},{action:"cancel",label:"Cancel"}],rejectClose:false});
+  if(typeof result!=="string"||result==="cancel")return;
+  item=actor.items.get(result);if(!item)return;
+  const effects=asArray(item.effects).filter(e => e.transfer && !e.flags?.[MODULE_ID]?.karmicDojutsuUnrelated);
+  const actorEffects=asArray(actor.effects).filter(e => e.origin && item.uuid && String(e.origin).startsWith(item.uuid));
+  if(effects.length || actorEffects.length){
+    const activating=[...effects,...actorEffects].every(e=>e.disabled);
+    if(effects.length) await item.updateEmbeddedDocuments("ActiveEffect",effects.map(e=>({_id:e.id,disabled:!activating})),{[KAMA_INTERNAL_OPTION]:{karmicDojutsuToggle:true}});
+    if(actorEffects.length) await actor.updateEmbeddedDocuments("ActiveEffect",actorEffects.map(e=>({_id:e.id,disabled:!activating})),{[KAMA_INTERNAL_OPTION]:{karmicDojutsuToggle:true}});
+    ui.notifications.info(`${item.name} ${activating?"activated":"deactivated"} (no initial Chakra cost).`);
+  } else {
+    // Some N5eB eye features use a utility activity to produce their activation effect.
+    const activity=asArray(item.system?.activities).find(a=>a.type==="utility")??asArray(item.system?.activities)[0];
+    if(activity?.use) await activity.use({consume:{resources:true}});
+    else if(typeof item.use==="function") await item.use({consumeResource:false});
+    else {ui.notifications.warn("This system eye has no activation activity or transferable effect. Open its feature to resolve its activation.");item.sheet?.render(true);}
+  }
+  refreshOpenTracker(actor);actor.sheet?.render(false);
 }
 
 function addChange(changes, key, value, mode=CONST.ACTIVE_EFFECT_MODES.ADD, priority=20) {
@@ -1488,7 +1533,7 @@ function buildKamaTrackerHtml(actor) {
       <section class="tracker-card dojutsu">
         <header><span>Karmic Dōjutsu</span><strong data-value="dojutsu-count">${dojutsu.labels.length} configured${dojutsu.pending ? ` · ${dojutsu.pending} pending` : ""}</strong></header>
         <p data-value="dojutsu-list">${dojutsu.labels.length ? dojutsu.labels.map(escapeKamaHtml).join(", ") : "No Dōjutsu selected."}</p>
-        <div class="tracker-actions"><button type="button" data-action="configure-dojutsu" ${getKarmicDojutsuItems(actor).length ? "" : "disabled"}><i class="fas fa-eye"></i> Configure Dōjutsu</button></div>
+        <div class="tracker-actions"><button type="button" data-action="configure-dojutsu" ${getKarmicDojutsuItems(actor).length ? "" : "disabled"}><i class="fas fa-eye"></i> Configure Dōjutsu</button><button type="button" data-action="toggle-dojutsu" ${Array.from(actor.items).some(item => item.getFlag?.(MODULE_ID, "karmicDojutsuFreeActivation")) ? "" : "disabled"}><i class="fas fa-eye"></i> Activate / Deactivate Dōjutsu</button></div>
       </section>
       <section class="tracker-card takeover">
         <header><span>Take-Over</span><strong data-value="takeover-status">${takeoverLabels[state.takeoverStatus]}</strong></header>
@@ -1535,6 +1580,7 @@ function activateKamaTrackerDialog(dialog, actor) {
     const state = readKamaTracker(actor);
     try {
       if (action === "toggle-kama") await toggleKama(actor);
+      else if (action === "toggle-dojutsu") await toggleKarmicDojutsu(actor);
       else if (action === "toggle-possession") await setKamaPossessed(actor, !state.possessed);
       else if (action === "possession-save") await rollKamaPossessionSave(actor);
       else if (action === "influence-check" && getEffectiveKamaInfluence(actor, state) === "influence-heavy-influence") {
@@ -1594,7 +1640,7 @@ async function openKamaTracker(actor) {
   const DialogV2 = foundry.applications.api.DialogV2;
   const dialog = new DialogV2({
     window:{title:`Kāma Tracker — ${actor.name}`, icon:"fa-solid fa-diamond", resizable:true},
-    position:{width:680, height:"auto"},
+    position:{width:680, height:Math.min(760, window.innerHeight - 80)},
     classes:["n5eb-kama-tracker-window"],
     content,
     buttons:[{action:"close", label:"Close", icon:"fa-solid fa-xmark"}]

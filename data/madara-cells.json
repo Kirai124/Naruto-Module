@@ -6347,7 +6347,14 @@
           "managed": true,
           "category": "classmod",
           "classMod": "madara-cells",
-          "contentVersion": "0.18.4"
+          "contentVersion": "0.18.4",
+          "minimumCharacterLevels": {
+            "1": 8,
+            "2": 10,
+            "3": 12,
+            "4": 14,
+            "5": 16
+          }
         }
       },
       "folder": "0d926603829bec27"

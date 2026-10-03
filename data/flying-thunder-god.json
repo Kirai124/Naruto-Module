@@ -8527,7 +8527,14 @@
         "n5eb-classmod-library": {
           "managed": true,
           "category": "classmod",
-          "contentVersion": "0.18.1"
+          "contentVersion": "0.18.1",
+          "minimumCharacterLevels": {
+            "1": 8,
+            "2": 11,
+            "3": 14,
+            "4": 17,
+            "5": 20
+          }
         }
       },
       "folder": "x2mm0NNQlCbnDQw5"

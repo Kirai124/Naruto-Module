@@ -19436,7 +19436,14 @@
           "managed": true,
           "classMod": "superior-shinobi",
           "category": "classmod",
-          "contentVersion": "0.18.1"
+          "contentVersion": "0.18.1",
+          "minimumCharacterLevels": {
+            "1": 11,
+            "2": 13,
+            "3": 15,
+            "4": 17,
+            "5": 19
+          }
         }
       },
       "system": {

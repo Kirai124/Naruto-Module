@@ -4627,7 +4627,14 @@
           "managed": true,
           "category": "classmod",
           "classMod": "tenseigan",
-          "contentVersion": "0.18.1"
+          "contentVersion": "0.18.1",
+          "minimumCharacterLevels": {
+            "1": 8,
+            "2": 10,
+            "3": 14,
+            "4": 16,
+            "5": 18
+          }
         }
       },
       "folder": "d1e8ac8323861d38"

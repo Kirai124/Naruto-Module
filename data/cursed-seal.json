@@ -621,7 +621,14 @@
           "managed": true,
           "category": "classmod",
           "classMod": "cursed-seal",
-          "contentVersion": "0.18.2"
+          "contentVersion": "0.18.2",
+          "minimumCharacterLevels": {
+            "1": 8,
+            "2": 8,
+            "3": 11,
+            "4": 11,
+            "5": 15
+          }
         }
       },
       "folder": "1fde6723aeae7768"

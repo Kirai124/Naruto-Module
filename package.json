@@ -1,0 +1,9 @@
+{
+  "name": "n5eb-classmod-library-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "validate": "node scripts/validate-build.mjs"
+  }
+}

@@ -1,3 +1,17 @@
+## Installationskorrektur 0.19.1
+
+Die veröffentlichte 0.19.0-ZIP enthielt trotz der neuen Manifestversion noch den 0.18.4-Code. Diese Ausgabe enthält das vollständige Update. Das neue Archiv hat **keinen Oberordner**: `module.json`, `scripts`, `data`, `styles` und `.github` liegen direkt im ZIP-Hauptverzeichnis.
+
+Den kompletten entpackten Inhalt in das Hauptverzeichnis des GitHub-Repositories übernehmen und die Action **Build Foundry Release** mit **v0.19.1** starten. Die Action prüft vor dem Bauen, ob Manifest, Code, Datenindex und alle Rasengan-Dateien zusammenpassen; ein Versionsmix wird abgebrochen.
+
+Nach dem Update Foundry neu laden. Als GM öffnet `await N5eBClassMods.sync({notify:true})` die erneute Synchronisierung, falls Auto-Sync ausgeschaltet ist. Rasengan befindet sich im Welt-Kompendium **N5eB Custom Class Mods**.
+
+## Update 0.19.0
+
+Rasengan Class Mod levels 1–4, all 20 Arts, a tracker with Overview / Rasengan Arts / Spiral Echoes, permanent Echo storage, compression/evolution, native damage application, Karma Dōjutsu controls and optional minimum character levels.
+
+See [installation, usage and validation notes](docs/UPDATE-0.19.1.md). Build Foundry Release with **v0.19.1**. Uzuhiko is reserved for a later release.
+
 # N5eB Class Mod Library v0.18.4
 
 This build completes the interactive Kāma flow. Karmic Dōjutsu now opens a real Clan/Dōjutsu choice and grants the eligible Latent Ability items from the installed N5eB system while treating the character as eight levels higher. Repeat selections for Chinoike, Kuru, and Uchiha unlock their remaining tiers, and Sharingan/Ketsuryūgan tier 2 grants the matching Genjutsu.

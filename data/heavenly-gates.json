@@ -11688,7 +11688,14 @@
           "managed": true,
           "category": "classmod",
           "classMod": "heavenly-gates",
-          "contentVersion": "0.18.1"
+          "contentVersion": "0.18.1",
+          "minimumCharacterLevels": {
+            "1": 4,
+            "2": 7,
+            "3": 10,
+            "4": 13,
+            "5": 16
+          }
         }
       },
       "folder": "bde2e6ee5cc92608"

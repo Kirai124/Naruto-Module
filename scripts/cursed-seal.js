@@ -1,3 +1,4 @@
+import { meetsMinimumLevel, enforceMinimumLevels } from "./classmod-settings.js";
 const MODULE_ID = "n5eb-classmod-library";
 const CLASSMOD_ID = "cursed-seal";
 const TRACKER_FLAG = "cursedSealTracker";
@@ -303,16 +304,16 @@ async function quickToggleRelease(actor){
 function progressionStatus(actor,state=readTracker(actor)){
   const level=getLevel(actor);if(level>=5)return {ready:false,label:"Maximum Class Mod level reached."};
   const next=level+1,needCorruption=LEVEL_CORRUPTION[next]??0,needLevel=LEVEL_CHARACTER[next]??0;
-  const ready=state.corruption>=needCorruption&&charLevel(actor)>=needLevel;
-  return {ready,next,needCorruption,needLevel,label:ready?`Ready for Cursed Seal level ${next}`:`Level ${next} requires character level ${needLevel}+ and ${needCorruption} Corruption`};
+  const ready=state.corruption>=needCorruption&&meetsMinimumLevel(actor,needLevel);
+  return {ready,next,needCorruption,needLevel,label:ready?`Ready for Cursed Seal level ${next}`:`Level ${next} requires ${enforceMinimumLevels()?`character level ${needLevel}+ and `:""}${needCorruption} Corruption`};
 }
 function validateClassModLevelChange(item,changes){
   if(item?.type!=="classmod"||item?.system?.identifier!==CLASSMOD_ID)return;
-  const proposed=foundry.utils.getProperty(changes,"system.levels");if(proposed==null)return;
+  const proposed=changes["system.levels"]??foundry.utils.getProperty(changes,"system.levels");if(proposed==null)return;
   const current=Math.max(1,Number(item.system?.levels??1)),next=clamp(Math.floor(Number(proposed)||current),1,5);if(next<=current)return;
   const actor=item.parent;if(actor?.documentName!=="Actor")return;
   const state=readTracker(actor),needCorruption=LEVEL_CORRUPTION[next]??0,needLevel=LEVEL_CHARACTER[next]??0;
-  if(charLevel(actor)<needLevel||state.corruption<needCorruption){ui.notifications.warn(`Cursed Seal level ${next} requires character level ${needLevel}+ and ${needCorruption} Corruption. Current: character level ${charLevel(actor)}, Corruption ${state.corruption}.`);return false;}
+  if(!meetsMinimumLevel(actor,needLevel)||state.corruption<needCorruption){ui.notifications.warn(`Cursed Seal level ${next} requires character level ${needLevel}+ and ${needCorruption} Corruption. Current: character level ${charLevel(actor)}, Corruption ${state.corruption}.`);return false;}
 }
 
 
@@ -486,7 +487,7 @@ function renderStrip(app,html){
 Hooks.once("ready",async()=>{if(game.system.id!=="n5eb")return;globalThis.N5eBCursedSeal=Object.freeze({openTracker,getTracker:readTracker,activateStage,deactivateSeal,quickToggleRelease,createCursedArt,configureMagnifiedArt,chooseSealType,spendCursedChakra,changeCorruption,spendChakraDie,syncActor:ensureActor,currentArtCost,renderTrackerStrip:renderStrip});if(game.user.isGM)for(const actor of game.actors??[])if(getClassMod(actor))await queue(actor,()=>ensureActor(actor));});
 Hooks.on("getActorSheetHeaderButtons",(sheet,buttons)=>{const actor=sheet.actor??sheet.document;if(!getClassMod(actor))return;const s=readTracker(actor),highest=highestStage(actor,s);buttons.unshift({label:`CC ${s.cursedChakra}/${s.cursedChakraMax} · Corr ${s.corruption}`,class:"n5eb-cursed-seal-tracker-button",icon:"fas fa-gauge-high",onclick:()=>openTracker(actor)});buttons.unshift({label:s.activeStage?`Cursed Seal S${s.activeStage}`:"Cursed Seal",class:"n5eb-cursed-seal-release-toggle",icon:"fas fa-skull",onclick:()=>s.activeStage?deactivateSeal(actor):(highest?activateStage(actor,highest):openTracker(actor))});});
 Hooks.on("renderActorSheet",renderStrip);Hooks.on("renderCharacterActorSheet",renderStrip);Hooks.on("renderApplicationV2",renderStrip);
-Hooks.on("preCreateItem",(item,data,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;if(item.type==="classmod"&&item.system?.identifier===CLASSMOD_ID&&charLevel(item.parent)<8){ui.notifications.warn(`Cursed Seal requires character level 8+. Current character level: ${charLevel(item.parent)}.`);return false;}});
+Hooks.on("preCreateItem",(item,data,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;if(item.type==="classmod"&&item.system?.identifier===CLASSMOD_ID&&!meetsMinimumLevel(item.parent,8)){ui.notifications.warn(`Cursed Seal requires character level 8+. Current character level: ${charLevel(item.parent)}.`);return false;}});
 Hooks.on("preUpdateItem",(item,changes,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;return validateClassModLevelChange(item,changes);});
 Hooks.on("createItem",async(item,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if((item.type==="classmod"&&item.system?.identifier===CLASSMOD_ID)||getClassMod(actor))await queue(actor,()=>ensureActor(actor));});
 Hooks.on("updateItem",async(item,changes,options,userId)=>{if(options?.[INTERNAL]||userId!==game.user.id||item.parent?.documentName!=="Actor")return;const actor=item.parent;if(!getClassMod(actor))return;await queue(actor,async()=>{if(!isCursedArt(item)){const linked=cursedArts(actor).filter(a=>flag(a,"cursedArtSourceId")===item.id);if(linked.length){for(const art of linked){const base=artBase(art);const update={sourceName:item.name,sourceIdentifier:item.system?.identifier??item.id,rank:normalizeRank(item.system?.rank),damage:cloneJson(item.system?.damage),critical:cloneJson(item.system?.critical),range:cloneJson(item.system?.range),actionType:item.system?.actionType??"",save:cloneJson(item.system?.save),attack:cloneJson(item.system?.attack),chakra:cloneJson(item.system?.chakra),descriptionValue:item.system?.description?.value??base.descriptionValue??""};await art.update({[`flags.${MODULE_ID}.cursedArtBase`]:update},{[INTERNAL]:{cursedArtBase:true}});}}}await ensureActor(actor);});});
